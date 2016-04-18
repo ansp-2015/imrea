@@ -1,165 +1,19 @@
-{% extends "admin/base_site.html" %}
-{% load i18n admin_urls static admin_modify bootstrapped_goodies_tags %}
-
-{% block extrahead %}{{ block.super }}
-    <script type="text/javascript" src="{% url 'admin:jsi18n' %}"></script>
-{{ media }}
-{% endblock %}
-{% block extrastyle %}{{ block.super }}
-    <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="{% static "css/KVIQ.css" %}" rel="stylesheet" type="text/css">
-{% endblock %}
-{% block coltype %}colM{% endblock %}
-
-{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} change-form{% endblock %}
-
-{% if not is_popup %}
-{% block breadcrumbs %}
-<div class="breadcrumb">
-<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
-&rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
-&rsaquo; {% if has_change_permission %}<a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>{% else %}{{ opts.verbose_name_plural|capfirst }}{% endif %}
-&rsaquo; {% if add %}{% blocktrans with name=opts.verbose_name %}Add {{ name }}{% endblocktrans %}{% else %}{{ original|truncatewords:"18" }}{% endif %}
-</div>
-{% endblock %}
-{% endif %}
-
-{% block object-tools %}
-{% if change %}{% if not is_popup %}
-<div id="content-navbar-collapse" class="navbar-collapse collapse">
-  <ul class="nav navbar-nav navbar-right">
-    {% block object-tools-items %}
-    <li>
-        {% url opts|admin_urlname:'history' original.pk|admin_urlquote as history_url %}
-        <a role="button" href="{% add_preserved_filters history_url %}" class="historylink">{% trans "History" %}</a>
-    </li>
-    {% if has_absolute_url %}<li><a href="{% url 'admin:view_on_site' content_type_id original.pk %}" class="viewsitelink">{% trans "View on site" %}</a></li>{% endif %}
-    {% endblock %}
-  </ul>
-</div>
-{% endif %}{% endif %}
-{% endblock %}
-
-{% block content %}
-<div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Paciente</h3>
-              </div>
-              <div class="panel-body">
-                <div class="row" id="paciente-dados-linha">
-                  <div class="col-md-12 col-xd-12">
-                    <form class="form-inline" role="form">
-                      <label for="inputInitial" class="control-label">Iniciais</label>
-                      <input type="email" class="form-control" id="inputInitial" placeholder="Iniciais">
-                      <label for="inputBirthday" class="control-label">Data nasc.</label>
-                      <input type="text" class="form-control" id="inputBirthday" placeholder="Data de nasc.">
-                      <label for="inputReviewer" class="control-label">Avaliador</label>
-                      <input type="text" class="form-control" id="inputReviewer" placeholder="Avaliador">
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
+{% extends "admin/change_form.html" %}
+{% load bootstrapped_goodies_tags %}
+        {% block field_sets %}
             <div class="panel panel-primary">
               <div class="panel-heading">
                 <h3 class="panel-title">Kinesthetic and visual Imagery Questionnaire</h3>
               </div>
               <div class="panel-body">
-                <div class="row">
-                  <div class="col-md-12" id="pergunta-paciente-container">
-                    <div class="col-md-2 col-xs-4" id="pergunta-paciente-label">
-                      <p>O paciente pode responder?</p>
-                    </div>
-                    <div class="col-md-10 col-xs-8">
-                      <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                          <label for="inputEmail3" class="radio-inline">
-                            <input type="radio" id="inputEmail3" placeholder="Email" checked="" name="can-paciente-responder">Sim</label>
-                          <label for="inputEmail4" class="radio-inline">
-                            <input type="radio" id="inputEmail4" placeholder="Email" name="can-paciente-responder">Não</label>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <hr>
-                <p>O objetivo deste questionário é determinar até que ponto você é capaz
-                  de visualizar e sentir os movimentos imaginados.&nbsp;
-                  <br>Não há resposta certa ou errada. Siga as instruções abaixo para&nbsp;cada
-                  movimento&nbsp;
-                  <br>
-                  <br>Obs: Paciente incapaz de executar o movimento fisicamente com o membro
-                  afetado será solicitado que execute o movimento com o membro não afetado
-                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  &nbsp;</p>
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">1. Flexão/extensão do pescoço</h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="container-sm">
-                      <div class="row">
-                        <ol class="ol-container">
-                          <li>Sente-se ereto com a cabeça e as mãos apoiadas sobre as coxas</li>
-                          <li>Incline a cabeça, tanto quanto possível, primeiro para a frente e depois
-                            para trás</li>
-                          <li>Retorne à posição inicial. Agora imagine o movimento, concentra-se na
-                            clareza da imagem</li>
-                          <li>Indicar na escala da qualidade do movimento imaginado</li>
-                        </ol>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-11">
-                          <h5>Escala visual de imagens</h5>
-                          <div class="col-md-12">
-                            <form class="form-vertical" role="form">
-                              <div class="btn-toolbar" role="toolbar">
-                                <div class="btn-group-vertical" role="group" aria-label="Alimentacao" data-toggle="buttons">
-                                    {% for op in choices_v_images %}
-                                  <label class="btn-choice btn btn-primary ">
-                                    <input type="radio" name="options" id="option1" autocomplete="off" value="{{ op.0 }}">{{ op.0 }} - {{ op.1 }}</label>
-                                    {% endfor %}
-                                </div>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <hr>
-                      </div>
-                      <div class="row">
-                        <ol class="ol-container">
-                          <li>Sente-se ereto com a cabeça e as mãos apoiadas sobre as coxas</li>
-                          <li>Incline a cabeça, tanto quanto possível, primeiro para a frente e depois
-                            para trás</li>
-                          <li>Retorno a posição inicial. Agora imagine o movimento, concentra-se na
-                            clareza da sensação do movimento</li>
-                          <li>Indicar na escala da qualidade do movimento imaginado</li>
-                        </ol>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-11">
-                          <h5>Escala imagens cinestésica</h5>
-                          <div class="col-md-12">
-                            <form class="form-vertical" role="form">
-                              <div class="btn-toolbar" role="toolbar">
-                                <div class="btn-group-vertical" role="group" aria-label="Alimentacao" data-toggle="buttons">
-                                    {% for op in choices_c_images %}
-                                  <label class="btn-choice btn btn-primary ">
-                                    <input type="radio" name="options" id="option1" autocomplete="off" value="{{ op.0 }}">{{ op.0 }} - {{ op.1 }}</label>
-                                    {% endfor %}
-                                </div>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+        {% for fieldset in adminform %}
+            <div class="panel panel-primary">
+            <div class="panel-body">
+            {% include "admin/includes/fieldset_1col.html" with group_column_width=adminform|form_fieldset_column_width %}
             </div>
-    {% block submit_buttons_bottom %}{% submit_row %}{% endblock %}
-{% endblock %}
+            </div>
+        {% endfor %}
+            </div>
+            </div>
+        {% endblock %}
