@@ -1,3 +1,5 @@
-from evaluation.models.kviq import KVIQ
-from evaluation.models.sis import SIS
-from evaluation.models.patient import Patient
+from .kviq import KVIQ
+from .sis import SIS
+from .patient import Patient
+
+__all__ = ['KVIQ', 'SIS', 'Patient']

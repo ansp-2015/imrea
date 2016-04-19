@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from evaluation.models.kviq import KVIQ
-from evaluation.models.patient import Patient
 from evaluation.forms import KVIQAdminForm
 
 
@@ -19,5 +18,4 @@ class KVIQAdmin(admin.ModelAdmin):
     )
 
 admin.site.register(KVIQ, KVIQAdmin)
-admin.site.register(Patient)
 
