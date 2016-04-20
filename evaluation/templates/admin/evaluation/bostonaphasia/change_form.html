@@ -1,0 +1,19 @@
+{% extends "admin/change_form.html" %}
+{% load bootstrapped_goodies_tags i18n %}
+        {% block field_sets %}
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">{% trans "Boston Aphasia" %}</h3>
+              </div>
+              <div class="panel-body">
+
+        {% for fieldset in adminform %}
+            <div class="panel panel-primary">
+            <div class="panel-body">
+            {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=adminform|form_fieldset_column_width %}
+            </div>
+            </div>
+        {% endfor %}
+            </div>
+            </div>
+        {% endblock %}
