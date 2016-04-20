@@ -10,11 +10,15 @@ class SISAdmin(admin.ModelAdmin):
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient',),
+            'description': {'fieldset': ''}
         }),
         (_(u'These questions are about the physical problems which may have occurred as a result of your stroke.'), {
             'fields': ('strength_arm', 'strength_hand', 'strength_leg', 'strength_foot'),
-            'description': ((0, _(u'1. In the past week, how would you rate the strength of your....')),) +
-            CHOICES_STRENGTH
+            'description': {
+                'columns': ((0, _(u'1. In the past week, how would you rate the strength of your....')),) +
+                CHOICES_STRENGTH,
+                'fieldset': '_radio_grid'
+            }
         })
     )
 
