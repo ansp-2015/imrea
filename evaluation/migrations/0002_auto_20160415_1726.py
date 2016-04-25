@@ -18,7 +18,11 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=50)),
             ],
         ),
-        migrations.AlterField(
+        migrations.RemoveField(
+            model_name='kviq',
+            name='patient'
+        ),
+        migrations.AddField(
             model_name='kviq',
             name='patient',
             field=models.ForeignKey(to='evaluation.Patient'),

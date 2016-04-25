@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from .widgets import ButtonRadioSelect, ButtonRadioGridSelect
-from .models.kviq import CHOICES_VISUAL_IMAGES, CHOICES_CINE_IMAGES
-from .models.sis import CHOICES_STRENGTH
-from django.utils.translation import ugettext_lazy as _
+from .widgets import ButtonRadioSelect
+from .mixin import ControlNTFormMixin
+from .models.kviq import KVIQ, NT
+
+# import the logging library
+import logging
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 TEXT_VISUAL_IMAGES = u"""
 <ol class="ol-container">
@@ -15,13 +20,14 @@ TEXT_VISUAL_IMAGES = u"""
                           <li>Indicar na escala da qualidade do movimento imaginado</li>
                         </ol>
 """
-
-
-class KVIQAdminForm(forms.ModelForm):
+class KVIQAdminForm(ControlNTFormMixin, forms.ModelForm):
+    imrea_nt = {'fields': ('visual_images', 'cine_images'),}
+    
     visual_images = forms.ChoiceField(widget=ButtonRadioSelect(),
-                                      choices=CHOICES_VISUAL_IMAGES,
+                                      choices=KVIQ.CHOICES_VISUAL_IMAGES,
                                       help_text=TEXT_VISUAL_IMAGES)
-    cine_images = forms.ChoiceField(widget=ButtonRadioSelect(),choices=CHOICES_CINE_IMAGES)
+    cine_images = forms.ChoiceField(widget=ButtonRadioSelect(),
+                                      choices=KVIQ.CHOICES_CINE_IMAGES)
 
     class Media:
         css = {
@@ -31,20 +37,9 @@ class KVIQAdminForm(forms.ModelForm):
 
 class SISAdminForm(forms.ModelForm):
     
-    strength_arm = forms.ChoiceField(widget=ButtonRadioGridSelect(),
-                                     label=_(u'arm that was most affected by your stroke?'),
-                                     choices=CHOICES_STRENGTH)
-    strength_hand = forms.ChoiceField(widget=ButtonRadioGridSelect(),
-                                      label=_(u'grip of your hand that was most affected by your stroke?'),
-                                     choices=CHOICES_STRENGTH)
-    strength_leg = forms.ChoiceField(widget=ButtonRadioGridSelect(),
-                                     label=_(u'leg tha was most affected by your stroke?'),
-                                     choices=CHOICES_STRENGTH)
-    strength_foot = forms.ChoiceField(widget=ButtonRadioGridSelect(),
-                                      label=_(u'foot/ankle that was most affected by your stroke?'),
-                                     choices=CHOICES_STRENGTH)
 
     class Media:
         css = {
             'all': ('css/KVIQ.css',)
         }
+        

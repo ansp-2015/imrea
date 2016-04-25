@@ -11,9 +11,13 @@ class KVIQAdmin(admin.ModelAdmin):
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient',),
+            'description': {'fieldset': '_patient'}
         }),
         (_(u'Neck'), {
             'fields': ('visual_images', 'cine_images'),
+            'description': {
+                'fieldset': '_1col',
+            }
         })
     )
 

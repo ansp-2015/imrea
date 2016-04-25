@@ -10,7 +10,7 @@ class SISAdmin(admin.ModelAdmin):
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient',),
-            'description': {'fieldset': ''}
+            'description': {'fieldset': '_patient'}
         }),
         (_(u'These questions are about the physical problems which may have occurred as a result of your stroke.'), {
             'fields': ('strength_arm', 'strength_hand', 'strength_leg', 'strength_foot'),

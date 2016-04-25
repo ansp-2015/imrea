@@ -8,7 +8,7 @@ class BostonAphasiaAdmin(admin.ModelAdmin):
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient',),
-            'description': {'fieldset': ''}
+            'description': {'fieldset': '_patient'}
         }),
         (_(u'Manual dominance.'), {
             'fields': (('write_or_distribute_card_deck_left_hand', 'write_or_distribute_card_deck_right_hand'),),
