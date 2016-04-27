@@ -1,9 +1,10 @@
 from __future__ import unicode_literals
 from django.utils.html import format_html
+from django.utils.safestring import mark_safe
 
 __author__ = 'antonio'
 
-from django.forms.widgets import RadioFieldRenderer, RadioSelect, RadioChoiceInput
+from django.forms.widgets import RadioFieldRenderer, RadioSelect, RadioChoiceInput, TextInput
 
 
 ###
@@ -65,3 +66,36 @@ class ButtonRadioGridRenderer(RadioFieldRenderer):
 class ButtonRadioGridSelect(RadioSelect):
     renderer = ButtonRadioGridRenderer
 
+
+###
+# Input with '+' and '-' buttons for integers and floats with step
+###
+class StepNumberInput(TextInput):
+    def render(self, name, value, attrs=None):
+        min_value = 0
+        max_value = 10
+        step = 1
+        if self.attrs is not None:
+            min_value = self.attrs.pop('min', min_value)
+            max_value = self.attrs.pop('max', max_value)
+            step = self.attrs.pop('step', step)
+
+        input = super(StepNumberInput, self).render(name, value, attrs)
+
+        extra = ''
+        if isinstance(step, float):
+            extra = mark_safe("forcestepdivisibility:'none',decimals:1,")
+        div_buttons = """
+        <div class="div-spinner">
+            <div class="input-group bootstrap-touchspin">
+                {}
+            </div>
+            <script>
+                $("input[name='{}']").addClass("centerInput");
+                $("input[name='{}']").TouchSpin({{min:{},max:{},{}step:{}
+                                      }});
+            </script>
+        </div>
+        """
+
+        return format_html(div_buttons, input, name, name, min_value, max_value, extra, step)
