@@ -1,0 +1,58 @@
+{
+  "home|html|Reports": "Relatório",
+  "home|html|Search Reports" : "Buscar relatórios",
+  "home|html|My Reports" : "Meus relatórios",
+  "home|html|Add Report" : "Adicionar relatório",
+  "home|html|All Reports" : "Todos os relatórios",
+  "home|html|Sort By" : "Ordenar por",
+  "home|html|name" : "nome",
+  "home|html|date" : "data",
+  "home|html|user" : "usuário",
+  "home|html|Name" : "Nome",
+  "home|html|Last Updated" : "Última atualização",
+  "home|html|Display" : "Propriedade",
+  "home|html|Options" : "Opções",
+  "home|html|Report" : "Relatório",
+  "home|html|Filter" : "Filtro",
+  "home|html|Fullscreen" : "Tela cheia",
+  "home|html|Field" : "Campo",
+  "home|html|Name" : "Nome",
+  "home|html|Sort Desc" : "Ordenar desc.",
+  "home|html|Aggregate" : "Agregar",
+  "home|html|Format" : "Formato",
+  "home|html|Group" : "Agrupar",
+  
+   
+  "fields|html|Search Relations" : "Buscar relacionados",
+  "fields|html|Search Fields"    : "Buscar campos", 
+  "fields|html|Relations" : "relacionados",
+  "fields|html|Fields" : "campos",
+  "fields|html|Add" : "Adic.",
+  
+  "filters|html|Field" : "Campo", 
+  "filters|html|Filter Type" : "Tipo",
+  "filters|html|Value" : "Valor",
+  "filters|html|Exclude" : "Excluir",
+  "filters|html|Fullscreen" : "Tela cheia",
+  
+  "add|html|Add New Report" : "Adicionar novo relatório",
+  "add|html|Report Name" : "Nome do relatório",
+  "add|html|Description" : "Descrição",
+  "add|html|Root Model" : "Modelo raiz",
+  "add|html|The root model will be the starting point for this report. In database terms this is the FROM table that others will be joined with. A spreadsheet approximation would a pivot table." : "O modelo raiz será o ponto inicial deste relatório. Em termos de banco de dados esse é o FROM da tabela que será utilizado nos joins. Uma aproximação em uma planilha seria a tabela dinâmica.",
+  "add|html|Create Report" : "Criar relatório",
+  
+  "show_report|html|Changes have not been saved" : "As modificações ainda não foram salvas.",
+  "show_report|html|Save" : "Salvar",
+  "show_report|html|Filter Field Errors" : "Erros nos campos de filtro",
+  
+  "options|html|Description" : "Descrição",
+  "options|html|Is Distinct (Maybe help reduce duplicates rows)" : "Distinct (Pode ajudar a reduzir linhas duplicadas)",
+  "options|html|Read" : "Leia mais ",
+  "options|html|more" : "em",
+  "options|html|Copy this report" : "Copiar este relatório",
+  "options|html|Delete this report" : "Apagar este relatório",
+  "options|html|Download existing report" : "Baixar este relatório",
+  
+  "":""
+}

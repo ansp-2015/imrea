@@ -1,0 +1,41 @@
+<md-content class="md-padding" ng-controller="ReportOptionsCtrl">
+<md-list>
+    <md-list-item>
+        <md-item-content>
+            <md-input-container flex>
+                <label>{{ 'options|html|Description' | translate }}</label>
+                <textarea ng-model="report.description"></textarea>
+            </md-input-container>
+        </md-item-content>
+    </md-list-item>
+    <md-list-item>
+        <md-item-content>
+            <md-checkbox ng-model="report.distinct" aria-label="Is Distinct">
+                {{ 'options|html|Is Distinct (Maybe help reduce duplicates rows)' | translate }} 
+            </md-checkbox>
+            {{ 'options|html|Read' | translate }}&nbsp;<a href="//docs.djangoproject.com/en/1.7/ref/models/querysets/#django.db.models.query.QuerySet.distinct">{{ 'options|html|more' | translate }}.</a>
+        </md-item-content>
+    </md-list-item>
+    <md-list-item>
+        <md-item-content>
+            <a ng-href="{{ 'report/' + report.id + '/create_copy/' }}" target="_self"><img class="options-icon" src="{{ static('report_builder/img/new/copy.svg') }}"/>{{ 'options|html|Copy this report' | translate }}</a>
+        </md-item-content>
+    </md-list-item>
+    <md-list-item>
+        <md-item-content>
+            <a href="" ng-click="deleteReport(report.id)">
+                <img class="options-icon" src="{{ static('report_builder/img/new/delete.svg') }}"/>{{ 'options|html|Delete this report' | translate }}
+            </a>
+        </md-item-content>
+    </md-list-item>
+    <md-list-item ng-if="ASYNC_REPORT === 'True'">
+        <md-item-content>
+            <a ng-href="{{ report.report_file }}">
+                <img class="options-icon" src="{{ static('report_builder/img/new/download.svg') }}"/>{{ 'options|html|Download existing report' | translate }} 
+            </a>
+            &nbsp;generated at {{ report.report_file_creation | date:"MM/dd/yyyy 'at' h:mma" }}
+        </md-item-content>
+    </md-list-item>
+</md-list>
+</md-content>
+    
