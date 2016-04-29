@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from evaluation.models.patient import Patient
+from . import BaseEvaluation 
 
 CHOICES_STRENGTH = (
     (5, _(u'A lot of strength')),
@@ -11,12 +12,9 @@ CHOICES_STRENGTH = (
 )
 
 
-class SIS(models.Model):
-    patient = models.ForeignKey(Patient)
+class SIS(BaseEvaluation):
     strength_arm = models.IntegerField(choices=CHOICES_STRENGTH)
     strength_hand = models.IntegerField(choices=CHOICES_STRENGTH)
     strength_leg = models.IntegerField(choices=CHOICES_STRENGTH)
     strength_foot = models.IntegerField(choices=CHOICES_STRENGTH)
-
-    def __unicode__(self):
-        return '%s' % self.patient
+    

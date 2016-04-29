@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from .widgets import ButtonRadioSelect, StepNumberInput
+from .widgets import ButtonRadioSelect, ButtonRadioGridChoiceInput, ButtonRadioHorizontalSelect
 from .mixin import ControlNTFormMixin
-from .models.kviq import KVIQ, NT
+from .models.kviq import KVIQ, NT, CHOICES_VISUAL_IMAGES, CHOICES_CINE_IMAGES
+from .models.eeg import Eeg
+from .models.fim import FIM, FIM_CHOICES_CATEGORY
 
-# import the logging library
 import logging
 
 # Get an instance of a logger
@@ -24,10 +25,10 @@ class KVIQAdminForm(ControlNTFormMixin, forms.ModelForm):
     imrea_nt = {'fields': ('visual_images', 'cine_images'),}
     
     visual_images = forms.ChoiceField(widget=ButtonRadioSelect(),
-                                      choices=KVIQ.CHOICES_VISUAL_IMAGES,
+                                      choices=CHOICES_VISUAL_IMAGES,
                                       help_text=TEXT_VISUAL_IMAGES)
     cine_images = forms.ChoiceField(widget=ButtonRadioSelect(),
-                                      choices=KVIQ.CHOICES_CINE_IMAGES)
+                                      choices=CHOICES_CINE_IMAGES)
 
     class Media:
         css = {
@@ -36,7 +37,6 @@ class KVIQAdminForm(ControlNTFormMixin, forms.ModelForm):
         
 
 class SISAdminForm(forms.ModelForm):
-    
 
     class Media:
         css = {
@@ -53,3 +53,51 @@ class BostonAphasiaForm(forms.ModelForm):
             'all': ('css/KVIQ.css',)
         }
         js = ('js/jquery.bootstrap-touchspin.js',)
+
+
+class EegAdminForm(forms.ModelForm):
+
+    class Meta:
+        model = Eeg
+        fields = ['patient', 'eegfile', 'eegtitle']
+
+class FIMAdminForm(forms.ModelForm):
+    
+    self_care_eating = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    self_care_grooming = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    self_care_bathing = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    self_care_dressing_upper_body = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    self_care_dressing_lower_body = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    self_care_toileting = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    sphincter_bladder_mgt = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    sphincter_bowel_mgt = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    transfer_wheelchair = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    transfer_toilet = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    transfer_shower = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    locomotion_wheelchair = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    locomotion_stairs = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+    
+    def __init__(self, *args, **kwargs):
+        super(FIMAdminForm, self).__init__(*args, **kwargs)
+        sorted_choices = sorted(FIM_CHOICES_CATEGORY, key=lambda x: x[1], reverse=False)
+        self.fields['self_care_eating'].choices = sorted_choices
+        self.fields['self_care_grooming'].choices = sorted_choices
+        self.fields['self_care_bathing'].choices = sorted_choices
+        self.fields['self_care_dressing_upper_body'].choices = sorted_choices
+        self.fields['self_care_dressing_lower_body'].choices = sorted_choices
+        self.fields['self_care_toileting'].choices = sorted_choices
+        self.fields['sphincter_bladder_mgt'].choices = sorted_choices
+        self.fields['sphincter_bowel_mgt'].choices = sorted_choices
+        self.fields['transfer_wheelchair'].choices = sorted_choices
+        self.fields['transfer_toilet'].choices = sorted_choices
+        self.fields['transfer_shower'].choices = sorted_choices
+        self.fields['locomotion_wheelchair'].choices = sorted_choices
+        self.fields['locomotion_stairs'].choices = sorted_choices
+    
+    class Media:
+        css = {
+            'all': ('css/KVIQ.css',)
+        }
+
+
+        

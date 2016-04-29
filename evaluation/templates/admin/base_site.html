@@ -5,6 +5,12 @@
 
 {% block extrahead %}
 <script src="{% static 'js/evaluation.js' %}"></script>
+
+<script>
+    $(function() {
+        AjaxUploadWidget.autoDiscover();
+    });
+</script>
 {% endblock extrahead %}
 
 {% block branding %}

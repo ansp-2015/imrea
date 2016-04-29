@@ -1,0 +1,116 @@
+{% extends "report_builder/base.html" %}
+{% load staticfiles %}
+
+{% block report_header %}
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <base href="{% url 'report_builder' %}">
+
+    <script src="{% static 'report_builder/bower_components/angular/angular.min.js' %}"></script>
+    <script src="{% static 'report_builder/bower_components/angular-route/angular-route.min.js' %}"></script>
+    <script src="{% static 'report_builder/bower_components/lodash/dist/lodash.min.js' %}"></script>
+    <script src="{% static 'report_builder/bower_components/restangular/dist/restangular.min.js' %}"></script>
+
+    <script>
+      var STATIC_URL = '{{ STATIC_URL|escapejs }}';
+      var MEDIA_URL  = '{{ MEDIA_URL|escapejs }}';
+      var ASYNC_REPORT = '{{ ASYNC_REPORT }}';
+      var BASE_URL = "{% url 'report_builder' %}";
+    </script> 
+    
+    {% if user %}
+    <script>
+      var CURRENT_USER = '{{ user.id }}';
+    </script>
+    {% endif %}
+
+    <script src="{% static 'report_builder/app.js' %}"></script>
+    <script src="{% static 'report_builder/controllers.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'report_builder/bower_components/angular-material/angular-material.css' %}">
+    <script src="{% static 'report_builder/bower_components/angular-aria/angular-aria.js' %}"></script>
+    <script src="{% static 'report_builder/bower_components/angular-animate/angular-animate.js' %}"></script>
+    <script src="{% static 'report_builder/bower_components/hammerjs/hammer.js' %}"></script>
+    <script src="{% static 'report_builder/bower_components/angular-material/angular-material.js' %}"></script>
+
+    <link rel="stylesheet" media="screen" href="{% static 'report_builder/bower_components/handsontable/dist/handsontable.full.css' %}">
+    <script src="{% static 'report_builder/bower_components/handsontable/dist/handsontable.full.min.js' %}"></script>
+    <script src="{% static 'report_builder/bower_components/nghandsontable/dist/ngHandsontable.min.js' %}"></script>
+
+    <script src="{% static 'report_builder/bower_components/angular-ui-tree/dist/angular-ui-tree.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'report_builder/bower_components/angular-ui-tree/dist/angular-ui-tree.min.css' %}">
+    <link rel="stylesheet" href="{% static 'report_builder/css/angular_report.css' %}">
+
+    <script src="{% static 'report_builder/bower_components/moment/moment.js' %}"></script>
+    <script src="{% static 'report_builder/bower_components/pikaday/pikaday.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'report_builder/bower_components/pikaday/css/pikaday.css' %}"></link>
+    <script src="{% static 'report_builder/bower_components/pikaday-angular/pikaday-angular.js' %}"></script>
+    
+    <!-- Adicionado paa o projeto imrea  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <script src="{% static 'report_builder/bower_components/angular-translate/angular-translate.js' %}"></script>
+    <script src="{% static 'report_builder/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js' %}"></script>
+    <script src="{% static 'report_builder/bower_components/angular-translate-storage-local/angular-translate-storage-local.js' %}"></script>
+    
+    <style>
+        /* Tabs - itens */
+        md-pagination-wrapper .md-tab {
+            border-width: 1px 1px 1px 0;
+            border-style: solid;
+            border-radius: 5px 5px 0 0;
+        }
+        md-pagination-wrapper .md-tab:first-child {
+            border-right: 1px solid;
+        }
+        md-pagination-wrapper .md-tab.md-active {
+            background-color: lightgray;
+        }
+        
+        /* Tabs - Report - itens */ 
+        md-tab-content .md-button {
+            border-width: 1px 1px 1px 1px;
+            border-style: solid;
+        }
+        md-tab-content .md-button + span.ng-scope {
+            font-size: 0.8em;
+            font-style: italic;
+            margin-left: 1.5em;
+        }
+        
+        /* Left Sidenav - Content com a descrição do Field */
+        md-content[ng-controller="LeftCtrl"]  .sidebar-left-search .material-icons {
+            font-size: 1em;
+            vertical-align: middle;
+        }
+        md-content[ng-controller="LeftCtrl"] md-content:nth-child(2) {
+            background-color:rgb(63,81,181);
+            color:white;
+        }
+        md-content[ng-controller="LeftCtrl"] md-list md-item:first-child > md-item-content > a > div:first-child {
+            border: 1px solid darkgray;
+            border-radius: 4px;
+        }
+         
+        
+        /* Right Sidenav - Relations - itens*/
+        .md-sidenav-right .material-icons {
+            font-size: 1em;
+            vertical-align: middle;
+        }
+        md-sidenav ol.angular-ui-tree-nodes > li > .angular-ui-tree-handle {
+            cursor: pointer;
+        }
+        /* Right Sidenav - Content com a descrição do Field */
+        md-sidenav > div > md-content > md-content {
+            border-top: 1px solid lightgray;
+        }
+        
+        
+    </style>
+    <!-- END Adicionado paa o projeto imrea  -->
+{% endblock %}
+
+{% block content %}
+    <div class="fullheight" ng-app="reportBuilderApp" ng-view>
+    </div>
+{% endblock %}

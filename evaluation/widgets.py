@@ -1,10 +1,13 @@
 from __future__ import unicode_literals
 from django.utils.html import format_html
-from django.utils.safestring import mark_safe
+from django.forms.widgets import RadioFieldRenderer, RadioSelect, RadioChoiceInput
+import logging
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 __author__ = 'antonio'
 
-from django.forms.widgets import RadioFieldRenderer, RadioSelect, RadioChoiceInput, TextInput
 
 
 ###
@@ -29,12 +32,28 @@ class ButtonRadioChoiceInput(RadioChoiceInput):
 
 class ButtonRadioRenderer(RadioFieldRenderer):
     choice_input_class = ButtonRadioChoiceInput
+    orientation = 'vertical'
     outer_html = '<div class="btn-toolbar" role="toolbar">\n<div class="btn-group-vertical" role="group" data-toggle="buttons"{id_attr}>{content}</div></div>'
     inner_html = '{choice_value}{sub_widgets}'
+    
+    def __init__(self, *args, **kwargs):
+        super(ButtonRadioRenderer, self).__init__(*args, **kwargs)
+        self.outer_html = '<div class="btn-toolbar" role="toolbar">\n<div class="btn-group-%s" role="group" data-toggle="buttons"{id_attr}>{content}</div></div>' % self.orientation
 
 
 class ButtonRadioSelect(RadioSelect):
     renderer = ButtonRadioRenderer
+
+
+###
+# Radio with buttons horizontal
+###
+class ButtonRadioHorizontalRenderer(ButtonRadioRenderer):
+    orientation = 'horizontal'
+    
+class ButtonRadioHorizontalSelect(RadioSelect):
+    renderer = ButtonRadioHorizontalRenderer
+    
 
 
 ###

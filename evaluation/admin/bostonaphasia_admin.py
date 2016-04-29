@@ -1,12 +1,10 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from evaluation.models.bostonaphasia import BostonAphasia
-from evaluation.forms import BostonAphasiaForm
 
 
 class BostonAphasiaAdmin(admin.ModelAdmin):
 
-    form = BostonAphasiaForm
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient',),

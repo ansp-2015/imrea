@@ -1,0 +1,20 @@
+<div ui-tree="" ng-controller="ReportFilterCtrl">
+  <div layout="row">
+    <div class="move_trash" flex=""></div>
+    <div flex="">{{ 'filters|html|Field' | translate }}</div>
+    <div class="col_filter_type" flex="">{{ 'filters|html|Filter Type' | translate }}</div>
+    <div class="" flex="">{{ 'filters|html|Value' | translate }}</div>
+    <div class="col_checkbox" flex="">{{ 'filters|html|Exclude' | translate }}</div>
+  </div>
+  <div>
+    <ol ui-tree-nodes="" ng-model="report.filterfield_set">
+      <li data-collapsed="false" ng-include="static('report_builder/partials/filter_renderer.html')" ng-repeat="field in report.filterfield_set" ui-tree-node>
+      </li>
+    </ol>
+  </div>
+  <div hide-gt-lg layout="row" layout-sm="column" layout-align="center center" style="height: 55px;">
+    <md-button class="fullscreen" ng-click="requestFullscreen()" aria-label="Fullscreen">
+      {{ 'filters|html|Fullscreen' | translate }}
+    </md-button>
+  </div>
+</div>
