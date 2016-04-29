@@ -7,5 +7,4 @@ class Patient(models.Model):
 
     def __unicode__(self):
         names = self.name.split()
-        print names
         return ''.join([n[0] for n in names if n[0].isupper()])
