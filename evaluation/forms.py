@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from .widgets import ButtonRadioSelect, ButtonRadioGridChoiceInput, ButtonRadioHorizontalSelect
+from .widgets import ButtonRadioSelect, ButtonRadioGridChoiceInput, ButtonRadioHorizontalSelect, StepNumberInput
 from .mixin import ControlNTFormMixin
 from .models.kviq import KVIQ, NT, CHOICES_VISUAL_IMAGES, CHOICES_CINE_IMAGES
 from .models.eeg import Eeg

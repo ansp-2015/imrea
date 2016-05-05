@@ -5,8 +5,9 @@ from .sis import SIS
 from .bostonaphasia import BostonAphasia
 from .eeg import Eeg
 from .fim import FIM
+from .period import Period
 
 
-__all__ = ['BaseEvaluation', 'Patient', 'KVIQ', 'SIS', 'FIM', 'Eeg', 'BostonAphasia']
+__all__ = ['BaseEvaluation', 'Patient', 'KVIQ', 'SIS', 'FIM', 'Eeg', 'BostonAphasia', 'Period']
 
 

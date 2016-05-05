@@ -1,9 +1,11 @@
 from __future__ import unicode_literals
 from django.utils.html import format_html
-from django.forms.widgets import RadioFieldRenderer, RadioSelect, RadioChoiceInput
+from django.forms.widgets import RadioFieldRenderer, RadioSelect, RadioChoiceInput, TextInput
 import logging
 
 # Get an instance of a logger
+from django.utils.safestring import mark_safe
+
 logger = logging.getLogger(__name__)
 
 __author__ = 'antonio'
@@ -99,7 +101,7 @@ class StepNumberInput(TextInput):
             max_value = self.attrs.pop('max', max_value)
             step = self.attrs.pop('step', step)
 
-        input = super(StepNumberInput, self).render(name, value, attrs)
+        winput = super(StepNumberInput, self).render(name, value, attrs)
 
         extra = ''
         if isinstance(step, float):
@@ -117,4 +119,4 @@ class StepNumberInput(TextInput):
         </div>
         """
 
-        return format_html(div_buttons, input, name, name, min_value, max_value, extra, step)
+        return format_html(div_buttons, winput, name, name, min_value, max_value, extra, step)
