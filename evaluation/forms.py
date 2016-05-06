@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from .widgets import ButtonRadioSelect, ButtonRadioGridChoiceInput, ButtonRadioHorizontalSelect
+from .widgets import ButtonRadioSelect, ButtonRadioGridChoiceInput, ButtonRadioHorizontalSelect, StepNumberInput
 from .mixin import ControlNTFormMixin
 from .models.kviq import KVIQ, NT, CHOICES_VISUAL_IMAGES, CHOICES_CINE_IMAGES
 from .models.eeg import Eeg
-from .models.fim import FIM, FIM_CHOICES_CATEGORY
+from .models.fim import FIM
 
 import logging
 
@@ -62,7 +62,7 @@ class EegAdminForm(forms.ModelForm):
         fields = ['patient', 'eegfile', 'eegtitle']
 
 class FIMAdminForm(forms.ModelForm):
-    
+
     self_care_eating = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
     self_care_grooming = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
     self_care_bathing = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
@@ -79,7 +79,7 @@ class FIMAdminForm(forms.ModelForm):
     
     def __init__(self, *args, **kwargs):
         super(FIMAdminForm, self).__init__(*args, **kwargs)
-        sorted_choices = sorted(FIM_CHOICES_CATEGORY, key=lambda x: x[1], reverse=False)
+        sorted_choices = sorted(FIM.FIM_CHOICES_CATEGORY, key=lambda x: x[1], reverse=False)
         self.fields['self_care_eating'].choices = sorted_choices
         self.fields['self_care_grooming'].choices = sorted_choices
         self.fields['self_care_bathing'].choices = sorted_choices
