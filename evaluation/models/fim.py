@@ -20,19 +20,23 @@ class FIM(BaseEvaluation):
         (1, _(u'Total assistance'))
     )
     # Cuidados pessoais
-    self_care_eating = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
-    self_care_grooming = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
-    self_care_bathing = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
-    self_care_dressing_upper_body = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
-    self_care_dressing_lower_body = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
-    self_care_toileting = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
+    self_care_eating = models.IntegerField(_('Eating'), choices=FIM_CHOICES_CATEGORY)
+    self_care_grooming = models.IntegerField(_('Grooming'), choices=FIM_CHOICES_CATEGORY)
+    self_care_bathing = models.IntegerField(_('Bathing/showering'), choices=FIM_CHOICES_CATEGORY)
+    self_care_dressing_upper_body = models.IntegerField(_('Dressing upper body'), choices=FIM_CHOICES_CATEGORY)
+    self_care_dressing_lower_body = models.IntegerField(_('Dressing lower body'), choices=FIM_CHOICES_CATEGORY)
+    self_care_toileting = models.IntegerField(_('Toileting'), choices=FIM_CHOICES_CATEGORY)
     # Controle esfincteriano
-    sphincter_bladder_mgt = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
-    sphincter_bowel_mgt = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
+    sphincter_bladder_mgt = models.IntegerField(_('Bladder management'), choices=FIM_CHOICES_CATEGORY)
+    sphincter_bowel_mgt = models.IntegerField(_('Bowel management'), choices=FIM_CHOICES_CATEGORY)
     # Mobilidade / Transferências
-    transfer_wheelchair = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
-    transfer_toilet = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
-    transfer_shower = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
+    transfer_wheelchair = models.IntegerField(_('Transfers bed/chair/wheelchair'), choices=FIM_CHOICES_CATEGORY)
+    transfer_toilet = models.IntegerField(_('Transfers toilet'), choices=FIM_CHOICES_CATEGORY)
+    transfer_shower = models.IntegerField(_('Transfers bathtub/shower'), choices=FIM_CHOICES_CATEGORY)
     # Locomoção
-    locomotion_wheelchair = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
-    locomotion_stairs = models.IntegerField(choices=FIM_CHOICES_CATEGORY)
+    locomotion_wheelchair = models.IntegerField(_('Locomotion walking/wheelchair'), choices=FIM_CHOICES_CATEGORY)
+    locomotion_stairs = models.IntegerField(_('Locomotion stairs'), choices=FIM_CHOICES_CATEGORY)
+
+    class Meta:
+        verbose_name = _('FIM')
+        verbose_name_plural = _('FIMs')

@@ -8,69 +8,257 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-14 12:39-0300\n"
+"POT-Creation-Date: 2016-05-09 16:42-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: evaluation/models.py:6
+#: .\evaluation\admin\bostonaphasia_admin.py:9
+#: .\evaluation\admin\eeg_admin.py:11 .\evaluation\admin\fim_admin.py:11
+#: .\evaluation\admin\kviq_admin.py:12 .\evaluation\admin\sis_admin.py:11
+msgid "Patient"
+msgstr ""
+
+#: .\evaluation\admin\bostonaphasia_admin.py:13
+msgid "Manual dominance."
+msgstr ""
+
+#: .\evaluation\admin\bostonaphasia_admin.py:16
+msgid "Activity"
+msgstr ""
+
+#: .\evaluation\admin\bostonaphasia_admin.py:16
+msgid "Left hand"
+msgstr ""
+
+#: .\evaluation\admin\bostonaphasia_admin.py:16
+msgid "Right hand"
+msgstr ""
+
+#: .\evaluation\admin\bostonaphasia_admin.py:18
+msgid "Instructions:..."
+msgstr ""
+
+#: .\evaluation\admin\eeg_admin.py:15
+msgid "Arquivo"
+msgstr ""
+
+#: .\evaluation\admin\fim_admin.py:15
+msgid "Self Care"
+msgstr "Cuidados pessoais"
+
+#: .\evaluation\admin\fim_admin.py:23
+msgid "Sphincter"
+msgstr "Controle esfincteriano"
+
+#: .\evaluation\admin\fim_admin.py:29
+msgid "Transfer"
+msgstr "Mobilidade/Transferências"
+
+#: .\evaluation\admin\fim_admin.py:35
+msgid "Locomotion"
+msgstr "Locomoção"
+
+#: .\evaluation\admin\kviq_admin.py:16
+msgid "Neck"
+msgstr ""
+
+#: .\evaluation\admin\sis_admin.py:15
+msgid ""
+"These questions are about the physical problems which may have occurred as a "
+"result of your stroke."
+msgstr ""
+
+#: .\evaluation\admin\sis_admin.py:18
+msgid "1. In the past week, how would you rate the strength of your...."
+msgstr ""
+
+#: .\evaluation\forms.py:67 .\evaluation\models\fim.py:23
+msgid "Eating"
+msgstr "Alimentação"
+
+#: .\evaluation\forms.py:68 .\evaluation\models\fim.py:24
+msgid "Grooming"
+msgstr "Auto cuidado"
+
+#: .\evaluation\forms.py:69 .\evaluation\models\fim.py:25
+msgid "Bathing/showering"
+msgstr "Banhar-se"
+
+#: .\evaluation\forms.py:70 .\evaluation\models\fim.py:26
+msgid "Dressing upper body"
+msgstr "Vestir tronco superior"
+
+#: .\evaluation\forms.py:71 .\evaluation\models\fim.py:27
+msgid "Dressing lower body"
+msgstr "Vestir tronco inferior"
+
+#: .\evaluation\forms.py:72 .\evaluation\models\fim.py:30
+msgid "Bladder management"
+msgstr "Controle vesical"
+
+#: .\evaluation\forms.py:73 .\evaluation\models\fim.py:28
+msgid "Toileting"
+msgstr "Higiene íntima"
+
+#: .\evaluation\forms.py:74 .\evaluation\models\fim.py:31
+msgid "Bowel management"
+msgstr "Controle intestinal"
+
+#: .\evaluation\forms.py:75 .\evaluation\models\fim.py:33
+msgid "Transfers bed/chair/wheelchair"
+msgstr "Cama/cadeira/cadeira de rodas"
+
+#: .\evaluation\forms.py:76 .\evaluation\models\fim.py:34
+msgid "Transfers toilet"
+msgstr "Banheiro"
+
+#: .\evaluation\forms.py:77 .\evaluation\models\fim.py:35
+msgid "Transfers bathtub/shower"
+msgstr "Banho chuveiro/banheira"
+
+#: .\evaluation\forms.py:78 .\evaluation\models\fim.py:37
+msgid "Locomotion walking/wheelchair"
+msgstr "Andar/cadeira de rodas"
+
+#: .\evaluation\forms.py:79 .\evaluation\models\fim.py:38
+msgid "Locomotion stairs"
+msgstr "Escadas"
+
+#: .\evaluation\models\base_evaluation.py:12 .\evaluation\models\kviq.py:7
+msgid "NT"
+msgstr ""
+
+#: .\evaluation\models\base_evaluation.py:14
+msgid "MD"
+msgstr ""
+
+#: .\evaluation\models\bostonaphasia.py:7
+#: .\evaluation\models\bostonaphasia.py:8
+msgid "Write or distribute a card deck"
+msgstr ""
+
+#: .\evaluation\models\fim.py:14
+msgid "Complete independence"
+msgstr "Independência completa (seguro e em tempo satisfatório)"
+
+#: .\evaluation\models\fim.py:15
+msgid "Modified independence"
+msgstr "Independência modificada (recursos auxiliares) / Dependência parcial"
+
+#: .\evaluation\models\fim.py:16
+msgid "Supervision"
+msgstr "Supervisão"
+
+#: .\evaluation\models\fim.py:17
+msgid "Minimal assistance"
+msgstr "Miníma assistência (75%)"
+
+#: .\evaluation\models\fim.py:18
+msgid "Moderate assistance"
+msgstr "Moderada assistência (50%) / Dependente"
+
+#: .\evaluation\models\fim.py:19
+msgid "Maximal assistance"
+msgstr "Máxima assistência (25%)"
+
+#: .\evaluation\models\fim.py:20
+msgid "Total assistance"
+msgstr "Total assistência (0%)"
+
+#: .\evaluation\models\fim.py:41
+msgid "FIM"
+msgstr "MIF"
+
+#: .\evaluation\models\fim.py:42
+msgid "FIMs"
+msgstr "MIFs"
+
+#: .\evaluation\models\kviq.py:10
 msgid "Image as clear as seeing"
 msgstr "Imagem tão clara como ver"
 
-#: evaluation/models.py:7
+#: .\evaluation\models\kviq.py:11
 msgid "Clear image"
 msgstr "Imagem clara"
 
-#: evaluation/models.py:8
+#: .\evaluation\models\kviq.py:12
 msgid "Moderately clear image"
 msgstr "Imagem moderadamente clara"
 
-#: evaluation/models.py:9
+#: .\evaluation\models\kviq.py:13
 msgid "Blurred image"
 msgstr ""
 
-#: evaluation/models.py:10
+#: .\evaluation\models\kviq.py:14
 msgid "No image"
 msgstr ""
 
-#: evaluation/models.py:14
+#: .\evaluation\models\kviq.py:18
 msgid "As intense as performing the action"
 msgstr ""
 
-#: evaluation/models.py:15
+#: .\evaluation\models\kviq.py:19
 msgid "Intense"
 msgstr ""
 
-#: evaluation/models.py:16
+#: .\evaluation\models\kviq.py:20
 msgid "Moderately intense"
 msgstr ""
 
-#: evaluation/models.py:17
+#: .\evaluation\models\kviq.py:21
 msgid "Slightly intense"
 msgstr ""
 
-#: evaluation/models.py:18
+#: .\evaluation\models\kviq.py:22
 msgid "No sensation"
 msgstr ""
 
-#: evaluation/templates/admin/evaluation/kviq/change_form.html:20
-msgid "Home"
+#: .\evaluation\models\sis.py:7
+msgid "A lot of strength"
 msgstr ""
 
-#: evaluation/templates/admin/evaluation/kviq/change_form.html:23
-#, python-format
-msgid "Add %(name)s"
+#: .\evaluation\models\sis.py:8
+msgid "Quite a bit of strength"
 msgstr ""
 
-#: evaluation/templates/admin/evaluation/kviq/change_form.html:35
-msgid "History"
+#: .\evaluation\models\sis.py:9
+msgid "Some strength"
 msgstr ""
 
-#: evaluation/templates/admin/evaluation/kviq/change_form.html:37
-msgid "View on site"
+#: .\evaluation\models\sis.py:10
+msgid "A little strength"
+msgstr ""
+
+#: .\evaluation\models\sis.py:11
+msgid "No strength at all"
+msgstr ""
+
+#: .\evaluation\templates\admin\base_site.html:4
+msgid "Django site admin"
+msgstr ""
+
+#: .\evaluation\templates\admin\base_site.html:17
+msgid "Django administration"
+msgstr ""
+
+#: .\evaluation\templates\admin\evaluation\bostonaphasia\change_form.html:6
+msgid "Boston Aphasia"
+msgstr ""
+
+#: .\evaluation\templates\admin\evaluation\fim\change_form.html:6
+msgid "FUNCTIONAL INDEPENDENCE MEASURE - FIM"
+msgstr "MEDIDA DE INDEPENDÊNCIA FUNCIONAL – MIF"
+
+#: .\evaluation\templates\admin\evaluation\kviq\change_form.html:6
+msgid "Kinesthetic and visual Imagery Questionnaire"
+msgstr ""
+
+#: .\evaluation\templates\admin\evaluation\sis\change_form.html:6
+msgid "Stroke Impact Scale"
 msgstr ""
