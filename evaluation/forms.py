@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 from django import forms
+from django.utils.translation import ugettext_lazy as _
 from .widgets import ButtonRadioSelect, ButtonRadioGridChoiceInput, ButtonRadioHorizontalSelect, StepNumberInput
 from .mixin import ControlNTFormMixin
 from .models.kviq import KVIQ, NT, CHOICES_VISUAL_IMAGES, CHOICES_CINE_IMAGES
 from .models.eeg import Eeg
-from .models.fim import FIM, FIM_CHOICES_CATEGORY
+from .models.fim import FIM
 
 import logging
 
@@ -125,24 +126,24 @@ class EegAdminForm(forms.ModelForm):
         fields = ['patient', 'eegfile', 'eegtitle']
 
 class FIMAdminForm(forms.ModelForm):
-    
-    self_care_eating = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
-    self_care_grooming = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
-    self_care_bathing = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
-    self_care_dressing_upper_body = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
-    self_care_dressing_lower_body = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
-    self_care_toileting = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
-    sphincter_bladder_mgt = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
-    sphincter_bowel_mgt = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
-    transfer_wheelchair = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
-    transfer_toilet = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
-    transfer_shower = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
-    locomotion_wheelchair = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
-    locomotion_stairs = forms.ChoiceField(widget=ButtonRadioHorizontalSelect())
+
+    self_care_eating = forms.ChoiceField(label=_('Eating'), widget=ButtonRadioHorizontalSelect())
+    self_care_grooming = forms.ChoiceField(label=_('Grooming'), widget=ButtonRadioHorizontalSelect())
+    self_care_bathing = forms.ChoiceField(label=_('Bathing/showering'), widget=ButtonRadioHorizontalSelect())
+    self_care_dressing_upper_body = forms.ChoiceField(label=_('Dressing upper body'), widget=ButtonRadioHorizontalSelect())
+    self_care_dressing_lower_body = forms.ChoiceField(label=_('Dressing lower body'), widget=ButtonRadioHorizontalSelect())
+    self_care_toileting = forms.ChoiceField(label=_('Toileting'), widget=ButtonRadioHorizontalSelect())
+    sphincter_bladder_mgt = forms.ChoiceField(label=_('Bladder management'), widget=ButtonRadioHorizontalSelect())
+    sphincter_bowel_mgt = forms.ChoiceField(label=_('Bowel management'), widget=ButtonRadioHorizontalSelect())
+    transfer_wheelchair = forms.ChoiceField(label=_('Transfers bed/chair/wheelchair'), widget=ButtonRadioHorizontalSelect())
+    transfer_toilet = forms.ChoiceField(label=_('Transfers toilet'), widget=ButtonRadioHorizontalSelect())
+    transfer_shower = forms.ChoiceField(label=_('Transfers bathtub/shower'), widget=ButtonRadioHorizontalSelect())
+    locomotion_wheelchair = forms.ChoiceField(label=_('Locomotion walking/wheelchair'), widget=ButtonRadioHorizontalSelect())
+    locomotion_stairs = forms.ChoiceField(label=_('Locomotion stairs'), widget=ButtonRadioHorizontalSelect())
     
     def __init__(self, *args, **kwargs):
         super(FIMAdminForm, self).__init__(*args, **kwargs)
-        sorted_choices = sorted(FIM_CHOICES_CATEGORY, key=lambda x: x[1], reverse=False)
+        sorted_choices = sorted(FIM.FIM_CHOICES_CATEGORY, key=lambda x: x[1], reverse=False)
         self.fields['self_care_eating'].choices = sorted_choices
         self.fields['self_care_grooming'].choices = sorted_choices
         self.fields['self_care_bathing'].choices = sorted_choices

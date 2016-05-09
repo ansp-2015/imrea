@@ -50,8 +50,25 @@ class ButtonRadioSelect(RadioSelect):
 ###
 # Radio with buttons horizontal
 ###
+class ButtonRadioChoiceValueInput(RadioChoiceInput):
+    def render(self, name=None, value=None, attrs=None):
+        if self.id_for_label:
+            label_for = format_html(' for="{}"', self.id_for_label)
+        else:
+            label_for = ''
+        attrs = dict(self.attrs, **attrs) if attrs else self.attrs
+        if self.is_checked():
+            active = ' active'
+        else:
+            active = ''
+        return format_html(
+            '<label{} class="btn-choice btn btn-primary{}">{} {}</label>',
+            label_for, active, self.tag(attrs), self.choice_value
+        )
+
 class ButtonRadioHorizontalRenderer(ButtonRadioRenderer):
     orientation = 'horizontal'
+    choice_input_class = ButtonRadioChoiceValueInput
     
 class ButtonRadioHorizontalSelect(RadioSelect):
     renderer = ButtonRadioHorizontalRenderer

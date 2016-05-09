@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from evaluation.models.fim import FIM, FIM_CHOICES_CATEGORY
+from evaluation.models.fim import FIM
 from evaluation.forms import FIMAdminForm
 
 
@@ -39,6 +39,12 @@ class FIMAdmin(admin.ModelAdmin):
             }
         }),
     )
+
+    def change_view(self, request, object_id, form_url='', extra_context=None):
+        extra_context = extra_context or {}
+        extra_context['FIM_CHOICES_CATEGORY'] = FIM.FIM_CHOICES_CATEGORY
+        return super(FIMAdmin, self).change_view(request, object_id,
+            form_url, extra_context=extra_context)
     
 
 admin.site.register(FIM, FIMAdmin)
