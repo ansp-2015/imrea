@@ -8,7 +8,7 @@ class Period(models.Model):
     Periods of evaluation
     """
     period = models.CharField(max_length=40)
-    parent = models.ForeignKey('evaluation.Period', verbose_name=_(u'Parent'), related_name='child')
+    parent = models.ForeignKey('evaluation.Period', verbose_name=_(u'Parent'), related_name='child', blank=True, null=True)
     
     def __unicode__(self):
         return '%s' % self.period

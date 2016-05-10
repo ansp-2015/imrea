@@ -9,7 +9,7 @@ class SISAdmin(admin.ModelAdmin):
     form = SISAdminForm
     fieldsets = (
         (_(u'Patient'), {
-            'fields': ('patient',),
+            'fields': ('patient', 'period'),
             'description': {'fieldset': '_patient'}
         }),
         (_(u'These questions are about the physical problems which may have occurred as a result of your stroke.'), {

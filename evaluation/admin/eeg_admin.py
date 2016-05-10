@@ -9,7 +9,7 @@ class EegAdmin(admin.ModelAdmin):
     form = EegAdminForm
     fieldsets = (
         (_(u'Patient'), {
-            'fields': ('patient',),
+            'fields': ('patient', 'period'),
             'description': {'fieldset': '_patient'}
         }),
         (_(u'Arquivo'), {
