@@ -143,7 +143,7 @@ class FIMAdminForm(forms.ModelForm):
     
     def __init__(self, *args, **kwargs):
         super(FIMAdminForm, self).__init__(*args, **kwargs)
-        sorted_choices = sorted(FIM.FIM_CHOICES_CATEGORY, key=lambda x: x[1], reverse=False)
+        sorted_choices = sorted(FIM.FIM_CHOICES_CATEGORY, key=lambda x: x[0], reverse=False)
         self.fields['self_care_eating'].choices = sorted_choices
         self.fields['self_care_grooming'].choices = sorted_choices
         self.fields['self_care_bathing'].choices = sorted_choices
