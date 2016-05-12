@@ -12,7 +12,7 @@
             {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=adminform|form_fieldset_column_width %}
             </div>
             </div>
-            {% if fieldset.name == 'Patient' %}
+            {% if fieldset.name == 'Patient' or fieldset.name == 'Paciente' %}
             <div class="row">
 	            <div class="col-md-6 col-sm-6 col-xs-12">
 	                <table class="category-table table table-striped">

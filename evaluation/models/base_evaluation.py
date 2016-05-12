@@ -16,7 +16,7 @@ class BaseEvaluation(models.Model):
 
     patient = models.ForeignKey(Patient, verbose_name=_(u'Patient'))
     period = models.ForeignKey(Period, verbose_name=_(u'Period'))
-    date = models.DateField(auto_now_add=True)
+    date = models.DateTimeField(auto_now_add=True, verbose_name=_(u'Last update'))
 
     class Meta:
         abstract = True

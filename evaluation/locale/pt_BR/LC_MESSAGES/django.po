@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-09 16:42-0300\n"
+"POT-Creation-Date: 2016-05-12 14:52-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,29 +18,30 @@ msgstr ""
 "Language: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\evaluation\admin\bostonaphasia_admin.py:9
-#: .\evaluation\admin\eeg_admin.py:11 .\evaluation\admin\fim_admin.py:11
+#: .\evaluation\admin\bostonaphasia_admin.py:10
+#: .\evaluation\admin\eeg_admin.py:11 .\evaluation\admin\fim_admin.py:20
 #: .\evaluation\admin\kviq_admin.py:12 .\evaluation\admin\sis_admin.py:11
+#: .\evaluation\models\base_evaluation.py:17
 msgid "Patient"
-msgstr ""
+msgstr "Paciente"
 
-#: .\evaluation\admin\bostonaphasia_admin.py:13
+#: .\evaluation\admin\bostonaphasia_admin.py:14
 msgid "Manual dominance."
 msgstr ""
 
-#: .\evaluation\admin\bostonaphasia_admin.py:16
+#: .\evaluation\admin\bostonaphasia_admin.py:17
 msgid "Activity"
 msgstr ""
 
-#: .\evaluation\admin\bostonaphasia_admin.py:16
+#: .\evaluation\admin\bostonaphasia_admin.py:17
 msgid "Left hand"
 msgstr ""
 
-#: .\evaluation\admin\bostonaphasia_admin.py:16
+#: .\evaluation\admin\bostonaphasia_admin.py:17
 msgid "Right hand"
 msgstr ""
 
-#: .\evaluation\admin\bostonaphasia_admin.py:18
+#: .\evaluation\admin\bostonaphasia_admin.py:19
 msgid "Instructions:..."
 msgstr ""
 
@@ -48,25 +49,67 @@ msgstr ""
 msgid "Arquivo"
 msgstr ""
 
-#: .\evaluation\admin\fim_admin.py:15
+#: .\evaluation\admin\fim_admin.py:24
 msgid "Self Care"
 msgstr "Cuidados pessoais"
 
-#: .\evaluation\admin\fim_admin.py:23
+#: .\evaluation\admin\fim_admin.py:32
 msgid "Sphincter"
 msgstr "Controle esfincteriano"
 
-#: .\evaluation\admin\fim_admin.py:29
+#: .\evaluation\admin\fim_admin.py:38
 msgid "Transfer"
 msgstr "Mobilidade/Transferências"
 
-#: .\evaluation\admin\fim_admin.py:35
+#: .\evaluation\admin\fim_admin.py:44
 msgid "Locomotion"
 msgstr "Locomoção"
 
+#: .\evaluation\admin\fim_admin.py:57
+msgid "Birthdate"
+msgstr "Data de nascimento"
+
 #: .\evaluation\admin\kviq_admin.py:16
-msgid "Neck"
+msgid "Neck flexion/extension"
 msgstr ""
+
+#: .\evaluation\admin\kviq_admin.py:22
+msgid "Shoulder elevation"
+msgstr ""
+
+#: .\evaluation\admin\kviq_admin.py:28
+msgid "Shoulder flexion"
+msgstr ""
+
+#: .\evaluation\admin\kviq_admin.py:35
+msgid "Elbow"
+msgstr ""
+
+#: .\evaluation\admin\kviq_admin.py:42
+msgid "Thumb"
+msgstr ""
+
+#: .\evaluation\admin\kviq_admin.py:49
+msgid "Trunk"
+msgstr ""
+
+#: .\evaluation\admin\kviq_admin.py:55
+msgid "Knee"
+msgstr ""
+
+#: .\evaluation\admin\kviq_admin.py:62
+msgid "Hip"
+msgstr ""
+
+#: .\evaluation\admin\kviq_admin.py:69
+msgid "Foot tapping"
+msgstr ""
+
+#: .\evaluation\admin\kviq_admin.py:76
+#, fuzzy
+#| msgid "Locomotion"
+msgid "Foot rotation"
+msgstr "Locomoção"
 
 #: .\evaluation\admin\sis_admin.py:15
 msgid ""
@@ -78,65 +121,21 @@ msgstr ""
 msgid "1. In the past week, how would you rate the strength of your...."
 msgstr ""
 
-#: .\evaluation\forms.py:67 .\evaluation\models\fim.py:23
-msgid "Eating"
-msgstr "Alimentação"
-
-#: .\evaluation\forms.py:68 .\evaluation\models\fim.py:24
-msgid "Grooming"
-msgstr "Auto cuidado"
-
-#: .\evaluation\forms.py:69 .\evaluation\models\fim.py:25
-msgid "Bathing/showering"
-msgstr "Banhar-se"
-
-#: .\evaluation\forms.py:70 .\evaluation\models\fim.py:26
-msgid "Dressing upper body"
-msgstr "Vestir tronco superior"
-
-#: .\evaluation\forms.py:71 .\evaluation\models\fim.py:27
-msgid "Dressing lower body"
-msgstr "Vestir tronco inferior"
-
-#: .\evaluation\forms.py:72 .\evaluation\models\fim.py:30
-msgid "Bladder management"
-msgstr "Controle vesical"
-
-#: .\evaluation\forms.py:73 .\evaluation\models\fim.py:28
-msgid "Toileting"
-msgstr "Higiene íntima"
-
-#: .\evaluation\forms.py:74 .\evaluation\models\fim.py:31
-msgid "Bowel management"
-msgstr "Controle intestinal"
-
-#: .\evaluation\forms.py:75 .\evaluation\models\fim.py:33
-msgid "Transfers bed/chair/wheelchair"
-msgstr "Cama/cadeira/cadeira de rodas"
-
-#: .\evaluation\forms.py:76 .\evaluation\models\fim.py:34
-msgid "Transfers toilet"
-msgstr "Banheiro"
-
-#: .\evaluation\forms.py:77 .\evaluation\models\fim.py:35
-msgid "Transfers bathtub/shower"
-msgstr "Banho chuveiro/banheira"
-
-#: .\evaluation\forms.py:78 .\evaluation\models\fim.py:37
-msgid "Locomotion walking/wheelchair"
-msgstr "Andar/cadeira de rodas"
-
-#: .\evaluation\forms.py:79 .\evaluation\models\fim.py:38
-msgid "Locomotion stairs"
-msgstr "Escadas"
-
-#: .\evaluation\models\base_evaluation.py:12 .\evaluation\models\kviq.py:7
+#: .\evaluation\models\base_evaluation.py:13 .\evaluation\models\kviq.py:7
 msgid "NT"
 msgstr ""
 
-#: .\evaluation\models\base_evaluation.py:14
+#: .\evaluation\models\base_evaluation.py:15
 msgid "MD"
 msgstr ""
+
+#: .\evaluation\models\base_evaluation.py:18
+msgid "Period"
+msgstr ""
+
+#: .\evaluation\models\base_evaluation.py:19
+msgid "Last update"
+msgstr "Última atualização"
 
 #: .\evaluation\models\bostonaphasia.py:7
 #: .\evaluation\models\bostonaphasia.py:8
@@ -144,32 +143,84 @@ msgid "Write or distribute a card deck"
 msgstr ""
 
 #: .\evaluation\models\fim.py:14
-msgid "Complete independence"
-msgstr "Independência completa (seguro e em tempo satisfatório)"
+msgid "Total assistance"
+msgstr "Total assistência (0%)"
 
 #: .\evaluation\models\fim.py:15
-msgid "Modified independence"
-msgstr "Independência modificada (recursos auxiliares) / Dependência parcial"
+msgid "Maximal assistance"
+msgstr "Máxima assistência (25%)"
 
 #: .\evaluation\models\fim.py:16
-msgid "Supervision"
-msgstr "Supervisão"
+msgid "Moderate assistance"
+msgstr "Moderada assistência (50%) / Dependente"
 
 #: .\evaluation\models\fim.py:17
 msgid "Minimal assistance"
 msgstr "Miníma assistência (75%)"
 
 #: .\evaluation\models\fim.py:18
-msgid "Moderate assistance"
-msgstr "Moderada assistência (50%) / Dependente"
+msgid "Supervision"
+msgstr "Supervisão"
 
 #: .\evaluation\models\fim.py:19
-msgid "Maximal assistance"
-msgstr "Máxima assistência (25%)"
+msgid "Modified independence"
+msgstr "Independência modificada (recursos auxiliares) / Dependência parcial"
 
 #: .\evaluation\models\fim.py:20
-msgid "Total assistance"
-msgstr "Total assistência (0%)"
+msgid "Complete independence"
+msgstr "Independência completa (seguro e em tempo satisfatório)"
+
+#: .\evaluation\models\fim.py:23
+msgid "Eating"
+msgstr "Alimentação"
+
+#: .\evaluation\models\fim.py:24
+msgid "Grooming"
+msgstr "Auto cuidado"
+
+#: .\evaluation\models\fim.py:25
+msgid "Bathing/showering"
+msgstr "Banhar-se"
+
+#: .\evaluation\models\fim.py:26
+msgid "Dressing upper body"
+msgstr "Vestir tronco superior"
+
+#: .\evaluation\models\fim.py:27
+msgid "Dressing lower body"
+msgstr "Vestir tronco inferior"
+
+#: .\evaluation\models\fim.py:28
+msgid "Toileting"
+msgstr "Higiene íntima"
+
+#: .\evaluation\models\fim.py:30
+msgid "Bladder management"
+msgstr "Controle vesical"
+
+#: .\evaluation\models\fim.py:31
+msgid "Bowel management"
+msgstr "Controle intestinal"
+
+#: .\evaluation\models\fim.py:33
+msgid "Transfers bed/chair/wheelchair"
+msgstr "Cama/cadeira/cadeira de rodas"
+
+#: .\evaluation\models\fim.py:34
+msgid "Transfers toilet"
+msgstr "Banheiro"
+
+#: .\evaluation\models\fim.py:35
+msgid "Transfers bathtub/shower"
+msgstr "Banho chuveiro/banheira"
+
+#: .\evaluation\models\fim.py:37
+msgid "Locomotion walking/wheelchair"
+msgstr "Andar/cadeira de rodas"
+
+#: .\evaluation\models\fim.py:38
+msgid "Locomotion stairs"
+msgstr "Escadas"
 
 #: .\evaluation\models\fim.py:41
 msgid "FIM"
@@ -219,6 +270,18 @@ msgstr ""
 msgid "No sensation"
 msgstr ""
 
+#: .\evaluation\models\kviq.py:27
+msgid "Left"
+msgstr ""
+
+#: .\evaluation\models\kviq.py:27
+msgid "Right"
+msgstr ""
+
+#: .\evaluation\models\period.py:11
+msgid "Parent"
+msgstr ""
+
 #: .\evaluation\models\sis.py:7
 msgid "A lot of strength"
 msgstr ""
@@ -262,3 +325,38 @@ msgstr ""
 #: .\evaluation\templates\admin\evaluation\sis\change_form.html:6
 msgid "Stroke Impact Scale"
 msgstr ""
+
+#: .\evaluation\templates\reversion-compare\compare.html:19
+msgid "Home"
+msgstr "Pág. principal"
+
+#: .\evaluation\templates\reversion-compare\compare.html:22
+msgid "History"
+msgstr "Histórico"
+
+#: .\evaluation\templates\reversion-compare\compare.html:23
+#, python-format
+msgid "Compare %(name)s"
+msgstr "Comparar %(name)s"
+
+#: .\evaluation\templates\reversion-compare\compare.html:32
+msgid "DATETIME_FORMAT"
+msgstr ""
+
+#: .\evaluation\templates\reversion-compare\compare.html:32
+#, python-format
+msgid ""
+"\n"
+"                Compare <strong>%(date1)s</strong> with <strong>%(date2)s</"
+"strong>:\n"
+"            "
+msgstr ""
+"\n"
+"                Comparar <strong>%(date1)s</strong> com <strong>%(date2)s</"
+"strong>:\n"
+"            "
+
+#: .\evaluation\templates\reversion-compare\compare.html:36
+#: .\evaluation\templates\reversion-compare\compare.html:40
+msgid "Go back to history list"
+msgstr "Voltar para a lista de históricos"

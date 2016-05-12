@@ -11,13 +11,13 @@ class FIM(BaseEvaluation):
     """
 
     FIM_CHOICES_CATEGORY = (
-        (7, _(u'Complete independence')),
-        (6, _(u'Modified independence')),
-        (5, _(u'Supervision')),
-        (4, _(u'Minimal assistance')),
-        (3,  _(u'Moderate assistance')),
+        (1, _(u'Total assistance')),
         (2, _(u'Maximal assistance')),
-        (1, _(u'Total assistance'))
+        (3, _(u'Moderate assistance')),
+        (4, _(u'Minimal assistance')),
+        (5, _(u'Supervision')),
+        (6, _(u'Modified independence')),
+        (7, _(u'Complete independence'))
     )
     # Cuidados pessoais
     self_care_eating = models.IntegerField(_('Eating'), choices=FIM_CHOICES_CATEGORY)

@@ -6887,3 +6887,15 @@ body {
 	padding: 4px;
 }
 
+
+/* Avaliações - panel de Patient - escondendo os botões de adicionar e modificar Patient */
+.related-widget-wrapper > #change_id_patient,
+.related-widget-wrapper > #add_id_patient{
+    display:none;
+}
+/* Avaliações - panel de Patient - escondendo os botões de adicionar e modificar Period */
+.related-widget-wrapper > #change_id_period,
+.related-widget-wrapper > #add_id_period{
+    display:none;
+}
+

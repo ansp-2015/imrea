@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
+from reversion_compare.helpers import patch_admin
 from evaluation.models.bostonaphasia import BostonAphasia
 
 
@@ -21,4 +22,4 @@ class BostonAphasiaAdmin(admin.ModelAdmin):
     )
 
 admin.site.register(BostonAphasia, BostonAphasiaAdmin)
-
+patch_admin(BostonAphasia)

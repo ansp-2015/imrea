@@ -127,41 +127,48 @@ class EegAdminForm(forms.ModelForm):
 
 class FIMAdminForm(forms.ModelForm):
 
-    self_care_eating = forms.ChoiceField(label=_('Eating'), widget=ButtonRadioHorizontalSelect())
-    self_care_grooming = forms.ChoiceField(label=_('Grooming'), widget=ButtonRadioHorizontalSelect())
-    self_care_bathing = forms.ChoiceField(label=_('Bathing/showering'), widget=ButtonRadioHorizontalSelect())
-    self_care_dressing_upper_body = forms.ChoiceField(label=_('Dressing upper body'), widget=ButtonRadioHorizontalSelect())
-    self_care_dressing_lower_body = forms.ChoiceField(label=_('Dressing lower body'), widget=ButtonRadioHorizontalSelect())
-    self_care_toileting = forms.ChoiceField(label=_('Toileting'), widget=ButtonRadioHorizontalSelect())
-    sphincter_bladder_mgt = forms.ChoiceField(label=_('Bladder management'), widget=ButtonRadioHorizontalSelect())
-    sphincter_bowel_mgt = forms.ChoiceField(label=_('Bowel management'), widget=ButtonRadioHorizontalSelect())
-    transfer_wheelchair = forms.ChoiceField(label=_('Transfers bed/chair/wheelchair'), widget=ButtonRadioHorizontalSelect())
-    transfer_toilet = forms.ChoiceField(label=_('Transfers toilet'), widget=ButtonRadioHorizontalSelect())
-    transfer_shower = forms.ChoiceField(label=_('Transfers bathtub/shower'), widget=ButtonRadioHorizontalSelect())
-    locomotion_wheelchair = forms.ChoiceField(label=_('Locomotion walking/wheelchair'), widget=ButtonRadioHorizontalSelect())
-    locomotion_stairs = forms.ChoiceField(label=_('Locomotion stairs'), widget=ButtonRadioHorizontalSelect())
-    
     def __init__(self, *args, **kwargs):
         super(FIMAdminForm, self).__init__(*args, **kwargs)
-        sorted_choices = sorted(FIM.FIM_CHOICES_CATEGORY, key=lambda x: x[0], reverse=False)
-        self.fields['self_care_eating'].choices = sorted_choices
-        self.fields['self_care_grooming'].choices = sorted_choices
-        self.fields['self_care_bathing'].choices = sorted_choices
-        self.fields['self_care_dressing_upper_body'].choices = sorted_choices
-        self.fields['self_care_dressing_lower_body'].choices = sorted_choices
-        self.fields['self_care_toileting'].choices = sorted_choices
-        self.fields['sphincter_bladder_mgt'].choices = sorted_choices
-        self.fields['sphincter_bowel_mgt'].choices = sorted_choices
-        self.fields['transfer_wheelchair'].choices = sorted_choices
-        self.fields['transfer_toilet'].choices = sorted_choices
-        self.fields['transfer_shower'].choices = sorted_choices
-        self.fields['locomotion_wheelchair'].choices = sorted_choices
-        self.fields['locomotion_stairs'].choices = sorted_choices
-    
+        self.fields['self_care_eating'].choices = FIM.FIM_CHOICES_CATEGORY
+        self.fields['self_care_grooming'].choices = FIM.FIM_CHOICES_CATEGORY
+        self.fields['self_care_bathing'].choices = FIM.FIM_CHOICES_CATEGORY
+        self.fields['self_care_dressing_upper_body'].choices = FIM.FIM_CHOICES_CATEGORY
+        self.fields['self_care_dressing_lower_body'].choices = FIM.FIM_CHOICES_CATEGORY
+        self.fields['self_care_toileting'].choices = FIM.FIM_CHOICES_CATEGORY
+        self.fields['sphincter_bladder_mgt'].choices = FIM.FIM_CHOICES_CATEGORY
+        self.fields['sphincter_bowel_mgt'].choices = FIM.FIM_CHOICES_CATEGORY
+        self.fields['transfer_wheelchair'].choices = FIM.FIM_CHOICES_CATEGORY
+        self.fields['transfer_toilet'].choices = FIM.FIM_CHOICES_CATEGORY
+        self.fields['transfer_shower'].choices = FIM.FIM_CHOICES_CATEGORY
+        self.fields['locomotion_wheelchair'].choices = FIM.FIM_CHOICES_CATEGORY
+        self.fields['locomotion_stairs'].choices = FIM.FIM_CHOICES_CATEGORY
+
     class Media:
         css = {
             'all': ('css/KVIQ.css',)
         }
 
+    class Meta:
+        model = FIM
+        fields = ['self_care_eating', 'self_care_grooming', 'self_care_bathing', \
+                       'self_care_dressing_upper_body', 'self_care_dressing_lower_body', \
+                       'self_care_toileting', 'sphincter_bladder_mgt', 'sphincter_bowel_mgt', \
+                       'transfer_wheelchair', 'transfer_toilet', 'transfer_shower', \
+                       'locomotion_wheelchair', 'locomotion_stairs']
+        widgets = {
+            'self_care_eating': ButtonRadioHorizontalSelect(),
+            'self_care_grooming': ButtonRadioHorizontalSelect(),
+            'self_care_bathing': ButtonRadioHorizontalSelect(),
+            'self_care_dressing_upper_body': ButtonRadioHorizontalSelect(),
+            'self_care_dressing_lower_body': ButtonRadioHorizontalSelect(),
+            'self_care_toileting': ButtonRadioHorizontalSelect(),
+            'sphincter_bladder_mgt': ButtonRadioHorizontalSelect(),
+            'sphincter_bowel_mgt': ButtonRadioHorizontalSelect(),
+            'transfer_wheelchair': ButtonRadioHorizontalSelect(),
+            'transfer_toilet': ButtonRadioHorizontalSelect(),
+            'transfer_shower': ButtonRadioHorizontalSelect(),
+            'locomotion_wheelchair': ButtonRadioHorizontalSelect(),
+            'locomotion_stairs': ButtonRadioHorizontalSelect(),
+        }
 
-        
+

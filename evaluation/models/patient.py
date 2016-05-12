@@ -4,6 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Patient(models.Model):
+
     name = models.CharField(max_length=50)
     birthdate = models.DateField(blank=True, null=True)
 
@@ -15,6 +16,3 @@ class Patient(models.Model):
     class Meta:
         ordering = ['name']
 
-    ## for removing add another option 
-    def has_add_permission(self, request):
-        return False
