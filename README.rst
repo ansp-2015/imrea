@@ -25,3 +25,10 @@ No arquivo settings.py do projeto, adicionar as linhas:
 No projeto foram modificados os arquivos do report-builder do diretorio statics para melhorar o layout e implementar a tradução.
 É possível verificar se o projeto está utilizando os arquivos corretos ao executar a aplicação. A página de configuração de relatórios deve estar em português.
 
+
+2. django-reversion-compare
+
+2.1. Instalação
+
+Seguir as instruções do site do `django-reversion-compare <https://github.com/jedie/django-reversion-compare>`_.
+
