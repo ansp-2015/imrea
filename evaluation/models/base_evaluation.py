@@ -19,7 +19,6 @@ class BaseEvaluation(models.Model):
     date = models.DateTimeField(auto_now_add=True, verbose_name=_(u'Last update'))
 
     class Meta:
-        abstract = True
         ordering = ['patient']
 
     def __unicode__(self):

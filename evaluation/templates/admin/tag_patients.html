@@ -1,0 +1,20 @@
+{% comment %}
+    Tag para seleção do paciente na página iniciar / dashboard.
+    Monta um combo de seleção.
+    Deve chamar uma view para gravar um cookie e montar a seleção de período de avaliação.
+{% endcomment %}
+<div class="row">
+    <div class="col-md-3">
+        Selecionar paciente:
+    </div>
+    <div class="col-md-5">
+        <select id="evaluation_home_patients_select">
+            {% for f in evaluation_home_patients %}
+                {% if forloop.first %}
+                    <option>-----</option>
+                {% endif %}
+                <option value="{{f.id}}">{{f}}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>

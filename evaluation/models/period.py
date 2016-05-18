@@ -12,3 +12,17 @@ class Period(models.Model):
     
     def __unicode__(self):
         return '%s' % self.period
+
+
+    @staticmethod
+    def _find_evaluated_period(patient):
+        periods = Period.objects.filter(baseevaluation__patient__id=patient.pk).distinct()
+        return periods
+
+    @staticmethod
+    def _find_not_evaluated_period(patient):
+        periods_evaluated = Period.objects.filter(baseevaluation__patient__id=patient.pk).distinct()
+
+        periods_not_evaluated = Period.objects.exclude(pk__in=periods_evaluated)
+
+        return periods_not_evaluated

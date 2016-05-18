@@ -27,6 +27,7 @@ var activate_NT = function() {
        }
     });
 }
+
 var deactivate_NT = function() {
     link = $('input[imrea-nt="true"]');
     link.each(function(index, element) {
@@ -41,10 +42,85 @@ var deactivate_NT = function() {
     });
 }
 
-
 $(document).ready(function() {
 	if ( $( "#patient_can_answer__div" ).length ) {
 		$("#patient_can_answer_yes").on("click", deactivate_NT);
 		$("#patient_can_answer_no").on("click", activate_NT);
 	}
+});
+
+/*
+ * Controle de seleção de pacientes da home page
+ */
+var evaluation_home_patients_select_change = function() {
+  $.get( "ajax_home_patient_periods", { p:this.value } )
+      .done(function( data ) {
+
+          var html_content = '';
+          for (i = 0; i < data.evaluated_periods.length; i++) {
+              period = data.evaluated_periods[i];
+              html_content += "<li><a href='#' data-period-id='"+period.id+"' class='home_period_link'>"+period.period+"</a></li>";
+          }
+          $("#home-panel-period-evaluated").html("<ul>" + html_content + "</ul>");
+
+          html_content = '';
+          for (i = 0; i < data.not_evaluated_periods.length; i++) {
+              period = data.not_evaluated_periods[i];
+              html_content += "<li><a href='#' data-period-id='"+period.id+"' class='home_period_link'>"+period.period+"</a></li>";
+          }
+          $("#home-panel-period-not-evaluated").html("<ul>" + html_content + "</ul>");
+
+          $('.home_period_link').on("click", evaluation_home_period_click);
+  });
+  if (this.value > 0) {
+    $('#home-panel-period').show();
+  } else {
+    $('#home-panel-period').hide();
+  }
+}
+
+/**
+ * Evento click no nome do período de avaliação de um paciente, na home.
+ * Executa um AJAX para buscar as avaliações já respondidas e sem respostas do paciente.
+ */
+var evaluation_home_period_click = function() {
+  $.get( "ajax_home_patient_evaluations",
+         { p:$('#evaluation_home_patients_select option:selected').val(),
+           period:$(this).attr('data-period-id') } )
+      .done(function( data ) {
+          if (data.evaluated.length > 0) {
+              html_content = '';
+                  for (i = 0; i < data.evaluated.length; i++) {
+                  obj = data.evaluated[i];
+                  console.log(obj.url);
+                  html_content += "<li><a href='" + obj.url +
+                                  "' class='home_period_link'>" + obj.label + "</a></li>";
+              }
+              $("#home-panel-evaluation-evaluated-body").html("<ul>" + html_content + "</ul>");
+              $('#home-panel-evaluation-evaluated-panel').show();
+          } else {
+              $('#home-panel-evaluation-evaluated-panel').hide();
+          }
+
+          if (data.not_evaluated.length > 0) {
+              html_content = ''
+              for (i = 0; i < data.not_evaluated.length; i++) {
+                  obj = data.not_evaluated[i];
+                  console.log(obj.url);
+                  html_content += "<li><a href='" + obj.url +
+                                  "' class='home_period_link'>" + obj.label + "</a></li>";
+              }
+              $("#home-panel-evaluation-not-evaluated-body").html("<ul>" + html_content + "</ul>");
+              $('#home-panel-evaluation-not-evaluated-panel').show();
+          } else {
+              $('#home-panel-evaluation-not-evaluated-panel').hide();
+          }
+      });
+  $('#home-panel-evaluation').show();
+}
+
+$(document).ready(function() {
+    $('#evaluation_home_patients_select').on("change",evaluation_home_patients_select_change);
+    $('#home-panel-period').hide();
+    $('#home-panel-evaluation').hide();
 });
