@@ -7,7 +7,7 @@
         <div class="row">
         {% for line in fieldset %}
                 {% for field in line %}
-                        <div class="controls col-md-3">
+                        <div class="controls col-md-3 col-xs-5">
                             <strong>{{field.field.label}}:</strong>
                             {% if field.is_readonly %}
                                 {{ field.contents }}

@@ -59,16 +59,16 @@ var evaluation_home_patients_select_change = function() {
           var html_content = '';
           for (i = 0; i < data.evaluated_periods.length; i++) {
               period = data.evaluated_periods[i];
-              html_content += "<li><a href='#' data-period-id='"+period.id+"' class='home_period_link'>"+period.period+"</a></li>";
+              html_content += "<a href='#' data-period-id='"+period.id+"' class='home_period_link list-group-item'>"+period.period+"</a>";
           }
-          $("#home-panel-period-evaluated").html("<ul>" + html_content + "</ul>");
+          $("#home-panel-period-evaluated").html("<div class='list-group'>" + html_content + "</div>");
 
           html_content = '';
           for (i = 0; i < data.not_evaluated_periods.length; i++) {
               period = data.not_evaluated_periods[i];
-              html_content += "<li><a href='#' data-period-id='"+period.id+"' class='home_period_link'>"+period.period+"</a></li>";
+              html_content += "<a href='#' data-period-id='"+period.id+"' class='home_period_link list-group-item'>"+period.period+"</a>";
           }
-          $("#home-panel-period-not-evaluated").html("<ul>" + html_content + "</ul>");
+          $("#home-panel-period-not-evaluated").html("<div class='list-group'>" + html_content + "</div>");
 
           $('.home_period_link').on("click", evaluation_home_period_click);
   });
@@ -93,13 +93,14 @@ var evaluation_home_period_click = function() {
                   for (i = 0; i < data.evaluated.length; i++) {
                   obj = data.evaluated[i];
                   console.log(obj.url);
-                  html_content += "<li><a href='" + obj.url +
-                                  "' class='home_period_link'>" + obj.label + "</a></li>";
+                  html_content += "<a href='" + obj.url +
+                                  "' class='home_period_link list-group-item'>" + obj.label + "</a>";
               }
-              $("#home-panel-evaluation-evaluated-body").html("<ul>" + html_content + "</ul>");
+              $("#home-panel-evaluation-evaluated-body").html("<div class='list-group'>" + html_content + "</div>");
               $('#home-panel-evaluation-evaluated-panel').show();
           } else {
-              $('#home-panel-evaluation-evaluated-panel').hide();
+//              $('#home-panel-evaluation-evaluated-panel').hide();
+              $("#home-panel-evaluation-evaluated-body").html('')
           }
 
           if (data.not_evaluated.length > 0) {
@@ -107,13 +108,14 @@ var evaluation_home_period_click = function() {
               for (i = 0; i < data.not_evaluated.length; i++) {
                   obj = data.not_evaluated[i];
                   console.log(obj.url);
-                  html_content += "<li><a href='" + obj.url +
-                                  "' class='home_period_link'>" + obj.label + "</a></li>";
+                  html_content += "<a href='" + obj.url +
+                                  "' class='home_period_link list-group-item'>" + obj.label + "</a>";
               }
-              $("#home-panel-evaluation-not-evaluated-body").html("<ul>" + html_content + "</ul>");
+              $("#home-panel-evaluation-not-evaluated-body").html("<div class='list-group'>" + html_content + "</div>");
               $('#home-panel-evaluation-not-evaluated-panel').show();
           } else {
-              $('#home-panel-evaluation-not-evaluated-panel').hide();
+//              $('#home-panel-evaluation-not-evaluated-panel').hide();
+              $("#home-panel-evaluation-not-evaluated-body").html('')
           }
       });
   $('#home-panel-evaluation').show();

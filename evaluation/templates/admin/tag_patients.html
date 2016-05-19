@@ -4,16 +4,16 @@
     Deve chamar uma view para gravar um cookie e montar a seleção de período de avaliação.
 {% endcomment %}
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-5 col-xs-5">
         Selecionar paciente:
     </div>
-    <div class="col-md-5">
+    <div class="col-md-6 col-sm-6 col-xs-5">
         <select id="evaluation_home_patients_select">
-            {% for f in evaluation_home_patients %}
+            {% for patient in evaluation_home_patients %}
                 {% if forloop.first %}
                     <option>-----</option>
                 {% endif %}
-                <option value="{{f.id}}">{{f}}</option>
+                <option value="{{patient.id}}">{{patient.name}} - {{patient.birthdate|date:"d/m/Y"}}</option>
             {% endfor %}
         </select>
     </div>

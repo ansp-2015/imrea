@@ -1,10 +1,11 @@
 {% extends "admin/base.html" %}
-{% load i18n %}{% load admin_static bootstrapped_goodies_tags %}
+{% load i18n %}{% load admin_static bootstrapped_goodies_tags  %}
 
 {% block title %}{% render_with_template_if_exist "admin/admin_title.html" title %} | {{ site_title|default:_('Django site admin') }}{% endblock %}
 
 {% block extrahead %}
 <script src="{% static 'js/evaluation.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static "css/header.css" %}" />
 
 <script>
     $(function() {
@@ -14,7 +15,36 @@
 {% endblock extrahead %}
 
 {% block branding %}
-<a class="navbar-brand" href="{% url 'admin:index' %}">{% if site_header %}{{ site_header }}{% else %}{% render_with_template_if_exist "admin/admin_title.html" _('Django administration') %}{% endif %}</a>
+<a class="navbar-brand" href="{% url 'admin:index' %}"></a>
 {% endblock %}
 
-{% block nav-global %}{% endblock %}
+{% block nav-global %}
+{% endblock %}
+
+
+{% block imrea-menu %}
+<ul class="nav navbar-nav" id="home-nav-button">
+    <li class="dropdown">
+        <a role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" style="font-size:1.5em;"></span><span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            {% for app in apps %}
+            <li>
+                <a href="#"><strong>{% render_app_name app %}</strong></a>
+            </li>
+            {% for model in app.models %}
+            <li>
+                {% if model.admin_url %}
+                    <a href="/admin/{{ model.admin_url }}">{{ model.name }}</a>
+                {% else %}
+                   {{ model.name }}
+                {% endif %}
+            </li>
+            {% endfor %}
+            {% if not forloop.last %}
+            <li role="presentation" class="divider"></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </li>
+</ul>
+{% endblock %}
