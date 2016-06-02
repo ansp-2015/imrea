@@ -9,10 +9,8 @@ import json
 from .models.patient import Patient
 from .models.period import Period
 
-from .models.bostonaphasia import BostonAphasia
-from .models.fim import FIM
-from .models.kviq import KVIQ
-from .models.sis import SIS
+from .models import BostonAphasia, FIM, KVIQ, SIS, Clin
+
 from .util import url_new_object
 from .util import url_to_edit_object
 
@@ -74,12 +72,14 @@ def ajax_home_patient_evaluations(request):
     fim = FIM.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
     kviq = KVIQ.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
     sis = SIS.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
+    clin = Clin.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
 
     evaluation_objects = []
     evaluation_objects.append(['bostonaphasia', BostonAphasia._meta.verbose_name.title(), bostonAphasia])
     evaluation_objects.append(['fim', FIM._meta.verbose_name.title(), fim])
     evaluation_objects.append(['kviq', KVIQ._meta.verbose_name.title(), kviq])
     evaluation_objects.append(['sis',SIS._meta.verbose_name.title(), sis])
+    evaluation_objects.append(['clin', Clin._meta.verbose_name.title(), clin])
 
     evaluated = []
     not_evaluated = []

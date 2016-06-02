@@ -1,12 +1,13 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from evaluation.models.eeg import Eeg
-from evaluation.forms import EegAdminForm
+from ..models import Eeg
+from ..forms import EegForm
+from .base_admin import BaseAdmin
 
 
-class EegAdmin(admin.ModelAdmin):
+class EegAdmin(BaseAdmin):
 
-    form = EegAdminForm
+    form = EegForm
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient', 'period'),

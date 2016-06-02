@@ -48,7 +48,8 @@ class ButtonRadioSelect(RadioSelect):
 
 
 ###
-# Radio with buttons horizontal
+# Radio with buttons horizontal.
+# Display choice ids.
 ###
 class ButtonRadioChoiceValueInput(RadioChoiceInput):
     def render(self, name=None, value=None, attrs=None):
@@ -66,13 +67,39 @@ class ButtonRadioChoiceValueInput(RadioChoiceInput):
             label_for, active, self.tag(attrs), self.choice_value
         )
 
-class ButtonRadioHorizontalRenderer(ButtonRadioRenderer):
+class ButtonRadioHorizontalValueRenderer(ButtonRadioRenderer):
     orientation = 'horizontal'
     choice_input_class = ButtonRadioChoiceValueInput
     
-class ButtonRadioHorizontalSelect(RadioSelect):
-    renderer = ButtonRadioHorizontalRenderer
-    
+class ButtonRadioHorizontalValueSelect(RadioSelect):
+    renderer = ButtonRadioHorizontalValueRenderer
+
+###
+# Radio with buttons horizontal
+# Display label value.
+###
+class ButtonRadioChoiceLabelInput(RadioChoiceInput):
+    def render(self, name=None, value=None, attrs=None):
+        if self.id_for_label:
+            label_for = format_html(' for="{}"', self.id_for_label)
+        else:
+            label_for = ''
+        attrs = dict(self.attrs, **attrs) if attrs else self.attrs
+        if self.is_checked():
+            active = ' active'
+        else:
+            active = ''
+        return format_html(
+            '<label{} class="btn-choice btn btn-primary{}">{} {}</label>',
+            label_for, active, self.tag(attrs), self.choice_label
+        )
+
+class ButtonRadioHorizontalLabelRenderer(ButtonRadioRenderer):
+    orientation = 'horizontal'
+    choice_input_class = ButtonRadioChoiceLabelInput
+
+class ButtonRadioHorizontalLabelSelect(RadioSelect):
+    renderer = ButtonRadioHorizontalLabelRenderer
 
 
 ###

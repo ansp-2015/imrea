@@ -1,13 +1,13 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from evaluation.models import KVIQ
-from evaluation.forms import KVIQAdminForm
+from ..models import KVIQ
+from ..forms import KVIQForm
+from .base_admin import BaseAdmin
 
 
+class KVIQAdmin(BaseAdmin):
 
-class KVIQAdmin(admin.ModelAdmin):
-
-    form = KVIQAdminForm
+    form = KVIQForm
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient', 'period'),

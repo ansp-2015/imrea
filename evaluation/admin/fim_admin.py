@@ -1,21 +1,19 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from django.utils.html import format_html, mark_safe, escape
+from django.utils.html import mark_safe
 from django.utils.translation import ugettext_lazy as _
-from django.utils.encoding import smart_text
 from django.contrib.admin.utils import (unquote,)
 from reversion_compare.helpers import patch_admin
 import logging
-
-from evaluation.models.fim import FIM
-from evaluation.forms import FIMAdminForm
+from ..models import FIM
+from ..forms import FIMForm
 
 logger = logging.getLogger(__name__)
 
 
 class FIMAdmin(admin.ModelAdmin):
 
-    form = FIMAdminForm
+    form = FIMForm
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient', 'period'),
@@ -45,6 +43,12 @@ class FIMAdmin(admin.ModelAdmin):
             'fields': ('locomotion_wheelchair', 'locomotion_stairs',),
             'description': {
                 'fieldset': '_1col_panel'
+            }
+        }),
+        (_(u''), {
+            'fields': ('obs',),
+            'description': {
+                'fieldset': '_1col'
             }
         }),
     )
@@ -95,28 +99,40 @@ class FIMAdmin(admin.ModelAdmin):
     # Sobrescrevendo as comparações do restore
     def compare_self_care_eating(self, obj_compare):
         return self._compare_choice(obj_compare)
+
     def compare_self_care_grooming(self, obj_compare):
         return self._compare_choice(obj_compare)
+
     def compare_self_care_bathing(self, obj_compare):
         return self._compare_choice(obj_compare)
+
     def compare_self_care_dressing_upper_body(self, obj_compare):
         return self._compare_choice(obj_compare)
+
     def compare_self_care_dressing_lower_body(self, obj_compare):
         return self._compare_choice(obj_compare)
+
     def compare_self_care_toileting(self, obj_compare):
         return self._compare_choice(obj_compare)
+
     def compare_sphincter_bladder_mgt(self, obj_compare):
         return self._compare_choice(obj_compare)
+
     def compare_sphincter_bowel_mgt(self, obj_compare):
         return self._compare_choice(obj_compare)
+
     def compare_transfer_wheelchair(self, obj_compare):
         return self._compare_choice(obj_compare)
+
     def compare_transfer_toilet(self, obj_compare):
         return self._compare_choice(obj_compare)
+
     def compare_transfer_shower(self, obj_compare):
         return self._compare_choice(obj_compare)
+
     def compare_locomotion_wheelchair(self, obj_compare):
         return self._compare_choice(obj_compare)
+
     def compare_locomotion_stairs(self, obj_compare):
         return self._compare_choice(obj_compare)
 

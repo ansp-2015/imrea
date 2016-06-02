@@ -1,12 +1,12 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from evaluation.models.sis import SIS, CHOICES_STRENGTH
-from evaluation.forms import SISAdminForm
+from ..models.sis import SIS, CHOICES_STRENGTH
+from ..forms import SISForm
+from .base_admin import BaseAdmin
 
+class SISAdmin(BaseAdmin):
 
-class SISAdmin(admin.ModelAdmin):
-
-    form = SISAdminForm
+    form = SISForm
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient', 'period'),
