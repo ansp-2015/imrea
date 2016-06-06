@@ -1,0 +1,5 @@
+# Requirements for evaluation app
+
+django-admin-bootstrapped
+django-report-builder
+django-reversion-compare
