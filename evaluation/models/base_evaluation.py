@@ -6,7 +6,7 @@ from .period import Period
 
 class BaseEvaluation(models.Model):
     """
-    Classe abstrata para os Models de questionários                                            
+    Classe abstrata para os Models de questionários
     """
 
     # Utilizar esse valor para os casos em que o paciente não pode responder. "NAO TEM"

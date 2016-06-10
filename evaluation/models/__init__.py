@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from .base_evaluation import BaseEvaluation
 from .patient import Patient
 from .kviq import KVIQ

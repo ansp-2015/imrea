@@ -5,6 +5,7 @@ from .bostonaphasia_admin import BostonAphasiaAdmin
 from .eeg_admin import EegAdmin
 from .fim_admin import FIMAdmin
 from .clin_admin import ClinAdmin
+from .fuglmeyer_admin import FuglMeyerAdmin
 from .patient_admin import PatientAdmin
 from .base_admin import BaseAdmin
 

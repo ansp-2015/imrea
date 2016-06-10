@@ -84,8 +84,7 @@ class FIMAdmin(admin.ModelAdmin):
         obj = self.get_object(request, unquote(object_id))
         extra_context['patient__birthdate'] = obj.patient.birthdate
 
-        return super(FIMAdmin, self).change_view(request, object_id,
-            form_url, extra_context=extra_context)
+        return super(FIMAdmin, self).change_view(request, object_id, form_url, extra_context=extra_context)
 
     def get_readonly_fields(self, request, obj=None):
         """

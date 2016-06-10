@@ -1,0 +1,28 @@
+{% load bootstrapped_goodies_tags %}
+{% comment %}
+Receive content_text and content_activities
+
+context_text will be rendered inside a well box
+content_activities will be rendered inside a tabel striped bordered
+
+{% endcomment %}
+{% if content_text %}
+    <div class="col-md-12 well">
+        {{content_text}}
+    </div>
+{% endif %}
+{% if content_activities %}
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <table class="category-table table table-striped table-bordered">
+            <tbody>
+                {% for c in content_activities  %}
+                    <tr>
+                    {% for c1 in c %}
+                            <td>{{c1}}</td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endif %}

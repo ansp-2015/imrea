@@ -62,9 +62,14 @@ class ButtonRadioChoiceValueInput(RadioChoiceInput):
             active = ' active'
         else:
             active = ''
+
+        # Empty choice.
+        value = '---'
+        if self.choice_value:
+            value = self.choice_value
         return format_html(
             '<label{} class="btn-choice btn btn-primary{}">{} {}</label>',
-            label_for, active, self.tag(attrs), self.choice_value
+            label_for, active, self.tag(attrs), value
         )
 
 class ButtonRadioHorizontalValueRenderer(ButtonRadioRenderer):
