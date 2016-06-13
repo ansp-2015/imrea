@@ -12,12 +12,12 @@
             {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=adminform|form_fieldset_column_width %}
             </div>
             </div>
-            {% if fieldset.name == 'Patient' or fieldset.name == 'Paciente' %}
+            {% if forloop.first %}
             <div class="row">
 	            <div class="col-md-6 col-sm-6 col-xs-12">
 	                <table class="category-table table table-striped">
 	                    <thead class="thead-default">
-	                        <tr><th colspan="2">Nível</th></tr>
+	                        <tr><th colspan="2">{% trans "Level" %}</th></tr>
 	                    </thead>
 	                    <tbody>
 			                {% for c in FIM_CHOICES_CATEGORY %}
