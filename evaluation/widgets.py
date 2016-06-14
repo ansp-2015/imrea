@@ -75,7 +75,8 @@ class ButtonRadioChoiceValueInput(RadioChoiceInput):
 class ButtonRadioHorizontalValueRenderer(ButtonRadioRenderer):
     orientation = 'horizontal'
     choice_input_class = ButtonRadioChoiceValueInput
-    
+
+
 class ButtonRadioHorizontalValueSelect(RadioSelect):
     renderer = ButtonRadioHorizontalValueRenderer
 
