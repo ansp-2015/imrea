@@ -1,8 +1,4 @@
 {% load i18n bootstrapped_goodies_tags %}
-{% block extrastyle %}
-    <style>
-    </style>
-{% endblock %}
 <fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
     {% if fieldset.name %}
     <legend>
@@ -16,6 +12,12 @@
         {% endif %}
     </legend>
     {% endif %}
+    {% if fieldset.description.fieldset_helptext %}
+        <div class="col-md-12 well">
+            {{fieldset.description.fieldset_helptext}}
+        </div>
+    {% endif %}
+
 
     <div class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
 
@@ -25,20 +27,13 @@
         {% for line in fieldset %}
             <div class="row"><div class="control-group {% if line.fields|length_is:'1' and line.errors %} error{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not line.has_visible_field %} hidden{% endif %}{% endfor %}">
                 {% for field in line %}
-                    {% if field.field.name == 'ue_vol_mov_no_syn_shoulder_abd' %}
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY %}
-                    {% endif %}
-                    {% if field.field.name == 'ue_vol_mov_no_syn_shoulder_flex' %}
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_FLEX_ACTIVITY %}
-                    {% endif %}
-                    {% if field.field.name == 'ue_vol_mov_no_syn_pron_sup' %}
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=FUGLM_UE_VOL_MOV_NO_SYN_PRON_SUP_ACTIVITY %}
-                    {% endif %}
-
                     <div class="col-md-{{ group_column_width }} form-group {% if not line.fields|length_is:'1' %} field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}{% endif %}">
                         {% if field.field.help_text %}
-                            <span class="help-block">{{ field.field.help_text|safe }}</span>
+                            <span class="col-md-6 well help-block">{{ field.field.help_text|safe }}</span>
+                            <div class="row"></div>
                         {% endif %}
+                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=field.field.field.choices %}
+                        <div class="row"></div>
                         <div class="controls col-md-6">
 	                        <h5>
 	                            {{ field.label_tag }}
@@ -60,7 +55,9 @@
         {% endfor %}
         <div class="row">
             <div class="col-md-3">
-                <strong>{% trans "Subtotal max" %}</strong> (6)
+                {% if fieldset.description.fieldset_total_points %}
+                <strong>{% trans "Subtotal max" %}</strong> ({{fieldset.description.fieldset_total_points}})
+                {% endif %}
             </div>
             <div class="col-md-9">
                 <strong>{% trans "Total" %}:<span id="ue_reflex_activity_total"></span></strong>

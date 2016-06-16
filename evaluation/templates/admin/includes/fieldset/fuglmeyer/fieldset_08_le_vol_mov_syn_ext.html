@@ -1,5 +1,4 @@
 {% load i18n bootstrapped_goodies_tags %}
-
 <fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
     {% if fieldset.name %}
     <legend>
@@ -13,32 +12,33 @@
         {% endif %}
     </legend>
     {% endif %}
+    {% if fieldset.description.fieldset_helptext %}
+        <div class="col-md-12 well">
+            {{fieldset.description.fieldset_helptext}}
+        </div>
+    {% endif %}
 
     <div class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
-
     {% if fieldset.description.text %}
         <div class="description">{{ fieldset.description.text|safe }}</div>
     {% endif %}
         {% for line in fieldset %}
             <div class="row"><div class="control-group {% if line.fields|length_is:'1' and line.errors %} error{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not line.has_visible_field %} hidden{% endif %}{% endfor %}">
                 {% for field in line %}
-                    {% if field.field.name == 'ue_vol_mov_syn_flex_shoulder_retrac' %}
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=UE_VOL_MOV_SYN_FLEX_TEXT content_activities=field.field.field.choices %}
-                    {% endif %}
-                    {% if field.field.name == 'ue_vol_mov_syn_ext_shoulder' %}
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=UE_VOL_MOV_SYN_EXT_TEXT content_activities=field.field.field.choices %}
+                    {% if field.field.name == 'le_vol_mov_syn_hip_flexion' %}
+                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=field.field.field.choices %}
                     {% endif %}
                     <div class="col-md-{{ group_column_width }} form-group {% if not line.fields|length_is:'1' %} field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}{% endif %}">
                         {% if field.field.help_text %}
                             <span class="help-block">{{ field.field.help_text|safe }}</span>
                         {% endif %}
-                        <div class="controls col-md-4">
+                        <div class="controls col-md-3">
 	                        <h5>
 	                            {{ field.label_tag }}
 	                        </h5>
 	                    </div>
 
-                        <div class="controls col-md-8">
+                        <div class="controls col-md-9">
                             {% if field.is_readonly %}
                                 <p>{{ field.contents }}</p>
                             {% else %}

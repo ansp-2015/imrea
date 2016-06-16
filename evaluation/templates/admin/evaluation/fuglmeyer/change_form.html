@@ -1,5 +1,28 @@
 {% extends "admin/change_form.html" %}
 {% load bootstrapped_goodies_tags i18n %}
+{% block extrastyle %}
+    <style>
+         #id_ue_normal_reflex_obs,
+         #id_ue_vol_mov_syn_flex_obs,
+         #id_ue_vol_mov_syn_ext_obs,
+         #id_le_reflex_activity_obs,
+
+         #id_le_reflex_activity_achilles_pattelar_obs,
+         #id_le_vol_mov_syn_extension_obs,
+         #id_le_vol_mov_mix_syn_knee_obs,
+         #id_le_vol_mov_syn_flexion_obs,
+         #id_le_vol_mov_mix_syn_ankle_obs,
+         #id_le_vol_mov_no_syn_knee_obs,
+         #id_le_vol_mov_no_syn_ankle_obs,
+         #id_le_coord_speed_obs
+         {
+             height:4em;
+             width: 100%;
+             max-width: 43em;
+         }
+    </style>
+{% endblock %}
+
         {% block field_sets %}
             <div class="panel panel-primary">
               <div class="panel-heading">
@@ -8,6 +31,8 @@
               <div class="panel-body">
 
         {% for fieldset in adminform %}
+            {% if forloop.counter == 2 %} <h3>{% trans "Upper Extremity" %}</h3>  {% endif %}
+            {% if forloop.counter == 10 %} <h3>{% trans "Lower Extremity" %}</h3> {% endif %}
             <div class="panel panel-primary">
             <div class="panel-body">
             {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=adminform|form_fieldset_column_width %}

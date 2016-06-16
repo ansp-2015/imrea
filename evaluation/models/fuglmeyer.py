@@ -8,20 +8,20 @@ from . import BaseEvaluation
 class FuglMeyer(BaseEvaluation):
     # I - Reflex activity
     FUGLM_UE_REFLEX_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_REFLEX_ACTIVITY", u'None')),
-        (2, pgettext("FUGLM_UE_REFLEX_ACTIVITY", u'Can be elicited')),
+        (0, pgettext("FUGLM_UE_REFLEX_ACTIVITY", u'No reflex activity can be elicited')),
+        (2, pgettext("FUGLM_UE_REFLEX_ACTIVITY", u'Reflex activity can be elicited')),
     )
     # II - Volitional movement within synergies
     FUGLM_UE_VOL_MOV_SYN_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_VOL_MOV_SYN_ACTIVITY", u'None')),
-        (1, pgettext("FUGLM_UE_VOL_MOV_SYN_ACTIVITY", u'Partial')),
-        (2, pgettext("FUGLM_UE_VOL_MOV_SYN_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_UE_VOL_MOV_SYN_ACTIVITY", u'Cannot be performed at all')),
+        (1, pgettext("FUGLM_UE_VOL_MOV_SYN_ACTIVITY", u'Performed partly')),
+        (2, pgettext("FUGLM_UE_VOL_MOV_SYN_ACTIVITY", u'Performed faultlessly')),
     )
     # III - Volitional movement mixing synergies, without compensation
     FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY", u'Cannot be performed, hand in front of SIAS')),
-        (1, pgettext("FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY", u'Hand behind of SIAS (without compensation)')),
-        (2, pgettext("FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY", u'Hand to lumbar spine (without compensation)')),
+        (0, pgettext("FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY", u'No specific action is performed (or patient moves but does not reach ASIS)')),
+        (1, pgettext("FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY", u' Hand must pass anterior superior iliac spine (performed partly)')),
+        (2, pgettext("FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY", u' Performed faultlessly (patient clears ASIS and can extend arm behind back towards sacrum')),
     )
     FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY = (
         (0, pgettext("FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY", u'Immediate abduction or elbow flexion')),
@@ -31,7 +31,7 @@ class FuglMeyer(BaseEvaluation):
     FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY = (
         (0, pgettext("FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY", u'No pronation/supination, starting position impossible')),
         (1, pgettext("FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY", u'Limited pronation/supination, maintains position')),
-        (2, pgettext("FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY", u'Mantém posição com ADM limitada de P/S')),
+        (2, pgettext("FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY", u'Full pronation/supination, maintains elbow extension')),
     )
     # IV. Volitional movement with little or no synergy
     FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY = (
@@ -84,91 +84,111 @@ class FuglMeyer(BaseEvaluation):
 
     # C. HAND
     FUGLM_UE_HAND_MASS_FLEX_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_HAND_MASS_FLEX_ACTIVITY", u'None')),
-        (1, pgettext("FUGLM_UE_HAND_MASS_FLEX_ACTIVITY", u'Partial')),
-        (2, pgettext("FUGLM_UE_HAND_MASS_FLEX_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_UE_HAND_MASS_FLEX_ACTIVITY", u'No flexion occurs')),
+        (1, pgettext("FUGLM_UE_HAND_MASS_FLEX_ACTIVITY", u'Some flexion, but not full motion')),
+        (2, pgettext("FUGLM_UE_HAND_MASS_FLEX_ACTIVITY", u'Completed active flexion ')),
     )
     FUGLM_UE_HAND_MASS_EXT_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_HAND_MASS_EXT_ACTIVITY", u'None')),
-        (1, pgettext("FUGLM_UE_HAND_MASS_EXT_ACTIVITY", u'Partial')),
-        (2, pgettext("FUGLM_UE_HAND_MASS_EXT_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_UE_HAND_MASS_EXT_ACTIVITY", u'No extension occurs')),
+        (1, pgettext("FUGLM_UE_HAND_MASS_EXT_ACTIVITY", u'Patient can release an active mass flexion grasp')),
+        (2, pgettext("FUGLM_UE_HAND_MASS_EXT_ACTIVITY", u'Full active extension')),
     )
     FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY", u'None')),
-        (1, pgettext("FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY", u'Partial')),
-        (2, pgettext("FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY", u'Required position cannot be attained')),
+        (1, pgettext("FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY", u'Grasp is weak')),
+        (2, pgettext("FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY", u'Grasp can be maintained against relatively great resistance')),
     )
     FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY", u'None')),
-        (1, pgettext("FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY", u'Partial')),
-        (2, pgettext("FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY", u'Function cannot be performed')),
+        (1, pgettext("FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY", u'Scrap of paper interposed between the thumb and index finger can be kept in place, but not against a slight tug')),
+        (2, pgettext("FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY", u'Paper is held firmly against a tug')),
     )
     FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY", u'None')),
-        (1, pgettext("FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY", u'Partial')),
-        (2, pgettext("FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY", u'Function cannot be performed')),
+        (1, pgettext("FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY", u'A pencil interposed between the thumb pad and the pad of the index finger can be kept in place, but not against a slight tug')),
+        (2, pgettext("FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY", u'Pencil is held firmly against a tug')),
     )
     FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY", u'None')),
-        (1, pgettext("FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY", u'Partial')),
-        (2, pgettext("FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY", u'Function cannot be performed')),
+        (1, pgettext("FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY", u'A can interposed between the thumb and index finger can be kept in place, but not against a slight tug')),
+        (2, pgettext("FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY", u'Can is held firmly against a tug')),
     )
     FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY", u'None')),
-        (1, pgettext("FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY", u'Partial')),
-        (2, pgettext("FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY", u'Function cannot be performed')),
+        (1, pgettext("FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY", u'A tennis ball can be kept in place with a spherical grasp, but not against a slight tug')),
+        (2, pgettext("FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY", u'Tennis ball is held firmly against a tug')),
     )
 
     # D. COORDINATION/SPEED
     FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY", u'None')),
-        (1, pgettext("FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY", u'Partial')),
-        (2, pgettext("FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY", u'Marked tremor')),
+        (1, pgettext("FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY", u'Slight tremor')),
+        (2, pgettext("FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY", u'No tremor')),
     )
     FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY", u'None')),
-        (1, pgettext("FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY", u'Partial')),
-        (2, pgettext("FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY", u'Pronounced or unsystematic dysmetria')),
+        (1, pgettext("FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY", u'Slight or systematic dysmetria')),
+        (2, pgettext("FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY", u'No dysmetria')),
     )
     FUGLM_UE_COORD_SPEED_TIME_ACTIVITY = (
-        (0, pgettext("FUGLM_UE_COORD_SPEED_TIME_ACTIVITY", u'None')),
-        (1, pgettext("FUGLM_UE_COORD_SPEED_TIME_ACTIVITY", u'Partial')),
-        (2, pgettext("FUGLM_UE_COORD_SPEED_TIME_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_UE_COORD_SPEED_TIME_ACTIVITY", u'Activity is more than 5 seconds longer than unaffected hand')),
+        (1, pgettext("FUGLM_UE_COORD_SPEED_TIME_ACTIVITY", u'(2-5) seconds longer than unaffected side')),
+        (2, pgettext("FUGLM_UE_COORD_SPEED_TIME_ACTIVITY", u'Less than 2 seconds difference')),
     )
     # E. LOWER EXTREMITY
     # I. Reflex activity, supine position
     FUGLM_LE_REFLEX_ACTIVITY = (
-        (0, pgettext("FUGLM_LE_REFLEX_ACTIVITY", u'None')),
-        (2, pgettext("FUGLM_LE_REFLEX_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_LE_REFLEX_ACTIVITY", u'No reflex activity can be elicited')),
+        (2, pgettext("FUGLM_LE_REFLEX_ACTIVITY", u'Reflex activity can be elicited')),
     )
     FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY = (
-        (0, pgettext("FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY", u'None')),
-        (1, pgettext("FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY", u'Partial')),
-        (2, pgettext("FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY", u'Full')),
+        (0, pgettext("FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY", u'At least 2 of the 3 phasic reflexes are markedly hyperactive')),
+        (1, pgettext("FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY", u'One reflex is markedly hyperactive or at least 2 reflexes are lively')),
+        (2, pgettext("FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY", u'No more than one reflex is lively and none are hyperactive')),
     )
 
     # II. Volitional movement within synergies
     FUGLM_LE_VOL_MOV_SYN = (
-        (0, pgettext("FUGLM_LE_VOL_MOV_SYN", u'None')),
-        (1, pgettext("FUGLM_LE_VOL_MOV_SYN", u'Partial')),
-        (2, pgettext("FUGLM_LE_VOL_MOV_SYN", u'Full')),
+        (0, pgettext("FUGLM_LE_VOL_MOV_SYN", u'Cannot be performed at all')),
+        (1, pgettext("FUGLM_LE_VOL_MOV_SYN", u'Partial motion')),
+        (2, pgettext("FUGLM_LE_VOL_MOV_SYN", u'Full motion')),
     )
     # III. Volitional movement mixing synergies
-    FUGLM_LE_VOL_MOV_MIX_SYN = (
-        (0, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN", u'None')),
-        (1, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN", u'Partial')),
-        (2, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN", u'Full')),
+    FUGLM_LE_VOL_MOV_MIX_SYN_KNEE = (
+        (0, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN_KNEE", u'No active motion')),
+        (1, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN_KNEE", u'From slightly extended position, knee can be flexed but not beyond 90°')),
+        (2, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN_KNEE", u'Knee flexion beyond 90°')),
     )
-    FUGLM_LE_VOL_MOV_NO_SYN = (
-        (0, pgettext("FUGLM_LE_VOL_MOV_NO_SYN", u'None')),
-        (1, pgettext("FUGLM_LE_VOL_MOV_NO_SYN", u'Partial')),
-        (2, pgettext("FUGLM_LE_VOL_MOV_NO_SYN", u'Full')),
+    FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE = (
+        (0, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE", u'No active motion')),
+        (1, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE", u'Incomplete active flexion')),
+        (2, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE", u'Normal dorsiflexion')),
+    )
+    FUGLM_LE_VOL_MOV_NO_SYN_KNEE = (
+        (0, pgettext("FUGLM_LE_VOL_MOV_NO_SYN_KNEE", u'Knee cannot flex without hip flexion')),
+        (1, pgettext("FUGLM_LE_VOL_MOV_NO_SYN_KNEE", u'Knee flexion begins without hip flexion but does not reach to 90° or hip begins to flex in later phase of motion')),
+        (2, pgettext("FUGLM_LE_VOL_MOV_NO_SYN_KNEE", u'Knee flexion beyond 90 degrees with hip maintained in extension')),
+    )
+    FUGLM_LE_VOL_MOV_NO_SYN_ANKLE = (
+        (0, pgettext("FUGLM_LE_VOL_MOV_NO_SYN_ANKLE", u'No active motion')),
+        (1, pgettext("FUGLM_LE_VOL_MOV_NO_SYN_ANKLE", u'Partial motion')),
+        (2, pgettext("FUGLM_LE_VOL_MOV_NO_SYN_ANKLE", u'Full motion')),
     )
     # F. COORDINATION/SPEED
-    FUGLM_LE_COORD_SPEED = (
-        (0, pgettext("FUGLM_LE_COORD_SPEED", u'None')),
-        (1, pgettext("FUGLM_LE_COORD_SPEED", u'Partial')),
-        (2, pgettext("FUGLM_LE_COORD_SPEED", u'Full')),
+    FUGLM_LE_COORD_SPEED_TREMOR = (
+        (0, pgettext("FUGLM_LE_COORD_SPEED_TREMOR", u'Marked tremor')),
+        (1, pgettext("FUGLM_LE_COORD_SPEED_TREMOR", u'Slight tremor')),
+        (2, pgettext("FUGLM_LE_COORD_SPEED_TREMOR", u'No tremor')),
+    )
+    FUGLM_LE_COORD_SPEED_DYSMETRIA = (
+        (0, pgettext("FUGLM_LE_COORD_SPEED_DYSMETRIA", u'Pronounced or unsystematic dysmetria')),
+        (1, pgettext("FUGLM_LE_COORD_SPEED_DYSMETRIA", u'Slight or systematic dysmetria')),
+        (2, pgettext("FUGLM_LE_COORD_SPEED_DYSMETRIA", u'No dysmetria')),
+    )
+    FUGLM_LE_COORD_SPEED_TIME = (
+        (0, pgettext("FUGLM_LE_COORD_SPEED_TIME", u'Activity is more than 6 seconds longer than unaffected leg')),
+        (1, pgettext("FUGLM_LE_COORD_SPEED_TIME", u' 2-5.9 seconds longer than unaffected leg')),
+        (2, pgettext("FUGLM_LE_COORD_SPEED_TIME", u'less than 2 seconds difference')),
     )
 
     # A. UPPER EXTREMITY, sitting position
@@ -230,55 +250,72 @@ class FuglMeyer(BaseEvaluation):
 
     # C. HAND
     # Mass flexion
-    ue_hand_mass_flex = models.IntegerField(choices=FUGLM_UE_HAND_MASS_FLEX_ACTIVITY)
+    ue_hand_mass_flex = models.IntegerField(_(u'Mass flexion from full active or passive extension'), choices=FUGLM_UE_HAND_MASS_FLEX_ACTIVITY, help_text=_(u'Close your hand. The therapist can help get the starting position with your fingers in extension'))
     # Mass extension
-    ue_hand_mass_ext = models.IntegerField(choices=FUGLM_UE_HAND_MASS_EXT_ACTIVITY)
+    ue_hand_mass_ext = models.IntegerField(_(u'Mass flexion from full active or passive flexion'), choices=FUGLM_UE_HAND_MASS_EXT_ACTIVITY, help_text=_(u'Open your hand. The therapist can help get the starting position with your fingers in flexion'))
     # flexion in PIP and DIP (digits II-V)
-    ue_hand_flex_pip_dip = models.IntegerField(choices=FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY)
+    ue_hand_flex_pip_dip = models.IntegerField(_(u'Flexion in PIP and DIP (digits II-V)extension in MCP II-V'),choices=FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY, help_text=_(u'Hold my finger and keep it stuck between your fingers'))
+
     # thumb adduction
-    ue_hand_thumb_adduction = models.IntegerField(choices=FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY)
+    ue_hand_thumb_adduction = models.IntegerField(_(u'Thumb adduction'),
+                                                  choices=FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY,
+                                                  help_text=_(u'Ask the patient to perform pure thumb adduction with the scrap of paper interposed between the thumb and first digit. Test this grip against resistance by asking the patient to hold as you attempt to pull the paper out with a slight tug. <strong>Hold the paper between the thumb and forefinger</strong>'))
     # opposition
-    ue_hand_thumb_opposition = models.IntegerField(choices=FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY)
+    ue_hand_thumb_opposition = models.IntegerField(_(u'Opposition pulpa of the thumb against the pulpa of 2-nd finger,pencil, tug upward'), choices=FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY,
+                                                   help_text=_(u'Subject is sitting with arm on bedside table. Instruct the patient to grasp a pen by opposing the thumb and index finger pads around the pen. The pen may not be stabilized by the therapist or the patient’s other hand. Test this grip against resistance by asking the patient to hold as you attempt to pull the pencil out with a slight tug. <strong>Hold the pen and keep it steady</strong>'))
     # cylinder grip
-    ue_hand_cylinder_grip = models.IntegerField(choices=FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY)
+    ue_hand_cylinder_grip = models.IntegerField(_(u'Cylinder shaped object (small can)tug upward, opposition in digits I and II'),
+                                                choices=FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY,
+                                                help_text=_(u'Subject is sitting with arm on bedside table. Instruct the patient to grasp a small can (placed upright on a table without stabilization) by opening the fingers and opposing the volar surfaces of the thumb and digits. The arm may be supported but the tester may not assist with hand function. Test this grip against resistance by asking the patient to hold as you attempt to pull the can out with a slight tug.<strong>Hold the object and keep it steady</strong>'))
     # spherical grip
-    ue_hand_spherical_grip = models.IntegerField(choices=FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY)
+    ue_hand_spherical_grip = models.IntegerField(_(u'Fingers in abduction/flexion, thumb opposed, tennis ball'),
+                                                 choices=FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY,
+                                                 help_text=_(u'Subject is sitting with arm on bedside table. Instruct the patient to perform a spherical grasp by grasping a tennis ball The tester may support the patient’s arm but may not assist with the hand function required for the retrieval task. Test this grip against resistance by asking the patient to hold as you attempt to pull the ball out with a slight tug. <strong>Hold the ball and keep it steady</strong>'))
 
     # D. COORDINATION/SPEED
-    ue_coord_speed_tremor = models.IntegerField(choices=FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY)
-    ue_coord_speed_dysmetria = models.IntegerField(choices=FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY)
-    ue_coord_speed_time = models.IntegerField(choices=FUGLM_UE_COORD_SPEED_TIME_ACTIVITY)
+    ue_coord_speed_tremor = models.IntegerField(_(u'Tremor'), choices=FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY)
+    ue_coord_speed_dysmetria = models.IntegerField(_(u'Dysmetria'), choices=FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY)
+    ue_coord_speed_time = models.IntegerField(_(u'Speed'), choices=FUGLM_UE_COORD_SPEED_TIME_ACTIVITY)
 
     # E. LOWER EXTREMITY
     # I. Reflex activity, supine position
-    le_reflex_activity_achilles = models.IntegerField(choices=FUGLM_LE_REFLEX_ACTIVITY)
-    le_reflex_activity_pattelar = models.IntegerField(choices=FUGLM_LE_REFLEX_ACTIVITY)
+    le_reflex_activity_achilles = models.IntegerField(_(u'Achilles'), choices=FUGLM_LE_REFLEX_ACTIVITY)
+    le_reflex_activity_pattelar = models.IntegerField(_(u'Patellar'), choices=FUGLM_LE_REFLEX_ACTIVITY)
+    le_reflex_activity_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
     # V. Normal reflex activity
-    le_reflex_activity_achilles_pattelar = models.IntegerField(choices=FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY)
+    le_reflex_activity_achilles_pattelar = models.IntegerField(_(u'Achilles and patellar reflexes'), choices=FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY)
+    le_reflex_activity_achilles_pattelar_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
 
     # II. Volitional movement within synergies
     # Flexor synergy
-    le_vol_mov_syn_hip_flexion = models.IntegerField(choices=FUGLM_LE_VOL_MOV_SYN)
-    le_vol_mov_syn_knee_flexion = models.IntegerField(choices=FUGLM_LE_VOL_MOV_SYN)
-    le_vol_mov_syn_ankle_dorsiflexion = models.IntegerField(choices=FUGLM_LE_VOL_MOV_SYN)
+    le_vol_mov_syn_hip_flexion = models.IntegerField(_(u'Hip flexion'), choices=FUGLM_LE_VOL_MOV_SYN)
+    le_vol_mov_syn_knee_flexion = models.IntegerField(_(u'Knee flexion'), choices=FUGLM_LE_VOL_MOV_SYN)
+    le_vol_mov_syn_ankle_dorsiflexion = models.IntegerField(_(u'Ankle dorsiflexion'), choices=FUGLM_LE_VOL_MOV_SYN)
+    le_vol_mov_syn_flexion_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
     # Extensor synergy
-    le_vol_mov_syn_hip_extension = models.IntegerField(choices=FUGLM_LE_VOL_MOV_SYN)
-    le_vol_mov_syn_hip_adduction = models.IntegerField(choices=FUGLM_LE_VOL_MOV_SYN)
-    le_vol_mov_syn_knee_extension = models.IntegerField(choices=FUGLM_LE_VOL_MOV_SYN)
-    le_vol_mov_syn_ankle_flexion = models.IntegerField(choices=FUGLM_LE_VOL_MOV_SYN)
+    le_vol_mov_syn_hip_extension = models.IntegerField(_(u'Hip extension'), choices=FUGLM_LE_VOL_MOV_SYN)
+    le_vol_mov_syn_hip_adduction = models.IntegerField(_(u'Hip adduction'), choices=FUGLM_LE_VOL_MOV_SYN)
+    le_vol_mov_syn_knee_extension = models.IntegerField(_(u'Knee extension'), choices=FUGLM_LE_VOL_MOV_SYN)
+    le_vol_mov_syn_ankle_flexion = models.IntegerField(_(u'Ankle plantarflexion'), choices=FUGLM_LE_VOL_MOV_SYN)
+    le_vol_mov_syn_extension_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
 
-    # III. Volitional movement mixing synergies
-    le_vol_mov_mix_syn_knee = models.IntegerField(choices=FUGLM_LE_VOL_MOV_MIX_SYN)
-    le_vol_mov_mix_syn_ankle = models.IntegerField(choices=FUGLM_LE_VOL_MOV_MIX_SYN)
+    # III. Movement combining synergies
+    le_vol_mov_mix_syn_knee = models.IntegerField(_(u'Knee Flexion sitting'), choices=FUGLM_LE_VOL_MOV_MIX_SYN_KNEE)
+    le_vol_mov_mix_syn_knee_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
+    le_vol_mov_mix_syn_ankle = models.IntegerField(_(u'Ankle Dorsiflexion sitting'), choices=FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE)
+    le_vol_mov_mix_syn_ankle_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
 
     # IV. Volitional movement with little or no synergy
-    le_vol_mov_no_syn_knee = models.IntegerField(choices=FUGLM_LE_VOL_MOV_NO_SYN)
-    le_vol_mov_no_syn_ankle = models.IntegerField(choices=FUGLM_LE_VOL_MOV_NO_SYN)
+    le_vol_mov_no_syn_knee = models.IntegerField(_(u'Knee Flexion standing'), choices=FUGLM_LE_VOL_MOV_NO_SYN_KNEE)
+    le_vol_mov_no_syn_knee_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
+    le_vol_mov_no_syn_ankle = models.IntegerField(_(u'Ankle Dorsiflexion standing'), choices=FUGLM_LE_VOL_MOV_NO_SYN_ANKLE)
+    le_vol_mov_no_syn_ankle_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
 
     # F. COORDINATION/SPEED
-    le_coord_speed_tremor = models.IntegerField(choices=FUGLM_LE_COORD_SPEED)
-    le_coord_speed_dysmetria = models.IntegerField(choices=FUGLM_LE_COORD_SPEED)
-    le_coord_speed_time = models.IntegerField(choices=FUGLM_LE_COORD_SPEED)
+    le_coord_speed_tremor = models.IntegerField(_(u'Scoring Tremor'), choices=FUGLM_LE_COORD_SPEED_TREMOR)
+    le_coord_speed_dysmetria = models.IntegerField(_(u'Scoring Dysmetria'), choices=FUGLM_LE_COORD_SPEED_DYSMETRIA)
+    le_coord_speed_time = models.IntegerField(_(u'Scoring Speed'), choices=FUGLM_LE_COORD_SPEED_TIME)
+    le_coord_speed_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
 
     def ue_reflex_activity_total(self):
         """
