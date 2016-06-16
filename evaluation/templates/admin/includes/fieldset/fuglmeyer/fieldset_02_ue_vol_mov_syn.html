@@ -26,7 +26,7 @@
                         {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=UE_VOL_MOV_SYN_FLEX_TEXT content_activities=field.field.field.choices %}
                     {% endif %}
                     {% if field.field.name == 'ue_vol_mov_syn_ext_shoulder' %}
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=UE_VOL_MOV_SYN_EXT_TEXT content_activities=field.field.field.choices %}
+                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=UE_VOL_MOV_SYN_EXT_TEXT content_activities=FUGLM_UE_VOL_MOV_SYN_ACTIVITY %}
                     {% endif %}
                     <div class="col-md-{{ group_column_width }} form-group {% if not line.fields|length_is:'1' %} field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}{% endif %}">
                         {% if field.field.help_text %}
@@ -52,9 +52,7 @@
         {% endfor %}
         <div class="row">
             <div class="col-md-3">
-                {% if fieldset.description.fieldset_total_points %}
-                <strong>{% trans "Subtotal max" %}</strong> ({{fieldset.description.fieldset_total_points}})
-                {% endif %}
+                <strong>{% trans "Subtotal max" %}</strong> (18)
             </div>
             <div class="col-md-9">
                 <strong>{% trans "Total" %}:<span id="ue_reflex_activity_total"></span></strong>

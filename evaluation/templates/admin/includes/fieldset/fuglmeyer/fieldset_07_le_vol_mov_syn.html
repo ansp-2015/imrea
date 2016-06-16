@@ -14,7 +14,7 @@
     {% endif %}
     {% if fieldset.description.fieldset_helptext %}
         <div class="col-md-12 well">
-            {{fieldset.description.fieldset_helptext}}
+            {{fieldset.description.fieldset_helptext|safe}}
         </div>
     {% endif %}
 

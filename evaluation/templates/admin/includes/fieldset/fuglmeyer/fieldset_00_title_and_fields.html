@@ -1,4 +1,4 @@
-{% load i18n bootstrapped_goodies_tags %}
+{% load i18n bootstrapped_goodies_tags fieldtype %}
 <fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
     {% if fieldset.name %}
     <legend>
@@ -29,18 +29,26 @@
                 {% for field in line %}
                     <div class="col-md-{{ group_column_width }} form-group {% if not line.fields|length_is:'1' %} field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}{% endif %}">
                         {% if field.field.help_text %}
-                            <span class="col-md-6 well help-block">{{ field.field.help_text|safe }}</span>
-                            <div class="row"></div>
+                                <div class="col-md-12 well help-block">{{ field.field.help_text|safe }}</div>
                         {% endif %}
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=field.field.field.choices %}
                         <div class="row"></div>
-                        <div class="controls col-md-6">
+
+                        {% if field.field|fieldtype == "AdminTextareaWidget" %}
+                            <div class="controls col-md-2">
+                        {% else %}
+                            <div class="controls col-md-12">
+                        {% endif %}
+
 	                        <h5>
 	                            {{ field.label_tag }}
 	                        </h5>
 	                    </div>
-
-                        <div class="controls col-md-6">
+                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=field.field.field.choices %}
+                        {% if field.field|fieldtype == "AdminTextareaWidget" %}
+                            <div class="controls col-md-6">
+                        {% else %}
+                            <div class="controls col-md-12">
+                        {% endif %}
                             {% if field.is_readonly %}
                                 <p>{{ field.contents }}</p>
                             {% else %}
