@@ -9,7 +9,7 @@ import json
 from .models.patient import Patient
 from .models.period import Period
 
-from .models import BostonAphasia, FIM, KVIQ, SIS, Clin
+from .models import BostonAphasia, FIM, KVIQ, SIS, Clin, HAD, FuglMeyer
 
 from .util import url_new_object
 from .util import url_to_edit_object
@@ -70,6 +70,8 @@ def ajax_home_patient_evaluations(request):
 
     bostonAphasia = BostonAphasia.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
     fim = FIM.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
+    fuglmeyer = FuglMeyer.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
+    had = HAD.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
     kviq = KVIQ.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
     sis = SIS.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
     clin = Clin.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
@@ -77,6 +79,8 @@ def ajax_home_patient_evaluations(request):
     evaluation_objects = []
     evaluation_objects.append(['bostonaphasia', BostonAphasia._meta.verbose_name.title(), bostonAphasia])
     evaluation_objects.append(['fim', FIM._meta.verbose_name.title(), fim])
+    evaluation_objects.append(['fuglmeyer', FuglMeyer._meta.verbose_name.title(), fuglmeyer])
+    evaluation_objects.append(['had', HAD._meta.verbose_name.title(), had])
     evaluation_objects.append(['kviq', KVIQ._meta.verbose_name.title(), kviq])
     evaluation_objects.append(['sis',SIS._meta.verbose_name.title(), sis])
     evaluation_objects.append(['clin', Clin._meta.verbose_name.title(), clin])
