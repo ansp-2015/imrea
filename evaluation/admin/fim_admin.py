@@ -5,13 +5,14 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.admin.utils import (unquote,)
 from reversion_compare.helpers import patch_admin
 import logging
+from .base_admin import BaseAdmin
 from ..models import FIM
 from ..forms import FIMForm
 
 logger = logging.getLogger(__name__)
 
 
-class FIMAdmin(admin.ModelAdmin):
+class FIMAdmin(BaseAdmin):
 
     form = FIMForm
     fieldsets = (

@@ -3,3 +3,10 @@
     float: left;
 }
 
+/* Removing the admin list_filter right empty space */
+.change-list .filtered {
+    background: #fff !important;
+}
+.change-list .filtered .results, .change-list .filtered .paginator, .filtered #toolbar, .filtered div.xfull {
+    margin-right: 0 !important;
+}

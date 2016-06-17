@@ -16,6 +16,7 @@ logger = logging.getLogger(__name__)
 """
 class BaseAdmin(admin.ModelAdmin):
     list_display = ('patient', 'get_patient_birthdate', 'period', 'date')
+    list_filter = ('patient__name', 'period__period')
     ordering = ('patient', 'period', 'date')
 
     # Exibição do birthdate na lista de registros

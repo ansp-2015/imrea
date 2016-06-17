@@ -4,6 +4,7 @@ from ..models.sis import SIS, CHOICES_STRENGTH
 from ..forms import SISForm
 from .base_admin import BaseAdmin
 
+
 class SISAdmin(BaseAdmin):
 
     form = SISForm
