@@ -50,13 +50,6 @@
                 {% endfor %}
             </div></div>
         {% endfor %}
-        <div class="row">
-            <div class="col-md-3">
-                <strong>{% trans "Subtotal max" %}</strong> (18)
-            </div>
-            <div class="col-md-9">
-                <strong>{% trans "Total" %}:<span id="ue_reflex_activity_total"></span></strong>
-            </div>
-        </div>
+        {% include "admin/includes/fieldset/row_total.html" %}
     </div>
 </fieldset>

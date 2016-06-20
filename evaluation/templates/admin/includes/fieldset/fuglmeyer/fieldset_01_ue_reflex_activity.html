@@ -3,10 +3,10 @@
     {% if fieldset.name %}
     <legend>
         {% if 'collapse' in fieldset.classes %}
-	        <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
-		        {{ fieldset.name }}
-		        &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></i></span>
-	        </a>
+            <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
+                {{ fieldset.name }}
+                &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></i></span>
+            </a>
         {% else %}
             {{ fieldset.name }}
         {% endif %}
@@ -28,10 +28,10 @@
                             <span class="help-block">{{ field.field.help_text|safe }}</span>
                         {% endif %}
                         <div class="controls col-md-3">
-	                        <h5>
-	                            {{ field.label_tag }}
-	                        </h5>
-	                    </div>
+                            <h5>
+                                {{ field.label_tag }}
+                            </h5>
+                        </div>
 
                         <div class="controls col-md-9">
                             {% if field.is_readonly %}
@@ -45,15 +45,6 @@
                 {% endfor %}
             </div></div>
         {% endfor %}
-        <div class="row">
-            <div class="col-md-3">
-                {% if fieldset.description.fieldset_total_points %}
-                <strong>{% trans "Subtotal max" %}</strong> ({{fieldset.description.fieldset_total_points}})
-                {% endif %}
-            </div>
-            <div class="col-md-9">
-                <strong>{% trans "Total" %}:<span id="ue_reflex_activity_total"></span></strong>
-            </div>
-        </div>
+        {% include "admin/includes/fieldset/row_total.html" %}
     </div>
 </fieldset>

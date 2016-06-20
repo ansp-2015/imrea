@@ -223,11 +223,11 @@ class FuglMeyer(BaseEvaluation):
 
     # III - Volitional movement mixing synergies, without compensation
     # Hand to lumbar spine
-    vol_mov_mix_hand_spine = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Hand to lumbar spine'), choices=FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY)
+    ue_vol_mov_mix_hand_spine = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Hand to lumbar spine'), choices=FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY)
     # Shoulder flexion 0-90
-    vol_mov_mix_shoulder_flex = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Shoulder flexion 0-90 elbow at 0 pronation-supination 0'), choices=FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY)
+    ue_vol_mov_mix_shoulder_flex = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Shoulder flexion 0-90 elbow at 0 pronation-supination 0'), choices=FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY)
     # Pronation-supination
-    vol_mov_mix_pron_sup = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Pronation-supination elbow at 90 shoulder at 0'), choices=FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY)
+    ue_vol_mov_mix_pron_sup = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Pronation-supination elbow at 90 shoulder at 0'), choices=FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY)
 
     # IV. Volitional movement with little or no synergy
     # Shoulder abduction 0 - 90
@@ -363,12 +363,12 @@ class FuglMeyer(BaseEvaluation):
         """
         result = 0
 
-        if self.vol_mov_mix_hand_spine and self.vol_mov_mix_hand_spine > 0:
-            result += self.vol_mov_mix_hand_spine
-        if self.vol_mov_mix_shoulder_flex and self.vol_mov_mix_shoulder_flex > 0:
-            result += self.vol_mov_mix_shoulder_flex
-        if self.vol_mov_mix_pron_sup and self.vol_mov_mix_pron_sup > 0:
-            result += self.vol_mov_mix_pron_sup
+        if self.ue_vol_mov_mix_hand_spine and self.ue_vol_mov_mix_hand_spine > 0:
+            result += self.ue_vol_mov_mix_hand_spine
+        if self.ue_vol_mov_mix_shoulder_flex and self.ue_vol_mov_mix_shoulder_flex > 0:
+            result += self.ue_vol_mov_mix_shoulder_flex
+        if self.ue_vol_mov_mix_pron_sup and self.ue_vol_mov_mix_pron_sup > 0:
+            result += self.ue_vol_mov_mix_pron_sup
         return result
 
     def ue_vol_mov_no_syn_total(self):
@@ -380,7 +380,7 @@ class FuglMeyer(BaseEvaluation):
         if self.ue_vol_mov_no_syn_shoulder_abd and self.ue_vol_mov_no_syn_shoulder_abd > 0:
             result += self.ue_vol_mov_no_syn_shoulder_abd
         if self.ue_vol_mov_no_syn_shoulder_flex and self.ue_vol_mov_no_syn_shoulder_flex > 0:
-            result += self.vol_mov_mix_shoulder_flex
+            result += self.ue_vol_mov_mix_shoulder_flex
         if self.ue_vol_mov_no_syn_pron_sup and self.ue_vol_mov_no_syn_pron_sup > 0:
             result += self.ue_vol_mov_no_syn_pron_sup
         return result

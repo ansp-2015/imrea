@@ -22,10 +22,10 @@ class FuglMeyerForm(forms.ModelForm):
         self.fields['ue_vol_mov_syn_ext_elbow'].choices = FuglMeyer.FUGLM_UE_VOL_MOV_SYN_ACTIVITY
         self.fields['ue_vol_mov_syn_ext_forearm'].choices = FuglMeyer.FUGLM_UE_VOL_MOV_SYN_ACTIVITY
 
-        self.fields['vol_mov_mix_hand_spine'].choices = FuglMeyer.FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY
-        self.fields['vol_mov_mix_shoulder_flex'].choices = FuglMeyer.FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY
+        self.fields['ue_vol_mov_mix_hand_spine'].choices = FuglMeyer.FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY
+        self.fields['ue_vol_mov_mix_shoulder_flex'].choices = FuglMeyer.FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY
 
-        self.fields['vol_mov_mix_pron_sup'].choices = FuglMeyer.FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY
+        self.fields['ue_vol_mov_mix_pron_sup'].choices = FuglMeyer.FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY
 
         self.fields['ue_vol_mov_no_syn_shoulder_abd'].choices = FuglMeyer.FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY
         self.fields['ue_vol_mov_no_syn_shoulder_flex'].choices = FuglMeyer.FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_FLEX_ACTIVITY
@@ -76,7 +76,7 @@ class FuglMeyerForm(forms.ModelForm):
 
     class Media:
         css = {
-            'all': ('css/KVIQ.css',)
+            'all': ('css/evaluation_forms.css',)
         }
 
     class Meta:
@@ -100,9 +100,9 @@ class FuglMeyerForm(forms.ModelForm):
             'ue_vol_mov_syn_ext_elbow': ButtonRadioHorizontalValueSelect(),
             'ue_vol_mov_syn_ext_forearm': ButtonRadioHorizontalValueSelect(),
 
-            'vol_mov_mix_hand_spine': ButtonRadioHorizontalValueSelect(),
-            'vol_mov_mix_shoulder_flex': ButtonRadioHorizontalValueSelect(),
-            'vol_mov_mix_pron_sup': ButtonRadioHorizontalValueSelect(),
+            'ue_vol_mov_mix_hand_spine': ButtonRadioHorizontalValueSelect(),
+            'ue_vol_mov_mix_shoulder_flex': ButtonRadioHorizontalValueSelect(),
+            'ue_vol_mov_mix_pron_sup': ButtonRadioHorizontalValueSelect(),
 
             'ue_vol_mov_no_syn_shoulder_abd': ButtonRadioHorizontalValueSelect(),
             'ue_vol_mov_no_syn_shoulder_flex': ButtonRadioHorizontalValueSelect(),

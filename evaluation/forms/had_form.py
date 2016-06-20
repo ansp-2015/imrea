@@ -25,7 +25,7 @@ class HADForm(forms.ModelForm):
 
     class Media:
         css = {
-            'all': ('css/KVIQ.css',)
+            'all': ('css/evaluation_forms.css',)
         }
 
     class Meta:

@@ -126,3 +126,58 @@ $(document).ready(function() {
     $('#home-panel-period').hide();
     $('#home-panel-evaluation').hide();
 });
+
+
+/**
+    Forms: Prepara os eventos para os campos que precisam ser somados no campo de total
+    Deve receber o nome que foi declarado no arquivo de Admin do Model.
+     addend_field_ids: campos que são as parcelas da soma
+     totoal_field._id: campo que receberá o total
+*/
+var setup_calc_total_field = function(addend_fields, total_field) {
+    if (addend_fields && addend_fields.length > 0 && total_field) {
+        // preparing the event triggers
+        for (var x = 0; x < addend_fields.length; x++) {
+            if ($('[name=' + addend_fields[x] + ']').is(':radio')) {
+                radios = $('input[type=radio][name=' + addend_fields[x] + ']');
+                for (var y = 0; y < radios.length; y++) {
+                    $(radios[y]).change(function(){
+                        calc_total_field(addend_fields, total_field);
+                    });
+                }
+            } else {
+                $('[id_' + addend_fields[x]).change(function(){
+                    calc_total_field(addend_fields, total_field);
+                });
+            }
+        }
+        // making the first calculation
+        calc_total_field(addend_fields, total_field);
+    }
+}
+
+/**
+    Forms: Executa a soma dos campos.
+    Deve receber o nome que foi declarado no arquivo de Admin do Model
+     addend_field_ids: campos que são as parcelas da soma
+     totoal_field._id: campo que receberá o total
+*/
+var calc_total_field = function(addend_field_ids, total_field_id) {
+
+    var total_field = $('#id_' + total_field_id);
+    // reseting total field value
+    total_field.val(0);
+    for (var x = 0; x < addend_field_ids.length; x++) {
+        // searching radio selected value
+        if ($('[name=' + addend_field_ids[x] + ']').is(':radio')){
+            // it is a radio but with no selected value
+            if(typeof($('[name=' + addend_field_ids[x] + ']:checked').val())!=='undefined') {
+                total_field.val(parseInt($('input[type=radio][name=' + addend_field_ids[x] + ']:checked').val()) + parseInt(total_field.val()));
+            }
+        } else {
+            console.log('id_' + addend_field_ids[x]);
+            console.log($('id_' + addend_field_ids[x]).val());
+            total_field.val(parseInt($('id_' + addend_field_ids[x]).val()) + parseInt(total_field.val()));
+        }
+    }
+}
