@@ -12,7 +12,6 @@ var activate_NT = function() {
            // acionando o radio button
            if ($(element).is(':radio')) {
         	   $(element).prop( "checked", true );
-        	   console.log('is radio');
            }
            
            // ativando o label
@@ -22,7 +21,6 @@ var activate_NT = function() {
            }
        } else {
            var $myLabel = $('label[for="'+ this.id +'"]');
-           console.log($myLabel);
            $myLabel.addClass('disabled');
        }
     });
@@ -92,7 +90,6 @@ var evaluation_home_period_click = function() {
               html_content = '';
                   for (i = 0; i < data.evaluated.length; i++) {
                   obj = data.evaluated[i];
-                  console.log(obj.url);
                   html_content += "<a href='" + obj.url +
                                   "' class='home_period_link list-group-item'>" + obj.label + "</a>";
               }
@@ -107,7 +104,6 @@ var evaluation_home_period_click = function() {
               html_content = ''
               for (i = 0; i < data.not_evaluated.length; i++) {
                   obj = data.not_evaluated[i];
-                  console.log(obj.url);
                   html_content += "<a href='" + obj.url +
                                   "' class='home_period_link list-group-item'>" + obj.label + "</a>";
               }
@@ -146,7 +142,9 @@ var setup_calc_total_field = function(addend_fields, total_field) {
                     });
                 }
             } else {
-                $('[id_' + addend_fields[x]).change(function(){
+                console.log('registring ');
+                console.log('#id_' + addend_fields[x]);
+                $('#id_' + addend_fields[x]).change(function(){
                     calc_total_field(addend_fields, total_field);
                 });
             }
@@ -175,9 +173,8 @@ var calc_total_field = function(addend_field_ids, total_field_id) {
                 total_field.val(parseInt($('input[type=radio][name=' + addend_field_ids[x] + ']:checked').val()) + parseInt(total_field.val()));
             }
         } else {
-            console.log('id_' + addend_field_ids[x]);
-            console.log($('id_' + addend_field_ids[x]).val());
-            total_field.val(parseInt($('id_' + addend_field_ids[x]).val()) + parseInt(total_field.val()));
+            total_field.val(parseInt($('#id_' + addend_field_ids[x]).val()) + parseInt(total_field.val()));
         }
+        total_field.trigger("change");
     }
 }

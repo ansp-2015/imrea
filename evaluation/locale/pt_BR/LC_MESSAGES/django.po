@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-16 16:06-0300\n"
+"POT-Creation-Date: 2016-06-21 19:59-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,16 @@ msgstr ""
 "Language: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\evaluation\admin\base_admin.py:24 .\evaluation\admin\fim_admin.py:61
+#: .\evaluation\admin\base_admin.py:25 .\evaluation\admin\fim_admin.py:62
 #: .\evaluation\admin\had_admin.py:48
 msgid "Birthdate"
 msgstr "Data de nascimento"
 
 #: .\evaluation\admin\bostonaphasia_admin.py:11
 #: .\evaluation\admin\clin_admin.py:12 .\evaluation\admin\eeg_admin.py:12
-#: .\evaluation\admin\fim_admin.py:18 .\evaluation\admin\fuglmeyer_admin.py:18
+#: .\evaluation\admin\fim_admin.py:19 .\evaluation\admin\fuglmeyer_admin.py:21
 #: .\evaluation\admin\had_admin.py:18 .\evaluation\admin\kviq_admin.py:12
-#: .\evaluation\admin\sis_admin.py:11
+#: .\evaluation\admin\sis_admin.py:12
 #: .\evaluation\models\base_evaluation.py:17
 #: .\evaluation\templates\admin\index.html:56
 msgid "Patient"
@@ -59,130 +59,25 @@ msgstr "Cancelamento de linhas"
 
 #: .\evaluation\admin\eeg_admin.py:16
 msgid "Arquivo"
-msgstr ""
+msgstr "File"
 
-#: .\evaluation\admin\fim_admin.py:22
+#: .\evaluation\admin\fim_admin.py:23
 msgid "Self Care"
 msgstr "Cuidados pessoais"
 
-#: .\evaluation\admin\fim_admin.py:30
+#: .\evaluation\admin\fim_admin.py:31
 msgid "Sphincter"
 msgstr "Controle esfincteriano"
 
-#: .\evaluation\admin\fim_admin.py:36
+#: .\evaluation\admin\fim_admin.py:37
 msgid "Transfer"
 msgstr "Mobilidade/Transferências"
 
-#: .\evaluation\admin\fim_admin.py:42
+#: .\evaluation\admin\fim_admin.py:43
 msgid "Locomotion"
 msgstr "Locomoção"
 
-#: .\evaluation\admin\fuglmeyer_admin.py:22
-msgid "Reflex activity"
-msgstr "Atividade reflexa"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:29
-msgid "Volitional movement within synergies"
-msgstr "Movimentos voluntários com sinergia"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:43
-msgid "Volitional movement mixing synergies, without compensation"
-msgstr "Movimentos voluntários combinando sinergias, sem compensação"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:50
-msgid "Volitional movement with little or no synergy"
-msgstr "Movimento voluntário sem sinergia"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:57
-#: .\evaluation\models\fuglmeyer.py:241
-msgid "Normal reflex activity"
-msgstr "Atividade Reflexa Normal"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:63
-msgid "Wrist"
-msgstr "Controle de Punho"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:68
-msgid "Support may be provided at the elbow"
-msgstr "Pode ser dado suporte para manter a posição do cotovelo"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:72
-msgid "Hand"
-msgstr "Controle Manual"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:77
-msgid ""
-"Support may be provided at the elbow to keep 90 flexion, no support at the "
-"wrist, compare with unaffected hand, the objects are interposed, active grasp"
-msgstr ""
-"Durante os testes a seguir, o examinador pode oferecer suporte ao cotovelo, "
-"SEM suporte para o punho, para posicionar o membro superior. Padronização: "
-"<br>Cotovelo a 90° e antebraço em posição média entre supinação e pronação "
-"eapoiado sobre a mesa. Comparar com a mão não acometida, objetos são "
-"interpostos, preensão ativa"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:81
-msgid "Coordination/Speed"
-msgstr "Coordenação/Velocidade"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:86
-msgid ""
-"After one trial with both arms, blind-folded, tip of the index finger from "
-"knee to nose, 5 times as fast as possible"
-msgstr ""
-"Após tentativa com os dois braços, colocar venda nos olhos, levar a ponta do "
-"2° dedo partindo do joelho ao nariz, 05 vezes o mais rápido possível"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:90
-#: .\evaluation\admin\fuglmeyer_admin.py:97
-msgid "Reflex activity (supine or sitting)"
-msgstr "Motricidade reflexa (sentado ou em decúbito dorsal)"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:104
-msgid "Flexor synergy"
-msgstr "Sinergia flexora"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:110
-msgid ""
-"Start with leg fully extended at hip, knee, and ankle.Instruct the subject "
-"to “bring your knee to your chest”"
-msgstr ""
-"Máxima flexão de quadril (abdução e rotação externa), máxima flexão de "
-"joelho e tornozelo. <div><strong>Traga o joelho no peito e o calcanhar para "
-"cima e para trás.</strong></div>"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:113
-msgid "Extensor synergy"
-msgstr "Sinergia extensora"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:120
-msgid ""
-"Start in 90 degrees hip flexion, 90 degrees knee flexion and ankle "
-"dorsiflexion. Slight resistance should be applied in adduction to ensure "
-"subject is actively doing it. Instruct the subject to \"push your foot down "
-"and kick down and back”."
-msgstr ""
-"Partindo da sinergia flexora para quadril em extensão e adução,  joelho em "
-"extensão e tornozelo em flexão plantar. A resistência é aplicada para "
-"garantir o movimento ativo. "
-
-#: .\evaluation\admin\fuglmeyer_admin.py:123
-msgid "Movement combining synergies "
-msgstr "Movimento com e sem sinergias"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:133
-msgid "Coordination/speed of lower extremities"
-msgstr "Coordenação/Velocidade de membros inferiores"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:139
-msgid ""
-"Sittings position, both limbis, eyes closed, ankle to knee to ankle, 5 "
-"times  move as fast as possible"
-msgstr ""
-"Decúbito dorsal, após uma tentativa com ambas as pernas, com olhos fechados, "
-"calcanhar-joelho 5 vezes o mais rápido possível  (Decúbito dorsal)"
-
-#: .\evaluation\admin\fuglmeyer_admin.py:180
+#: .\evaluation\admin\fuglmeyer_admin.py:16
 msgctxt "UE_VOL_MOV_SYN_FLEX_TEXT"
 msgid ""
 "Flexor synergy - Instruct the patient to fully supinate his/her forearm, "
@@ -202,7 +97,7 @@ msgstr ""
 "ombro deve estar abduzido a no mínimo 90°. Teste três vezes o lado acometido "
 "e pontue o melhor movimento de cada articulação."
 
-#: .\evaluation\admin\fuglmeyer_admin.py:181
+#: .\evaluation\admin\fuglmeyer_admin.py:17
 msgctxt "UE_VOL_MOV_SYN_EXT_TEXT"
 msgid ""
 "Extensor synergy - Instruct the patient to adduct & internally rotate the "
@@ -222,6 +117,142 @@ msgstr ""
 "tríceps braquial devem ser palpados para avaliar se há movimento ativo. "
 "Teste três vezes o lado acometido e pontue o melhor movimento de cada "
 "articulação"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:25
+#: .\evaluation\admin\fuglmeyer_admin.py:223
+msgid "Reflex activity"
+msgstr "Atividade reflexa"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:34
+msgid "Volitional movement within synergies"
+msgstr "Movimentos voluntários com sinergia"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:54
+msgid "Volitional movement mixing synergies, without compensation"
+msgstr "Movimentos voluntários combinando sinergias, sem compensação"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:63
+msgid "Volitional movement with little or no synergy"
+msgstr "Movimento voluntário sem sinergia"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:72
+#: .\evaluation\models\fuglmeyer.py:241
+msgid "Normal reflex activity"
+msgstr "Atividade Reflexa Normal"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:81
+#: .\evaluation\admin\fuglmeyer_admin.py:194
+msgid "Wrist"
+msgstr "Controle de Punho"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:86
+msgid "Support may be provided at the elbow"
+msgstr "Pode ser dado suporte para manter a posição do cotovelo"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:93
+#: .\evaluation\admin\fuglmeyer_admin.py:199
+msgid "Hand"
+msgstr "Controle Manual"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:98
+msgid ""
+"Support may be provided at the elbow to keep 90 flexion, no support at the "
+"wrist, compare with unaffected hand, the objects are interposed, active grasp"
+msgstr ""
+"Durante os testes a seguir, o examinador pode oferecer suporte ao cotovelo, "
+"SEM suporte para o punho, para posicionar o membro superior. Padronização: "
+"<br>Cotovelo a 90° e antebraço em posição média entre supinação e pronação "
+"eapoiado sobre a mesa. Comparar com a mão não acometida, objetos são "
+"interpostos, preensão ativa"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:105
+#: .\evaluation\admin\fuglmeyer_admin.py:204
+#: .\evaluation\admin\fuglmeyer_admin.py:243
+msgid "Coordination/Speed"
+msgstr "Coordenação/Velocidade"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:110
+msgid ""
+"After one trial with both arms, blind-folded, tip of the index finger from "
+"knee to nose, 5 times as fast as possible"
+msgstr ""
+"Após tentativa com os dois braços, colocar venda nos olhos, levar a ponta do "
+"2° dedo partindo do joelho ao nariz, 05 vezes o mais rápido possível"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:116
+#: .\evaluation\admin\fuglmeyer_admin.py:125
+msgid "Reflex activity (supine or sitting)"
+msgstr "Motricidade reflexa (sentado ou em decúbito dorsal)"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:134
+#: .\evaluation\admin\fuglmeyer_admin.py:228
+msgid "Flexor synergy"
+msgstr "Sinergia flexora"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:139
+msgid ""
+"Start with leg fully extended at hip, knee, and ankle.Instruct the subject "
+"to “bring your knee to your chest”"
+msgstr ""
+"Máxima flexão de quadril (abdução e rotação externa), máxima flexão de "
+"joelho e tornozelo. <div><strong>Traga o joelho no peito e o calcanhar para "
+"cima e para trás.</strong></div>"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:145
+#: .\evaluation\admin\fuglmeyer_admin.py:233
+msgid "Extensor synergy"
+msgstr "Sinergia extensora"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:151
+msgid ""
+"Start in 90 degrees hip flexion, 90 degrees knee flexion and ankle "
+"dorsiflexion. Slight resistance should be applied in adduction to ensure "
+"subject is actively doing it. Instruct the subject to \"push your foot down "
+"and kick down and back”."
+msgstr ""
+"Partindo da sinergia flexora para quadril em extensão e adução,  joelho em "
+"extensão e tornozelo em flexão plantar. A resistência é aplicada para "
+"garantir o movimento ativo. "
+
+#: .\evaluation\admin\fuglmeyer_admin.py:158
+msgid "Movement combining synergies "
+msgstr "Movimento com e sem sinergias"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:171
+msgid "Coordination/speed of lower extremities"
+msgstr "Coordenação/Velocidade de membros inferiores"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:176
+msgid ""
+"Sittings position, both limbis, eyes closed, ankle to knee to ankle, 5 "
+"times  move as fast as possible"
+msgstr ""
+"Decúbito dorsal, após uma tentativa com ambas as pernas, com olhos fechados, "
+"calcanhar-joelho 5 vezes o mais rápido possível  (Decúbito dorsal)"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:182
+msgid "Upper extremity score interpretation"
+msgstr "Interpretação membro superior"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:187
+msgid "Upper extremity"
+msgstr "Membro superior"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:209
+#: .\evaluation\admin\fuglmeyer_admin.py:248
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:44
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:44
+#: .\evaluation\templates\admin\includes\fieldset\row_total.html:19
+msgid "Total"
+msgstr "Total"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:218
+msgid "Lower extremity score interpretation"
+msgstr "Interpretação membro inferior"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:238
+msgid "Movement combining synergies"
+msgstr "Movimento com e sem sinergias"
 
 #: .\evaluation\admin\kviq_admin.py:16
 msgid "Neck flexion/extension"
@@ -263,13 +294,13 @@ msgstr ""
 msgid "Foot rotation"
 msgstr ""
 
-#: .\evaluation\admin\sis_admin.py:15
+#: .\evaluation\admin\sis_admin.py:16
 msgid ""
 "These questions are about the physical problems which may have occurred as a "
 "result of your stroke."
 msgstr ""
 
-#: .\evaluation\admin\sis_admin.py:18
+#: .\evaluation\admin\sis_admin.py:19
 msgid "1. In the past week, how would you rate the strength of your...."
 msgstr ""
 
@@ -296,11 +327,11 @@ msgstr ""
 
 #: .\evaluation\models\clin.py:7
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 #: .\evaluation\models\clin.py:8
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 #: .\evaluation\models\fim.py:16
 msgid "Total assistance"
@@ -560,7 +591,7 @@ msgstr "Posição pode ser mantida contra resistência (leve)"
 #: .\evaluation\models\fuglmeyer.py:70
 msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY"
 msgid "Less than 15° active dorsiflexion"
-msgstr ""
+msgstr "Sujeito não pode dorsifletir o punho até 15°"
 
 #: .\evaluation\models\fuglmeyer.py:71
 msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY"
@@ -954,6 +985,7 @@ msgstr "Antebraço - supinação"
 #: .\evaluation\models\fuglmeyer.py:300 .\evaluation\models\fuglmeyer.py:304
 #: .\evaluation\models\fuglmeyer.py:306 .\evaluation\models\fuglmeyer.py:310
 #: .\evaluation\models\fuglmeyer.py:312 .\evaluation\models\fuglmeyer.py:318
+#: .\evaluation\models\fuglmeyer.py:320 .\evaluation\models\fuglmeyer.py:321
 msgctxt "FuglMeyer"
 msgid "Notes"
 msgstr "Observação"
@@ -1086,6 +1118,10 @@ msgid ""
 "out with a slight tug. <strong>Hold the paper between the thumb and "
 "forefinger</strong>"
 msgstr ""
+"Sujeito é instruído a aduzir o polegar para manter uma folha de papel "
+"interposta entre o polegar e o 2º dedo. O examinador puxa o papel para "
+"testar a resistência <strong>Segure o papel entre o polegar e o indicador</"
+"strong>"
 
 #: .\evaluation\models\fuglmeyer.py:264
 msgid ""
@@ -1653,15 +1689,15 @@ msgstr "MEDIDA DE INDEPENDÊNCIA FUNCIONAL – MIF"
 msgid "Level"
 msgstr "Nível"
 
-#: .\evaluation\templates\admin\evaluation\fuglmeyer\change_form.html:29
+#: .\evaluation\templates\admin\evaluation\fuglmeyer\change_form.html:31
 msgid "Fugl Meyer"
 msgstr "Fugl Meyer"
 
-#: .\evaluation\templates\admin\evaluation\fuglmeyer\change_form.html:34
+#: .\evaluation\templates\admin\evaluation\fuglmeyer\change_form.html:36
 msgid "Upper Extremity"
 msgstr "Função motora do membro superior"
 
-#: .\evaluation\templates\admin\evaluation\fuglmeyer\change_form.html:35
+#: .\evaluation\templates\admin\evaluation\fuglmeyer\change_form.html:37
 msgid "Lower Extremity"
 msgstr "Função motora do membro inferior"
 
@@ -1677,23 +1713,57 @@ msgstr ""
 msgid "Stroke Impact Scale"
 msgstr ""
 
-#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_00_title_and_fields.html:67
-#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_01_ue_reflex_activity.html:51
-#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_02_ue_vol_mov_syn.html:55
-#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_06_le_reflex_activity.html:51
-#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_07_le_vol_mov_syn.html:56
-#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_08_le_vol_mov_syn_ext.html:56
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:34
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:34
+#, python-format
+msgid "Less than 50%% (33 points) - Serious motor impairment"
+msgstr "Menos que 50% (33 pontos) - Incapacidade Motora Severa"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:35
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:35
+#, python-format
+msgid "Between 51-84%% (34 a 55 points) - Moderate motor impairment"
+msgstr "Entre 51-84% (34 a 55 pontos) - Incapacidade Motora Moderada"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:36
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:36
+#, python-format
+msgid "Between 84 - 99%% (56 a 65 points) - Mild motor impairment"
+msgstr "Entre 84 - 99% (56 a 65 pontos) - Incapacidade Motora Leve"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:43
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:43
+#: .\evaluation\templates\admin\includes\fieldset\row_total.html:15
 msgid "Subtotal max"
 msgstr "Pontuação máxima"
 
-#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_00_title_and_fields.html:71
-#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_01_ue_reflex_activity.html:55
-#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_02_ue_vol_mov_syn.html:58
-#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_06_le_reflex_activity.html:55
-#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_07_le_vol_mov_syn.html:60
-#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_08_le_vol_mov_syn_ext.html:60
-msgid "Total"
-msgstr "Total"
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:4
+msgid "Motor function scale interpretation (100 points)"
+msgstr "Interpretação de função motora (100 pontos)"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:8
+msgid "Motor function points:"
+msgstr "Pontuação para função motora"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:11
+msgid "less than 50 points - severe motor impairment"
+msgstr "até 50 pontos - comprometimento motor severo (GRAVE)"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:14
+msgid "50 - 84 points - marked motor impairment"
+msgstr "de 50 à 84 pontos - comprometimento marcante "
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:17
+msgid "85 - 95 points - moderatemotor impairment"
+msgstr "85 à 95 pontos - comprometimento moderado"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:20
+msgid "96 - 99 points - slight motor impairment"
+msgstr "96 à 99 pontos - comprometimento leve"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:23
+msgid "100 points - normal motor performance"
+msgstr "100 pontos - sem alteração"
 
 #: .\evaluation\templates\admin\index.html:62
 msgid "Evaluations"

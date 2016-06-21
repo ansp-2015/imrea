@@ -1,0 +1,26 @@
+{% load i18n bootstrapped_goodies_tags fieldtype %}
+<fieldset class="_module _aligned" style="background:transparent">
+    <legend>
+        {% trans "Motor function scale interpretation (100 points)" %}
+    </legend>
+    <div class="fields">
+        <div class="row">
+            <div class="col-md-12"><h4>{% trans "Motor function points:" %}</h4></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{% trans "less than 50 points - severe motor impairment" %}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{% trans "50 - 84 points - marked motor impairment" %}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{% trans "85 - 95 points - moderatemotor impairment" %}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{% trans "96 - 99 points - slight motor impairment" %}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{% trans "100 points - normal motor performance" %}</div>
+        </div>
+    </div>
+</fieldset>

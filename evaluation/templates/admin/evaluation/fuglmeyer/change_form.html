@@ -14,7 +14,9 @@
          #id_le_vol_mov_mix_syn_ankle_obs,
          #id_le_vol_mov_no_syn_knee_obs,
          #id_le_vol_mov_no_syn_ankle_obs,
-         #id_le_coord_speed_obs
+         #id_le_coord_speed_obs,
+         #id_ue_total_obs,
+         #id_le_total_obs
          {
              height:4em;
              width: 100%;
@@ -39,6 +41,12 @@
         </div>
         </div>
     {% endfor %}
+
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            {% include "admin/includes/fieldset/fuglmeyer/fieldset_13_total.html" %}
+        </div>
+    </div>
     </div>
     </div>
 {% endblock %}

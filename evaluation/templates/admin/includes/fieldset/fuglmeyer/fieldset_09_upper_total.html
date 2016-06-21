@@ -1,0 +1,98 @@
+{% load i18n bootstrapped_goodies_tags fieldtype %}
+<script type="text/javascript">
+    $(function() {
+        var addends = [];
+        {% for f in fieldset.description.fieldset_total_addend_fields %}
+            addends.push('{{f}}');
+        {% endfor %}
+        setup_calc_total_field(addends, '{{fieldset.description.fieldset_total_field}}');
+    });
+</script>
+<fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
+    {% if fieldset.name %}
+    <legend>
+        {% if 'collapse' in fieldset.classes %}
+	        <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
+		        {{ fieldset.name }}
+		        &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></i></span>
+	        </a>
+        {% else %}
+            {{ fieldset.name }}
+        {% endif %}
+    </legend>
+    {% endif %}
+    {% if fieldset.description.fieldset_helptext %}
+        <div class="col-md-12 well">
+            {{fieldset.description.fieldset_helptext}}
+        </div>
+    {% endif %}
+    <div class="fields">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="category-table table table-striped table-bordered">
+                    <tbody>
+                        <tr><td>{% trans "Less than 50% (33 points) - Serious motor impairment" %}</td></tr>
+                        <tr><td>{% trans "Between 51-84% (34 a 55 points) - Moderate motor impairment" %}</td></tr>
+                        <tr><td>{% trans "Between 84 - 99% (56 a 65 points) - Mild motor impairment" %}</td></tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-md-offset-6"><strong>{% trans "Subtotal max" %}</strong></div>
+            <div class="col-md-3"><strong>{% trans "Total" %}</strong></div>
+        </div>
+        {% for item_total in fieldset.description.fieldset_total %}
+            <div class="row">
+                <div class="col-md-6" style="text-align:right"><strong>{{item_total.name}}</strong></div>
+                <div class="col-md-3">{{item_total.fieldset_total_points}}</div>
+                <div class="col-md-3">
+                    <input class="total_field_readonly" type="text" id="id_{{item_total.fieldset_total_field}}" readonly>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function() {
+                    var addends = [];
+                    {% for f in item_total.fieldset_total_addend_fields %}
+                        addends.push('{{f}}');
+                    {% endfor %}
+                    setup_calc_total_field(addends, '{{item_total.fieldset_total_field}}');
+                });
+            </script>
+        {% endfor %}
+    </div>
+    <div class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
+    {% if fieldset.description.text %}
+        <div class="description">{{ fieldset.description.text|safe }}</div>
+    {% endif %}
+        {% for line in fieldset %}
+            <div class="row"><div class="control-group {% if line.fields|length_is:'1' and line.errors %} error{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not line.has_visible_field %} hidden{% endif %}{% endfor %}">
+                {% for field in line %}
+                    {% if field.field.name == 'le_vol_mov_syn_hip_flexion' %}
+                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=field.field.field.choices %}
+                    {% endif %}
+                    <div class="col-md-{{ group_column_width }} form-group {% if not line.fields|length_is:'1' %} field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}{% endif %}">
+                        {% if field.field.help_text %}
+                            <span class="help-block">{{ field.field.help_text|safe }}</span>
+                        {% endif %}
+                        <div class="controls col-md-3">
+	                        <h5>
+	                            {{ field.label_tag }}
+	                        </h5>
+	                    </div>
+                        <div class="controls col-md-9">
+                            {% if field.is_readonly %}
+                                <p>{{ field.contents }}</p>
+                            {% else %}
+                                {% dab_field_rendering field.field %}
+                            {% endif %}
+                            {% if not field.is_readonly and field.errors %}<span class="text-danger">{{ field.errors|striptags }}</span>{% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div></div>
+        {% endfor %}
+        {% include "admin/includes/fieldset/row_total.html" %}
+    </div>
+</fieldset>
