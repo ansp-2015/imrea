@@ -13,6 +13,12 @@ class KVIQAdmin(BaseAdmin):
             'fields': ('patient', 'period'),
             'description': {'fieldset': '_patient'}
         }),
+        (_(u'Dominant limb'), {
+            'fields': (('dominant_limb'),),
+            'description': {
+                'fieldset': '_1col',
+            }
+        }),
         (_(u'Neck flexion/extension'), {
             'fields': (('neck_visual_images', 'neck_cine_images'),),
             'description': {

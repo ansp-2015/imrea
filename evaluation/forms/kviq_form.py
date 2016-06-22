@@ -2,7 +2,7 @@
 from django import forms
 from ..widgets import ButtonRadioSelect
 from ..mixin import ControlNTFormMixin
-from ..models.kviq import CHOICES_VISUAL_IMAGES, CHOICES_CINE_IMAGES
+from ..models.kviq import CHOICES_VISUAL_IMAGES, CHOICES_CINE_IMAGES, CHOICES_DOMINANT_LIMB
 
 TEXT_VISUAL_IMAGES = u"""
 <ol class="ol-container">
@@ -16,6 +16,9 @@ TEXT_VISUAL_IMAGES = u"""
 """
 class KVIQForm(ControlNTFormMixin, forms.ModelForm):
     imrea_nt = {'fields': ('neck_visual_images', 'neck_cine_images'),}
+
+    dominant_limb = forms.ChoiceField(widget=ButtonRadioSelect(),
+                                           choices=CHOICES_DOMINANT_LIMB)
 
     neck_visual_images = forms.ChoiceField(widget=ButtonRadioSelect(),
                                            choices=CHOICES_VISUAL_IMAGES)

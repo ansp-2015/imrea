@@ -23,9 +23,13 @@ CHOICES_CINE_IMAGES = (
     (1, _(u'No sensation'))
 ) + NT
 
+CHOICES_DOMINANT_LIMB = (
+    (0, _(u'Left')),
+    (1, _(u'Right'))
+)
 
 class KVIQ(BaseEvaluation):
-    dominant_limb = models.IntegerField(choices=((0, _(u'Left')), (1, _(u'Right'))))
+    dominant_limb = models.IntegerField(choices=CHOICES_DOMINANT_LIMB)
     neck_visual_images = models.IntegerField(choices=CHOICES_VISUAL_IMAGES)
     neck_cine_images = models.IntegerField(choices=CHOICES_CINE_IMAGES)
     shoulder_elevation_visual_images = models.IntegerField(choices=CHOICES_VISUAL_IMAGES)
