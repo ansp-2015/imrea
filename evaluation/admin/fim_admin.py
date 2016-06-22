@@ -53,8 +53,8 @@ class FIMAdmin(BaseAdmin):
             }
         }),
     )
-    list_display = ('patient', 'get_patient_birthdate', 'period', 'date')
-    ordering = ('patient', 'period', 'date')
+    list_display = ('patient', 'get_patient_birthdate', 'period', 'last_update')
+    ordering = ('patient', 'period', 'last_update')
 
     # Exibição do birthdate na lista de registros
     def get_patient_birthdate(self, obj):

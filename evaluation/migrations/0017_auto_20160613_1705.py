@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='HAD',
             fields=[
-                ('baseevaluation_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='evaluation.BaseEvaluation')),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('tension', models.IntegerField(verbose_name='I feel tense or "wound up"', choices=[(3, 'Most of the time'), (2, 'A lot of time'), (1, 'From time to time, occasionally'), (0, 'Not at all')])),
                 ('enjoy', models.IntegerField(verbose_name='I still enjoy the things I used to enjoy', choices=[(3, 'Hardly at all'), (2, 'Only a little'), (1, 'Not quite so much'), (0, 'Definitely as much')])),
                 ('frightened', models.IntegerField(verbose_name='I get a sort of frightened feeling as if something awful is about to happen')),
@@ -34,7 +34,6 @@ class Migration(migrations.Migration):
                 'verbose_name': 'HAD',
                 'verbose_name_plural': 'HADs',
             },
-            bases=('evaluation.baseevaluation',),
         ),
         migrations.AlterField(
             model_name='fuglmeyer',

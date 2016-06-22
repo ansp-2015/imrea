@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='FuglMeyer',
             fields=[
-                ('baseevaluation_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='evaluation.BaseEvaluation')),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('ue_reflex_activity_flex', models.IntegerField(help_text='Flexors: biceps and finger flexors', choices=[(0, 'None'), (2, 'Can be elicited')])),
                 ('ue_reflex_activity_ext', models.IntegerField(help_text='Extensors: triceps', choices=[(0, 'None'), (2, 'Can be elicited')])),
                 ('ue_vol_mov_syn_flex_shoulder_retrac', models.IntegerField(help_text='Shoulder retraction', choices=[(0, 'None'), (1, 'Partial'), (2, 'Full')])),
@@ -69,7 +69,6 @@ class Migration(migrations.Migration):
                 ('le_coord_speed_dysmetria', models.IntegerField(choices=[(0, 'None'), (1, 'Partial'), (2, 'Full')])),
                 ('le_coord_speed_time', models.IntegerField(choices=[(0, 'None'), (1, 'Partial'), (2, 'Full')])),
             ],
-            bases=('evaluation.baseevaluation',),
         ),
         migrations.AlterField(
             model_name='baseevaluation',

@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Clin',
             fields=[
-                ('baseevaluation_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='evaluation.BaseEvaluation')),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('neglect_1a', models.IntegerField(choices=[(1, 'Yes'), (2, 'No')])),
                 ('neglect_1b', models.IntegerField(choices=[(1, 'Yes'), (2, 'No')])),
                 ('neglect_1c', models.IntegerField(choices=[(1, 'Yes'), (2, 'No')])),
@@ -32,6 +32,5 @@ class Migration(migrations.Migration):
                 ('neglect_4c', models.IntegerField(choices=[(1, 'Yes'), (2, 'No')])),
                 ('neglect_4d', models.IntegerField(choices=[(1, 'Yes'), (2, 'No')])),
             ],
-            bases=('evaluation.baseevaluation',),
         ),
     ]

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.utils.translation import ugettext_lazy as _, pgettext_lazy
-from . import BaseEvaluation 
+from . import BaseEvaluation
 
 class HAD(BaseEvaluation):
     """

@@ -2,7 +2,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from evaluation.models.patient import Patient
-from . import BaseEvaluation 
+from . import BaseEvaluation
 
 CHOICES_STRENGTH = (
     (5, _(u'A lot of strength')),
