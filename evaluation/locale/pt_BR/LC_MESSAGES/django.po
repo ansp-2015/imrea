@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 19:59-0300\n"
+"POT-Creation-Date: 2016-06-22 19:10-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -254,45 +254,49 @@ msgstr "Interpretação membro inferior"
 msgid "Movement combining synergies"
 msgstr "Movimento com e sem sinergias"
 
-#: .\evaluation\admin\kviq_admin.py:16
-msgid "Neck flexion/extension"
-msgstr ""
+#: .\evaluation\admin\kviq_admin.py:16 .\evaluation\models\kviq.py:32
+msgid "Dominant limb"
+msgstr "Membro dominante"
 
 #: .\evaluation\admin\kviq_admin.py:22
-msgid "Shoulder elevation"
-msgstr ""
+msgid "Neck flexion/extension"
+msgstr "Flexão/extensão do pescoço"
 
 #: .\evaluation\admin\kviq_admin.py:28
+msgid "Shoulder elevation"
+msgstr "Encolher (erguer) os ombros"
+
+#: .\evaluation\admin\kviq_admin.py:34
 msgid "Shoulder flexion"
-msgstr ""
+msgstr "Flexão do ombro para a frente"
 
-#: .\evaluation\admin\kviq_admin.py:35
+#: .\evaluation\admin\kviq_admin.py:41
 msgid "Elbow"
-msgstr ""
+msgstr "Flexão do cotovelo"
 
-#: .\evaluation\admin\kviq_admin.py:42
+#: .\evaluation\admin\kviq_admin.py:48
 msgid "Thumb"
-msgstr ""
-
-#: .\evaluation\admin\kviq_admin.py:49
-msgid "Trunk"
-msgstr ""
+msgstr "Polegar para as pontas dos dedo"
 
 #: .\evaluation\admin\kviq_admin.py:55
+msgid "Trunk"
+msgstr "Flexão do tronco para frente"
+
+#: .\evaluation\admin\kviq_admin.py:61
 msgid "Knee"
-msgstr ""
+msgstr "Extensão do joelho"
 
-#: .\evaluation\admin\kviq_admin.py:62
+#: .\evaluation\admin\kviq_admin.py:68
 msgid "Hip"
-msgstr ""
+msgstr "Abdução do quadril"
 
-#: .\evaluation\admin\kviq_admin.py:69
+#: .\evaluation\admin\kviq_admin.py:75
 msgid "Foot tapping"
-msgstr ""
+msgstr "Bater o pé"
 
-#: .\evaluation\admin\kviq_admin.py:76
+#: .\evaluation\admin\kviq_admin.py:82
 msgid "Foot rotation"
-msgstr ""
+msgstr "Rotação externa do pé"
 
 #: .\evaluation\admin\sis_admin.py:16
 msgid ""
@@ -314,7 +318,7 @@ msgstr ""
 
 #: .\evaluation\models\base_evaluation.py:18
 msgid "Period"
-msgstr "Per"
+msgstr "Período"
 
 #: .\evaluation\models\base_evaluation.py:19
 msgid "Last update"
@@ -333,91 +337,91 @@ msgstr "Sim"
 msgid "No"
 msgstr "Não"
 
-#: .\evaluation\models\fim.py:16
+#: .\evaluation\models\fim.py:15
 msgid "Total assistance"
 msgstr "Total assistência (0%)"
 
-#: .\evaluation\models\fim.py:17
+#: .\evaluation\models\fim.py:16
 msgid "Maximal assistance"
 msgstr "Máxima assistência (25%)"
 
-#: .\evaluation\models\fim.py:18
+#: .\evaluation\models\fim.py:17
 msgid "Moderate assistance"
 msgstr "Moderada assistência (50%) / Dependente"
 
-#: .\evaluation\models\fim.py:19
+#: .\evaluation\models\fim.py:18
 msgid "Minimal assistance"
 msgstr "Miníma assistência (75%)"
 
-#: .\evaluation\models\fim.py:20
+#: .\evaluation\models\fim.py:19
 msgid "Supervision"
 msgstr "Supervisão"
 
-#: .\evaluation\models\fim.py:21
+#: .\evaluation\models\fim.py:20
 msgid "Modified independence"
 msgstr "Independência modificada (recursos auxiliares) / Dependência parcial"
 
-#: .\evaluation\models\fim.py:22
+#: .\evaluation\models\fim.py:21
 msgid "Complete independence"
 msgstr "Independência completa (seguro e em tempo satisfatório)"
 
-#: .\evaluation\models\fim.py:25
+#: .\evaluation\models\fim.py:24
 msgid "Eating"
 msgstr "Alimentação"
 
-#: .\evaluation\models\fim.py:26
+#: .\evaluation\models\fim.py:25
 msgid "Grooming"
 msgstr "Auto cuidado"
 
-#: .\evaluation\models\fim.py:27
+#: .\evaluation\models\fim.py:26
 msgid "Bathing/showering"
 msgstr "Banhar-se"
 
-#: .\evaluation\models\fim.py:28
+#: .\evaluation\models\fim.py:27
 msgid "Dressing upper body"
 msgstr "Vestir tronco superior"
 
-#: .\evaluation\models\fim.py:29
+#: .\evaluation\models\fim.py:28
 msgid "Dressing lower body"
 msgstr "Vestir tronco inferior"
 
-#: .\evaluation\models\fim.py:30
+#: .\evaluation\models\fim.py:29
 msgid "Toileting"
 msgstr "Higiene íntima"
 
-#: .\evaluation\models\fim.py:32
+#: .\evaluation\models\fim.py:31
 msgid "Bladder management"
 msgstr "Controle vesical"
 
-#: .\evaluation\models\fim.py:33
+#: .\evaluation\models\fim.py:32
 msgid "Bowel management"
 msgstr "Controle intestinal"
 
-#: .\evaluation\models\fim.py:35
+#: .\evaluation\models\fim.py:34
 msgid "Transfers bed/chair/wheelchair"
 msgstr "Cama/cadeira/cadeira de rodas"
 
-#: .\evaluation\models\fim.py:36
+#: .\evaluation\models\fim.py:35
 msgid "Transfers toilet"
 msgstr "Banheiro"
 
-#: .\evaluation\models\fim.py:37
+#: .\evaluation\models\fim.py:36
 msgid "Transfers bathtub/shower"
 msgstr "Banho chuveiro/banheira"
 
-#: .\evaluation\models\fim.py:39
+#: .\evaluation\models\fim.py:38
 msgid "Locomotion walking/wheelchair"
 msgstr "Andar/cadeira de rodas"
 
-#: .\evaluation\models\fim.py:40
+#: .\evaluation\models\fim.py:39
 msgid "Locomotion stairs"
 msgstr "Escadas"
 
-#: .\evaluation\models\fim.py:43
+#: .\evaluation\models\fim.py:42
 msgid "FIM"
 msgstr "MIF"
 
-#: .\evaluation\models\fim.py:44
+#: .\evaluation\models\fim.py:43
 msgid "FIMs"
 msgstr "MIFs"
 
@@ -494,7 +498,7 @@ msgstr "Mantém posição com ADM limitada de P/S"
 #: .\evaluation\models\fuglmeyer.py:34
 msgctxt "FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY"
 msgid "Full pronation/supination, maintains elbow extension"
-msgstr "Mantém posição com ADM limitada de P/S"
+msgstr "Mantém posição com P/S completa"
 
 #: .\evaluation\models\fuglmeyer.py:38
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY"
@@ -1571,39 +1575,178 @@ msgstr "Imagem moderadamente clara"
 
 #: .\evaluation\models\kviq.py:14
 msgid "Blurred image"
-msgstr ""
+msgstr "Imagem turva"
 
 #: .\evaluation\models\kviq.py:15
 msgid "No image"
-msgstr ""
+msgstr "Sem imagem"
 
 #: .\evaluation\models\kviq.py:19
 msgid "As intense as performing the action"
-msgstr ""
+msgstr "Tão intensa como executar a ação"
 
 #: .\evaluation\models\kviq.py:20
 msgid "Intense"
-msgstr ""
+msgstr "Intensa"
 
 #: .\evaluation\models\kviq.py:21
 msgid "Moderately intense"
-msgstr ""
+msgstr "Moderadamente intensa"
 
 #: .\evaluation\models\kviq.py:22
 msgid "Slightly intense"
-msgstr ""
+msgstr "Levemente intensa"
 
 #: .\evaluation\models\kviq.py:23
 msgid "No sensation"
-msgstr ""
+msgstr "Sem sensação"
 
-#: .\evaluation\models\kviq.py:28
+#: .\evaluation\models\kviq.py:27
 msgid "Left"
-msgstr ""
+msgstr "Esquerda"
 
 #: .\evaluation\models\kviq.py:28
 msgid "Right"
-msgstr ""
+msgstr "Direita"
+
+#: .\evaluation\models\kviq.py:33
+msgid "Neck visual images"
+msgstr "Pescoço - visual de imagens"
+
+#: .\evaluation\models\kviq.py:34
+msgid "Neck cine images"
+msgstr "Pescoço - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:35
+msgid "Shoulder elevation visual images"
+msgstr "Erquer ombro - visual de imagens"
+
+#: .\evaluation\models\kviq.py:36
+#, fuzzy
+#| msgctxt "FuglMeyer"
+#| msgid "Shoulder elevation"
+msgid "Shoulder elevation cine images"
+msgstr "Erguer ombro - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:37
+msgid "Shoulder flexion dominant visual images"
+msgstr "Flexão do ombro dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:38
+msgid "Shoulder flexion dominant cine images"
+msgstr "Flexão do ombro dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:39
+msgid "Shoulder flexion not dominant visual images"
+msgstr "Flexão do ombro não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:40
+msgid "Shoulder flexion not dominant cine images"
+msgstr "Flexão do ombro não dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:41
+msgid "Elbow dominant visual images"
+msgstr "Flexão do cotovelo dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:42
+msgid "Elbow dominant cine images"
+msgstr "Flexão do cotovelo dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:43
+msgid "Elbow not dominant visual images"
+msgstr "Flexão do cotovelo não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:44
+msgid "Elbow not dominant cine images"
+msgstr "Flexão do cotovelo não dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:45
+msgid "Thumb dominant visual images"
+msgstr "Polegar dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:46
+msgid "Thumb dominant cine images"
+msgstr "Polegar dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:47
+msgid "Thumb not dominant visual images"
+msgstr "Polegar não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:48
+msgid "Thumb not dominant cine images"
+msgstr "Polegar não dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:49
+msgid "Trunk visual images"
+msgstr "Flexão do tronco - visual de imagens"
+
+#: .\evaluation\models\kviq.py:50
+msgid "Trunk cine images"
+msgstr "Flexão do tronco - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:51
+msgid "Knee dominant visual images"
+msgstr "Extensão do joelho dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:52
+msgid "Knee dominant cine images"
+msgstr "Extensão do joelho dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:53
+msgid "Knee not dominant visual images"
+msgstr "Extensão do joelho não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:54
+msgid "Knee not dominant cine images"
+msgstr "Extensão do joelho não dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:55
+msgid "Hip dominant visual images"
+msgstr "Abdução do quadril dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:56
+msgid "Hip dominant cine images"
+msgstr "Abdução do quadril dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:57
+msgid "Hip not dominant visual images"
+msgstr "Abdução do quadril não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:58
+msgid "Hip not dominant cine images"
+msgstr "Abdução do quadril não dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:59
+msgid "Foot tapping dominant visual images"
+msgstr "Bater o pé dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:60
+msgid "Foot tapping dominant cine images"
+msgstr "Bater o pé dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:61
+msgid "Foot tapping not dominant visual images"
+msgstr "Bater o pé não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:62
+msgid "Foot tapping not dominant cine images"
+msgstr "Bater o pé não dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:63
+msgid "Foot rotation dominant visual images"
+msgstr "Rotação do pé dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:64
+msgid "Foot rotation dominant cine images"
+msgstr "Rotação do pé dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:65
+msgid "Foot rotation not dominant visual images"
+msgstr "Rotação do pé não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:66
+msgid "Foot rotation not dominant cine images"
+msgstr "Rotação do pé não dominante - imagens cinestésica"
 
 #: .\evaluation\models\period.py:11
 msgid "Parent"
@@ -1711,25 +1854,25 @@ msgstr ""
 
 #: .\evaluation\templates\admin\evaluation\sis\change_form.html:6
 msgid "Stroke Impact Scale"
-msgstr ""
+msgstr " Escala de Impacto do AVC"
 
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:34
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:34
 #, python-format
 msgid "Less than 50%% (33 points) - Serious motor impairment"
-msgstr "Menos que 50% (33 pontos) - Incapacidade Motora Severa"
+msgstr "Menos que 50%% (33 pontos) - Incapacidade Motora Severa"
 
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:35
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:35
 #, python-format
 msgid "Between 51-84%% (34 a 55 points) - Moderate motor impairment"
-msgstr "Entre 51-84% (34 a 55 pontos) - Incapacidade Motora Moderada"
+msgstr "Entre 51-84%% (34 a 55 pontos) - Incapacidade Motora Moderada"
 
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:36
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:36
 #, python-format
 msgid "Between 84 - 99%% (56 a 65 points) - Mild motor impairment"
-msgstr "Entre 84 - 99% (56 a 65 pontos) - Incapacidade Motora Leve"
+msgstr "Entre 84 - 99%% (56 a 65 pontos) - Incapacidade Motora Leve"
 
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:43
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:43
