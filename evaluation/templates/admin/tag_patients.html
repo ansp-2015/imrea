@@ -1,3 +1,4 @@
+{% load i18n %}
 {% comment %}
     Tag para seleção do paciente na página iniciar / dashboard.
     Monta um combo de seleção.
@@ -5,7 +6,7 @@
 {% endcomment %}
 <div class="row">
     <div class="col-md-3 col-sm-5 col-xs-5">
-        Selecionar paciente:
+        {% trans "Selecionar paciente" %}
     </div>
     <div class="col-md-6 col-sm-6 col-xs-5">
         <select id="evaluation_home_patients_select">

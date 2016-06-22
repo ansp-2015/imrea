@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-14 16:51-0300\n"
+"POT-Creation-Date: 2016-06-14 19:23-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1136,12 +1136,355 @@ msgstr ""
 "Consigo sentir prazer quando assisto a um bom programa de televisão, de "
 "rádio ou quando leio alguma coisa"
 
-#: evaluation/models/had.py:126
+#: evaluation/models/had.py:126 evaluation/models/hamilton.py:149
 msgid "HAD"
 msgstr ""
 
-#: evaluation/models/had.py:127
+#: evaluation/models/had.py:127 evaluation/models/hamilton.py:150
 msgid "HADs"
+msgstr ""
+
+#: evaluation/models/hamilton.py:12 evaluation/models/hamilton.py:21
+#: evaluation/models/hamilton.py:30 evaluation/models/hamilton.py:96
+#: evaluation/models/hamilton.py:119
+msgid "Absent"
+msgstr ""
+
+#: evaluation/models/hamilton.py:13
+msgid "These feelings are indicated only on questioning"
+msgstr ""
+
+#: evaluation/models/hamilton.py:14
+msgid "These feelings are spontaneously reported verbally"
+msgstr ""
+
+#: evaluation/models/hamilton.py:15
+msgid ""
+"Communicates feelings non-verbally i.e., through facial expression, posture, "
+"voice, and tendency to weep"
+msgstr ""
+
+#: evaluation/models/hamilton.py:16
+msgid ""
+"Patient reports VIRTUALLY ONLY these feelings in his spontaneous verbal and "
+"non-verbal communication"
+msgstr ""
+
+#: evaluation/models/hamilton.py:18
+msgid "depressed mood (sadness, hopeless, helpless, worthless)"
+msgstr ""
+
+#: evaluation/models/hamilton.py:22
+msgid "Self reproach, feels he has let people down"
+msgstr ""
+
+#: evaluation/models/hamilton.py:23
+msgid "Ideas of guilt or rumination over past errors or sinful deed"
+msgstr ""
+
+#: evaluation/models/hamilton.py:24
+msgid "Present illness is a punishmnent. Delusions of guilt"
+msgstr ""
+
+#: evaluation/models/hamilton.py:25
+msgid ""
+"Hears accusatory or denunciatory voices and/or experiences threatening "
+"visual hallucinations"
+msgstr ""
+
+#: evaluation/models/hamilton.py:27
+msgid "feelings of guilt"
+msgstr ""
+
+#: evaluation/models/hamilton.py:31
+msgid "Feels life is not worth living"
+msgstr ""
+
+#: evaluation/models/hamilton.py:32
+msgid "Wishes he were dead or any thoughts of possible death to self"
+msgstr ""
+
+#: evaluation/models/hamilton.py:33
+msgid "Suicide ideas or gesture"
+msgstr ""
+
+#: evaluation/models/hamilton.py:34
+msgid "Attempts at suicide (any serious attempt rates)"
+msgstr ""
+
+#: evaluation/models/hamilton.py:36
+msgid "suicide"
+msgstr ""
+
+#: evaluation/models/hamilton.py:39
+msgid "No difficulty falling asleep"
+msgstr ""
+
+#: evaluation/models/hamilton.py:40
+msgid "Complains of occasional difficulty falling asleep - more than 1/2 hour"
+msgstr ""
+
+#: evaluation/models/hamilton.py:41
+msgid "Complains of nightly difficulty falling asleep"
+msgstr ""
+
+#: evaluation/models/hamilton.py:43
+msgid "insomnia early"
+msgstr ""
+
+#: evaluation/models/hamilton.py:46 evaluation/models/hamilton.py:53
+#: evaluation/models/hamilton.py:60 evaluation/models/hamilton.py:87
+msgid "No difficulty"
+msgstr ""
+
+#: evaluation/models/hamilton.py:47
+msgid "Patient complains of being restless and disturbed during the night"
+msgstr ""
+
+#: evaluation/models/hamilton.py:48
+msgid ""
+"Waking during the night - any getting out of bed (except for purposes of "
+"voiding)"
+msgstr ""
+
+#: evaluation/models/hamilton.py:50
+msgid "insomnia middle"
+msgstr ""
+
+#: evaluation/models/hamilton.py:54
+msgid "Waking in early hours of the morning but goes back to sleep"
+msgstr ""
+
+#: evaluation/models/hamilton.py:55
+msgid "Unable to fall asleep again if he gets out of bed"
+msgstr ""
+
+#: evaluation/models/hamilton.py:57
+msgid "insomnia late"
+msgstr ""
+
+#: evaluation/models/hamilton.py:61
+msgid ""
+"Thoughts and feelings of incapacity, fatigue or weakness related to "
+"activities (work or hobbies)"
+msgstr ""
+
+#: evaluation/models/hamilton.py:62
+msgid ""
+"Loss of interest in activities (hobbies or work) - either directly reported "
+"by patient, or indirectly in listlessness, indecision and vacillation (feels "
+"he has to push himself to work or do activities)"
+msgstr ""
+
+#: evaluation/models/hamilton.py:63
+msgid ""
+"Decrease in actual time spent in activities or decrease in productivity. In "
+"hospital, if patient does not spend at least three hours a day in activities "
+"(hospital job or hobbies) exclusive of ward chores"
+msgstr ""
+
+#: evaluation/models/hamilton.py:64
+msgid ""
+"Stopped working because of present illness. In hospital, if patient engages "
+"in no activities except ward chores, or if patient fails to perform ward "
+"chores unassisted"
+msgstr ""
+
+#: evaluation/models/hamilton.py:66
+msgid "work and activities"
+msgstr ""
+
+#: evaluation/models/hamilton.py:69
+msgid "Normal speech and thought"
+msgstr ""
+
+#: evaluation/models/hamilton.py:70
+msgid "Slight retardation at interview"
+msgstr ""
+
+#: evaluation/models/hamilton.py:71
+msgid "Obvious retardation at interview"
+msgstr ""
+
+#: evaluation/models/hamilton.py:72
+msgid "Interview difficult"
+msgstr ""
+
+#: evaluation/models/hamilton.py:73
+msgid "Complete stupor"
+msgstr ""
+
+#: evaluation/models/hamilton.py:75
+msgid ""
+"retardation: psychomotor (slowness of thought and speech; impaired ability "
+"to concentrate; decreased motor activity)"
+msgstr ""
+
+#: evaluation/models/hamilton.py:78 evaluation/models/hamilton.py:105
+#: evaluation/models/hamilton.py:112
+#, fuzzy
+#| msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
+#| msgid "None"
+msgid "None"
+msgstr "Sem atividade reflexa"
+
+#: evaluation/models/hamilton.py:79
+msgid "Fidgetiness"
+msgstr ""
+
+#: evaluation/models/hamilton.py:80
+msgid "Playing with hands, hair,etc"
+msgstr ""
+
+#: evaluation/models/hamilton.py:81
+msgid "Moving about, can't sit still"
+msgstr ""
+
+#: evaluation/models/hamilton.py:82
+msgid "Hand wringing, nail biting, hair-pulling, biting of lips"
+msgstr ""
+
+#: evaluation/models/hamilton.py:84
+msgid "agitation"
+msgstr ""
+
+#: evaluation/models/hamilton.py:88
+msgid "Subjective tension and irritability"
+msgstr ""
+
+#: evaluation/models/hamilton.py:89
+msgid "Worrying about minor matters"
+msgstr ""
+
+#: evaluation/models/hamilton.py:90
+msgid "Apprehensive attitude apparent in face or speech"
+msgstr ""
+
+#: evaluation/models/hamilton.py:91
+msgid "Fears expressed without questioning"
+msgstr ""
+
+#: evaluation/models/hamilton.py:93
+msgid "anxiety: psychic"
+msgstr ""
+
+#: evaluation/models/hamilton.py:97 evaluation/models/hamilton.py:120
+msgid "Mild"
+msgstr ""
+
+#: evaluation/models/hamilton.py:98
+msgid "Moderate"
+msgstr ""
+
+#: evaluation/models/hamilton.py:99 evaluation/models/hamilton.py:121
+msgid "Severe"
+msgstr ""
+
+#: evaluation/models/hamilton.py:100
+msgid "Incapacitating"
+msgstr ""
+
+#: evaluation/models/hamilton.py:102
+msgid ""
+"anxiety: somatic (physiological concomitants of anxiety, such as - gastro-"
+"intestinal: dry mouth, wind, indigestion, diarrhea, cramps, belching. - "
+"cardio-vascular : palpitations, headaches. - respiratory: hyperventilation, "
+"sighing. - urinary frequency - sweating)"
+msgstr ""
+
+#: evaluation/models/hamilton.py:106
+msgid ""
+"Loss of appetite but eating without staff encouragement. Heavy feelings in "
+"abdomen"
+msgstr ""
+
+#: evaluation/models/hamilton.py:107
+msgid ""
+"Difficulty eating without staff urging. Requests or requires laxatives or "
+"medication for bowels or medication for gastro-intestinal symptoms"
+msgstr ""
+
+#: evaluation/models/hamilton.py:109
+msgid "somatic symptoms: gastrointestinal"
+msgstr ""
+
+#: evaluation/models/hamilton.py:113
+msgid ""
+"Heaviness in limbs, back or head. Backaches, headache, muscle aches. Loss of "
+"energy and fatigability"
+msgstr ""
+
+#: evaluation/models/hamilton.py:114
+msgid "Any clear-cut symptom"
+msgstr ""
+
+#: evaluation/models/hamilton.py:116
+msgid "somatic symptoms: general"
+msgstr ""
+
+#: evaluation/models/hamilton.py:123
+msgid "genital symptoms (loss of libido, menstrual disturbances)"
+msgstr ""
+
+#: evaluation/models/hamilton.py:126
+#, fuzzy
+#| msgid "Not often"
+msgid "Not present"
+msgstr "Poucas vezes"
+
+#: evaluation/models/hamilton.py:127
+msgid "Self-absorption (bodily)"
+msgstr ""
+
+#: evaluation/models/hamilton.py:128
+msgid "Preoccupation with health"
+msgstr ""
+
+#: evaluation/models/hamilton.py:129
+msgid "Frequent complaints, requests for help, etc. ..."
+msgstr ""
+
+#: evaluation/models/hamilton.py:130
+msgid "Hypochondriacal delusions"
+msgstr ""
+
+#: evaluation/models/hamilton.py:132
+msgid "hypochondriasis"
+msgstr ""
+
+#: evaluation/models/hamilton.py:135
+msgid "No weight loss"
+msgstr ""
+
+#: evaluation/models/hamilton.py:136
+msgid "Probable weight loss associated with present illness (>500g/week)"
+msgstr ""
+
+#: evaluation/models/hamilton.py:137
+msgid "Definite weight loss(>1kg/week)"
+msgstr ""
+
+#: evaluation/models/hamilton.py:139
+msgid "loss of weight"
+msgstr ""
+
+#: evaluation/models/hamilton.py:142
+msgid ""
+"Not depressed (based on above items) OR Acknowledges being depressed and ill"
+msgstr ""
+
+#: evaluation/models/hamilton.py:143
+msgid ""
+"Acknowledges illness but attributes cause to bad food, climate, overwork, "
+"virus, need for rest, etc."
+msgstr ""
+
+#: evaluation/models/hamilton.py:144
+msgid "Denies being ill at all"
+msgstr ""
+
+#: evaluation/models/hamilton.py:146
+msgid "insight"
 msgstr ""
 
 #: evaluation/models/kviq.py:11

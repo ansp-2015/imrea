@@ -23,10 +23,12 @@
                         {% if field.field.help_text %}
                             <span class="help-block">{{ field.field.help_text|safe }}</span>
                         {% endif %}
+                        {% if forloop.counter == 1 %}
                         <h5>
-                            {{ field.label_tag }}
+                            {{ forloop.parentloop.counter }}. {{ field.label_tag }}
                         </h5>
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=field.field.field.choices %}
+                        {% endif %}
+                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=field.field.field.widget.attrs.text content_activities=field.field.field.choices %}
                         {% if field.is_checkbox %}
                         <div class="controls col-md-12 col-sm-12 col-xs-12">
                             <div class="checkbox">
