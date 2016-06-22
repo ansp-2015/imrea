@@ -47,10 +47,6 @@ class Migration(migrations.Migration):
         ),
         migrations.RemoveField(
             model_name='bostonaphasia',
-            name='id',
-        ),
-        migrations.RemoveField(
-            model_name='bostonaphasia',
             name='patient',
         ),
         migrations.RemoveField(
@@ -63,10 +59,6 @@ class Migration(migrations.Migration):
         ),
         migrations.RemoveField(
             model_name='eeg',
-            name='id',
-        ),
-        migrations.RemoveField(
-            model_name='eeg',
             name='patient',
         ),
         migrations.RemoveField(
@@ -79,10 +71,6 @@ class Migration(migrations.Migration):
         ),
         migrations.RemoveField(
             model_name='fim',
-            name='id',
-        ),
-        migrations.RemoveField(
-            model_name='fim',
             name='patient',
         ),
         migrations.RemoveField(
@@ -95,10 +83,6 @@ class Migration(migrations.Migration):
         ),
         migrations.RemoveField(
             model_name='kviq',
-            name='id',
-        ),
-        migrations.RemoveField(
-            model_name='kviq',
             name='patient',
         ),
         migrations.RemoveField(
@@ -108,10 +92,6 @@ class Migration(migrations.Migration):
         migrations.RemoveField(
             model_name='sis',
             name='date',
-        ),
-        migrations.RemoveField(
-            model_name='sis',
-            name='id',
         ),
         migrations.RemoveField(
             model_name='sis',
@@ -189,31 +169,31 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='bostonaphasia',
             name='baseevaluation_ptr',
-            field=models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='evaluation.BaseEvaluation'),
+            field=models.OneToOneField(parent_link=True, auto_created=True,  serialize=False, to='evaluation.BaseEvaluation'),
 
         ),
         migrations.AddField(
             model_name='eeg',
             name='baseevaluation_ptr',
-            field=models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='evaluation.BaseEvaluation'),
+            field=models.OneToOneField(parent_link=True, auto_created=True, serialize=False, to='evaluation.BaseEvaluation'),
 
         ),
         migrations.AddField(
             model_name='fim',
             name='baseevaluation_ptr',
-            field=models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='evaluation.BaseEvaluation'),
+            field=models.OneToOneField(parent_link=True, auto_created=True, serialize=False, to='evaluation.BaseEvaluation'),
 
         ),
         migrations.AddField(
             model_name='kviq',
             name='baseevaluation_ptr',
-            field=models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='evaluation.BaseEvaluation'),
+            field=models.OneToOneField(parent_link=True, auto_created=True, serialize=False, to='evaluation.BaseEvaluation'),
 
         ),
         migrations.AddField(
             model_name='sis',
             name='baseevaluation_ptr',
-            field=models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='evaluation.BaseEvaluation'),
+            field=models.OneToOneField(parent_link=True, auto_created=True,  serialize=False, to='evaluation.BaseEvaluation'),
 
         ),
     ]

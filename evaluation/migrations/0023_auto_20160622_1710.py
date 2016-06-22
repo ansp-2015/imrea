@@ -67,12 +67,6 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='bostonaphasia',
-            name='id',
-            field=models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID'),
-            preserve_default=False,
-        ),
-        migrations.AddField(
-            model_name='bostonaphasia',
             name='last_update',
             field=models.DateTimeField(default=datetime.datetime(2016, 6, 22, 20, 10, 30, 335000, tzinfo=utc), verbose_name='Last update', auto_now=True),
             preserve_default=False,
@@ -119,12 +113,6 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='eeg',
-            name='id',
-            field=models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID'),
-            preserve_default=False,
-        ),
-        migrations.AddField(
-            model_name='eeg',
             name='last_update',
             field=models.DateTimeField(default=datetime.datetime(2016, 6, 22, 20, 10, 37, 672000, tzinfo=utc), verbose_name='Last update', auto_now=True),
             preserve_default=False,
@@ -144,12 +132,6 @@ class Migration(migrations.Migration):
             model_name='eeg',
             name='period',
             field=models.ForeignKey(default=1, verbose_name='Period', to='evaluation.Period'),
-            preserve_default=False,
-        ),
-        migrations.AddField(
-            model_name='fim',
-            name='id',
-            field=models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID'),
             preserve_default=False,
         ),
         migrations.AddField(
@@ -223,12 +205,6 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='kviq',
-            name='id',
-            field=models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID'),
-            preserve_default=False,
-        ),
-        migrations.AddField(
-            model_name='kviq',
             name='last_update',
             field=models.DateTimeField(default=datetime.datetime(2016, 6, 22, 20, 10, 52, 231000, tzinfo=utc), verbose_name='Last update', auto_now=True),
             preserve_default=False,
@@ -248,12 +224,6 @@ class Migration(migrations.Migration):
             model_name='kviq',
             name='period',
             field=models.ForeignKey(default=1, verbose_name='Period', to='evaluation.Period'),
-            preserve_default=False,
-        ),
-        migrations.AddField(
-            model_name='sis',
-            name='id',
-            field=models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID'),
             preserve_default=False,
         ),
         migrations.AddField(
@@ -279,6 +249,9 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(default=1, verbose_name='Period', to='evaluation.Period'),
             preserve_default=False,
         ),
+
+
+
         migrations.DeleteModel(
             name='BaseEvaluation',
         ),
