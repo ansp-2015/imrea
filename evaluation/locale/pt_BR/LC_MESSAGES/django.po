@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-22 19:10-0300\n"
+"POT-Creation-Date: 2016-06-24 11:29-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: .\evaluation\admin\base_admin.py:25 .\evaluation\admin\fim_admin.py:62
-#: .\evaluation\admin\had_admin.py:48
+#: .\evaluation\admin\had_admin.py:48 .\evaluation\admin\sis_admin.py:34
 msgid "Birthdate"
 msgstr "Data de nascimento"
 
@@ -27,7 +27,7 @@ msgstr "Data de nascimento"
 #: .\evaluation\admin\clin_admin.py:12 .\evaluation\admin\eeg_admin.py:12
 #: .\evaluation\admin\fim_admin.py:19 .\evaluation\admin\fuglmeyer_admin.py:21
 #: .\evaluation\admin\had_admin.py:18 .\evaluation\admin\kviq_admin.py:12
-#: .\evaluation\admin\sis_admin.py:12
+#: .\evaluation\admin\sis_admin.py:14
 #: .\evaluation\models\base_evaluation.py:17
 #: .\evaluation\templates\admin\index.html:56
 msgid "Patient"
@@ -298,15 +298,17 @@ msgstr "Bater o pé"
 msgid "Foot rotation"
 msgstr "Rotação externa do pé"
 
-#: .\evaluation\admin\sis_admin.py:16
+#: .\evaluation\admin\sis_admin.py:18
 msgid ""
 "These questions are about the physical problems which may have occurred as a "
 "result of your stroke."
 msgstr ""
+"Estas questões são referentes aos problemas físicos que podem ter ocorrido "
+"como resultado de AVE"
 
-#: .\evaluation\admin\sis_admin.py:19
+#: .\evaluation\admin\sis_admin.py:21
 msgid "1. In the past week, how would you rate the strength of your...."
-msgstr ""
+msgstr "1. Na semana passada, como você classificaria o seu..."
 
 #: .\evaluation\models\base_evaluation.py:13 .\evaluation\models\kviq.py:8
 msgid "NT"
@@ -1752,23 +1754,23 @@ msgstr "Rotação do pé não dominante - imagens cinestésica"
 msgid "Parent"
 msgstr ""
 
-#: .\evaluation\models\sis.py:8
+#: .\evaluation\models\sis.py:10
 msgid "A lot of strength"
 msgstr ""
 
-#: .\evaluation\models\sis.py:9
+#: .\evaluation\models\sis.py:11
 msgid "Quite a bit of strength"
 msgstr ""
 
-#: .\evaluation\models\sis.py:10
+#: .\evaluation\models\sis.py:12
 msgid "Some strength"
 msgstr ""
 
-#: .\evaluation\models\sis.py:11
+#: .\evaluation\models\sis.py:13
 msgid "A little strength"
 msgstr ""
 
-#: .\evaluation\models\sis.py:12
+#: .\evaluation\models\sis.py:14
 msgid "No strength at all"
 msgstr ""
 
