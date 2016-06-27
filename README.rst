@@ -4,9 +4,10 @@ IMREA
 
 
 Configuração
-............
+------------
 
 1. Report-builder
+.................
 
 1.1. Instalação
 
@@ -27,8 +28,16 @@ No projeto foram modificados os arquivos do report-builder do diretorio statics 
 
 
 2. django-reversion-compare
+...........................
 
 2.1. Instalação
 
 Seguir as instruções do site do `django-reversion-compare <https://github.com/jedie/django-reversion-compare>`_.
+
+
+3. django-sql-explorer
+......................
+e.1. Instalação
+
+Seguir as instruções do site do `django-sql-explorer <https://github.com/groveco/django-sql-explorer>`_.
 
