@@ -9,3 +9,7 @@ class EegForm(forms.ModelForm):
         model = Eeg
         fields = ['patient', 'eegfile', 'eegtitle']
 
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }

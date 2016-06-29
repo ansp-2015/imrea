@@ -1,8 +1,4 @@
 {% load i18n bootstrapped_goodies_tags %}
-{% block extrastyle %}
-    <style>
-    </style>
-{% endblock %}
 <fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
     {% if fieldset.name %}
     <legend>
@@ -16,37 +12,33 @@
         {% endif %}
     </legend>
     {% endif %}
+    {% if fieldset.description.fieldset_helptext %}
+        <div class="col-md-12 well">
+            {{fieldset.description.fieldset_helptext}}
+        </div>
+    {% endif %}
 
     <div class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
-
     {% if fieldset.description.text %}
         <div class="description">{{ fieldset.description.text|safe }}</div>
     {% endif %}
         {% for line in fieldset %}
             <div class="row"><div class="control-group {% if line.fields|length_is:'1' and line.errors %} error{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not line.has_visible_field %} hidden{% endif %}{% endfor %}">
                 {% for field in line %}
-                    {% if field.field.name == 'vol_mov_mix_hand_spine' %}
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY %}
+                    {% if field.field.name == 'le_vol_mov_syn_hip_flexion' %}
+                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=field.field.field.choices %}
                     {% endif %}
-                    {% if field.field.name == 'vol_mov_mix_shoulder_flex' %}
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY %}
-                    {% endif %}
-                    {% if field.field.name == 'vol_mov_mix_pron_sup' %}
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_activities=FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY %}
-                    {% endif %}
-
-
                     <div class="col-md-{{ group_column_width }} form-group {% if not line.fields|length_is:'1' %} field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}{% endif %}">
                         {% if field.field.help_text %}
                             <span class="help-block">{{ field.field.help_text|safe }}</span>
                         {% endif %}
-                        <div class="controls col-md-6">
+                        <div class="controls col-md-3">
 	                        <h5>
 	                            {{ field.label_tag }}
 	                        </h5>
 	                    </div>
 
-                        <div class="controls col-md-6">
+                        <div class="controls col-md-9">
                             {% if field.is_readonly %}
                                 <p>{{ field.contents }}</p>
                             {% else %}
@@ -57,15 +49,7 @@
                     </div>
                 {% endfor %}
             </div></div>
-            <hr>
         {% endfor %}
-        <div class="row">
-            <div class="col-md-3">
-                <strong>{% trans "Subtotal max" %}</strong> (6)
-            </div>
-            <div class="col-md-9">
-                <strong>{% trans "Total" %}:<span id="ue_reflex_activity_total"></span></strong>
-            </div>
-        </div>
+        {% include "admin/includes/fieldset/row_total.html" %}
     </div>
 </fieldset>

@@ -1,0 +1,23 @@
+{% load i18n bootstrapped_goodies_tags %}
+{% if fieldset.description.fieldset_total_addend_fields and fieldset.description.fieldset_total_field %}
+    <script type="text/javascript">
+        $(function() {
+            var addends = [];
+            {% for f in fieldset.description.fieldset_total_addend_fields %}
+                addends.push('{{f}}');
+            {% endfor %}
+            setup_calc_total_field(addends, '{{fieldset.description.fieldset_total_field}}');
+        });
+    </script>
+    <div class="row">
+        <div class="col-md-3">
+            {% if fieldset.description.fieldset_total_points %}
+            <strong>{% trans "Subtotal max" %}</strong> ({{fieldset.description.fieldset_total_points}})
+            {% endif %}
+        </div>
+        <div class="col-md-9">
+            <strong>{% trans "Total" %}:</strong>
+            <input class="total_field_readonly" type="text" id="id_{{fieldset.description.fieldset_total_field}}" readonly>
+        </div>
+    </div>
+{% endif %}

@@ -1,12 +1,5 @@
 {% load i18n bootstrapped_goodies_tags %}
-{% block extrastyle %}
-    <style>
-        #id_ue_vol_mov_syn_flex_obs,
-        #id_ue_vol_mov_syn_ext_obs {
-            height:4em;
-        }
-    </style>
-{% endblock %}
+
 <fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
     {% if fieldset.name %}
     <legend>
@@ -30,7 +23,7 @@
             <div class="row"><div class="control-group {% if line.fields|length_is:'1' and line.errors %} error{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not line.has_visible_field %} hidden{% endif %}{% endfor %}">
                 {% for field in line %}
                     {% if field.field.name == 'ue_vol_mov_syn_flex_shoulder_retrac' %}
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=UE_VOL_MOV_SYN_FLEX_TEXT content_activities=FUGLM_UE_VOL_MOV_SYN_ACTIVITY %}
+                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=UE_VOL_MOV_SYN_FLEX_TEXT content_activities=field.field.field.choices %}
                     {% endif %}
                     {% if field.field.name == 'ue_vol_mov_syn_ext_shoulder' %}
                         {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=UE_VOL_MOV_SYN_EXT_TEXT content_activities=FUGLM_UE_VOL_MOV_SYN_ACTIVITY %}
@@ -57,13 +50,6 @@
                 {% endfor %}
             </div></div>
         {% endfor %}
-        <div class="row">
-            <div class="col-md-3">
-                <strong>{% trans "Subtotal max" %}</strong> (18)
-            </div>
-            <div class="col-md-9">
-                <strong>{% trans "Total" %}:<span id="ue_reflex_activity_total"></span></strong>
-            </div>
-        </div>
+        {% include "admin/includes/fieldset/row_total.html" %}
     </div>
 </fieldset>
