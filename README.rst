@@ -37,7 +37,7 @@ Seguir as instruções do site do `django-reversion-compare <https://github.com/
 
 3. django-sql-explorer
 ......................
-e.1. Instalação
+3.1. Instalação
 
 Seguir as instruções do site do `django-sql-explorer <https://github.com/groveco/django-sql-explorer>`_.
 

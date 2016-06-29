@@ -8,11 +8,13 @@ from .eeg import Eeg
 from .fim import FIM
 from .clin import Clin
 from .had import HAD
+from .hamilton import Hamilton
 from .fuglmeyer import FuglMeyer
 
 from .period import Period
 
 
-__all__ = ['BaseEvaluation', 'Patient', 'KVIQ', 'SIS', 'FIM', 'Eeg', 'BostonAphasia', 'Clin', 'Period', 'HAD', 'FuglMeyer']
+__all__ = ['BaseEvaluation', 'Patient', 'KVIQ', 'SIS', 'FIM', 'Eeg', 'BostonAphasia', 'Clin', 'Period', 'HAD',
+           'Hamilton', 'FuglMeyer']
 
 
