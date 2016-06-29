@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-29 12:48-0300\n"
+"POT-Creation-Date: 2016-06-29 16:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,15 +19,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: .\evaluation\admin\base_admin.py:25 .\evaluation\admin\fim_admin.py:62
-#: .\evaluation\admin\had_admin.py:48 .\evaluation\admin\sis_admin.py:126
+#: .\evaluation\admin\had_admin.py:48 .\evaluation\admin\hamilton_admin.py:52
+#: .\evaluation\admin\sis_admin.py:126
 msgid "Birthdate"
 msgstr "Data de nascimento"
 
 #: .\evaluation\admin\bostonaphasia_admin.py:11
 #: .\evaluation\admin\clin_admin.py:12 .\evaluation\admin\eeg_admin.py:12
 #: .\evaluation\admin\fim_admin.py:19 .\evaluation\admin\fuglmeyer_admin.py:21
-#: .\evaluation\admin\had_admin.py:18 .\evaluation\admin\kviq_admin.py:12
-#: .\evaluation\admin\sis_admin.py:14
+#: .\evaluation\admin\had_admin.py:18 .\evaluation\admin\hamilton_admin.py:18
+#: .\evaluation\admin\kviq_admin.py:12 .\evaluation\admin\sis_admin.py:14
 #: .\evaluation\models\base_evaluation.py:17
 #: .\evaluation\templates\admin\index.html:56
 msgid "Patient"
@@ -413,6 +414,10 @@ msgstr ""
 msgid "9. Stroke Recovery "
 msgstr "9. Recuperação do AVE:"
 
+#: .\evaluation\forms\hamilton_form.py:56
+msgid "When rating by history"
+msgstr ""
+
 #: .\evaluation\models\base_evaluation.py:13 .\evaluation\models\kviq.py:8
 msgid "NT"
 msgstr ""
@@ -428,6 +433,10 @@ msgstr "Período"
 #: .\evaluation\models\base_evaluation.py:19
 msgid "Last update"
 msgstr "Última atualização"
+
+#: .\evaluation\models\base_evaluation.py:20
+msgid "Date"
+msgstr ""
 
 #: .\evaluation\models\bostonaphasia.py:8
 #: .\evaluation\models\bostonaphasia.py:9
@@ -1658,6 +1667,392 @@ msgstr ""
 msgid "HADs"
 msgstr ""
 
+#: .\evaluation\models\hamilton.py:12 .\evaluation\models\hamilton.py:22
+#: .\evaluation\models\hamilton.py:31 .\evaluation\models\hamilton.py:100
+#: .\evaluation\models\hamilton.py:123
+msgid "Absent"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:13
+msgid "These feelings are indicated only on questioning"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:14
+msgid "These feelings are spontaneously reported verbally"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:15
+msgid ""
+"Communicates feelings non-verbally i.e., through facial expression, posture, "
+"voice, and tendency to weep"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:17
+msgid ""
+"Patient reports VIRTUALLY ONLY these feelings in his spontaneous verbal and "
+"non-verbal communication"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:19
+msgid "depressed mood (sadness, hopeless, helpless, worthless)"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:23
+msgid "Self reproach, feels he has let people down"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:24
+msgid "Ideas of guilt or rumination over past errors or sinful deed"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:25
+msgid "Present illness is a punishmnent. Delusions of guilt"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:26
+msgid ""
+"Hears accusatory or denunciatory voices and/or experiences threatening "
+"visual hallucinations"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:28
+msgid "feelings of guilt"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:32
+#, fuzzy
+#| msgid "h. Feel that life is worth living?"
+msgid "Feels life is not worth living"
+msgstr "h. sentiu que a vida vale a pena viver?"
+
+#: .\evaluation\models\hamilton.py:33
+msgid "Wishes he were dead or any thoughts of possible death to self"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:34
+msgid "Suicide ideas or gesture"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:35
+msgid "Attempts at suicide (any serious attempt rates)"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:37
+msgid "suicide"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:40
+#, fuzzy
+#| msgctxt "CHOICES_DIFICULTY"
+#| msgid "Not difficult at all"
+msgid "No difficulty falling asleep"
+msgstr "nada dicífil"
+
+#: .\evaluation\models\hamilton.py:41
+msgid "Complains of occasional difficulty falling asleep - more than 1/2 hour"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:42
+msgid "Complains of nightly difficulty falling asleep"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:44
+msgid "insomnia early"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:47 .\evaluation\models\hamilton.py:54
+#: .\evaluation\models\hamilton.py:61 .\evaluation\models\hamilton.py:91
+#, fuzzy
+#| msgctxt "CHOICES_DIFICULTY"
+#| msgid "Very difficult"
+msgid "No difficulty"
+msgstr "muito difícil"
+
+#: .\evaluation\models\hamilton.py:48
+msgid "Patient complains of being restless and disturbed during the night"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:49
+msgid ""
+"Waking during the night - any getting out of bed (except for purposes of "
+"voiding)"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:51
+msgid "insomnia middle"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:55
+msgid "Waking in early hours of the morning but goes back to sleep"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:56
+msgid "Unable to fall asleep again if he gets out of bed"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:58
+msgid "insomnia late"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:62
+msgid ""
+"Thoughts and feelings of incapacity, fatigue or weakness related to "
+"activities (work or hobbies)"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:63
+msgid ""
+"Loss of interest in activities (hobbies or work) - either directly reported "
+"by patient, or indirectly in listlessness, indecision and vacillation (feels "
+"he has to push himself to work or do activities)"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:65
+msgid ""
+"Decrease in actual time spent in activities or decrease in productivity. In "
+"hospital, if patient does not spend at least three hours a day in activities "
+"(hospital job or hobbies) exclusive of ward chores"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:67
+msgid ""
+"Stopped working because of present illness. In hospital, if patient engages "
+"in no activities except ward chores, or if patient fails to perform ward "
+"chores unassisted"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:70
+#, fuzzy
+#| msgid "b. Your social activities?"
+msgid "work and activities"
+msgstr "b. suas atividades sociais?"
+
+#: .\evaluation\models\hamilton.py:73
+msgid "Normal speech and thought"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:74
+msgid "Slight retardation at interview"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:75
+msgid "Obvious retardation at interview"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:76
+#, fuzzy
+#| msgctxt "CHOICES_DIFICULTY"
+#| msgid "Very difficult"
+msgid "Interview difficult"
+msgstr "muito difícil"
+
+#: .\evaluation\models\hamilton.py:77
+msgid "Complete stupor"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:79
+msgid ""
+"retardation: psychomotor (slowness of thought and speech; impaired ability "
+"to concentrate; decreased motor activity)"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:82 .\evaluation\models\hamilton.py:109
+#: .\evaluation\models\hamilton.py:116
+#, fuzzy
+#| msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
+#| msgid "None"
+msgid "None"
+msgstr "Sem atividade reflexa"
+
+#: .\evaluation\models\hamilton.py:83
+msgid "Fidgetiness"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:84
+msgid "Playing with hands, hair,etc"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:85
+msgid "Moving about, can't sit still"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:86
+msgid "Hand wringing, nail biting, hair-pulling, biting of lips"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:88
+#, fuzzy
+#| msgid "administration"
+msgid "agitation"
+msgstr "administração"
+
+#: .\evaluation\models\hamilton.py:92
+msgid "Subjective tension and irritability"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:93
+msgid "Worrying about minor matters"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:94
+msgid "Apprehensive attitude apparent in face or speech"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:95
+msgid "Fears expressed without questioning"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:97
+msgid "anxiety: psychic"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:101 .\evaluation\models\hamilton.py:124
+msgid "Mild"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:102
+#, fuzzy
+#| msgid "Moderately intense"
+msgid "Moderate"
+msgstr "Moderadamente intensa"
+
+#: .\evaluation\models\hamilton.py:103 .\evaluation\models\hamilton.py:125
+msgid "Severe"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:104
+msgid "Incapacitating"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:106
+msgid ""
+"anxiety: somatic (physiological concomitants of anxiety, such as - gastro-"
+"intestinal: dry mouth, wind, indigestion, diarrhea, cramps, belching. - "
+"cardio-vascular : palpitations, headaches. - respiratory: hyperventilation, "
+"sighing. - urinary frequency - sweating)"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:110
+msgid ""
+"Loss of appetite but eating without staff encouragement. Heavy feelings in "
+"abdomen"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:111
+msgid ""
+"Difficulty eating without staff urging. Requests or requires laxatives or "
+"medication for bowels or medication for gastro-intestinal symptoms"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:113
+msgid "somatic symptoms: gastrointestinal"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:117
+msgid ""
+"Heaviness in limbs, back or head. Backaches, headache, muscle aches. Loss of "
+"energy and fatigability"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:118
+msgid "Any clear-cut symptom"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:120
+msgid "somatic symptoms: general"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:127
+msgid "genital symptoms (loss of libido, menstrual disturbances)"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:130
+#, fuzzy
+#| msgctxt "FuglMeyer"
+#| msgid "Notes"
+msgid "Not present"
+msgstr "Observação"
+
+#: .\evaluation\models\hamilton.py:131
+msgid "Self-absorption (bodily)"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:132
+msgid "Preoccupation with health"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:133
+msgid "Frequent complaints, requests for help, etc. ..."
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:134
+msgid "Hypochondriacal delusions"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:136
+msgid "hypochondriasis"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:139 .\evaluation\models\hamilton.py:147
+msgid "No weight loss"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:140
+msgid "Probable weight loss associated with present illness"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:141
+msgid "Definite (according to patient) weight loss"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:142
+msgid "Not assessed"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:144 .\evaluation\models\hamilton.py:151
+msgid "loss of weight"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:148
+msgid "Probable weight loss associated with present illness (>500g/week)"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:149
+msgid "Definite weight loss(>1kg/week)"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:154
+msgid ""
+"Not depressed (based on above items) OR Acknowledges being depressed and ill"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:155
+msgid ""
+"Acknowledges illness but attributes cause to bad food, climate, overwork, "
+"virus, need for rest, etc."
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:156
+msgid "Denies being ill at all"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:158
+#, fuzzy
+#| msgid "Right"
+msgid "insight"
+msgstr "Direita"
+
+#: .\evaluation\models\hamilton.py:161
+#: .\evaluation\templates\admin\evaluation\hamilton\change_form.html:6
+msgid "Hamilton"
+msgstr ""
+
+#: .\evaluation\models\hamilton.py:162
+#, fuzzy
+#| msgid "Evaluations"
+msgid "Hamiltons"
+msgstr "Avaliações"
+
 #: .\evaluation\models\kviq.py:11
 msgid "Image as clear as seeing"
 msgstr "Imagem tão clara como ver"
@@ -2454,6 +2849,10 @@ msgstr "Não respondidas"
 msgid "Questionnaires"
 msgstr "Questionários"
 
+#: .\evaluation\templates\admin\tag_patients.html:9
+msgid "Selecionar paciente"
+msgstr ""
+
 #: .\evaluation\templates\reversion-compare\compare.html:22
 msgid "History"
 msgstr "Histórico"
@@ -2515,10 +2914,6 @@ msgstr "Voltar para a lista de históricos"
 #~ msgctxt "FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY"
 #~ msgid "Hand to lumbar spine (without compensation)"
 #~ msgstr "Ação realizada completamente (mão chega a coluna lombar)"
-
-#~ msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
-#~ msgid "None"
-#~ msgstr "Sem atividade reflexa"
 
 #~ msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
 #~ msgid "Can be elicited"
