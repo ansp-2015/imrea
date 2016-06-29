@@ -16,11 +16,13 @@ class BaseEvaluation(models.Model):
 
     patient = models.ForeignKey(Patient, verbose_name=_(u'Patient'))
     period = models.ForeignKey(Period, verbose_name=_(u'Period'))
-    date = models.DateTimeField(auto_now=True, verbose_name=_(u'Last update'))
+    last_update = models.DateTimeField(auto_now=True, verbose_name=_(u'Last update'))
     obs = models.TextField(max_length=500, blank=True, null=True)
 
     class Meta:
+        abstract = True
         ordering = ['patient']
 
     def __unicode__(self):
         return '%s' % self.patient
+

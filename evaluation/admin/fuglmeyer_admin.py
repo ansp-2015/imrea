@@ -13,6 +13,9 @@ logger = logging.getLogger(__name__)
 
 
 class FuglMeyerAdmin(BaseAdmin):
+    UE_VOL_MOV_SYN_FLEX_TEXT = '%s' % pgettext('UE_VOL_MOV_SYN_FLEX_TEXT', u"Flexor synergy - Instruct the patient to fully supinate his/her forearm, flex the elbow, and bring the hand to the ear of the affected side. The shoulder should be abducted at least 90 degrees. The starting position should be that of full extensor synergy. If the patient cannot actively achieve the starting position, the limb may be passively placed extended towards opposite knee in shoulder adduction/internal rotation, elbow extension, and forearm pronation. Test 3x on the affected side and score best movement at each joint.")
+    UE_VOL_MOV_SYN_EXT_TEXT = '%s' % pgettext('UE_VOL_MOV_SYN_EXT_TEXT', u"Extensor synergy - Instruct the patient to adduct & internally rotate the shoulder, extend his arm towards the unaffected knee with the forearm pronated. The starting position should be that the limb is passively placed at patient’s side in elbow flexion and supination. The examiner must ensure that the patient does not rotate and flex the trunk forward, thereby allowing gravity to assist with the movement. The pectoralis major and triceps brachii tendons may be palpated to assess active movement. Test 3x on the affected side and score best movement at each joint.")
+
     form = FuglMeyerForm
     fieldsets = (
         (_(u'Patient'), {
@@ -52,7 +55,7 @@ class FuglMeyerAdmin(BaseAdmin):
             'fields': ('ue_vol_mov_mix_hand_spine', 'ue_vol_mov_mix_shoulder_flex', 'ue_vol_mov_mix_pron_sup'),
             'description': {
                 'fieldset': '/fuglmeyer/fieldset_00_title_and_fields',
-                'fieldset_total_points': 6,
+                'fieldset_total_points': '6',
                 'fieldset_total_addend_fields': ('ue_vol_mov_mix_hand_spine', 'ue_vol_mov_mix_shoulder_flex', 'ue_vol_mov_mix_pron_sup'),
                 'fieldset_total_field': 'ue_vol_mov_mix_total',
             }
@@ -61,7 +64,7 @@ class FuglMeyerAdmin(BaseAdmin):
             'fields': ('ue_vol_mov_no_syn_shoulder_abd', 'ue_vol_mov_no_syn_shoulder_flex', 'ue_vol_mov_no_syn_pron_sup'),
             'description': {
                 'fieldset': '/fuglmeyer/fieldset_00_title_and_fields',
-                'fieldset_total_points': 6,
+                'fieldset_total_points': '6',
                 'fieldset_total_addend_fields': ('ue_vol_mov_no_syn_shoulder_abd', 'ue_vol_mov_no_syn_shoulder_flex', 'ue_vol_mov_no_syn_pron_sup'),
                 'fieldset_total_field': 'ue_vol_mov_no_syn_total',
             }
@@ -70,7 +73,7 @@ class FuglMeyerAdmin(BaseAdmin):
             'fields': ('ue_normal_reflex_activity', 'ue_normal_reflex_obs'),
             'description': {
                 'fieldset': '/fuglmeyer/fieldset_00_title_and_fields',
-                'fieldset_total_points': 2,
+                'fieldset_total_points': '2',
                 'fieldset_total_addend_fields': ('ue_normal_reflex_activity', ),
                 'fieldset_total_field': 'ue_normal_reflex_total',
             }
@@ -81,9 +84,9 @@ class FuglMeyerAdmin(BaseAdmin):
             'description': {
                 'fieldset': '/fuglmeyer/fieldset_00_title_and_fields',
                 'fieldset_helptext': _(u'Support may be provided at the elbow'),
-                'fieldset_total_points':10,
+                'fieldset_total_points': '10',
                 'fieldset_total_addend_fields': ('ue_wrist_stab_elbow_90', 'ue_wrist_flex_elbow_90', 'ue_wrist_stab_elbow_0',
-                       'ue_wrist_flex_elbow_0', 'ue_wrist_circumduction',),
+                                                 'ue_wrist_flex_elbow_0', 'ue_wrist_circumduction',),
                 'fieldset_total_field': 'ue_wrist_total',
             }
         }),
@@ -93,9 +96,9 @@ class FuglMeyerAdmin(BaseAdmin):
             'description': {
                 'fieldset': '/fuglmeyer/fieldset_00_title_and_fields',
                 'fieldset_helptext': _(u'Support may be provided at the elbow to keep 90 flexion, no support at the wrist, compare with unaffected hand, the objects are interposed, active grasp'),
-                'fieldset_total_points': 10,
+                'fieldset_total_points': '10',
                 'fieldset_total_addend_fields': ('ue_hand_mass_flex', 'ue_hand_mass_ext', 'ue_hand_flex_pip_dip', 'ue_hand_thumb_adduction',
-                       'ue_hand_thumb_opposition', 'ue_hand_cylinder_grip', 'ue_hand_spherical_grip'),
+                                                 'ue_hand_thumb_opposition', 'ue_hand_cylinder_grip', 'ue_hand_spherical_grip'),
                 'fieldset_total_field': 'ue_hand_total',
             }
         }),
@@ -105,7 +108,7 @@ class FuglMeyerAdmin(BaseAdmin):
                 'fieldset': '/fuglmeyer/fieldset_00_title_and_fields',
                 'fieldset_helptext': _(
                     u'After one trial with both arms, blind-folded, tip of the index finger from knee to nose, 5 times as fast as possible'),
-                'fieldset_total_points': 6,
+                'fieldset_total_points': '6',
                 'fieldset_total_addend_fields': ('ue_coord_speed_tremor', 'ue_coord_speed_dysmetria', 'ue_coord_speed_time'),
                 'fieldset_total_field': 'ue_coord_speed_total',
             }
@@ -114,7 +117,7 @@ class FuglMeyerAdmin(BaseAdmin):
             'fields': ('le_reflex_activity_achilles', 'le_reflex_activity_pattelar', 'le_reflex_activity_obs',),
             'description': {
                 'fieldset': '/fuglmeyer/fieldset_06_le_reflex_activity',
-                'fieldset_total_points': 4,
+                'fieldset_total_points': '4',
                 'fieldset_total_addend_fields': ('le_reflex_activity_achilles', 'le_reflex_activity_pattelar',),
                 'fieldset_total_field': 'le_reflex_activity_total',
             }
@@ -123,7 +126,7 @@ class FuglMeyerAdmin(BaseAdmin):
             'fields': ('le_reflex_activity_achilles_pattelar', 'le_reflex_activity_achilles_pattelar_obs',),
             'description': {
                 'fieldset': '/fuglmeyer/fieldset_00_title_and_fields',
-                'fieldset_total_points': 2,
+                'fieldset_total_points': '2',
                 'fieldset_total_addend_fields': ('le_reflex_activity_achilles_pattelar', ),
                 'fieldset_total_field': 'le_reflex_activity_achilles_pattelar_total',
             }
@@ -134,7 +137,7 @@ class FuglMeyerAdmin(BaseAdmin):
                 'fieldset': '/fuglmeyer/fieldset_07_le_vol_mov_syn',
                 'fieldset_helptext': _(
                     u'Start with leg fully extended at hip, knee, and ankle.Instruct the subject to “bring your knee to your chest”'),
-                'fieldset_total_points': 6,
+                'fieldset_total_points': '6',
                 'fieldset_total_addend_fields': ('le_vol_mov_syn_hip_flexion', 'le_vol_mov_syn_knee_flexion', 'le_vol_mov_syn_ankle_dorsiflexion', ),
                 'fieldset_total_field': 'le_vol_mov_syn_flexion_total',
             }
@@ -146,9 +149,9 @@ class FuglMeyerAdmin(BaseAdmin):
                 'fieldset': '/fuglmeyer/fieldset_08_le_vol_mov_syn_ext',
                 'fieldset_helptext': _(
                     u'Start in 90 degrees hip flexion, 90 degrees knee flexion and ankle dorsiflexion. Slight resistance should be applied in adduction to ensure subject is actively doing it. Instruct the subject to "push your foot down and kick down and back”.'),
-                'fieldset_total_points': 8,
+                'fieldset_total_points': '8',
                 'fieldset_total_addend_fields': ('le_vol_mov_syn_hip_extension', 'le_vol_mov_syn_hip_adduction', 'le_vol_mov_syn_knee_extension',
-                       'le_vol_mov_syn_ankle_flexion',),
+                                                 'le_vol_mov_syn_ankle_flexion',),
                 'fieldset_total_field': 'le_vol_mov_syn_extension_total',
             }
         }),
@@ -159,9 +162,9 @@ class FuglMeyerAdmin(BaseAdmin):
                        'le_vol_mov_no_syn_ankle', 'le_vol_mov_no_syn_ankle_obs'),
             'description': {
                 'fieldset': '/fuglmeyer/fieldset_00_title_and_fields',
-                'fieldset_total_points': 8,
+                'fieldset_total_points': '8',
                 'fieldset_total_addend_fields': ('le_vol_mov_mix_syn_knee', 'le_vol_mov_mix_syn_ankle',
-                       'le_vol_mov_no_syn_knee', 'le_vol_mov_no_syn_ankle', ),
+                                                 'le_vol_mov_no_syn_knee', 'le_vol_mov_no_syn_ankle', ),
                 'fieldset_total_field': 'le_vol_mov_mix_syn_total',
             }
         }),
@@ -171,16 +174,85 @@ class FuglMeyerAdmin(BaseAdmin):
                 'fieldset': '/fuglmeyer/fieldset_00_title_and_fields',
                 'fieldset_helptext': _(
                     u'Sittings position, both limbis, eyes closed, ankle to knee to ankle, 5 times  move as fast as possible'),
-                'fieldset_total_points': 6,
+                'fieldset_total_points': '6',
                 'fieldset_total_addend_fields': ('le_coord_speed_tremor', 'le_coord_speed_dysmetria', 'le_coord_speed_time', ),
                 'fieldset_total_field': 'le_coord_speed_total',
             }
         }),
-
-    (_(u''), {
-            'fields': ('obs',),
+        (_(u'Upper extremity score interpretation'), {
+            'fields': ('ue_total_obs',),
             'description': {
-                'fieldset': '_1col'
+                'fieldset': '/fuglmeyer/fieldset_09_upper_total',
+                'fieldset_total': [
+                    {'name': _(u'Upper extremity'),
+                     'fieldset_total_points': '36',
+                     'fieldset_total_addend_fields': ('ue_reflex_activity_total', 'ue_vol_mov_syn_total',
+                                                      'ue_vol_mov_mix_total', 'ue_vol_mov_no_syn_total',
+                                                      'ue_normal_reflex_total',),
+                     'fieldset_total_field': 'ue_upper_extremity_last_total',
+                     },
+                    {'name': _(u'Wrist'),
+                     'fieldset_total_points': '10',
+                     'fieldset_total_addend_fields': ('ue_wrist_total',),
+                     'fieldset_total_field': 'ue_wrist_last_total',
+                     },
+                    {'name': _(u'Hand'),
+                     'fieldset_total_points': '14',
+                     'fieldset_total_addend_fields': ('ue_hand_total',),
+                     'fieldset_total_field': 'ue_hand_last_total',
+                     },
+                    {'name': _(u'Coordination/Speed'),
+                     'fieldset_total_points': '6',
+                     'fieldset_total_addend_fields': ('ue_coord_speed_total',),
+                     'fieldset_total_field': 'ue_coord_speed_last_total',
+                     },
+                    {'name': _(u'Total'),
+                     'fieldset_total_points': '66',
+                     'fieldset_total_addend_fields': ('ue_upper_extremity_last_total','ue_wrist_last_total',
+                                                      'ue_hand_last_total', 'ue_coord_speed_last_total',),
+                     'fieldset_total_field': 'ue_last_total',
+                     },
+                ]
+            }
+        }),
+        (_(u'Lower extremity score interpretation'), {
+            'fields': ('ue_total_obs',),
+            'description': {
+                'fieldset': '/fuglmeyer/fieldset_10_lower_total',
+                'fieldset_total': [
+                    {'name': _(u'Reflex activity'),
+                     'fieldset_total_points': '6',
+                     'fieldset_total_addend_fields': ('le_reflex_activity_total', 'le_reflex_activity_achilles_pattelar_total',),
+                     'fieldset_total_field': 'le_reflex_activity_last_total',
+                     },
+                    {'name': _(u'Flexor synergy'),
+                     'fieldset_total_points': '6',
+                     'fieldset_total_addend_fields': ('le_vol_mov_syn_flexion_total',),
+                     'fieldset_total_field': 'le_syn_flexion_last_total',
+                     },
+                    {'name': _(u'Extensor synergy'),
+                     'fieldset_total_points': '8',
+                     'fieldset_total_addend_fields': ('le_vol_mov_syn_extension_total',),
+                     'fieldset_total_field': 'le_syn_extension_last_total',
+                     },
+                    {'name': _(u'Movement combining synergies'),
+                     'fieldset_total_points': '8',
+                     'fieldset_total_addend_fields': ('le_vol_mov_mix_syn_total',),
+                     'fieldset_total_field': 'le_mix_syn_last_total',
+                     },
+                    {'name': _(u'Coordination/Speed'),
+                     'fieldset_total_points': '6',
+                     'fieldset_total_addend_fields': ('le_coord_speed_total',),
+                     'fieldset_total_field': 'le_coord_speed_last_total',
+                     },
+                    {'name': _(u'Total'),
+                     'fieldset_total_points': '34',
+                     'fieldset_total_addend_fields': ('le_reflex_activity_last_total', 'le_syn_flexion_last_total',
+                                                      'le_syn_extension_last_total', 'le_mix_syn_last_total',
+                                                      'le_mix_syn_last_total',),
+                     'fieldset_total_field': 'le_last_total',
+                     },
+                ]
             }
         }),
     )
@@ -212,11 +284,6 @@ class FuglMeyerAdmin(BaseAdmin):
         extra_context['patient__birthdate'] = obj.patient.birthdate
 
         return super(FuglMeyerAdmin, self).change_view(request, object_id, form_url, extra_context=extra_context)
-
-
-    UE_VOL_MOV_SYN_FLEX_TEXT = '%s' % pgettext('UE_VOL_MOV_SYN_FLEX_TEXT', u"Flexor synergy - Instruct the patient to fully supinate his/her forearm, flex the elbow, and bring the hand to the ear of the affected side. The shoulder should be abducted at least 90 degrees. The starting position should be that of full extensor synergy. If the patient cannot actively achieve the starting position, the limb may be passively placed extended towards opposite knee in shoulder adduction/internal rotation, elbow extension, and forearm pronation. Test 3x on the affected side and score best movement at each joint.")
-    UE_VOL_MOV_SYN_EXT_TEXT = '%s' % pgettext('UE_VOL_MOV_SYN_EXT_TEXT', u"Extensor synergy - Instruct the patient to adduct & internally rotate the shoulder, extend his arm towards the unaffected knee with the forearm pronated. The starting position should be that the limb is passively placed at patient’s side in elbow flexion and supination. The examiner must ensure that the patient does not rotate and flex the trunk forward, thereby allowing gravity to assist with the movement. The pectoralis major and triceps brachii tendons may be palpated to assess active movement. Test 3x on the affected side and score best movement at each joint.")
-
 
 
 admin.site.register(FuglMeyer, FuglMeyerAdmin)

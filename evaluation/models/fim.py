@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from . import BaseEvaluation 
+from . import BaseEvaluation
 
 class FIM(BaseEvaluation):
     """
@@ -10,7 +10,6 @@ class FIM(BaseEvaluation):
     MEDIDA DE INDEPENDÊNCIA FUNCIONAL - MIF                                            
     """
 
-    baseevaluation_ptr = models.OneToOneField(BaseEvaluation)
 
     FIM_CHOICES_CATEGORY = (
         (1, _(u'Total assistance')),

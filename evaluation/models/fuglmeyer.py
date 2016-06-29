@@ -317,6 +317,9 @@ class FuglMeyer(BaseEvaluation):
     le_coord_speed_time = models.IntegerField(_(u'Scoring Speed'), choices=FUGLM_LE_COORD_SPEED_TIME)
     le_coord_speed_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
 
+    ue_total_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
+    le_total_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
+
     def ue_reflex_activity_total(self):
         """
         :return: Total of A.Upper extremity / I.Reflex activity

@@ -82,10 +82,6 @@ class FuglMeyerForm(forms.ModelForm):
     class Meta:
         model = FuglMeyer
         fields = ['patient', 'period', 'ue_reflex_activity_flex', 'ue_reflex_activity_ext',]
-        # fields = ['neglect_1a', 'neglect_1b', 'neglect_1c', 'neglect_1d',
-        #        'neglect_2a', 'neglect_2b', 'neglect_2c', 'neglect_2d',
-        #        'neglect_3a', 'neglect_3b', 'neglect_3c', 'neglect_3d',
-        #        'neglect_4a', 'neglect_4b', 'neglect_4c', 'neglect_4d', 'obs']
         widgets = {
             'ue_reflex_activity_flex': ButtonRadioHorizontalValueSelect(),
             'ue_reflex_activity_ext': ButtonRadioHorizontalValueSelect(),
@@ -153,21 +149,3 @@ class FuglMeyerForm(forms.ModelForm):
 
 
         }
-        # widgets = {
-        #     'neglect_1a': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_1b': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_1c': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_1d': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_2a': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_2b': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_2c': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_2d': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_3a': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_3b': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_3c': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_3d': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_4a': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_4b': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_4c': ButtonRadioHorizontalLabelSelect(),
-        #     'neglect_4d': ButtonRadioHorizontalLabelSelect(),
-        # }

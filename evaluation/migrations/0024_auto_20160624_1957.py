@@ -1,0 +1,550 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('evaluation', '0023_auto_20160622_1710'),
+    ]
+
+    operations = [
+        migrations.AddField(
+            model_name='sis',
+            name='activities_bathe',
+            field=models.IntegerField(default=1, verbose_name='c. Bathe yourself?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='activities_clip_toenails',
+            field=models.IntegerField(default=1, verbose_name='d. Clip your toenails?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='activities_control_bladder',
+            field=models.IntegerField(default=1, verbose_name='f. Control your bladder (not have an accident)?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='activities_control_bowels',
+            field=models.IntegerField(default=1, verbose_name='g. Control your bowels (not have an accident)?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='activities_cut_food',
+            field=models.IntegerField(default=1, verbose_name='a. Cut your food with a knife and fork?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='activities_dress',
+            field=models.IntegerField(default=1, verbose_name='b. Dress the top part of your body?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='activities_heavy_household',
+            field=models.IntegerField(default=1, verbose_name='j. Do heavy household chores (e.g.vacuum, laundry or yard work)?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='activities_light_household',
+            field=models.IntegerField(default=1, verbose_name='h. Do light household tasks/chores(e.g. dust, make a bed, take out garbage, do the dishes)?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='activities_shopping',
+            field=models.IntegerField(default=1, verbose_name='i. Go shopping?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='activities_toilet',
+            field=models.IntegerField(default=1, verbose_name='e. Get to the toilet on time?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='communication_group_conversation',
+            field=models.IntegerField(default=1, verbose_name='e. Participate in a conversation with a group of people?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='communication_name_objs',
+            field=models.IntegerField(default=1, verbose_name='d. Correctly name objects?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='communication_reply',
+            field=models.IntegerField(default=1, verbose_name='c. Reply to questions?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='communication_say_name',
+            field=models.IntegerField(default=1, verbose_name='a. Say the name of someone who was in front of you?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='communication_tel_call',
+            field=models.IntegerField(default=1, verbose_name='g. Call another person on the telephone, including selecting the correct phone number and dialing?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='communication_tel_conversation',
+            field=models.IntegerField(default=1, verbose_name='f. Have a conversation on the telephone? ', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='communication_understand',
+            field=models.IntegerField(default=1, verbose_name='b. Understand what was being said to you in a conversation?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='dificulty_concentrate',
+            field=models.IntegerField(default=1, verbose_name='e. Concentrate?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='dificulty_remember_day_week',
+            field=models.IntegerField(default=1, verbose_name='d. Remember the day of the week?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='dificulty_remember_do_things',
+            field=models.IntegerField(default=1, verbose_name='c. Remember to do things (e.g. keep scheduled appointments or take medication)?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='dificulty_remember_happ_day_bef',
+            field=models.IntegerField(default=1, verbose_name='b. Remember things that happened the day before?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='dificulty_remember_ppl_told',
+            field=models.IntegerField(default=1, verbose_name='a. Remember things that people just told you?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='dificulty_solve_problems',
+            field=models.IntegerField(default=1, verbose_name='g. Solve everyday problems?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='dificulty_think_quickly',
+            field=models.IntegerField(default=1, verbose_name='f. Think quickly?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Extremely difficult')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='hand_carry_heavy_objs',
+            field=models.IntegerField(default=1, verbose_name='a. Carry heavy objects (e.g. bag of groceries)?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='hand_open_jar',
+            field=models.IntegerField(default=1, verbose_name='c. Open a can or jar?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='hand_pick_dime',
+            field=models.IntegerField(default=1, verbose_name='e. Pick up a dime?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='hand_tie_shoe_lace',
+            field=models.IntegerField(default=1, verbose_name='d. Tie a shoe lace?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='hand_turn_doorknob',
+            field=models.IntegerField(default=1, verbose_name='b. Turn a doorknob?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mobile_bed_chair',
+            field=models.IntegerField(default=1, verbose_name='d. Move from a bed to a chair?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mobile_climb_one_flight',
+            field=models.IntegerField(default=1, verbose_name='g. Climb one flight of stairs?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mobile_climb_several_flights',
+            field=models.IntegerField(default=1, verbose_name='h. Climb several flights of stairs?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mobile_in_out_car',
+            field=models.IntegerField(default=1, verbose_name='i. Get in and out of a car?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mobile_sitting',
+            field=models.IntegerField(default=1, verbose_name='a. Stay sitting without losing your balance?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mobile_standing',
+            field=models.IntegerField(default=1, verbose_name='b. Stay standing without losing your balance?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mobile_walk_balance',
+            field=models.IntegerField(default=1, verbose_name='c. Walk without losing your balance?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mobile_walk_fast',
+            field=models.IntegerField(default=1, verbose_name='f. Walk fast?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mobile_walk_one_block',
+            field=models.IntegerField(default=1, verbose_name='e. Walk one block?', choices=[(5, 'Not difficult at all'), (4, 'A little difficult'), (3, 'Somewhat difficult'), (2, 'Very difficult'), (1, 'Could not do at all')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mood_blame_mistakes',
+            field=models.IntegerField(default=1, verbose_name='e. Blame yourself for mistakes that you made?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mood_burden',
+            field=models.IntegerField(default=1, verbose_name='c. Feel that you are a burden to others?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mood_enjoy_things',
+            field=models.IntegerField(default=1, verbose_name='f. Enjoy things as much as ever?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mood_feel_nervous',
+            field=models.IntegerField(default=1, verbose_name='g. Feel quite nervous?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mood_feel_sad',
+            field=models.IntegerField(default=1, verbose_name='a. Feel sad?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mood_feel_worth_living',
+            field=models.IntegerField(default=1, verbose_name='h. Feel that life is worth living?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mood_nobody_close',
+            field=models.IntegerField(default=1, verbose_name='b. Feel that there is nobody you are close to?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mood_nothing_to_look_fwd',
+            field=models.IntegerField(default=1, verbose_name='d. Feel that you have nothing to look forward to?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='mood_smile_laugh',
+            field=models.IntegerField(default=1, verbose_name='i. Smile and laugh at least once a day?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='scale_recovery',
+            field=models.IntegerField(default=1),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='time_active_recreation',
+            field=models.IntegerField(default=1, verbose_name='d. Active recreation (sports, outings,travel)?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='time_control_life',
+            field=models.IntegerField(default=1, verbose_name='g. Your ability to control your life as you wish?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='time_family',
+            field=models.IntegerField(default=1, verbose_name='e. Your role as a family member and/or friend?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='time_help_others',
+            field=models.IntegerField(default=1, verbose_name='h. Your ability to help others?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='time_quiet_recreation',
+            field=models.IntegerField(default=1, verbose_name='c. Quiet recreation (crafts, reading)?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='time_social',
+            field=models.IntegerField(default=1, verbose_name='b. Your social activities?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='time_spiritual',
+            field=models.IntegerField(default=1, verbose_name='f. Your participation in spiritual or religious activities?', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='sis',
+            name='time_work',
+            field=models.IntegerField(default=1, verbose_name='a. Your work (paid, voluntary or other)', choices=[(5, 'None of the time'), (4, 'A little of the time'), (3, 'Some of the time'), (2, 'Most of the time'), (1, 'All of the time')]),
+            preserve_default=False,
+        ),
+        migrations.AlterField(
+            model_name='fuglmeyer',
+            name='ue_vol_mov_mix_pron_sup',
+            field=models.IntegerField(verbose_name='Prona\xe7\xe3o/Supina\xe7\xe3o antebra\xe7o cotovelo em 90 e ombro em 0', choices=[(0, 'Posi\xe7\xe3o correta do ombro e cotovelo n\xe3o pode ser atingida, e/ou prona\xe7\xe3o ou supina\xe7\xe3o n\xe3o pode ser realizada totalmente'), (1, 'Mant\xe9m posi\xe7\xe3o com ADM limitada de P/S'), (2, 'Mant\xe9m posi\xe7\xe3o com P/S completa')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='dominant_limb',
+            field=models.IntegerField(verbose_name='Dominant limb', choices=[(0, 'Left'), (1, 'Right')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='elbow_dom_cine_images',
+            field=models.IntegerField(verbose_name='Elbow dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='elbow_dom_visual_images',
+            field=models.IntegerField(verbose_name='Elbow dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='elbow_not_dom_cine_images',
+            field=models.IntegerField(verbose_name='Elbow not dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='elbow_not_dom_visual_images',
+            field=models.IntegerField(verbose_name='Elbow not dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='foot_rotation_dom_cine_images',
+            field=models.IntegerField(verbose_name='Foot rotation dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='foot_rotation_dom_visual_images',
+            field=models.IntegerField(verbose_name='Foot rotation dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='foot_rotation_not_dom_cine_images',
+            field=models.IntegerField(verbose_name='Foot rotation not dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='foot_rotation_not_dom_visual_images',
+            field=models.IntegerField(verbose_name='Foot rotation not dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='foot_tapping_dom_cine_images',
+            field=models.IntegerField(verbose_name='Foot tapping dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='foot_tapping_dom_visual_images',
+            field=models.IntegerField(verbose_name='Foot tapping dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='foot_tapping_not_dom_cine_images',
+            field=models.IntegerField(verbose_name='Foot tapping not dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='foot_tapping_not_dom_visual_images',
+            field=models.IntegerField(verbose_name='Foot tapping not dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='hip_dom_cine_images',
+            field=models.IntegerField(verbose_name='Hip dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='hip_dom_visual_images',
+            field=models.IntegerField(verbose_name='Hip dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='hip_not_dom_cine_images',
+            field=models.IntegerField(verbose_name='Hip not dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='hip_not_dom_visual_images',
+            field=models.IntegerField(verbose_name='Hip not dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='knee_dom_cine_images',
+            field=models.IntegerField(verbose_name='Knee dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='knee_dom_visual_images',
+            field=models.IntegerField(verbose_name='Knee dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='knee_not_dom_cine_images',
+            field=models.IntegerField(verbose_name='Knee not dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='knee_not_dom_visual_images',
+            field=models.IntegerField(verbose_name='Knee not dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='neck_cine_images',
+            field=models.IntegerField(verbose_name='Neck cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='neck_visual_images',
+            field=models.IntegerField(verbose_name='Neck visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='shoulder_elevation_cine_images',
+            field=models.IntegerField(verbose_name='Shoulder elevation cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='shoulder_elevation_visual_images',
+            field=models.IntegerField(verbose_name='Shoulder elevation visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='shoulder_flexion_dom_cine_images',
+            field=models.IntegerField(verbose_name='Shoulder flexion dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='shoulder_flexion_dom_visual_images',
+            field=models.IntegerField(verbose_name='Shoulder flexion dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='shoulder_flexion_not_dom_cine_images',
+            field=models.IntegerField(verbose_name='Shoulder flexion not dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='shoulder_flexion_not_dom_visual_images',
+            field=models.IntegerField(verbose_name='Shoulder flexion not dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='thumb_dom_cine_images',
+            field=models.IntegerField(verbose_name='Thumb dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='thumb_dom_visual_images',
+            field=models.IntegerField(verbose_name='Thumb dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='thumb_not_dom_cine_images',
+            field=models.IntegerField(verbose_name='Thumb not dominant cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='thumb_not_dom_visual_images',
+            field=models.IntegerField(verbose_name='Thumb not dominant visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='trunk_cine_images',
+            field=models.IntegerField(verbose_name='Trunk cine images', choices=[(5, 'As intense as performing the action'), (4, 'Intense'), (3, 'Moderately intense'), (2, 'Slightly intense'), (1, 'No sensation'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='trunk_visual_images',
+            field=models.IntegerField(verbose_name='Trunk visual images', choices=[(5, 'Image as clear as seeing'), (4, 'Clear image'), (3, 'Moderately clear image'), (2, 'Blurred image'), (1, 'No image'), (-10000, 'NT')]),
+        ),
+        migrations.AlterField(
+            model_name='sis',
+            name='strength_arm',
+            field=models.IntegerField(verbose_name='a. Arm that was most affected', choices=[(5, 'A lot of strength'), (4, 'Quite a bit of strength'), (3, 'Some strength'), (2, 'A little strength'), (1, 'No strength at all')]),
+        ),
+        migrations.AlterField(
+            model_name='sis',
+            name='strength_foot',
+            field=models.IntegerField(verbose_name='d. Foot/ankle that was most affected', choices=[(5, 'A lot of strength'), (4, 'Quite a bit of strength'), (3, 'Some strength'), (2, 'A little strength'), (1, 'No strength at all')]),
+        ),
+        migrations.AlterField(
+            model_name='sis',
+            name='strength_hand',
+            field=models.IntegerField(verbose_name='b. Grip of your hand that was most affected', choices=[(5, 'A lot of strength'), (4, 'Quite a bit of strength'), (3, 'Some strength'), (2, 'A little strength'), (1, 'No strength at all')]),
+        ),
+        migrations.AlterField(
+            model_name='sis',
+            name='strength_leg',
+            field=models.IntegerField(verbose_name='c. Leg that was most affected', choices=[(5, 'A lot of strength'), (4, 'Quite a bit of strength'), (3, 'Some strength'), (2, 'A little strength'), (1, 'No strength at all')]),
+        ),
+    ]

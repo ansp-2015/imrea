@@ -16,12 +16,20 @@ class Period(models.Model):
 
     @staticmethod
     def _find_evaluated_period(patient):
-        periods = Period.objects.filter(baseevaluation__patient__id=patient.pk).distinct()
+        periods = Period.objects.filter(bostonaphasia__patient__id=patient.pk).distinct() | \
+                  Period.objects.filter(clin__patient__id=patient.pk).distinct() | \
+                  Period.objects.filter(eeg__patient__id=patient.pk).distinct() | \
+                  Period.objects.filter(fim__patient__id=patient.pk).distinct() | \
+                  Period.objects.filter(fuglmeyer__patient__id=patient.pk).distinct() | \
+                  Period.objects.filter(had__patient__id=patient.pk).distinct() | \
+                  Period.objects.filter(kviq__patient__id=patient.pk).distinct() | \
+                  Period.objects.filter(sis__patient__id=patient.pk).distinct()
+
         return periods
 
     @staticmethod
     def _find_not_evaluated_period(patient):
-        periods_evaluated = Period.objects.filter(baseevaluation__patient__id=patient.pk).distinct()
+        periods_evaluated = Period._find_evaluated_period(patient)
 
         periods_not_evaluated = Period.objects.exclude(pk__in=periods_evaluated)
 
