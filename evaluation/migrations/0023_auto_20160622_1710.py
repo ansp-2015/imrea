@@ -45,6 +45,34 @@ class Migration(migrations.Migration):
             name='sis',
             options={'ordering': ['patient']},
         ),
+
+
+        migrations.AlterField(
+            model_name='eeg',
+            name='baseevaluation_ptr',
+            field=models.PositiveIntegerField(default=0),
+            preserve_default=False,
+        ),
+        migrations.AlterField(
+            model_name='fim',
+            name='baseevaluation_ptr',
+            field=models.PositiveIntegerField(default=0),
+            preserve_default=False,
+        ),
+        migrations.AlterField(
+            model_name='kviq',
+            name='baseevaluation_ptr',
+            field=models.PositiveIntegerField(default=0),
+            preserve_default=False,
+        ),
+        migrations.AlterField(
+            model_name='sis',
+            name='baseevaluation_ptr',
+            field=models.PositiveIntegerField(default=0),
+            preserve_default=False,
+        ),
+
+
         migrations.RemoveField(
             model_name='bostonaphasia',
             name='baseevaluation_ptr',

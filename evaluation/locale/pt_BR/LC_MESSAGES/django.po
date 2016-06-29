@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-24 11:29-0300\n"
+"POT-Creation-Date: 2016-06-29 12:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: .\evaluation\admin\base_admin.py:25 .\evaluation\admin\fim_admin.py:62
-#: .\evaluation\admin\had_admin.py:48 .\evaluation\admin\sis_admin.py:34
+#: .\evaluation\admin\had_admin.py:48 .\evaluation\admin\sis_admin.py:126
 msgid "Birthdate"
 msgstr "Data de nascimento"
 
@@ -309,6 +309,109 @@ msgstr ""
 #: .\evaluation\admin\sis_admin.py:21
 msgid "1. In the past week, how would you rate the strength of your...."
 msgstr "1. Na semana passada, como você classificaria o seu..."
+
+#: .\evaluation\admin\sis_admin.py:26
+msgid "These questions are about your memory and thinking"
+msgstr "Estas questões são sobre a sua memória e pensamento"
+
+#: .\evaluation\admin\sis_admin.py:32
+msgid "2. In the past week, how difficultwas it for you to..."
+msgstr "2. Na semana passada, o quão difícil foi para você..."
+
+#: .\evaluation\admin\sis_admin.py:37
+msgid ""
+"These questions are about how you feel, about changes in your mood and about "
+"your ability to control your emotions since your stroke."
+msgstr ""
+"Estas questões são sobre como você se sente, sobre alterações no seu humor e "
+"sobre a sua habilidade de controlar as suas emoções desde o seu AVE"
+
+#: .\evaluation\admin\sis_admin.py:44
+msgid "3. In the past week, how often did you..."
+msgstr "3. Na semana passada, com que frequência você..."
+
+#: .\evaluation\admin\sis_admin.py:49
+msgid ""
+"The following questions are about your ability to communicate with other "
+"people, as well as your ability to understand what you read and what you "
+"hear in a conversation."
+msgstr ""
+"As seguintes perguntas são sobre suas habilidades de se comunicar com outras "
+"pessoas, bem como sua capacidade de entender o que você lê e o que ouve em "
+"uma conversa"
+
+#: .\evaluation\admin\sis_admin.py:56
+msgid "4. In the past week, how difficult was it to... "
+msgstr "4. Na semana passada, o quão difícil foi para..."
+
+#: .\evaluation\admin\sis_admin.py:61
+msgid ""
+"The following questions ask about activities you might do during a typical "
+"day."
+msgstr ""
+"As questões seguintes perguntam sobre atividades que você pode fazer durante "
+"um dia típico"
+
+#: .\evaluation\admin\sis_admin.py:69
+msgid "5. In the past 2 weeks, how difficultwas it to... "
+msgstr "5. Nas duas últimas semanas, o quão difícil foi para..."
+
+#: .\evaluation\admin\sis_admin.py:74
+msgid ""
+"The following questions are about your ability to be mobile, at home and in "
+"the community."
+msgstr ""
+"As seguintes perguntas são sobre sua capacidade de se movimentar "
+"(locomover), em casa ou na comunidade"
+
+#: .\evaluation\admin\sis_admin.py:81
+msgid "6. In the past 2 weeks, how difficultwas it to..."
+msgstr "6. Nas duas últimas semanas, o quão difícil foi para..."
+
+#: .\evaluation\admin\sis_admin.py:86
+msgid ""
+"The following questions are about your ability to use your hand that was "
+"MOST AFFECTED by your stroke."
+msgstr ""
+"As seguintes perguntas são sobre sua habilidade de usar a mão que foi mais "
+"afetada pelo AVE"
+
+#: .\evaluation\admin\sis_admin.py:92
+msgid ""
+"7. In the past 2 weeks, how difficult was it to use your hand that was most "
+"affected by your stroke to..."
+msgstr ""
+"7. Nas duas últimas semanas, o quão difícil foi para usar a mão que foi mais "
+"afetada para..."
+
+#: .\evaluation\admin\sis_admin.py:97
+msgid ""
+"The following questions are about how stroke has affected your ability to "
+"participate in the activities that you usually do, things that are "
+"meaningful to you and help you to find purpose in life."
+msgstr ""
+"As seguintes perguntas são sobre como o AVE afetou a sua capacidade de "
+"participar das atividades que você costumava fazer, coisas que são "
+"significativas para você e o ajudam a encontrar um propósito na vida"
+
+#: .\evaluation\admin\sis_admin.py:104
+msgid ""
+"8. During the past 4 weeks, how much of the time have you been limited in..."
+msgstr ""
+"8. Durante as últimas 4 semanas, quanto do tempo você tem sido limitado "
+"dentro..."
+
+#: .\evaluation\admin\sis_admin.py:109
+msgid ""
+"On a scale of 0 to 100, with 100 representing full recovery and 0 "
+"representing no recovery, how much have you recovered from your stroke?"
+msgstr ""
+"Em uma escala de 0 à 100, sendo 100 recuperação completa e 0 nenhuma "
+"recuperação, o quanto você recuperou após seu AVE?"
+
+#: .\evaluation\admin\sis_admin.py:112
+msgid "9. Stroke Recovery "
+msgstr "9. Recuperação do AVE:"
 
 #: .\evaluation\models\base_evaluation.py:13 .\evaluation\models\kviq.py:8
 msgid "NT"
@@ -1415,15 +1518,13 @@ msgstr "Consigo ficar sentado à vontade e me sentir relaxado"
 
 #: .\evaluation\models\had.py:70
 msgid "Nearly all the time"
-msgstr ""
+msgstr "quase sempre"
 
 #: .\evaluation\models\had.py:71
 msgid "Very often"
-msgstr ""
+msgstr "muitas vezes"
 
 #: .\evaluation\models\had.py:73
-#, fuzzy
-#| msgid "Not at all"
 msgctxt "slowed"
 msgid "Not at all"
 msgstr "Nunca"
@@ -1445,8 +1546,6 @@ msgid "Occasionally"
 msgstr ""
 
 #: .\evaluation\models\had.py:81
-#, fuzzy
-#| msgid "Not at all"
 msgctxt "butterflies"
 msgid "Not at all"
 msgstr "Nunca"
@@ -1486,8 +1585,6 @@ msgid "Not very much"
 msgstr ""
 
 #: .\evaluation\models\had.py:97
-#, fuzzy
-#| msgid "Not at all"
 msgctxt "restless"
 msgid "Not at all"
 msgstr "Nunca"
@@ -1531,8 +1628,6 @@ msgid "Not very often"
 msgstr ""
 
 #: .\evaluation\models\had.py:113
-#, fuzzy
-#| msgid "Not at all"
 msgctxt "panic"
 msgid "Not at all"
 msgstr "Nunca"
@@ -1624,9 +1719,6 @@ msgid "Shoulder elevation visual images"
 msgstr "Erquer ombro - visual de imagens"
 
 #: .\evaluation\models\kviq.py:36
-#, fuzzy
-#| msgctxt "FuglMeyer"
-#| msgid "Shoulder elevation"
 msgid "Shoulder elevation cine images"
 msgstr "Erguer ombro - imagens cinestésica"
 
@@ -1754,25 +1846,459 @@ msgstr "Rotação do pé não dominante - imagens cinestésica"
 msgid "Parent"
 msgstr ""
 
-#: .\evaluation\models\sis.py:10
-msgid "A lot of strength"
-msgstr ""
-
-#: .\evaluation\models\sis.py:11
-msgid "Quite a bit of strength"
-msgstr ""
-
 #: .\evaluation\models\sis.py:12
-msgid "Some strength"
-msgstr ""
+msgctxt "CHOICES_STRENGTH"
+msgid "A lot of strength"
+msgstr "muita força"
 
 #: .\evaluation\models\sis.py:13
-msgid "A little strength"
-msgstr ""
+msgctxt "CHOICES_STRENGTH"
+msgid "Quite a bit of strength"
+msgstr "um pouco de força"
 
 #: .\evaluation\models\sis.py:14
+msgctxt "CHOICES_STRENGTH"
+msgid "Some strength"
+msgstr "alguma força"
+
+#: .\evaluation\models\sis.py:15
+msgctxt "CHOICES_STRENGTH"
+msgid "A little strength"
+msgstr "minima força"
+
+#: .\evaluation\models\sis.py:16
+msgctxt "CHOICES_STRENGTH"
 msgid "No strength at all"
+msgstr "nenhuma força"
+
+#: .\evaluation\models\sis.py:18
+msgid "a. Arm that was most affected"
+msgstr "a. braço que foi mais afetado?"
+
+#: .\evaluation\models\sis.py:19
+msgid "b. Grip of your hand that was most affected"
+msgstr "b. preensão da mão que foi mais afetada?"
+
+#: .\evaluation\models\sis.py:20
+msgid "c. Leg that was most affected"
+msgstr "c. perna que foi mais afetada?"
+
+#: .\evaluation\models\sis.py:21
+msgid "d. Foot/ankle that was most affected"
+msgstr "d. pé/tonozelo que foi mais afetado?"
+
+#: .\evaluation\models\sis.py:25
+msgctxt "CHOICES_DIFICULTY"
+msgid "Not difficult at all"
+msgstr "nada dicífil"
+
+#: .\evaluation\models\sis.py:26
+msgctxt "CHOICES_DIFICULTY"
+msgid "A little difficult"
+msgstr "um pouco difícil"
+
+#: .\evaluation\models\sis.py:27
+msgctxt "CHOICES_DIFICULTY"
+msgid "Somewhat difficult"
+msgstr "mais ou menos difícil"
+
+#: .\evaluation\models\sis.py:28
+msgctxt "CHOICES_DIFICULTY"
+msgid "Very difficult"
+msgstr "muito difícil"
+
+#: .\evaluation\models\sis.py:29
+msgctxt "CHOICES_DIFICULTY"
+msgid "Extremely difficult"
+msgstr "extremamente difícil"
+
+#: .\evaluation\models\sis.py:31
+msgid "a. Remember things that people just told you?"
+msgstr "a. lembrar de coisas que as pessoas te disseram?"
+
+#: .\evaluation\models\sis.py:32
+msgid "b. Remember things that happened the day before?"
+msgstr "b. lembrar de coisas que aconteceram no dia anterior?"
+
+#: .\evaluation\models\sis.py:33
+msgid ""
+"c. Remember to do things (e.g. keep scheduled appointments or take "
+"medication)?"
 msgstr ""
+"c. lembrar de fazer as coisas (por exemplo, manter compromissos agendados ou "
+"medicamentos?"
+
+#: .\evaluation\models\sis.py:34
+msgid "d. Remember the day of the week?"
+msgstr "d. lembrar o dia da semana?"
+
+#: .\evaluation\models\sis.py:35
+msgid "e. Concentrate?"
+msgstr "e. concentrar-se?"
+
+#: .\evaluation\models\sis.py:36
+msgid "f. Think quickly?"
+msgstr "f. pensar rapidamente?"
+
+#: .\evaluation\models\sis.py:37
+msgid "g. Solve everyday problems?"
+msgstr "g. resolver problemas do dia-a-dia?"
+
+#: .\evaluation\models\sis.py:41
+msgctxt "CHOICES_MOOD"
+msgid "None of the time"
+msgstr "nenhuma vez"
+
+#: .\evaluation\models\sis.py:42
+msgctxt "CHOICES_MOOD"
+msgid "A little of the time"
+msgstr "poucas vezes"
+
+#: .\evaluation\models\sis.py:43
+msgctxt "CHOICES_MOOD"
+msgid "Some of the time"
+msgstr "algumas vezes"
+
+#: .\evaluation\models\sis.py:44
+msgctxt "CHOICES_MOOD"
+msgid "Most of the time"
+msgstr "a maioria das vezes"
+
+#: .\evaluation\models\sis.py:45
+msgctxt "CHOICES_MOOD"
+msgid "All of the time"
+msgstr "todo o tempo"
+
+#: .\evaluation\models\sis.py:47
+msgid "a. Feel sad?"
+msgstr "a. sentiu-se triste?"
+
+#: .\evaluation\models\sis.py:48
+msgid "b. Feel that there is nobody you are close to?"
+msgstr "b. sentiu que não há ninguém próximo de você?"
+
+#: .\evaluation\models\sis.py:49
+msgid "c. Feel that you are a burden to others?"
+msgstr "c. sentiu que você é um fardo para os outros?"
+
+#: .\evaluation\models\sis.py:50
+msgid "d. Feel that you have nothing to look forward to?"
+msgstr "d. sentiu que você não tem nada para olhar para frente (futuro)?"
+
+#: .\evaluation\models\sis.py:51
+msgid "e. Blame yourself for mistakes that you made?"
+msgstr "e. responsabilizou-se pelos erros que você fez?"
+
+#: .\evaluation\models\sis.py:52
+msgid "f. Enjoy things as much as ever?"
+msgstr "f. aprecia as coisas mais do que nunca?"
+
+#: .\evaluation\models\sis.py:53
+msgid "g. Feel quite nervous?"
+msgstr "g. sentiu-se muito nervoso?"
+
+#: .\evaluation\models\sis.py:54
+msgid "h. Feel that life is worth living?"
+msgstr "h. sentiu que a vida vale a pena viver?"
+
+#: .\evaluation\models\sis.py:55
+msgid "i. Smile and laugh at least once a day?"
+msgstr "i. sorriu e riu pelo menos uma vez por dia?"
+
+#: .\evaluation\models\sis.py:59
+msgctxt "CHOICES_COMMUNICATION"
+msgid "Not difficult at all"
+msgstr "nada difícil"
+
+#: .\evaluation\models\sis.py:60
+msgctxt "CHOICES_COMMUNICATION"
+msgid "A little difficult"
+msgstr "um pouco difícil"
+
+#: .\evaluation\models\sis.py:61
+msgctxt "CHOICES_COMMUNICATION"
+msgid "Somewhat difficult"
+msgstr "mais ou menos difícil"
+
+#: .\evaluation\models\sis.py:62
+msgctxt "CHOICES_COMMUNICATION"
+msgid "Very difficult"
+msgstr "muito difícil"
+
+#: .\evaluation\models\sis.py:63
+msgctxt "CHOICES_COMMUNICATION"
+msgid "Extremely difficult"
+msgstr "extremamente difícil"
+
+#: .\evaluation\models\sis.py:65
+msgid "a. Say the name of someone who was in front of you?"
+msgstr "a. dizer o nome de alguém que estava na sua frente?"
+
+#: .\evaluation\models\sis.py:66
+msgid "b. Understand what was being said to you in a conversation?"
+msgstr "b. entender o que estava sendo dito a você em uma conversa?"
+
+#: .\evaluation\models\sis.py:67
+msgid "c. Reply to questions?"
+msgstr "c. responder às perguntas?"
+
+#: .\evaluation\models\sis.py:68
+msgid "d. Correctly name objects?"
+msgstr "d. nomear corretamente os objetos?"
+
+#: .\evaluation\models\sis.py:69
+msgid "e. Participate in a conversation with a group of people?"
+msgstr "e. participar de uma conversa com um grupo de pessoas?"
+
+#: .\evaluation\models\sis.py:70
+msgid "f. Have a conversation on the telephone? "
+msgstr "f. ter uma conversa ao telefone?"
+
+#: .\evaluation\models\sis.py:71
+msgid ""
+"g. Call another person on the telephone, including selecting the correct "
+"phone number and dialing?"
+msgstr ""
+"g. conversar com outra pessoa no telefone, incluindo a seleção do número "
+"correto e a discagem?"
+
+#: .\evaluation\models\sis.py:75
+msgctxt "CHOICES_ACTIVITIES"
+msgid "Not difficult at all"
+msgstr "nada difícil"
+
+#: .\evaluation\models\sis.py:76
+msgctxt "CHOICES_ACTIVITIES"
+msgid "A little difficult"
+msgstr "um pouco difícil"
+
+#: .\evaluation\models\sis.py:77
+msgctxt "CHOICES_ACTIVITIES"
+msgid "Somewhat difficult"
+msgstr "mais ou menos difícil"
+
+#: .\evaluation\models\sis.py:78
+msgctxt "CHOICES_ACTIVITIES"
+msgid "Very difficult"
+msgstr "muito difícil"
+
+#: .\evaluation\models\sis.py:79
+msgctxt "CHOICES_ACTIVITIES"
+msgid "Could not do at all"
+msgstr "não consigo realizar"
+
+#: .\evaluation\models\sis.py:81
+msgid "a. Cut your food with a knife and fork?"
+msgstr "a. cortar a sua comida com o garfo e faca?"
+
+#: .\evaluation\models\sis.py:82
+msgid "b. Dress the top part of your body?"
+msgstr "b. vestir a parte superior do seu corpo?"
+
+#: .\evaluation\models\sis.py:83
+msgid "c. Bathe yourself?"
+msgstr "c. banhar-se?"
+
+#: .\evaluation\models\sis.py:84
+msgid "d. Clip your toenails?"
+msgstr "d. cortar suas unhas?"
+
+#: .\evaluation\models\sis.py:85
+msgid "e. Get to the toilet on time?"
+msgstr "e. ir ao banheiro a tempo?"
+
+#: .\evaluation\models\sis.py:86
+msgid "f. Control your bladder (not have an accident)?"
+msgstr "f. controlar sua bexiga (não ter um acidente)?"
+
+#: .\evaluation\models\sis.py:87
+msgid "g. Control your bowels (not have an accident)?"
+msgstr "g. controlar seu intestino (não ter um acidente)?"
+
+#: .\evaluation\models\sis.py:88
+msgid ""
+"h. Do light household tasks/chores(e.g. dust, make a bed, take out garbage, "
+"do the dishes)?"
+msgstr ""
+"h. fazer tarefas domésticas leves (ex. poeira, arrumar a cama, tirar o lixo, "
+"lavar pratos)?"
+
+#: .\evaluation\models\sis.py:89
+msgid "i. Go shopping?"
+msgstr "i. ir as compras?"
+
+#: .\evaluation\models\sis.py:90
+msgid "j. Do heavy household chores (e.g.vacuum, laundry or yard work)?"
+msgstr ""
+"j. fazer tarefas domésticas pesadas (ex. lavar roupa, varrer quintal, passar "
+"aspirador de pó)?"
+
+#: .\evaluation\models\sis.py:94
+msgctxt "CHOICES_MOBILE"
+msgid "Not difficult at all"
+msgstr "nada difícil"
+
+#: .\evaluation\models\sis.py:95
+msgctxt "CHOICES_MOBILE"
+msgid "A little difficult"
+msgstr "um pouco difícil"
+
+#: .\evaluation\models\sis.py:96
+msgctxt "CHOICES_MOBILE"
+msgid "Somewhat difficult"
+msgstr "mais ou menos difícil"
+
+#: .\evaluation\models\sis.py:97
+msgctxt "CHOICES_MOBILE"
+msgid "Very difficult"
+msgstr "muito difícil"
+
+#: .\evaluation\models\sis.py:98
+msgctxt "CHOICES_MOBILE"
+msgid "Could not do at all"
+msgstr "não consigo realizar"
+
+#: .\evaluation\models\sis.py:100
+msgid "a. Stay sitting without losing your balance?"
+msgstr "a. ficar sentado sem perder o equilíbrio?"
+
+#: .\evaluation\models\sis.py:101
+msgid "b. Stay standing without losing your balance?"
+msgstr "b. ficar de pé sem perder o equilíbrio?"
+
+#: .\evaluation\models\sis.py:102
+msgid "c. Walk without losing your balance?"
+msgstr "c. andar sem perder o equilíbrio?"
+
+#: .\evaluation\models\sis.py:103
+msgid "d. Move from a bed to a chair?"
+msgstr "d. passar de uma cama para uma cadeira?"
+
+#: .\evaluation\models\sis.py:104
+msgid "e. Walk one block?"
+msgstr "e. andar um quarteirão?"
+
+#: .\evaluation\models\sis.py:105
+msgid "f. Walk fast?"
+msgstr "f. andar rápido?"
+
+#: .\evaluation\models\sis.py:106
+msgid "g. Climb one flight of stairs?"
+msgstr "g. subir um lance de escadas?"
+
+#: .\evaluation\models\sis.py:107
+msgid "h. Climb several flights of stairs?"
+msgstr "h. subir vários lances de escada?"
+
+#: .\evaluation\models\sis.py:108
+msgid "i. Get in and out of a car?"
+msgstr "i. entrar e sair de um carro?"
+
+#: .\evaluation\models\sis.py:112
+msgctxt "CHOICES_HAND"
+msgid "Not difficult at all"
+msgstr "nada difícil"
+
+#: .\evaluation\models\sis.py:113
+msgctxt "CHOICES_HAND"
+msgid "A little difficult"
+msgstr "um pouco difícil"
+
+#: .\evaluation\models\sis.py:114
+msgctxt "CHOICES_HAND"
+msgid "Somewhat difficult"
+msgstr "mais ou menos difícil"
+
+#: .\evaluation\models\sis.py:115
+msgctxt "CHOICES_HAND"
+msgid "Very difficult"
+msgstr "muito difícil"
+
+#: .\evaluation\models\sis.py:116
+msgctxt "CHOICES_HAND"
+msgid "Could not do at all"
+msgstr "não consigo realizar"
+
+#: .\evaluation\models\sis.py:118
+msgid "a. Carry heavy objects (e.g. bag of groceries)?"
+msgstr "a. carregar objetos pesados (ex. sacola de compras)?"
+
+#: .\evaluation\models\sis.py:119
+msgid "b. Turn a doorknob?"
+msgstr "b. virar uma maçaneta?"
+
+#: .\evaluation\models\sis.py:120
+msgid "c. Open a can or jar?"
+msgstr "c. abrir uma lata ou pote?"
+
+#: .\evaluation\models\sis.py:121
+msgid "d. Tie a shoe lace?"
+msgstr "d. amarrar um cordão de sapatos?"
+
+#: .\evaluation\models\sis.py:122
+msgid "e. Pick up a dime?"
+msgstr "e. pegar uma moeda de 10 centavos?"
+
+#: .\evaluation\models\sis.py:126
+msgctxt "CHOICES_TIME"
+msgid "None of the time"
+msgstr "nenhuma vez"
+
+#: .\evaluation\models\sis.py:127
+msgctxt "CHOICES_TIME"
+msgid "A little of the time"
+msgstr "poucas vezes"
+
+#: .\evaluation\models\sis.py:128
+msgctxt "CHOICES_TIME"
+msgid "Some of the time"
+msgstr "algumas vezes"
+
+#: .\evaluation\models\sis.py:129
+msgctxt "CHOICES_TIME"
+msgid "Most of the time"
+msgstr "a maioria das vezes"
+
+#: .\evaluation\models\sis.py:130
+msgctxt "CHOICES_TIME"
+msgid "All of the time"
+msgstr "todo o tempo"
+
+#: .\evaluation\models\sis.py:132
+msgid "a. Your work (paid, voluntary or other)"
+msgstr "a. seu trabalho (pago, voluntária ou outro)?"
+
+#: .\evaluation\models\sis.py:133
+msgid "b. Your social activities?"
+msgstr "b. suas atividades sociais?"
+
+#: .\evaluation\models\sis.py:134
+msgid "c. Quiet recreation (crafts, reading)?"
+msgstr "c. recreação tranquila (artesanato, leitura)?"
+
+#: .\evaluation\models\sis.py:135
+msgid "d. Active recreation (sports, outings,travel)?"
+msgstr "d. recreação ativa (esportes, passeios, viagens)?"
+
+#: .\evaluation\models\sis.py:136
+msgid "e. Your role as a family member and/or friend?"
+msgstr "e. seu papel como um membro da família e/ou amigo?"
+
+#: .\evaluation\models\sis.py:137
+msgid "f. Your participation in spiritual or religious activities?"
+msgstr "f. sua participação em atividades religiosas ou espirituais?"
+
+#: .\evaluation\models\sis.py:138
+msgid "g. Your ability to control your life as you wish?"
+msgstr "g. sua capacidade de controlar sua vida como você deseja?"
+
+#: .\evaluation\models\sis.py:139
+msgid "h. Your ability to help others?"
+msgstr "h. sua capacidade de ajudar os outros?"
+
+#: .\evaluation\models\sis.py:142
+msgid "Stroke Recovery scale"
+msgstr "Escala de recuperação do AVE"
 
 #: .\evaluation\templates\admin\app_index.html:9
 #: .\evaluation\templates\admin\index.html:16
