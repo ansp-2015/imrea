@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-29 16:45-0300\n"
+"POT-Creation-Date: 2016-06-30 19:38-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,16 @@ msgstr ""
 "Language: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\evaluation\admin\base_admin.py:25 .\evaluation\admin\fim_admin.py:62
-#: .\evaluation\admin\had_admin.py:48 .\evaluation\admin\hamilton_admin.py:52
-#: .\evaluation\admin\sis_admin.py:126
+#: .\evaluation\admin\base_admin.py:25 .\evaluation\admin\sis_admin.py:127
 msgid "Birthdate"
 msgstr "Data de nascimento"
 
 #: .\evaluation\admin\bostonaphasia_admin.py:11
-#: .\evaluation\admin\clin_admin.py:12 .\evaluation\admin\eeg_admin.py:12
+#: .\evaluation\admin\clin_admin.py:13 .\evaluation\admin\eeg_admin.py:13
 #: .\evaluation\admin\fim_admin.py:19 .\evaluation\admin\fuglmeyer_admin.py:21
 #: .\evaluation\admin\had_admin.py:18 .\evaluation\admin\hamilton_admin.py:18
-#: .\evaluation\admin\kviq_admin.py:12 .\evaluation\admin\sis_admin.py:14
+#: .\evaluation\admin\kviq_admin.py:13 .\evaluation\admin\mmse_admin.py:18
+#: .\evaluation\admin\sis_admin.py:15
 #: .\evaluation\models\base_evaluation.py:17
 #: .\evaluation\templates\admin\index.html:56
 msgid "Patient"
@@ -54,11 +53,11 @@ msgstr ""
 msgid "Instructions:..."
 msgstr ""
 
-#: .\evaluation\admin\clin_admin.py:16
+#: .\evaluation\admin\clin_admin.py:17
 msgid "Line Crossing"
 msgstr "Cancelamento de linhas"
 
-#: .\evaluation\admin\eeg_admin.py:16
+#: .\evaluation\admin\eeg_admin.py:17
 msgid "Arquivo"
 msgstr "File"
 
@@ -255,51 +254,76 @@ msgstr "Interpretação membro inferior"
 msgid "Movement combining synergies"
 msgstr "Movimento com e sem sinergias"
 
-#: .\evaluation\admin\kviq_admin.py:16 .\evaluation\models\kviq.py:32
+#: .\evaluation\admin\kviq_admin.py:17 .\evaluation\models\kviq.py:32
 msgid "Dominant limb"
 msgstr "Membro dominante"
 
-#: .\evaluation\admin\kviq_admin.py:22
+#: .\evaluation\admin\kviq_admin.py:23
 msgid "Neck flexion/extension"
 msgstr "Flexão/extensão do pescoço"
 
-#: .\evaluation\admin\kviq_admin.py:28
+#: .\evaluation\admin\kviq_admin.py:29
 msgid "Shoulder elevation"
 msgstr "Encolher (erguer) os ombros"
 
-#: .\evaluation\admin\kviq_admin.py:34
+#: .\evaluation\admin\kviq_admin.py:35
 msgid "Shoulder flexion"
 msgstr "Flexão do ombro para a frente"
 
-#: .\evaluation\admin\kviq_admin.py:41
+#: .\evaluation\admin\kviq_admin.py:42
 msgid "Elbow"
 msgstr "Flexão do cotovelo"
 
-#: .\evaluation\admin\kviq_admin.py:48
+#: .\evaluation\admin\kviq_admin.py:49
 msgid "Thumb"
 msgstr "Polegar para as pontas dos dedo"
 
-#: .\evaluation\admin\kviq_admin.py:55
+#: .\evaluation\admin\kviq_admin.py:56
 msgid "Trunk"
 msgstr "Flexão do tronco para frente"
 
-#: .\evaluation\admin\kviq_admin.py:61
+#: .\evaluation\admin\kviq_admin.py:62
 msgid "Knee"
 msgstr "Extensão do joelho"
 
-#: .\evaluation\admin\kviq_admin.py:68
+#: .\evaluation\admin\kviq_admin.py:69
 msgid "Hip"
 msgstr "Abdução do quadril"
 
-#: .\evaluation\admin\kviq_admin.py:75
+#: .\evaluation\admin\kviq_admin.py:76
 msgid "Foot tapping"
 msgstr "Bater o pé"
 
-#: .\evaluation\admin\kviq_admin.py:82
+#: .\evaluation\admin\kviq_admin.py:83
 msgid "Foot rotation"
 msgstr "Rotação externa do pé"
 
-#: .\evaluation\admin\sis_admin.py:18
+#: .\evaluation\admin\mmse_admin.py:22
+msgctxt "MMSEAdmin"
+msgid "Orientation"
+msgstr "Orientação"
+
+#: .\evaluation\admin\mmse_admin.py:30
+msgctxt "MMSEAdmin"
+msgid "Registration"
+msgstr "administração"
+
+#: .\evaluation\admin\mmse_admin.py:36
+msgctxt "MMSEAdmin"
+msgid "Attention and Calculation"
+msgstr "Atenção e cálculo"
+
+#: .\evaluation\admin\mmse_admin.py:42
+msgctxt "MMSEAdmin"
+msgid "Recall"
+msgstr "Evocação"
+
+#: .\evaluation\admin\mmse_admin.py:48
+msgctxt "MMSEAdmin"
+msgid "Language"
+msgstr "Linguagem"
+
+#: .\evaluation\admin\sis_admin.py:19
 msgid ""
 "These questions are about the physical problems which may have occurred as a "
 "result of your stroke."
@@ -307,19 +331,19 @@ msgstr ""
 "Estas questões são referentes aos problemas físicos que podem ter ocorrido "
 "como resultado de AVE"
 
-#: .\evaluation\admin\sis_admin.py:21
+#: .\evaluation\admin\sis_admin.py:22
 msgid "1. In the past week, how would you rate the strength of your...."
 msgstr "1. Na semana passada, como você classificaria o seu..."
 
-#: .\evaluation\admin\sis_admin.py:26
+#: .\evaluation\admin\sis_admin.py:27
 msgid "These questions are about your memory and thinking"
 msgstr "Estas questões são sobre a sua memória e pensamento"
 
-#: .\evaluation\admin\sis_admin.py:32
+#: .\evaluation\admin\sis_admin.py:33
 msgid "2. In the past week, how difficultwas it for you to..."
 msgstr "2. Na semana passada, o quão difícil foi para você..."
 
-#: .\evaluation\admin\sis_admin.py:37
+#: .\evaluation\admin\sis_admin.py:38
 msgid ""
 "These questions are about how you feel, about changes in your mood and about "
 "your ability to control your emotions since your stroke."
@@ -327,11 +351,11 @@ msgstr ""
 "Estas questões são sobre como você se sente, sobre alterações no seu humor e "
 "sobre a sua habilidade de controlar as suas emoções desde o seu AVE"
 
-#: .\evaluation\admin\sis_admin.py:44
+#: .\evaluation\admin\sis_admin.py:45
 msgid "3. In the past week, how often did you..."
 msgstr "3. Na semana passada, com que frequência você..."
 
-#: .\evaluation\admin\sis_admin.py:49
+#: .\evaluation\admin\sis_admin.py:50
 msgid ""
 "The following questions are about your ability to communicate with other "
 "people, as well as your ability to understand what you read and what you "
@@ -341,11 +365,11 @@ msgstr ""
 "pessoas, bem como sua capacidade de entender o que você lê e o que ouve em "
 "uma conversa"
 
-#: .\evaluation\admin\sis_admin.py:56
+#: .\evaluation\admin\sis_admin.py:57
 msgid "4. In the past week, how difficult was it to... "
 msgstr "4. Na semana passada, o quão difícil foi para..."
 
-#: .\evaluation\admin\sis_admin.py:61
+#: .\evaluation\admin\sis_admin.py:62
 msgid ""
 "The following questions ask about activities you might do during a typical "
 "day."
@@ -353,11 +377,11 @@ msgstr ""
 "As questões seguintes perguntam sobre atividades que você pode fazer durante "
 "um dia típico"
 
-#: .\evaluation\admin\sis_admin.py:69
+#: .\evaluation\admin\sis_admin.py:70
 msgid "5. In the past 2 weeks, how difficultwas it to... "
 msgstr "5. Nas duas últimas semanas, o quão difícil foi para..."
 
-#: .\evaluation\admin\sis_admin.py:74
+#: .\evaluation\admin\sis_admin.py:75
 msgid ""
 "The following questions are about your ability to be mobile, at home and in "
 "the community."
@@ -365,11 +389,11 @@ msgstr ""
 "As seguintes perguntas são sobre sua capacidade de se movimentar "
 "(locomover), em casa ou na comunidade"
 
-#: .\evaluation\admin\sis_admin.py:81
+#: .\evaluation\admin\sis_admin.py:82
 msgid "6. In the past 2 weeks, how difficultwas it to..."
 msgstr "6. Nas duas últimas semanas, o quão difícil foi para..."
 
-#: .\evaluation\admin\sis_admin.py:86
+#: .\evaluation\admin\sis_admin.py:87
 msgid ""
 "The following questions are about your ability to use your hand that was "
 "MOST AFFECTED by your stroke."
@@ -377,7 +401,7 @@ msgstr ""
 "As seguintes perguntas são sobre sua habilidade de usar a mão que foi mais "
 "afetada pelo AVE"
 
-#: .\evaluation\admin\sis_admin.py:92
+#: .\evaluation\admin\sis_admin.py:93
 msgid ""
 "7. In the past 2 weeks, how difficult was it to use your hand that was most "
 "affected by your stroke to..."
@@ -385,7 +409,7 @@ msgstr ""
 "7. Nas duas últimas semanas, o quão difícil foi para usar a mão que foi mais "
 "afetada para..."
 
-#: .\evaluation\admin\sis_admin.py:97
+#: .\evaluation\admin\sis_admin.py:98
 msgid ""
 "The following questions are about how stroke has affected your ability to "
 "participate in the activities that you usually do, things that are "
@@ -395,14 +419,14 @@ msgstr ""
 "participar das atividades que você costumava fazer, coisas que são "
 "significativas para você e o ajudam a encontrar um propósito na vida"
 
-#: .\evaluation\admin\sis_admin.py:104
+#: .\evaluation\admin\sis_admin.py:105
 msgid ""
 "8. During the past 4 weeks, how much of the time have you been limited in..."
 msgstr ""
 "8. Durante as últimas 4 semanas, quanto do tempo você tem sido limitado "
 "dentro..."
 
-#: .\evaluation\admin\sis_admin.py:109
+#: .\evaluation\admin\sis_admin.py:110
 msgid ""
 "On a scale of 0 to 100, with 100 representing full recovery and 0 "
 "representing no recovery, how much have you recovered from your stroke?"
@@ -410,7 +434,7 @@ msgstr ""
 "Em uma escala de 0 à 100, sendo 100 recuperação completa e 0 nenhuma "
 "recuperação, o quanto você recuperou após seu AVE?"
 
-#: .\evaluation\admin\sis_admin.py:112
+#: .\evaluation\admin\sis_admin.py:113
 msgid "9. Stroke Recovery "
 msgstr "9. Recuperação do AVE:"
 
@@ -450,6 +474,16 @@ msgstr "Sim"
 #: .\evaluation\models\clin.py:8
 msgid "No"
 msgstr "Não"
+
+#: .\evaluation\models\eeg.py:12
+#, fuzzy
+#| msgid "Total"
+msgid "Title"
+msgstr "Total"
+
+#: .\evaluation\models\eeg.py:13
+msgid "File "
+msgstr ""
 
 #: .\evaluation\models\fim.py:15
 msgid "Total assistance"
@@ -2237,6 +2271,138 @@ msgstr "Rotação do pé não dominante - visual de imagens"
 msgid "Foot rotation not dominant cine images"
 msgstr "Rotação do pé não dominante - imagens cinestésica"
 
+#: .\evaluation\models\mmse.py:25
+msgctxt "MMSE"
+msgid "Day of the week"
+msgstr "Dia da semana (1 ponto)"
+
+#: .\evaluation\models\mmse.py:26
+msgctxt "MMSE"
+msgid "Day of the month"
+msgstr "Dia do mês (1 ponto)"
+
+#: .\evaluation\models\mmse.py:27
+msgctxt "MMSE"
+msgid "Month"
+msgstr "Mês (1 ponto)"
+
+#: .\evaluation\models\mmse.py:28
+msgctxt "MMSE"
+msgid "Year"
+msgstr "Ano (1 ponto)"
+
+#: .\evaluation\models\mmse.py:29
+msgctxt "MMSE"
+msgid "Approximate time"
+msgstr "Hora aproximada (1 ponto)"
+
+#: .\evaluation\models\mmse.py:30
+msgctxt "MMSE"
+msgid "Specific place (room or sector)"
+msgstr "Local específico (aposento ou setor) (1 ponto)"
+
+#: .\evaluation\models\mmse.py:31
+msgctxt "MMSE"
+msgid "Institution (home, hospital, clinic)"
+msgstr "Instituição (residência, hospital, clínica) (1 ponto)"
+
+#: .\evaluation\models\mmse.py:32
+msgctxt "MMSE"
+msgid "District or nearby street"
+msgstr "Bairro ou rua próxima (1 ponto)"
+
+#: .\evaluation\models\mmse.py:33
+msgctxt "MMSE"
+msgid "City"
+msgstr "Cidade (1 ponto)"
+
+#: .\evaluation\models\mmse.py:34
+msgctxt "MMSE"
+msgid "State"
+msgstr "Estado (1 ponto)"
+
+#: .\evaluation\models\mmse.py:36
+msgctxt "MMSE"
+msgid "Registration"
+msgstr "Memória imediata"
+
+#: .\evaluation\models\mmse.py:36
+#, fuzzy
+#| msgctxt "MMSE"
+#| msgid ""
+#| "Name 3 objects: 1 second to say each. Then ask the patientall 3 after you "
+#| "have said them. Give 1 point for each correct answer.Then repeat them "
+#| "until he/she learns all 3. Count trials and record"
+msgctxt "MMSE"
+msgid ""
+"Name 3 objects: 1 second to say each. Then ask the patient all 3 after you "
+"have said them. Give 1 point for each correct answer.Then repeat them until "
+"he/she learns all 3. Count trials and record"
+msgstr ""
+"Fale 3 palavras não relacionadas. Posteriormente pergunte ao paciente pelas "
+"3 palavras. Dê 1 ponto para cada palavra certa. <br>Depois repita as "
+"palavras e certifique-se de que o paciente as aprendeu, pois mais adiante "
+"você irá perguntá-las novamente"
+
+#: .\evaluation\models\mmse.py:38
+msgctxt "MMSE"
+msgid "Attention and calculation"
+msgstr "Atenção e cálculo"
+
+#: .\evaluation\models\mmse.py:38
+msgctxt "MMSE"
+msgid ""
+"Count backward from 100 by sevens. 1 point for each correct answer. Stop "
+"after 5 answers. Alternatively spell \"world\" backward."
+msgstr "Subtrair 100-7, 7 vezes sucessivamente ( ponto para cada cálculo correto)<br>Alternativamente, soletrar MUNDO de trás para frente."
+
+#: .\evaluation\models\mmse.py:40
+msgctxt "MMSE"
+msgid "Recall"
+msgstr "Evocação"
+
+#: .\evaluation\models\mmse.py:40
+msgctxt "MMSE"
+msgid ""
+"Ask for the 3 objects repeated above. Give 1 point for each correct answer."
+msgstr "Pergunte pelas 3 palavras ditas anteriormente (1 ponto por palavra)"
+
+#: .\evaluation\models\mmse.py:42
+msgctxt "MMSE"
+msgid "Name a pencil and watch."
+msgstr "Nomear um relógio e uma caneta (2 pontos)"
+
+#: .\evaluation\models\mmse.py:43
+msgctxt "MMSE"
+msgid "Repeat the following \"No ifs, ands, or buts\""
+msgstr "Repetir 'nem aqui, nem ali, nem lá' (1 ponto)"
+
+#: .\evaluation\models\mmse.py:44
+msgctxt "MMSE"
+msgid ""
+"Follow a 3-stage command. \"Take a paper in your hand, fold it in half, and "
+"put it on the floor.\""
+msgstr "Comando: 'pegue este papel com a mão direita dobre ao meio e coloque no chão' (3 pontos)"
+
+#: .\evaluation\models\mmse.py:45
+msgctxt "MMSE"
+msgid "Read and obey the following: CLOSE YOUR EYES"
+msgstr "Ler e obedecer 'feche os olhos' (1 ponto)"
+
+#: .\evaluation\models\mmse.py:46
+msgctxt "MMSE"
+msgid "Write a sentence"
+msgstr "Escrever uma frase (1 ponto)"
+
+#: .\evaluation\models\mmse.py:47
+msgctxt "MMSE"
+msgid "Copy the design shown"
+msgstr "Copiar um desenho (1 ponto)"
+
+#: .\evaluation\models\mmse.py:50 .\evaluation\models\mmse.py:51
+msgid "MMSE"
+msgstr "MEEM"
+
 #: .\evaluation\models\period.py:11
 msgid "Parent"
 msgstr ""
@@ -2751,6 +2917,10 @@ msgstr ""
 msgid "FUNCTIONAL INDEPENDENCE MEASURE - FIM"
 msgstr "MEDIDA DE INDEPENDÊNCIA FUNCIONAL – MIF"
 
+#: .\evaluation\templates\admin\evaluation\eeg\change_form.html:6
+msgid "EEG"
+msgstr ""
+
 #: .\evaluation\templates\admin\evaluation\fim\change_form.html:20
 msgid "Level"
 msgstr "Nível"
@@ -2773,6 +2943,10 @@ msgstr "HAD - AVALIAÇÃO DO NÍVEL DE ANSIEDADE E DEPRESSÃO"
 
 #: .\evaluation\templates\admin\evaluation\kviq\change_form.html:6
 msgid "Kinesthetic and visual Imagery Questionnaire"
+msgstr ""
+
+#: .\evaluation\templates\admin\evaluation\mmse\change_form.html:6
+msgid "MINI MENTAL STATE EXAMINATION - MMSE"
 msgstr ""
 
 #: .\evaluation\templates\admin\evaluation\sis\change_form.html:6
