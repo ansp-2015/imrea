@@ -2,8 +2,8 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import pgettext
-from django.contrib.admin.utils import (unquote,)
-from django.utils.safestring import mark_safe
+from reversion_compare.helpers import patch_admin
+
 from ..models.fuglmeyer import FuglMeyer
 from ..forms import FuglMeyerForm
 from .base_admin import BaseAdmin
@@ -257,7 +257,7 @@ class FuglMeyerAdmin(BaseAdmin):
         }),
     )
 
-    def _add_context_variables(self, extra_context=None):
+    def add_context_variables(self, extra_context=None):
         extra_context = extra_context or {}
 
         extra_context['UE_VOL_MOV_SYN_FLEX_TEXT'] = self.UE_VOL_MOV_SYN_FLEX_TEXT
@@ -265,26 +265,8 @@ class FuglMeyerAdmin(BaseAdmin):
 
         return extra_context
 
-    def add_view(self, request, form_url='', extra_context=None):
-        """
-        Override da view de adição para adicionar algumas variáveis extras de contexto
-        """
-        extra_context = self._add_context_variables(extra_context)
-
-        return super(FuglMeyerAdmin, self).add_view(request, form_url, extra_context)
-
-    def change_view(self, request, object_id, form_url='', extra_context=None):
-        """
-        Override da view de modificação para adicionar algumas variáveis extras de contexto
-        """
-        extra_context = self._add_context_variables(extra_context)
-
-        # Campo read-only com a data de nascimento do paciente
-        obj = self.get_object(request, unquote(object_id))
-        extra_context['patient__birthdate'] = obj.patient.birthdate
-
-        return super(FuglMeyerAdmin, self).change_view(request, object_id, form_url, extra_context=extra_context)
-
 
 admin.site.register(FuglMeyer, FuglMeyerAdmin)
+# Registrando no reversion-compare
+patch_admin(FuglMeyer)
 

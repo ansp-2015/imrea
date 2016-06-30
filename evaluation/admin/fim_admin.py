@@ -21,8 +21,8 @@ class FIMAdmin(BaseAdmin):
             'description': {'fieldset': '_patient'}
         }),
         (_(u'Self Care'), {
-            'fields': ('self_care_eating', 'self_care_grooming', 'self_care_bathing', \
-                       'self_care_dressing_upper_body', 'self_care_dressing_lower_body', \
+            'fields': ('self_care_eating', 'self_care_grooming', 'self_care_bathing',
+                       'self_care_dressing_upper_body', 'self_care_dressing_lower_body',
                        'self_care_toileting'),
             'description': {
                 'fieldset': '_1col_panel'
@@ -53,48 +53,13 @@ class FIMAdmin(BaseAdmin):
             }
         }),
     )
-    list_display = ('patient', 'get_patient_birthdate', 'period', 'last_update')
-    ordering = ('patient', 'period', 'last_update')
 
-    # Exibição do birthdate na lista de registros
-    def get_patient_birthdate(self, obj):
-        return obj.patient.birthdate
-    get_patient_birthdate.short_description = _('Birthdate')
-    get_patient_birthdate.admin_order_field = 'patient__birthdate'
-
-    def add_view(self, request, form_url='', extra_context=None):
-        """
-        Override da view de adição para adicionar algumas variáveis extras de contexto
-        """
-        extra_context = extra_context or {}
-
-        sorted_choices = sorted(FIM.FIM_CHOICES_CATEGORY, key=lambda x: x[0], reverse=False)
-        extra_context['FIM_CHOICES_CATEGORY'] = sorted_choices
-
-        return super(FIMAdmin, self).add_view(request, form_url, extra_context)
-
-    def change_view(self, request, object_id, form_url='', extra_context=None):
-        """
-        Override da view de modificação para adicionar algumas variáveis extras de contexto
-        """
+    def add_context_variables(self, extra_context=None):
         extra_context = extra_context or {}
         sorted_choices = sorted(FIM.FIM_CHOICES_CATEGORY, key=lambda x: x[0], reverse=False)
         extra_context['FIM_CHOICES_CATEGORY'] = sorted_choices
 
-        # Campo read-only com a data de nascimento do paciente
-        obj = self.get_object(request, unquote(object_id))
-        extra_context['patient__birthdate'] = obj.patient.birthdate
-
-        return super(FIMAdmin, self).change_view(request, object_id, form_url, extra_context=extra_context)
-
-    def get_readonly_fields(self, request, obj=None):
-        """
-        :return: Retorna somente o patient e period como read-only na modificação
-        """
-        if obj:
-            return ['patient', 'period']
-        else:
-            return []
+        return extra_context
 
     # Sobrescrevendo as comparações do restore
     def compare_self_care_eating(self, obj_compare):

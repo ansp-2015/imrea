@@ -23,4 +23,5 @@ class BostonAphasiaAdmin(BaseAdmin):
     )
 
 admin.site.register(BostonAphasia, BostonAphasiaAdmin)
+# Registrando no reversion-compare
 patch_admin(BostonAphasia)
