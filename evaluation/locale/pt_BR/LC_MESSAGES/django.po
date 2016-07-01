@@ -306,7 +306,7 @@ msgstr "Orientação"
 #: .\evaluation\admin\mmse_admin.py:30
 msgctxt "MMSEAdmin"
 msgid "Registration"
-msgstr "administração"
+msgstr "Memória imediata"
 
 #: .\evaluation\admin\mmse_admin.py:36
 msgctxt "MMSEAdmin"
@@ -476,14 +476,12 @@ msgid "No"
 msgstr "Não"
 
 #: .\evaluation\models\eeg.py:12
-#, fuzzy
-#| msgid "Total"
 msgid "Title"
-msgstr "Total"
+msgstr "Titulo"
 
 #: .\evaluation\models\eeg.py:13
 msgid "File "
-msgstr ""
+msgstr "Arquivo"
 
 #: .\evaluation\models\fim.py:15
 msgid "Total assistance"
@@ -2327,12 +2325,6 @@ msgid "Registration"
 msgstr "Memória imediata"
 
 #: .\evaluation\models\mmse.py:36
-#, fuzzy
-#| msgctxt "MMSE"
-#| msgid ""
-#| "Name 3 objects: 1 second to say each. Then ask the patientall 3 after you "
-#| "have said them. Give 1 point for each correct answer.Then repeat them "
-#| "until he/she learns all 3. Count trials and record"
 msgctxt "MMSE"
 msgid ""
 "Name 3 objects: 1 second to say each. Then ask the patient all 3 after you "
@@ -2947,7 +2939,7 @@ msgstr ""
 
 #: .\evaluation\templates\admin\evaluation\mmse\change_form.html:6
 msgid "MINI MENTAL STATE EXAMINATION - MMSE"
-msgstr ""
+msgstr "MINI-EXAME DO ESTADO MENTAL - MEEM"
 
 #: .\evaluation\templates\admin\evaluation\sis\change_form.html:6
 msgid "Stroke Impact Scale"
