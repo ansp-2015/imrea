@@ -1,21 +1,19 @@
 # -*- coding: utf-8 -*-
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
-from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 import json
 
-from .models.patient import Patient
-from .models.period import Period
-
-from .models import BostonAphasia, FIM, KVIQ, SIS, Clin, HAD, FuglMeyer
+from .models import Patient, BaseEvaluation
 
 from .util import url_new_object
 from .util import url_to_edit_object
 
+
 def index(request):
     return HttpResponseRedirect('/login')
+
 
 @login_required
 def home(request):
@@ -68,22 +66,12 @@ def ajax_home_patient_evaluations(request):
     patient_id = request.GET.get('p')
     period_id = request.GET.get('period')
 
-    bostonAphasia = BostonAphasia.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
-    fim = FIM.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
-    fuglmeyer = FuglMeyer.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
-    had = HAD.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
-    kviq = KVIQ.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
-    sis = SIS.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
-    clin = Clin.objects.filter(patient_id=patient_id).filter(period_id=period_id).first()
-
-    evaluation_objects = []
-    evaluation_objects.append(['bostonaphasia', BostonAphasia._meta.verbose_name.title(), bostonAphasia])
-    evaluation_objects.append(['fim', FIM._meta.verbose_name.title(), fim])
-    evaluation_objects.append(['fuglmeyer', FuglMeyer._meta.verbose_name.title(), fuglmeyer])
-    evaluation_objects.append(['had', HAD._meta.verbose_name.title(), had])
-    evaluation_objects.append(['kviq', KVIQ._meta.verbose_name.title(), kviq])
-    evaluation_objects.append(['sis',SIS._meta.verbose_name.title(), sis])
-    evaluation_objects.append(['clin', Clin._meta.verbose_name.title(), clin])
+    # Gets all evaluation objects (instances from subclasses of BaseEvaluation) for the given patient and period
+    # that can be edit by the current user
+    evaluation_objects = [(c.__name__.lower(), c._meta.verbose_name.title(),
+                           c.objects.filter(patient_id=patient_id, period_id=period_id).first())
+                          for c in BaseEvaluation.__subclasses__()
+                          if request.user.has_perm('evaluation.change_%s' % c.__name__.lower())]
 
     evaluated = []
     not_evaluated = []

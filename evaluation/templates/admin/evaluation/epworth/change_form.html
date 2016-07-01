@@ -1,0 +1,39 @@
+{% extends "admin/change_form.html" %}
+{% load bootstrapped_goodies_tags i18n %}
+        {% block field_sets %}
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">{% trans "EPWORTH SLEEPINESS" %}</h3>
+              </div>
+              <div class="panel-body">
+        {% for fieldset in adminform %}
+            <div class="panel panel-primary">
+            <div class="panel-body">
+            {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=adminform|form_fieldset_column_width %}
+            </div>
+            </div>
+            {% if forloop.first %}
+                {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=fieldset.description.help|safe %}
+            <div class="row">
+	            <div class="col-md-6 col-sm-6 col-xs-12">
+	                <table class="category-table table table-striped">
+	                    <thead class="thead-default">
+	                        <tr><th colspan="2">{% trans "Choose the most appropriate number for each situation:" %}</th></tr>
+	                    </thead>
+	                    <tbody>
+			                {% for c in fieldset.description.choices %}
+			                    <tr>
+			                    {% for c1 in c %}
+			                            <td>{{c1}}</td>
+			                    {% endfor %}
+			                    </tr>
+			                {% endfor %}
+			            </tbody>
+	                </table>
+	            </div>
+            </div>
+            {% endif %}    
+        {% endfor %}
+            </div>
+            </div>
+        {% endblock %}
