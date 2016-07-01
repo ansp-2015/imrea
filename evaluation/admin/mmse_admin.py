@@ -59,7 +59,14 @@ class MMSEAdmin(BaseAdmin):
         (_(u''), {
             'fields': ('obs',),
             'description': {
-                'fieldset': '_1col_panel'
+                'fieldset': '_1col',
+                'fieldset_total_points': '30',
+                'fieldset_total_addend_fields': ('orientation_day_week', 'orientation_day_month', 'orientation_month', 'orientation_year',
+                                                 'orientation_time', 'orientation_place', 'orientation_institution', 'orientation_district',
+                                                 'orientation_city', 'orientation_state', 'registration_words', 'attention_calc',
+                                                 'recall_words', 'language_watch_pen', 'language_repeat', 'language_command',
+                                                 'language_read', 'language_write', 'language_copy'),
+                'fieldset_total_field': 'mmse_total',
             }
         }),
     )
