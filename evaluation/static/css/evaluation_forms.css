@@ -6903,3 +6903,24 @@ body {
     border: 0;
 
 }
+
+@media print {
+    /* admin forms: botao selecionado */
+    .btn.active {
+      background: lightgray !important;
+      color: black;
+    }
+    /* admin forms: barra de alertas */
+    .alert.alert-warning {
+      display:none;
+    }
+    .breadcrumb {
+      display:none;
+    }
+    .form-actions {
+      display:none;
+    }
+    .fields>.row {
+      page-break-inside: avoid;
+    }
+}

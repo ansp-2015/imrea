@@ -7,4 +7,8 @@ from .clin_form import ClinForm
 from .fuglmeyer_form import FuglMeyerForm
 from .had_form import HADForm
 from .hamilton_form import HamiltonForm
+
 from .epworth_form import EpworthForm
+
+from mmse_form import MMSEForm
+

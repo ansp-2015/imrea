@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
+from reversion_compare.helpers import patch_admin
 from ..models import KVIQ
 from ..forms import KVIQForm
 from .base_admin import BaseAdmin
@@ -89,4 +90,5 @@ class KVIQAdmin(BaseAdmin):
     )
 
 admin.site.register(KVIQ, KVIQAdmin)
-
+# Registrando no reversion-compare
+patch_admin(KVIQ)

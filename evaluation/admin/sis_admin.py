@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
+from reversion_compare.helpers import patch_admin
 from django.contrib.admin.utils import (unquote,)
 from ..models.sis import SIS
 from ..forms import SISForm
@@ -83,7 +84,7 @@ class SISAdmin(BaseAdmin):
                 'fieldset': '_radio_grid'
             }
         }),
-        (_(u'The following questions are about your ability to use your hand that wasMOST AFFECTED by your stroke.'), {
+        (_(u'The following questions are about your ability to use your hand that was MOST AFFECTED by your stroke.'), {
             'fields': (
                 'hand_carry_heavy_objs', 'hand_turn_doorknob', 'hand_open_jar',
                 'hand_tie_shoe_lace', 'hand_pick_dime',
@@ -101,7 +102,7 @@ class SISAdmin(BaseAdmin):
                 'time_control_life', 'time_help_others',
             ),
             'description': {
-                'columns': ((0, _(u'8. During the past 4 weeks, howmuch of the time have you been limited in...')),) +
+                'columns': ((0, _(u'8. During the past 4 weeks, how much of the time have you been limited in...')),) +
                            SIS.CHOICES_TIME,
                 'fieldset': '_radio_grid'
             }
@@ -148,4 +149,6 @@ class SISAdmin(BaseAdmin):
             return []
 
 admin.site.register(SIS, SISAdmin)
+# Registrando no reversion-compare
+patch_admin(SIS)
 

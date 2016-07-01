@@ -8,178 +8,76 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-29 12:16-0300\n"
+"POT-Creation-Date: 2016-06-30 19:38-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: admin/base_admin.py:25 admin/fim_admin.py:62 admin/had_admin.py:48
-#: admin/hamilton_admin.py:52
+#: .\evaluation\admin\base_admin.py:25 .\evaluation\admin\sis_admin.py:127
 msgid "Birthdate"
 msgstr "Data de nascimento"
 
-#: admin/bostonaphasia_admin.py:11 admin/clin_admin.py:12 admin/eeg_admin.py:12
-#: admin/fim_admin.py:19 admin/fuglmeyer_admin.py:18 admin/had_admin.py:18
-#: admin/hamilton_admin.py:18 admin/kviq_admin.py:12 admin/sis_admin.py:12
-#: models/base_evaluation.py:17 templates/admin/index.html:56
+#: .\evaluation\admin\bostonaphasia_admin.py:11
+#: .\evaluation\admin\clin_admin.py:13 .\evaluation\admin\eeg_admin.py:13
+#: .\evaluation\admin\fim_admin.py:19 .\evaluation\admin\fuglmeyer_admin.py:21
+#: .\evaluation\admin\had_admin.py:18 .\evaluation\admin\hamilton_admin.py:18
+#: .\evaluation\admin\kviq_admin.py:13 .\evaluation\admin\mmse_admin.py:18
+#: .\evaluation\admin\sis_admin.py:15
+#: .\evaluation\models\base_evaluation.py:17
+#: .\evaluation\templates\admin\index.html:56
 msgid "Patient"
 msgstr "Paciente"
 
-#: admin/bostonaphasia_admin.py:15
+#: .\evaluation\admin\bostonaphasia_admin.py:15
 msgid "Manual dominance."
 msgstr ""
 
-#: admin/bostonaphasia_admin.py:18
-#, fuzzy
-#| msgid "Reflex activity"
+#: .\evaluation\admin\bostonaphasia_admin.py:18
 msgid "Activity"
-msgstr "Atividade reflexa"
+msgstr ""
 
-#: admin/bostonaphasia_admin.py:18
+#: .\evaluation\admin\bostonaphasia_admin.py:18
 msgid "Left hand"
 msgstr ""
 
-#: admin/bostonaphasia_admin.py:18
+#: .\evaluation\admin\bostonaphasia_admin.py:18
 msgid "Right hand"
 msgstr ""
 
-#: admin/bostonaphasia_admin.py:20
+#: .\evaluation\admin\bostonaphasia_admin.py:20
 msgid "Instructions:..."
 msgstr ""
 
-#: admin/clin_admin.py:16
+#: .\evaluation\admin\clin_admin.py:17
 msgid "Line Crossing"
 msgstr "Cancelamento de linhas"
 
-#: admin/eeg_admin.py:16
+#: .\evaluation\admin\eeg_admin.py:17
 msgid "Arquivo"
-msgstr ""
+msgstr "File"
 
-#: admin/fim_admin.py:23
+#: .\evaluation\admin\fim_admin.py:23
 msgid "Self Care"
 msgstr "Cuidados pessoais"
 
-#: admin/fim_admin.py:31
+#: .\evaluation\admin\fim_admin.py:31
 msgid "Sphincter"
 msgstr "Controle esfincteriano"
 
-#: admin/fim_admin.py:37
+#: .\evaluation\admin\fim_admin.py:37
 msgid "Transfer"
 msgstr "Mobilidade/Transferências"
 
-#: admin/fim_admin.py:43
+#: .\evaluation\admin\fim_admin.py:43
 msgid "Locomotion"
 msgstr "Locomoção"
 
-#: admin/fuglmeyer_admin.py:22
-msgid "Reflex activity"
-msgstr "Atividade reflexa"
-
-#: admin/fuglmeyer_admin.py:31
-msgid "Volitional movement within synergies"
-msgstr "Movimentos voluntários com sinergia"
-
-#: admin/fuglmeyer_admin.py:51
-msgid "Volitional movement mixing synergies, without compensation"
-msgstr "Movimentos voluntários combinando sinergias, sem compensação"
-
-#: admin/fuglmeyer_admin.py:60
-msgid "Volitional movement with little or no synergy"
-msgstr "Movimento voluntário sem sinergia"
-
-#: admin/fuglmeyer_admin.py:69 models/fuglmeyer.py:241
-msgid "Normal reflex activity"
-msgstr "Atividade Reflexa Normal"
-
-#: admin/fuglmeyer_admin.py:78
-msgid "Wrist"
-msgstr "Controle de Punho"
-
-#: admin/fuglmeyer_admin.py:83
-msgid "Support may be provided at the elbow"
-msgstr "Pode ser dado suporte para manter a posição do cotovelo"
-
-#: admin/fuglmeyer_admin.py:90
-msgid "Hand"
-msgstr "Controle Manual"
-
-#: admin/fuglmeyer_admin.py:95
-msgid ""
-"Support may be provided at the elbow to keep 90 flexion, no support at the "
-"wrist, compare with unaffected hand, the objects are interposed, active grasp"
-msgstr ""
-"Durante os testes a seguir, o examinador pode oferecer suporte ao cotovelo, "
-"SEM suporte para o punho, para posicionar o membro superior. Padronização: "
-"<br>Cotovelo a 90° e antebraço em posição média entre supinação e pronação "
-"eapoiado sobre a mesa. Comparar com a mão não acometida, objetos são "
-"interpostos, preensão ativa"
-
-#: admin/fuglmeyer_admin.py:102
-msgid "Coordination/Speed"
-msgstr "Coordenação/Velocidade"
-
-#: admin/fuglmeyer_admin.py:107
-msgid ""
-"After one trial with both arms, blind-folded, tip of the index finger from "
-"knee to nose, 5 times as fast as possible"
-msgstr ""
-"Após tentativa com os dois braços, colocar venda nos olhos, levar a ponta do "
-"2° dedo partindo do joelho ao nariz, 05 vezes o mais rápido possível"
-
-#: admin/fuglmeyer_admin.py:113 admin/fuglmeyer_admin.py:122
-msgid "Reflex activity (supine or sitting)"
-msgstr "Motricidade reflexa (sentado ou em decúbito dorsal)"
-
-#: admin/fuglmeyer_admin.py:131
-msgid "Flexor synergy"
-msgstr "Sinergia flexora"
-
-#: admin/fuglmeyer_admin.py:136
-msgid ""
-"Start with leg fully extended at hip, knee, and ankle.Instruct the subject "
-"to “bring your knee to your chest”"
-msgstr ""
-"Máxima flexão de quadril (abdução e rotação externa), máxima flexão de "
-"joelho e tornozelo. <div><strong>Traga o joelho no peito e o calcanhar para "
-"cima e para trás.</strong></div>"
-
-#: admin/fuglmeyer_admin.py:142
-msgid "Extensor synergy"
-msgstr "Sinergia extensora"
-
-#: admin/fuglmeyer_admin.py:148
-msgid ""
-"Start in 90 degrees hip flexion, 90 degrees knee flexion and ankle "
-"dorsiflexion. Slight resistance should be applied in adduction to ensure "
-"subject is actively doing it. Instruct the subject to \"push your foot down "
-"and kick down and back”."
-msgstr ""
-"Partindo da sinergia flexora para quadril em extensão e adução,  joelho em "
-"extensão e tornozelo em flexão plantar. A resistência é aplicada para "
-"garantir o movimento ativo. "
-
-#: admin/fuglmeyer_admin.py:155
-msgid "Movement combining synergies "
-msgstr "Movimento com e sem sinergias"
-
-#: admin/fuglmeyer_admin.py:168
-msgid "Coordination/speed of lower extremities"
-msgstr "Coordenação/Velocidade de membros inferiores"
-
-#: admin/fuglmeyer_admin.py:173
-msgid ""
-"Sittings position, both limbis, eyes closed, ankle to knee to ankle, 5 "
-"times  move as fast as possible"
-msgstr ""
-"Decúbito dorsal, após uma tentativa com ambas as pernas, com olhos fechados, "
-"calcanhar-joelho 5 vezes o mais rápido possível  (Decúbito dorsal)"
-
-#: admin/fuglmeyer_admin.py:217
+#: .\evaluation\admin\fuglmeyer_admin.py:16
 msgctxt "UE_VOL_MOV_SYN_FLEX_TEXT"
 msgid ""
 "Flexor synergy - Instruct the patient to fully supinate his/her forearm, "
@@ -199,7 +97,7 @@ msgstr ""
 "ombro deve estar abduzido a no mínimo 90°. Teste três vezes o lado acometido "
 "e pontue o melhor movimento de cada articulação."
 
-#: admin/fuglmeyer_admin.py:218
+#: .\evaluation\admin\fuglmeyer_admin.py:17
 msgctxt "UE_VOL_MOV_SYN_EXT_TEXT"
 msgid ""
 "Extensor synergy - Instruct the patient to adduct & internally rotate the "
@@ -220,813 +118,1084 @@ msgstr ""
 "Teste três vezes o lado acometido e pontue o melhor movimento de cada "
 "articulação"
 
-#: admin/kviq_admin.py:16
-#, fuzzy
-#| msgctxt "FuglMeyer"
-#| msgid "elbow extension"
+#: .\evaluation\admin\fuglmeyer_admin.py:25
+#: .\evaluation\admin\fuglmeyer_admin.py:223
+msgid "Reflex activity"
+msgstr "Atividade reflexa"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:34
+msgid "Volitional movement within synergies"
+msgstr "Movimentos voluntários com sinergia"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:54
+msgid "Volitional movement mixing synergies, without compensation"
+msgstr "Movimentos voluntários combinando sinergias, sem compensação"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:63
+msgid "Volitional movement with little or no synergy"
+msgstr "Movimento voluntário sem sinergia"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:72
+#: .\evaluation\models\fuglmeyer.py:241
+msgid "Normal reflex activity"
+msgstr "Atividade Reflexa Normal"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:81
+#: .\evaluation\admin\fuglmeyer_admin.py:194
+msgid "Wrist"
+msgstr "Controle de Punho"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:86
+msgid "Support may be provided at the elbow"
+msgstr "Pode ser dado suporte para manter a posição do cotovelo"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:93
+#: .\evaluation\admin\fuglmeyer_admin.py:199
+msgid "Hand"
+msgstr "Controle Manual"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:98
+msgid ""
+"Support may be provided at the elbow to keep 90 flexion, no support at the "
+"wrist, compare with unaffected hand, the objects are interposed, active grasp"
+msgstr ""
+"Durante os testes a seguir, o examinador pode oferecer suporte ao cotovelo, "
+"SEM suporte para o punho, para posicionar o membro superior. Padronização: "
+"<br>Cotovelo a 90° e antebraço em posição média entre supinação e pronação "
+"eapoiado sobre a mesa. Comparar com a mão não acometida, objetos são "
+"interpostos, preensão ativa"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:105
+#: .\evaluation\admin\fuglmeyer_admin.py:204
+#: .\evaluation\admin\fuglmeyer_admin.py:243
+msgid "Coordination/Speed"
+msgstr "Coordenação/Velocidade"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:110
+msgid ""
+"After one trial with both arms, blind-folded, tip of the index finger from "
+"knee to nose, 5 times as fast as possible"
+msgstr ""
+"Após tentativa com os dois braços, colocar venda nos olhos, levar a ponta do "
+"2° dedo partindo do joelho ao nariz, 05 vezes o mais rápido possível"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:116
+#: .\evaluation\admin\fuglmeyer_admin.py:125
+msgid "Reflex activity (supine or sitting)"
+msgstr "Motricidade reflexa (sentado ou em decúbito dorsal)"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:134
+#: .\evaluation\admin\fuglmeyer_admin.py:228
+msgid "Flexor synergy"
+msgstr "Sinergia flexora"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:139
+msgid ""
+"Start with leg fully extended at hip, knee, and ankle.Instruct the subject "
+"to “bring your knee to your chest”"
+msgstr ""
+"Máxima flexão de quadril (abdução e rotação externa), máxima flexão de "
+"joelho e tornozelo. <div><strong>Traga o joelho no peito e o calcanhar para "
+"cima e para trás.</strong></div>"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:145
+#: .\evaluation\admin\fuglmeyer_admin.py:233
+msgid "Extensor synergy"
+msgstr "Sinergia extensora"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:151
+msgid ""
+"Start in 90 degrees hip flexion, 90 degrees knee flexion and ankle "
+"dorsiflexion. Slight resistance should be applied in adduction to ensure "
+"subject is actively doing it. Instruct the subject to \"push your foot down "
+"and kick down and back”."
+msgstr ""
+"Partindo da sinergia flexora para quadril em extensão e adução,  joelho em "
+"extensão e tornozelo em flexão plantar. A resistência é aplicada para "
+"garantir o movimento ativo. "
+
+#: .\evaluation\admin\fuglmeyer_admin.py:158
+msgid "Movement combining synergies "
+msgstr "Movimento com e sem sinergias"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:171
+msgid "Coordination/speed of lower extremities"
+msgstr "Coordenação/Velocidade de membros inferiores"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:176
+msgid ""
+"Sittings position, both limbis, eyes closed, ankle to knee to ankle, 5 "
+"times  move as fast as possible"
+msgstr ""
+"Decúbito dorsal, após uma tentativa com ambas as pernas, com olhos fechados, "
+"calcanhar-joelho 5 vezes o mais rápido possível  (Decúbito dorsal)"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:182
+msgid "Upper extremity score interpretation"
+msgstr "Interpretação membro superior"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:187
+msgid "Upper extremity"
+msgstr "Membro superior"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:209
+#: .\evaluation\admin\fuglmeyer_admin.py:248
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:44
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:44
+#: .\evaluation\templates\admin\includes\fieldset\row_total.html:19
+msgid "Total"
+msgstr "Total"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:218
+msgid "Lower extremity score interpretation"
+msgstr "Interpretação membro inferior"
+
+#: .\evaluation\admin\fuglmeyer_admin.py:238
+msgid "Movement combining synergies"
+msgstr "Movimento com e sem sinergias"
+
+#: .\evaluation\admin\kviq_admin.py:17 .\evaluation\models\kviq.py:32
+msgid "Dominant limb"
+msgstr "Membro dominante"
+
+#: .\evaluation\admin\kviq_admin.py:23
 msgid "Neck flexion/extension"
-msgstr "Cotovelo - extensão"
+msgstr "Flexão/extensão do pescoço"
 
-#: admin/kviq_admin.py:22
-#, fuzzy
-#| msgctxt "FuglMeyer"
-#| msgid "Shoulder elevation"
+#: .\evaluation\admin\kviq_admin.py:29
 msgid "Shoulder elevation"
-msgstr "Ombro - elevação"
+msgstr "Encolher (erguer) os ombros"
 
-#: admin/kviq_admin.py:28
-#, fuzzy
-#| msgctxt "FuglMeyer"
-#| msgid "Shoulder elevation"
+#: .\evaluation\admin\kviq_admin.py:35
 msgid "Shoulder flexion"
-msgstr "Ombro - elevação"
+msgstr "Flexão do ombro para a frente"
 
-#: admin/kviq_admin.py:35
+#: .\evaluation\admin\kviq_admin.py:42
 msgid "Elbow"
-msgstr ""
+msgstr "Flexão do cotovelo"
 
-#: admin/kviq_admin.py:42
+#: .\evaluation\admin\kviq_admin.py:49
 msgid "Thumb"
-msgstr ""
+msgstr "Polegar para as pontas dos dedo"
 
-#: admin/kviq_admin.py:49
+#: .\evaluation\admin\kviq_admin.py:56
 msgid "Trunk"
-msgstr ""
+msgstr "Flexão do tronco para frente"
 
-#: admin/kviq_admin.py:55
+#: .\evaluation\admin\kviq_admin.py:62
 msgid "Knee"
-msgstr ""
+msgstr "Extensão do joelho"
 
-#: admin/kviq_admin.py:62
+#: .\evaluation\admin\kviq_admin.py:69
 msgid "Hip"
-msgstr ""
+msgstr "Abdução do quadril"
 
-#: admin/kviq_admin.py:69
+#: .\evaluation\admin\kviq_admin.py:76
 msgid "Foot tapping"
-msgstr ""
+msgstr "Bater o pé"
 
-#: admin/kviq_admin.py:76
-#, fuzzy
-#| msgid "Locomotion"
+#: .\evaluation\admin\kviq_admin.py:83
 msgid "Foot rotation"
-msgstr "Locomoção"
+msgstr "Rotação externa do pé"
 
-#: admin/sis_admin.py:16
+#: .\evaluation\admin\mmse_admin.py:22
+msgctxt "MMSEAdmin"
+msgid "Orientation"
+msgstr "Orientação"
+
+#: .\evaluation\admin\mmse_admin.py:30
+msgctxt "MMSEAdmin"
+msgid "Registration"
+msgstr "administração"
+
+#: .\evaluation\admin\mmse_admin.py:36
+msgctxt "MMSEAdmin"
+msgid "Attention and Calculation"
+msgstr "Atenção e cálculo"
+
+#: .\evaluation\admin\mmse_admin.py:42
+msgctxt "MMSEAdmin"
+msgid "Recall"
+msgstr "Evocação"
+
+#: .\evaluation\admin\mmse_admin.py:48
+msgctxt "MMSEAdmin"
+msgid "Language"
+msgstr "Linguagem"
+
+#: .\evaluation\admin\sis_admin.py:19
 msgid ""
 "These questions are about the physical problems which may have occurred as a "
 "result of your stroke."
 msgstr ""
+"Estas questões são referentes aos problemas físicos que podem ter ocorrido "
+"como resultado de AVE"
 
-#: admin/sis_admin.py:19
+#: .\evaluation\admin\sis_admin.py:22
 msgid "1. In the past week, how would you rate the strength of your...."
-msgstr ""
+msgstr "1. Na semana passada, como você classificaria o seu..."
 
-#: forms/hamilton_form.py:56
+#: .\evaluation\admin\sis_admin.py:27
+msgid "These questions are about your memory and thinking"
+msgstr "Estas questões são sobre a sua memória e pensamento"
+
+#: .\evaluation\admin\sis_admin.py:33
+msgid "2. In the past week, how difficultwas it for you to..."
+msgstr "2. Na semana passada, o quão difícil foi para você..."
+
+#: .\evaluation\admin\sis_admin.py:38
+msgid ""
+"These questions are about how you feel, about changes in your mood and about "
+"your ability to control your emotions since your stroke."
+msgstr ""
+"Estas questões são sobre como você se sente, sobre alterações no seu humor e "
+"sobre a sua habilidade de controlar as suas emoções desde o seu AVE"
+
+#: .\evaluation\admin\sis_admin.py:45
+msgid "3. In the past week, how often did you..."
+msgstr "3. Na semana passada, com que frequência você..."
+
+#: .\evaluation\admin\sis_admin.py:50
+msgid ""
+"The following questions are about your ability to communicate with other "
+"people, as well as your ability to understand what you read and what you "
+"hear in a conversation."
+msgstr ""
+"As seguintes perguntas são sobre suas habilidades de se comunicar com outras "
+"pessoas, bem como sua capacidade de entender o que você lê e o que ouve em "
+"uma conversa"
+
+#: .\evaluation\admin\sis_admin.py:57
+msgid "4. In the past week, how difficult was it to... "
+msgstr "4. Na semana passada, o quão difícil foi para..."
+
+#: .\evaluation\admin\sis_admin.py:62
+msgid ""
+"The following questions ask about activities you might do during a typical "
+"day."
+msgstr ""
+"As questões seguintes perguntam sobre atividades que você pode fazer durante "
+"um dia típico"
+
+#: .\evaluation\admin\sis_admin.py:70
+msgid "5. In the past 2 weeks, how difficultwas it to... "
+msgstr "5. Nas duas últimas semanas, o quão difícil foi para..."
+
+#: .\evaluation\admin\sis_admin.py:75
+msgid ""
+"The following questions are about your ability to be mobile, at home and in "
+"the community."
+msgstr ""
+"As seguintes perguntas são sobre sua capacidade de se movimentar "
+"(locomover), em casa ou na comunidade"
+
+#: .\evaluation\admin\sis_admin.py:82
+msgid "6. In the past 2 weeks, how difficultwas it to..."
+msgstr "6. Nas duas últimas semanas, o quão difícil foi para..."
+
+#: .\evaluation\admin\sis_admin.py:87
+msgid ""
+"The following questions are about your ability to use your hand that was "
+"MOST AFFECTED by your stroke."
+msgstr ""
+"As seguintes perguntas são sobre sua habilidade de usar a mão que foi mais "
+"afetada pelo AVE"
+
+#: .\evaluation\admin\sis_admin.py:93
+msgid ""
+"7. In the past 2 weeks, how difficult was it to use your hand that was most "
+"affected by your stroke to..."
+msgstr ""
+"7. Nas duas últimas semanas, o quão difícil foi para usar a mão que foi mais "
+"afetada para..."
+
+#: .\evaluation\admin\sis_admin.py:98
+msgid ""
+"The following questions are about how stroke has affected your ability to "
+"participate in the activities that you usually do, things that are "
+"meaningful to you and help you to find purpose in life."
+msgstr ""
+"As seguintes perguntas são sobre como o AVE afetou a sua capacidade de "
+"participar das atividades que você costumava fazer, coisas que são "
+"significativas para você e o ajudam a encontrar um propósito na vida"
+
+#: .\evaluation\admin\sis_admin.py:105
+msgid ""
+"8. During the past 4 weeks, how much of the time have you been limited in..."
+msgstr ""
+"8. Durante as últimas 4 semanas, quanto do tempo você tem sido limitado "
+"dentro..."
+
+#: .\evaluation\admin\sis_admin.py:110
+msgid ""
+"On a scale of 0 to 100, with 100 representing full recovery and 0 "
+"representing no recovery, how much have you recovered from your stroke?"
+msgstr ""
+"Em uma escala de 0 à 100, sendo 100 recuperação completa e 0 nenhuma "
+"recuperação, o quanto você recuperou após seu AVE?"
+
+#: .\evaluation\admin\sis_admin.py:113
+msgid "9. Stroke Recovery "
+msgstr "9. Recuperação do AVE:"
+
+#: .\evaluation\forms\hamilton_form.py:56
 msgid "When rating by history"
 msgstr ""
 
-#: models/base_evaluation.py:13 models/kviq.py:8
+#: .\evaluation\models\base_evaluation.py:13 .\evaluation\models\kviq.py:8
 msgid "NT"
 msgstr ""
 
-#: models/base_evaluation.py:15
+#: .\evaluation\models\base_evaluation.py:15
 msgid "MD"
 msgstr ""
 
-#: models/base_evaluation.py:18
+#: .\evaluation\models\base_evaluation.py:18
 msgid "Period"
 msgstr "Período"
 
-#: models/base_evaluation.py:19
+#: .\evaluation\models\base_evaluation.py:19
 msgid "Last update"
 msgstr "Última atualização"
 
-#: models/bostonaphasia.py:8 models/bostonaphasia.py:9
+#: .\evaluation\models\base_evaluation.py:20
+msgid "Date"
+msgstr ""
+
+#: .\evaluation\models\bostonaphasia.py:8
+#: .\evaluation\models\bostonaphasia.py:9
 msgid "Write or distribute a card deck"
 msgstr ""
 
-#: models/clin.py:7
+#: .\evaluation\models\clin.py:7
 msgid "Yes"
+msgstr "Sim"
+
+#: .\evaluation\models\clin.py:8
+msgid "No"
+msgstr "Não"
+
+#: .\evaluation\models\eeg.py:12
+#, fuzzy
+#| msgid "Total"
+msgid "Title"
+msgstr "Total"
+
+#: .\evaluation\models\eeg.py:13
+msgid "File "
 msgstr ""
 
-#: models/clin.py:8
-#, fuzzy
-#| msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
-#| msgid "None"
-msgid "No"
-msgstr "Sem atividade reflexa"
-
-#: models/fim.py:16
+#: .\evaluation\models\fim.py:15
 msgid "Total assistance"
 msgstr "Total assistência (0%)"
 
-#: models/fim.py:17
+#: .\evaluation\models\fim.py:16
 msgid "Maximal assistance"
 msgstr "Máxima assistência (25%)"
 
-#: models/fim.py:18
+#: .\evaluation\models\fim.py:17
 msgid "Moderate assistance"
 msgstr "Moderada assistência (50%) / Dependente"
 
-#: models/fim.py:19
+#: .\evaluation\models\fim.py:18
 msgid "Minimal assistance"
 msgstr "Miníma assistência (75%)"
 
-#: models/fim.py:20
+#: .\evaluation\models\fim.py:19
 msgid "Supervision"
 msgstr "Supervisão"
 
-#: models/fim.py:21
+#: .\evaluation\models\fim.py:20
 msgid "Modified independence"
 msgstr "Independência modificada (recursos auxiliares) / Dependência parcial"
 
-#: models/fim.py:22
+#: .\evaluation\models\fim.py:21
 msgid "Complete independence"
 msgstr "Independência completa (seguro e em tempo satisfatório)"
 
-#: models/fim.py:25
+#: .\evaluation\models\fim.py:24
 msgid "Eating"
 msgstr "Alimentação"
 
-#: models/fim.py:26
+#: .\evaluation\models\fim.py:25
 msgid "Grooming"
 msgstr "Auto cuidado"
 
-#: models/fim.py:27
+#: .\evaluation\models\fim.py:26
 msgid "Bathing/showering"
 msgstr "Banhar-se"
 
-#: models/fim.py:28
+#: .\evaluation\models\fim.py:27
 msgid "Dressing upper body"
 msgstr "Vestir tronco superior"
 
-#: models/fim.py:29
+#: .\evaluation\models\fim.py:28
 msgid "Dressing lower body"
 msgstr "Vestir tronco inferior"
 
-#: models/fim.py:30
+#: .\evaluation\models\fim.py:29
 msgid "Toileting"
 msgstr "Higiene íntima"
 
-#: models/fim.py:32
+#: .\evaluation\models\fim.py:31
 msgid "Bladder management"
 msgstr "Controle vesical"
 
-#: models/fim.py:33
+#: .\evaluation\models\fim.py:32
 msgid "Bowel management"
 msgstr "Controle intestinal"
 
-#: models/fim.py:35
+#: .\evaluation\models\fim.py:34
 msgid "Transfers bed/chair/wheelchair"
 msgstr "Cama/cadeira/cadeira de rodas"
 
-#: models/fim.py:36
+#: .\evaluation\models\fim.py:35
 msgid "Transfers toilet"
 msgstr "Banheiro"
 
-#: models/fim.py:37
+#: .\evaluation\models\fim.py:36
 msgid "Transfers bathtub/shower"
 msgstr "Banho chuveiro/banheira"
 
-#: models/fim.py:39
+#: .\evaluation\models\fim.py:38
 msgid "Locomotion walking/wheelchair"
 msgstr "Andar/cadeira de rodas"
 
-#: models/fim.py:40
+#: .\evaluation\models\fim.py:39
 msgid "Locomotion stairs"
 msgstr "Escadas"
 
-#: models/fim.py:43
+#: .\evaluation\models\fim.py:42
 msgid "FIM"
 msgstr "MIF"
 
-#: models/fim.py:44
+#: .\evaluation\models\fim.py:43
 msgid "FIMs"
 msgstr "MIFs"
 
-#: models/fuglmeyer.py:11
+#: .\evaluation\models\fuglmeyer.py:11
 msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
 msgid "No reflex activity can be elicited"
 msgstr "Sem atividade reflexa"
 
-#: models/fuglmeyer.py:12
+#: .\evaluation\models\fuglmeyer.py:12
 msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
 msgid "Reflex activity can be elicited"
 msgstr "Atividade reflexa presente"
 
-#: models/fuglmeyer.py:16
+#: .\evaluation\models\fuglmeyer.py:16
 msgctxt "FUGLM_UE_VOL_MOV_SYN_ACTIVITY"
 msgid "Cannot be performed at all"
 msgstr "Tarefa não pode ser realizada completamente "
 
-#: models/fuglmeyer.py:17
+#: .\evaluation\models\fuglmeyer.py:17
 msgctxt "FUGLM_UE_VOL_MOV_SYN_ACTIVITY"
 msgid "Performed partly"
 msgstr "Tarefa pode ser realizada parcialmente"
 
-#: models/fuglmeyer.py:18
+#: .\evaluation\models\fuglmeyer.py:18
 msgctxt "FUGLM_UE_VOL_MOV_SYN_ACTIVITY"
 msgid "Performed faultlessly"
 msgstr "Tarefa é realizada perfeitamente"
 
-#: models/fuglmeyer.py:22
+#: .\evaluation\models\fuglmeyer.py:22
 msgctxt "FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY"
 msgid ""
 "No specific action is performed (or patient moves but does not reach ASIS)"
 msgstr "Nenhuma ação específica realizada"
 
-#: models/fuglmeyer.py:23
+#: .\evaluation\models\fuglmeyer.py:23
 msgctxt "FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY"
 msgid " Hand must pass anterior superior iliac spine (performed partly)"
 msgstr "A mão ultrapassa a espinha ilíaca ântero-superior"
 
-#: models/fuglmeyer.py:24
+#: .\evaluation\models\fuglmeyer.py:24
 msgctxt "FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY"
 msgid ""
 " Performed faultlessly (patient clears ASIS and can extend arm behind back "
 "towards sacrum"
 msgstr "Ação realizada completamente (mão chega a coluna lombar)"
 
-#: models/fuglmeyer.py:27
+#: .\evaluation\models\fuglmeyer.py:27
 msgctxt "FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY"
 msgid "Immediate abduction or elbow flexion"
 msgstr "Imediata abdução ombro e/ ou flexão de cotovelo"
 
-#: models/fuglmeyer.py:28
+#: .\evaluation\models\fuglmeyer.py:28
 msgctxt "FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY"
 msgid "Abduction or elbow flexion during movement"
 msgstr "Abdução e/ou  flexão de cotovelo durante o movimento"
 
-#: models/fuglmeyer.py:29
+#: .\evaluation\models\fuglmeyer.py:29
 msgctxt "FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY"
 msgid "Complete flexion 90°, maintains 0° in elbow"
 msgstr "Flexão completa 90° e  mantém extensão cotovelo"
 
-#: models/fuglmeyer.py:32
+#: .\evaluation\models\fuglmeyer.py:32
 msgctxt "FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY"
 msgid "No pronation/supination, starting position impossible"
 msgstr ""
 "Posição correta do ombro e cotovelo não pode ser atingida, e/ou pronação ou "
 "supinação não pode ser realizada totalmente"
 
-#: models/fuglmeyer.py:33
+#: .\evaluation\models\fuglmeyer.py:33
 msgctxt "FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY"
 msgid "Limited pronation/supination, maintains position"
 msgstr "Mantém posição com ADM limitada de P/S"
 
-#: models/fuglmeyer.py:34
+#: .\evaluation\models\fuglmeyer.py:34
 msgctxt "FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY"
 msgid "Full pronation/supination, maintains elbow extension"
-msgstr "Mantém posição com ADM limitada de P/S"
+msgstr "Mantém posição com P/S completa"
 
-#: models/fuglmeyer.py:38
+#: .\evaluation\models\fuglmeyer.py:38
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY"
 msgid "Immediate supination or elbow flexion"
 msgstr "Imediata supinação e/ ou flexão de cotovelo"
 
-#: models/fuglmeyer.py:39
+#: .\evaluation\models\fuglmeyer.py:39
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY"
 msgid "Supination or elbow flexion during movement"
 msgstr "Supinação e/ou flexão de cotovelo durante o movimento"
 
-#: models/fuglmeyer.py:40
+#: .\evaluation\models\fuglmeyer.py:40
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY"
 msgid "Abduction 90°, maintains extension and pronation"
 msgstr "Abdução completa 90 e mantém extensão cotovelo e pronação"
 
-#: models/fuglmeyer.py:43
+#: .\evaluation\models\fuglmeyer.py:43
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_FLEX_ACTIVITY"
 msgid "Immediate abduction or elbow flexion"
 msgstr "Imediata abdução ombro e/ ou flexão de cotovelo"
 
-#: models/fuglmeyer.py:44
+#: .\evaluation\models\fuglmeyer.py:44
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_FLEX_ACTIVITY"
 msgid "Abduction or elbow flexion during movement"
 msgstr "Abdução e/ou flexão de cotovelo durante o movimento"
 
-#: models/fuglmeyer.py:45
+#: .\evaluation\models\fuglmeyer.py:45
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_FLEX_ACTIVITY"
 msgid "Complete flexion, maintains 0° in elbow"
 msgstr "Flexão completa 90 e mantém extensão cotovelo"
 
-#: models/fuglmeyer.py:48
+#: .\evaluation\models\fuglmeyer.py:48
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_PRON_SUP_ACTIVITY"
 msgid "No pronation/supination, starting position impossible"
 msgstr "Posição inicial não pode ser alcançada e/ou não realiza P/S"
 
-#: models/fuglmeyer.py:49
+#: .\evaluation\models\fuglmeyer.py:49
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_PRON_SUP_ACTIVITY"
 msgid "Limited pronation/supination, maintains extension"
 msgstr "Mantém posição com ADM limitada de P/S"
 
-#: models/fuglmeyer.py:50
+#: .\evaluation\models\fuglmeyer.py:50
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_PRON_SUP_ACTIVITY"
 msgid "Full pronation/supination, maintains elbow extension"
 msgstr "Mantém posição com P/S completa"
 
-#: models/fuglmeyer.py:54
+#: .\evaluation\models\fuglmeyer.py:54
 msgctxt "FUGLM_UE_NORMAL_REFLEX_ACTIVITY"
 msgid "2 of 3 reflexes markedly hyperactive"
 msgstr "No mínimo dois dos três reflexos fásicos são marcadamente hiperativos"
 
-#: models/fuglmeyer.py:55
+#: .\evaluation\models\fuglmeyer.py:55
 msgctxt "FUGLM_UE_NORMAL_REFLEX_ACTIVITY"
 msgid "1 reflex markedly hyperactive or at least 2 reflexes lively"
 msgstr ""
 "Um reflexo está marcadamente hiperativo, ou no mínimo dois reflexos estão "
 "vivos"
 
-#: models/fuglmeyer.py:56
+#: .\evaluation\models\fuglmeyer.py:56
 msgctxt "FUGLM_UE_NORMAL_REFLEX_ACTIVITY"
 msgid "Maximum of 1 reflex lively, none hyperactive"
 msgstr "Não mais que um reflexo está vivo, e nenhum está hiperativo"
 
-#: models/fuglmeyer.py:60
+#: .\evaluation\models\fuglmeyer.py:60
 msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_90_ACTIVITY"
 msgid "Less than 15° active dorsiflexion"
 msgstr "Sujeito não pode dorsifletir o punho ate 15°"
 
-#: models/fuglmeyer.py:61
+#: .\evaluation\models\fuglmeyer.py:61
 msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_90_ACTIVITY"
 msgid "Dorsiflexion 15°, no resistance is taken"
 msgstr "Alcança 15° dorsiflexão sem resistência"
 
-#: models/fuglmeyer.py:62
+#: .\evaluation\models\fuglmeyer.py:62
 msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_90_ACTIVITY"
 msgid "Maintains position against resistance"
 msgstr "Posição pode ser mantida contra resistência (leve)"
 
-#: models/fuglmeyer.py:65
+#: .\evaluation\models\fuglmeyer.py:65
 msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY"
 msgid "Cannot be performed"
 msgstr "Sujeito não pode dorsifletir o punho ate 15°"
 
-#: models/fuglmeyer.py:66
+#: .\evaluation\models\fuglmeyer.py:66
 msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY"
 msgid "Can hold position but weak"
 msgstr "Alcança 15° dorsiflexão sem resistência"
 
-#: models/fuglmeyer.py:67
+#: .\evaluation\models\fuglmeyer.py:67
 msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY"
 msgid "Maintains position against resistance"
 msgstr "Posição pode ser mantida contra resistência (leve)"
 
-#: models/fuglmeyer.py:70
-#, fuzzy
-#| msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_90_ACTIVITY"
-#| msgid "Less than 15° active dorsiflexion"
+#: .\evaluation\models\fuglmeyer.py:70
 msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY"
 msgid "Less than 15° active dorsiflexion"
-msgstr "Sujeito não pode dorsifletir o punho ate 15°"
+msgstr "Sujeito não pode dorsifletir o punho até 15°"
 
-#: models/fuglmeyer.py:71
+#: .\evaluation\models\fuglmeyer.py:71
 msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY"
 msgid "Dorsiflexion 15°, no resistance is taken"
 msgstr "Alcança 15° dorsiflexão sem resistência"
 
-#: models/fuglmeyer.py:72
+#: .\evaluation\models\fuglmeyer.py:72
 msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY"
 msgid "Maintains position against resistance"
 msgstr "Mantém 15° dorsiflexão contra resistência"
 
-#: models/fuglmeyer.py:75
+#: .\evaluation\models\fuglmeyer.py:75
 msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY"
 msgid "Cannot perform volitionally"
 msgstr "Não ocorre movimento voluntário"
 
-#: models/fuglmeyer.py:76
+#: .\evaluation\models\fuglmeyer.py:76
 msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY"
 msgid "Limited active range of motion"
 msgstr "Movimento ativo com ADM incompleta"
 
-#: models/fuglmeyer.py:77
+#: .\evaluation\models\fuglmeyer.py:77
 msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY"
 msgid "Full active range of motion, smoothly"
 msgstr "Movimento ativo com ADM completa"
 
-#: models/fuglmeyer.py:80
+#: .\evaluation\models\fuglmeyer.py:80
 msgctxt "FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY"
 msgid "Cannot perform volitionally"
 msgstr "Não realiza movimento ativo"
 
-#: models/fuglmeyer.py:81
+#: .\evaluation\models\fuglmeyer.py:81
 msgctxt "FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY"
 msgid "Jerky movement or incomplete"
 msgstr "Movimento incompleto e/ou movimentos oscilantes"
 
-#: models/fuglmeyer.py:82
+#: .\evaluation\models\fuglmeyer.py:82
 msgctxt "FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY"
 msgid "Complete and smooth circumduction"
 msgstr "Movimento completo, com exatidão"
 
-#: models/fuglmeyer.py:87
+#: .\evaluation\models\fuglmeyer.py:87
 msgctxt "FUGLM_UE_HAND_MASS_FLEX_ACTIVITY"
 msgid "No flexion occurs"
 msgstr "Nenhuma flexão ocorre"
 
-#: models/fuglmeyer.py:88
+#: .\evaluation\models\fuglmeyer.py:88
 msgctxt "FUGLM_UE_HAND_MASS_FLEX_ACTIVITY"
 msgid "Some flexion, but not full motion"
 msgstr "Alguma flexão com ADM incompleta"
 
-#: models/fuglmeyer.py:89
+#: .\evaluation\models\fuglmeyer.py:89
 msgctxt "FUGLM_UE_HAND_MASS_FLEX_ACTIVITY"
 msgid "Completed active flexion "
 msgstr "Flexão ativa completa"
 
-#: models/fuglmeyer.py:92
+#: .\evaluation\models\fuglmeyer.py:92
 msgctxt "FUGLM_UE_HAND_MASS_EXT_ACTIVITY"
 msgid "No extension occurs"
 msgstr "Não ocorre extensão"
 
-#: models/fuglmeyer.py:93
+#: .\evaluation\models\fuglmeyer.py:93
 msgctxt "FUGLM_UE_HAND_MASS_EXT_ACTIVITY"
 msgid "Patient can release an active mass flexion grasp"
 msgstr "O sujeito libera ativamente a flexão em massa"
 
-#: models/fuglmeyer.py:94
+#: .\evaluation\models\fuglmeyer.py:94
 msgctxt "FUGLM_UE_HAND_MASS_EXT_ACTIVITY"
 msgid "Full active extension"
 msgstr "Extensão ativa completa"
 
-#: models/fuglmeyer.py:97
+#: .\evaluation\models\fuglmeyer.py:97
 msgctxt "FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY"
 msgid "Required position cannot be attained"
 msgstr "A posição requerida não pode ser adquirida"
 
-#: models/fuglmeyer.py:98
+#: .\evaluation\models\fuglmeyer.py:98
 msgctxt "FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY"
 msgid "Grasp is weak"
 msgstr "Mantém posição sem resistência"
 
-#: models/fuglmeyer.py:99
+#: .\evaluation\models\fuglmeyer.py:99
 msgctxt "FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY"
 msgid "Grasp can be maintained against relatively great resistance"
 msgstr "A preensão pode ser mantida contra a resistência"
 
-#: models/fuglmeyer.py:102
+#: .\evaluation\models\fuglmeyer.py:102
 msgctxt "FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY"
 msgid "Function cannot be performed"
 msgstr "Função não pode ser realizada"
 
-#: models/fuglmeyer.py:103
+#: .\evaluation\models\fuglmeyer.py:103
 msgctxt "FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY"
 msgid ""
 "Scrap of paper interposed between the thumb and index finger can be kept in "
 "place, but not against a slight tug"
 msgstr "Mantém posição sem resistência"
 
-#: models/fuglmeyer.py:104
+#: .\evaluation\models\fuglmeyer.py:104
 msgctxt "FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY"
 msgid "Paper is held firmly against a tug"
 msgstr "Mantém posição contra resitência"
 
-#: models/fuglmeyer.py:107
+#: .\evaluation\models\fuglmeyer.py:107
 msgctxt "FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY"
 msgid "Function cannot be performed"
 msgstr "Função não pode ser realizada"
 
-#: models/fuglmeyer.py:108
+#: .\evaluation\models\fuglmeyer.py:108
 msgctxt "FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY"
 msgid ""
 "A pencil interposed between the thumb pad and the pad of the index finger "
 "can be kept in place, but not against a slight tug"
 msgstr "Mantém posição sem resistência"
 
-#: models/fuglmeyer.py:109
+#: .\evaluation\models\fuglmeyer.py:109
 msgctxt "FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY"
 msgid "Pencil is held firmly against a tug"
 msgstr "Mantém posição contra resitência"
 
-#: models/fuglmeyer.py:112
+#: .\evaluation\models\fuglmeyer.py:112
 msgctxt "FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY"
 msgid "Function cannot be performed"
 msgstr "Função não pode ser realizada"
 
-#: models/fuglmeyer.py:113
+#: .\evaluation\models\fuglmeyer.py:113
 msgctxt "FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY"
 msgid ""
 "A can interposed between the thumb and index finger can be kept in place, "
 "but not against a slight tug"
 msgstr "Mantém posição sem resistência"
 
-#: models/fuglmeyer.py:114
+#: .\evaluation\models\fuglmeyer.py:114
 msgctxt "FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY"
 msgid "Can is held firmly against a tug"
 msgstr "Mantém posição contra resitência"
 
-#: models/fuglmeyer.py:117
+#: .\evaluation\models\fuglmeyer.py:117
 msgctxt "FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY"
 msgid "Function cannot be performed"
 msgstr "Função não pode ser realizada"
 
-#: models/fuglmeyer.py:118
+#: .\evaluation\models\fuglmeyer.py:118
 msgctxt "FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY"
 msgid ""
 "A tennis ball can be kept in place with a spherical grasp, but not against a "
 "slight tug"
 msgstr "Mantém posição sem resistência"
 
-#: models/fuglmeyer.py:119
+#: .\evaluation\models\fuglmeyer.py:119
 msgctxt "FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY"
 msgid "Tennis ball is held firmly against a tug"
 msgstr "Mantém posição contra resitência"
 
-#: models/fuglmeyer.py:124
+#: .\evaluation\models\fuglmeyer.py:124
 msgctxt "FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY"
 msgid "Marked tremor"
 msgstr "Pronunciada ou assistemática"
 
-#: models/fuglmeyer.py:125
+#: .\evaluation\models\fuglmeyer.py:125
 msgctxt "FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY"
 msgid "Slight tremor"
 msgstr "Leve e sistemática"
 
-#: models/fuglmeyer.py:126
+#: .\evaluation\models\fuglmeyer.py:126
 msgctxt "FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY"
 msgid "No tremor"
 msgstr "Nenhuma"
 
-#: models/fuglmeyer.py:129
+#: .\evaluation\models\fuglmeyer.py:129
 msgctxt "FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY"
 msgid "Pronounced or unsystematic dysmetria"
 msgstr "Pronunciada ou assistemática"
 
-#: models/fuglmeyer.py:130
+#: .\evaluation\models\fuglmeyer.py:130
 msgctxt "FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY"
 msgid "Slight or systematic dysmetria"
 msgstr "Leve e sistemática"
 
-#: models/fuglmeyer.py:131
+#: .\evaluation\models\fuglmeyer.py:131
 msgctxt "FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY"
 msgid "No dysmetria"
 msgstr "Nenhuma"
 
-#: models/fuglmeyer.py:134
+#: .\evaluation\models\fuglmeyer.py:134
 msgctxt "FUGLM_UE_COORD_SPEED_TIME_ACTIVITY"
 msgid "Activity is more than 5 seconds longer than unaffected hand"
 msgstr "Mais do que 5 segundos mais lento do que o lado não acometido"
 
-#: models/fuglmeyer.py:135
+#: .\evaluation\models\fuglmeyer.py:135
 msgctxt "FUGLM_UE_COORD_SPEED_TIME_ACTIVITY"
 msgid "(2-5) seconds longer than unaffected side"
 msgstr "2-5 segundos mais lento"
 
-#: models/fuglmeyer.py:136
+#: .\evaluation\models\fuglmeyer.py:136
 msgctxt "FUGLM_UE_COORD_SPEED_TIME_ACTIVITY"
 msgid "Less than 2 seconds difference"
 msgstr "Diferença máxima de 01 segundo entre os lados"
 
-#: models/fuglmeyer.py:141
+#: .\evaluation\models\fuglmeyer.py:141
 msgctxt "FUGLM_LE_REFLEX_ACTIVITY"
 msgid "No reflex activity can be elicited"
 msgstr "Sem atividade reflexa"
 
-#: models/fuglmeyer.py:142
+#: .\evaluation\models\fuglmeyer.py:142
 msgctxt "FUGLM_LE_REFLEX_ACTIVITY"
 msgid "Reflex activity can be elicited"
 msgstr "Atividade reflexa pode ser avaliada"
 
-#: models/fuglmeyer.py:145
+#: .\evaluation\models\fuglmeyer.py:145
 msgctxt "FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY"
 msgid "At least 2 of the 3 phasic reflexes are markedly hyperactive"
 msgstr "2 ou 3 reflexos estão marcadamente hiperativos"
 
-#: models/fuglmeyer.py:146
+#: .\evaluation\models\fuglmeyer.py:146
 msgctxt "FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY"
 msgid "One reflex is markedly hyperactive or at least 2 reflexes are lively"
 msgstr "1 reflexo esta hiperativo ou 2 estão vivos"
 
-#: models/fuglmeyer.py:147
+#: .\evaluation\models\fuglmeyer.py:147
 msgctxt "FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY"
 msgid "No more than one reflex is lively and none are hyperactive"
 msgstr "Não mais que um reflexo esta vivo"
 
-#: models/fuglmeyer.py:152
+#: .\evaluation\models\fuglmeyer.py:152
 msgctxt "FUGLM_LE_VOL_MOV_SYN"
 msgid "Cannot be performed at all"
 msgstr "Não realiza"
 
-#: models/fuglmeyer.py:153
+#: .\evaluation\models\fuglmeyer.py:153
 msgctxt "FUGLM_LE_VOL_MOV_SYN"
 msgid "Partial motion"
 msgstr "Realiza parcialmente"
 
-#: models/fuglmeyer.py:154
+#: .\evaluation\models\fuglmeyer.py:154
 msgctxt "FUGLM_LE_VOL_MOV_SYN"
 msgid "Full motion"
 msgstr "Completamente"
 
-#: models/fuglmeyer.py:158
+#: .\evaluation\models\fuglmeyer.py:158
 msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_KNEE"
 msgid "No active motion"
 msgstr "Sem movimento ativo"
 
-#: models/fuglmeyer.py:159
+#: .\evaluation\models\fuglmeyer.py:159
 msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_KNEE"
 msgid "From slightly extended position, knee can be flexed but not beyond 90°"
 msgstr ""
 "O joelho pode ativamente ser fletido até 90° (palpar os tendões dos flexores "
 "do joelho)"
 
-#: models/fuglmeyer.py:160
+#: .\evaluation\models\fuglmeyer.py:160
 msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_KNEE"
 msgid "Knee flexion beyond 90°"
 msgstr "O joelho pode ser fletido além de 90°"
 
-#: models/fuglmeyer.py:163
+#: .\evaluation\models\fuglmeyer.py:163
 msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE"
 msgid "No active motion"
 msgstr "Sem movimento ativo"
 
-#: models/fuglmeyer.py:164
+#: .\evaluation\models\fuglmeyer.py:164
 msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE"
 msgid "Incomplete active flexion"
 msgstr "Com dosriflexão limitada"
 
-#: models/fuglmeyer.py:165
+#: .\evaluation\models\fuglmeyer.py:165
 msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE"
 msgid "Normal dorsiflexion"
 msgstr "Completa dorsiflexão ativa"
 
-#: models/fuglmeyer.py:168
+#: .\evaluation\models\fuglmeyer.py:168
 msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_KNEE"
 msgid "Knee cannot flex without hip flexion"
 msgstr ""
 "O joelho não pode ser fletido se o quadril não é fletido simultaneamente"
 
-#: models/fuglmeyer.py:169
+#: .\evaluation\models\fuglmeyer.py:169
 msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_KNEE"
 msgid ""
 "Knee flexion begins without hip flexion but does not reach to 90° or hip "
 "begins to flex in later phase of motion"
 msgstr "Menos do que 90° do joelho ou se realiza com flexão de quadril"
 
-#: models/fuglmeyer.py:170
+#: .\evaluation\models\fuglmeyer.py:170
 msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_KNEE"
 msgid "Knee flexion beyond 90 degrees with hip maintained in extension"
 msgstr "Até 90° de flexão sem flexão simultanea do quadril"
 
-#: models/fuglmeyer.py:173
+#: .\evaluation\models\fuglmeyer.py:173
 msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_ANKLE"
 msgid "No active motion"
 msgstr "Sem movimentação ativa"
 
-#: models/fuglmeyer.py:174
+#: .\evaluation\models\fuglmeyer.py:174
 msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_ANKLE"
 msgid "Partial motion"
 msgstr "Limitação de dorsiflexão"
 
-#: models/fuglmeyer.py:175
+#: .\evaluation\models\fuglmeyer.py:175
 msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_ANKLE"
 msgid "Full motion"
 msgstr "Dorsiflexão completa"
 
-#: models/fuglmeyer.py:179
+#: .\evaluation\models\fuglmeyer.py:179
 msgctxt "FUGLM_LE_COORD_SPEED_TREMOR"
 msgid "Marked tremor"
 msgstr "Tremor marcante"
 
-#: models/fuglmeyer.py:180
+#: .\evaluation\models\fuglmeyer.py:180
 msgctxt "FUGLM_LE_COORD_SPEED_TREMOR"
 msgid "Slight tremor"
 msgstr "Tremor leve"
 
-#: models/fuglmeyer.py:181
+#: .\evaluation\models\fuglmeyer.py:181
 msgctxt "FUGLM_LE_COORD_SPEED_TREMOR"
 msgid "No tremor"
 msgstr "Sem tremor"
 
-#: models/fuglmeyer.py:184
+#: .\evaluation\models\fuglmeyer.py:184
 msgctxt "FUGLM_LE_COORD_SPEED_DYSMETRIA"
 msgid "Pronounced or unsystematic dysmetria"
 msgstr "Dismetria evidente ou assistemático"
 
-#: models/fuglmeyer.py:185
+#: .\evaluation\models\fuglmeyer.py:185
 msgctxt "FUGLM_LE_COORD_SPEED_DYSMETRIA"
 msgid "Slight or systematic dysmetria"
 msgstr "Dismetria leve ou sistemática"
 
-#: models/fuglmeyer.py:186
+#: .\evaluation\models\fuglmeyer.py:186
 msgctxt "FUGLM_LE_COORD_SPEED_DYSMETRIA"
 msgid "No dysmetria"
 msgstr "Sem dismetria"
 
-#: models/fuglmeyer.py:189
+#: .\evaluation\models\fuglmeyer.py:189
 msgctxt "FUGLM_LE_COORD_SPEED_TIME"
 msgid "Activity is more than 6 seconds longer than unaffected leg"
 msgstr "6 segundos mais lento que o lado não afetado"
 
-#: models/fuglmeyer.py:190
+#: .\evaluation\models\fuglmeyer.py:190
 msgctxt "FUGLM_LE_COORD_SPEED_TIME"
 msgid " 2-5.9 seconds longer than unaffected leg"
 msgstr "2 a 5 segundos mais lento que o lado afetado"
 
-#: models/fuglmeyer.py:191
+#: .\evaluation\models\fuglmeyer.py:191
 msgctxt "FUGLM_LE_COORD_SPEED_TIME"
 msgid "less than 2 seconds difference"
 msgstr "Menos de 2 segundos de diferença"
 
-#: models/fuglmeyer.py:197
+#: .\evaluation\models\fuglmeyer.py:197
 msgid "Flexors: biceps and finger flexors"
 msgstr "Flexores: bíceps e flexor dos dedos"
 
-#: models/fuglmeyer.py:199
+#: .\evaluation\models\fuglmeyer.py:199
 msgid "Extensors: triceps"
 msgstr "Extensores: tríceps"
 
-#: models/fuglmeyer.py:203
+#: .\evaluation\models\fuglmeyer.py:203
 msgctxt "FuglMeyer"
 msgid "Shoulder retraction"
 msgstr "Ombro - Retração de ombro"
 
-#: models/fuglmeyer.py:205
+#: .\evaluation\models\fuglmeyer.py:205
 msgctxt "FuglMeyer"
 msgid "Shoulder elevation"
 msgstr "Ombro - elevação"
 
-#: models/fuglmeyer.py:207
+#: .\evaluation\models\fuglmeyer.py:207
 msgctxt "FuglMeyer"
 msgid "Shoulder abduction (90)"
 msgstr "Ombro - Abdução 90°"
 
-#: models/fuglmeyer.py:209
+#: .\evaluation\models\fuglmeyer.py:209
 msgctxt "FuglMeyer"
 msgid "Shoulder external rotation"
 msgstr "Ombro - Rotação externa"
 
-#: models/fuglmeyer.py:211
+#: .\evaluation\models\fuglmeyer.py:211
 msgctxt "FuglMeyer"
 msgid "Elbow flexion"
 msgstr "Cotovelo - Flexão de cotovelo"
 
-#: models/fuglmeyer.py:213
+#: .\evaluation\models\fuglmeyer.py:213
 msgctxt "FuglMeyer"
 msgid "Forearm supination"
 msgstr "Antebraço - supinação"
 
-#: models/fuglmeyer.py:214 models/fuglmeyer.py:222 models/fuglmeyer.py:242
-#: models/fuglmeyer.py:284 models/fuglmeyer.py:287 models/fuglmeyer.py:294
-#: models/fuglmeyer.py:300 models/fuglmeyer.py:304 models/fuglmeyer.py:306
-#: models/fuglmeyer.py:310 models/fuglmeyer.py:312 models/fuglmeyer.py:318
+#: .\evaluation\models\fuglmeyer.py:214 .\evaluation\models\fuglmeyer.py:222
+#: .\evaluation\models\fuglmeyer.py:242 .\evaluation\models\fuglmeyer.py:284
+#: .\evaluation\models\fuglmeyer.py:287 .\evaluation\models\fuglmeyer.py:294
+#: .\evaluation\models\fuglmeyer.py:300 .\evaluation\models\fuglmeyer.py:304
+#: .\evaluation\models\fuglmeyer.py:306 .\evaluation\models\fuglmeyer.py:310
+#: .\evaluation\models\fuglmeyer.py:312 .\evaluation\models\fuglmeyer.py:318
+#: .\evaluation\models\fuglmeyer.py:320 .\evaluation\models\fuglmeyer.py:321
 msgctxt "FuglMeyer"
 msgid "Notes"
 msgstr "Observação"
 
-#: models/fuglmeyer.py:217
+#: .\evaluation\models\fuglmeyer.py:217
 msgctxt "FuglMeyer"
 msgid "shoulder adduction / internal rotation"
 msgstr "Ombro - adução e rotação interna"
 
-#: models/fuglmeyer.py:219
+#: .\evaluation\models\fuglmeyer.py:219
 msgctxt "FuglMeyer"
 msgid "elbow extension"
 msgstr "Cotovelo - extensão"
 
-#: models/fuglmeyer.py:221
+#: .\evaluation\models\fuglmeyer.py:221
 msgctxt "FuglMeyer"
 msgid "forearm pronation"
 msgstr "Antebraço - pronação"
 
-#: models/fuglmeyer.py:226
+#: .\evaluation\models\fuglmeyer.py:226
 msgctxt "FuglMeyer"
 msgid "Hand to lumbar spine"
 msgstr "Mão à coluna lombar"
 
-#: models/fuglmeyer.py:228
+#: .\evaluation\models\fuglmeyer.py:228
 msgctxt "FuglMeyer"
 msgid "Shoulder flexion 0-90 elbow at 0 pronation-supination 0"
 msgstr ""
 "Flexão de ombro 0 - 90, cotovelo 0 e antebraço pronação/ supinação (P/S)  0"
 
-#: models/fuglmeyer.py:230
+#: .\evaluation\models\fuglmeyer.py:230
 msgctxt "FuglMeyer"
 msgid "Pronation-supination elbow at 90 shoulder at 0"
 msgstr "Pronação/Supinação antebraço cotovelo em 90 e ombro em 0"
 
-#: models/fuglmeyer.py:234
+#: .\evaluation\models\fuglmeyer.py:234
 msgctxt "FuglMeyer"
 msgid "Shoulder abduction 0 - 90 elbow at 0 forearm pronated"
 msgstr "Abdução do ombro a 90 com o cotovelo 0 e antebraço em pronação"
 
-#: models/fuglmeyer.py:236
+#: .\evaluation\models\fuglmeyer.py:236
 msgctxt "FuglMeyer"
 msgid "Shoulder flexion 90- 180 elbow at 0pronation-supination 0"
 msgstr "Flexão do ombro de 90 - 180, cotovelo em 0, e antebraço P/S em 0"
 
-#: models/fuglmeyer.py:238
+#: .\evaluation\models\fuglmeyer.py:238
 msgctxt "FuglMeyer"
 msgid "Pronation/supinationelbow at 0 shoulder at 30-90 flexion"
 msgstr "Pronação/Supinação antebraço cotovelo em 90 e ombro em 0"
 
-#: models/fuglmeyer.py:245
+#: .\evaluation\models\fuglmeyer.py:245
 msgid ""
 "Stability at 15 dorsiflexion elbow at 90, forearm pronated shoulder at 0"
 msgstr ""
 "Estabilidade 15° extensão (dorsiflexão), cotovelo 90°, antebraço em pronação "
 "e ombro 0°"
 
-#: models/fuglmeyer.py:246
+#: .\evaluation\models\fuglmeyer.py:246
 msgid ""
 "Repeated dorsifexion / volar flexion elbow at 90, forearm pronated shoulder "
 "at 0, slight finger flexion"
@@ -1034,7 +1203,7 @@ msgstr ""
 "Flexão e extensão, cotovelo 90°, antebraço em pronação,  ombro 0° e dedos "
 "levemente fletidos"
 
-#: models/fuglmeyer.py:247
+#: .\evaluation\models\fuglmeyer.py:247
 msgid ""
 "Stability at 15 dorsiflexion elbow at 0, forearm pronated slight shoulder "
 "flexion/abduction"
@@ -1042,7 +1211,7 @@ msgstr ""
 "Estabilidade 15° extensão (dorsiflexão), cotovelo 0°, antebraço em pronação "
 "e ombro levemente fletido/ abduzido"
 
-#: models/fuglmeyer.py:248
+#: .\evaluation\models\fuglmeyer.py:248
 msgid ""
 "Repeated dorsifexion / volar flexion elbow at 0, forearm pronated slight "
 "shoulder flexion/abduction"
@@ -1050,16 +1219,16 @@ msgstr ""
 "Flexão e extensão, cotovelo 0°, antebraço em pronação e ombro levemente "
 "fletido/ abduzido"
 
-#: models/fuglmeyer.py:249
+#: .\evaluation\models\fuglmeyer.py:249
 msgid "Circumduction"
 msgstr "Circundação"
 
-#: models/fuglmeyer.py:253
+#: .\evaluation\models\fuglmeyer.py:253
 msgid "Mass flexion from full active or passive extension"
 msgstr ""
 "Flexão em massa dos dedos, partindo da extensão ativa ou passiva completa "
 
-#: models/fuglmeyer.py:253
+#: .\evaluation\models\fuglmeyer.py:253
 msgid ""
 "Close your hand. The therapist can help get the starting position with your "
 "fingers in extension"
@@ -1067,12 +1236,12 @@ msgstr ""
 "<strong>'Feche sua mão'</strong> O terapeuta pode auxiliar a adquirir a "
 "posição inicial com os dedos em extensão"
 
-#: models/fuglmeyer.py:255
+#: .\evaluation\models\fuglmeyer.py:255
 msgid "Mass flexion from full active or passive flexion"
 msgstr ""
 "Extensão em massa dos dedos, partindo da flexão ativa ou passiva completa "
 
-#: models/fuglmeyer.py:255
+#: .\evaluation\models\fuglmeyer.py:255
 msgid ""
 "Open your hand. The therapist can help get the starting position with your "
 "fingers in flexion"
@@ -1080,28 +1249,20 @@ msgstr ""
 "<strong>'Abra sua mão'</strong> O terapeuta pode auxiliar a adquirir a "
 "posição inicial com os dedos em flexão"
 
-#: models/fuglmeyer.py:257
+#: .\evaluation\models\fuglmeyer.py:257
 msgid "Flexion in PIP and DIP (digits II-V)extension in MCP II-V"
 msgstr ""
 "Preensão distal: flexão IFPs e IFDs e extensão em MCFs (2° ao 5° dedos)"
 
-#: models/fuglmeyer.py:257
+#: .\evaluation\models\fuglmeyer.py:257
 msgid "Hold my finger and keep it stuck between your fingers"
 msgstr "<strong>'Segure meu dedo e mantenha-o preso entre seus dedos'</strong>"
 
-#: models/fuglmeyer.py:260
+#: .\evaluation\models\fuglmeyer.py:260
 msgid "Thumb adduction"
 msgstr "Adução de polegar: segurar folha de papel entre polegar e 2° MCF"
 
-#: models/fuglmeyer.py:262
-#, fuzzy
-#| msgid ""
-#| "Subject is sitting with arm on bedside table. Instruct the patient to "
-#| "grasp a pen by opposing the thumb and index finger pads around the pen. "
-#| "The pen may not be stabilized by the therapist or the patient’s other "
-#| "hand. Test this grip against resistance by asking the patient to hold as "
-#| "you attempt to pull the pencil out with a slight tug. <strong>Hold the "
-#| "pen and keep it steady</strong>"
+#: .\evaluation\models\fuglmeyer.py:262
 msgid ""
 "Ask the patient to perform pure thumb adduction with the scrap of paper "
 "interposed between the thumb and first digit. Test this grip against "
@@ -1109,18 +1270,19 @@ msgid ""
 "out with a slight tug. <strong>Hold the paper between the thumb and "
 "forefinger</strong>"
 msgstr ""
-"Sujeito opõe a polpa do polegar com a do indicador para pegar uma caneta que "
-"está sobre a mesa. O examinador puxa a caneta para testar a resistência. O "
-"terapeuta não pode segurar a caneta para estabilizá-la."
+"Sujeito é instruído a aduzir o polegar para manter uma folha de papel "
+"interposta entre o polegar e o 2º dedo. O examinador puxa o papel para "
+"testar a resistência <strong>Segure o papel entre o polegar e o indicador</"
+"strong>"
 
-#: models/fuglmeyer.py:264
+#: .\evaluation\models\fuglmeyer.py:264
 msgid ""
 "Opposition pulpa of the thumb against the pulpa of 2-nd finger,pencil, tug "
 "upward"
 msgstr ""
 "Polpa polegar - polpa 2° dedo: segurar lápis entrepolpa de  polegar e 2° dedo"
 
-#: models/fuglmeyer.py:265
+#: .\evaluation\models\fuglmeyer.py:265
 msgid ""
 "Subject is sitting with arm on bedside table. Instruct the patient to grasp "
 "a pen by opposing the thumb and index finger pads around the pen. The pen "
@@ -1133,12 +1295,12 @@ msgstr ""
 "está sobre a mesa. O examinador puxa a caneta para testar a resistência. O "
 "terapeuta não pode segurar a caneta para estabilizá-la."
 
-#: models/fuglmeyer.py:267
+#: .\evaluation\models\fuglmeyer.py:267
 msgid ""
 "Cylinder shaped object (small can)tug upward, opposition in digits I and II"
 msgstr "Preensão cilíndrica: segurar objeto cilíndrico (lata pequena)"
 
-#: models/fuglmeyer.py:269
+#: .\evaluation\models\fuglmeyer.py:269
 msgid ""
 "Subject is sitting with arm on bedside table. Instruct the patient to grasp "
 "a small can (placed upright on a table without stabilization) by opening the "
@@ -1154,11 +1316,11 @@ msgstr ""
 "encaixá-la sobre o objeto. O examinador puxa o objeto para testar a "
 "resistência"
 
-#: models/fuglmeyer.py:271
+#: .\evaluation\models\fuglmeyer.py:271
 msgid "Fingers in abduction/flexion, thumb opposed, tennis ball"
 msgstr "Preensão esférica: segurar bolinha de tênis"
 
-#: models/fuglmeyer.py:273
+#: .\evaluation\models\fuglmeyer.py:273
 msgid ""
 "Subject is sitting with arm on bedside table. Instruct the patient to "
 "perform a spherical grasp by grasping a tennis ball The tester may support "
@@ -1171,647 +1333,632 @@ msgstr ""
 "utilizado um apoio sob a bola para que não escorregue). O examinador puxa a "
 "bola para testar a resistência"
 
-#: models/fuglmeyer.py:276
+#: .\evaluation\models\fuglmeyer.py:276
 msgid "Tremor"
 msgstr "Tremor"
 
-#: models/fuglmeyer.py:277
+#: .\evaluation\models\fuglmeyer.py:277
 msgid "Dysmetria"
 msgstr "Dismetria"
 
-#: models/fuglmeyer.py:278
+#: .\evaluation\models\fuglmeyer.py:278
 msgid "Speed"
 msgstr "Velocidade"
 
-#: models/fuglmeyer.py:282
+#: .\evaluation\models\fuglmeyer.py:282
 msgid "Achilles"
 msgstr "Aquiles"
 
-#: models/fuglmeyer.py:283
+#: .\evaluation\models\fuglmeyer.py:283
 msgid "Patellar"
 msgstr "Patelar"
 
-#: models/fuglmeyer.py:286
+#: .\evaluation\models\fuglmeyer.py:286
 msgid "Achilles and patellar reflexes"
 msgstr "Patelar e aquileu/adutor"
 
-#: models/fuglmeyer.py:291
+#: .\evaluation\models\fuglmeyer.py:291
 msgid "Hip flexion"
 msgstr "Flexão de quadril"
 
-#: models/fuglmeyer.py:292
+#: .\evaluation\models\fuglmeyer.py:292
 msgid "Knee flexion"
 msgstr "Flexão de joelho"
 
-#: models/fuglmeyer.py:293
+#: .\evaluation\models\fuglmeyer.py:293
 msgid "Ankle dorsiflexion"
 msgstr "Dorsiflexão (decúbito dorsal)"
 
-#: models/fuglmeyer.py:296
+#: .\evaluation\models\fuglmeyer.py:296
 msgid "Hip extension"
 msgstr "Quadril - extensão"
 
-#: models/fuglmeyer.py:297
+#: .\evaluation\models\fuglmeyer.py:297
 msgid "Hip adduction"
 msgstr "Quadril - adução"
 
-#: models/fuglmeyer.py:298
+#: .\evaluation\models\fuglmeyer.py:298
 msgid "Knee extension"
 msgstr "Extensão de joelho"
 
-#: models/fuglmeyer.py:299
+#: .\evaluation\models\fuglmeyer.py:299
 msgid "Ankle plantarflexion"
 msgstr "Flexão plantar"
 
-#: models/fuglmeyer.py:303
+#: .\evaluation\models\fuglmeyer.py:303
 msgid "Knee Flexion sitting"
 msgstr ""
 "A partir de leve extensão do joelho, realizar uma flexão de joelho além de "
 "90° (sentado)"
 
-#: models/fuglmeyer.py:305
+#: .\evaluation\models\fuglmeyer.py:305
 msgid "Ankle Dorsiflexion sitting"
 msgstr ""
 "Dorsiflexão de tornozelo sentado (comparar com o lado não afetado e "
 "solicitar a dorsiflexão ativa)"
 
-#: models/fuglmeyer.py:309
+#: .\evaluation\models\fuglmeyer.py:309
 msgid "Knee Flexion standing"
 msgstr "Quadril a 0°, realizar a flexão de joelho até 90° (em pé)"
 
-#: models/fuglmeyer.py:311
+#: .\evaluation\models\fuglmeyer.py:311
 msgid "Ankle Dorsiflexion standing"
 msgstr "Dorsiflexão de tornozelo em pé (comparar com o lado contralateral)"
 
-#: models/fuglmeyer.py:315
+#: .\evaluation\models\fuglmeyer.py:315
 msgid "Scoring Tremor"
 msgstr "Tremor"
 
-#: models/fuglmeyer.py:316
+#: .\evaluation\models\fuglmeyer.py:316
 msgid "Scoring Dysmetria"
 msgstr "Dismetria"
 
-#: models/fuglmeyer.py:317
+#: .\evaluation\models\fuglmeyer.py:317
 msgid "Scoring Speed"
 msgstr "Velocidade"
 
-#: models/had.py:13 models/had.py:57
+#: .\evaluation\models\had.py:13 .\evaluation\models\had.py:57
 msgid "Most of the time"
 msgstr "A maior parte do tempo"
 
-#: models/had.py:14
+#: .\evaluation\models\had.py:14
 msgid "A lot of time"
 msgstr "Boa parte do tempo"
 
-#: models/had.py:15
+#: .\evaluation\models\had.py:15
 msgid "From time to time, occasionally"
 msgstr "De vez em quando"
 
-#: models/had.py:16
+#: .\evaluation\models\had.py:16
 msgctxt "tension"
 msgid "Not at all"
 msgstr "Nunca"
 
-#: models/had.py:18
+#: .\evaluation\models\had.py:18
 msgid "I feel tense or \"wound up\""
 msgstr "Eu me sinto tenso(a) ou contraído(a)"
 
-#: models/had.py:21
+#: .\evaluation\models\had.py:21
 msgctxt "enjoy"
 msgid "Hardly at all"
 msgstr "Já não consigo ter prazer em nada"
 
-#: models/had.py:22
+#: .\evaluation\models\had.py:22
 msgid "Only a little"
 msgstr "Só um pouco"
 
-#: models/had.py:23
+#: .\evaluation\models\had.py:23
 msgid "Not quite so much"
 msgstr "Não tanto quanto antes"
 
-#: models/had.py:24
+#: .\evaluation\models\had.py:24
 msgid "Definitely as much"
 msgstr "Sim, do mesmo jeito que antes"
 
-#: models/had.py:26
+#: .\evaluation\models\had.py:26
 msgid "I still enjoy the things I used to enjoy"
 msgstr "Eu ainda sinto que gosto das mesmas coisas de antes"
 
-#: models/had.py:29
+#: .\evaluation\models\had.py:29
 msgid "Very definitely and quite badly"
 msgstr "Sim, de um jeito muito forte"
 
-#: models/had.py:30
+#: .\evaluation\models\had.py:30
 msgid "Yes, but not too badly"
 msgstr "Sim, mas não tão forte"
 
-#: models/had.py:31
+#: .\evaluation\models\had.py:31
 msgid "A little, but it doesn't worry me"
 msgstr "Um pouco, mas isso não me preocupa"
 
-#: models/had.py:32
+#: .\evaluation\models\had.py:32
 msgctxt "frightened"
 msgid "Not at all"
 msgstr "Não sinto nada disso"
 
-#: models/had.py:34
+#: .\evaluation\models\had.py:34
 msgid ""
 "I get a sort of frightened feeling as if something awful is about to happen"
 msgstr ""
 "Eu sinto uma espécie de medo, como se alguma coisa ruim fosse acontecer"
 
-#: models/had.py:38
+#: .\evaluation\models\had.py:38
 msgctxt "laugh"
 msgid "Not at all"
 msgstr "Não consigo mais"
 
-#: models/had.py:39
+#: .\evaluation\models\had.py:39
 msgid "Definitely not so much now"
 msgstr "Atualmente bem menos"
 
-#: models/had.py:40
+#: .\evaluation\models\had.py:40
 msgid "Not quite so much now"
 msgstr "Atualmente um pouco menos"
 
-#: models/had.py:41
+#: .\evaluation\models\had.py:41
 msgid "As much as I always could"
 msgstr "Do mesmo jeito que antes"
 
-#: models/had.py:43
+#: .\evaluation\models\had.py:43
 msgid "I can laugh and see the funny side of things"
 msgstr ""
 
-#: models/had.py:46
+#: .\evaluation\models\had.py:46
 msgid "A great deal of the time"
 msgstr "A maior parte do tempo"
 
-#: models/had.py:47
+#: .\evaluation\models\had.py:47
 msgid "A lot of the time"
 msgstr "Boa parte do tempo"
 
-#: models/had.py:48
+#: .\evaluation\models\had.py:48
 msgid "From time to time, but not too often"
 msgstr "De vez em quando"
 
-#: models/had.py:49
+#: .\evaluation\models\had.py:49
 msgid "Only occasionally"
 msgstr "Raramente"
 
-#: models/had.py:51
+#: .\evaluation\models\had.py:51
 msgid "Worrying thoughts go through my mind"
 msgstr "Estou com a cabeça cheia de preocupações"
 
-#: models/had.py:54
+#: .\evaluation\models\had.py:54
 msgctxt "cheerful"
 msgid "Not at all"
 msgstr "Nunca"
 
-#: models/had.py:55 models/had.py:63 models/had.py:119
+#: .\evaluation\models\had.py:55 .\evaluation\models\had.py:63
+#: .\evaluation\models\had.py:119
 msgid "Not often"
 msgstr "Poucas vezes"
 
-#: models/had.py:56 models/had.py:72 models/had.py:120
+#: .\evaluation\models\had.py:56 .\evaluation\models\had.py:72
+#: .\evaluation\models\had.py:120
 msgid "Sometimes"
 msgstr ""
 
-#: models/had.py:59
+#: .\evaluation\models\had.py:59
 msgid "I feel cheerful"
 msgstr "Eu me sinto alegre"
 
-#: models/had.py:62
+#: .\evaluation\models\had.py:62
 msgctxt "ease"
 msgid "Not at all"
 msgstr "Nunca"
 
-#: models/had.py:64
+#: .\evaluation\models\had.py:64
 msgid "Usually"
 msgstr ""
 
-#: models/had.py:65 models/had.py:86
-#, fuzzy
-#| msgid "Definitely as much"
+#: .\evaluation\models\had.py:65 .\evaluation\models\had.py:86
 msgid "Definitely"
-msgstr "Sim, do mesmo jeito que antes"
+msgstr ""
 
-#: models/had.py:67
+#: .\evaluation\models\had.py:67
 msgid "I can sit at ease and feel relaxed"
 msgstr "Consigo ficar sentado à vontade e me sentir relaxado"
 
-#: models/had.py:70
-#, fuzzy
-#| msgid "A great deal of the time"
+#: .\evaluation\models\had.py:70
 msgid "Nearly all the time"
-msgstr "A maior parte do tempo"
+msgstr "quase sempre"
 
-#: models/had.py:71
-#, fuzzy
-#| msgid "Not often"
+#: .\evaluation\models\had.py:71
 msgid "Very often"
-msgstr "Poucas vezes"
+msgstr "muitas vezes"
 
-#: models/had.py:73
-#, fuzzy
-#| msgid "Not at all"
+#: .\evaluation\models\had.py:73
 msgctxt "slowed"
 msgid "Not at all"
 msgstr "Nunca"
 
-#: models/had.py:75
+#: .\evaluation\models\had.py:75
 msgid "I feel as if I am slowed down"
 msgstr "Eu estou lento(a) para pensar e fazer coisas"
 
-#: models/had.py:78
+#: .\evaluation\models\had.py:78
 msgid "Very Often"
 msgstr ""
 
-#: models/had.py:79
-#, fuzzy
-#| msgid "Not often"
+#: .\evaluation\models\had.py:79
 msgid "Quite Often"
-msgstr "Poucas vezes"
+msgstr ""
 
-#: models/had.py:80
-#, fuzzy
-#| msgid "Only occasionally"
+#: .\evaluation\models\had.py:80
 msgid "Occasionally"
-msgstr "Raramente"
+msgstr ""
 
-#: models/had.py:81
-#, fuzzy
-#| msgid "Not at all"
+#: .\evaluation\models\had.py:81
 msgctxt "butterflies"
 msgid "Not at all"
 msgstr "Nunca"
 
-#: models/had.py:83
+#: .\evaluation\models\had.py:83
 msgid "I get a sort of frightened feeling like 'butterflies' in the stomach"
 msgstr ""
 "Eu tenho uma sensação ruim de medo, como um frio na barriga ou um aperto no "
 "estômago"
 
-#: models/had.py:87
+#: .\evaluation\models\had.py:87
 msgid "I don't take as much care as I should"
 msgstr ""
 
-#: models/had.py:88
-#, fuzzy
-#| msgid "Not quite so much"
+#: .\evaluation\models\had.py:88
 msgid "I may not take quite as much care"
-msgstr "Não tanto quanto antes"
+msgstr ""
 
-#: models/had.py:89
+#: .\evaluation\models\had.py:89
 msgid "I take just as much care as ever"
 msgstr ""
 
-#: models/had.py:91
+#: .\evaluation\models\had.py:91
 msgid "I have lost interest in my appearance"
 msgstr "Eu perdi o interesse em cuidar da minha aparência"
 
-#: models/had.py:94
+#: .\evaluation\models\had.py:94
 msgid "Very much indeed"
 msgstr ""
 
-#: models/had.py:95
+#: .\evaluation\models\had.py:95
 msgid "Quite a lot"
 msgstr ""
 
-#: models/had.py:96
-#, fuzzy
-#| msgid "Not quite so much"
+#: .\evaluation\models\had.py:96
 msgid "Not very much"
-msgstr "Não tanto quanto antes"
+msgstr ""
 
-#: models/had.py:97
-#, fuzzy
-#| msgid "Not at all"
+#: .\evaluation\models\had.py:97
 msgctxt "restless"
 msgid "Not at all"
 msgstr "Nunca"
 
-#: models/had.py:99
+#: .\evaluation\models\had.py:99
 msgid "I feel restless as I have to be on the move"
 msgstr ""
 "Eu me sinto inquieto(a), como se eu não pudesse ficar parado(a) em lugar "
 "nenhum"
 
-#: models/had.py:102
-#, fuzzy
-#| msgctxt "enjoy"
-#| msgid "Hardly at all"
+#: .\evaluation\models\had.py:102
 msgid "Hardly at all"
-msgstr "Já não consigo ter prazer em nada"
+msgstr ""
 
-#: models/had.py:103
-#, fuzzy
-#| msgid "Definitely not so much now"
+#: .\evaluation\models\had.py:103
 msgid "Definitely less than I used to"
-msgstr "Atualmente bem menos"
+msgstr ""
 
-#: models/had.py:104
+#: .\evaluation\models\had.py:104
 msgid "Rather less than I used to"
 msgstr ""
 
-#: models/had.py:105
-#, fuzzy
-#| msgid "As much as I always could"
+#: .\evaluation\models\had.py:105
 msgid "As much as I ever did"
-msgstr "Do mesmo jeito que antes"
+msgstr ""
 
-#: models/had.py:107
+#: .\evaluation\models\had.py:107
 msgid "I look forward with enjoyment to things"
 msgstr "Fico animado(a) esperando as coisas boas que estão por vir"
 
-#: models/had.py:110
+#: .\evaluation\models\had.py:110
 msgid "Very often indeed"
 msgstr ""
 
-#: models/had.py:111
-#, fuzzy
-#| msgid "Not often"
+#: .\evaluation\models\had.py:111
 msgid "Quite often"
-msgstr "Poucas vezes"
+msgstr ""
 
-#: models/had.py:112
-#, fuzzy
-#| msgid "Not often"
+#: .\evaluation\models\had.py:112
 msgid "Not very often"
-msgstr "Poucas vezes"
+msgstr ""
 
-#: models/had.py:113
-#, fuzzy
-#| msgid "Not at all"
+#: .\evaluation\models\had.py:113
 msgctxt "panic"
 msgid "Not at all"
 msgstr "Nunca"
 
-#: models/had.py:115
+#: .\evaluation\models\had.py:115
 msgid "I get sudden feelings of panic"
 msgstr "De repente, tenho a sensação de entrar em pânico"
 
-#: models/had.py:118
+#: .\evaluation\models\had.py:118
 msgid "Very seldom"
 msgstr ""
 
-#: models/had.py:121
+#: .\evaluation\models\had.py:121
 msgid "Often"
 msgstr ""
 
-#: models/had.py:123
+#: .\evaluation\models\had.py:123
 msgid "I can enjoy a good book or radio or TV program"
 msgstr ""
 "Consigo sentir prazer quando assisto a um bom programa de televisão, de "
 "rádio ou quando leio alguma coisa"
 
-#: models/had.py:126
+#: .\evaluation\models\had.py:126
 msgid "HAD"
 msgstr ""
 
-#: models/had.py:127
+#: .\evaluation\models\had.py:127
 msgid "HADs"
 msgstr ""
 
-#: models/hamilton.py:12 models/hamilton.py:22 models/hamilton.py:31
-#: models/hamilton.py:100 models/hamilton.py:123
+#: .\evaluation\models\hamilton.py:12 .\evaluation\models\hamilton.py:22
+#: .\evaluation\models\hamilton.py:31 .\evaluation\models\hamilton.py:100
+#: .\evaluation\models\hamilton.py:123
 msgid "Absent"
 msgstr ""
 
-#: models/hamilton.py:13
+#: .\evaluation\models\hamilton.py:13
 msgid "These feelings are indicated only on questioning"
 msgstr ""
 
-#: models/hamilton.py:14
+#: .\evaluation\models\hamilton.py:14
 msgid "These feelings are spontaneously reported verbally"
 msgstr ""
 
-#: models/hamilton.py:15
+#: .\evaluation\models\hamilton.py:15
 msgid ""
 "Communicates feelings non-verbally i.e., through facial expression, posture, "
 "voice, and tendency to weep"
 msgstr ""
 
-#: models/hamilton.py:17
+#: .\evaluation\models\hamilton.py:17
 msgid ""
 "Patient reports VIRTUALLY ONLY these feelings in his spontaneous verbal and "
 "non-verbal communication"
 msgstr ""
 
-#: models/hamilton.py:19
+#: .\evaluation\models\hamilton.py:19
 msgid "depressed mood (sadness, hopeless, helpless, worthless)"
 msgstr ""
 
-#: models/hamilton.py:23
+#: .\evaluation\models\hamilton.py:23
 msgid "Self reproach, feels he has let people down"
 msgstr ""
 
-#: models/hamilton.py:24
+#: .\evaluation\models\hamilton.py:24
 msgid "Ideas of guilt or rumination over past errors or sinful deed"
 msgstr ""
 
-#: models/hamilton.py:25
+#: .\evaluation\models\hamilton.py:25
 msgid "Present illness is a punishmnent. Delusions of guilt"
 msgstr ""
 
-#: models/hamilton.py:26
+#: .\evaluation\models\hamilton.py:26
 msgid ""
 "Hears accusatory or denunciatory voices and/or experiences threatening "
 "visual hallucinations"
 msgstr ""
 
-#: models/hamilton.py:28
+#: .\evaluation\models\hamilton.py:28
 msgid "feelings of guilt"
 msgstr ""
 
-#: models/hamilton.py:32
+#: .\evaluation\models\hamilton.py:32
+#, fuzzy
+#| msgid "h. Feel that life is worth living?"
 msgid "Feels life is not worth living"
-msgstr ""
+msgstr "h. sentiu que a vida vale a pena viver?"
 
-#: models/hamilton.py:33
+#: .\evaluation\models\hamilton.py:33
 msgid "Wishes he were dead or any thoughts of possible death to self"
 msgstr ""
 
-#: models/hamilton.py:34
+#: .\evaluation\models\hamilton.py:34
 msgid "Suicide ideas or gesture"
 msgstr ""
 
-#: models/hamilton.py:35
+#: .\evaluation\models\hamilton.py:35
 msgid "Attempts at suicide (any serious attempt rates)"
 msgstr ""
 
-#: models/hamilton.py:37
+#: .\evaluation\models\hamilton.py:37
 msgid "suicide"
 msgstr ""
 
-#: models/hamilton.py:40
+#: .\evaluation\models\hamilton.py:40
+#, fuzzy
+#| msgctxt "CHOICES_DIFICULTY"
+#| msgid "Not difficult at all"
 msgid "No difficulty falling asleep"
-msgstr ""
+msgstr "nada dicífil"
 
-#: models/hamilton.py:41
+#: .\evaluation\models\hamilton.py:41
 msgid "Complains of occasional difficulty falling asleep - more than 1/2 hour"
 msgstr ""
 
-#: models/hamilton.py:42
+#: .\evaluation\models\hamilton.py:42
 msgid "Complains of nightly difficulty falling asleep"
 msgstr ""
 
-#: models/hamilton.py:44
+#: .\evaluation\models\hamilton.py:44
 msgid "insomnia early"
 msgstr ""
 
-#: models/hamilton.py:47 models/hamilton.py:54 models/hamilton.py:61
-#: models/hamilton.py:91
+#: .\evaluation\models\hamilton.py:47 .\evaluation\models\hamilton.py:54
+#: .\evaluation\models\hamilton.py:61 .\evaluation\models\hamilton.py:91
+#, fuzzy
+#| msgctxt "CHOICES_DIFICULTY"
+#| msgid "Very difficult"
 msgid "No difficulty"
-msgstr ""
+msgstr "muito difícil"
 
-#: models/hamilton.py:48
+#: .\evaluation\models\hamilton.py:48
 msgid "Patient complains of being restless and disturbed during the night"
 msgstr ""
 
-#: models/hamilton.py:49
+#: .\evaluation\models\hamilton.py:49
 msgid ""
 "Waking during the night - any getting out of bed (except for purposes of "
 "voiding)"
 msgstr ""
 
-#: models/hamilton.py:51
+#: .\evaluation\models\hamilton.py:51
 msgid "insomnia middle"
 msgstr ""
 
-#: models/hamilton.py:55
+#: .\evaluation\models\hamilton.py:55
 msgid "Waking in early hours of the morning but goes back to sleep"
 msgstr ""
 
-#: models/hamilton.py:56
+#: .\evaluation\models\hamilton.py:56
 msgid "Unable to fall asleep again if he gets out of bed"
 msgstr ""
 
-#: models/hamilton.py:58
+#: .\evaluation\models\hamilton.py:58
 msgid "insomnia late"
 msgstr ""
 
-#: models/hamilton.py:62
+#: .\evaluation\models\hamilton.py:62
 msgid ""
 "Thoughts and feelings of incapacity, fatigue or weakness related to "
 "activities (work or hobbies)"
 msgstr ""
 
-#: models/hamilton.py:63
+#: .\evaluation\models\hamilton.py:63
 msgid ""
 "Loss of interest in activities (hobbies or work) - either directly reported "
 "by patient, or indirectly in listlessness, indecision and vacillation (feels "
 "he has to push himself to work or do activities)"
 msgstr ""
 
-#: models/hamilton.py:65
+#: .\evaluation\models\hamilton.py:65
 msgid ""
 "Decrease in actual time spent in activities or decrease in productivity. In "
 "hospital, if patient does not spend at least three hours a day in activities "
 "(hospital job or hobbies) exclusive of ward chores"
 msgstr ""
 
-#: models/hamilton.py:67
+#: .\evaluation\models\hamilton.py:67
 msgid ""
 "Stopped working because of present illness. In hospital, if patient engages "
 "in no activities except ward chores, or if patient fails to perform ward "
 "chores unassisted"
 msgstr ""
 
-#: models/hamilton.py:70
+#: .\evaluation\models\hamilton.py:70
+#, fuzzy
+#| msgid "b. Your social activities?"
 msgid "work and activities"
-msgstr ""
+msgstr "b. suas atividades sociais?"
 
-#: models/hamilton.py:73
+#: .\evaluation\models\hamilton.py:73
 msgid "Normal speech and thought"
 msgstr ""
 
-#: models/hamilton.py:74
+#: .\evaluation\models\hamilton.py:74
 msgid "Slight retardation at interview"
 msgstr ""
 
-#: models/hamilton.py:75
+#: .\evaluation\models\hamilton.py:75
 msgid "Obvious retardation at interview"
 msgstr ""
 
-#: models/hamilton.py:76
+#: .\evaluation\models\hamilton.py:76
+#, fuzzy
+#| msgctxt "CHOICES_DIFICULTY"
+#| msgid "Very difficult"
 msgid "Interview difficult"
-msgstr ""
+msgstr "muito difícil"
 
-#: models/hamilton.py:77
+#: .\evaluation\models\hamilton.py:77
 msgid "Complete stupor"
 msgstr ""
 
-#: models/hamilton.py:79
+#: .\evaluation\models\hamilton.py:79
 msgid ""
 "retardation: psychomotor (slowness of thought and speech; impaired ability "
 "to concentrate; decreased motor activity)"
 msgstr ""
 
-#: models/hamilton.py:82 models/hamilton.py:109 models/hamilton.py:116
+#: .\evaluation\models\hamilton.py:82 .\evaluation\models\hamilton.py:109
+#: .\evaluation\models\hamilton.py:116
 #, fuzzy
 #| msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
 #| msgid "None"
 msgid "None"
 msgstr "Sem atividade reflexa"
 
-#: models/hamilton.py:83
+#: .\evaluation\models\hamilton.py:83
 msgid "Fidgetiness"
 msgstr ""
 
-#: models/hamilton.py:84
+#: .\evaluation\models\hamilton.py:84
 msgid "Playing with hands, hair,etc"
 msgstr ""
 
-#: models/hamilton.py:85
+#: .\evaluation\models\hamilton.py:85
 msgid "Moving about, can't sit still"
 msgstr ""
 
-#: models/hamilton.py:86
+#: .\evaluation\models\hamilton.py:86
 msgid "Hand wringing, nail biting, hair-pulling, biting of lips"
 msgstr ""
 
-#: models/hamilton.py:88
+#: .\evaluation\models\hamilton.py:88
 #, fuzzy
-#| msgctxt "FUGLM_LE_VOL_MOV_SYN"
-#| msgid "Partial motion"
+#| msgid "administration"
 msgid "agitation"
-msgstr "Realiza parcialmente"
+msgstr "administração"
 
-#: models/hamilton.py:92
+#: .\evaluation\models\hamilton.py:92
 msgid "Subjective tension and irritability"
 msgstr ""
 
-#: models/hamilton.py:93
+#: .\evaluation\models\hamilton.py:93
 msgid "Worrying about minor matters"
 msgstr ""
 
-#: models/hamilton.py:94
+#: .\evaluation\models\hamilton.py:94
 msgid "Apprehensive attitude apparent in face or speech"
 msgstr ""
 
-#: models/hamilton.py:95
+#: .\evaluation\models\hamilton.py:95
 msgid "Fears expressed without questioning"
 msgstr ""
 
-#: models/hamilton.py:97
+#: .\evaluation\models\hamilton.py:97
 msgid "anxiety: psychic"
 msgstr ""
 
-#: models/hamilton.py:101 models/hamilton.py:124
+#: .\evaluation\models\hamilton.py:101 .\evaluation\models\hamilton.py:124
 msgid "Mild"
 msgstr ""
 
-#: models/hamilton.py:102
+#: .\evaluation\models\hamilton.py:102
+#, fuzzy
+#| msgid "Moderately intense"
 msgid "Moderate"
-msgstr ""
+msgstr "Moderadamente intensa"
 
-#: models/hamilton.py:103 models/hamilton.py:125
+#: .\evaluation\models\hamilton.py:103 .\evaluation\models\hamilton.py:125
 msgid "Severe"
 msgstr ""
 
-#: models/hamilton.py:104
+#: .\evaluation\models\hamilton.py:104
 msgid "Incapacitating"
 msgstr ""
 
-#: models/hamilton.py:106
+#: .\evaluation\models\hamilton.py:106
 msgid ""
 "anxiety: somatic (physiological concomitants of anxiety, such as - gastro-"
 "intestinal: dry mouth, wind, indigestion, diarrhea, cramps, belching. - "
@@ -1819,336 +1966,1081 @@ msgid ""
 "sighing. - urinary frequency - sweating)"
 msgstr ""
 
-#: models/hamilton.py:110
+#: .\evaluation\models\hamilton.py:110
 msgid ""
 "Loss of appetite but eating without staff encouragement. Heavy feelings in "
 "abdomen"
 msgstr ""
 
-#: models/hamilton.py:111
+#: .\evaluation\models\hamilton.py:111
 msgid ""
 "Difficulty eating without staff urging. Requests or requires laxatives or "
 "medication for bowels or medication for gastro-intestinal symptoms"
 msgstr ""
 
-#: models/hamilton.py:113
+#: .\evaluation\models\hamilton.py:113
 msgid "somatic symptoms: gastrointestinal"
 msgstr ""
 
-#: models/hamilton.py:117
+#: .\evaluation\models\hamilton.py:117
 msgid ""
 "Heaviness in limbs, back or head. Backaches, headache, muscle aches. Loss of "
 "energy and fatigability"
 msgstr ""
 
-#: models/hamilton.py:118
+#: .\evaluation\models\hamilton.py:118
 msgid "Any clear-cut symptom"
 msgstr ""
 
-#: models/hamilton.py:120
+#: .\evaluation\models\hamilton.py:120
 msgid "somatic symptoms: general"
 msgstr ""
 
-#: models/hamilton.py:127
+#: .\evaluation\models\hamilton.py:127
 msgid "genital symptoms (loss of libido, menstrual disturbances)"
 msgstr ""
 
-#: models/hamilton.py:130
+#: .\evaluation\models\hamilton.py:130
 #, fuzzy
-#| msgid "Not often"
+#| msgctxt "FuglMeyer"
+#| msgid "Notes"
 msgid "Not present"
-msgstr "Poucas vezes"
+msgstr "Observação"
 
-#: models/hamilton.py:131
+#: .\evaluation\models\hamilton.py:131
 msgid "Self-absorption (bodily)"
 msgstr ""
 
-#: models/hamilton.py:132
+#: .\evaluation\models\hamilton.py:132
 msgid "Preoccupation with health"
 msgstr ""
 
-#: models/hamilton.py:133
+#: .\evaluation\models\hamilton.py:133
 msgid "Frequent complaints, requests for help, etc. ..."
 msgstr ""
 
-#: models/hamilton.py:134
+#: .\evaluation\models\hamilton.py:134
 msgid "Hypochondriacal delusions"
 msgstr ""
 
-#: models/hamilton.py:136
+#: .\evaluation\models\hamilton.py:136
 msgid "hypochondriasis"
 msgstr ""
 
-#: models/hamilton.py:139 models/hamilton.py:147
+#: .\evaluation\models\hamilton.py:139 .\evaluation\models\hamilton.py:147
 msgid "No weight loss"
 msgstr ""
 
-#: models/hamilton.py:140
+#: .\evaluation\models\hamilton.py:140
 msgid "Probable weight loss associated with present illness"
 msgstr ""
 
-#: models/hamilton.py:141
+#: .\evaluation\models\hamilton.py:141
 msgid "Definite (according to patient) weight loss"
 msgstr ""
 
-#: models/hamilton.py:142
-#, fuzzy
-#| msgid "Not often"
+#: .\evaluation\models\hamilton.py:142
 msgid "Not assessed"
-msgstr "Poucas vezes"
+msgstr ""
 
-#: models/hamilton.py:144 models/hamilton.py:151
+#: .\evaluation\models\hamilton.py:144 .\evaluation\models\hamilton.py:151
 msgid "loss of weight"
 msgstr ""
 
-#: models/hamilton.py:148
+#: .\evaluation\models\hamilton.py:148
 msgid "Probable weight loss associated with present illness (>500g/week)"
 msgstr ""
 
-#: models/hamilton.py:149
+#: .\evaluation\models\hamilton.py:149
 msgid "Definite weight loss(>1kg/week)"
 msgstr ""
 
-#: models/hamilton.py:154
+#: .\evaluation\models\hamilton.py:154
 msgid ""
 "Not depressed (based on above items) OR Acknowledges being depressed and ill"
 msgstr ""
 
-#: models/hamilton.py:155
+#: .\evaluation\models\hamilton.py:155
 msgid ""
 "Acknowledges illness but attributes cause to bad food, climate, overwork, "
 "virus, need for rest, etc."
 msgstr ""
 
-#: models/hamilton.py:156
+#: .\evaluation\models\hamilton.py:156
 msgid "Denies being ill at all"
 msgstr ""
 
-#: models/hamilton.py:158
+#: .\evaluation\models\hamilton.py:158
+#, fuzzy
+#| msgid "Right"
 msgid "insight"
-msgstr ""
+msgstr "Direita"
 
-#: models/hamilton.py:161
-#: templates/admin/evaluation/hamilton/change_form.html:6
+#: .\evaluation\models\hamilton.py:161
+#: .\evaluation\templates\admin\evaluation\hamilton\change_form.html:6
 msgid "Hamilton"
 msgstr ""
 
-#: models/hamilton.py:162
+#: .\evaluation\models\hamilton.py:162
+#, fuzzy
+#| msgid "Evaluations"
 msgid "Hamiltons"
-msgstr ""
+msgstr "Avaliações"
 
-#: models/kviq.py:11
+#: .\evaluation\models\kviq.py:11
 msgid "Image as clear as seeing"
 msgstr "Imagem tão clara como ver"
 
-#: models/kviq.py:12
+#: .\evaluation\models\kviq.py:12
 msgid "Clear image"
 msgstr "Imagem clara"
 
-#: models/kviq.py:13
+#: .\evaluation\models\kviq.py:13
 msgid "Moderately clear image"
 msgstr "Imagem moderadamente clara"
 
-#: models/kviq.py:14
-#, fuzzy
-#| msgid "Clear image"
+#: .\evaluation\models\kviq.py:14
 msgid "Blurred image"
-msgstr "Imagem clara"
+msgstr "Imagem turva"
 
-#: models/kviq.py:15
-#, fuzzy
-#| msgid "Clear image"
+#: .\evaluation\models\kviq.py:15
 msgid "No image"
-msgstr "Imagem clara"
+msgstr "Sem imagem"
 
-#: models/kviq.py:19
+#: .\evaluation\models\kviq.py:19
 msgid "As intense as performing the action"
-msgstr ""
+msgstr "Tão intensa como executar a ação"
 
-#: models/kviq.py:20
+#: .\evaluation\models\kviq.py:20
 msgid "Intense"
-msgstr ""
+msgstr "Intensa"
 
-#: models/kviq.py:21
-#, fuzzy
-#| msgid "Moderate assistance"
+#: .\evaluation\models\kviq.py:21
 msgid "Moderately intense"
-msgstr "Moderada assistência (50%) / Dependente"
+msgstr "Moderadamente intensa"
 
-#: models/kviq.py:22
-#, fuzzy
-#| msgctxt "FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY"
-#| msgid "Slight tremor"
+#: .\evaluation\models\kviq.py:22
 msgid "Slightly intense"
-msgstr "Leve e sistemática"
+msgstr "Levemente intensa"
 
-#: models/kviq.py:23
+#: .\evaluation\models\kviq.py:23
 msgid "No sensation"
-msgstr ""
+msgstr "Sem sensação"
 
-#: models/kviq.py:28
+#: .\evaluation\models\kviq.py:27
 msgid "Left"
-msgstr ""
+msgstr "Esquerda"
 
-#: models/kviq.py:28
+#: .\evaluation\models\kviq.py:28
 msgid "Right"
-msgstr ""
+msgstr "Direita"
 
-#: models/period.py:11
+#: .\evaluation\models\kviq.py:33
+msgid "Neck visual images"
+msgstr "Pescoço - visual de imagens"
+
+#: .\evaluation\models\kviq.py:34
+msgid "Neck cine images"
+msgstr "Pescoço - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:35
+msgid "Shoulder elevation visual images"
+msgstr "Erquer ombro - visual de imagens"
+
+#: .\evaluation\models\kviq.py:36
+msgid "Shoulder elevation cine images"
+msgstr "Erguer ombro - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:37
+msgid "Shoulder flexion dominant visual images"
+msgstr "Flexão do ombro dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:38
+msgid "Shoulder flexion dominant cine images"
+msgstr "Flexão do ombro dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:39
+msgid "Shoulder flexion not dominant visual images"
+msgstr "Flexão do ombro não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:40
+msgid "Shoulder flexion not dominant cine images"
+msgstr "Flexão do ombro não dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:41
+msgid "Elbow dominant visual images"
+msgstr "Flexão do cotovelo dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:42
+msgid "Elbow dominant cine images"
+msgstr "Flexão do cotovelo dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:43
+msgid "Elbow not dominant visual images"
+msgstr "Flexão do cotovelo não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:44
+msgid "Elbow not dominant cine images"
+msgstr "Flexão do cotovelo não dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:45
+msgid "Thumb dominant visual images"
+msgstr "Polegar dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:46
+msgid "Thumb dominant cine images"
+msgstr "Polegar dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:47
+msgid "Thumb not dominant visual images"
+msgstr "Polegar não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:48
+msgid "Thumb not dominant cine images"
+msgstr "Polegar não dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:49
+msgid "Trunk visual images"
+msgstr "Flexão do tronco - visual de imagens"
+
+#: .\evaluation\models\kviq.py:50
+msgid "Trunk cine images"
+msgstr "Flexão do tronco - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:51
+msgid "Knee dominant visual images"
+msgstr "Extensão do joelho dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:52
+msgid "Knee dominant cine images"
+msgstr "Extensão do joelho dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:53
+msgid "Knee not dominant visual images"
+msgstr "Extensão do joelho não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:54
+msgid "Knee not dominant cine images"
+msgstr "Extensão do joelho não dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:55
+msgid "Hip dominant visual images"
+msgstr "Abdução do quadril dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:56
+msgid "Hip dominant cine images"
+msgstr "Abdução do quadril dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:57
+msgid "Hip not dominant visual images"
+msgstr "Abdução do quadril não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:58
+msgid "Hip not dominant cine images"
+msgstr "Abdução do quadril não dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:59
+msgid "Foot tapping dominant visual images"
+msgstr "Bater o pé dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:60
+msgid "Foot tapping dominant cine images"
+msgstr "Bater o pé dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:61
+msgid "Foot tapping not dominant visual images"
+msgstr "Bater o pé não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:62
+msgid "Foot tapping not dominant cine images"
+msgstr "Bater o pé não dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:63
+msgid "Foot rotation dominant visual images"
+msgstr "Rotação do pé dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:64
+msgid "Foot rotation dominant cine images"
+msgstr "Rotação do pé dominante - imagens cinestésica"
+
+#: .\evaluation\models\kviq.py:65
+msgid "Foot rotation not dominant visual images"
+msgstr "Rotação do pé não dominante - visual de imagens"
+
+#: .\evaluation\models\kviq.py:66
+msgid "Foot rotation not dominant cine images"
+msgstr "Rotação do pé não dominante - imagens cinestésica"
+
+#: .\evaluation\models\mmse.py:25
+msgctxt "MMSE"
+msgid "Day of the week"
+msgstr "Dia da semana (1 ponto)"
+
+#: .\evaluation\models\mmse.py:26
+msgctxt "MMSE"
+msgid "Day of the month"
+msgstr "Dia do mês (1 ponto)"
+
+#: .\evaluation\models\mmse.py:27
+msgctxt "MMSE"
+msgid "Month"
+msgstr "Mês (1 ponto)"
+
+#: .\evaluation\models\mmse.py:28
+msgctxt "MMSE"
+msgid "Year"
+msgstr "Ano (1 ponto)"
+
+#: .\evaluation\models\mmse.py:29
+msgctxt "MMSE"
+msgid "Approximate time"
+msgstr "Hora aproximada (1 ponto)"
+
+#: .\evaluation\models\mmse.py:30
+msgctxt "MMSE"
+msgid "Specific place (room or sector)"
+msgstr "Local específico (aposento ou setor) (1 ponto)"
+
+#: .\evaluation\models\mmse.py:31
+msgctxt "MMSE"
+msgid "Institution (home, hospital, clinic)"
+msgstr "Instituição (residência, hospital, clínica) (1 ponto)"
+
+#: .\evaluation\models\mmse.py:32
+msgctxt "MMSE"
+msgid "District or nearby street"
+msgstr "Bairro ou rua próxima (1 ponto)"
+
+#: .\evaluation\models\mmse.py:33
+msgctxt "MMSE"
+msgid "City"
+msgstr "Cidade (1 ponto)"
+
+#: .\evaluation\models\mmse.py:34
+msgctxt "MMSE"
+msgid "State"
+msgstr "Estado (1 ponto)"
+
+#: .\evaluation\models\mmse.py:36
+msgctxt "MMSE"
+msgid "Registration"
+msgstr "Memória imediata"
+
+#: .\evaluation\models\mmse.py:36
+#, fuzzy
+#| msgctxt "MMSE"
+#| msgid ""
+#| "Name 3 objects: 1 second to say each. Then ask the patientall 3 after you "
+#| "have said them. Give 1 point for each correct answer.Then repeat them "
+#| "until he/she learns all 3. Count trials and record"
+msgctxt "MMSE"
+msgid ""
+"Name 3 objects: 1 second to say each. Then ask the patient all 3 after you "
+"have said them. Give 1 point for each correct answer.Then repeat them until "
+"he/she learns all 3. Count trials and record"
+msgstr ""
+"Fale 3 palavras não relacionadas. Posteriormente pergunte ao paciente pelas "
+"3 palavras. Dê 1 ponto para cada palavra certa. <br>Depois repita as "
+"palavras e certifique-se de que o paciente as aprendeu, pois mais adiante "
+"você irá perguntá-las novamente"
+
+#: .\evaluation\models\mmse.py:38
+msgctxt "MMSE"
+msgid "Attention and calculation"
+msgstr "Atenção e cálculo"
+
+#: .\evaluation\models\mmse.py:38
+msgctxt "MMSE"
+msgid ""
+"Count backward from 100 by sevens. 1 point for each correct answer. Stop "
+"after 5 answers. Alternatively spell \"world\" backward."
+msgstr "Subtrair 100-7, 7 vezes sucessivamente ( ponto para cada cálculo correto)<br>Alternativamente, soletrar MUNDO de trás para frente."
+
+#: .\evaluation\models\mmse.py:40
+msgctxt "MMSE"
+msgid "Recall"
+msgstr "Evocação"
+
+#: .\evaluation\models\mmse.py:40
+msgctxt "MMSE"
+msgid ""
+"Ask for the 3 objects repeated above. Give 1 point for each correct answer."
+msgstr "Pergunte pelas 3 palavras ditas anteriormente (1 ponto por palavra)"
+
+#: .\evaluation\models\mmse.py:42
+msgctxt "MMSE"
+msgid "Name a pencil and watch."
+msgstr "Nomear um relógio e uma caneta (2 pontos)"
+
+#: .\evaluation\models\mmse.py:43
+msgctxt "MMSE"
+msgid "Repeat the following \"No ifs, ands, or buts\""
+msgstr "Repetir 'nem aqui, nem ali, nem lá' (1 ponto)"
+
+#: .\evaluation\models\mmse.py:44
+msgctxt "MMSE"
+msgid ""
+"Follow a 3-stage command. \"Take a paper in your hand, fold it in half, and "
+"put it on the floor.\""
+msgstr "Comando: 'pegue este papel com a mão direita dobre ao meio e coloque no chão' (3 pontos)"
+
+#: .\evaluation\models\mmse.py:45
+msgctxt "MMSE"
+msgid "Read and obey the following: CLOSE YOUR EYES"
+msgstr "Ler e obedecer 'feche os olhos' (1 ponto)"
+
+#: .\evaluation\models\mmse.py:46
+msgctxt "MMSE"
+msgid "Write a sentence"
+msgstr "Escrever uma frase (1 ponto)"
+
+#: .\evaluation\models\mmse.py:47
+msgctxt "MMSE"
+msgid "Copy the design shown"
+msgstr "Copiar um desenho (1 ponto)"
+
+#: .\evaluation\models\mmse.py:50 .\evaluation\models\mmse.py:51
+msgid "MMSE"
+msgstr "MEEM"
+
+#: .\evaluation\models\period.py:11
 msgid "Parent"
 msgstr ""
 
-#: models/sis.py:8
-#, fuzzy
-#| msgid "A lot of time"
+#: .\evaluation\models\sis.py:12
+msgctxt "CHOICES_STRENGTH"
 msgid "A lot of strength"
-msgstr "Boa parte do tempo"
+msgstr "muita força"
 
-#: models/sis.py:9
+#: .\evaluation\models\sis.py:13
+msgctxt "CHOICES_STRENGTH"
 msgid "Quite a bit of strength"
-msgstr ""
+msgstr "um pouco de força"
 
-#: models/sis.py:10
+#: .\evaluation\models\sis.py:14
+msgctxt "CHOICES_STRENGTH"
 msgid "Some strength"
-msgstr ""
+msgstr "alguma força"
 
-#: models/sis.py:11
+#: .\evaluation\models\sis.py:15
+msgctxt "CHOICES_STRENGTH"
 msgid "A little strength"
-msgstr ""
+msgstr "minima força"
 
-#: models/sis.py:12
-#, fuzzy
-#| msgctxt "tension"
-#| msgid "Not at all"
+#: .\evaluation\models\sis.py:16
+msgctxt "CHOICES_STRENGTH"
 msgid "No strength at all"
-msgstr "Nunca"
+msgstr "nenhuma força"
 
-#: templates/admin/app_index.html:9 templates/admin/index.html:16
-#: templates/reversion-compare/compare.html:19
+#: .\evaluation\models\sis.py:18
+msgid "a. Arm that was most affected"
+msgstr "a. braço que foi mais afetado?"
+
+#: .\evaluation\models\sis.py:19
+msgid "b. Grip of your hand that was most affected"
+msgstr "b. preensão da mão que foi mais afetada?"
+
+#: .\evaluation\models\sis.py:20
+msgid "c. Leg that was most affected"
+msgstr "c. perna que foi mais afetada?"
+
+#: .\evaluation\models\sis.py:21
+msgid "d. Foot/ankle that was most affected"
+msgstr "d. pé/tonozelo que foi mais afetado?"
+
+#: .\evaluation\models\sis.py:25
+msgctxt "CHOICES_DIFICULTY"
+msgid "Not difficult at all"
+msgstr "nada dicífil"
+
+#: .\evaluation\models\sis.py:26
+msgctxt "CHOICES_DIFICULTY"
+msgid "A little difficult"
+msgstr "um pouco difícil"
+
+#: .\evaluation\models\sis.py:27
+msgctxt "CHOICES_DIFICULTY"
+msgid "Somewhat difficult"
+msgstr "mais ou menos difícil"
+
+#: .\evaluation\models\sis.py:28
+msgctxt "CHOICES_DIFICULTY"
+msgid "Very difficult"
+msgstr "muito difícil"
+
+#: .\evaluation\models\sis.py:29
+msgctxt "CHOICES_DIFICULTY"
+msgid "Extremely difficult"
+msgstr "extremamente difícil"
+
+#: .\evaluation\models\sis.py:31
+msgid "a. Remember things that people just told you?"
+msgstr "a. lembrar de coisas que as pessoas te disseram?"
+
+#: .\evaluation\models\sis.py:32
+msgid "b. Remember things that happened the day before?"
+msgstr "b. lembrar de coisas que aconteceram no dia anterior?"
+
+#: .\evaluation\models\sis.py:33
+msgid ""
+"c. Remember to do things (e.g. keep scheduled appointments or take "
+"medication)?"
+msgstr ""
+"c. lembrar de fazer as coisas (por exemplo, manter compromissos agendados ou "
+"medicamentos?"
+
+#: .\evaluation\models\sis.py:34
+msgid "d. Remember the day of the week?"
+msgstr "d. lembrar o dia da semana?"
+
+#: .\evaluation\models\sis.py:35
+msgid "e. Concentrate?"
+msgstr "e. concentrar-se?"
+
+#: .\evaluation\models\sis.py:36
+msgid "f. Think quickly?"
+msgstr "f. pensar rapidamente?"
+
+#: .\evaluation\models\sis.py:37
+msgid "g. Solve everyday problems?"
+msgstr "g. resolver problemas do dia-a-dia?"
+
+#: .\evaluation\models\sis.py:41
+msgctxt "CHOICES_MOOD"
+msgid "None of the time"
+msgstr "nenhuma vez"
+
+#: .\evaluation\models\sis.py:42
+msgctxt "CHOICES_MOOD"
+msgid "A little of the time"
+msgstr "poucas vezes"
+
+#: .\evaluation\models\sis.py:43
+msgctxt "CHOICES_MOOD"
+msgid "Some of the time"
+msgstr "algumas vezes"
+
+#: .\evaluation\models\sis.py:44
+msgctxt "CHOICES_MOOD"
+msgid "Most of the time"
+msgstr "a maioria das vezes"
+
+#: .\evaluation\models\sis.py:45
+msgctxt "CHOICES_MOOD"
+msgid "All of the time"
+msgstr "todo o tempo"
+
+#: .\evaluation\models\sis.py:47
+msgid "a. Feel sad?"
+msgstr "a. sentiu-se triste?"
+
+#: .\evaluation\models\sis.py:48
+msgid "b. Feel that there is nobody you are close to?"
+msgstr "b. sentiu que não há ninguém próximo de você?"
+
+#: .\evaluation\models\sis.py:49
+msgid "c. Feel that you are a burden to others?"
+msgstr "c. sentiu que você é um fardo para os outros?"
+
+#: .\evaluation\models\sis.py:50
+msgid "d. Feel that you have nothing to look forward to?"
+msgstr "d. sentiu que você não tem nada para olhar para frente (futuro)?"
+
+#: .\evaluation\models\sis.py:51
+msgid "e. Blame yourself for mistakes that you made?"
+msgstr "e. responsabilizou-se pelos erros que você fez?"
+
+#: .\evaluation\models\sis.py:52
+msgid "f. Enjoy things as much as ever?"
+msgstr "f. aprecia as coisas mais do que nunca?"
+
+#: .\evaluation\models\sis.py:53
+msgid "g. Feel quite nervous?"
+msgstr "g. sentiu-se muito nervoso?"
+
+#: .\evaluation\models\sis.py:54
+msgid "h. Feel that life is worth living?"
+msgstr "h. sentiu que a vida vale a pena viver?"
+
+#: .\evaluation\models\sis.py:55
+msgid "i. Smile and laugh at least once a day?"
+msgstr "i. sorriu e riu pelo menos uma vez por dia?"
+
+#: .\evaluation\models\sis.py:59
+msgctxt "CHOICES_COMMUNICATION"
+msgid "Not difficult at all"
+msgstr "nada difícil"
+
+#: .\evaluation\models\sis.py:60
+msgctxt "CHOICES_COMMUNICATION"
+msgid "A little difficult"
+msgstr "um pouco difícil"
+
+#: .\evaluation\models\sis.py:61
+msgctxt "CHOICES_COMMUNICATION"
+msgid "Somewhat difficult"
+msgstr "mais ou menos difícil"
+
+#: .\evaluation\models\sis.py:62
+msgctxt "CHOICES_COMMUNICATION"
+msgid "Very difficult"
+msgstr "muito difícil"
+
+#: .\evaluation\models\sis.py:63
+msgctxt "CHOICES_COMMUNICATION"
+msgid "Extremely difficult"
+msgstr "extremamente difícil"
+
+#: .\evaluation\models\sis.py:65
+msgid "a. Say the name of someone who was in front of you?"
+msgstr "a. dizer o nome de alguém que estava na sua frente?"
+
+#: .\evaluation\models\sis.py:66
+msgid "b. Understand what was being said to you in a conversation?"
+msgstr "b. entender o que estava sendo dito a você em uma conversa?"
+
+#: .\evaluation\models\sis.py:67
+msgid "c. Reply to questions?"
+msgstr "c. responder às perguntas?"
+
+#: .\evaluation\models\sis.py:68
+msgid "d. Correctly name objects?"
+msgstr "d. nomear corretamente os objetos?"
+
+#: .\evaluation\models\sis.py:69
+msgid "e. Participate in a conversation with a group of people?"
+msgstr "e. participar de uma conversa com um grupo de pessoas?"
+
+#: .\evaluation\models\sis.py:70
+msgid "f. Have a conversation on the telephone? "
+msgstr "f. ter uma conversa ao telefone?"
+
+#: .\evaluation\models\sis.py:71
+msgid ""
+"g. Call another person on the telephone, including selecting the correct "
+"phone number and dialing?"
+msgstr ""
+"g. conversar com outra pessoa no telefone, incluindo a seleção do número "
+"correto e a discagem?"
+
+#: .\evaluation\models\sis.py:75
+msgctxt "CHOICES_ACTIVITIES"
+msgid "Not difficult at all"
+msgstr "nada difícil"
+
+#: .\evaluation\models\sis.py:76
+msgctxt "CHOICES_ACTIVITIES"
+msgid "A little difficult"
+msgstr "um pouco difícil"
+
+#: .\evaluation\models\sis.py:77
+msgctxt "CHOICES_ACTIVITIES"
+msgid "Somewhat difficult"
+msgstr "mais ou menos difícil"
+
+#: .\evaluation\models\sis.py:78
+msgctxt "CHOICES_ACTIVITIES"
+msgid "Very difficult"
+msgstr "muito difícil"
+
+#: .\evaluation\models\sis.py:79
+msgctxt "CHOICES_ACTIVITIES"
+msgid "Could not do at all"
+msgstr "não consigo realizar"
+
+#: .\evaluation\models\sis.py:81
+msgid "a. Cut your food with a knife and fork?"
+msgstr "a. cortar a sua comida com o garfo e faca?"
+
+#: .\evaluation\models\sis.py:82
+msgid "b. Dress the top part of your body?"
+msgstr "b. vestir a parte superior do seu corpo?"
+
+#: .\evaluation\models\sis.py:83
+msgid "c. Bathe yourself?"
+msgstr "c. banhar-se?"
+
+#: .\evaluation\models\sis.py:84
+msgid "d. Clip your toenails?"
+msgstr "d. cortar suas unhas?"
+
+#: .\evaluation\models\sis.py:85
+msgid "e. Get to the toilet on time?"
+msgstr "e. ir ao banheiro a tempo?"
+
+#: .\evaluation\models\sis.py:86
+msgid "f. Control your bladder (not have an accident)?"
+msgstr "f. controlar sua bexiga (não ter um acidente)?"
+
+#: .\evaluation\models\sis.py:87
+msgid "g. Control your bowels (not have an accident)?"
+msgstr "g. controlar seu intestino (não ter um acidente)?"
+
+#: .\evaluation\models\sis.py:88
+msgid ""
+"h. Do light household tasks/chores(e.g. dust, make a bed, take out garbage, "
+"do the dishes)?"
+msgstr ""
+"h. fazer tarefas domésticas leves (ex. poeira, arrumar a cama, tirar o lixo, "
+"lavar pratos)?"
+
+#: .\evaluation\models\sis.py:89
+msgid "i. Go shopping?"
+msgstr "i. ir as compras?"
+
+#: .\evaluation\models\sis.py:90
+msgid "j. Do heavy household chores (e.g.vacuum, laundry or yard work)?"
+msgstr ""
+"j. fazer tarefas domésticas pesadas (ex. lavar roupa, varrer quintal, passar "
+"aspirador de pó)?"
+
+#: .\evaluation\models\sis.py:94
+msgctxt "CHOICES_MOBILE"
+msgid "Not difficult at all"
+msgstr "nada difícil"
+
+#: .\evaluation\models\sis.py:95
+msgctxt "CHOICES_MOBILE"
+msgid "A little difficult"
+msgstr "um pouco difícil"
+
+#: .\evaluation\models\sis.py:96
+msgctxt "CHOICES_MOBILE"
+msgid "Somewhat difficult"
+msgstr "mais ou menos difícil"
+
+#: .\evaluation\models\sis.py:97
+msgctxt "CHOICES_MOBILE"
+msgid "Very difficult"
+msgstr "muito difícil"
+
+#: .\evaluation\models\sis.py:98
+msgctxt "CHOICES_MOBILE"
+msgid "Could not do at all"
+msgstr "não consigo realizar"
+
+#: .\evaluation\models\sis.py:100
+msgid "a. Stay sitting without losing your balance?"
+msgstr "a. ficar sentado sem perder o equilíbrio?"
+
+#: .\evaluation\models\sis.py:101
+msgid "b. Stay standing without losing your balance?"
+msgstr "b. ficar de pé sem perder o equilíbrio?"
+
+#: .\evaluation\models\sis.py:102
+msgid "c. Walk without losing your balance?"
+msgstr "c. andar sem perder o equilíbrio?"
+
+#: .\evaluation\models\sis.py:103
+msgid "d. Move from a bed to a chair?"
+msgstr "d. passar de uma cama para uma cadeira?"
+
+#: .\evaluation\models\sis.py:104
+msgid "e. Walk one block?"
+msgstr "e. andar um quarteirão?"
+
+#: .\evaluation\models\sis.py:105
+msgid "f. Walk fast?"
+msgstr "f. andar rápido?"
+
+#: .\evaluation\models\sis.py:106
+msgid "g. Climb one flight of stairs?"
+msgstr "g. subir um lance de escadas?"
+
+#: .\evaluation\models\sis.py:107
+msgid "h. Climb several flights of stairs?"
+msgstr "h. subir vários lances de escada?"
+
+#: .\evaluation\models\sis.py:108
+msgid "i. Get in and out of a car?"
+msgstr "i. entrar e sair de um carro?"
+
+#: .\evaluation\models\sis.py:112
+msgctxt "CHOICES_HAND"
+msgid "Not difficult at all"
+msgstr "nada difícil"
+
+#: .\evaluation\models\sis.py:113
+msgctxt "CHOICES_HAND"
+msgid "A little difficult"
+msgstr "um pouco difícil"
+
+#: .\evaluation\models\sis.py:114
+msgctxt "CHOICES_HAND"
+msgid "Somewhat difficult"
+msgstr "mais ou menos difícil"
+
+#: .\evaluation\models\sis.py:115
+msgctxt "CHOICES_HAND"
+msgid "Very difficult"
+msgstr "muito difícil"
+
+#: .\evaluation\models\sis.py:116
+msgctxt "CHOICES_HAND"
+msgid "Could not do at all"
+msgstr "não consigo realizar"
+
+#: .\evaluation\models\sis.py:118
+msgid "a. Carry heavy objects (e.g. bag of groceries)?"
+msgstr "a. carregar objetos pesados (ex. sacola de compras)?"
+
+#: .\evaluation\models\sis.py:119
+msgid "b. Turn a doorknob?"
+msgstr "b. virar uma maçaneta?"
+
+#: .\evaluation\models\sis.py:120
+msgid "c. Open a can or jar?"
+msgstr "c. abrir uma lata ou pote?"
+
+#: .\evaluation\models\sis.py:121
+msgid "d. Tie a shoe lace?"
+msgstr "d. amarrar um cordão de sapatos?"
+
+#: .\evaluation\models\sis.py:122
+msgid "e. Pick up a dime?"
+msgstr "e. pegar uma moeda de 10 centavos?"
+
+#: .\evaluation\models\sis.py:126
+msgctxt "CHOICES_TIME"
+msgid "None of the time"
+msgstr "nenhuma vez"
+
+#: .\evaluation\models\sis.py:127
+msgctxt "CHOICES_TIME"
+msgid "A little of the time"
+msgstr "poucas vezes"
+
+#: .\evaluation\models\sis.py:128
+msgctxt "CHOICES_TIME"
+msgid "Some of the time"
+msgstr "algumas vezes"
+
+#: .\evaluation\models\sis.py:129
+msgctxt "CHOICES_TIME"
+msgid "Most of the time"
+msgstr "a maioria das vezes"
+
+#: .\evaluation\models\sis.py:130
+msgctxt "CHOICES_TIME"
+msgid "All of the time"
+msgstr "todo o tempo"
+
+#: .\evaluation\models\sis.py:132
+msgid "a. Your work (paid, voluntary or other)"
+msgstr "a. seu trabalho (pago, voluntária ou outro)?"
+
+#: .\evaluation\models\sis.py:133
+msgid "b. Your social activities?"
+msgstr "b. suas atividades sociais?"
+
+#: .\evaluation\models\sis.py:134
+msgid "c. Quiet recreation (crafts, reading)?"
+msgstr "c. recreação tranquila (artesanato, leitura)?"
+
+#: .\evaluation\models\sis.py:135
+msgid "d. Active recreation (sports, outings,travel)?"
+msgstr "d. recreação ativa (esportes, passeios, viagens)?"
+
+#: .\evaluation\models\sis.py:136
+msgid "e. Your role as a family member and/or friend?"
+msgstr "e. seu papel como um membro da família e/ou amigo?"
+
+#: .\evaluation\models\sis.py:137
+msgid "f. Your participation in spiritual or religious activities?"
+msgstr "f. sua participação em atividades religiosas ou espirituais?"
+
+#: .\evaluation\models\sis.py:138
+msgid "g. Your ability to control your life as you wish?"
+msgstr "g. sua capacidade de controlar sua vida como você deseja?"
+
+#: .\evaluation\models\sis.py:139
+msgid "h. Your ability to help others?"
+msgstr "h. sua capacidade de ajudar os outros?"
+
+#: .\evaluation\models\sis.py:142
+msgid "Stroke Recovery scale"
+msgstr "Escala de recuperação do AVE"
+
+#: .\evaluation\templates\admin\app_index.html:9
+#: .\evaluation\templates\admin\index.html:16
+#: .\evaluation\templates\reversion-compare\compare.html:19
 msgid "Home"
 msgstr "Pág. principal"
 
-#: templates/admin/app_index.html:20
+#: .\evaluation\templates\admin\app_index.html:20
 msgid "administration"
-msgstr ""
+msgstr "administração"
 
-#: templates/admin/base.html:69
+#: .\evaluation\templates\admin\base.html:69
 msgid "Welcome,"
-msgstr ""
+msgstr "Bem vindo,"
 
-#: templates/admin/base.html:73
+#: .\evaluation\templates\admin\base.html:73
 msgid "View site"
 msgstr ""
 
-#: templates/admin/base.html:78 templates/admin/base.html.py:120
-#, fuzzy
-#| msgid "Locomotion"
+#: .\evaluation\templates\admin\base.html:78
+#: .\evaluation\templates\admin\base.html:120
 msgid "Documentation"
-msgstr "Locomoção"
+msgstr ""
 
-#: templates/admin/base.html:82
+#: .\evaluation\templates\admin\base.html:82
 msgid "Change password"
 msgstr ""
 
-#: templates/admin/base.html:84
+#: .\evaluation\templates\admin\base.html:84
 msgid "Log out"
 msgstr ""
 
-#: templates/admin/base.html:94
+#: .\evaluation\templates\admin\base.html:94
 msgid "Recent Actions"
 msgstr ""
 
-#: templates/admin/base.html:106
+#: .\evaluation\templates\admin\base.html:106
 msgid "Unknown content"
 msgstr ""
 
-#: templates/admin/base.html:111
+#: .\evaluation\templates\admin\base.html:111
 msgid "None available"
 msgstr ""
 
-#: templates/admin/base_site.html:4
+#: .\evaluation\templates\admin\base_site.html:4
 msgid "Django site admin"
 msgstr ""
 
-#: templates/admin/evaluation/bostonaphasia/change_form.html:6
+#: .\evaluation\templates\admin\evaluation\bostonaphasia\change_form.html:6
 msgid "Boston Aphasia"
 msgstr ""
 
-#: templates/admin/evaluation/clin/change_form.html:6
-#: templates/admin/evaluation/fim/change_form.html:6
+#: .\evaluation\templates\admin\evaluation\clin\change_form.html:6
+#: .\evaluation\templates\admin\evaluation\fim\change_form.html:6
 msgid "FUNCTIONAL INDEPENDENCE MEASURE - FIM"
 msgstr "MEDIDA DE INDEPENDÊNCIA FUNCIONAL – MIF"
 
-#: templates/admin/evaluation/fim/change_form.html:20
+#: .\evaluation\templates\admin\evaluation\eeg\change_form.html:6
+msgid "EEG"
+msgstr ""
+
+#: .\evaluation\templates\admin\evaluation\fim\change_form.html:20
 msgid "Level"
 msgstr "Nível"
 
-#: templates/admin/evaluation/fuglmeyer/change_form.html:29
+#: .\evaluation\templates\admin\evaluation\fuglmeyer\change_form.html:31
 msgid "Fugl Meyer"
-msgstr ""
+msgstr "Fugl Meyer"
 
-#: templates/admin/evaluation/fuglmeyer/change_form.html:34
+#: .\evaluation\templates\admin\evaluation\fuglmeyer\change_form.html:36
 msgid "Upper Extremity"
 msgstr "Função motora do membro superior"
 
-#: templates/admin/evaluation/fuglmeyer/change_form.html:35
+#: .\evaluation\templates\admin\evaluation\fuglmeyer\change_form.html:37
 msgid "Lower Extremity"
 msgstr "Função motora do membro inferior"
 
-#: templates/admin/evaluation/had/change_form.html:6
+#: .\evaluation\templates\admin\evaluation\had\change_form.html:6
 msgid "HOSPITAL ANXIETY AND DEPRESSION - HAD"
 msgstr "HAD - AVALIAÇÃO DO NÍVEL DE ANSIEDADE E DEPRESSÃO"
 
-#: templates/admin/evaluation/kviq/change_form.html:6
+#: .\evaluation\templates\admin\evaluation\kviq\change_form.html:6
 msgid "Kinesthetic and visual Imagery Questionnaire"
 msgstr ""
 
-#: templates/admin/evaluation/sis/change_form.html:6
-msgid "Stroke Impact Scale"
+#: .\evaluation\templates\admin\evaluation\mmse\change_form.html:6
+msgid "MINI MENTAL STATE EXAMINATION - MMSE"
 msgstr ""
 
-#: templates/admin/includes/fieldset/row_total.html:15
+#: .\evaluation\templates\admin\evaluation\sis\change_form.html:6
+msgid "Stroke Impact Scale"
+msgstr " Escala de Impacto do AVC"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:34
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:34
+#, python-format
+msgid "Less than 50%% (33 points) - Serious motor impairment"
+msgstr "Menos que 50%% (33 pontos) - Incapacidade Motora Severa"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:35
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:35
+#, python-format
+msgid "Between 51-84%% (34 a 55 points) - Moderate motor impairment"
+msgstr "Entre 51-84%% (34 a 55 pontos) - Incapacidade Motora Moderada"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:36
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:36
+#, python-format
+msgid "Between 84 - 99%% (56 a 65 points) - Mild motor impairment"
+msgstr "Entre 84 - 99%% (56 a 65 pontos) - Incapacidade Motora Leve"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:43
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:43
+#: .\evaluation\templates\admin\includes\fieldset\row_total.html:15
 msgid "Subtotal max"
 msgstr "Pontuação máxima"
 
-#: templates/admin/includes/fieldset/row_total.html:19
-msgid "Total"
-msgstr ""
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:4
+msgid "Motor function scale interpretation (100 points)"
+msgstr "Interpretação de função motora (100 pontos)"
 
-#: templates/admin/index.html:62
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:8
+msgid "Motor function points:"
+msgstr "Pontuação para função motora"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:11
+msgid "less than 50 points - severe motor impairment"
+msgstr "até 50 pontos - comprometimento motor severo (GRAVE)"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:14
+msgid "50 - 84 points - marked motor impairment"
+msgstr "de 50 à 84 pontos - comprometimento marcante "
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:17
+msgid "85 - 95 points - moderatemotor impairment"
+msgstr "85 à 95 pontos - comprometimento moderado"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:20
+msgid "96 - 99 points - slight motor impairment"
+msgstr "96 à 99 pontos - comprometimento leve"
+
+#: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_13_total.html:23
+msgid "100 points - normal motor performance"
+msgstr "100 pontos - sem alteração"
+
+#: .\evaluation\templates\admin\index.html:62
 msgid "Evaluations"
-msgstr ""
+msgstr "Avaliações"
 
-#: templates/admin/index.html:65 templates/admin/index.html.py:79
+#: .\evaluation\templates\admin\index.html:65
+#: .\evaluation\templates\admin\index.html:79
 msgid "Answered"
-msgstr ""
+msgstr "Respondidas"
 
-#: templates/admin/index.html:69 templates/admin/index.html.py:83
+#: .\evaluation\templates\admin\index.html:69
+#: .\evaluation\templates\admin\index.html:83
 msgid "Unanswered"
-msgstr ""
+msgstr "Não respondidas"
 
-#: templates/admin/index.html:75
+#: .\evaluation\templates\admin\index.html:75
 msgid "Questionnaires"
-msgstr ""
+msgstr "Questionários"
 
-#: templates/admin/tag_patients.html:9
+#: .\evaluation\templates\admin\tag_patients.html:9
 msgid "Selecionar paciente"
 msgstr ""
 
-#: templates/reversion-compare/compare.html:22
+#: .\evaluation\templates\reversion-compare\compare.html:22
 msgid "History"
 msgstr "Histórico"
 
-#: templates/reversion-compare/compare.html:23
+#: .\evaluation\templates\reversion-compare\compare.html:23
 #, python-format
 msgid "Compare %(name)s"
 msgstr "Comparar %(name)s"
 
-#: templates/reversion-compare/compare.html:32
+#: .\evaluation\templates\reversion-compare\compare.html:32
 msgid "DATETIME_FORMAT"
 msgstr ""
 
-#: templates/reversion-compare/compare.html:32
+#: .\evaluation\templates\reversion-compare\compare.html:32
 #, python-format
 msgid ""
 "\n"
@@ -2161,57 +3053,29 @@ msgstr ""
 "strong>:\n"
 "            "
 
-#: templates/reversion-compare/compare.html:36
-#: templates/reversion-compare/compare.html:40
+#: .\evaluation\templates\reversion-compare\compare.html:36
+#: .\evaluation\templates\reversion-compare\compare.html:40
 msgid "Go back to history list"
 msgstr "Voltar para a lista de históricos"
 
-#~ msgctxt "UE_VOL_MOV_SYN_FLEX_TEXT"
 #~ msgid ""
-#~ "Hand from contralateral knee to ipsilateral ear. From extensor synergy "
-#~ "(shoulder adduction/ internal rotation, elbow extension, forearm "
-#~ "pronation) to flexor synergy (shoulder abduction/ external rotation, "
-#~ "elbow flexion, forearm supination)."
+#~ "Evaluated only if full score of 6 points achieved on 'Volitional movement "
+#~ "with little or no synergy'."
 #~ msgstr ""
-#~ "Posição inicial: sinergia flexora - caso não consiga mantê-la ativamente, "
-#~ "o examinador pode posicionar o membro superior de forma passiva em "
-#~ "direção ao joelho oposto com adução e rotação interna de ombro, extensão "
-#~ "de cotovelo e antebraço em pronação. Instrua o paciente a supinar "
-#~ "completamente o antebraço, dobrar o cotovelo, e trazer a mão até a orelha "
-#~ "do mesmo lado, o ombro deve estar abduzido a no mínimo 90°. Teste três "
-#~ "vezes o lado acometido e pontue o melhor movimento de cada articulação."
+#~ "Só é avaliada se o sujeito obteve pontuação de 6 pontos na soma dos 3 "
+#~ "itens anteriores (2 pontos cada) Caso não pontue: digitar 0.<br>O "
+#~ "examinador deve elicitar os reflexos fásicos de bíceps e tríceps com o "
+#~ "martelo de reflexos e os flexores dos dedos com um rápido alongamento do "
+#~ "braço afetado, notando se os reflexos estão ou não hiperativos"
 
-#~ msgctxt "UE_VOL_MOV_SYN_EXT_TEXT"
-#~ msgid "Hand from ipsilateral ear to the contralateral knee"
-#~ msgstr ""
-#~ "Posição inicial: sinergia extensora - caso não consiga mantê-la "
-#~ "ativamente, o examinador pode posicionar o membro superior de forma "
-#~ "passiva em sinergia reflexora. O paciente não deve realizar rotação ou "
-#~ "flexão do tronco. Instrua o sujeito a aduzir e rodar internamente o ombro "
-#~ "e estender o braço em direção ao joelho oposto com o antebraço pronado. O "
-#~ "peitoral maior e o tríceps braquial devem ser palpados para avaliar se há "
-#~ "movimento ativo. Teste três vezes o lado acometido e pontue o melhor "
-#~ "movimento de cada articulação"
+#~ msgid "Hold the paper between the thumb and forefinger"
+#~ msgstr "<strong>'Segure o papel entre o polegar e o indicador'</strong>"
 
-#~ msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
-#~ msgid "None"
-#~ msgstr "Sem atividade reflexa"
+#~ msgid "Hold the pen and keep it steady"
+#~ msgstr "<strong>'Segure a caneta e mantenha-a firme'</strong>"
 
-#~ msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
-#~ msgid "Can be elicited"
-#~ msgstr "Atividade reflexa presente"
-
-#~ msgctxt "FUGLM_UE_VOL_MOV_SYN_ACTIVITY"
-#~ msgid "None"
-#~ msgstr "Tarefa não pode ser realizada completamente "
-
-#~ msgctxt "FUGLM_UE_VOL_MOV_SYN_ACTIVITY"
-#~ msgid "Partial"
-#~ msgstr "Tarefa pode ser realizada parcialmente"
-
-#~ msgctxt "FUGLM_UE_VOL_MOV_SYN_ACTIVITY"
-#~ msgid "Full"
-#~ msgstr "Tarefa é realizada perfeitamente"
+#~ msgid "Hold the object and keep it steady"
+#~ msgstr "<strong>'Segure o objeto e mantenha-o firme'</strong>"
 
 #~ msgctxt "FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY"
 #~ msgid "Cannot be performed, hand in front of SIAS"
@@ -2225,12 +3089,37 @@ msgstr "Voltar para a lista de históricos"
 #~ msgid "Hand to lumbar spine (without compensation)"
 #~ msgstr "Ação realizada completamente (mão chega a coluna lombar)"
 
-#~ msgid ""
-#~ "Evaluated only if full score of 6 points achieved on 'Volitional movement "
-#~ "with little or no synergy'."
-#~ msgstr ""
-#~ "Só é avaliada se o sujeito obteve pontuação de 6 pontos na soma dos 3 "
-#~ "itens anteriores (2 pontos cada) Caso não pontue: digitar 0.<br>O "
-#~ "examinador deve elicitar os reflexos fásicos de bíceps e tríceps com o "
-#~ "martelo de reflexos e os flexores dos dedos com um rápido alongamento do "
-#~ "braço afetado, notando se os reflexos estão ou não hiperativos"
+#~ msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
+#~ msgid "Can be elicited"
+#~ msgstr "Atividade reflexa presente"
+
+#~ msgid "Hold the ball and keep it steady"
+#~ msgstr "<strong>'Segure a bola e mantenha-a firme'</strong>"
+
+#~ msgctxt "FuglMeyer_ue_normal_reflex_activity"
+#~ msgid "Normal reflex activity"
+#~ msgstr "Atividade Reflexa Normal"
+
+#~ msgctxt "FuglMeyer"
+#~ msgid "Normal reflex activity"
+#~ msgstr "Atividade Reflexa Normal"
+
+#~ msgctxt "FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY"
+#~ msgid "Complete pronation/supination, maintains position"
+#~ msgstr "Mantém posição com P/S completa"
+
+#~ msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY"
+#~ msgid "Cannot perform volitionally"
+#~ msgstr "Não realiza movimento ativo"
+
+#~ msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY"
+#~ msgid "Limited active range of motion"
+#~ msgstr "Movimento ativo com ADM incompleta"
+
+#~ msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY"
+#~ msgid "Full active range of motion, smoothly"
+#~ msgstr "Movimento ativo com ADM completa"
+
+#~ msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY"
+#~ msgid "Full active range of motion, smoothly"
+#~ msgstr "Sujeito não pode dorsifletir o punho até 15°"

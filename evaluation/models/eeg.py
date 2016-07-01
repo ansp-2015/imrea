@@ -9,7 +9,7 @@ def user_directory_path(instance, filename):
     return 'patient_{0}/eeg/{1}'.format(instance.patient.id, filename)
 
 class Eeg(BaseEvaluation):
-    eegtitle = models.CharField(max_length=250)
-    eegfile = models.FileField(upload_to=user_directory_path)
+    eegtitle = models.CharField(_(u'Title'), max_length=250)
+    eegfile = models.FileField(_(u'File '), upload_to=user_directory_path)
     
 

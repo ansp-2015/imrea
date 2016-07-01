@@ -25,11 +25,21 @@ class BaseAdmin(admin.ModelAdmin):
     get_patient_birthdate.short_description = _('Birthdate')
     get_patient_birthdate.admin_order_field = 'patient__birthdate'
 
+
+    def add_context_variables(self, extra_context=None):
+        """
+        Override this method to add context variables.
+        :param extra_context:
+        :return:
+        """
+        extra_context = extra_context or {}
+        return extra_context
+
     def add_view(self, request, form_url='', extra_context=None):
         """
         Override da view de adição para adicionar algumas variáveis extras de contexto
         """
-        extra_context = extra_context or {}
+        extra_context = self.add_context_variables(extra_context)
 
         return super(BaseAdmin, self).add_view(request, form_url, extra_context)
 
@@ -37,7 +47,7 @@ class BaseAdmin(admin.ModelAdmin):
         """
         Override da view de modificação para adicionar algumas variáveis extras de contexto
         """
-        extra_context = extra_context or {}
+        extra_context = self.add_context_variables(extra_context)
 
         # Campo read-only com a data de nascimento do paciente
         obj = self.get_object(request, unquote(object_id))
