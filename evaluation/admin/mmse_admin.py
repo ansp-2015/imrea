@@ -56,7 +56,7 @@ class MMSEAdmin(BaseAdmin):
                 'fieldset_data_col_width': '7',
             }
         }),
-        (_(u''), {
+        (_(u'Total'), {
             'fields': ('obs',),
             'description': {
                 'fieldset': '_1col',
