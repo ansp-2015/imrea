@@ -14,7 +14,7 @@ class EegAdmin(BaseAdmin):
             'fields': ('patient', 'period'),
             'description': {'fieldset': '_patient'}
         }),
-        (_(u'Arquivo'), {
+        (_(u'File'), {
             'fields': ('eegtitle', 'eegfile',),
             'description': {
                 'fieldset': '_1col',

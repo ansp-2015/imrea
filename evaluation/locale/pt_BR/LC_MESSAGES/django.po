@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-30 19:38-0300\n"
+"POT-Creation-Date: 2016-07-11 19:00-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,11 +24,13 @@ msgstr "Data de nascimento"
 
 #: .\evaluation\admin\bostonaphasia_admin.py:11
 #: .\evaluation\admin\clin_admin.py:13 .\evaluation\admin\eeg_admin.py:13
-#: .\evaluation\admin\fim_admin.py:19 .\evaluation\admin\fuglmeyer_admin.py:21
-#: .\evaluation\admin\had_admin.py:18 .\evaluation\admin\hamilton_admin.py:18
-#: .\evaluation\admin\kviq_admin.py:13 .\evaluation\admin\mmse_admin.py:18
+#: .\evaluation\admin\epworth_admin.py:27 .\evaluation\admin\fim_admin.py:19
+#: .\evaluation\admin\fuglmeyer_admin.py:21 .\evaluation\admin\had_admin.py:18
+#: .\evaluation\admin\hamilton_admin.py:18 .\evaluation\admin\kviq_admin.py:13
+#: .\evaluation\admin\mmse_admin.py:18 .\evaluation\admin\patient_admin.py:9
 #: .\evaluation\admin\sis_admin.py:15
 #: .\evaluation\models\base_evaluation.py:17
+#: .\evaluation\templates\admin\evaluation\patient\change_form.html:6
 #: .\evaluation\templates\admin\index.html:56
 msgid "Patient"
 msgstr "Paciente"
@@ -57,9 +59,25 @@ msgstr ""
 msgid "Line Crossing"
 msgstr "Cancelamento de linhas"
 
-#: .\evaluation\admin\eeg_admin.py:17
-msgid "Arquivo"
-msgstr "File"
+#: .\evaluation\admin\eeg_admin.py:17 .\evaluation\models\eeg.py:13
+msgid "File"
+msgstr "Arquivo"
+
+#: .\evaluation\admin\epworth_admin.py:13
+msgid ""
+"How likely are you to doze off or fall asleep in the following situations, "
+"in contrast to                         feeling just tired?"
+msgstr ""
+
+#: .\evaluation\admin\epworth_admin.py:15
+msgid "This refers to your usual way of life in recent times."
+msgstr ""
+
+#: .\evaluation\admin\epworth_admin.py:16
+msgid ""
+"Even if you haven’t done some of these things recently try to work out how "
+"they would have                         affected you."
+msgstr ""
 
 #: .\evaluation\admin\fim_admin.py:23
 msgid "Self Care"
@@ -242,7 +260,7 @@ msgstr "Membro superior"
 #: .\evaluation\admin\fuglmeyer_admin.py:248
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:44
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:44
-#: .\evaluation\templates\admin\includes\fieldset\row_total.html:19
+#: .\evaluation\templates\admin\includes\fieldset\row_total.html:28
 msgid "Total"
 msgstr "Total"
 
@@ -303,25 +321,42 @@ msgctxt "MMSEAdmin"
 msgid "Orientation"
 msgstr "Orientação"
 
-#: .\evaluation\admin\mmse_admin.py:30
+#: .\evaluation\admin\mmse_admin.py:32
 msgctxt "MMSEAdmin"
 msgid "Registration"
 msgstr "Memória imediata"
 
-#: .\evaluation\admin\mmse_admin.py:36
+#: .\evaluation\admin\mmse_admin.py:38
 msgctxt "MMSEAdmin"
 msgid "Attention and Calculation"
 msgstr "Atenção e cálculo"
 
-#: .\evaluation\admin\mmse_admin.py:42
+#: .\evaluation\admin\mmse_admin.py:44
 msgctxt "MMSEAdmin"
 msgid "Recall"
 msgstr "Evocação"
 
-#: .\evaluation\admin\mmse_admin.py:48
+#: .\evaluation\admin\mmse_admin.py:50
 msgctxt "MMSEAdmin"
 msgid "Language"
 msgstr "Linguagem"
+
+#: .\evaluation\admin\patient_admin.py:13
+msgid "Social characteristics"
+msgstr ""
+
+#: .\evaluation\admin\patient_admin.py:18
+#: .\evaluation\admin\patient_admin.py:23
+msgid "Family support"
+msgstr ""
+
+#: .\evaluation\admin\patient_admin.py:28
+msgid "Economic aspects"
+msgstr ""
+
+#: .\evaluation\admin\patient_admin.py:32
+msgid "Demographic data"
+msgstr ""
 
 #: .\evaluation\admin\sis_admin.py:19
 msgid ""
@@ -479,9 +514,61 @@ msgstr "Não"
 msgid "Title"
 msgstr "Titulo"
 
-#: .\evaluation\models\eeg.py:13
-msgid "File "
-msgstr "Arquivo"
+#: .\evaluation\models\epworth.py:14
+msgid "would never doze"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:15
+msgid "slight chance of dozing"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:16
+msgid "moderate chance of dozing"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:17
+msgid "high chance of dozing"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:20
+msgid "Sitting and reading"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:21
+msgid "Watching TV"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:22
+msgid "Sitting, inactive in a public place (e.g. a theatre or a meeting)"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:23
+msgid "As a passenger in a car for an hour without a break"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:24
+msgid "Lying down to rest in the afternoon when circumstances permit"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:25
+msgid "Sitting and talking to someone"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:26
+msgid "Sitting quietly after a lunch without alcohol"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:27
+msgid "In a car, while stopped for a few minutes in the traffic"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:30
+msgid "Epworth Sleepiness"
+msgstr ""
+
+#: .\evaluation\models\epworth.py:31
+msgid "Epwort Sleepiness"
+msgstr ""
 
 #: .\evaluation\models\fim.py:15
 msgid "Total assistance"
@@ -2346,7 +2433,9 @@ msgctxt "MMSE"
 msgid ""
 "Count backward from 100 by sevens. 1 point for each correct answer. Stop "
 "after 5 answers. Alternatively spell \"world\" backward."
-msgstr "Subtrair 100-7, 7 vezes sucessivamente ( ponto para cada cálculo correto)<br>Alternativamente, soletrar MUNDO de trás para frente."
+msgstr ""
+"Subtrair 100-7, 7 vezes sucessivamente ( ponto para cada cálculo correto)"
+"<br>Alternativamente, soletrar MUNDO de trás para frente."
 
 #: .\evaluation\models\mmse.py:40
 msgctxt "MMSE"
@@ -2374,7 +2463,9 @@ msgctxt "MMSE"
 msgid ""
 "Follow a 3-stage command. \"Take a paper in your hand, fold it in half, and "
 "put it on the floor.\""
-msgstr "Comando: 'pegue este papel com a mão direita dobre ao meio e coloque no chão' (3 pontos)"
+msgstr ""
+"Comando: 'pegue este papel com a mão direita dobre ao meio e coloque no "
+"chão' (3 pontos)"
 
 #: .\evaluation\models\mmse.py:45
 msgctxt "MMSE"
@@ -2394,6 +2485,407 @@ msgstr "Copiar um desenho (1 ponto)"
 #: .\evaluation\models\mmse.py:50 .\evaluation\models\mmse.py:51
 msgid "MMSE"
 msgstr "MEEM"
+
+#: .\evaluation\models\nihss.py:13
+msgid "Alert; keenly responsive."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:14
+msgid ""
+"Not alert; but arousable by minor stimulation to obey, answer, or respond."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:15
+msgid ""
+"Not alert; requires repeated stimulation to attend, or is obtunded and "
+"requires strong or painful stimulation to make movements (not stereotyped)."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:17
+msgid ""
+"Responds only with reflex motor or autonomic effects or totally "
+"unresponsive, flaccid, and areflexic."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:19
+msgid "1a. Level of Consciousness"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:22
+msgid "Answers both questions correctly."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:23
+msgid "Answers one question correctly."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:24
+msgid "Answers neither question correctly."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:26
+msgid "1b. LOC Questions"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:29
+msgid "Performs both tasks correctly."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:30
+#, fuzzy
+#| msgctxt "FUGLM_UE_VOL_MOV_SYN_ACTIVITY"
+#| msgid "Performed partly"
+msgid "Performs one task correctly."
+msgstr "Tarefa pode ser realizada parcialmente"
+
+#: .\evaluation\models\nihss.py:31
+msgid "Performs neither task correctly."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:33
+msgid "1c. LOC Commands"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:36 .\evaluation\models\nihss.py:113
+msgid "Normal."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:37
+msgid ""
+"Partial gaze palsy; gaze is abnormal in one or both eyes, but forced "
+"deviation or total gaze paresis is not present."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:39
+msgid ""
+"Forced deviation, or total gaze paresis not overcome by the oculocephalic "
+"maneuver."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:41
+msgid "2. Best Gaze"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:44
+#, fuzzy
+#| msgid "Neck visual images"
+msgid "No visual loss."
+msgstr "Pescoço - visual de imagens"
+
+#: .\evaluation\models\nihss.py:45
+#, fuzzy
+#| msgctxt "FUGLM_LE_VOL_MOV_SYN"
+#| msgid "Partial motion"
+msgid "Partial hemianopia."
+msgstr "Realiza parcialmente"
+
+#: .\evaluation\models\nihss.py:46
+msgid "Complete hemianopia."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:47
+msgid "Bilateral hemianopia (blind including cortical blindness). "
+msgstr ""
+
+#: .\evaluation\models\nihss.py:49
+msgid "3. Visual"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:52
+msgid "Normal symmetrical movements."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:53
+msgid "Minor paralysis (flattened nasolabial fold, asymmetry on smiling)."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:54
+msgid "Partial paralysis (total or near-total paralysis of lower face)."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:55
+msgid ""
+"Complete paralysis of one or both sides (absence of facial movement in the "
+"upper and lower face). "
+msgstr ""
+
+#: .\evaluation\models\nihss.py:57
+msgid "4. Facial Palsy"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:61
+msgid "No drift; limb holds 90 (or 45) degrees for full 10 seconds."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:62
+msgid ""
+"Drift; limb holds 90 (or 45) degrees, but drifts down before full 10 "
+"seconds; does not hit bed or other support."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:64
+msgid ""
+"Some effort against gravity; limb cannot get to or maintain (if cued) 90 (or "
+"45) degrees, drifts down to bed, but has some effort against gravity."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:66
+msgid "No effort against gravity; limb falls."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:67
+#, fuzzy
+#| msgctxt "FuglMeyer"
+#| msgid "Notes"
+msgid "No movement"
+msgstr "Observação"
+
+#: .\evaluation\models\nihss.py:69
+msgid "5a. Left arm"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:70
+msgid "5b. Right arm"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:73
+msgid "No drift; leg holds 30-degree position for full 5 seconds."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:74
+msgid ""
+"Drift; leg falls by the end of the 5-second period but does not hit bed."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:75
+msgid ""
+"Some effort against gravity; leg falls to bed by 5 seconds, but has some "
+"effort against gravity."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:76
+msgid "No effort against gravity; leg falls to bed immediately."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:77
+#, fuzzy
+#| msgctxt "FuglMeyer"
+#| msgid "Notes"
+msgid "No movement."
+msgstr "Observação"
+
+#: .\evaluation\models\nihss.py:79
+msgid "6a. Left leg"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:80
+msgid "6b. Right leg"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:83
+msgid "Absent."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:84
+msgid "Present in one limb."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:85
+msgid "Present in two limbs."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:87
+msgid "7. Limb Ataxia"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:90
+msgid "Normal; no sensory loss."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:91
+msgid ""
+"Mild-to-moderate sensory loss; patient feels pinprick is less sharp or is "
+"dull on the affected side; or there is a loss of superficial pain with "
+"pinprick, but patient is aware of being touched."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:93
+msgid ""
+"Severe to total sensory loss; patient is not aware of being touched in the "
+"face, arm, and leg. "
+msgstr ""
+
+#: .\evaluation\models\nihss.py:95
+msgid "8. Sensory"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:98
+msgid "No aphasia; normal."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:99
+msgid ""
+"Mild-to-moderate aphasia; some obvious loss of fluency or facility of "
+"comprehension, without significant limitation on ideas expressed or form of "
+"expression. Reduction of speech and/or comprehension, however, makes "
+"conversation about provided materials difficult or impossible. For example, "
+"in conversation about provided materials, examiner can identify picture or "
+"naming card content from patient’s response."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:104
+msgid ""
+"Severe aphasia; all communication is through fragmentary expression; great "
+"need for inference, questioning, and guessing by the listener. Range of "
+"information that can be exchanged is limited; listener carries burden of "
+"communication. Examiner cannot identify materials provided from patient "
+"response."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:108
+msgid "Mute, global aphasia; no usable speech or auditory comprehension."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:110
+#, fuzzy
+#| msgctxt "MMSEAdmin"
+#| msgid "Language"
+msgid "9. Best Language"
+msgstr "Linguagem"
+
+#: .\evaluation\models\nihss.py:114
+msgid ""
+"Mild-to-moderate dysarthria; patient slurs at least some words and, at "
+"worst, can be understood with some difficulty."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:116
+msgid ""
+"Severe dysarthria; patient's speech is so slurred as to be unintelligible in "
+"the absence of or out of proportion to any dysphasia, or is mute/anarthric."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:119
+#, fuzzy
+#| msgid "Dysmetria"
+msgid "10. Dysarthria"
+msgstr "Dismetria"
+
+#: .\evaluation\models\nihss.py:122
+msgid "No abnormality."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:123
+msgid ""
+"Visual, tactile, auditory, spatial, or personal inattention or extinction to "
+"bilateral simultaneous stimulation in one of the sensory modalities."
+msgstr ""
+
+#: .\evaluation\models\nihss.py:125
+msgid ""
+"Profound hemi-inattention or extinction to more than one modality; does not "
+"recognize own hand or orients to only one side of space. "
+msgstr ""
+
+#: .\evaluation\models\nihss.py:128
+msgid "11. Extinction and Inattention (formerly Neglect)"
+msgstr ""
+
+#: .\evaluation\models\nihss.py:131
+#, fuzzy
+#| msgid "Stroke Impact Scale"
+msgid "NIH Stroke Scale"
+msgstr " Escala de Impacto do AVC"
+
+#: .\evaluation\models\nihss.py:132
+#, fuzzy
+#| msgid "Stroke Impact Scale"
+msgid "NIH Stroke Scales"
+msgstr " Escala de Impacto do AVC"
+
+#: .\evaluation\models\patient.py:12
+msgid "Date of birth"
+msgstr ""
+
+#: .\evaluation\models\patient.py:14
+msgctxt "Patient"
+msgid "Age"
+msgstr ""
+
+#: .\evaluation\models\patient.py:15
+msgctxt "Patient"
+msgid "Gender"
+msgstr ""
+
+#: .\evaluation\models\patient.py:16
+msgctxt "Patient"
+msgid "Marital status"
+msgstr ""
+
+#: .\evaluation\models\patient.py:17
+msgctxt "Patient"
+msgid "Profession"
+msgstr ""
+
+#: .\evaluation\models\patient.py:18
+msgctxt "Patient"
+msgid "Occupation/work"
+msgstr ""
+
+#: .\evaluation\models\patient.py:19
+#, fuzzy
+#| msgid "Scoring Speed"
+msgctxt "Patient"
+msgid "Schooling level"
+msgstr "Velocidade"
+
+#: .\evaluation\models\patient.py:20 .\evaluation\models\patient.py:21
+msgctxt "Patient"
+msgid "Social insurance status"
+msgstr ""
+
+#: .\evaluation\models\patient.py:23
+msgctxt "Patient"
+msgid "Family member reference for therapy frequency"
+msgstr ""
+
+#: .\evaluation\models\patient.py:24
+msgctxt "Patient"
+msgid "Family member reference at home"
+msgstr ""
+
+#: .\evaluation\models\patient.py:25
+#, fuzzy
+#| msgctxt "FUGLM_LE_VOL_MOV_SYN"
+#| msgid "Partial motion"
+msgctxt "Patient"
+msgid "Family composition"
+msgstr "Realiza parcialmente"
+
+#: .\evaluation\models\patient.py:26
+msgctxt "Patient"
+msgid "Number of people at home"
+msgstr ""
+
+#: .\evaluation\models\patient.py:28
+msgctxt "Patient"
+msgid "Family income"
+msgstr ""
+
+#: .\evaluation\models\patient.py:29
+msgctxt "Patient"
+msgid "Average family income"
+msgstr ""
+
+#: .\evaluation\models\patient.py:31
+msgctxt "Patient"
+msgid "City of origin"
+msgstr ""
+
+#: .\evaluation\models\patient.py:32
+msgctxt "Patient"
+msgid "Conducting source"
+msgstr ""
 
 #: .\evaluation\models\period.py:11
 msgid "Parent"
@@ -2913,6 +3405,14 @@ msgstr "MEDIDA DE INDEPENDÊNCIA FUNCIONAL – MIF"
 msgid "EEG"
 msgstr ""
 
+#: .\evaluation\templates\admin\evaluation\epworth\change_form.html:6
+msgid "EPWORTH SLEEPINESS"
+msgstr ""
+
+#: .\evaluation\templates\admin\evaluation\epworth\change_form.html:21
+msgid "Choose the most appropriate number for each situation:"
+msgstr ""
+
 #: .\evaluation\templates\admin\evaluation\fim\change_form.html:20
 msgid "Level"
 msgstr "Nível"
@@ -2937,7 +3437,7 @@ msgstr "HAD - AVALIAÇÃO DO NÍVEL DE ANSIEDADE E DEPRESSÃO"
 msgid "Kinesthetic and visual Imagery Questionnaire"
 msgstr ""
 
-#: .\evaluation\templates\admin\evaluation\mmse\change_form.html:6
+#: .\evaluation\templates\admin\evaluation\mmse\change_form.html:16
 msgid "MINI MENTAL STATE EXAMINATION - MMSE"
 msgstr "MINI-EXAME DO ESTADO MENTAL - MEEM"
 
@@ -2965,7 +3465,7 @@ msgstr "Entre 84 - 99%% (56 a 65 pontos) - Incapacidade Motora Leve"
 
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:43
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:43
-#: .\evaluation\templates\admin\includes\fieldset\row_total.html:15
+#: .\evaluation\templates\admin\includes\fieldset\row_total.html:24
 msgid "Subtotal max"
 msgstr "Pontuação máxima"
 
@@ -3049,6 +3549,9 @@ msgstr ""
 #: .\evaluation\templates\reversion-compare\compare.html:40
 msgid "Go back to history list"
 msgstr "Voltar para a lista de históricos"
+
+#~ msgid "Arquivo"
+#~ msgstr "File"
 
 #~ msgid ""
 #~ "Evaluated only if full score of 6 points achieved on 'Volitional movement "
