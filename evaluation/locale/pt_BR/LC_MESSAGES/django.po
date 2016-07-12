@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-11 19:00-0300\n"
+"POT-Creation-Date: 2016-07-12 19:39-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgstr "Data de nascimento"
 #: .\evaluation\admin\hamilton_admin.py:18 .\evaluation\admin\kviq_admin.py:13
 #: .\evaluation\admin\mmse_admin.py:18 .\evaluation\admin\patient_admin.py:9
 #: .\evaluation\admin\sis_admin.py:15
-#: .\evaluation\models\base_evaluation.py:17
+#: .\evaluation\models\base_evaluation.py:17 .\evaluation\models\patient.py:39
 #: .\evaluation\templates\admin\evaluation\patient\change_form.html:6
 #: .\evaluation\templates\admin\index.html:56
 msgid "Patient"
@@ -68,16 +68,20 @@ msgid ""
 "How likely are you to doze off or fall asleep in the following situations, "
 "in contrast to                         feeling just tired?"
 msgstr ""
+"O quanto é provável que você cochile ou adormeça nas seguintes situações, em "
+"vez de apenas se sentir cansado/a?"
 
 #: .\evaluation\admin\epworth_admin.py:15
 msgid "This refers to your usual way of life in recent times."
-msgstr ""
+msgstr "Isso se refere ao seu modo de vida habitual nos útlimos tempos"
 
 #: .\evaluation\admin\epworth_admin.py:16
 msgid ""
 "Even if you haven’t done some of these things recently try to work out how "
 "they would have                         affected you."
 msgstr ""
+"Mesmo se você não fez algumas destas coisas recentemente, tente pensar em "
+"como elas teriam afetado você."
 
 #: .\evaluation\admin\fim_admin.py:23
 msgid "Self Care"
@@ -258,6 +262,7 @@ msgstr "Membro superior"
 
 #: .\evaluation\admin\fuglmeyer_admin.py:209
 #: .\evaluation\admin\fuglmeyer_admin.py:248
+#: .\evaluation\admin\mmse_admin.py:59
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:44
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:44
 #: .\evaluation\templates\admin\includes\fieldset\row_total.html:28
@@ -343,20 +348,20 @@ msgstr "Linguagem"
 
 #: .\evaluation\admin\patient_admin.py:13
 msgid "Social characteristics"
-msgstr ""
+msgstr "Caracterização social do paciente"
 
 #: .\evaluation\admin\patient_admin.py:18
 #: .\evaluation\admin\patient_admin.py:23
 msgid "Family support"
-msgstr ""
+msgstr "Apoio familiar"
 
 #: .\evaluation\admin\patient_admin.py:28
 msgid "Economic aspects"
-msgstr ""
+msgstr "Aspectos econômicos"
 
 #: .\evaluation\admin\patient_admin.py:32
 msgid "Demographic data"
-msgstr ""
+msgstr "Dados demográficos"
 
 #: .\evaluation\admin\sis_admin.py:19
 msgid ""
@@ -516,59 +521,61 @@ msgstr "Titulo"
 
 #: .\evaluation\models\epworth.py:14
 msgid "would never doze"
-msgstr ""
+msgstr "Nunca cochilaria"
 
 #: .\evaluation\models\epworth.py:15
 msgid "slight chance of dozing"
-msgstr ""
+msgstr "Pequena chance de cochilar"
 
 #: .\evaluation\models\epworth.py:16
 msgid "moderate chance of dozing"
-msgstr ""
+msgstr "Chance média de cochilar"
 
 #: .\evaluation\models\epworth.py:17
 msgid "high chance of dozing"
-msgstr ""
+msgstr "Grande chance de cochilar"
 
 #: .\evaluation\models\epworth.py:20
 msgid "Sitting and reading"
-msgstr ""
+msgstr "Sentado/a e lendo"
 
 #: .\evaluation\models\epworth.py:21
 msgid "Watching TV"
-msgstr ""
+msgstr "Assistindo TV"
 
 #: .\evaluation\models\epworth.py:22
 msgid "Sitting, inactive in a public place (e.g. a theatre or a meeting)"
 msgstr ""
+"Sentado/a quieto/a num local público (por exemplo: no cinema, no teatro ou "
+"numa reunião)"
 
 #: .\evaluation\models\epworth.py:23
 msgid "As a passenger in a car for an hour without a break"
-msgstr ""
+msgstr "Como passageiro/a em um carro durante uma hora sem paradas"
 
 #: .\evaluation\models\epworth.py:24
 msgid "Lying down to rest in the afternoon when circumstances permit"
-msgstr ""
+msgstr "Deitado/a à tarde, para descansar, quando as circunstâncias permitem"
 
 #: .\evaluation\models\epworth.py:25
 msgid "Sitting and talking to someone"
-msgstr ""
+msgstr "Sentado/a conversando com alguém"
 
 #: .\evaluation\models\epworth.py:26
 msgid "Sitting quietly after a lunch without alcohol"
-msgstr ""
+msgstr "Sentado/a quieto/a depois de um almoço sem bebida alcoólica"
 
 #: .\evaluation\models\epworth.py:27
 msgid "In a car, while stopped for a few minutes in the traffic"
-msgstr ""
+msgstr "Dentro de um carro, parado durante alguns minutos no trânsito"
 
 #: .\evaluation\models\epworth.py:30
 msgid "Epworth Sleepiness"
-msgstr ""
+msgstr "Sonolência de Epworth"
 
 #: .\evaluation\models\epworth.py:31
 msgid "Epwort Sleepiness"
-msgstr ""
+msgstr "Sonolência de Epworth"
 
 #: .\evaluation\models\fim.py:15
 msgid "Total assistance"
@@ -2803,89 +2810,92 @@ msgstr " Escala de Impacto do AVC"
 msgid "NIH Stroke Scales"
 msgstr " Escala de Impacto do AVC"
 
+#: .\evaluation\models\patient.py:11
+msgid "Name"
+msgstr "Nome"
+
 #: .\evaluation\models\patient.py:12
 msgid "Date of birth"
-msgstr ""
+msgstr "Data de nascimento"
 
 #: .\evaluation\models\patient.py:14
 msgctxt "Patient"
 msgid "Age"
-msgstr ""
+msgstr "Idade"
 
 #: .\evaluation\models\patient.py:15
 msgctxt "Patient"
 msgid "Gender"
-msgstr ""
+msgstr "Gênero"
 
 #: .\evaluation\models\patient.py:16
 msgctxt "Patient"
 msgid "Marital status"
-msgstr ""
+msgstr "Estado civil"
 
 #: .\evaluation\models\patient.py:17
 msgctxt "Patient"
 msgid "Profession"
-msgstr ""
+msgstr "Profissão"
 
 #: .\evaluation\models\patient.py:18
 msgctxt "Patient"
 msgid "Occupation/work"
-msgstr ""
+msgstr "Ocupação"
 
 #: .\evaluation\models\patient.py:19
-#, fuzzy
-#| msgid "Scoring Speed"
 msgctxt "Patient"
 msgid "Schooling level"
-msgstr "Velocidade"
+msgstr "Escolaridade"
 
 #: .\evaluation\models\patient.py:20 .\evaluation\models\patient.py:21
 msgctxt "Patient"
 msgid "Social insurance status"
-msgstr ""
+msgstr "Situação previdenciária"
 
 #: .\evaluation\models\patient.py:23
 msgctxt "Patient"
 msgid "Family member reference for therapy frequency"
-msgstr ""
+msgstr "Retaguarda de transporte para a frequência no tratamento"
 
 #: .\evaluation\models\patient.py:24
 msgctxt "Patient"
 msgid "Family member reference at home"
-msgstr ""
+msgstr "Retaguarda de familiar para a frequência no tratamento"
 
 #: .\evaluation\models\patient.py:25
-#, fuzzy
-#| msgctxt "FUGLM_LE_VOL_MOV_SYN"
-#| msgid "Partial motion"
 msgctxt "Patient"
 msgid "Family composition"
-msgstr "Realiza parcialmente"
+msgstr "Composição familiar"
 
 #: .\evaluation\models\patient.py:26
 msgctxt "Patient"
 msgid "Number of people at home"
-msgstr ""
+msgstr "N. de pessoas no domicílio"
 
 #: .\evaluation\models\patient.py:28
 msgctxt "Patient"
 msgid "Family income"
-msgstr ""
+msgstr "Renda familiar"
 
 #: .\evaluation\models\patient.py:29
 msgctxt "Patient"
 msgid "Average family income"
-msgstr ""
+msgstr "Renda per capta"
 
 #: .\evaluation\models\patient.py:31
 msgctxt "Patient"
 msgid "City of origin"
-msgstr ""
+msgstr "Cidade de procedência"
 
 #: .\evaluation\models\patient.py:32
 msgctxt "Patient"
 msgid "Conducting source"
-msgstr ""
+msgstr "Fonte encaminhadora"
+
+#: .\evaluation\models\patient.py:40
+msgid "Patients"
+msgstr "Pacientes"
 
 #: .\evaluation\models\period.py:11
 msgid "Parent"
@@ -3407,11 +3417,11 @@ msgstr ""
 
 #: .\evaluation\templates\admin\evaluation\epworth\change_form.html:6
 msgid "EPWORTH SLEEPINESS"
-msgstr ""
+msgstr "SONOLÊNCIA DE EPWORTH"
 
 #: .\evaluation\templates\admin\evaluation\epworth\change_form.html:21
 msgid "Choose the most appropriate number for each situation:"
-msgstr ""
+msgstr "Escolhar o número mais apropriado para cada situação:"
 
 #: .\evaluation\templates\admin\evaluation\fim\change_form.html:20
 msgid "Level"
@@ -3516,8 +3526,8 @@ msgid "Questionnaires"
 msgstr "Questionários"
 
 #: .\evaluation\templates\admin\tag_patients.html:9
-msgid "Selecionar paciente"
-msgstr ""
+msgid "Select the patient"
+msgstr "Selecionar o paciente"
 
 #: .\evaluation\templates\reversion-compare\compare.html:22
 msgid "History"
