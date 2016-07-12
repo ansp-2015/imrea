@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-12 19:39-0300\n"
+"POT-Creation-Date: 2016-07-12 19:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -514,6 +514,70 @@ msgstr "Sim"
 #: .\evaluation\models\clin.py:8
 msgid "No"
 msgstr "Não"
+
+#: .\evaluation\models\clin.py:13
+msgid "Neglect 1a"
+msgstr "Negligência 1a"
+
+#: .\evaluation\models\clin.py:14
+msgid "Neglect 1b"
+msgstr "Negligência 1b"
+
+#: .\evaluation\models\clin.py:15
+msgid "Neglect 1c"
+msgstr "Negligência 1c"
+
+#: .\evaluation\models\clin.py:16
+msgid "Neglect 1d"
+msgstr "Negligência 1d"
+
+#: .\evaluation\models\clin.py:17
+msgid "Neglect 2a"
+msgstr "Negligência 2a"
+
+#: .\evaluation\models\clin.py:18
+msgid "Neglect 2b"
+msgstr "Negligência 2b"
+
+#: .\evaluation\models\clin.py:19
+msgid "Neglect 2c"
+msgstr "Negligência 2c"
+
+#: .\evaluation\models\clin.py:20
+msgid "Neglect 2d"
+msgstr "Negligência 2d"
+
+#: .\evaluation\models\clin.py:21
+msgid "Neglect 3a"
+msgstr "Negligência 3a"
+
+#: .\evaluation\models\clin.py:22
+msgid "Neglect 3b"
+msgstr "Negligência 3b"
+
+#: .\evaluation\models\clin.py:23
+msgid "Neglect 3c"
+msgstr "Negligência 3c"
+
+#: .\evaluation\models\clin.py:24
+msgid "Neglect 3d"
+msgstr "Negligência 3d"
+
+#: .\evaluation\models\clin.py:25
+msgid "Neglect 4a"
+msgstr "Negligência 4a"
+
+#: .\evaluation\models\clin.py:26
+msgid "Neglect 4b"
+msgstr "Negligência 4b"
+
+#: .\evaluation\models\clin.py:27
+msgid "Neglect 4c"
+msgstr "Negligência 4c"
+
+#: .\evaluation\models\clin.py:28
+msgid "Neglect 4d"
+msgstr "Negligência 4d"
 
 #: .\evaluation\models\eeg.py:12
 msgid "Title"
@@ -3407,13 +3471,12 @@ msgid "Boston Aphasia"
 msgstr ""
 
 #: .\evaluation\templates\admin\evaluation\clin\change_form.html:6
-#: .\evaluation\templates\admin\evaluation\fim\change_form.html:6
-msgid "FUNCTIONAL INDEPENDENCE MEASURE - FIM"
-msgstr "MEDIDA DE INDEPENDÊNCIA FUNCIONAL – MIF"
+msgid "LINE CROSSING"
+msgstr "CANCELAMENTO DE LINHAS"
 
 #: .\evaluation\templates\admin\evaluation\eeg\change_form.html:6
 msgid "EEG"
-msgstr ""
+msgstr "ELETROENCEFALOGRAMA"
 
 #: .\evaluation\templates\admin\evaluation\epworth\change_form.html:6
 msgid "EPWORTH SLEEPINESS"
@@ -3422,6 +3485,10 @@ msgstr "SONOLÊNCIA DE EPWORTH"
 #: .\evaluation\templates\admin\evaluation\epworth\change_form.html:21
 msgid "Choose the most appropriate number for each situation:"
 msgstr "Escolhar o número mais apropriado para cada situação:"
+
+#: .\evaluation\templates\admin\evaluation\fim\change_form.html:6
+msgid "FUNCTIONAL INDEPENDENCE MEASURE - FIM"
+msgstr "MEDIDA DE INDEPENDÊNCIA FUNCIONAL – MIF"
 
 #: .\evaluation\templates\admin\evaluation\fim\change_form.html:20
 msgid "Level"
