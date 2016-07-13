@@ -1,4 +1,18 @@
 {% extends "admin/change_form.html" %}
+{% block extrastyle %}
+    <style>
+        .category-table tbody > tr > td:nth-child(1) {
+            width: 3em;
+        }
+        #id_obs
+        {
+            height:4em;
+            width: 100%;
+            max-width: 43em;
+        }
+    </style>
+{% endblock %}
+
 {% load bootstrapped_goodies_tags i18n %}
         {% block field_sets %}
             <div class="panel panel-primary">
@@ -9,7 +23,7 @@
         {% for fieldset in adminform %}
             <div class="panel panel-primary">
             <div class="panel-body">
-            {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=adminform|form_fieldset_column_width %}
+            {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=12 %}
             </div>
             </div>
         {% endfor %}

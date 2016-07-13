@@ -94,7 +94,7 @@ class Hamilton(BaseEvaluation):
         (3, _('Apprehensive attitude apparent in face or speech')),
         (4, _('Fears expressed without questioning')),
     )
-    anxiety_psychic = models.IntegerField(_('anxiety: psychic'), choices=ANXIETY_PSYCHIC)
+    anxiety_psychic = models.IntegerField(_('Anxiety: psychic'), choices=ANXIETY_PSYCHIC)
 
     ANXIETY_SOMATIC = (
         (0, _('Absent')),
@@ -103,7 +103,7 @@ class Hamilton(BaseEvaluation):
         (3, _('Severe')),
         (4, _('Incapacitating')),
     )
-    anxiety_somatic = models.IntegerField(_('anxiety: somatic (physiological concomitants of anxiety, such as - gastro-intestinal: dry mouth, wind, indigestion, diarrhea, cramps, belching. - cardio-vascular : palpitations, headaches. - respiratory: hyperventilation, sighing. - urinary frequency - sweating)'), choices=ANXIETY_SOMATIC)
+    anxiety_somatic = models.IntegerField(_('Anxiety: somatic'), choices=ANXIETY_SOMATIC)
 
     GASTRO = (
         (0, _('None')),
@@ -136,7 +136,7 @@ class Hamilton(BaseEvaluation):
     hypochondriasis = models.IntegerField(_('hypochondriasis'), choices=HYPOCHONDRIASIS)
 
     WEIGHT_HISTORY = (
-        (0, _('No weight loss')),
+        (0, pgettext_lazy('WEIGHT_HISTORY', 'No weight loss')),
         (1, _('Probable weight loss associated with present illness')),
         (2, _('Definite (according to patient) weight loss')),
         (3, _('Not assessed')),
@@ -144,9 +144,10 @@ class Hamilton(BaseEvaluation):
     weight_history = models.IntegerField(_('loss of weight'), choices=WEIGHT_HISTORY)
 
     WEIGHT_WEEKLY = (
-        (0, _('No weight loss')),
+        (0, pgettext_lazy('WEIGHT_WEEKLY', 'No weight loss')),
         (1, _('Probable weight loss associated with present illness (>500g/week)')),
         (2, _('Definite weight loss(>1kg/week)')),
+        (3, _('Not assessed')),
     )
     weight_weekly = models.IntegerField(_('loss of weight'), choices=WEIGHT_WEEKLY)
 

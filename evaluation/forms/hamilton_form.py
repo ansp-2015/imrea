@@ -29,7 +29,7 @@ class HamiltonForm(forms.ModelForm):
 
     class Media:
         css = {
-            'all': ('css/KVIQ.css',)
+            'all': ('css/evaluation_forms.css',)
         }
 
     class Meta:
@@ -48,12 +48,15 @@ class HamiltonForm(forms.ModelForm):
             'retardation': ButtonRadioHorizontalValueSelect(),
             'agitation': ButtonRadioHorizontalValueSelect(),
             'anxiety_psychic': ButtonRadioHorizontalValueSelect(),
-            'anxiety_somatic': ButtonRadioHorizontalValueSelect(),
+            'anxiety_somatic': ButtonRadioHorizontalValueSelect(attrs={'text': _("(physiological concomitants of anxiety, such as - gastro-"
+                                                                               "intestinal: dry mouth, wind, indigestion, diarrhea, cramps, belching. - "
+                                                                               "cardio-vascular : palpitations, headaches. - respiratory: hyperventilation, "
+                                                                               "sighing. - urinary frequency - sweating)")}),
             'gastro': ButtonRadioHorizontalValueSelect(),
             'general': ButtonRadioHorizontalValueSelect(),
             'genital': ButtonRadioHorizontalValueSelect(),
             'hypochondriasis': ButtonRadioHorizontalValueSelect(),
-            'weight_history': ButtonRadioHorizontalValueSelect(attrs={'text':'A. %s' % _('When rating by history')}),
-            'weight_weekly': ButtonRadioHorizontalValueSelect(),
+            'weight_history': ButtonRadioHorizontalValueSelect(attrs={'text': 'A. %s' % _(u'When rating by history')}),
+            'weight_weekly': ButtonRadioHorizontalValueSelect(attrs={'text': 'B. %s' % _(u'On Weekly Ratings by Ward Psychiatrist, when Actual changes are Measured')}),
             'insight': ButtonRadioHorizontalValueSelect(),
         }
