@@ -53,11 +53,12 @@ $(document).ready(function() {
 var evaluation_home_patients_select_change = function() {
   $.get( "ajax_home_patient_periods", { p:this.value } )
       .done(function( data ) {
-
           var html_content = '';
           for (i = 0; i < data.evaluated_periods.length; i++) {
               period = data.evaluated_periods[i];
-              html_content += "<a href='#' data-period-id='"+period.id+"' class='home_period_link list-group-item'>"+period.period+"</a>";
+              html_content += "<a href='#' data-period-id='"+period.id+"' class='home_period_link list-group-item'><span>"+period.period+"</span>";
+              html_content += "<span class='badge'>" + period.qty_evaluated + " / " + period.qty_total_evaluation + "</span>";
+              html_content += "</a>";
           }
           $("#home-panel-period-evaluated").html("<div class='list-group'>" + html_content + "</div>");
 
