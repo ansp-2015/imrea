@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from reversion_compare.helpers import patch_admin
 from django.contrib.admin.utils import (unquote,)
-from ..models.sis import SIS
+from evaluation.models.sis import SIS
 from ..forms import SISForm
 from .base_admin import BaseAdmin
 

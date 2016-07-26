@@ -2,7 +2,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import pgettext
-from evaluation.models.patient import Patient
 from . import BaseEvaluation
 
 

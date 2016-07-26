@@ -1,4 +1,5 @@
 from django.core.urlresolvers import reverse
+import os, sys, fnmatch, inspect
 
 def url_to_edit_object(model_name, object):
     url = None
@@ -19,3 +20,20 @@ def choice_numbers(n):
     """
     return tuple([(i, '%s' % i) for i in range(n+1)])
 
+
+def all_evaluations():
+    evals = [file for file in os.listdir('evaluation/models') if fnmatch.fnmatch(file, '*.py')]
+    evals.remove('__init__.py')
+    evals.remove('base_evaluation.py')
+    evals.remove('patient.py')
+    evals.remove('period.py')
+
+    for ev in evals:
+        name = ev[:-3]
+        exec('from .models import %s' % name)
+        m = sys.modules['evaluation.models.%s' % name]
+        cl = inspect.getmembers(m, inspect.isclass)
+        for c in cl:
+            if repr(c).find(name) > -1:
+                break
+        yield (name, ) + c

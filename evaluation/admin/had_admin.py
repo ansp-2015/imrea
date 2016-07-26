@@ -6,7 +6,7 @@ from django.contrib.admin.utils import (unquote,)
 from reversion_compare.helpers import patch_admin
 import logging
 from .base_admin import BaseAdmin
-from ..models import HAD
+from evaluation.models.had import HAD
 from ..forms import HADForm
 
 logger = logging.getLogger(__name__)

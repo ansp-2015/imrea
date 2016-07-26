@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from reversion_compare.helpers import patch_admin
-from ..models import BostonAphasia
+from evaluation.models.bostonaphasia import BostonAphasia
 from .base_admin import BaseAdmin
 
 
