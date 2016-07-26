@@ -1,4 +1,13 @@
 {% load i18n bootstrapped_goodies_tags %}
+{% comment %}
+To be include in a fieldset.
+
+You mus configure two variables:
+fieldset.description.fieldset_total_addend_fields  =>  fields with the total addends pointsç
+fieldset.description.fieldset_total_points  =>  Integer with the max points
+fieldset.description.fieldset_total_field  =>   field name to render the total points
+
+{% endcomment %}
 {% if fieldset.description.fieldset_total_addend_fields and fieldset.description.fieldset_total_field %}
     <script type="text/javascript">
         $(function() {

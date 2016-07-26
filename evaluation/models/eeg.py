@@ -9,6 +9,6 @@ def user_directory_path(instance, filename):
 
 class Eeg(BaseEvaluation):
     eegtitle = models.CharField(_(u'Title'), max_length=250)
-    eegfile = models.FileField(_(u'File '), upload_to=user_directory_path)
+    eegfile = models.FileField(_(u'File'), upload_to=user_directory_path)
     
 
