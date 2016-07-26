@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-13 17:07-0300\n"
+"POT-Creation-Date: 2016-07-26 19:05-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,13 +23,13 @@ msgid "Birthdate"
 msgstr "Data de nascimento"
 
 #: .\evaluation\admin\bostonaphasia_admin.py:11
-#: .\evaluation\admin\clin_admin.py:13 .\evaluation\admin\eeg_admin.py:13
+#: .\evaluation\admin\clin_admin.py:13 .\evaluation\admin\eeg_admin.py:24
 #: .\evaluation\admin\epworth_admin.py:27 .\evaluation\admin\fim_admin.py:19
 #: .\evaluation\admin\fuglmeyer_admin.py:21 .\evaluation\admin\had_admin.py:18
 #: .\evaluation\admin\hamilton_admin.py:18 .\evaluation\admin\kviq_admin.py:13
 #: .\evaluation\admin\mmse_admin.py:18 .\evaluation\admin\patient_admin.py:9
 #: .\evaluation\admin\sis_admin.py:15
-#: .\evaluation\models\base_evaluation.py:17 .\evaluation\models\patient.py:39
+#: .\evaluation\models\base_evaluation.py:18 .\evaluation\models\patient.py:39
 #: .\evaluation\templates\admin\evaluation\patient\change_form.html:6
 #: .\evaluation\templates\admin\index.html:56
 msgid "Patient"
@@ -59,7 +59,8 @@ msgstr ""
 msgid "Line Crossing"
 msgstr "Cancelamento de linhas"
 
-#: .\evaluation\admin\eeg_admin.py:17 .\evaluation\models\eeg.py:13
+#: .\evaluation\admin\eeg_admin.py:28 .\evaluation\forms\eeg_form.py:21
+#: .\evaluation\models\eeg.py:23
 msgid "File"
 msgstr "Arquivo"
 
@@ -262,7 +263,7 @@ msgstr "Membro superior"
 
 #: .\evaluation\admin\fuglmeyer_admin.py:209
 #: .\evaluation\admin\fuglmeyer_admin.py:248
-#: .\evaluation\admin\mmse_admin.py:59
+#: .\evaluation\admin\hamilton_admin.py:46 .\evaluation\admin\mmse_admin.py:59
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:44
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:44
 #: .\evaluation\templates\admin\includes\fieldset\row_total.html:28
@@ -484,7 +485,11 @@ msgid ""
 "mouth, wind, indigestion, diarrhea, cramps, belching. - cardio-vascular : "
 "palpitations, headaches. - respiratory: hyperventilation, sighing. - urinary "
 "frequency - sweating)"
-msgstr "Concomitantes fisiológicos de ansiedade, tais como: Gastrointestinais: boca seca, flatulência, indigestão, diarréia, cólicas e eructação; Cardiovasculares: palpitações, cefaleia; Respiratórios: hiperventilação e suspiros; frequência urinária; sudorese"
+msgstr ""
+"Concomitantes fisiológicos de ansiedade, tais como: Gastrointestinais: boca "
+"seca, flatulência, indigestão, diarréia, cólicas e eructação; "
+"Cardiovasculares: palpitações, cefaleia; Respiratórios: hiperventilação e "
+"suspiros; frequência urinária; sudorese"
 
 #: .\evaluation\forms\hamilton_form.py:59
 msgid "When rating by history"
@@ -497,23 +502,23 @@ msgstr ""
 "Avaliada semanalmente pelo psiquiatra responsável, quando são medidas "
 "alteradas de peso"
 
-#: .\evaluation\models\base_evaluation.py:13 .\evaluation\models\kviq.py:8
+#: .\evaluation\models\base_evaluation.py:14 .\evaluation\models\kviq.py:8
 msgid "NT"
 msgstr ""
 
-#: .\evaluation\models\base_evaluation.py:15
+#: .\evaluation\models\base_evaluation.py:16
 msgid "MD"
 msgstr ""
 
-#: .\evaluation\models\base_evaluation.py:18
+#: .\evaluation\models\base_evaluation.py:19
 msgid "Period"
 msgstr "Período"
 
-#: .\evaluation\models\base_evaluation.py:19
+#: .\evaluation\models\base_evaluation.py:20
 msgid "Last update"
 msgstr "Última atualização"
 
-#: .\evaluation\models\base_evaluation.py:20
+#: .\evaluation\models\base_evaluation.py:21
 msgid "Date"
 msgstr ""
 
@@ -594,9 +599,26 @@ msgstr "Negligência 4c"
 msgid "Neglect 4d"
 msgstr "Negligência 4d"
 
-#: .\evaluation\models\eeg.py:12
+#: .\evaluation\models\eeg.py:14
 msgid "Title"
 msgstr "Titulo"
+
+#: .\evaluation\models\eeg.py:17
+#: .\evaluation\templates\admin\evaluation\eeg\change_form.html:17
+msgid "EEG"
+msgstr "ELETROENCEFALOGRAMA"
+
+#: .\evaluation\models\eeg.py:18
+msgid "EEGs"
+msgstr "ELETROENCEFALOGRAMAs"
+
+#: .\evaluation\models\eeg.py:26
+msgid "EEG File"
+msgstr "Arquivo EEG"
+
+#: .\evaluation\models\eeg.py:27
+msgid "EEG Files"
+msgstr "Arquivos EEG"
 
 #: .\evaluation\models\epworth.py:14
 msgid "would never doze"
@@ -2252,7 +2274,7 @@ msgid "insight"
 msgstr "Consciência"
 
 #: .\evaluation\models\hamilton.py:162
-#: .\evaluation\templates\admin\evaluation\hamilton\change_form.html:6
+#: .\evaluation\templates\admin\evaluation\hamilton\change_form.html:20
 msgid "Hamilton"
 msgstr "Hamilton"
 
@@ -2978,7 +3000,7 @@ msgstr "Fonte encaminhadora"
 msgid "Patients"
 msgstr "Pacientes"
 
-#: .\evaluation\models\period.py:11
+#: .\evaluation\models\period.py:12
 msgid "Parent"
 msgstr ""
 
@@ -3490,10 +3512,6 @@ msgstr ""
 #: .\evaluation\templates\admin\evaluation\clin\change_form.html:6
 msgid "LINE CROSSING"
 msgstr "CANCELAMENTO DE LINHAS"
-
-#: .\evaluation\templates\admin\evaluation\eeg\change_form.html:6
-msgid "EEG"
-msgstr "ELETROENCEFALOGRAMA"
 
 #: .\evaluation\templates\admin\evaluation\epworth\change_form.html:6
 msgid "EPWORTH SLEEPINESS"
