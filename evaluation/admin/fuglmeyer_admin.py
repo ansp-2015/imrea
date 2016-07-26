@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import pgettext
 from reversion_compare.helpers import patch_admin
 
-from ..models.fuglmeyer import FuglMeyer
+from evaluation.models.fuglmeyer import FuglMeyer
 from ..forms import FuglMeyerForm
 from .base_admin import BaseAdmin
 import logging

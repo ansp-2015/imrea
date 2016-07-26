@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.admin.utils import (unquote,)
 from reversion_compare.helpers import patch_admin
 import logging
-from ..models import Hamilton
+from evaluation.models.hamilton import Hamilton
 from ..forms import HamiltonForm
 
 logger = logging.getLogger(__name__)

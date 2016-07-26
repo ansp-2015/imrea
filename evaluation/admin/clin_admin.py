@@ -2,7 +2,7 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from reversion_compare.helpers import patch_admin
-from ..models.clin import Clin, CLIN_NEGLECT_CHOICES
+from evaluation.models.clin import Clin, CLIN_NEGLECT_CHOICES
 from ..forms import ClinForm
 from .base_admin import BaseAdmin
 

@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from reversion_compare.helpers import patch_admin
-from ..models import Eeg
+from evaluation.models.eeg import Eeg
 from ..forms import EegForm
 from .base_admin import BaseAdmin
 

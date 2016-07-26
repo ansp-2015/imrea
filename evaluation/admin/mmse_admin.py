@@ -5,7 +5,7 @@ from django.utils.translation import pgettext
 from reversion_compare.helpers import patch_admin
 import logging
 from .base_admin import BaseAdmin
-from ..models import MMSE
+from evaluation.models.mmse import MMSE
 from ..forms import MMSEForm
 
 logger = logging.getLogger(__name__)

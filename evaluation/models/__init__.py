@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from .base_evaluation import BaseEvaluation
-from .patient import Patient
-from .period import Period
+from ..util import all_evaluations
+
 
 __all__ = ['BaseEvaluation', 'Patient', 'Period']
-for c in BaseEvaluation.__subclasses__():
-    cname = c.__name__
-    __all__.append(cname)
-    exec('from .%s import %s' % (cname.lower(), cname))
+for c in all_evaluations():
+    __all__.append(c[1])
+    exec('from evaluation.models.%s import %s' % c[:2])
 
+from .patient import Patient
+from .period import Period

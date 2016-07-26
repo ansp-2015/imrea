@@ -1,21 +1,11 @@
 from django.contrib import admin
-from .kviq_admin import KVIQAdmin
-from .sis_admin import SISAdmin
-from .bostonaphasia_admin import BostonAphasiaAdmin
-from .eeg_admin import EegAdmin
-from .fim_admin import FIMAdmin
-from .clin_admin import ClinAdmin
-from .fuglmeyer_admin import FuglMeyerAdmin
-from .had_admin import HADAdmin
-from .hamilton_admin import HamiltonAdmin
-
-from .epworth_admin import EpworthAdmin
-
-from .mmse_admin import MMSEAdmin
-
 from .patient_admin import PatientAdmin
 from .base_admin import BaseAdmin
+from ..util import all_evaluations
 
 from evaluation.models import Period
+
+for c in all_evaluations():
+    exec('from .%s_admin import %sAdmin' % c[:2])
 
 admin.site.register(Period)

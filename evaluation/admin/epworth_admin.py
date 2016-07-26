@@ -6,7 +6,7 @@ from django.contrib.admin.utils import (unquote,)
 from reversion_compare.helpers import patch_admin
 import logging
 from .base_admin import BaseAdmin
-from ..models import Epworth
+from evaluation.models.epworth import Epworth
 from ..forms import EpworthForm
 
 HELP_TEXT = []

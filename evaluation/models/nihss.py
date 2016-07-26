@@ -90,7 +90,7 @@ class NIHSS(BaseEvaluation):
         (0, _('Normal; no sensory loss.')),
         (1, _('Mild-to-moderate sensory loss; patient feels pinprick is less sharp or is dull on the affected side; or '
               'there is a loss of superficial pain with pinprick, but patient is aware of being touched.')),
-        (2, _('Severe to total sensory loss; patient is not aware of being touched in the face, arm, and leg. ')),
+        (2, _('Severe to total sensory loss; patient is not aware of being touched in the face, arm, and leg.')),
     )
     sensory = models.IntegerField(_('8. Sensory'), choices=NIH_SENSORY)
 
@@ -100,7 +100,7 @@ class NIHSS(BaseEvaluation):
               'significant limitation on ideas expressed or form of expression. Reduction of speech and/or '
               'comprehension, however, makes conversation about provided materials difficult or impossible. '
               'For example, in conversation about provided materials, examiner can identify picture or naming card '
-              'content from patient’s response.')),
+              'content from patient\'s response.')),
         (2, _('Severe aphasia; all communication is through fragmentary expression; great need for inference, '
               'questioning, and guessing by the listener. Range of information that can be exchanged is limited; '
               'listener carries burden of communication. Examiner cannot identify materials provided from patient '
