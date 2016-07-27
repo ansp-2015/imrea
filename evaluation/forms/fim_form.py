@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from ..widgets import ButtonRadioHorizontalValueSelect
-from ..models import FIM
+from ..models.fim import FIM
 
 
 class FIMForm(forms.ModelForm):

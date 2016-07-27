@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.utils.translation import ugettext_lazy as _
 from reversion_compare.helpers import patch_admin
-from ..models import Eeg, EegFile
+from ..models.eeg import Eeg, EegFile
 from ..forms.eeg_form import EegForm, EegFileInlineForm
 from .base_admin import BaseAdmin
 

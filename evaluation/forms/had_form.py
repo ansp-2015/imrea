@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from ..widgets import ButtonRadioHorizontalValueSelect
-from ..models import HAD
+from ..models.had import HAD
 
 
 class HADForm(forms.ModelForm):

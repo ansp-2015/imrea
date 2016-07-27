@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from ..widgets import ButtonRadioHorizontalValueSelect
-from ..models import MMSE
+from ..models.mmse import MMSE
 
 
 class MMSEForm(forms.ModelForm):

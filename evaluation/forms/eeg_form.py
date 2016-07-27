@@ -2,7 +2,7 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 from django.forms.models import BaseInlineFormSet, inlineformset_factory
-from ..models import Eeg, EegFile
+from ..models.eeg import Eeg, EegFile
 
 
 class EegForm(forms.ModelForm):

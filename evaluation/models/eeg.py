@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import pgettext
 from . import BaseEvaluation
 
 
@@ -13,8 +14,9 @@ class Eeg(BaseEvaluation):
     eegtitle = models.CharField(_(u'Title'), max_length=250)
 
     class Meta:
-        verbose_name = _('EEG')
-        verbose_name_plural = _('EEGs')
+
+        verbose_name = pgettext('models.Eeg', 'EEG')
+        verbose_name_plural = pgettext('models.Eeg', 'EEGs')
 
 
 class EegFile(models.Model):
@@ -22,5 +24,5 @@ class EegFile(models.Model):
     file = models.FileField(upload_to=user_directory_path, verbose_name=_('File'), )
 
     class Meta:
-        verbose_name = _('EEG File')
-        verbose_name_plural = _('EEG Files')
+        verbose_name = pgettext('models.EegFile', 'EEG File')
+        verbose_name_plural = pgettext('models.EegFile', 'EEG Files')
