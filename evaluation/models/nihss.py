@@ -54,7 +54,7 @@ class NIHSS(BaseEvaluation):
         (2, _('Partial paralysis (total or near-total paralysis of lower face).')),
         (3, _('Complete paralysis of one or both sides (absence of facial movement in the upper and lower face). ')),
     )
-    facil_palsy = models.IntegerField(_('4. Facial Palsy'), choices=NIH_FACIAL_PALSY)
+    facial_palsy = models.IntegerField(_('4. Facial Palsy'), choices=NIH_FACIAL_PALSY)
 
     # TODO: Field for explain if unstestable
     NIH_MOTOR_ARM = (
@@ -125,7 +125,7 @@ class NIHSS(BaseEvaluation):
         (2, _('Profound hemi-inattention or extinction to more than one modality; does not recognize own hand or '
               'orients to only one side of space. ')),
     )
-    extinction = models.IntegerField(_('11. Extinction and Inattention (formerly Neglect)'))
+    extinction = models.IntegerField(_('11. Extinction and Inattention (formerly Neglect)'), choices=NIH_EXTINCTION)
 
     class Meta:
         verbose_name = _('NIH Stroke Scale')

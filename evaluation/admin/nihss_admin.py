@@ -7,12 +7,25 @@ from reversion_compare.helpers import patch_admin
 import logging
 from .base_admin import BaseAdmin
 from evaluation.models.nihss import NIHSS
+from evaluation.forms.nihss_form import NIHSSForm
 
 
 logger = logging.getLogger(__name__)
 
 class NIHSSAdmin(BaseAdmin):
-    pass
+    form = NIHSSForm
+    fieldsets = (
+        (_(u'Patient'), {
+            'fields': ('patient', 'period'),
+            'description': {'fieldset': '_patient'}
+        }),
+        (None, {
+            'fields': ('loc', 'loc_questions', 'loc_commands', 'best_gaze', 'visual', 'facial_palsy', ('motor_arm_left',
+                       'motor_arm_right'), ('motor_leg_left', 'motor_leg_right'), 'limb_ataxia', 'sensory',
+                       'best_language', 'dysarthria', 'extinction'),
+            'description': {'fieldset': '_table2'}
+        })
+    )
 
 admin.site.register(NIHSS, NIHSSAdmin)
 # Registrando no reversion-compare
