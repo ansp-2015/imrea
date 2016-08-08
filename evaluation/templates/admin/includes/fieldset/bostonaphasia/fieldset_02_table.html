@@ -1,0 +1,88 @@
+{% load i18n bootstrapped_goodies_tags %}
+<fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
+    {% if fieldset.name %}
+    <legend>
+        {% if 'collapse' in fieldset.classes %}
+        <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
+        {{ fieldset.name }}
+        &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></i></span>
+        </a>
+        {% else %}
+        {{ fieldset.name }}
+        {% endif %}
+    </legend>
+    {% endif %}
+    <div class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
+        {% if fieldset.description.text %}
+            <div class="description">{{ fieldset.description.text|safe }}</div>
+        {% endif %}
+        <div class="row"><div class="col-md-12"><strong>{% trans "Score:" %}</strong></div></div>
+        <div class="row"><div class="col-md-offset-1 col-md-11">{% trans "Correct" %} ≤ 5\": 2 {% trans "points" %}</div></div>
+        <div class="row"><div class="col-md-offset-1 col-md-11">{% trans "Correct" %} > 5\": 1 {% trans "point" %}</div></div>
+        <div class="row"><div class="col-md-offset-1 col-md-11">{% trans "Correct category" %}: 1/2 {% trans "point" %}</div></div>
+        <div class="row"><div class="col-md-offset-1 col-md-11">{% trans "Correct with hint" %}: 1/2 {% trans "point" %}</div></div>
+        <div class="row"><div class="col-md-offset-1 col-md-11">{% trans "Fail" %}: 0</div></div>
+        <div class="col-md-6">
+            <table class="table table-condensed table-responsive table-striped" id="grid-table">
+                <thead>
+                    <tr>
+                        <th colspan="3">{% trans "Card 2" %}</th>
+                    </tr>
+                    <tr>
+                        {% for c in fieldset.description.columns %}
+                            <th {% if not forloop.first %}class="fixed-columns"{% endif %}>{{ c.1 }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for line in fieldset %}
+                        <tr>
+                            {% for field in line %}
+                                {% if "comprehension_card3_act_drinking_answer" in field.field.name %}
+                                    </tbody>
+                                    </table>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <table class="table table-condensed table-responsive table-striped" id="grid-table">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="3">{% trans "Card 3" %}</th>
+                                            </tr>
+                                            <tr>
+                                                {% for c in fieldset.description.columns %}
+                                                    <th {% if not forloop.first %}class="fixed-columns"{% endif %}>{{ c.1 }}</th>
+                                                {% endfor %}
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                {% endif %}
+                                {% if forloop.first %}
+                                     <td>
+                                        {{ field.label_tag }}
+                                     </td>
+                                {% endif %}
+                                <td>
+                                {% if field.is_checkbox %}
+                                    <div class="controls col-md-12">
+                                        <div class="checkbox">
+                                            {% dab_field_rendering field.field %} {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    {% if field.is_readonly %}
+                                        <p>{{ field.contents }}</p>
+                                    {% else %}
+                                        {% dab_field_rendering field.field %}
+                                    {% endif %}
+                                    {% if not field.is_readonly and field.errors %}<span class="text-danger">{{ field.errors|striptags }}</span>{% endif %}
+                                {% endif %}
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% include "admin/includes/fieldset/row_total.html" %}
+    </div>
+</fieldset>

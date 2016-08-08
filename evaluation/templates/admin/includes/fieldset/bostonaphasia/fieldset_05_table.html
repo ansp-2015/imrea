@@ -1,0 +1,99 @@
+{% load i18n bootstrapped_goodies_tags %}
+<fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
+    {% if fieldset.name %}
+    <legend>
+        {% if 'collapse' in fieldset.classes %}
+        <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
+        {{ fieldset.name }}
+        &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></i></span>
+        </a>
+        {% else %}
+        {{ fieldset.name }}
+        {% endif %}
+    </legend>
+    {% endif %}
+    <div class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
+        {% if fieldset.description.text %}
+            <div class="description">{{ fieldset.description.text|safe }}</div>
+        {% endif %}
+        <div class="col-md-12">
+            <table class="table table-condensed table-responsive table-striped" id="grid-table">
+                <thead>
+                    <tr>
+                        {% for c in fieldset.description.columns %}
+                            <th {% if not forloop.first %}class="fixed-columns"{% endif %}>{{ c.1 }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for line in fieldset %}
+                        <tr>
+                            {% for field in line %}
+                                {% if "complex_ideational_5a" == field.field.name %}
+                                    </tr><tr><td colspan="4">
+                                        {% blocktrans %}
+                                        Mr. Jones had to go to New York.
+                                        He decided to take a train.
+                                        His wife drove him to the station, but on the way they had a flat tire.
+                                        However, they arrived at the station just in time for him to catch the train
+                                        {% endblocktrans %}
+                                    </td></tr><tr>
+                                {% elif "complex_ideational_7a" == field.field.name %}
+                                    </tr><tr><td colspan="4">
+                                        {% blocktrans %}
+                                        A soldier tried to cash a check in a bank near his camp.
+                                        The teller, firm but sympathetic, said,
+                                        "You will have to have identification from some of your friends from the camp."
+                                        The discoraged soldier answered, "But I don't have any friends in camp - I'm the bugler."
+                                        {% endblocktrans %}
+                                    </td></tr><tr>
+                                {% elif "complex_ideational_9a" == field.field.name %}
+                                    </tr><tr><td colspan="4">
+                                        {% blocktrans %}
+                                        A customer walked into a hotel carrying a coil of rope in one hand and a suitcase in the other.
+                                        The hotel clerk asked, "Pardon me, sir, but will you tell me what the rope is for?"
+                                        "Yes," replied the man, "That's my fire escape." "I'm sorry, sir," said the clerk,
+                                        "but all guests carrying their own fire escapes must pay in advance."
+                                        {% endblocktrans %}
+                                    </td></tr><tr>
+                                {% elif "complex_ideational_11a" == field.field.name %}
+                                    </tr><tr><td colspan="4">
+                                        {% blocktrans %}
+                                        The lion cub is born with a deep-seated hunting instinct.
+                                        One cub will stalk and pounce on another with the same eagerness and thrill exhibited by a kitten.
+                                        During the year and a half of cubhood, this play develops into a hunting and killing technique.
+                                        Skill comes through long practice, imitation of the old lions, and obedience to warning growls of the mother.
+                                        {% endblocktrans %}
+                                    </td></tr><tr>
+                                {% endif %}
+
+                                     <td>
+                                        {% if forloop.counter < 3 %}
+                                            {{ field.label_tag }}
+                                        {% endif %}
+                                     </td>
+                                <td>
+                                {% if field.is_checkbox %}
+                                    <div class="controls col-md-12">
+                                        <div class="checkbox">
+                                            {% dab_field_rendering field.field %} {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    {% if field.is_readonly %}
+                                        <p>{{ field.contents }}</p>
+                                    {% else %}
+                                        {% dab_field_rendering field.field %}
+                                    {% endif %}
+                                    {% if not field.is_readonly and field.errors %}<span class="text-danger">{{ field.errors|striptags }}</span>{% endif %}
+                                {% endif %}
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% include "admin/includes/fieldset/row_total.html" %}
+    </div>
+</fieldset>

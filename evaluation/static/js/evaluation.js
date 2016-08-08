@@ -131,7 +131,7 @@ $(document).ready(function() {
      addend_field_ids: campos que são as parcelas da soma
      totoal_field._id: campo que receberá o total
 */
-var setup_calc_total_field = function(addend_fields, total_field) {
+var setup_calc_total_field = function(addend_fields, total_field, extra_calc) {
     if (addend_fields && addend_fields.length > 0 && total_field) {
         // preparing the event triggers
         for (var x = 0; x < addend_fields.length; x++) {
@@ -143,10 +143,11 @@ var setup_calc_total_field = function(addend_fields, total_field) {
                     });
                 }
             } else {
-                console.log('registring ');
-                console.log('#id_' + addend_fields[x]);
                 $('#id_' + addend_fields[x]).change(function(){
                     calc_total_field(addend_fields, total_field);
+                    if (extra_calc) {
+                        extra_calc();
+                    }
                 });
             }
         }

@@ -1,0 +1,188 @@
+{% load i18n bootstrapped_goodies_tags %}
+<fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
+    {% if fieldset.name %}
+    <legend>
+        {% if 'collapse' in fieldset.classes %}
+        <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
+        {{ fieldset.name }}
+        &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></i></span>
+        </a>
+        {% else %}
+        {{ fieldset.name }}
+        {% endif %}
+    </legend>
+    {% endif %}
+    <div class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
+        {% if fieldset.description.text %}
+            <div class="description">{{ fieldset.description.text|safe }}</div>
+        {% endif %}
+        <div class="col-md-12"><h4>{% trans "Body part identification (A-B)" %}</h4>
+            <div class="row"><div class="col-md-12"><strong>{% trans "Score:" %}</strong></div></div>
+            <div class="row"><div class="col-md-offset-1 col-md-11">{% trans "Correct" %} < 5": 1 {% trans "point" %}</div></div>
+            <div class="row"><div class="col-md-offset-1 col-md-11">{% trans "Correct" %} 5": 1/2 {% trans "point" %}</div></div>
+        </div>
+        <div class="col-md-6">
+            <table class="table table-condensed table-responsive table-striped" id="grid-table">
+                {% for line in fieldset %}
+                    {% if forloop.first %}
+                        <thead>
+                            <tr>
+                                <th class="fixed-columns">A</th>
+                                <th>{% trans "Points" %}</th>
+                                <th>{% trans "Fail" %}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                    {% else %}
+                        <tr>
+                    {% endif %}
+
+                    {% for field in line %}
+                        {% if "body_part_b_wrist_points" in field.field.name %}
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <div class="col-md-6">
+                            <table class="table table-condensed table-responsive table-striped" id="grid-table">
+                                <thead>
+                                    <tr>
+                                        <th class="fixed-columns">B</th>
+                                        <th>{% trans "Points" %}</th>
+                                        <th>{% trans "Fail" %}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                        {% endif %}
+                        {% if "body_part_c_right_ear_points" in field.field.name %}
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <div class="col-md-12"><h4>{% trans "Right-left discrimination (C)" %}</h4>
+                                <div class="row"><div class="col-md-12"><strong>{% trans "Score:" %}</strong></div></div>
+                                <div class="row"><div class="col-md-offset-1 col-md-11">8 {% trans "corrects" %}: 2 {% trans "point" %}</div></div>
+                                <div class="row"><div class="col-md-offset-1 col-md-11">6 - 7 {% trans "corrects" %}: 1 {% trans "point" %}</div></div>
+                                <div class="row"><div class="col-md-offset-1 col-md-11">< 6 {% trans "corrects" %}: 0 {% trans "points" %}</div></div>
+                            </div>
+                            <div class="col-md-6">
+                            <table class="table table-condensed table-responsive table-striped" id="grid-table">
+                                <thead>
+                                    <tr>
+                                        <th class="fixed-columns">C</th>
+                                        <th>{% trans "Correct" %}</th>
+                                        <th>Fail</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                        {% endif %}
+
+
+                        {% if forloop.first %}
+                             <td>
+                                {{ field.label_tag }}
+                             </td>
+                        {% endif %}
+                        <td>
+                        {% if field.is_checkbox %}
+                            <div class="controls col-md-12">
+                                <div class="checkbox">
+                                    {% dab_field_rendering field.field %} {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
+                                </div>
+                            </div>
+                        {% else %}
+                            {% if field.is_readonly %}
+                                <p>{{ field.contents }}</p>
+                            {% else %}
+                                {% dab_field_rendering field.field %}
+                            {% endif %}
+                            {% if not field.is_readonly and field.errors %}<span class="text-danger">{{ field.errors|striptags }}</span>{% endif %}
+                        {% endif %}
+                        </td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</fieldset>
+
+<script type="text/javascript">
+    $(function() {
+        var addends = [];
+        {% for f in fieldset.description.fieldset_a_b_total_addend_fields %}
+            addends.push('{{f}}');
+        {% endfor %}
+        setup_calc_total_field(addends, '{{fieldset.description.fieldset_a_b_total_field}}');
+    });
+</script>
+<div class="row">
+    <div class="col-md-3">
+        {% if fieldset.description.fieldset_a_b_total_points %}
+        <strong>{% trans "Total score" %} (A+B):</strong>
+        {% endif %}
+    </div>
+    <div class="col-md-9">
+        <input class="total_field_readonly" type="text" id="id_{{fieldset.description.fieldset_a_b_total_field}}" >
+        / {{fieldset.description.fieldset_a_b_total_points}}
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    var body_part_right_left_calc = function() {
+        var total_field = $('#id_{{fieldset.description.fieldset_c_total_field}}');
+        if (total_field.val() == 8) {
+            total_field.val(2);
+        } else if (total_field.val() >= 6) {
+            total_field.val(1);
+        } else {
+            total_field.val(0);
+        }
+        total_field.trigger("change");
+    }
+
+    $(function() {
+        var addends = [];
+        {% for f in fieldset.description.fieldset_c_total_addend_fields %}
+            addends.push('{{f}}');
+        {% endfor %}
+        setup_calc_total_field(addends, '{{fieldset.description.fieldset_c_total_field}}', body_part_right_left_calc);
+    });
+</script>
+<div class="row">
+    <div class="col-md-3">
+        <strong>{% trans "Total score" %} (C):</strong>
+    </div>
+    <div class="col-md-9">
+        <input class="total_field_readonly" type="text" id="id_{{fieldset.description.fieldset_c_total_field}}" >
+        / {{fieldset.description.fieldset_c_total_points}}
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+
+    $(function() {
+        var addends = [];
+        {% for f in fieldset.description.fieldset_a_b_c_total_addend_fields %}
+            addends.push('{{f}}');
+        {% endfor %}
+        setup_calc_total_field(addends, '{{fieldset.description.fieldset_a_b_c_total_field}}');
+    });
+</script>
+<div class="row">
+    <div class="col-md-3">
+        <strong>{% trans "Total score" %} (A+B+C):</strong>
+    </div>
+    <div class="col-md-9">
+        <input class="total_field_readonly" type="text" id="id_{{fieldset.description.fieldset_a_b_c_total_field}}" >
+        / {{fieldset.description.fieldset_a_b_c_total_points}}
+    </div>
+</div>
+
+

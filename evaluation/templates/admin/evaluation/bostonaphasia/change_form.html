@@ -1,5 +1,26 @@
 {% extends "admin/change_form.html" %}
 {% load bootstrapped_goodies_tags i18n %}
+{% block extrastyle %}
+    <style>
+        #fieldset-3 .row {
+            margin-left: 0;
+        }
+        #fieldset-3 .vLargeTextField {
+            height:4em;
+            width: 100%;
+            max-width: 43em;
+        }
+        #fieldset-4 .vTextField,
+        #fieldset-4 .vIntegerField {
+            width: 3em;
+        }
+        #fieldset-5 .vTextField,
+        #fieldset-5 .vIntegerField {
+            width: 3em;
+        }
+
+    </style>
+{% endblock %}
         {% block field_sets %}
             <div class="panel panel-primary">
               <div class="panel-heading">
@@ -10,7 +31,7 @@
         {% for fieldset in adminform %}
             <div class="panel panel-primary">
             <div class="panel-body">
-            {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=adminform|form_fieldset_column_width %}
+            {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=12 %}
             </div>
             </div>
         {% endfor %}
