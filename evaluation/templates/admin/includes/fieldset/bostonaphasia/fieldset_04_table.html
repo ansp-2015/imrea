@@ -1,16 +1,16 @@
 {% load i18n bootstrapped_goodies_tags %}
 <fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
     {% if fieldset.name %}
-    <legend>
-        {% if 'collapse' in fieldset.classes %}
-        <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
-        {{ fieldset.name }}
-        &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></i></span>
-        </a>
-        {% else %}
-        {{ fieldset.name }}
-        {% endif %}
-    </legend>
+        <legend>
+            {% if 'collapse' in fieldset.classes %}
+                <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
+                    {{ fieldset.name }}
+                    &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></span></span>
+                </a>
+            {% else %}
+              {{ fieldset.name }}
+            {% endif %}
+        </legend>
     {% endif %}
     <div class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
         {% if fieldset.description.text %}
@@ -24,7 +24,7 @@
                                 <tr><td colspan="2" style="background-color:#fff;"><p>{% trans "One point for each corrected underlined element" %}</p></td></tr>
                             {% endif %}
                             {% for field in line %}
-                                {% if "command_put_pencil" in field.field.name %}
+                                {% if forloop.parentloop.counter == 2 and forloop.first %}
                                     <tr><td colspan="2" style="background-color:#fff;"><p>{% trans "After lining up a pencil, watch, and card, in that order, on the table in front of the patient:" %}</p></td></tr>
                                 {% endif %}
                                 <tr>

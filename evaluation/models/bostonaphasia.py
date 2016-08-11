@@ -170,137 +170,160 @@ class BostonAphasia(BaseEvaluation):
     comprehension_card3_number_7000_points = models.IntegerField(blank=True, null=True)
 
     # Body parts
-    body_part_a_ear_answer = models.CharField(verbose_name=u'Ear', max_length=200, blank=True, null=True)
-    body_part_a_ear_points = models.IntegerField(blank=True, null=True)
+    body_part_a_ear_answer = models.CharField(verbose_name=_(u'Ear'), max_length=200, blank=True, null=True)
+    body_part_a_ear_points = models.IntegerField(verbose_name=_(u'Ear'), blank=True, null=True)
 
-    body_part_a_nose_answer = models.CharField(verbose_name=u'Nose', max_length=200, blank=True, null=True)
-    body_part_a_nose_points = models.IntegerField(blank=True, null=True)
+    body_part_a_nose_answer = models.CharField(verbose_name=_(u'Nose'), max_length=200, blank=True, null=True)
+    body_part_a_nose_points = models.IntegerField(verbose_name=_(u'Nose'), blank=True, null=True)
 
-    body_part_a_shoulder_answer = models.CharField(verbose_name=u'Shoulder', max_length=200, blank=True, null=True)
-    body_part_a_shoulder_points = models.IntegerField(blank=True, null=True)
+    body_part_a_shoulder_answer = models.CharField(verbose_name=_(u'Shoulder'), max_length=200, blank=True, null=True)
+    body_part_a_shoulder_points = models.IntegerField(verbose_name=_(u'Shoulder'), blank=True, null=True)
 
-    body_part_a_knee_answer = models.CharField(verbose_name=u'Knee', max_length=200, blank=True, null=True)
-    body_part_a_knee_points = models.IntegerField(blank=True, null=True)
+    body_part_a_knee_answer = models.CharField(verbose_name=_(u'Knee'), max_length=200, blank=True, null=True)
+    body_part_a_knee_points = models.IntegerField(verbose_name=_(u'Knee'), blank=True, null=True)
 
-    body_part_a_eyelid_answer = models.CharField(verbose_name=u'Eyelid', max_length=200, blank=True, null=True)
-    body_part_a_eyelid_points = models.IntegerField(blank=True, null=True)
+    body_part_a_eyelid_answer = models.CharField(verbose_name=_(u'Eyelid'), max_length=200, blank=True, null=True)
+    body_part_a_eyelid_points = models.IntegerField(verbose_name=_(u'Eyelid'), blank=True, null=True)
 
-    body_part_a_ankle_answer = models.CharField(verbose_name=u'Ankle', max_length=200, blank=True, null=True)
-    body_part_a_ankle_points = models.IntegerField(blank=True, null=True)
+    body_part_a_ankle_answer = models.CharField(verbose_name=_(u'Ankle'), max_length=200, blank=True, null=True)
+    body_part_a_ankle_points = models.IntegerField(verbose_name=_(u'Ankle'), blank=True, null=True)
 
-    body_part_a_chest_answer = models.CharField(verbose_name=u'Chest', max_length=200, blank=True, null=True)
-    body_part_a_chest_points = models.IntegerField(blank=True, null=True)
+    body_part_a_chest_answer = models.CharField(verbose_name=_(u'Chest'), max_length=200, blank=True, null=True)
+    body_part_a_chest_points = models.IntegerField(verbose_name=_(u'Chest'), blank=True, null=True)
 
-    body_part_a_neck_answer = models.CharField(verbose_name=u'Neck', max_length=200, blank=True, null=True)
-    body_part_a_neck_points = models.IntegerField(blank=True, null=True)
+    body_part_a_neck_answer = models.CharField(verbose_name=_(u'Neck'), max_length=200, blank=True, null=True)
+    body_part_a_neck_points = models.IntegerField(verbose_name=_(u'Neck'), blank=True, null=True)
 
-    body_part_a_middle_finger_answer = models.CharField(verbose_name=u'Middle finger', max_length=200, blank=True, null=True)
-    body_part_a_middle_finger_points = models.IntegerField(blank=True, null=True)
+    body_part_a_middle_finger_answer = models.CharField(verbose_name=_(u'Middle finger'), max_length=200, blank=True, null=True)
+    body_part_a_middle_finger_points = models.IntegerField(verbose_name=_(u'Middle finger'), blank=True, null=True)
 
-    body_part_b_wrist_answer = models.CharField(verbose_name=u'Wrist', max_length=200, blank=True, null=True)
-    body_part_b_wrist_points = models.IntegerField(blank=True, null=True)
+    body_part_b_wrist_answer = models.CharField(verbose_name=_(u'Wrist'), max_length=200, blank=True, null=True)
+    body_part_b_wrist_points = models.IntegerField(verbose_name=_(u'Wrist'), blank=True, null=True)
 
-    body_part_b_thumb_answer = models.CharField(verbose_name=u'Thumb', max_length=200, blank=True, null=True)
-    body_part_b_thumb_points = models.IntegerField(blank=True, null=True)
+    body_part_b_thumb_answer = models.CharField(verbose_name=_(u'Thumb'), max_length=200, blank=True, null=True)
+    body_part_b_thumb_points = models.IntegerField(verbose_name=_(u'Thumb'), blank=True, null=True)
 
-    body_part_b_thigh_answer = models.CharField(verbose_name=u'Thigh', max_length=200, blank=True, null=True)
-    body_part_b_thigh_points = models.IntegerField(blank=True, null=True)
+    body_part_b_thigh_answer = models.CharField(verbose_name=_(u'Thigh'), max_length=200, blank=True, null=True)
+    body_part_b_thigh_points = models.IntegerField(verbose_name=_(u'Thigh'), blank=True, null=True)
 
-    body_part_b_chin_answer = models.CharField(verbose_name=u'Chin', max_length=200, blank=True, null=True)
-    body_part_b_chin_points = models.IntegerField(blank=True, null=True)
+    body_part_b_chin_answer = models.CharField(verbose_name=_(u'Chin'), max_length=200, blank=True, null=True)
+    body_part_b_chin_points = models.IntegerField(verbose_name=_(u'Chin'), blank=True, null=True)
 
-    body_part_b_elbow_answer = models.CharField(verbose_name=u'Elbow', max_length=200, blank=True, null=True)
-    body_part_b_elbow_points = models.IntegerField(blank=True, null=True)
+    body_part_b_elbow_answer = models.CharField(verbose_name=_(u'Elbow'), max_length=200, blank=True, null=True)
+    body_part_b_elbow_points = models.IntegerField(verbose_name=_(u'Elbow'), blank=True, null=True)
 
-    body_part_b_lips_answer = models.CharField(verbose_name=u'Lips', max_length=200, blank=True, null=True)
-    body_part_b_lips_points = models.IntegerField(blank=True, null=True)
+    body_part_b_lips_answer = models.CharField(verbose_name=_(u'Lips'), max_length=200, blank=True, null=True)
+    body_part_b_lips_points = models.IntegerField(verbose_name=_(u'Lips'), blank=True, null=True)
 
-    body_part_b_eyebrow_answer = models.CharField(verbose_name=u'Eyebrow', max_length=200, blank=True, null=True)
-    body_part_b_eyebrow_points = models.IntegerField(blank=True, null=True)
+    body_part_b_eyebrow_answer = models.CharField(verbose_name=_(u'Eyebrow'), max_length=200, blank=True, null=True)
+    body_part_b_eyebrow_points = models.IntegerField(verbose_name=_(u'Eyebrow'), blank=True, null=True)
 
-    body_part_b_cheek_answer = models.CharField(verbose_name=u'Cheek', max_length=200, blank=True, null=True)
-    body_part_b_cheek_points = models.IntegerField(blank=True, null=True)
+    body_part_b_cheek_answer = models.CharField(verbose_name=_(u'Cheek'), max_length=200, blank=True, null=True)
+    body_part_b_cheek_points = models.IntegerField(verbose_name=_(u'Cheek'), blank=True, null=True)
 
-    body_part_b_forefinger_answer = models.CharField(verbose_name=u'Forefinger', max_length=200, blank=True, null=True)
-    body_part_b_forefinger_points = models.IntegerField(blank=True, null=True)
+    body_part_b_forefinger_answer = models.CharField(verbose_name=_(u'Forefinger'), max_length=200, blank=True, null=True)
+    body_part_b_forefinger_points = models.IntegerField(verbose_name=_(u'Forefinger'), blank=True, null=True)
 
-    body_part_c_right_ear_answer = models.CharField(verbose_name=u'Right ear', max_length=200, blank=True, null=True)
-    body_part_c_right_ear_points = models.IntegerField(blank=True, null=True)
+    body_part_c_right_ear_answer = models.CharField(verbose_name=_(u'Right ear'), max_length=200, blank=True, null=True)
+    body_part_c_right_ear_points = models.IntegerField(verbose_name=_(u'Right ear'), blank=True, null=True)
 
-    body_part_c_left_shoulder_answer = models.CharField(verbose_name=u'Left shoulder', max_length=200, blank=True, null=True)
-    body_part_c_left_shoulder_points = models.IntegerField(blank=True, null=True)
+    body_part_c_left_shoulder_answer = models.CharField(verbose_name=_(u'Left shoulder'), max_length=200, blank=True, null=True)
+    body_part_c_left_shoulder_points = models.IntegerField(verbose_name=_(u'Left shoulder'), blank=True, null=True)
 
-    body_part_c_left_knee_answer = models.CharField(verbose_name=u'Left knee', max_length=200, blank=True, null=True)
-    body_part_c_left_knee_points = models.IntegerField(blank=True, null=True)
+    body_part_c_left_knee_answer = models.CharField(verbose_name=_(u'Left knee'), max_length=200, blank=True, null=True)
+    body_part_c_left_knee_points = models.IntegerField(verbose_name=_(u'Left knee'), blank=True, null=True)
 
-    body_part_c_right_ankle_answer = models.CharField(verbose_name=u'Right ankle', max_length=200, blank=True, null=True)
-    body_part_c_right_ankle_points = models.IntegerField(blank=True, null=True)
+    body_part_c_right_ankle_answer = models.CharField(verbose_name=_(u'Right ankle'), max_length=200, blank=True, null=True)
+    body_part_c_right_ankle_points = models.IntegerField(verbose_name=_(u'Right ankle'), blank=True, null=True)
 
-    body_part_c_right_wrist_answer = models.CharField(verbose_name=u'Right wrist', max_length=200, blank=True, null=True)
-    body_part_c_right_wrist_points = models.IntegerField(blank=True, null=True)
+    body_part_c_right_wrist_answer = models.CharField(verbose_name=_(u'Right wrist'), max_length=200, blank=True, null=True)
+    body_part_c_right_wrist_points = models.IntegerField(verbose_name=_(u'Right wrist'), blank=True, null=True)
 
-    body_part_c_left_thumb_answer = models.CharField(verbose_name=u'Left thumb', max_length=200, blank=True, null=True)
-    body_part_c_left_thumb_points = models.IntegerField(blank=True, null=True)
+    body_part_c_left_thumb_answer = models.CharField(verbose_name=_(u'Left thumb'), max_length=200, blank=True, null=True)
+    body_part_c_left_thumb_points = models.IntegerField(verbose_name=_(u'Left thumb'), blank=True, null=True)
 
-    body_part_c_right_elbow_answer = models.CharField(verbose_name=u'Right elbow', max_length=200, blank=True, null=True)
-    body_part_c_right_elbow_points = models.IntegerField(blank=True, null=True)
+    body_part_c_right_elbow_answer = models.CharField(verbose_name=_(u'Right elbow'), max_length=200, blank=True, null=True)
+    body_part_c_right_elbow_points = models.IntegerField(verbose_name=_(u'Right elbow'), blank=True, null=True)
 
-    body_part_c_left_cheek_answer = models.CharField(verbose_name=u'Left cheek', max_length=200, blank=True, null=True)
-    body_part_c_left_cheek_points = models.IntegerField(blank=True, null=True)
+    body_part_c_left_cheek_answer = models.CharField(verbose_name=_(u'Left cheek'), max_length=200, blank=True, null=True)
+    body_part_c_left_cheek_points = models.IntegerField(verbose_name=_(u'Left cheek'), blank=True, null=True)
 
     # COMMANDS
-    command_close_fist = models.IntegerField(verbose_name=u'1. Make a fist', blank=True, null=True)
-    command_point_ceiling = models.IntegerField(verbose_name=u'2. Point to the ceiling, then to the floor', blank=True, null=True)
-    command_put_pencil = models.IntegerField(verbose_name=u'3. Put the pencil on top of the card, then put it back in place', blank=True, null=True)
-    command_put_watch = models.IntegerField(verbose_name=u'4. Put the watch on the other side of the pencil and turn over the card', blank=True, null=True)
-    command_touch_shoulder = models.IntegerField(verbose_name=u'5. Tap each shoulder twice with two fingers, keeping your eyes shut', blank=True, null=True)
+    command_close_fist = models.IntegerField(verbose_name=_(u'1. Make a fist'), blank=True, null=True)
+    command_point_ceiling = models.IntegerField(verbose_name=_(u'2. Point to the ceiling, then to the floor'), blank=True, null=True)
+    command_put_pencil = models.IntegerField(verbose_name=_(u'3. Put the pencil on top of the card, then put it back in place'), blank=True, null=True)
+    command_put_watch = models.IntegerField(verbose_name=_(u'4. Put the watch on the other side of the pencil and turn over the card'), blank=True, null=True)
+    command_touch_shoulder = models.IntegerField(verbose_name=_(u'5. Tap each shoulder twice with two fingers, keeping your eyes shut'), blank=True, null=True)
 
     # COMPLEX IDEATIONAL MATERIAL
-    complex_ideational_1a = models.IntegerField(verbose_name=u'1a. Will a cork sink in water?', blank=True, null=True)
-    complex_ideational_2a = models.IntegerField(verbose_name=u'2a. Can you use a hammer to pound nails?', blank=True, null=True)
-    complex_ideational_1b = models.IntegerField(verbose_name=u'1b. Will a stone sink in water?', blank=True, null=True)
-    complex_ideational_2b = models.IntegerField(verbose_name=u'2b. Is a hammer good for cutting wood?', blank=True, null=True)
+    complex_ideational_1a = models.IntegerField(verbose_name=_(u'1a. Will a cork sink in water?'), blank=True, null=True)
+    complex_ideational_2a = models.IntegerField(verbose_name=_(u'2a. Can you use a hammer to pound nails?'), blank=True, null=True)
+    complex_ideational_1b = models.IntegerField(verbose_name=_(u'1b. Will a stone sink in water?'), blank=True, null=True)
+    complex_ideational_2b = models.IntegerField(verbose_name=_(u'2b. Is a hammer good for cutting wood?'), blank=True, null=True)
 
-    complex_ideational_3a = models.IntegerField(verbose_name=u'3a. Do two pounds of flour weigh more than one?', blank=True, null=True)
-    complex_ideational_4a = models.IntegerField(verbose_name=u'4a. Will water go through a ', blank=True, null=True)
-    complex_ideational_3b = models.IntegerField(verbose_name=u'3b. Is one pound of flour heavier than two?', blank=True, null=True)
-    complex_ideational_4b = models.IntegerField(verbose_name=u'4b. Will a good pair of rubber boots keep water out?', blank=True, null=True)
+    complex_ideational_3a = models.IntegerField(verbose_name=_(u'3a. Do two pounds of flour weigh more than one?'), blank=True, null=True)
+    complex_ideational_4a = models.IntegerField(verbose_name=_(u'4a. Will water go through a good pair of rubber boots?'), blank=True, null=True)
+    complex_ideational_3b = models.IntegerField(verbose_name=_(u'3b. Is one pound of flour heavier than two?'), blank=True, null=True)
+    complex_ideational_4b = models.IntegerField(verbose_name=_(u'4b. Will a good pair of rubber boots keep water out?'), blank=True, null=True)
 
     # Mr. Jones had to go to New York.
     # He decided to take a train.
     # His wife drove him to the station, but on the way they had a flat tire.
     # However, they arrived at the station just in time for him to catch the train
-    complex_ideational_5a = models.IntegerField(verbose_name=u'5a. Did Mr. Jones miss his train?', blank=True, null=True)
-    complex_ideational_6a = models.IntegerField(verbose_name=u'6a. Was Mr. Jones going to New York?', blank=True, null=True)
-    complex_ideational_5b = models.IntegerField(verbose_name=u'5b. Did he get to the station on time?', blank=True, null=True)
-    complex_ideational_6b = models.IntegerField(verbose_name=u'6b. Was he on his way home from New York?', blank=True, null=True)
+    complex_ideational_5a = models.IntegerField(verbose_name=_(u'5a. Did Mr. Jones miss his train?'), blank=True, null=True)
+    complex_ideational_6a = models.IntegerField(verbose_name=_(u'6a. Was Mr. Jones going to New York?'), blank=True, null=True)
+    complex_ideational_5b = models.IntegerField(verbose_name=_(u'5b. Did he get to the station on time?'), blank=True, null=True)
+    complex_ideational_6b = models.IntegerField(verbose_name=_(u'6b. Was he on his way home from New York?'), blank=True, null=True)
 
     # A soldier tried to cash a check in a bank near his camp.
     # The teller, firm but sympathetic, said,
     # "You will have to have identification from some of your friends from the camp."
     # The discoraged soldier answered, "But I don't have any friends in camp - I'm the bugler."
-    complex_ideational_7a = models.IntegerField(verbose_name=u'7a. Was the soldier\'s check cashed at once?', blank=True, null=True)
-    complex_ideational_8a = models.IntegerField(verbose_name=u'8a. Did the soldier have a friend with him?', blank=True, null=True)
-    complex_ideational_7b = models.IntegerField(verbose_name=u'7b. Did the teller object to cashing the check?', blank=True, null=True)
-    complex_ideational_8b = models.IntegerField(verbose_name=u'8b. Did the soldier have trouble finding friends?', blank=True, null=True)
+    complex_ideational_7a = models.IntegerField(verbose_name=_(u'7a. Was the soldier\'s check cashed at once?'), blank=True, null=True)
+    complex_ideational_8a = models.IntegerField(verbose_name=_(u'8a. Did the soldier have a friend with him?'), blank=True, null=True)
+    complex_ideational_7b = models.IntegerField(verbose_name=_(u'7b. Did the teller object to cashing the check?'), blank=True, null=True)
+    complex_ideational_8b = models.IntegerField(verbose_name=_(u'8b. Did the soldier have trouble finding friends?'), blank=True, null=True)
 
     # A customer walked into a hotel carrying a coil of rope in one hand and a suitcase in the other.
     # The hotel clerk asked, "Pardon me, sir, but will you tell me what the rope is for?"
     # "Yes," replied the man, "That's my fire escape." "I'm sorry, sir," said the clerk,
     # "but all guests carrying their own fire escapes must pay in advance."
-    complex_ideational_9a = models.IntegerField(verbose_name=u'9a. Was the customer carrying a suitcase in each hand?', blank=True, null=True)
-    complex_ideational_10a = models.IntegerField(verbose_name=u'10a. Was the clerk suspicious of the guest?', blank=True, null=True)
-    complex_ideational_9b = models.IntegerField(verbose_name=u'9b. Was the customer carrying something unusual in one hand?', blank=True, null=True)
-    complex_ideational_10b = models.IntegerField(verbose_name=u'10b. Did the clerk trust this guest?', blank=True, null=True)
+    complex_ideational_9a = models.IntegerField(verbose_name=_(u'9a. Was the customer carrying a suitcase in each hand?'), blank=True, null=True)
+    complex_ideational_10a = models.IntegerField(verbose_name=_(u'10a. Was the clerk suspicious of the guest?'), blank=True, null=True)
+    complex_ideational_9b = models.IntegerField(verbose_name=_(u'9b. Was the customer carrying something unusual in one hand?'), blank=True, null=True)
+    complex_ideational_10b = models.IntegerField(verbose_name=_(u'10b. Did the clerk trust this guest?'), blank=True, null=True)
 
     # The lion cub is born with a deep-seated hunting instinct.
     # One cub will stalk and pounce on another with the same eagerness and thrill exhibited by a kitten.
     # During the year and a half of cubhood, this play develops into a hunting and killing technique.
     # Skill comes through long practice, imitation of the old lions, and obedience to warning growls of the mother.
-    complex_ideational_11a = models.IntegerField(verbose_name=u'11a. Does this paragraph tell how lions learn to hunt?', blank=True, null=True)
-    complex_ideational_12a = models.IntegerField(verbose_name=u'12a. Does this paragraph say that lions are skillful killers from the time they are born?', blank=True, null=True)
-    complex_ideational_11b = models.IntegerField(verbose_name=u'11b. Does the paragraph tell how to hunt lions?', blank=True, null=True)
-    complex_ideational_12b = models.IntegerField(verbose_name=u'12b. Does it say lions need practice before they can kill their prey?', blank=True, null=True)
+    complex_ideational_11a = models.IntegerField(verbose_name=_(u'11a. Does this paragraph tell how lions learn to hunt?'), blank=True, null=True)
+    complex_ideational_12a = models.IntegerField(verbose_name=_(u'12a. Does this paragraph say that lions are skillful killers from the time they are born?'), blank=True, null=True)
+    complex_ideational_11b = models.IntegerField(verbose_name=_(u'11b. Does the paragraph tell how to hunt lions?'), blank=True, null=True)
+    complex_ideational_12b = models.IntegerField(verbose_name=_(u'12b. Does it say lions need practice before they can kill their prey?'), blank=True, null=True)
+
+    # ORAL EXPRESSION
+    # ORAL AGILITY
+    # Nonverbal agility: Have the patient carry out the following rapidly repeated mouth movements as well as he can,
+    # after you demonstrate and describe the movement
+    # Count the number of full alternations carried out in 5 seconds.
+    oral_agility_lips_purse = models.IntegerField(verbose_name=_(u'Purse lips, release'), blank=True, null=True)
+    oral_agility_mouth_open = models.IntegerField(verbose_name=_(u'Open and close mouth'), blank=True, null=True)
+    oral_agility_lips_retract = models.IntegerField(verbose_name=_(u'Retract lips, release'), blank=True, null=True)
+    oral_agility_tongue_corner = models.IntegerField(verbose_name=_(u'Tongue to alternate corners of mouth'), blank=True, null=True)
+    oral_agility_tongue_protude = models.IntegerField(verbose_name=_(u'Protrude and retract tongue'), blank=True, null=True)
+    oral_agility_tongue_teeth = models.IntegerField(verbose_name=_(u'Tongue to upper and lower teeth'), blank=True, null=True)
+
+    # Verbal agility: Have the patient repeat the following words as rapidly as he can,
+    # while you time the number of repetitions for 5 seconds
+    # Any assistance which helps patient to produce the desired word initially is permitted.
+    verbal_agility_a = models.IntegerField(verbose_name=_(u'Mama, mama'), blank=True, null=True)
+    verbal_agility_b = models.IntegerField(verbose_name=_(u'Tip-top, tip-top'), blank=True, null=True)
+    verbal_agility_c = models.IntegerField(verbose_name=_(u'Fifty-fifty, fifty-fifty'), blank=True, null=True)
+    verbal_agility_d = models.IntegerField(verbose_name=_(u'Thanks, thanks'), blank=True, null=True)
+    verbal_agility_e = models.IntegerField(verbose_name=_(u'Huckleberry'), blank=True, null=True)
+    verbal_agility_f = models.IntegerField(verbose_name=_(u'Baseball player, baseball player'), blank=True, null=True)
+    verbal_agility_g = models.IntegerField(verbose_name=_(u'Caterpillar'), blank=True, null=True)
 
 
 

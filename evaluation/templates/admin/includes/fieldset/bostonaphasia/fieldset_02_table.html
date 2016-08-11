@@ -1,16 +1,16 @@
 {% load i18n bootstrapped_goodies_tags %}
 <fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
     {% if fieldset.name %}
-    <legend>
-        {% if 'collapse' in fieldset.classes %}
-        <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
-        {{ fieldset.name }}
-        &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></i></span>
-        </a>
-        {% else %}
-        {{ fieldset.name }}
-        {% endif %}
-    </legend>
+        <legend>
+            {% if 'collapse' in fieldset.classes %}
+                <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
+                    {{ fieldset.name }}
+                    &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></span></span>
+                </a>
+            {% else %}
+              {{ fieldset.name }}
+            {% endif %}
+        </legend>
     {% endif %}
     <div class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
         {% if fieldset.description.text %}
@@ -38,7 +38,7 @@
                     {% for line in fieldset %}
                         <tr>
                             {% for field in line %}
-                                {% if "comprehension_card3_act_drinking_answer" in field.field.name %}
+                                {% if forloop.parentloop.counter == 19 and forloop.first %}
                                     </tbody>
                                     </table>
                                     </div>

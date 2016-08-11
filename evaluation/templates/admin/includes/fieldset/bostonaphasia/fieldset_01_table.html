@@ -1,16 +1,16 @@
 {% load i18n bootstrapped_goodies_tags %}
 <fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
     {% if fieldset.name %}
-    <legend>
-        {% if 'collapse' in fieldset.classes %}
-        <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
-        {{ fieldset.name }}
-        &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></i></span>
-        </a>
-        {% else %}
-        {{ fieldset.name }}
-        {% endif %}
-    </legend>
+        <legend>
+            {% if 'collapse' in fieldset.classes %}
+                <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
+                    {{ fieldset.name }}
+                    &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></span></span>
+                </a>
+            {% else %}
+              {{ fieldset.name }}
+            {% endif %}
+        </legend>
     {% endif %}
     <div class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
      {% if fieldset.description.text %}
@@ -28,7 +28,7 @@
         {% for line in fieldset %}
             <tr>
                  {% for field in line %}
-                     {% if field.field.name == 'edinburg_handedness_historic_dominance' %}
+                     {% if forloop.parentloop.last %}
                         <td colspan="3">
                             <div class="row">
                                 <div class="col-md-1"><strong>{% trans "Cotação" %}:</strong></div>

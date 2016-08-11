@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from reversion_compare.helpers import patch_admin
-from evaluation.models.bostonaphasia import BostonAphasia
+from ..models.bostonaphasia import BostonAphasia
 from .base_admin import BaseAdmin
 from ..forms.bostonaphasia_form import BostonAphasiaForm
 
@@ -195,6 +195,25 @@ class BostonAphasiaAdmin(BaseAdmin):
                 'fieldset': '/bostonaphasia/fieldset_05_table',
                 'text': _(u'Both the A and B questions must be correct to gain 1 point of credit for each numbered pair. '
                           u'One repetition is permitted. First read all the question from column A and then questions from column B.'),
+                'fieldset_total_points': '12',
+                'fieldset_total_addend_fields': ('form_complex_ideational_1a_1b', 'form_complex_ideational_2a_2b',
+                                                 'form_complex_ideational_3a_3b', 'form_complex_ideational_4a_4b',
+                                                 'form_complex_ideational_5a_5b', 'form_complex_ideational_6a_6b',
+                                                 'form_complex_ideational_7a_7b', 'form_complex_ideational_8a_8b',
+                                                 'form_complex_ideational_9a_9b', 'form_complex_ideational_10a_10b',
+                                                 'form_complex_ideational_11a_11b', 'form_complex_ideational_12a_12b',),
+                'fieldset_total_field': 'complex_ideational_total',
+            }
+        }),
+        (_(u'Oral agility'), {
+            'fields': (
+                ('oral_agility_lips_purse', 'oral_agility_mouth_open', 'oral_agility_lips_retract',
+                 'oral_agility_tongue_corner', 'oral_agility_tongue_protude', 'oral_agility_tongue_teeth'),
+                ('verbal_agility_a', 'verbal_agility_b', 'verbal_agility_c', 'verbal_agility_d',
+                 'verbal_agility_e', 'verbal_agility_f', 'verbal_agility_g'),
+                ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_06_table',
             }
         }),
     )
