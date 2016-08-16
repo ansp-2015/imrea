@@ -10,7 +10,7 @@ class BaseEvaluation(models.Model):
     """
 
     # Utilizar esse valor para os casos em que o paciente não pode responder. "NAO TEM"
-    NT = ((-10000, _(u'NT')),)
+    UN = ((-10000, _(u'NT')),)
     # Utilizar esse valor nos casos em que o paciente faltou e não fez a avaliação. "MISSING DATA"
     MD = ((-100000, _(u'MD')),)
 

@@ -9,6 +9,118 @@ class NIHSS(BaseEvaluation):
     National Institutes of Health Stroke Scale
     """
 
+    ### Descriptions
+    NIH_LOC_DESCRIPTION = _(u'The investigator must choose a response if a full evaluation is prevented by such '
+                            u'obstacles as an endotracheal tube, language barrier, orotracheal trauma/bandages. A '
+                            u'3 is scored only if the patient makes no movement (other than reflexive posturing) in '
+                            u'response to noxious stimulation.')
+
+    NIH_LOC_QUESTIONS_DESCRIPTION = _(u'The patient is asked the month and his/her age. The answer must be correct - '
+                                      u'there is no partial credit for being close. Aphasic and stuporous patients '
+                                      u'who do not comprehend the questions will score 2. Patients unable to speak '
+                                      u'because of endotracheal intubation, orotracheal trauma, severe dysarthria '
+                                      u'from any cause, language barrier, or any other problem not secondary to '
+                                      u'aphasia are given a 1. It is important that only the initial answer be graded '
+                                      u'and that the examiner not "help" the patient with verbal or non-verbal cues.')
+
+    NIH_LOC_COMMANDS_DESCRIPTION = _(u'The patient is asked to open and close the eyes and then to grip and release '
+                                     u'the non-paretic hand. Substitute another one step command if the hands cannot '
+                                     u'be used. Credit is given if an unequivocal attempt is made but not completed '
+                                     u'due to weakness. If the patient does not respond to command, the task should '
+                                     u'be demonstrated to him or her (pantomime), and the result scored (i.e., '
+                                     u'follows none, one or two commands). Patients with trauma, amputation, or other '
+                                     u'physical impediments should be given suitable one-step commands. Only the '
+                                     u'first attempt is scored.')
+
+    NIH_BEST_GAZE_DESCRIPTION = _(u'Only horizontal eye movements will be tested. Voluntary or reflexive '
+                                  u'(oculocephalic) eye movements will be scored, but caloric testing is not done. If '
+                                  u'the patient has a conjugate deviation of the eyes that can be overcome by '
+                                  u'voluntary or reflexive activity, the score will be 1. If a patient has an isolated '
+                                  u'peripheral nerve paresis (CN III, IV or VI), score a 1. Gaze is testable in all '
+                                  u'aphasic patients. Patients with ocular trauma, bandages, pre-existing blindness, '
+                                  u'or other disorder of visual acuity or fields should be tested with reflexive '
+                                  u'movements, and a choice made by the investigator. Establishing eye contact and '
+                                  u'then moving about the patient from side to side will occasionally clarify the '
+                                  u'presence of a partial gaze palsy.')
+
+    NIH_VISUAL_DESCRIPTION = _(u'Visual fields (upper and lower quadrants) are tested by confrontation, using finger '
+                               u'counting or visual threat, as appropriate. Patients may be encouraged, but if they '
+                               u'look at the side of the moving fingers appropriately, this can be scored as normal. '
+                               u'If there is unilateral blindness or enucleation, visual fields in the remaining eye '
+                               u'are scored. Score 1 only if a clear-cut asymmetry, including quadrantanopia, is '
+                               u'found. If patient is blind from any cause, score 3. Double simultaneous stimulation '
+                               u'is performed at this point. If there is extinction, patient receives a 1, and the '
+                               u'results are used to respond to item 11.')
+
+    NIH_FACIAL_PALSY_DESCRIPTION = _(u'Ask – or use pantomime to encourage – the patient to show teeth or raise eyebrows and close '
+                                     u'eyes. Score symmetry of grimace in response to noxious stimuli in the poorly responsive or '
+                                     u'non-comprehending patient. If facial trauma/bandages, orotracheal tube, tape or other '
+                                     u'physical barriers obscure the face, these should be removed to the extent possible.')
+
+    NIH_MOTOR_ARM_DESCRIPTION = _(u'The limb is placed in the appropriate position: extend the arms (palms down) 90 '
+                                  u'degrees (if sitting) or 45 degrees (if supine). Drift is scored if the arm falls '
+                                  u'before 10 seconds. The aphasic patient is encouraged using urgency in the voice '
+                                  u'and pantomime, but not noxious stimulation. Each limb is tested in turn, beginning '
+                                  u'with the non-paretic arm. Only in the case of amputation or joint fusion at the '
+                                  u'shoulder, the examiner should record the score as untestable (UN), and clearly '
+                                  u'write the explanation for this choice.')
+
+    NIH_MOTOR_LEG_DESCRIPTION = _(u'The limb is placed in the appropriate position: hold the leg at 30 degrees (always '
+                                  u'tested supine). Drift is scored if the leg falls before 5 seconds. The aphasic '
+                                  u'patient is encouraged using urgency in the voice and pantomime, but not noxious '
+                                  u'stimulation. Each limb is tested in turn, beginning with the non-paretic leg. Only '
+                                  u'in the case of amputation or joint fusion at the hip, the examiner should record '
+                                  u'the score as untestable (UN), and clearly write the explanation for this choice.')
+
+    NIH_LIMB_ATAXIA_DESCRIPTION = _(u'This item is aimed at finding evidence of a unilateral cerebellar lesion. Test '
+                                    u'with eyes open. In case of visual defect, ensure testing is done in intact '
+                                    u'visual field. The finger-nose-finger and heel-shin tests are performed on both '
+                                    u'sides, and ataxia is scored only if present out of proportion to weakness. '
+                                    u'Ataxia is absent in the patient who cannot understand or is paralyzed. Only in '
+                                    u'the case of amputation or joint fusion, the examiner should record the score as '
+                                    u'untestable (UN), and clearly write the explanation for this choice. In case of '
+                                    u'blindness, test by having the patient touch nose from extended arm position. ')
+
+    NIH_SENSORY_DESCRIPTION = _(u'Sensation or grimace to pinprick when tested, or withdrawal from noxious stimulus in '
+                                u'the obtunded or aphasic patient. Only sensory loss attributed to stroke is scored as '
+                                u'abnormal and the examiner should test as many body areas (arms [not hands], legs, '
+                                u'trunk, face) as needed to accurately check for hemisensory loss. A score of 2, '
+                                u'"severe or total sensory loss," should only be given when a severe or total loss of '
+                                u'sensation can be clearly demonstrated. Stuporous and aphasic patients will, '
+                                u'therefore, probably score 1 or 0. The patient with brainstem stroke who has '
+                                u'bilateral loss of sensation is scored 2. If the patient does not respond and is '
+                                u'quadriplegic, score 2. Patients in a coma (item 1a=3) are automatically given a 2 on '
+                                u'this item.')
+
+    NIH_BEST_LANGUAGE_DESCRIPTION = _(u'A great deal of information about comprehension will be obtained during the '
+                                      u'preceding sections of the examination. For this scale item, the patient is '
+                                      u'asked to describe what is happening in the attached picture, to name the items '
+                                      u'on the attached naming sheet and to read from the attached list of sentences. '
+                                      u'Comprehension is judged from responses here, as well as to all of the commands '
+                                      u'in the preceding general neurological exam. If visual loss interferes with the '
+                                      u'tests, ask the patient to identify objects placed in the hand, repeat, and '
+                                      u'produce speech. The intubated patient should be asked to write. The patient in '
+                                      u'a coma (item 1a=3) will automatically score 3 on this item. The examiner must '
+                                      u'choose a score for the patient with stupor or limited cooperation, but a score '
+                                      u'of 3 should be used only if the patient is mute and follows no one-step '
+                                      u'commands. ')
+
+    NIH_DYSARTHRIA_DESCRIPTION = _(u'If patient is thought to be normal, an adequatesample of speech must be obtained '
+                                   u'by asking patient to read or repeat words from the attached list. If the patient '
+                                   u'has severe aphasia, the clarity of articulation of spontaneous speech can be '
+                                   u'rated. Only if the patient is intubated or has other physical barriers to '
+                                   u'producing speech, the examiner should record the score as untestable (UN), and '
+                                   u'clearly write an explanation for this choice. Do not tell the patient why he or '
+                                   u'she is being tested.')
+
+    NIH_EXTINCTION_DESCRIPTION = _(u'Sufficient information to identify neglect may be obtained during the prior '
+                                   u'testing. If the patient has a severe visual loss preventing visual double '
+                                   u'simultaneous stimulation, and the cutaneous stimuli are normal, the score is '
+                                   u'normal. If the patient has aphasia but does appear to attend to both sides, the '
+                                   u'score is normal. The presence of visual spatial neglect or anosagnosia may also '
+                                   u'be taken as evidence of abnormality. Since the abnormality is scored only if '
+                                   u'present, the item is never untestable.')
+
     NIH_LOC = (
         (0, _('Alert; keenly responsive.')),
         (1, _('Not alert; but arousable by minor stimulation to obey, answer, or respond.')),
@@ -66,8 +178,10 @@ class NIHSS(BaseEvaluation):
         (3, _('No effort against gravity; limb falls.')),
         (4, _('No movement')),
     )
-    motor_arm_left = models.IntegerField(_('5a. Left arm'), choices=NIH_MOTOR_ARM)
-    motor_arm_right = models.IntegerField(_('5b. Right arm'), choices=NIH_MOTOR_ARM)
+    motor_arm_left = models.IntegerField(_('5. Motor arm'), choices=NIH_MOTOR_ARM)
+    motor_arm_right = models.IntegerField(choices=NIH_MOTOR_ARM)
+    motor_arm_left_un_explanation = models.TextField(null=True, blank=True)
+    motor_arm_right_un_explanation = models.TextField(null=True, blank=True)
 
     NIH_MOTOR_LEG = (
         (0, _('No drift; leg holds 30-degree position for full 5 seconds.')),
@@ -76,8 +190,10 @@ class NIHSS(BaseEvaluation):
         (3, _('No effort against gravity; leg falls to bed immediately.')),
         (4, _('No movement.')),
     )
-    motor_leg_left = models.IntegerField(_('6a. Left leg'), choices=NIH_MOTOR_LEG)
-    motor_leg_right = models.IntegerField(_('6b. Right leg'), choices=NIH_MOTOR_LEG)
+    motor_leg_left = models.IntegerField(_('6. Motor leg'), choices=NIH_MOTOR_LEG)
+    motor_leg_right = models.IntegerField(choices=NIH_MOTOR_LEG)
+    motor_leg_left_un_explanation = models.TextField(null=True, blank=True)
+    motor_leg_right_un_explanation = models.TextField(null=True, blank=True)
 
     NIH_LIMB_ATAXIA = (
         (0, _('Absent.')),
@@ -85,6 +201,7 @@ class NIHSS(BaseEvaluation):
         (2, _('Present in two limbs.')),
     )
     limb_ataxia = models.IntegerField(_('7. Limb Ataxia'), choices=NIH_LIMB_ATAXIA)
+    limb_ataxia_un_explanation = models.TextField(null=True, blank=True)
 
     NIH_SENSORY = (
         (0, _('Normal; no sensory loss.')),
@@ -117,6 +234,7 @@ class NIHSS(BaseEvaluation):
               'proportion to any dysphasia, or is mute/anarthric.')),
     )
     dysarthria = models.IntegerField(_('10. Dysarthria'), choices=NIH_DYSARTHRIA)
+    dysarthria_un_explanation = models.TextField(null=True, blank=True)
 
     NIH_EXTINCTION = (
         (0, _('No abnormality.')),
