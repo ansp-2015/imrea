@@ -77,5 +77,41 @@ class BostonAphasiaForm(forms.ModelForm):
             'complex_ideational_11a': StepNumberInput(attrs={'min': 0, 'max': 1}),
             'complex_ideational_11b': StepNumberInput(attrs={'min': 0, 'max': 1}),
             'complex_ideational_12a': StepNumberInput(attrs={'min': 0, 'max': 1}),
-            'complex_ideational_12b': StepNumberInput(attrs={'min': 0, 'max': 1})
+            'complex_ideational_12b': StepNumberInput(attrs={'min': 0, 'max': 1}),
+
+            'oral_agility_lips_purse': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'oral_agility_mouth_open': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'oral_agility_lips_retract': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'oral_agility_tongue_corner': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'oral_agility_tongue_protude': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'oral_agility_tongue_teeth': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'verbal_agility_a': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'verbal_agility_b': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'verbal_agility_c': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'verbal_agility_d': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'verbal_agility_e': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'verbal_agility_f': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'verbal_agility_g': StepNumberInput(attrs={'min': 0, 'max': 2}),
+
+            'automzatized_days_week': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'automzatized_months_year': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'automzatized_counting_21': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'automzatized_alphabet': StepNumberInput(attrs={'min': 0, 'max': 2}),
+
+            'reciting_score': StepNumberInput(attrs={'min': 0, 'max': 2}),
+            'singing_score': StepNumberInput(attrs={'min': 0, 'max': 2}),
+
+            'repetition_words_what_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'repetition_words_chair_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'repetition_words_hammock_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'repetition_words_purple_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'repetition_words_brown_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'repetition_words_w_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'repetition_words_fifteen_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'repetition_words_1776_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'repetition_words_emphasize_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'repetition_words_episcopal_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+
         }
+
+

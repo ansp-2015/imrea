@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-03 16:11-0300\n"
+"POT-Creation-Date: 2016-08-12 16:25-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,51 +22,153 @@ msgstr ""
 msgid "Birthdate"
 msgstr "Data de nascimento"
 
-#: .\evaluation\admin\bostonaphasia_admin.py:11
+#: .\evaluation\admin\bostonaphasia_admin.py:13
 #: .\evaluation\admin\clin_admin.py:13 .\evaluation\admin\eeg_admin.py:24
 #: .\evaluation\admin\epworth_admin.py:27 .\evaluation\admin\fim_admin.py:19
 #: .\evaluation\admin\fuglmeyer_admin.py:21 .\evaluation\admin\had_admin.py:18
 #: .\evaluation\admin\hamilton_admin.py:18 .\evaluation\admin\kviq_admin.py:13
-#: .\evaluation\admin\mmse_admin.py:18 .\evaluation\admin\patient_admin.py:9
-#: .\evaluation\admin\sis_admin.py:15
+#: .\evaluation\admin\mmse_admin.py:18 .\evaluation\admin\nihss_admin.py:18
+#: .\evaluation\admin\patient_admin.py:9 .\evaluation\admin\sis_admin.py:15
 #: .\evaluation\models\base_evaluation.py:18 .\evaluation\models\patient.py:39
 #: .\evaluation\templates\admin\evaluation\patient\change_form.html:6
 #: .\evaluation\templates\admin\index.html:56
 msgid "Patient"
 msgstr "Paciente"
 
-#: .\evaluation\admin\bostonaphasia_admin.py:15
+#: .\evaluation\admin\bostonaphasia_admin.py:17
 msgid "Manual dominance."
 msgstr "Dominância manual - EDINBURG"
 
-#: .\evaluation\admin\bostonaphasia_admin.py:29
+#: .\evaluation\admin\bostonaphasia_admin.py:31
+#: .\evaluation\admin\bostonaphasia_admin.py:89
 msgid "Activity"
 msgstr "Atividade"
 
-#: .\evaluation\admin\bostonaphasia_admin.py:29
+#: .\evaluation\admin\bostonaphasia_admin.py:31
+#: .\evaluation\admin\bostonaphasia_admin.py:89
 msgid "Left hand"
 msgstr "Mão esquerda"
 
-#: .\evaluation\admin\bostonaphasia_admin.py:29
+#: .\evaluation\admin\bostonaphasia_admin.py:31
+#: .\evaluation\admin\bostonaphasia_admin.py:89
 msgid "Right hand"
 msgstr "Mão direita"
 
-#: .\evaluation\admin\bostonaphasia_admin.py:31
+#: .\evaluation\admin\bostonaphasia_admin.py:33
 msgid ""
 "Are you left or right-handed? Which hand you prefer for that activity? Do "
 "you ever use the other hand for the activity?"
-msgstr "Instruções: você é destro ou canhoto? Você tem tendência a realizar atividades com sua outra mão? Com que mão você... (enumerar diversas atividaes). Algumas vezes você usa a outra mão?"
+msgstr ""
+"Instruções: você é destro ou canhoto? Você tem tendência a realizar "
+"atividades com sua outra mão? Com que mão você... (enumerar diversas "
+"atividaes). Algumas vezes você usa a outra mão?"
 
-#: .\evaluation\admin\bostonaphasia_admin.py:34
+#: .\evaluation\admin\bostonaphasia_admin.py:36
 msgid "Conversational and expository speech"
 msgstr "Conversação e narração"
 
-#: .\evaluation\admin\bostonaphasia_admin.py:44
+#: .\evaluation\admin\bostonaphasia_admin.py:46
 msgid ""
 "Conduct an informal exchange, incorporating suggested questions, to elicit "
 "as many ofthe desired responses as possible. Write responses verbatim. Tape "
 "record if possible"
-msgstr "Conduzir a interação informalmente incoporando as perguntas para eliciar tanto quanto possível as respostas desejadas. Transcrever integralmente. Gravar se possível."
+msgstr ""
+"Conduzir a interação informalmente incoporando as perguntas para eliciar "
+"tanto quanto possível as respostas desejadas. Transcrever integralmente. "
+"Gravar se possível."
+
+#: .\evaluation\admin\bostonaphasia_admin.py:49
+msgid "Auditory Comprehension"
+msgstr "Compreensão auditiva"
+
+#: .\evaluation\admin\bostonaphasia_admin.py:91
+msgid ""
+"Show the cards 2 and 3 separately.The patient must look all the pictures "
+"from the card before the start.Instruct the patient to point to the picture "
+"or symbol, saying \"Show me the...\"Change randomly from one category to "
+"anotherIt is allowed one repetition, if asked.Show the correct category if "
+"the patient can't find it and repeat the item name to be identified.Score 2 "
+"points if the response is correct within 5 seconds, otherwise, 1 "
+"pointCorrect category but inaccurate item score 1/2 point."
+msgstr ""
+"Apresentar os cartões 2 e 3 separadamente . O paciente deve olhar todas as "
+"figuras no cartão apresentado antes de iniciar. Então, pedir a ele para "
+"apontar cada figura ou símbolo, dizendo \"Montre-me o\". Alternar "
+"aleatoriamente de uma categoria para outra. É permitida uma repetição, se "
+"solicitada. Mostrar a categoria correta se o paciente não encontrá-la e "
+"repetir o nome do item a ser identificado. A discriminação correta tem "
+"escorre de 2 pontos se ocorrer em 5 segundos e, caso contrário, 1 ponto. "
+"Atenção para a categoria correta, sem discriminação correta tem escore de "
+"1/2 ponto."
+
+#: .\evaluation\admin\bostonaphasia_admin.py:108
+msgid "Body parts identification"
+msgstr "Identificação de Partes do Corpo"
+
+#: .\evaluation\admin\bostonaphasia_admin.py:139
+msgid ""
+"The patient is asked to point on his/her body to the part named. Enter "
+"erroneous responses.Score: The items in the first two columns A and B have "
+"the scores 1 point if recognized immediately (within 5 seconds), and 1/2 "
+"point is correctly identified (after 5 seconds). The third column C is right-"
+"left discrimination and receives a total of 2 points if all 8 items are "
+"correct (the body part may be incorrect since there is no failure in the "
+"right-left discrimination), 1 point is 6 or 7 items are correct, otherwise "
+"zero."
+msgstr ""
+"Pedir ao paciente para apontar em sequência as partes do corpo. Registrar as "
+"respostas incorretas. Pontuação: Os itens nas primeiras duas colunas A e B "
+"tem como escore 1 ponto se reconhecidos imediatamente (dentro de 5 segundos) "
+"e 1/2 ponto se identificados corretamente (após 5 segundos). A terceira "
+"coluna C é para a discriminação direita-esquerda e recebe um total de 2 "
+"pontos se todos os 8 itens forem corretos (a parte do corpo pode estar "
+"incorreta desde que não haja falha na discriminação direta-esquerda), 1 "
+"ponto se os itens 6 ou 7 estiverem corretos, caso contrário zero."
+
+#: .\evaluation\admin\bostonaphasia_admin.py:163
+msgid "Commands"
+msgstr "Ordens"
+
+#: .\evaluation\admin\bostonaphasia_admin.py:170
+msgid ""
+"Have the patient carry out the following commands, giving one point of "
+"credit for each underlined element that he or she carries out. One "
+"repetition is permitted on request, but the whole command must be repeated."
+msgstr ""
+"O paciente deverá realizar as seguintes ordens, pontuando-se cada elemento "
+"sublinhado que ele realiza. É permitida uma repetição se solicitada, mas a "
+"ordem deve ser sempre repetida totalmente, não segmentada."
+
+#: .\evaluation\admin\bostonaphasia_admin.py:179
+msgid "Complex ideational material"
+msgstr "Material Ideacional Complexo"
+
+#: .\evaluation\admin\bostonaphasia_admin.py:196
+msgid ""
+"Both the A and B questions must be correct to gain 1 point of credit for "
+"each numbered pair. One repetition is permitted. First read all the question "
+"from column A and then questions from column B."
+msgstr ""
+"A única resposta requisitada é concordar ou discordar. Ambas as questões \"A"
+"\" e \"B\" devem ser respondidas corretamente para receber crédito de 1 "
+"ponto. É permitida uma repetição para cada questão. Leia primeiro todas as "
+"perguntas da coluna A e depois as perguntas da coluna B."
+
+#: .\evaluation\admin\bostonaphasia_admin.py:208
+#: .\evaluation\admin\bostonaphasia_admin.py:224
+msgid "Oral agility"
+msgstr "Agilidade Oral"
+
+#: .\evaluation\admin\bostonaphasia_admin.py:215
+msgid ""
+"If patient cannot get started on one or two items at the most, either "
+"because of perseveration or paraphasic substitution, eliminate items and "
+"prorate score. If more than two items are unscoreable, do not enter total "
+"score."
+msgstr ""
+"Se o paciente não conseguir por causa de perseveração ou substituição "
+"parafásica, realizar um ou dois itens no máximo. Eliminar os itens restantes "
+"e diminuir o escore total."
 
 #: .\evaluation\admin\clin_admin.py:17
 msgid "Line Crossing"
@@ -178,6 +280,8 @@ msgstr "Atividade Reflexa Normal"
 
 #: .\evaluation\admin\fuglmeyer_admin.py:81
 #: .\evaluation\admin\fuglmeyer_admin.py:194
+#: .\evaluation\models\bostonaphasia.py:202
+#: .\evaluation\models\bostonaphasia.py:203
 msgid "Wrist"
 msgstr "Controle de Punho"
 
@@ -308,10 +412,14 @@ msgid "Shoulder flexion"
 msgstr "Flexão do ombro para a frente"
 
 #: .\evaluation\admin\kviq_admin.py:42
+#: .\evaluation\models\bostonaphasia.py:214
+#: .\evaluation\models\bostonaphasia.py:215
 msgid "Elbow"
 msgstr "Flexão do cotovelo"
 
 #: .\evaluation\admin\kviq_admin.py:49
+#: .\evaluation\models\bostonaphasia.py:205
+#: .\evaluation\models\bostonaphasia.py:206
 msgid "Thumb"
 msgstr "Polegar para as pontas dos dedo"
 
@@ -320,6 +428,8 @@ msgid "Trunk"
 msgstr "Flexão do tronco para frente"
 
 #: .\evaluation\admin\kviq_admin.py:62
+#: .\evaluation\models\bostonaphasia.py:184
+#: .\evaluation\models\bostonaphasia.py:185
 msgid "Knee"
 msgstr "Extensão do joelho"
 
@@ -535,57 +645,57 @@ msgstr "Última atualização"
 msgid "Date"
 msgstr ""
 
-#: .\evaluation\models\bostonaphasia.py:8
-#: .\evaluation\models\bostonaphasia.py:9
+#: .\evaluation\models\bostonaphasia.py:10
+#: .\evaluation\models\bostonaphasia.py:11
 msgid "Write or distribute a card deck"
 msgstr "Escrever ou distribuir as cartas de um baralho"
 
-#: .\evaluation\models\bostonaphasia.py:11
-#: .\evaluation\models\bostonaphasia.py:12
+#: .\evaluation\models\bostonaphasia.py:13
+#: .\evaluation\models\bostonaphasia.py:14
 msgid "Draw or fill a glass of water"
 msgstr "Desenhar ou encher de água um copo"
 
-#: .\evaluation\models\bostonaphasia.py:14
-#: .\evaluation\models\bostonaphasia.py:15
+#: .\evaluation\models\bostonaphasia.py:16
+#: .\evaluation\models\bostonaphasia.py:17
 msgid "Throw a ball"
 msgstr "Jogar uma bola"
 
-#: .\evaluation\models\bostonaphasia.py:17
-#: .\evaluation\models\bostonaphasia.py:18
+#: .\evaluation\models\bostonaphasia.py:19
+#: .\evaluation\models\bostonaphasia.py:20
 msgid "Use an ashtray"
 msgstr "Utilizar um cinzeiro"
 
-#: .\evaluation\models\bostonaphasia.py:20
-#: .\evaluation\models\bostonaphasia.py:21
+#: .\evaluation\models\bostonaphasia.py:22
+#: .\evaluation\models\bostonaphasia.py:23
 msgid "Use a toothbrush"
 msgstr "Utilizar uma escova de dente"
 
-#: .\evaluation\models\bostonaphasia.py:23
-#: .\evaluation\models\bostonaphasia.py:24
+#: .\evaluation\models\bostonaphasia.py:25
+#: .\evaluation\models\bostonaphasia.py:26
 msgid "Eat with a fork"
 msgstr "Comer com um garfo"
 
-#: .\evaluation\models\bostonaphasia.py:26
-#: .\evaluation\models\bostonaphasia.py:27
+#: .\evaluation\models\bostonaphasia.py:28
+#: .\evaluation\models\bostonaphasia.py:29
 msgid "Use a broom (upper hand)"
 msgstr "Segurar uma vassoura (mão no alto)"
 
-#: .\evaluation\models\bostonaphasia.py:29
-#: .\evaluation\models\bostonaphasia.py:30
+#: .\evaluation\models\bostonaphasia.py:31
+#: .\evaluation\models\bostonaphasia.py:32
 msgid "Strike a match"
 msgstr "Acender um fósforo"
 
-#: .\evaluation\models\bostonaphasia.py:32
-#: .\evaluation\models\bostonaphasia.py:33
+#: .\evaluation\models\bostonaphasia.py:34
+#: .\evaluation\models\bostonaphasia.py:35
 msgid "Use a spoon"
 msgstr "Segurar uma colher de sopa"
 
-#: .\evaluation\models\bostonaphasia.py:35
-#: .\evaluation\models\bostonaphasia.py:36
+#: .\evaluation\models\bostonaphasia.py:37
+#: .\evaluation\models\bostonaphasia.py:38
 msgid "Open a box (holding the lid)"
 msgstr "Abrir um pote (mão que segura a tampa)"
 
-#: .\evaluation\models\bostonaphasia.py:38
+#: .\evaluation\models\bostonaphasia.py:40
 msgid ""
 "History of handedness (including data from other family members, eg: mother, "
 "father , brother, offspring)"
@@ -593,16 +703,16 @@ msgstr ""
 "História da Dominância Manual (incluindo dados de outros familiares, ex: "
 "pai, mãe, irmão, descendente):"
 
-#: .\evaluation\models\bostonaphasia.py:40
+#: .\evaluation\models\bostonaphasia.py:42
 msgid "1: included / 2: absent"
 msgstr "1: presente / 2: ausente"
 
-#: .\evaluation\models\bostonaphasia.py:42
+#: .\evaluation\models\bostonaphasia.py:44
 msgid ""
 "a. \"HOW ARE YOU TODAY?\" (\"Okay,\" \"Fine,\" or other appropriate response)"
 msgstr "a. Resposta a cumprimentos (P - Como você está hoje? Ou equivalente.)"
 
-#: .\evaluation\models\bostonaphasia.py:43
+#: .\evaluation\models\bostonaphasia.py:45
 msgid ""
 "b. \"HAVE YOU EVER BEEN HERE BEFORE? or \"HAVE I EVER TESTED YOU BEFORE?"
 "\" (\"Yes\", \"No\" or other relevant response)"
@@ -610,44 +720,47 @@ msgstr ""
 "b. Resposta com sim ou não (P - Você já esteve neste hospital antes? Ou eu "
 "já avaliei você antes?)"
 
-#: .\evaluation\models\bostonaphasia.py:45
+#: .\evaluation\models\bostonaphasia.py:47
 msgid ""
 "c. \"DO YOU THINK WE CAN HELP (HAVE HELPED YOU)?\"( \"I think so\", \"Maybe"
 "\" or equivalent.)"
 msgstr ""
-"c. Resposta com \"eu acho que\" ou equivalente (P - Você acha que nós podemos "
-"ajudar você? ou Eu ajudei você?)"
+"c. Resposta com \"eu acho que\" ou equivalente (P - Você acha que nós "
+"podemos ajudar você? ou Eu ajudei você?)"
 
-#: .\evaluation\models\bostonaphasia.py:46
+#: .\evaluation\models\bostonaphasia.py:48
 msgid ""
 "d. \"WHEN ARE YOU GOING TO BE LEAVING HERE?(\"I don't know\", \"Pretty soon"
 "\", etc.)"
 msgstr ""
-"d. Resposta com \"eu não sei\" ou equivalente (P - Quando o seu tratamento vai terminar?)"
-
-#: .\evaluation\models\bostonaphasia.py:47
-msgid "e. \"WE HOPE TO BE PRETTY SOON. WHAT DO YOU THINK?(\"I hope so\", etc.)"
-msgstr "e. Resposta com \"espero que sim\" ou equivalente (P - Vamos esperar que seja breve. O que você diz?)"
+"d. Resposta com \"eu não sei\" ou equivalente (P - Quando o seu tratamento "
+"vai terminar?)"
 
 #: .\evaluation\models\bostonaphasia.py:49
+msgid "e. \"WE HOPE TO BE PRETTY SOON. WHAT DO YOU THINK?(\"I hope so\", etc.)"
+msgstr ""
+"e. Resposta com \"espero que sim\" ou equivalente (P - Vamos esperar que "
+"seja breve. O que você diz?)"
+
+#: .\evaluation\models\bostonaphasia.py:51
 msgid "f. \"WHAT IS YOUR FULL NAME?\""
 msgstr "f. Qual é o seu nome completo?"
 
-#: .\evaluation\models\bostonaphasia.py:50
+#: .\evaluation\models\bostonaphasia.py:52
 msgid ""
 "g. \"WHAT lS YOUR FULL ADDRESS?\" (Number street, and city required. Probe "
 "for omitted elements)."
 msgstr ""
-"g. Qual é o seu endereço completo? (Aceitar qualquer resposta que inclua o nome "
-"da rua e número ou rua e cidade)"
+"g. Qual é o seu endereço completo? (Aceitar qualquer resposta que inclua o "
+"nome da rua e número ou rua e cidade)"
 
-#: .\evaluation\models\bostonaphasia.py:52
+#: .\evaluation\models\bostonaphasia.py:54
 msgid "h. Free conversation"
 msgstr ""
-"h. Perguntas abertas e fechadas a fim de eliciar conversação tão livre quanto "
-"possível;"
+"h. Perguntas abertas e fechadas a fim de eliciar conversação tão livre "
+"quanto possível;"
 
-#: .\evaluation\models\bostonaphasia.py:53
+#: .\evaluation\models\bostonaphasia.py:55
 msgid ""
 "In order to elicit as much conversation as possible, it is suggested that "
 "the examiner start with a familiar topic, such as \"WHAT KIND OF WORK WERE "
@@ -663,11 +776,11 @@ msgstr ""
 "de fatos específicos). Se não for usado gravador, anotar as respostas tanto "
 "quanto posível."
 
-#: .\evaluation\models\bostonaphasia.py:55
+#: .\evaluation\models\bostonaphasia.py:57
 msgid "i. Picture description"
 msgstr "i. Apresentação da figura"
 
-#: .\evaluation\models\bostonaphasia.py:56
+#: .\evaluation\models\bostonaphasia.py:58
 msgid ""
 "Present the \"Cookie Theft\" picture on card l. say, \"Tell me everything "
 "you see going on in this picture.\" Point to neglected features of the "
@@ -679,101 +792,393 @@ msgstr ""
 "a elaboração se a resposta do paciente estiver mais reduzida do que seu "
 "potencial aparente. Um minuto é frequentemente tempo suficiente."
 
-#: .\evaluation\models\bostonaphasia.py:63
+#: .\evaluation\models\bostonaphasia.py:66
 msgid "Chair"
 msgstr "Cadeira"
 
-#: .\evaluation\models\bostonaphasia.py:66
+#: .\evaluation\models\bostonaphasia.py:69
 msgid "Key"
 msgstr "Chave"
 
-#: .\evaluation\models\bostonaphasia.py:69
+#: .\evaluation\models\bostonaphasia.py:72
 msgid "Glove"
 msgstr "Luva"
 
-#: .\evaluation\models\bostonaphasia.py:72
+#: .\evaluation\models\bostonaphasia.py:75
 msgid "Feather"
 msgstr "Pena"
 
-#: .\evaluation\models\bostonaphasia.py:75
+#: .\evaluation\models\bostonaphasia.py:78
 msgid "Net"
 msgstr "Rede"
 
-#: .\evaluation\models\bostonaphasia.py:78
+#: .\evaluation\models\bostonaphasia.py:81
 msgid "Cactus"
 msgstr "Cactos"
 
-#: .\evaluation\models\bostonaphasia.py:99
+#: .\evaluation\models\bostonaphasia.py:102
 msgid "Circle"
 msgstr "Círculo"
 
-#: .\evaluation\models\bostonaphasia.py:102
+#: .\evaluation\models\bostonaphasia.py:105
 msgid "Spiral"
 msgstr "Espiral"
 
-#: .\evaluation\models\bostonaphasia.py:105
+#: .\evaluation\models\bostonaphasia.py:108
 msgid "Square"
 msgstr "Quadrado"
 
-#: .\evaluation\models\bostonaphasia.py:108
+#: .\evaluation\models\bostonaphasia.py:111
 msgid "Triangle"
 msgstr "Triângulo"
 
-#: .\evaluation\models\bostonaphasia.py:111
+#: .\evaluation\models\bostonaphasia.py:114
 msgid "Cone"
 msgstr "Cone"
 
-#: .\evaluation\models\bostonaphasia.py:114
+#: .\evaluation\models\bostonaphasia.py:117
 msgid "Star"
 msgstr "Estrela"
 
-#: .\evaluation\models\bostonaphasia.py:117
+#: .\evaluation\models\bostonaphasia.py:120
 msgid "Drinking"
 msgstr "Bebendo"
 
-#: .\evaluation\models\bostonaphasia.py:120
+#: .\evaluation\models\bostonaphasia.py:123
 msgid "Smoking"
 msgstr "Fumando"
 
-#: .\evaluation\models\bostonaphasia.py:123
+#: .\evaluation\models\bostonaphasia.py:126
 msgid "Running"
 msgstr ""
 
-#: .\evaluation\models\bostonaphasia.py:126
+#: .\evaluation\models\bostonaphasia.py:129
 msgid "Falling"
 msgstr "Caindo"
 
-#: .\evaluation\models\bostonaphasia.py:129
+#: .\evaluation\models\bostonaphasia.py:132
 msgid "Sleeping"
 msgstr "Dormindo"
 
-#: .\evaluation\models\bostonaphasia.py:132
+#: .\evaluation\models\bostonaphasia.py:135
 msgid "Dropping"
 msgstr "Pingando"
 
-#: .\evaluation\models\bostonaphasia.py:135
+#: .\evaluation\models\bostonaphasia.py:138
 msgid "Blue"
 msgstr "Azul"
 
-#: .\evaluation\models\bostonaphasia.py:138
+#: .\evaluation\models\bostonaphasia.py:141
 msgid "Red"
 msgstr "Vermelho"
 
-#: .\evaluation\models\bostonaphasia.py:141
+#: .\evaluation\models\bostonaphasia.py:144
 msgid "Gray"
 msgstr "Cinza"
 
-#: .\evaluation\models\bostonaphasia.py:144
+#: .\evaluation\models\bostonaphasia.py:147
 msgid "Brown"
 msgstr "Marrom"
 
-#: .\evaluation\models\bostonaphasia.py:147
+#: .\evaluation\models\bostonaphasia.py:150
 msgid "Pink"
 msgstr "Rosa"
 
-#: .\evaluation\models\bostonaphasia.py:150
+#: .\evaluation\models\bostonaphasia.py:153
 msgid "Purple"
 msgstr "Roxo"
+
+#: .\evaluation\models\bostonaphasia.py:175
+#: .\evaluation\models\bostonaphasia.py:176
+msgid "Ear"
+msgstr "Orelha"
+
+#: .\evaluation\models\bostonaphasia.py:178
+#: .\evaluation\models\bostonaphasia.py:179
+msgid "Nose"
+msgstr "Nariz"
+
+#: .\evaluation\models\bostonaphasia.py:181
+#: .\evaluation\models\bostonaphasia.py:182
+msgid "Shoulder"
+msgstr "Ombro"
+
+#: .\evaluation\models\bostonaphasia.py:187
+#: .\evaluation\models\bostonaphasia.py:188
+msgid "Eyelid"
+msgstr "Pálpebra"
+
+#: .\evaluation\models\bostonaphasia.py:190
+#: .\evaluation\models\bostonaphasia.py:191
+msgid "Ankle"
+msgstr "Tornozelo"
+
+#: .\evaluation\models\bostonaphasia.py:193
+#: .\evaluation\models\bostonaphasia.py:194
+msgid "Chest"
+msgstr "Tórax"
+
+#: .\evaluation\models\bostonaphasia.py:196
+#: .\evaluation\models\bostonaphasia.py:197
+msgid "Neck"
+msgstr "Percoço"
+
+#: .\evaluation\models\bostonaphasia.py:199
+#: .\evaluation\models\bostonaphasia.py:200
+msgid "Middle finger"
+msgstr "Dedo médio"
+
+#: .\evaluation\models\bostonaphasia.py:208
+#: .\evaluation\models\bostonaphasia.py:209
+msgid "Thigh"
+msgstr "Coxa"
+
+#: .\evaluation\models\bostonaphasia.py:211
+#: .\evaluation\models\bostonaphasia.py:212
+msgid "Chin"
+msgstr "Queixo"
+
+#: .\evaluation\models\bostonaphasia.py:217
+#: .\evaluation\models\bostonaphasia.py:218
+msgid "Lips"
+msgstr "Lábios"
+
+#: .\evaluation\models\bostonaphasia.py:220
+#: .\evaluation\models\bostonaphasia.py:221
+msgid "Eyebrow"
+msgstr "Cotovelo"
+
+#: .\evaluation\models\bostonaphasia.py:223
+#: .\evaluation\models\bostonaphasia.py:224
+msgid "Cheek"
+msgstr "Bochecha"
+
+#: .\evaluation\models\bostonaphasia.py:226
+#: .\evaluation\models\bostonaphasia.py:227
+msgid "Forefinger"
+msgstr "Dedo indicador"
+
+#: .\evaluation\models\bostonaphasia.py:229
+#: .\evaluation\models\bostonaphasia.py:230
+msgid "Right ear"
+msgstr "Orelha direita"
+
+#: .\evaluation\models\bostonaphasia.py:232
+#: .\evaluation\models\bostonaphasia.py:233
+msgid "Left shoulder"
+msgstr "Ombro esquerdo"
+
+#: .\evaluation\models\bostonaphasia.py:235
+#: .\evaluation\models\bostonaphasia.py:236
+msgid "Left knee"
+msgstr "Joelho esquerdo"
+
+#: .\evaluation\models\bostonaphasia.py:238
+#: .\evaluation\models\bostonaphasia.py:239
+msgid "Right ankle"
+msgstr "Tornozelo direito"
+
+#: .\evaluation\models\bostonaphasia.py:241
+#: .\evaluation\models\bostonaphasia.py:242
+msgid "Right wrist"
+msgstr "Pulso direito"
+
+#: .\evaluation\models\bostonaphasia.py:244
+#: .\evaluation\models\bostonaphasia.py:245
+msgid "Left thumb"
+msgstr "Polegar esquerdo"
+
+#: .\evaluation\models\bostonaphasia.py:247
+#: .\evaluation\models\bostonaphasia.py:248
+msgid "Right elbow"
+msgstr "Cotovelo direito"
+
+#: .\evaluation\models\bostonaphasia.py:250
+#: .\evaluation\models\bostonaphasia.py:251
+msgid "Left cheek"
+msgstr "Bochecha esquerda"
+
+#: .\evaluation\models\bostonaphasia.py:254
+msgid "1. Make a \"fist\""
+msgstr "1. Feche a \"mão\""
+
+#: .\evaluation\models\bostonaphasia.py:255
+msgid "2. Point to \"the ceiling\", then to \"the floor\""
+msgstr "2. Aponte para \"o teto\" e depois \"o chão\""
+
+#: .\evaluation\models\bostonaphasia.py:256
+msgid ""
+"3. Put \"the pencil\" on \"top of the card\", then \"put it back in place\""
+msgstr ""
+"3. Ponha \"o lápis\" \"acima do cartão\", então \"ponha-o de volta no lugar\""
+
+#: .\evaluation\models\bostonaphasia.py:257
+msgid ""
+"4. Put \"the watch\" on \"the other side\" of \"the pencil\" and \"turn over "
+"the card\""
+msgstr ""
+"4. Ponha \"o relógio\" no \"outro lado\" do \"lápis\" e \"vire o papel\""
+
+#: .\evaluation\models\bostonaphasia.py:258
+msgid ""
+"5. Tap \"each shoulder\" \"twice\" with \"two fingers\", keeping your \"eyes "
+"shut\""
+msgstr ""
+"5. Toque \"cada ombro\" \"duas vezes\" com \"dois dedos\" mantendo \"os "
+"olhos fechados\""
+
+#: .\evaluation\models\bostonaphasia.py:261
+msgid "1a. Will a cork sink in water?"
+msgstr "1a. Uma rolha de cortiça afunda na água?"
+
+#: .\evaluation\models\bostonaphasia.py:262
+msgid "2a. Can you use a hammer to pound nails?"
+msgstr "2a. Você pode usar martelo para bater pregos?"
+
+#: .\evaluation\models\bostonaphasia.py:263
+msgid "1b. Will a stone sink in water?"
+msgstr "1b. Uma pedra afunda na água?"
+
+#: .\evaluation\models\bostonaphasia.py:264
+msgid "2b. Is a hammer good for cutting wood?"
+msgstr "2b. Um martelo é bom para cortar madeira?"
+
+#: .\evaluation\models\bostonaphasia.py:266
+msgid "3a. Do two pounds of flour weigh more than one?"
+msgstr "3a Dois quilos de farinha pesam mais do que um?"
+
+#: .\evaluation\models\bostonaphasia.py:267
+msgid "4a. Will water go through a good pair of rubber boots?"
+msgstr "4a. A água atravessa um bom par de galochas?"
+
+#: .\evaluation\models\bostonaphasia.py:268
+msgid "3b. Is one pound of flour heavier than two?"
+msgstr "3b. Um quilo de farinha é mais pesado do que dois?"
+
+#: .\evaluation\models\bostonaphasia.py:269
+msgid "4b. Will a good pair of rubber boots keep water out?"
+msgstr "4b. Um bom par de galochas impede a entrada de água?"
+
+#: .\evaluation\models\bostonaphasia.py:275
+msgid "5a. Did Mr. Jones miss his train?"
+msgstr "5a. O Sr. João perdeu o avião?"
+
+#: .\evaluation\models\bostonaphasia.py:276
+msgid "6a. Was Mr. Jones going to New York?"
+msgstr "6a. O Sr. João estava indo para o Paraná?"
+
+#: .\evaluation\models\bostonaphasia.py:277
+msgid "5b. Did he get to the station on time?"
+msgstr "5b. Ele chegou ao aeroporto a tempo?"
+
+#: .\evaluation\models\bostonaphasia.py:278
+msgid "6b. Was he on his way home from New York?"
+msgstr "6b. Ele estava vindo do Paraná?"
+
+#: .\evaluation\models\bostonaphasia.py:284
+msgid "7a. Was the soldier's check cashed at once?"
+msgstr "7a. A mãe foi até a mercearia?"
+
+#: .\evaluation\models\bostonaphasia.py:285
+msgid "8a. Did the soldier have a friend with him?"
+msgstr "8a. A menina levou o dinheiro para comprar os alimentos?"
+
+#: .\evaluation\models\bostonaphasia.py:286
+msgid "7b. Did the teller object to cashing the check?"
+msgstr "7b. A mãe pediu para a menina ir até a mercearia?"
+
+#: .\evaluation\models\bostonaphasia.py:287
+msgid "8b. Did the soldier have trouble finding friends?"
+msgstr "8b. A menina esqueceu o dinheiro?"
+
+#: .\evaluation\models\bostonaphasia.py:293
+msgid "9a. Was the customer carrying a suitcase in each hand?"
+msgstr "9a. Carlos queria dinheiro?"
+
+#: .\evaluation\models\bostonaphasia.py:294
+msgid "10a. Was the clerk suspicious of the guest?"
+msgstr "10a. Foi o dono da casa que atendeu a porta?"
+
+#: .\evaluation\models\bostonaphasia.py:295
+msgid "9b. Was the customer carrying something unusual in one hand?"
+msgstr "9b. Carlos só queria conversar um pouco?"
+
+#: .\evaluation\models\bostonaphasia.py:296
+msgid "10b. Did the clerk trust this guest?"
+msgstr "10b. O dono da casa não quis atender à porta?"
+
+#: .\evaluation\models\bostonaphasia.py:302
+msgid "11a. Does this paragraph tell how lions learn to hunt?"
+msgstr "11a. Este parágrafo conta como os leões aprendem a caçar?"
+
+#: .\evaluation\models\bostonaphasia.py:303
+msgid ""
+"12a. Does this paragraph say that lions are skillful killers from the time "
+"they are born?"
+msgstr ""
+"12a. Este parágrafo diz que os leões são matadores ágeis no momento em que "
+"eles nascem?"
+
+#: .\evaluation\models\bostonaphasia.py:304
+msgid "11b. Does the paragraph tell how to hunt lions?"
+msgstr "11b. Diz como caçar leões?"
+
+#: .\evaluation\models\bostonaphasia.py:305
+msgid "12b. Does it say lions need practice before they can kill their prey?"
+msgstr ""
+"12b. Diz que os leões precisam de prática antes de matarem suas presas?"
+
+#: .\evaluation\models\bostonaphasia.py:312
+msgid "Purse lips, release"
+msgstr "a - protuir os lábios e relaxar"
+
+#: .\evaluation\models\bostonaphasia.py:313
+msgid "Open and close mouth"
+msgstr "b - abrir e fechar a boca"
+
+#: .\evaluation\models\bostonaphasia.py:314
+msgid "Retract lips, release"
+msgstr "c - retrair os lábios"
+
+#: .\evaluation\models\bostonaphasia.py:315
+msgid "Tongue to alternate corners of mouth"
+msgstr "d - língua tocando os cantos da boca"
+
+#: .\evaluation\models\bostonaphasia.py:316
+msgid "Protrude and retract tongue"
+msgstr "e - protuir e retrair a língua"
+
+#: .\evaluation\models\bostonaphasia.py:317
+msgid "Tongue to upper and lower teeth"
+msgstr "f - elevar e abaixar a língua tocando os dentes"
+
+#: .\evaluation\models\bostonaphasia.py:322
+msgid "Mama, mama"
+msgstr "g - vovó-vovó"
+
+#: .\evaluation\models\bostonaphasia.py:323
+msgid "Tip-top, tip-top"
+msgstr "h - tic-tac"
+
+#: .\evaluation\models\bostonaphasia.py:324
+msgid "Fifty-fifty, fifty-fifty"
+msgstr "i - pula-pula"
+
+#: .\evaluation\models\bostonaphasia.py:325
+msgid "Thanks, thanks"
+msgstr "j - saúde-saúde"
+
+#: .\evaluation\models\bostonaphasia.py:326
+msgid "Huckleberry"
+msgstr "k - Filomena"
+
+#: .\evaluation\models\bostonaphasia.py:327
+msgid "Baseball player, baseball player"
+msgstr "l - ponta-direita"
+
+#: .\evaluation\models\bostonaphasia.py:328
+msgid "Caterpillar"
+msgstr "m - lagartixa"
 
 #: .\evaluation\models\clin.py:7
 msgid "Yes"
@@ -3764,9 +4169,9 @@ msgstr ""
 msgid "Django site admin"
 msgstr ""
 
-#: .\evaluation\templates\admin\evaluation\bostonaphasia\change_form.html:19
+#: .\evaluation\templates\admin\evaluation\bostonaphasia\change_form.html:38
 msgid "Boston Aphasia"
-msgstr ""
+msgstr "Afasia de Boston"
 
 #: .\evaluation\templates\admin\evaluation\clin\change_form.html:6
 msgid "LINE CROSSING"
@@ -3816,45 +4221,269 @@ msgstr ""
 msgid "MINI MENTAL STATE EXAMINATION - MMSE"
 msgstr "MINI-EXAME DO ESTADO MENTAL - MEEM"
 
+#: .\evaluation\templates\admin\evaluation\nihss\change_form.html:6
+msgid "National Institutes of Health Stroke Scale"
+msgstr ""
+
 #: .\evaluation\templates\admin\evaluation\sis\change_form.html:6
 msgid "Stroke Impact Scale"
 msgstr " Escala de Impacto do AVC"
 
 #: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_01_table.html:34
-msgid "Cotação"
-msgstr ""
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_06_table.html:37
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_07_table.html:37
+msgid "Score"
+msgstr "Pontuação"
 
 #: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_01_table.html:35
-msgid "mão preferencial"
-msgstr ""
+msgid "hand preference"
+msgstr "mão preferencial"
 
 #: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_01_table.html:38
-msgid "mão exclusiva"
-msgstr ""
+msgid "exclusive single hand"
+msgstr "mão exclusiva"
 
 #: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_01_table.html:39
-msgid "duas mãos indiferentemente (1 em cada coluna)"
-msgstr ""
+msgid "both hands (1 em cada coluna)"
+msgstr "duas mãos indiferentemente (1 em cada coluna)"
 
 #: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_01_table.html:44
-msgid "Quociente de lateralidade"
-msgstr ""
+msgid "Laterality quotient"
+msgstr "Quociente de lateralidade"
 
 #: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_01_table.html:44
 msgid "(total D - total E) (total D - total E) x 100"
-msgstr ""
+msgstr "(total D - total E)    (total D - total E) x 100"
 
 #: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_01_table.html:48
-msgid "canhoto absoluto"
-msgstr ""
+msgid "exclusive left hanbed"
+msgstr "canhoto absoluto"
 
 #: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_01_table.html:51
-msgid "ambidentro"
-msgstr ""
+msgid "ambidextrous"
+msgstr " ambidestro  "
 
 #: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_01_table.html:54
-msgid "destro absoluto"
+msgid "exclusive right handed"
+msgstr "destro absoluto"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_02_table.html:19
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:20
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:62
+msgid "Score:"
+msgstr "Pontuação:"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_02_table.html:20
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_02_table.html:21
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:21
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:22
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:72
+msgid "Correct"
+msgstr "Correto"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_02_table.html:20
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:65
+msgid "points"
+msgstr "pontos"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_02_table.html:21
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_02_table.html:22
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_02_table.html:23
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:21
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:22
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:63
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:64
+msgid "point"
+msgstr "ponto"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_02_table.html:22
+msgid "Correct category"
+msgstr "Categoria correta"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_02_table.html:23
+msgid "Correct with hint"
+msgstr "Correto com pista"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_02_table.html:24
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:32
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:52
+msgid "Fail"
+msgstr "Falha"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_02_table.html:29
+msgid "Card 2"
+msgstr "Cartão 2"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_02_table.html:49
+msgid "Card 3"
+msgstr "Cartão 3"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:19
+msgid "Body part identification (A-B)"
+msgstr "Identificação de partes do corpo (A-B)"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:31
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:51
+msgid "Points"
+msgstr "Pontos"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:61
+msgid "Right-left discrimination (C)"
+msgstr "Discriminação direita-esquerda (C)"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:63
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:64
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:65
+msgid "corrects"
+msgstr "corretos"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:120
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:154
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_03_table.html:176
+msgid "Total score"
+msgstr "Escore total"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_04_table.html:24
+msgid "One point for each corrected underlined element"
+msgstr "Um ponto para cada item correto"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_04_table.html:28
+msgid ""
+"After lining up a pencil, watch, and card, in that order, on the table in "
+"front of the patient:"
+msgstr "Após dispor sobre a mesa um lápis, relógio e um cartão, nesta ordem:"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_05_table.html:35
+msgid ""
+"\n"
+"                                            Mr. Jones had to go to New "
+"York.\n"
+"                                            He decided to take a train.\n"
+"                                            His wife drove him to the "
+"station, but on the way they had a flat tire.\n"
+"                                            However, they arrived at the "
+"station just in time for him to catch the train\n"
+"                                            "
 msgstr ""
+"\n"
+"Sr. João tinha que ir para o Paraná visitar seu irmão. Como estava com "
+"pressa, ele decidiu pegar um avião. Sua esposa levou-o ao aeroporto, mas no "
+"caminho o pneu furou. Graças à ajuda de um motorista de taxi que passava, "
+"eles chegaram ao aeroporto a tempo de pegar o avião."
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_05_table.html:46
+msgid ""
+"\n"
+"                                            A soldier tried to cash a check "
+"in a bank near his camp.\n"
+"                                            The teller, firm but "
+"sympathetic, said,\n"
+"                                            \"You will have to have "
+"identification from some of your friends from the camp.\"\n"
+"                                            The discoraged soldier answered, "
+"\"But I don't have any friends in camp - I'm the bugler.\"\n"
+"                                            "
+msgstr ""
+"\n"
+"A mãe pediu certa vez à sua filhinha que desse um pulo à mercearia para "
+"comprar uma lata de óleo, uma dúzia de ovos e meio quilo de açúcar. Não vá "
+"se esquecer nem fazer confusão. A menina foi a mercearia e pelo caminho ia "
+"repetindo em voz alta as coisas que tinha de comprar. Quando chegou à "
+"mercearia ela pediu ao vendedor: - Dê-me uma lata de óleo, meio quilo de "
+"ovos e uma dúzia de açúcar. - Não é possível! Quanto você trouxe? - Ah! "
+"Esqueci o dinheiro. Logo agora que eu tinha me lembrado de tudo o que "
+"precisava comprar."
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_05_table.html:57
+msgid ""
+"\n"
+"                                            A customer walked into a hotel "
+"carrying a coil of rope in one hand and a suitcase in the other.\n"
+"                                            The hotel clerk asked, \"Pardon "
+"me, sir, but will you tell me what the rope is for?\"\n"
+"                                            \"Yes,\" replied the man, "
+"\"That's my fire escape.\" \"I'm sorry, sir,\" said the clerk,\n"
+"                                            \"but all guests carrying their "
+"own fire escapes must pay in advance.\"\n"
+"                                            "
+msgstr ""
+"\n"
+"Carlos bateu a porta de uma casa grande para pedir dinheiro para dar aos "
+"pobres. Um moço atendeu e Carlos pediu-lhe para dizer ao dono da casa que "
+"estava precisando de dinheiro para dar aos necessitados. O moço entrou em "
+"casa e voltou logo depois dizendo que o dono da casa havia saído. Então, "
+"diga-lhe um conselho: \"Quando sair não deve deixar a cara na janela porque "
+"alguém pode roubá-la.\""
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_05_table.html:68
+msgid ""
+"\n"
+"                                            The lion cub is born with a deep-"
+"seated hunting instinct.\n"
+"                                            One cub will stalk and pounce on "
+"another with the same eagerness and thrill exhibited by a kitten.\n"
+"                                            During the year and a half of "
+"cubhood, this play develops into a hunting and killing technique.\n"
+"                                            Skill comes through long "
+"practice, imitation of the old lions, and obedience to warning growls of the "
+"mother.\n"
+"                                            "
+msgstr ""
+"\n"
+"O filhote de leão nasce com um profundo instinto de caça. Um filhote anda na "
+"ponta dos pés e avança com a mesma violência e entusiasmo exibido por um "
+"gatinho. Durante o ano e meio de seu aprendizado, esta brincadeira "
+"transforma-se numa técnica de caçada e homicídio. A agilidade vem de longa "
+"prática, imitação de leões mais velhos e obediência aos rugidos de "
+"advertência de sua mãe."
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_06_table.html:24
+msgid ""
+"\n"
+"                            <strong>Nonverbal agility</strong>: Have the "
+"patient carry out the following rapidly repeated mouth movements as well as "
+"he can,\n"
+"                            after you demonstrate and describe the movement\n"
+"                            Count the number of full alternations carried "
+"out in 5 seconds.\n"
+"                        "
+msgstr ""
+"\n"
+"1 - <strong>Agilidade não-verbal</strong>: O paciente deve executar "
+"movimentos orais repetidos tão rápido quanto possível após terem sido "
+"demonstrados e descritos. Contar o número de sequências alternadas "
+"realizadas em 5 segundos"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_06_table.html:34
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_07_table.html:34
+msgid "Action required"
+msgstr "Ação solicitada"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_06_table.html:35
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_07_table.html:35
+msgid "N. of times in 5s<br>2 points"
+msgstr "Repetições em 5s<br>2 pontos"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_06_table.html:36
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_07_table.html:36
+msgid "N. of times in 5s<br>1 point"
+msgstr "Repetições em 5s<br>1 ponto"
+
+#: .\evaluation\templates\admin\includes\fieldset\bostonaphasia\fieldset_07_table.html:24
+msgid ""
+"\n"
+"                            <strong>Verbal agility</strong>: Have the "
+"patient repeat the following words as rapidly as he can,\n"
+"                            while you time the number of repetitions for 5 "
+"seconds\n"
+"                            Any assistance which helps patient to produce "
+"the desired word initially is permitted.\n"
+"                        "
+msgstr ""
+"\n"
+"2 - <strong>Agilidade verbal</strong>: o paciente deve repetir as palavras "
+"tão rápido quanto possível, enquanto você conta o número de repetições "
+"realizadas em 5 segundos."
 
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_09_upper_total.html:34
 #: .\evaluation\templates\admin\includes\fieldset\fuglmeyer\fieldset_10_lower_total.html:34

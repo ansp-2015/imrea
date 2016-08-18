@@ -29,7 +29,7 @@ class BostonAphasiaAdmin(BaseAdmin):
                       ),
             'description': {
                 'columns': ((0, _(u'Activity')), (1, _(u'Left hand')), (2, _(u'Right hand'))),
-                'fieldset': '/bostonaphasia/fieldset_01_table',
+                'fieldset': '/bostonaphasia/fieldset_01_manual_dominance',
                 'text': _(u'Are you left or right-handed? Which hand you prefer for that activity? Do you ever use the other hand for the activity?')
             }
         }),
@@ -87,7 +87,7 @@ class BostonAphasiaAdmin(BaseAdmin):
             ),
             'description': {
                 'columns': ((0, _(u'Activity')), (1, _(u'Left hand')), (2, _(u'Right hand'))),
-                'fieldset': '/bostonaphasia/fieldset_02_table',
+                'fieldset': '/bostonaphasia/fieldset_02_comprehension',
                 'text': _(u"Show the cards 2 and 3 separately."
                           u"The patient must look all the pictures from the card before the start."
                           u"Instruct the patient to point to the picture or symbol, saying \"Show me the...\""
@@ -135,7 +135,7 @@ class BostonAphasiaAdmin(BaseAdmin):
                     ('body_part_c_left_cheek_points', 'body_part_c_left_cheek_answer'),
             ),
             'description': {
-                'fieldset': '/bostonaphasia/fieldset_03_table',
+                'fieldset': '/bostonaphasia/fieldset_03_body_parts',
                 'text': _(u'The patient is asked to point on his/her body to the part named. Enter erroneous responses.'
 
                           u'Score: The items in the first two columns A and B have the scores 1 point if recognized immediately (within 5 seconds), and 1/2 point is correctly identified (after 5 seconds). The third column C is right-left discrimination and receives a total of 2 points if all 8 items are correct (the body part may be incorrect since there is no failure in the right-left discrimination), 1 point is 6 or 7 items are correct, otherwise zero.'),
@@ -166,7 +166,7 @@ class BostonAphasiaAdmin(BaseAdmin):
                 ('command_put_pencil', 'command_put_watch', 'command_touch_shoulder')
                 ),
             'description': {
-                'fieldset': '/bostonaphasia/fieldset_04_table',
+                'fieldset': '/bostonaphasia/fieldset_04_commands',
                 'text': _(u'Have the patient carry out the following commands, giving one point of credit for each underlined element '
                           u'that he or she carries out. One repetition is permitted on request, '
                           u'but the whole command must be repeated.'),
@@ -192,7 +192,7 @@ class BostonAphasiaAdmin(BaseAdmin):
                 ('complex_ideational_12a', 'complex_ideational_12b', 'form_complex_ideational_12a_12b',),
                 ),
             'description': {
-                'fieldset': '/bostonaphasia/fieldset_05_table',
+                'fieldset': '/bostonaphasia/fieldset_05_complex_ideational',
                 'text': _(u'Both the A and B questions must be correct to gain 1 point of credit for each numbered pair. '
                           u'One repetition is permitted. First read all the question from column A and then questions from column B.'),
                 'fieldset_total_points': '12',
@@ -209,11 +209,124 @@ class BostonAphasiaAdmin(BaseAdmin):
             'fields': (
                 ('oral_agility_lips_purse', 'oral_agility_mouth_open', 'oral_agility_lips_retract',
                  'oral_agility_tongue_corner', 'oral_agility_tongue_protude', 'oral_agility_tongue_teeth'),
-                ('verbal_agility_a', 'verbal_agility_b', 'verbal_agility_c', 'verbal_agility_d',
-                 'verbal_agility_e', 'verbal_agility_f', 'verbal_agility_g'),
                 ),
             'description': {
-                'fieldset': '/bostonaphasia/fieldset_06_table',
+                'fieldset': '/bostonaphasia/fieldset_06_oral_agility',
+                'text': _(u'If patient cannot get started on one or two items at the most, either because of perseveration '
+                          u'or paraphasic substitution, eliminate items and prorate score. '
+                          u'If more than two items are unscoreable, do not enter total score.'),
+                'fieldset_total_points': '12',
+                'fieldset_total_addend_fields': ('oral_agility_lips_purse', 'oral_agility_mouth_open', 'oral_agility_lips_retract',
+                                                 'oral_agility_tongue_corner', 'oral_agility_tongue_protude', 'oral_agility_tongue_teeth'),
+                'fieldset_total_field': 'oral_agility_non_verbal_total',
+            }
+        }),
+        (_(u'Oral agility'), {
+            'fields': (
+                ('verbal_agility_a', 'verbal_agility_b', 'verbal_agility_c', 'verbal_agility_d',
+                 'verbal_agility_e', 'verbal_agility_f', 'verbal_agility_g'),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_07_oral_agility',
+                'fieldset_total_points': '14',
+                'fieldset_total_addend_fields': ('verbal_agility_a', 'verbal_agility_b', 'verbal_agility_c', 'verbal_agility_d',
+                                                 'verbal_agility_e', 'verbal_agility_f', 'verbal_agility_g'),
+                'fieldset_total_field': 'oral_agility_verbal_total',
+            }
+        }),
+        (_(u'Automatized sequences'), {
+            'fields': (
+                ('automzatized_days_week', 'automzatized_days_week_note'),
+                ('automzatized_months_year', 'automzatized_months_year_note'),
+                ('automzatized_counting_21', 'automzatized_counting_21_note'),
+                ('automzatized_alphabet', 'automzatized_alphabet_note'),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_08_automatized',
+                'text': _(u'Have patient recite each of the following four series, giving him assistance with the first word, if necessary.'
+                          u'<br>Provide further assistance as needed, but discontinue a series when patient fails with four successive words.'
+                          u'<br>Record assistance given by circling the word; cross out words omitted by patient.'
+                          u'<br>Allow 0, 1 or 2 points, as indicated.'),
+                'fieldset_total_points': '8',
+                'fieldset_total_addend_fields': ('automzatized_days_week', 'automzatized_months_year', 'automzatized_counting_21', 'automzatized_alphabet'),
+                'fieldset_total_field': 'automatized_total',
+            }
+        }),
+        (_(u'Recitation, Singing'), {
+            'fields': (
+                ('reciting_note', 'reciting_score'),
+                ('singing_note', 'singing_score'),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_09_recitation',
+                'text': _(u'Instruct patient to complete the line for the following rhymes. Words in parentheses may be given as additional cues, if necessary.'
+                          u'Use a natural or slightly exaggerated inflection to encourage completion of the rhyme.'
+                          u'If patient fails, or is not familiar with the material, attempt other memorized or automatized matter, '
+                          u'such as the Lord\'s Prayer, the Pledge of Allegiance, etc.'
+                          u'Circle qualitative ratings below.'),
+                'fieldset_total_points': '4',
+                'fieldset_total_addend_fields': ('reciting_score', 'singing_score'),
+                'fieldset_total_field': 'reciting_singing_total',
+            }
+        }),
+        (_(u'Repetition of words'), {
+            'fields': (
+                ('repetition_words_what_score', 'repetition_words_what_transcription', 'repetition_words_what_articulation', 'repetition_words_what_paraphasia',),
+                ('repetition_words_chair_score', 'repetition_words_chair_transcription', 'repetition_words_chair_articulation', 'repetition_words_chair_paraphasia',),
+                ('repetition_words_hammock_score', 'repetition_words_hammock_transcription', 'repetition_words_hammock_articulation', 'repetition_words_hammock_paraphasia',),
+                ('repetition_words_purple_score', 'repetition_words_purple_transcription', 'repetition_words_purple_articulation', 'repetition_words_purple_paraphasia',),
+                ('repetition_words_brown_score', 'repetition_words_brown_transcription', 'repetition_words_brown_articulation', 'repetition_words_brown_paraphasia',),
+                ('repetition_words_w_score', 'repetition_words_w_transcription', 'repetition_words_w_articulation', 'repetition_words_w_paraphasia',),
+                ('repetition_words_fifteen_score', 'repetition_words_fifteen_transcription', 'repetition_words_fifteen_articulation', 'repetition_words_fifteen_paraphasia',),
+                ('repetition_words_1776_score', 'repetition_words_1776_transcription', 'repetition_words_1776_articulation', 'repetition_words_1776_paraphasia',),
+                ('repetition_words_emphasize_score', 'repetition_words_emphasize_transcription', 'repetition_words_emphasize_articulation', 'repetition_words_emphasize_paraphasia',),
+                ('repetition_words_episcopal_score', 'repetition_words_episcopal_transcription', 'repetition_words_episcopal_articulation', 'repetition_words_episcopal_paraphasia',),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_10_repetition',
+                'text': _(u'Have patient repeat each of the following words. One repetition by examiner is permitted when it appears that this may help, or when it is requested. '
+                          u'For credit, all syllables must be in their proper order, although distortion of individual sound elements is permitted, '
+                          u'provided it is in keeping with patient\'s general articulation difficulty and that the word is recognizable.'),
+                'fieldset_total_points': '10',
+                'fieldset_total_addend_fields': ('repetition_words_what_score', 'repetition_words_chair_score', 'repetition_words_hammock_score',
+                                                 'repetition_words_purple_score', 'repetition_words_brown_score', 'repetition_words_w_score',
+                                                 'repetition_words_fifteen_score', 'repetition_words_1776_score', 'repetition_words_emphasize_score',
+                                                 'repetition_words_episcopal_score', ),
+                'fieldset_total_field': 'repetition_words_total',
+            }
+        }),
+        (_(u'Repeating phrases'), {
+            'fields': (
+                ('repetition_phrases_high_a_score', 'repetition_phrases_high_a_articulation', 'repetition_phrases_high_a_paraphasia'),
+                ('repetition_phrases_high_b_score', 'repetition_phrases_high_b_articulation', 'repetition_phrases_high_b_paraphasia'),
+                ('repetition_phrases_high_c_score', 'repetition_phrases_high_c_articulation', 'repetition_phrases_high_c_paraphasia'),
+                ('repetition_phrases_high_d_score', 'repetition_phrases_high_d_articulation', 'repetition_phrases_high_d_paraphasia'),
+                ('repetition_phrases_high_e_score', 'repetition_phrases_high_e_articulation', 'repetition_phrases_high_e_paraphasia'),
+                ('repetition_phrases_high_f_score', 'repetition_phrases_high_f_articulation', 'repetition_phrases_high_f_paraphasia'),
+                ('repetition_phrases_high_g_score', 'repetition_phrases_high_g_articulation', 'repetition_phrases_high_g_paraphasia'),
+                ('repetition_phrases_high_h_score', 'repetition_phrases_high_h_articulation', 'repetition_phrases_high_h_paraphasia'),
+                ('repetition_phrases_low_a_score', 'repetition_phrases_low_a_articulation', 'repetition_phrases_low_a_paraphasia'),
+                ('repetition_phrases_low_b_score', 'repetition_phrases_low_b_articulation', 'repetition_phrases_low_b_paraphasia'),
+                ('repetition_phrases_low_c_score', 'repetition_phrases_low_c_articulation', 'repetition_phrases_low_c_paraphasia'),
+                ('repetition_phrases_low_d_score', 'repetition_phrases_low_d_articulation', 'repetition_phrases_low_d_paraphasia'),
+                ('repetition_phrases_low_e_score', 'repetition_phrases_low_e_articulation', 'repetition_phrases_low_e_paraphasia'),
+                ('repetition_phrases_low_f_score', 'repetition_phrases_low_f_articulation', 'repetition_phrases_low_f_paraphasia'),
+                ('repetition_phrases_low_g_score', 'repetition_phrases_low_g_articulation', 'repetition_phrases_low_g_paraphasia'),
+                ('repetition_phrases_low_h_score', 'repetition_phrases_low_h_articulation', 'repetition_phrases_low_h_paraphasia'),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_10_repetition',
+                'text': _(u''),
+                'fieldset_total_points': ('8', '16',),
+                'fieldset_total_addend_fields': (
+                    ('repetition_phrases_high_a_score', 'repetition_phrases_high_b_score', 'repetition_phrases_high_c_score',
+                     'repetition_phrases_high_d_score', 'repetition_phrases_high_e_score', 'repetition_phrases_high_f_score',
+                     'repetition_phrases_high_g_score', 'repetition_phrases_high_h_score', ),
+                    ('repetition_phrases_low_a_score',  'repetition_phrases_low_b_score', 'repetition_phrases_low_c_score',
+                     'repetition_phrases_low_d_score', 'repetition_phrases_low_e_score', 'repetition_phrases_low_f_score',
+                     'repetition_phrases_low_g_score', 'repetition_phrases_low_h_score', )
+                ),
+                'fieldset_total_field': ('repetition_phrases_high_total', 'repetition_phrases_low_total'),
             }
         }),
     )

@@ -23,7 +23,8 @@ class NIHSSAdmin(BaseAdmin):
             'fields': ('loc', 'loc_questions', 'loc_commands', 'best_gaze', 'visual', 'facial_palsy', ('motor_arm_left',
                        'motor_arm_right'), ('motor_leg_left', 'motor_leg_right'), 'limb_ataxia', 'sensory',
                        'best_language', 'dysarthria', 'extinction'),
-            'description': {'fieldset': '_table2'}
+            'description': {'fieldset': '_table2'},
+
         })
     )
 

@@ -175,7 +175,7 @@ var calc_total_field = function(addend_field_ids, total_field_id) {
                 total_field.val(parseInt($('input[type=radio][name=' + addend_field_ids[x] + ']:checked').val()) + parseInt(total_field.val()));
             }
         } else {
-            total_field.val(parseInt($('#id_' + addend_field_ids[x]).val()) + parseInt(total_field.val()));
+            total_field.val((parseInt($('#id_' + addend_field_ids[x]).val()) || 0) + (parseInt(total_field.val()) || 0));
         }
         total_field.trigger("change");
     }
