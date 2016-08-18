@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
+from django.utils.safestring import mark_safe
+from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
 from . import BaseEvaluation
 
@@ -249,11 +251,11 @@ class BostonAphasia(BaseEvaluation):
     body_part_c_left_cheek_points = models.IntegerField(verbose_name=_(u'Left cheek'), blank=True, null=True)
 
     # COMMANDS
-    command_close_fist = models.IntegerField(verbose_name=_(u'1. Make a fist'), blank=True, null=True)
-    command_point_ceiling = models.IntegerField(verbose_name=_(u'2. Point to the ceiling, then to the floor'), blank=True, null=True)
-    command_put_pencil = models.IntegerField(verbose_name=_(u'3. Put the pencil on top of the card, then put it back in place'), blank=True, null=True)
-    command_put_watch = models.IntegerField(verbose_name=_(u'4. Put the watch on the other side of the pencil and turn over the card'), blank=True, null=True)
-    command_touch_shoulder = models.IntegerField(verbose_name=_(u'5. Tap each shoulder twice with two fingers, keeping your eyes shut'), blank=True, null=True)
+    command_close_fist = models.IntegerField(verbose_name=_(u'1. Make a "fist"'), blank=True, null=True)
+    command_point_ceiling = models.IntegerField(verbose_name=_(u'2. Point to "the ceiling", then to "the floor"'), blank=True, null=True)
+    command_put_pencil = models.IntegerField(verbose_name=_(u'3. Put "the pencil" on "top of the card", then "put it back in place"'), blank=True, null=True)
+    command_put_watch = models.IntegerField(verbose_name=_(u'4. Put "the watch" on "the other side" of "the pencil" and "turn over the card"'), blank=True, null=True)
+    command_touch_shoulder = models.IntegerField(verbose_name=_(u'5. Tap "each shoulder" "twice" with "two fingers", keeping your "eyes shut"'), blank=True, null=True)
 
     # COMPLEX IDEATIONAL MATERIAL
     complex_ideational_1a = models.IntegerField(verbose_name=_(u'1a. Will a cork sink in water?'), blank=True, null=True)
@@ -325,8 +327,142 @@ class BostonAphasia(BaseEvaluation):
     verbal_agility_f = models.IntegerField(verbose_name=_(u'Baseball player, baseball player'), blank=True, null=True)
     verbal_agility_g = models.IntegerField(verbose_name=_(u'Caterpillar'), blank=True, null=True)
 
+    # AUTOMATIZED SEQUENCES
+    # Have patient recite each of the following four series, giving him assistance with the first word, if necessary.
+    # Provide further assistance as needed, but discontinue a series when patient fails with four successive words.
+    # Record assistance given by circling the word; cross out words omitted by patient.
+    # Allow 0, 1 or 2 points, as indicated.
+    automzatized_days_week = models.IntegerField(verbose_name=_(u'1. Days of the week:'), blank=True, null=True)
+    automzatized_days_week_note = models.TextField(max_length=250, blank=True, null=True)
+    automzatized_months_year = models.IntegerField(verbose_name=_(u'2. Months of the year:'), blank=True, null=True)
+    automzatized_months_year_note = models.TextField(max_length=250, blank=True, null=True)
+    automzatized_counting_21 = models.IntegerField(verbose_name=_(u'3. Counting to 21:'), blank=True, null=True)
+    automzatized_counting_21_note = models.TextField(max_length=250, blank=True, null=True)
+    automzatized_alphabet = models.IntegerField(verbose_name=_(u'4. Alphabet:'), blank=True, null=True)
+    automzatized_alphabet_note = models.TextField(max_length=250, blank=True, null=True)
 
+    # RECITATION, SINGING AND RHYTHM
+    reciting_note = models.TextField(verbose_name=_(u'Reciting'), help_text=_(u'Jack and Jill (went)...'), max_length=250, blank=True, null=True)
+    reciting_score = models.IntegerField(verbose_name=_(u'Reciting'), help_text=_(u'Jack and Jill (went)...'), blank=True, null=True)
 
+    singing_note = models.TextField(verbose_name=_(u'Singing'), help_text=_(u'After recitation have patient sing this or any othet song with which he is familiar'), max_length=250, blank=True, null=True)
+    singing_score = models.IntegerField(verbose_name=_(u'Singing'), help_text=_(u'After recitation have patient sing this or any othet song with which he is familiar'), blank=True, null=True)
+
+    # REPETITION OF WORDS
+    repetition_words_what_score = models.IntegerField(verbose_name=_(u'What'), blank=True, null=True)
+    repetition_words_what_transcription = models.TextField(max_length=150, blank=True, null=True)
+    repetition_words_what_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_words_what_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_words_chair_score = models.IntegerField(verbose_name=_(u'Chair'), blank=True, null=True)
+    repetition_words_chair_transcription = models.TextField(max_length=150, blank=True, null=True)
+    repetition_words_chair_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_words_chair_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_words_hammock_score = models.IntegerField(verbose_name=_(u'Hammock'), blank=True, null=True)
+    repetition_words_hammock_transcription = models.TextField(max_length=150, blank=True, null=True)
+    repetition_words_hammock_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_words_hammock_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_words_purple_score = models.IntegerField(verbose_name=_(u'Purple'), blank=True, null=True)
+    repetition_words_purple_transcription = models.TextField(max_length=150, blank=True, null=True)
+    repetition_words_purple_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_words_purple_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_words_brown_score = models.IntegerField(verbose_name=_(u'Brown'), blank=True, null=True)
+    repetition_words_brown_transcription = models.TextField(max_length=150, blank=True, null=True)
+    repetition_words_brown_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_words_brown_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_words_w_score = models.IntegerField(verbose_name=_(u'W'), blank=True, null=True)
+    repetition_words_w_transcription = models.TextField(max_length=150, blank=True, null=True)
+    repetition_words_w_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_words_w_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_words_fifteen_score = models.IntegerField(verbose_name=_(u'Fifteen'), blank=True, null=True)
+    repetition_words_fifteen_transcription = models.TextField(max_length=150, blank=True, null=True)
+    repetition_words_fifteen_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_words_fifteen_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_words_1776_score = models.IntegerField(verbose_name=_(u'1776'), blank=True, null=True)
+    repetition_words_1776_transcription = models.TextField(max_length=150, blank=True, null=True)
+    repetition_words_1776_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_words_1776_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_words_emphasize_score = models.IntegerField(verbose_name=_(u'Emphasize'), blank=True, null=True)
+    repetition_words_emphasize_transcription = models.TextField(max_length=150, blank=True, null=True)
+    repetition_words_emphasize_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_words_emphasize_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_words_episcopal_score = models.IntegerField(verbose_name=_(u'Methodist Episcopal'), blank=True, null=True)
+    repetition_words_episcopal_transcription = models.TextField(max_length=150, blank=True, null=True)
+    repetition_words_episcopal_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_words_episcopal_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    # REPEATING PHRASES
+    repetition_phrases_high_a_score = models.IntegerField(verbose_name=_(u'a. You know how'), blank=True, null=True)
+    repetition_phrases_high_a_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_high_a_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_high_b_score = models.IntegerField(verbose_name=_(u'b. Down to earth.'), blank=True, null=True)
+    repetition_phrases_high_b_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_high_b_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_high_c_score = models.IntegerField(verbose_name=_(u'c. I got home from work.'), blank=True, null=True)
+    repetition_phrases_high_c_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_high_c_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_high_d_score = models.IntegerField(verbose_name=_(u'd. You should not tell her.'), blank=True, null=True)
+    repetition_phrases_high_d_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_high_d_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_high_e_score = models.IntegerField(verbose_name=_(u'e. Go ahead and do it if possible'), blank=True, null=True)
+    repetition_phrases_high_e_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_high_e_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_high_f_score = models.IntegerField(verbose_name=_(u'f. Near the table in the dining room.'), blank=True, null=True)
+    repetition_phrases_high_f_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_high_f_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_high_g_score = models.IntegerField(verbose_name=_(u'g. They heard him speak on the radio last night.'), blank=True, null=True)
+    repetition_phrases_high_g_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_high_g_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_high_h_score = models.IntegerField(verbose_name=_(u'h. I stopped at his front door and rang the bell.'), blank=True, null=True)
+    repetition_phrases_high_h_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_high_h_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_low_a_score = models.IntegerField(verbose_name=_(u'a. The vat leaks.'), blank=True, null=True)
+    repetition_phrases_low_a_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_low_a_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_low_b_score = models.IntegerField(verbose_name=_(u'b. limes are sour.'), blank=True, null=True)
+    repetition_phrases_low_b_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_low_b_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_low_c_score = models.IntegerField(verbose_name=_(u'c. The spy fled to Greece.'), blank=True, null=True)
+    repetition_phrases_low_c_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_low_c_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_low_d_score = models.IntegerField(verbose_name=_(u'd. Pry the tin lid off.'), blank=True, null=True)
+    repetition_phrases_low_d_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_low_d_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_low_e_score = models.IntegerField(verbose_name=_(u'e. The Chinese fan had a rare emerald.'), blank=True, null=True)
+    repetition_phrases_low_e_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_low_e_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_low_f_score = models.IntegerField(verbose_name=_(u'f. The barn swallow captured a plump worm.'), blank=True, null=True)
+    repetition_phrases_low_f_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_low_f_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_low_g_score = models.IntegerField(verbose_name=_(u'g. The lawyer\'s closing argument convinced him.'), blank=True, null=True)
+    repetition_phrases_low_g_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_low_g_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    repetition_phrases_low_h_score = models.IntegerField(verbose_name=_(u'h. The phantom soared across the foggy heath.'), blank=True, null=True)
+    repetition_phrases_low_h_articulation = models.CharField(max_length=1, blank=True, null=True)
+    repetition_phrases_low_h_paraphasia = models.CharField(max_length=1, blank=True, null=True)
 
 
 
