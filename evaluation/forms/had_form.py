@@ -5,6 +5,9 @@ from ..models.had import HAD
 
 
 class HADForm(forms.ModelForm):
+    """
+    Form for HAD evaluation
+    """
 
     def __init__(self, *args, **kwargs):
         super(HADForm, self).__init__(*args, **kwargs)

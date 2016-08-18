@@ -12,6 +12,7 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -625,11 +626,27 @@ msgstr ""
 "Avaliada semanalmente pelo psiquiatra responsável, quando são medidas "
 "alteradas de peso"
 
-#: .\evaluation\models\base_evaluation.py:14 .\evaluation\models\kviq.py:8
+#: evaluation/forms/nihss_form.py:43
+msgid "Left arm"
+msgstr "Braço esquerdo"
+
+#: evaluation/forms/nihss_form.py:46
+msgid "Right arm"
+msgstr "Braço direito"
+
+#: evaluation/forms/nihss_form.py:48
+msgid "Left leg"
+msgstr "Perna esquerda"
+
+#: evaluation/forms/nihss_form.py:51
+msgid "Right leg"
+msgstr "Perna direita"
+
+#: evaluation/models/base_evaluation.py:13 evaluation/models/kviq.py:8
 msgid "NT"
 msgstr ""
 
-#: .\evaluation\models\base_evaluation.py:16
+#: .\evaluation\models\base_evaluation.py:15
 msgid "MD"
 msgstr ""
 
@@ -1592,6 +1609,7 @@ msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY"
 msgid "Abduction 90°, maintains extension and pronation"
 msgstr "Abdução completa 90 e mantém extensão cotovelo e pronação"
 
+#: evaluation/models/fuglmeyer.py:43
 #: .\evaluation\models\fuglmeyer.py:82
 msgctxt "FuglMeyer"
 msgid "Shoulder abduction 0 - 90 elbow at 0 forearm pronated"
@@ -2938,7 +2956,7 @@ msgid "insight"
 msgstr "Consciência"
 
 #: .\evaluation\models\hamilton.py:162
-#: .\evaluation\templates\admin\evaluation\hamilton\change_form.html:20
+#: .\evaluation\templates\admin\evaluation\hamilton\change_form.html:6
 msgid "Hamilton"
 msgstr "Hamilton"
 
@@ -3260,244 +3278,511 @@ msgstr "Copiar um desenho (1 ponto)"
 msgid "MMSE"
 msgstr "MEEM"
 
-#: .\evaluation\models\nihss.py:13
-msgid "Alert; keenly responsive."
+#: evaluation/models/nihss.py:13
+msgid ""
+"The investigator must choose a response if a full evaluation is prevented by "
+"such obstacles as an endotracheal tube, language barrier, orotracheal trauma/"
+"bandages. A 3 is scored only if the patient makes no movement (other than "
+"reflexive posturing) in response to noxious stimulation."
 msgstr ""
+"O examinador deve escolher uma resposta, mesmo que a avaliação completa seja "
+"prejudicada por obstáculos como curativo ou tubo orotraqueal, barreiras de "
+"linguagem ou traumatismo. Um 3 é dado apenas se o paciente não fizer nenhum "
+"movimento em resposta à estimulação dolorosa, para além de respostas reflexas."
 
-#: .\evaluation\models\nihss.py:14
+#: evaluation/models/nihss.py:18
+msgid ""
+"The patient is asked the month and his/her age. The answer must be correct - "
+"there is no partial credit for being close. Aphasic and stuporous patients "
+"who do not comprehend the questions will score 2. Patients unable to speak "
+"because of endotracheal intubation, orotracheal trauma, severe dysarthria "
+"from any cause, language barrier, or any other problem not secondary to "
+"aphasia are given a 1. It is important that only the initial answer be "
+"graded and that the examiner not \"help\" the patient with verbal or non-"
+"verbal cues."
+msgstr ""
+"O paciente é questionado sobre o mês e a idade. A resposta deve ser correta - "
+"não se valorizam respostas aproximadas. Pacientes com afasia ou estupor que não "
+"compreendam as perguntas têm 2. Pacientes incapazes de falar por tubo ou "
+"traumatismo orotraqueal, disartria grave de qualquer causa, barreiras de "
+"linguagem ou qualquer outro problema não secundário a afasia receberão 1. É "
+"importante considerar apenas a resposta inicial e que o examinador não \"ajude\" "
+"o paciente com dicas verbais ou não verbais."
+
+#: evaluation/models/nihss.py:26
+msgid ""
+"The patient is asked to open and close the eyes and then to grip and release "
+"the non-paretic hand. Substitute another one step command if the hands "
+"cannot be used. Credit is given if an unequivocal attempt is made but not "
+"completed due to weakness. If the patient does not respond to command, the "
+"task should be demonstrated to him or her (pantomime), and the result scored "
+"(i.e., follows none, one or two commands). Patients with trauma, amputation, "
+"or other physical impediments should be given suitable one-step commands. "
+"Only the first attempt is scored."
+msgstr ""
+"O paciente é solicitado a abrir e fechar os olhos e depois abrir e fechar a mão "
+"não parética. Substitua por outro comando de um único passo se as mãos não "
+"puderem ser utilizadas. Devemos valorizar uma tentativa inequívoca, ainda que "
+"não completada devido à fraqueza muscular. Se o paciente não responde à ordem, "
+"a tarefa deve ser demonstrada usando gestos e o resultado registrado. Aos "
+"pacientes com trauma, amputação ou outro impedimento físico devem ser dadas "
+"ordens simples adequadas. Pontue só a primeira tentativa."
+
+#: evaluation/models/nihss.py:35
+msgid ""
+"Only horizontal eye movements will be tested. Voluntary or reflexive "
+"(oculocephalic) eye movements will be scored, but caloric testing is not "
+"done. If the patient has a conjugate deviation of the eyes that can be "
+"overcome by voluntary or reflexive activity, the score will be 1. If a "
+"patient has an isolated peripheral nerve paresis (CN III, IV or VI), score a "
+"1. Gaze is testable in all aphasic patients. Patients with ocular trauma, "
+"bandages, pre-existing blindness, or other disorder of visual acuity or "
+"fields should be tested with reflexive movements, and a choice made by the "
+"investigator. Establishing eye contact and then moving about the patient "
+"from side to side will occasionally clarify the presence of a partial gaze "
+"palsy."
+msgstr ""
+"Teste apenas os movimentos oculares horizontais. Os movimentos oculares "
+"voluntários ou reflexos (oculocefálico) são pontuados, mas a prova calórica "
+"não é valida. Se o paciente tem um desvio conjugado do olhar, que é revertido "
+"pela atividade voluntária ou reflexa, a pontuação será 1. Se o paciente tem uma "
+"parésia de nervo periférico isolada (NC III, IV ou VI), pontue 1. O olhar é "
+"testado em todos os pacientes afásicos. Os pacientes com trauma ou curativo "
+"ocular, cegueira pré-existente ou outro distúrbio de acuidade ou campo visual "
+"devem ser testados com movimentos reflexos e a escolha feita pelo examinador. "
+"Estabelecer contato visual e mover-se perto do paciente de um lado para outro "
+"pode esclarecer a presença de paralisia do olhar conjugado."
+
+#: evaluation/models/nihss.py:46
+msgid ""
+"Visual fields (upper and lower quadrants) are tested by confrontation, using "
+"finger counting or visual threat, as appropriate. Patients may be "
+"encouraged, but if they look at the side of the moving fingers "
+"appropriately, this can be scored as normal. If there is unilateral "
+"blindness or enucleation, visual fields in the remaining eye are scored. "
+"Score 1 only if a clear-cut asymmetry, including quadrantanopia, is found. "
+"If patient is blind from any cause, score 3. Double simultaneous stimulation "
+"is performed at this point. If there is extinction, patient receives a 1, "
+"and the results are used to respond to item 11."
+msgstr "Os campos visuais (quadrantes superiores e inferiores) são testados por "
+"confrontação, utilizando contagem de dedos ou ameaça visual, conforme apropriado. "
+"O paciente pode ser encorajado, mas basta identificar olhando para o lado em que "
+"mexem os dedos para ser considerado como normal. Se houver cegueira unilateral ou "
+"enucleação, os campos visuais no olho restante são avaliados. Pontue 1 apenas se "
+"houver assimetria clara, incluindo quadrantanópsia. Se o paciente é cego por "
+"qualquer causa, pontue 3. A estimulação dupla simultânea é realizada neste momento. "
+"Se houver extinção, o paciente recebe 1 e os resultados são usados para responder "
+"questão 11."
+
+#: evaluation/models/nihss.py:55
+msgid ""
+"Ask – or use pantomime to encourage – the patient to show teeth or raise "
+"eyebrows and close eyes. Score symmetry of grimace in response to noxious "
+"stimuli in the poorly responsive or non-comprehending patient. If facial "
+"trauma/bandages, orotracheal tube, tape or other physical barriers obscure "
+"the face, these should be removed to the extent possible."
+msgstr ""
+"Pergunte ou use gestos para encorajar o paciente a mostrar os dentes ou "
+"levantar as sobrancelhas e fechar com força os olhos. Pontue a simetria da "
+"contração facial em resposta ao estímulo doloroso nos pacientes pouco responsivos "
+"ou que não compreendam. Na presença de traumatismo, tubo orotraqueal, adesivos ou "
+"outra barreira física que possam esconder a face, estes devem ser removidos, tanto "
+"quanto possível."
+
+#: evaluation/models/nihss.py:60
+msgid ""
+"The limb is placed in the appropriate position: extend the arms (palms down) "
+"90 degrees (if sitting) or 45 degrees (if supine). Drift is scored if the "
+"arm falls before 10 seconds. The aphasic patient is encouraged using urgency "
+"in the voice and pantomime, but not noxious stimulation. Each limb is tested "
+"in turn, beginning with the non-paretic arm. Only in the case of amputation "
+"or joint fusion at the shoulder, the examiner should record the score as "
+"untestable (UN), and clearly write the explanation for this choice."
+msgstr ""
+"O braço é colocado na posição apropriada: extensão dos braços, palmas para baixo, "
+"a 90° se sentado ou a 45° se posição supina. Pontue-se a queda do braço quando "
+"esta ocorre antes de 10 segundos. O paciente afásico é encorajado através de "
+"firmeza na voz ou gestos, mas não estimulação dolorosa. Cada membro é testado "
+"isoladamente, começando no braço não-parético. Apenas no caso de amputação ou "
+"anquilose do ombro o item poderá ser considerado como não testável (NT), e uma "
+"explicação deve ser escrita fundamentando esta escolha."
+
+#: evaluation/models/nihss.py:68
+msgid ""
+"The limb is placed in the appropriate position: hold the leg at 30 degrees "
+"(always tested supine). Drift is scored if the leg falls before 5 seconds. "
+"The aphasic patient is encouraged using urgency in the voice and pantomime, "
+"but not noxious stimulation. Each limb is tested in turn, beginning with the "
+"non-paretic leg. Only in the case of amputation or joint fusion at the hip, "
+"the examiner should record the score as untestable (UN), and clearly write "
+"the explanation for this choice."
+msgstr ""
+"A perna é colocada na posição apropriada: extensão a 30°. Teste sempre na "
+"posição supina. Pontue se a queda da perna quando esta ocorre antes de 5 "
+"segundos. O paciente afásico é encorajado através de firmeza na voz ou gestos, "
+"mas não com estimulação dolorosa. Cada membro é testado isoladamente, começando "
+"na perna não-parética. Apenas no caso de amputação ou anquilose da anca o item "
+"poderá ser considerável não-testável (NT), e uma explicação deve ser escrita "
+"fundamentando esta escolha."
+
+#: evaluation/models/nihss.py:75
+msgid ""
+"This item is aimed at finding evidence of a unilateral cerebellar lesion. "
+"Test with eyes open. In case of visual defect, ensure testing is done in "
+"intact visual field. The finger-nose-finger and heel-shin tests are "
+"performed on both sides, and ataxia is scored only if present out of "
+"proportion to weakness. Ataxia is absent in the patient who cannot "
+"understand or is paralyzed. Only in the case of amputation or joint fusion, "
+"the examiner should record the score as untestable (UN), and clearly write "
+"the explanation for this choice. In case of blindness, test by having the "
+"patient touch nose from extended arm position. "
+msgstr ""
+"Este item procura evidência de lesão cerebelosa unilateral. Teste com os olhos "
+"abertos. No caso de défice de campo visual, assegure-se que o teste é feito no "
+"campo visual intacto. Os testes dedo-nariz e calcanhar-joelho são realizados "
+"em ambos os lados e a ataxia é valorizada, apenas, se for desproporcional em "
+"relação à fraqueza muscular. A ataxia é considerada ausente no doente com "
+"pertubação da compreensão ou plégico. Apenas no caso de amputação ou anquilose "
+"o item pode ser considerado como não-testável (NT), e uma explicação deve ser "
+"escrita fundamentando esta escolha. No caso de cegueira, peça para tocar com o "
+"dedo no nariz a partir da posição de braço estendido."
+
+#: evaluation/models/nihss.py:84
+msgid ""
+"Sensation or grimace to pinprick when tested, or withdrawal from noxious "
+"stimulus in the obtunded or aphasic patient. Only sensory loss attributed to "
+"stroke is scored as abnormal and the examiner should test as many body areas "
+"(arms [not hands], legs, trunk, face) as needed to accurately check for "
+"hemisensory loss. A score of 2, \"severe or total sensory loss,\" should "
+"only be given when a severe or total loss of sensation can be clearly "
+"demonstrated. Stuporous and aphasic patients will, therefore, probably score "
+"1 or 0. The patient with brainstem stroke who has bilateral loss of "
+"sensation is scored 2. If the patient does not respond and is quadriplegic, "
+"score 2. Patients in a coma (item 1a=3) are automatically given a 2 on this "
+"item."
+msgstr ""
+"Avalie a sensibilidade ou mímica facial à picada de alfinete ou a resposta de "
+"retirada ao estimulo doloroso em paciente obnubilado ou afásico. Só a perda de "
+"sensibilidade atribuída ao AVC é pontuada. Teste tantas as partes do corpo - "
+"membros superiores (exceto mãos), inferiores (exceto os pés), tronco e face - "
+"quantas as necessárias para avaliar com precisão uma perda hemissensitiva. "
+"Pontue com 2 só se uma perda grave ou total da sensibilidade puder ser claramente "
+"demonstrada. Deste modo, doentes estuporoses ou afásicos irão ser pontuaos "
+"possivelmente com 1 ou 0. O doente com AVC do tronco cerebral com perda de "
+"sensibilidade bilateral é pontuado com 2. Se o paciente não responde e está "
+"quadriplégico, pontue 2. Pacientes em coma (item 1a = 3) são pontuados "
+"arbitrariamente com 2 neste item."
+
+#: evaluation/models/nihss.py:95
+msgid ""
+"A great deal of information about comprehension will be obtained during the "
+"preceding sections of the examination. For this scale item, the patient is "
+"asked to describe what is happening in the attached picture, to name the "
+"items on the attached naming sheet and to read from the attached list of "
+"sentences. Comprehension is judged from responses here, as well as to all of "
+"the commands in the preceding general neurological exam. If visual loss "
+"interferes with the tests, ask the patient to identify objects placed in the "
+"hand, repeat, and produce speech. The intubated patient should be asked to "
+"write. The patient in a coma (item 1a=3) will automatically score 3 on this "
+"item. The examiner must choose a score for the patient with stupor or "
+"limited cooperation, but a score of 3 should be used only if the patient is "
+"mute and follows no one-step commands. "
+msgstr ""
+"Durante a pontuação dos itens precedentes obterá muita informação acerca da "
+"capacidade de compreensão. Pede-se ao doente para descrever o que está "
+"acontecendo na imagem em anexo, para nomear objetos num cartão de nomeação "
+"anexo e para ler uma lista de frases em anexo. A compreensão é julgada a partir "
+"destas respostas, assim como as referentes às ordens dadas no exame neurológico "
+"geral precedente. Se a perda visual interferir com os testes, peça ao doente "
+"para identificar objetos colocados na mão, repetir frases e produzir discurso. "
+"O paciente entubado deve escrever as respostas. O doente em coma (1a = 3) será "
+"pontuado arbitrariamente com 3. O examinador deve escolher a pontuação no "
+"doente com estupor ou pouco colaborante, mas a pontuação de 3 está reservada "
+"a doentes em mutismo e que não cumpram nenhuma ordem simples."
+
+#: evaluation/models/nihss.py:108
+msgid ""
+"If patient is thought to be normal, an adequatesample of speech must be "
+"obtained by asking patient to read or repeat words from the attached list. "
+"If the patient has severe aphasia, the clarity of articulation of "
+"spontaneous speech can be rated. Only if the patient is intubated or has "
+"other physical barriers to producing speech, the examiner should record the "
+"score as untestable (UN), and clearly write an explanation for this choice. "
+"Do not tell the patient why he or she is being tested."
+msgstr "Se acredita que o doente consegue, pede-se para ler ou repetir as "
+"palavras da lista anexa. Se o paciente tem afasia grave, a clareza da "
+"articulação da fala espontânea pode ser pontuada. Este item é considerado "
+"não testável (NT) apenas se o doente estiver entubado ou tiver outras "
+"barreiras físicas que impeçam o discurso. Não diga ao paciente a razão pela "
+"qual está sendo testado."
+
+#: evaluation/models/nihss.py:116
+msgid ""
+"Sufficient information to identify neglect may be obtained during the prior "
+"testing. If the patient has a severe visual loss preventing visual double "
+"simultaneous stimulation, and the cutaneous stimuli are normal, the score is "
+"normal. If the patient has aphasia but does appear to attend to both sides, "
+"the score is normal. The presence of visual spatial neglect or anosagnosia "
+"may also be taken as evidence of abnormality. Since the abnormality is "
+"scored only if present, the item is never untestable."
+msgstr ""
+"A informação suficiente para a identificação da negligência pode ter sido "
+"obtida durante testes anteriores. Se o doente tem perda visual grave, que "
+"impede o teste da estimulação visual dupla simultânea, e os estímulos cutâneos "
+"são normais, a pontuação é normal. Se o doente tem afasia, mas parece "
+"identificar ambos os lados, é pontuado como normal. A presença de negligência "
+"visuoespacial ou anosagnosia contribuem também para a evidência de anormalidade. "
+"Como a anormalidade só é pontuada se presente, o item nunca é considerado não "
+"testável."
+
+#: evaluation/models/nihss.py:125
+msgid "Alert; keenly responsive."
+msgstr "Acordado; responde corretamente"
+
+#: evaluation/models/nihss.py:126
 msgid ""
 "Not alert; but arousable by minor stimulation to obey, answer, or respond."
 msgstr ""
+"Sonolente, mas acorda com um pequeno estímulo, obedece, responde ou reage"
 
-#: .\evaluation\models\nihss.py:15
+#: evaluation/models/nihss.py:127
 msgid ""
 "Not alert; requires repeated stimulation to attend, or is obtunded and "
 "requires strong or painful stimulation to make movements (not stereotyped)."
 msgstr ""
+"Estuporoso, acorda com estímulo forte, requer estimulação repetida ou dolorosa "
+"para realizar movimentos (não estereotipados)"
 
-#: .\evaluation\models\nihss.py:17
+#: evaluation/models/nihss.py:129
 msgid ""
 "Responds only with reflex motor or autonomic effects or totally "
 "unresponsive, flaccid, and areflexic."
 msgstr ""
+"Comatoso, apenas respostas reflexas motoras ou automáticas, ou sem qualquer "
+"tipo de resposta"
 
-#: .\evaluation\models\nihss.py:19
+#: evaluation/models/nihss.py:131
 msgid "1a. Level of Consciousness"
-msgstr ""
+msgstr "1a. Nível de consciência"
 
-#: .\evaluation\models\nihss.py:22
+#: evaluation/models/nihss.py:134
 msgid "Answers both questions correctly."
-msgstr ""
+msgstr "Responde a ambas as questões corretamente."
 
-#: .\evaluation\models\nihss.py:23
+#: evaluation/models/nihss.py:135
 msgid "Answers one question correctly."
-msgstr ""
+msgstr "Responde a uma questão corretamente."
 
-#: .\evaluation\models\nihss.py:24
+#: evaluation/models/nihss.py:136
 msgid "Answers neither question correctly."
-msgstr ""
+msgstr "Não responde a nenhuma questão corretamente."
 
-#: .\evaluation\models\nihss.py:26
+#: evaluation/models/nihss.py:138
 msgid "1b. LOC Questions"
-msgstr ""
+msgstr "1b. NDC Questões"
 
-#: .\evaluation\models\nihss.py:29
+#: evaluation/models/nihss.py:141
 msgid "Performs both tasks correctly."
-msgstr ""
+msgstr "Realiza ambas as tarefas corretamente."
 
-#: .\evaluation\models\nihss.py:30
-#, fuzzy
-#| msgctxt "FUGLM_UE_VOL_MOV_SYN_ACTIVITY"
-#| msgid "Performed partly"
+#: evaluation/models/nihss.py:142
 msgid "Performs one task correctly."
-msgstr "Tarefa pode ser realizada parcialmente"
+msgstr "Realiza uma tarefa corretamente."
 
-#: .\evaluation\models\nihss.py:31
+#: evaluation/models/nihss.py:143
 msgid "Performs neither task correctly."
-msgstr ""
+msgstr "Não realiza nenhuma das tarefas corretamente."
 
-#: .\evaluation\models\nihss.py:33
+#: evaluation/models/nihss.py:145
 msgid "1c. LOC Commands"
-msgstr ""
+msgstr "1c. NDC Ordens"
 
-#: .\evaluation\models\nihss.py:36 .\evaluation\models\nihss.py:113
+#: evaluation/models/nihss.py:148 evaluation/models/nihss.py:225
 msgid "Normal."
-msgstr ""
+msgstr "Normal."
 
-#: .\evaluation\models\nihss.py:37
+#: evaluation/models/nihss.py:149
 msgid ""
 "Partial gaze palsy; gaze is abnormal in one or both eyes, but forced "
 "deviation or total gaze paresis is not present."
 msgstr ""
+"Paralisia parcial do olhar conjugado. Esta popntuação é dada quando o "
+"olhar é anormal em um ou ambos os olhos, mas não há desvio forçado ou "
+"paresia total do olhar conjugado."
 
-#: .\evaluation\models\nihss.py:39
+#: evaluation/models/nihss.py:151
 msgid ""
 "Forced deviation, or total gaze paresis not overcome by the oculocephalic "
 "maneuver."
 msgstr ""
+"Desvio forçado ou parésia total do olhar conjugado não revertidos pela "
+"manobra oculocefálica"
 
-#: .\evaluation\models\nihss.py:41
+#: evaluation/models/nihss.py:153
 msgid "2. Best Gaze"
-msgstr ""
+msgstr "2. Melhor Olhar Conjugado"
 
-#: .\evaluation\models\nihss.py:44
+#: evaluation/models/nihss.py:156
 #, fuzzy
 #| msgid "Neck visual images"
 msgid "No visual loss."
-msgstr "Pescoço - visual de imagens"
+msgstr "Sem défices campimétricos"
 
-#: .\evaluation\models\nihss.py:45
-#, fuzzy
-#| msgctxt "FUGLM_LE_VOL_MOV_SYN"
-#| msgid "Partial motion"
+#: evaluation/models/nihss.py:157
 msgid "Partial hemianopia."
-msgstr "Realiza parcialmente"
+msgstr "Hemianopsia parcial."
 
-#: .\evaluation\models\nihss.py:46
+#: evaluation/models/nihss.py:158
 msgid "Complete hemianopia."
-msgstr ""
+msgstr "Hemianopsia completa."
 
-#: .\evaluation\models\nihss.py:47
+#: evaluation/models/nihss.py:159
 msgid "Bilateral hemianopia (blind including cortical blindness). "
-msgstr ""
+msgstr "Hemianopsia bilateral (cego, incluindo cegueira cortical)."
 
-#: .\evaluation\models\nihss.py:49
+#: evaluation/models/nihss.py:161
 msgid "3. Visual"
-msgstr ""
+msgstr "3. Campos visuais"
 
-#: .\evaluation\models\nihss.py:52
+#: evaluation/models/nihss.py:164
 msgid "Normal symmetrical movements."
-msgstr ""
+msgstr "Movimentos normais simétricos."
 
-#: .\evaluation\models\nihss.py:53
+#: evaluation/models/nihss.py:165
 msgid "Minor paralysis (flattened nasolabial fold, asymmetry on smiling)."
 msgstr ""
+"Paralisia facial minor (apagamento de prega nasolabial, assimetria no "
+"sorriso)"
 
-#: .\evaluation\models\nihss.py:54
+#: evaluation/models/nihss.py:166
 msgid "Partial paralysis (total or near-total paralysis of lower face)."
 msgstr ""
+"Paralisia facial central evidente (paralisia facial inferior total ou "
+"quase total)"
 
-#: .\evaluation\models\nihss.py:55
+#: evaluation/models/nihss.py:167
 msgid ""
 "Complete paralysis of one or both sides (absence of facial movement in the "
 "upper and lower face). "
 msgstr ""
+"paralisia facial completa (ausência de movimentos faciais das regiões "
+"superior e inferior de um lado da face)"
 
-#: .\evaluation\models\nihss.py:57
+#: evaluation/models/nihss.py:169
 msgid "4. Facial Palsy"
-msgstr ""
+msgstr "4. Paresia facial"
 
-#: .\evaluation\models\nihss.py:61
+#: evaluation/models/nihss.py:173
 msgid "No drift; limb holds 90 (or 45) degrees for full 10 seconds."
-msgstr ""
+msgstr "Sem queda, mantem o braço a 90° (ou 45°) por um período de 10 segundos"
 
-#: .\evaluation\models\nihss.py:62
+#: evaluation/models/nihss.py:174
 msgid ""
 "Drift; limb holds 90 (or 45) degrees, but drifts down before full 10 "
 "seconds; does not hit bed or other support."
 msgstr ""
+"Queda parcial antes de completar o período de 10 segundos; não chega a "
+"tocar na cama ou em outro suporte."
 
-#: .\evaluation\models\nihss.py:64
+#: evaluation/models/nihss.py:176
 msgid ""
 "Some effort against gravity; limb cannot get to or maintain (if cued) 90 (or "
 "45) degrees, drifts down to bed, but has some effort against gravity."
 msgstr ""
+"Algum esforço contra a gravidade; o braço acaba por cair na cama ou em outro "
+"suporte antes dos 10 segundos, mas não de forma imediata."
 
-#: .\evaluation\models\nihss.py:66
+#: evaluation/models/nihss.py:178
 msgid "No effort against gravity; limb falls."
-msgstr ""
+msgstr "Nenhum esforço contra a gravidade; o braço cai logo; pousado, o membro "
+"faz algum movimento."
 
-#: .\evaluation\models\nihss.py:67
-#, fuzzy
-#| msgctxt "FuglMeyer"
-#| msgid "Notes"
+#: evaluation/models/nihss.py:179
 msgid "No movement"
-msgstr "Observação"
+msgstr "Nenhum movimento"
 
-#: .\evaluation\models\nihss.py:69
-msgid "5a. Left arm"
-msgstr ""
+#: evaluation/models/nihss.py:181
+msgid "5. Motor arm"
+msgstr "5. Membros superiores"
 
-#: .\evaluation\models\nihss.py:70
-msgid "5b. Right arm"
-msgstr ""
-
-#: .\evaluation\models\nihss.py:73
+#: evaluation/models/nihss.py:185
 msgid "No drift; leg holds 30-degree position for full 5 seconds."
-msgstr ""
+msgstr "Sem queda, mantem a perna a 30° por um período de 5 segundos."
 
-#: .\evaluation\models\nihss.py:74
+#: evaluation/models/nihss.py:186
 msgid ""
 "Drift; leg falls by the end of the 5-second period but does not hit bed."
 msgstr ""
+"Queda  parcial antes de completar o período de 5 segundos; não chega a "
+"tocar na cama ou em outro suporte."
 
-#: .\evaluation\models\nihss.py:75
+#: evaluation/models/nihss.py:187
 msgid ""
 "Some effort against gravity; leg falls to bed by 5 seconds, but has some "
 "effort against gravity."
 msgstr ""
+"Algum esforço contra a gravidade; a perna acaba por cair na cama ou em "
+"outro suporte antes dos 5 segundos, mas não de forma imediata"
 
-#: .\evaluation\models\nihss.py:76
+#: evaluation/models/nihss.py:188
 msgid "No effort against gravity; leg falls to bed immediately."
-msgstr ""
+msgstr "Nenhum esforço contra a gravidade; a perna cai logo; pousado o "
+"membro faz algum movimento"
 
-#: .\evaluation\models\nihss.py:77
-#, fuzzy
-#| msgctxt "FuglMeyer"
-#| msgid "Notes"
+#: evaluation/models/nihss.py:189
 msgid "No movement."
-msgstr "Observação"
+msgstr "Nenhum movimento."
 
-#: .\evaluation\models\nihss.py:79
-msgid "6a. Left leg"
-msgstr ""
+#: evaluation/models/nihss.py:191
+msgid "6. Motor leg"
+msgstr "6. Membros inferiores"
 
-#: .\evaluation\models\nihss.py:80
-msgid "6b. Right leg"
-msgstr ""
-
-#: .\evaluation\models\nihss.py:83
+#: evaluation/models/nihss.py:195
 msgid "Absent."
-msgstr ""
+msgstr "Ausente."
 
-#: .\evaluation\models\nihss.py:84
+#: evaluation/models/nihss.py:196
 msgid "Present in one limb."
-msgstr ""
+msgstr "Presente em 1 membro."
 
-#: .\evaluation\models\nihss.py:85
+#: evaluation/models/nihss.py:197
 msgid "Present in two limbs."
-msgstr ""
+msgstr "Presente em dois membros."
 
-#: .\evaluation\models\nihss.py:87
+#: evaluation/models/nihss.py:199
 msgid "7. Limb Ataxia"
-msgstr ""
+msgstr "7. Ataxia de membros"
 
-#: .\evaluation\models\nihss.py:90
+#: evaluation/models/nihss.py:202
 msgid "Normal; no sensory loss."
-msgstr ""
+msgstr "Normal; sem perda de sensibilidade."
 
-#: .\evaluation\models\nihss.py:91
+#: evaluation/models/nihss.py:203
 msgid ""
 "Mild-to-moderate sensory loss; patient feels pinprick is less sharp or is "
 "dull on the affected side; or there is a loss of superficial pain with "
 "pinprick, but patient is aware of being touched."
 msgstr ""
+"Perda de sensibilidade leve a moderada; o doente sente menos a picada, ou "
+"há uma perda da sensibilidade dolorosa à picada, mas o paciente sente tocar"
 
-#: .\evaluation\models\nihss.py:93
+#: evaluation/models/nihss.py:205
 msgid ""
 "Severe to total sensory loss; patient is not aware of being touched in the "
 "face, arm, and leg."
 msgstr ""
+"Perda da sensibilidade grave ou total; o paciente não sente que está sendo "
+"tocado"
 
-#: .\evaluation\models\nihss.py:95
+#: evaluation/models/nihss.py:207
 msgid "8. Sensory"
-msgstr ""
+msgstr "8. Sensibilidade"
 
-#: .\evaluation\models\nihss.py:98
+#: evaluation/models/nihss.py:210
 msgid "No aphasia; normal."
-msgstr ""
+msgstr "Sem afasia; normal."
 
-#: .\evaluation\models\nihss.py:99
+#: evaluation/models/nihss.py:211
 msgid ""
 "Mild-to-moderate aphasia; some obvious loss of fluency or facility of "
 "comprehension, without significant limitation on ideas expressed or form of "
@@ -3506,8 +3791,14 @@ msgid ""
 "in conversation about provided materials, examiner can identify picture or "
 "naming card content from patient's response."
 msgstr ""
+"Afasia leve a moderada; perda óbvia de alguma fluência ou dificuldade de "
+"compreensão, sem limitação significativa das ideias expressas ou formas de "
+"expressão. Contudo, o discurso e/ou compreensão reduzidos dificultam ou "
+"impossibilitam a conversação sobre o material fornecido. Por exemplo, na "
+"conversa sobre o material fornecido, o examinador consegue identificar "
+"figuras ou itens da lista de nomeação a partir da resposta do paciente."
 
-#: .\evaluation\models\nihss.py:104
+#: evaluation/models/nihss.py:216
 msgid ""
 "Severe aphasia; all communication is through fragmentary expression; great "
 "need for inference, questioning, and guessing by the listener. Range of "
@@ -3515,82 +3806,87 @@ msgid ""
 "communication. Examiner cannot identify materials provided from patient "
 "response."
 msgstr ""
+"Afasia grave; toda a comunicação é feita através de expressões fragmentadas; "
+"necessidade de interferência, questionamento e advinhação por parte do "
+"examinador. A quantidade de informação que pode ser trocada é limitada; o "
+"examinador assume a maior parte da comunicação; o examinador não consegue "
+"identificar itens do material fornecido a partir da resposta do paciente."
 
-#: .\evaluation\models\nihss.py:108
+#: evaluation/models/nihss.py:220
 msgid "Mute, global aphasia; no usable speech or auditory comprehension."
 msgstr ""
+"Mutismo, afasia global; sem discurso ou compreensão verbal minimamente úteis."
 
-#: .\evaluation\models\nihss.py:110
-#, fuzzy
-#| msgctxt "MMSEAdmin"
-#| msgid "Language"
+#: evaluation/models/nihss.py:222
 msgid "9. Best Language"
-msgstr "Linguagem"
+msgstr "9. Melhor linguagem"
 
-#: .\evaluation\models\nihss.py:114
+#: evaluation/models/nihss.py:226
 msgid ""
 "Mild-to-moderate dysarthria; patient slurs at least some words and, at "
 "worst, can be understood with some difficulty."
 msgstr ""
+"Disartria leve a moderada; doente com voz arrastada pelo menos em algumas "
+"palavras, e na pior das hipóteses pode ser entendido com alguma dificuldade."
 
-#: .\evaluation\models\nihss.py:116
+#: evaluation/models/nihss.py:228
 msgid ""
 "Severe dysarthria; patient's speech is so slurred as to be unintelligible in "
 "the absence of or out of proportion to any dysphasia, or is mute/anarthric."
 msgstr ""
+"Disartria grave; a voz do doente é tão arrastada que chega a ser inteligível, "
+"na ausência ou desproporcionalmente a disfasia, ou tem mutismo ou anatria."
 
-#: .\evaluation\models\nihss.py:119
-#, fuzzy
-#| msgid "Dysmetria"
+#: evaluation/models/nihss.py:231
 msgid "10. Dysarthria"
-msgstr "Dismetria"
+msgstr "10. Disartria"
 
-#: .\evaluation\models\nihss.py:122
+#: evaluation/models/nihss.py:234
 msgid "No abnormality."
-msgstr ""
+msgstr "Nenhuma anormalidade."
 
-#: .\evaluation\models\nihss.py:123
+#: evaluation/models/nihss.py:235
 msgid ""
 "Visual, tactile, auditory, spatial, or personal inattention or extinction to "
 "bilateral simultaneous stimulation in one of the sensory modalities."
 msgstr ""
+"Desatenção visual, tátil, auditiva, espacial ou pessoal, ou extinção à "
+"estimulação simultânea em uma das modalidades sensoriais."
 
-#: .\evaluation\models\nihss.py:125
+#: evaluation/models/nihss.py:237
 msgid ""
 "Profound hemi-inattention or extinction to more than one modality; does not "
 "recognize own hand or orients to only one side of space. "
 msgstr ""
+"Profunda hemidesatenção ou hemidesatenção para mais de uma modalidade; não "
+"reconhece a própria mão e se orienta apenas para um lado do espaço."
 
-#: .\evaluation\models\nihss.py:128
+#: evaluation/models/nihss.py:240
 msgid "11. Extinction and Inattention (formerly Neglect)"
-msgstr ""
+msgstr "11. Extinção e Desatenção, antiga negligência"
 
-#: .\evaluation\models\nihss.py:131
-#, fuzzy
-#| msgid "Stroke Impact Scale"
+#: evaluation/models/nihss.py:243
 msgid "NIH Stroke Scale"
-msgstr " Escala de Impacto do AVC"
+msgstr "NIH Escala de AVC"
 
-#: .\evaluation\models\nihss.py:132
-#, fuzzy
-#| msgid "Stroke Impact Scale"
+#: evaluation/models/nihss.py:244
 msgid "NIH Stroke Scales"
-msgstr " Escala de Impacto do AVC"
+msgstr "NIH Escalas de AVC"
 
-#: .\evaluation\models\patient.py:11
+#: evaluation/models/patient.py:11
 msgid "Name"
 msgstr "Nome"
 
-#: .\evaluation\models\patient.py:12
+#: evaluation/models/patient.py:12
 msgid "Date of birth"
 msgstr "Data de nascimento"
 
-#: .\evaluation\models\patient.py:14
+#: evaluation/models/patient.py:14
 msgctxt "Patient"
 msgid "Age"
 msgstr "Idade"
 
-#: .\evaluation\models\patient.py:15
+#: evaluation/models/patient.py:15
 msgctxt "Patient"
 msgid "Gender"
 msgstr "Gênero"
@@ -3664,85 +3960,85 @@ msgstr "Fonte encaminhadora"
 msgid "Patients"
 msgstr "Pacientes"
 
-#: .\evaluation\models\period.py:12
+#: .\evaluation\models\period.py:11
 msgid "Parent"
 msgstr ""
 
-#: .\evaluation\models\sis.py:11
+#: .\evaluation\models\sis.py:12
 msgctxt "CHOICES_STRENGTH"
 msgid "A lot of strength"
 msgstr "muita força"
 
-#: .\evaluation\models\sis.py:12
+#: .\evaluation\models\sis.py:13
 msgctxt "CHOICES_STRENGTH"
 msgid "Quite a bit of strength"
 msgstr "um pouco de força"
 
-#: .\evaluation\models\sis.py:13
+#: .\evaluation\models\sis.py:14
 msgctxt "CHOICES_STRENGTH"
 msgid "Some strength"
 msgstr "alguma força"
 
-#: .\evaluation\models\sis.py:14
+#: .\evaluation\models\sis.py:15
 msgctxt "CHOICES_STRENGTH"
 msgid "A little strength"
 msgstr "minima força"
 
-#: .\evaluation\models\sis.py:15
+#: .\evaluation\models\sis.py:16
 msgctxt "CHOICES_STRENGTH"
 msgid "No strength at all"
 msgstr "nenhuma força"
 
-#: .\evaluation\models\sis.py:17
+#: .\evaluation\models\sis.py:18
 msgid "a. Arm that was most affected"
 msgstr "a. braço que foi mais afetado?"
 
-#: .\evaluation\models\sis.py:18
+#: .\evaluation\models\sis.py:19
 msgid "b. Grip of your hand that was most affected"
 msgstr "b. preensão da mão que foi mais afetada?"
 
-#: .\evaluation\models\sis.py:19
+#: .\evaluation\models\sis.py:20
 msgid "c. Leg that was most affected"
 msgstr "c. perna que foi mais afetada?"
 
-#: .\evaluation\models\sis.py:20
+#: .\evaluation\models\sis.py:21
 msgid "d. Foot/ankle that was most affected"
 msgstr "d. pé/tonozelo que foi mais afetado?"
 
-#: .\evaluation\models\sis.py:24
+#: .\evaluation\models\sis.py:25
 msgctxt "CHOICES_DIFICULTY"
 msgid "Not difficult at all"
 msgstr "nada dicífil"
 
-#: .\evaluation\models\sis.py:25
+#: .\evaluation\models\sis.py:26
 msgctxt "CHOICES_DIFICULTY"
 msgid "A little difficult"
 msgstr "um pouco difícil"
 
-#: .\evaluation\models\sis.py:26
+#: .\evaluation\models\sis.py:27
 msgctxt "CHOICES_DIFICULTY"
 msgid "Somewhat difficult"
 msgstr "mais ou menos difícil"
 
-#: .\evaluation\models\sis.py:27
+#: .\evaluation\models\sis.py:28
 msgctxt "CHOICES_DIFICULTY"
 msgid "Very difficult"
 msgstr "muito difícil"
 
-#: .\evaluation\models\sis.py:28
+#: .\evaluation\models\sis.py:29
 msgctxt "CHOICES_DIFICULTY"
 msgid "Extremely difficult"
 msgstr "extremamente difícil"
 
-#: .\evaluation\models\sis.py:30
+#: .\evaluation\models\sis.py:31
 msgid "a. Remember things that people just told you?"
 msgstr "a. lembrar de coisas que as pessoas te disseram?"
 
-#: .\evaluation\models\sis.py:31
+#: .\evaluation\models\sis.py:32
 msgid "b. Remember things that happened the day before?"
 msgstr "b. lembrar de coisas que aconteceram no dia anterior?"
 
-#: .\evaluation\models\sis.py:32
+#: .\evaluation\models\sis.py:33
 msgid ""
 "c. Remember to do things (e.g. keep scheduled appointments or take "
 "medication)?"
@@ -3750,133 +4046,133 @@ msgstr ""
 "c. lembrar de fazer as coisas (por exemplo, manter compromissos agendados ou "
 "medicamentos?"
 
-#: .\evaluation\models\sis.py:33
+#: .\evaluation\models\sis.py:34
 msgid "d. Remember the day of the week?"
 msgstr "d. lembrar o dia da semana?"
 
-#: .\evaluation\models\sis.py:34
+#: .\evaluation\models\sis.py:35
 msgid "e. Concentrate?"
 msgstr "e. concentrar-se?"
 
-#: .\evaluation\models\sis.py:35
+#: .\evaluation\models\sis.py:36
 msgid "f. Think quickly?"
 msgstr "f. pensar rapidamente?"
 
-#: .\evaluation\models\sis.py:36
+#: .\evaluation\models\sis.py:37
 msgid "g. Solve everyday problems?"
 msgstr "g. resolver problemas do dia-a-dia?"
 
-#: .\evaluation\models\sis.py:40
+#: .\evaluation\models\sis.py:41
 msgctxt "CHOICES_MOOD"
 msgid "None of the time"
 msgstr "nenhuma vez"
 
-#: .\evaluation\models\sis.py:41
+#: .\evaluation\models\sis.py:42
 msgctxt "CHOICES_MOOD"
 msgid "A little of the time"
 msgstr "poucas vezes"
 
-#: .\evaluation\models\sis.py:42
+#: .\evaluation\models\sis.py:43
 msgctxt "CHOICES_MOOD"
 msgid "Some of the time"
 msgstr "algumas vezes"
 
-#: .\evaluation\models\sis.py:43
+#: .\evaluation\models\sis.py:44
 msgctxt "CHOICES_MOOD"
 msgid "Most of the time"
 msgstr "a maioria das vezes"
 
-#: .\evaluation\models\sis.py:44
+#: .\evaluation\models\sis.py:45
 msgctxt "CHOICES_MOOD"
 msgid "All of the time"
 msgstr "todo o tempo"
 
-#: .\evaluation\models\sis.py:46
+#: .\evaluation\models\sis.py:47
 msgid "a. Feel sad?"
 msgstr "a. sentiu-se triste?"
 
-#: .\evaluation\models\sis.py:47
+#: .\evaluation\models\sis.py:48
 msgid "b. Feel that there is nobody you are close to?"
 msgstr "b. sentiu que não há ninguém próximo de você?"
 
-#: .\evaluation\models\sis.py:48
+#: .\evaluation\models\sis.py:49
 msgid "c. Feel that you are a burden to others?"
 msgstr "c. sentiu que você é um fardo para os outros?"
 
-#: .\evaluation\models\sis.py:49
+#: .\evaluation\models\sis.py:50
 msgid "d. Feel that you have nothing to look forward to?"
 msgstr "d. sentiu que você não tem nada para olhar para frente (futuro)?"
 
-#: .\evaluation\models\sis.py:50
+#: .\evaluation\models\sis.py:51
 msgid "e. Blame yourself for mistakes that you made?"
 msgstr "e. responsabilizou-se pelos erros que você fez?"
 
-#: .\evaluation\models\sis.py:51
+#: .\evaluation\models\sis.py:52
 msgid "f. Enjoy things as much as ever?"
 msgstr "f. aprecia as coisas mais do que nunca?"
 
-#: .\evaluation\models\sis.py:52
+#: .\evaluation\models\sis.py:53
 msgid "g. Feel quite nervous?"
 msgstr "g. sentiu-se muito nervoso?"
 
-#: .\evaluation\models\sis.py:53
+#: .\evaluation\models\sis.py:54
 msgid "h. Feel that life is worth living?"
 msgstr "h. sentiu que a vida vale a pena viver?"
 
-#: .\evaluation\models\sis.py:54
+#: .\evaluation\models\sis.py:55
 msgid "i. Smile and laugh at least once a day?"
 msgstr "i. sorriu e riu pelo menos uma vez por dia?"
 
-#: .\evaluation\models\sis.py:58
+#: .\evaluation\models\sis.py:59
 msgctxt "CHOICES_COMMUNICATION"
 msgid "Not difficult at all"
 msgstr "nada difícil"
 
-#: .\evaluation\models\sis.py:59
+#: .\evaluation\models\sis.py:60
 msgctxt "CHOICES_COMMUNICATION"
 msgid "A little difficult"
 msgstr "um pouco difícil"
 
-#: .\evaluation\models\sis.py:60
+#: .\evaluation\models\sis.py:61
 msgctxt "CHOICES_COMMUNICATION"
 msgid "Somewhat difficult"
 msgstr "mais ou menos difícil"
 
-#: .\evaluation\models\sis.py:61
+#: .\evaluation\models\sis.py:62
 msgctxt "CHOICES_COMMUNICATION"
 msgid "Very difficult"
 msgstr "muito difícil"
 
-#: .\evaluation\models\sis.py:62
+#: .\evaluation\models\sis.py:63
 msgctxt "CHOICES_COMMUNICATION"
 msgid "Extremely difficult"
 msgstr "extremamente difícil"
 
-#: .\evaluation\models\sis.py:64
+#: .\evaluation\models\sis.py:65
 msgid "a. Say the name of someone who was in front of you?"
 msgstr "a. dizer o nome de alguém que estava na sua frente?"
 
-#: .\evaluation\models\sis.py:65
+#: .\evaluation\models\sis.py:66
 msgid "b. Understand what was being said to you in a conversation?"
 msgstr "b. entender o que estava sendo dito a você em uma conversa?"
 
-#: .\evaluation\models\sis.py:66
+#: .\evaluation\models\sis.py:67
 msgid "c. Reply to questions?"
 msgstr "c. responder às perguntas?"
 
-#: .\evaluation\models\sis.py:67
+#: .\evaluation\models\sis.py:68
 msgid "d. Correctly name objects?"
 msgstr "d. nomear corretamente os objetos?"
 
-#: .\evaluation\models\sis.py:68
+#: .\evaluation\models\sis.py:69
 msgid "e. Participate in a conversation with a group of people?"
 msgstr "e. participar de uma conversa com um grupo de pessoas?"
 
-#: .\evaluation\models\sis.py:69
+#: .\evaluation\models\sis.py:70
 msgid "f. Have a conversation on the telephone? "
 msgstr "f. ter uma conversa ao telefone?"
 
-#: .\evaluation\models\sis.py:70
+#: .\evaluation\models\sis.py:71
 msgid ""
 "g. Call another person on the telephone, including selecting the correct "
 "phone number and dialing?"
@@ -3884,60 +4180,60 @@ msgstr ""
 "g. conversar com outra pessoa no telefone, incluindo a seleção do número "
 "correto e a discagem?"
 
-#: .\evaluation\models\sis.py:74
+#: .\evaluation\models\sis.py:75
 msgctxt "CHOICES_ACTIVITIES"
 msgid "Not difficult at all"
 msgstr "nada difícil"
 
-#: .\evaluation\models\sis.py:75
+#: .\evaluation\models\sis.py:76
 msgctxt "CHOICES_ACTIVITIES"
 msgid "A little difficult"
 msgstr "um pouco difícil"
 
-#: .\evaluation\models\sis.py:76
+#: .\evaluation\models\sis.py:77
 msgctxt "CHOICES_ACTIVITIES"
 msgid "Somewhat difficult"
 msgstr "mais ou menos difícil"
 
-#: .\evaluation\models\sis.py:77
+#: .\evaluation\models\sis.py:78
 msgctxt "CHOICES_ACTIVITIES"
 msgid "Very difficult"
 msgstr "muito difícil"
 
-#: .\evaluation\models\sis.py:78
+#: .\evaluation\models\sis.py:79
 msgctxt "CHOICES_ACTIVITIES"
 msgid "Could not do at all"
 msgstr "não consigo realizar"
 
-#: .\evaluation\models\sis.py:80
+#: .\evaluation\models\sis.py:81
 msgid "a. Cut your food with a knife and fork?"
 msgstr "a. cortar a sua comida com o garfo e faca?"
 
-#: .\evaluation\models\sis.py:81
+#: .\evaluation\models\sis.py:82
 msgid "b. Dress the top part of your body?"
 msgstr "b. vestir a parte superior do seu corpo?"
 
-#: .\evaluation\models\sis.py:82
+#: .\evaluation\models\sis.py:83
 msgid "c. Bathe yourself?"
 msgstr "c. banhar-se?"
 
-#: .\evaluation\models\sis.py:83
+#: .\evaluation\models\sis.py:84
 msgid "d. Clip your toenails?"
 msgstr "d. cortar suas unhas?"
 
-#: .\evaluation\models\sis.py:84
+#: .\evaluation\models\sis.py:85
 msgid "e. Get to the toilet on time?"
 msgstr "e. ir ao banheiro a tempo?"
 
-#: .\evaluation\models\sis.py:85
+#: .\evaluation\models\sis.py:86
 msgid "f. Control your bladder (not have an accident)?"
 msgstr "f. controlar sua bexiga (não ter um acidente)?"
 
-#: .\evaluation\models\sis.py:86
+#: .\evaluation\models\sis.py:87
 msgid "g. Control your bowels (not have an accident)?"
 msgstr "g. controlar seu intestino (não ter um acidente)?"
 
-#: .\evaluation\models\sis.py:87
+#: .\evaluation\models\sis.py:88
 msgid ""
 "h. Do light household tasks/chores(e.g. dust, make a bed, take out garbage, "
 "do the dishes)?"
@@ -3945,180 +4241,180 @@ msgstr ""
 "h. fazer tarefas domésticas leves (ex. poeira, arrumar a cama, tirar o lixo, "
 "lavar pratos)?"
 
-#: .\evaluation\models\sis.py:88
+#: .\evaluation\models\sis.py:89
 msgid "i. Go shopping?"
 msgstr "i. ir as compras?"
 
-#: .\evaluation\models\sis.py:89
+#: .\evaluation\models\sis.py:90
 msgid "j. Do heavy household chores (e.g.vacuum, laundry or yard work)?"
 msgstr ""
 "j. fazer tarefas domésticas pesadas (ex. lavar roupa, varrer quintal, passar "
 "aspirador de pó)?"
 
-#: .\evaluation\models\sis.py:93
+#: .\evaluation\models\sis.py:94
 msgctxt "CHOICES_MOBILE"
 msgid "Not difficult at all"
 msgstr "nada difícil"
-
-#: .\evaluation\models\sis.py:94
-msgctxt "CHOICES_MOBILE"
-msgid "A little difficult"
-msgstr "um pouco difícil"
 
 #: .\evaluation\models\sis.py:95
 msgctxt "CHOICES_MOBILE"
+msgid "A little difficult"
+msgstr "um pouco difícil"
+
+#: .\evaluation\models\sis.py:96
+msgctxt "CHOICES_MOBILE"
 msgid "Somewhat difficult"
 msgstr "mais ou menos difícil"
 
-#: .\evaluation\models\sis.py:96
+#: .\evaluation\models\sis.py:97
 msgctxt "CHOICES_MOBILE"
 msgid "Very difficult"
 msgstr "muito difícil"
 
-#: .\evaluation\models\sis.py:97
+#: .\evaluation\models\sis.py:98
 msgctxt "CHOICES_MOBILE"
 msgid "Could not do at all"
 msgstr "não consigo realizar"
 
-#: .\evaluation\models\sis.py:99
+#: .\evaluation\models\sis.py:100
 msgid "a. Stay sitting without losing your balance?"
 msgstr "a. ficar sentado sem perder o equilíbrio?"
 
-#: .\evaluation\models\sis.py:100
+#: .\evaluation\models\sis.py:101
 msgid "b. Stay standing without losing your balance?"
 msgstr "b. ficar de pé sem perder o equilíbrio?"
 
-#: .\evaluation\models\sis.py:101
+#: .\evaluation\models\sis.py:102
 msgid "c. Walk without losing your balance?"
 msgstr "c. andar sem perder o equilíbrio?"
 
-#: .\evaluation\models\sis.py:102
+#: .\evaluation\models\sis.py:103
 msgid "d. Move from a bed to a chair?"
 msgstr "d. passar de uma cama para uma cadeira?"
 
-#: .\evaluation\models\sis.py:103
+#: .\evaluation\models\sis.py:104
 msgid "e. Walk one block?"
 msgstr "e. andar um quarteirão?"
 
-#: .\evaluation\models\sis.py:104
+#: .\evaluation\models\sis.py:105
 msgid "f. Walk fast?"
 msgstr "f. andar rápido?"
 
-#: .\evaluation\models\sis.py:105
+#: .\evaluation\models\sis.py:106
 msgid "g. Climb one flight of stairs?"
 msgstr "g. subir um lance de escadas?"
 
-#: .\evaluation\models\sis.py:106
+#: .\evaluation\models\sis.py:107
 msgid "h. Climb several flights of stairs?"
 msgstr "h. subir vários lances de escada?"
 
-#: .\evaluation\models\sis.py:107
+#: .\evaluation\models\sis.py:108
 msgid "i. Get in and out of a car?"
 msgstr "i. entrar e sair de um carro?"
 
-#: .\evaluation\models\sis.py:111
+#: .\evaluation\models\sis.py:112
 msgctxt "CHOICES_HAND"
 msgid "Not difficult at all"
 msgstr "nada difícil"
 
-#: .\evaluation\models\sis.py:112
+#: .\evaluation\models\sis.py:113
 msgctxt "CHOICES_HAND"
 msgid "A little difficult"
 msgstr "um pouco difícil"
 
-#: .\evaluation\models\sis.py:113
+#: .\evaluation\models\sis.py:114
 msgctxt "CHOICES_HAND"
 msgid "Somewhat difficult"
 msgstr "mais ou menos difícil"
 
-#: .\evaluation\models\sis.py:114
+#: .\evaluation\models\sis.py:115
 msgctxt "CHOICES_HAND"
 msgid "Very difficult"
 msgstr "muito difícil"
 
-#: .\evaluation\models\sis.py:115
+#: .\evaluation\models\sis.py:116
 msgctxt "CHOICES_HAND"
 msgid "Could not do at all"
 msgstr "não consigo realizar"
 
-#: .\evaluation\models\sis.py:117
+#: .\evaluation\models\sis.py:118
 msgid "a. Carry heavy objects (e.g. bag of groceries)?"
 msgstr "a. carregar objetos pesados (ex. sacola de compras)?"
 
-#: .\evaluation\models\sis.py:118
+#: .\evaluation\models\sis.py:119
 msgid "b. Turn a doorknob?"
 msgstr "b. virar uma maçaneta?"
 
-#: .\evaluation\models\sis.py:119
+#: .\evaluation\models\sis.py:120
 msgid "c. Open a can or jar?"
 msgstr "c. abrir uma lata ou pote?"
 
-#: .\evaluation\models\sis.py:120
+#: .\evaluation\models\sis.py:121
 msgid "d. Tie a shoe lace?"
 msgstr "d. amarrar um cordão de sapatos?"
 
-#: .\evaluation\models\sis.py:121
+#: .\evaluation\models\sis.py:122
 msgid "e. Pick up a dime?"
 msgstr "e. pegar uma moeda de 10 centavos?"
 
-#: .\evaluation\models\sis.py:125
+#: .\evaluation\models\sis.py:126
 msgctxt "CHOICES_TIME"
 msgid "None of the time"
 msgstr "nenhuma vez"
 
-#: .\evaluation\models\sis.py:126
+#: .\evaluation\models\sis.py:127
 msgctxt "CHOICES_TIME"
 msgid "A little of the time"
 msgstr "poucas vezes"
 
-#: .\evaluation\models\sis.py:127
+#: .\evaluation\models\sis.py:128
 msgctxt "CHOICES_TIME"
 msgid "Some of the time"
 msgstr "algumas vezes"
 
-#: .\evaluation\models\sis.py:128
+#: .\evaluation\models\sis.py:129
 msgctxt "CHOICES_TIME"
 msgid "Most of the time"
 msgstr "a maioria das vezes"
 
-#: .\evaluation\models\sis.py:129
+#: .\evaluation\models\sis.py:130
 msgctxt "CHOICES_TIME"
 msgid "All of the time"
 msgstr "todo o tempo"
 
-#: .\evaluation\models\sis.py:131
+#: .\evaluation\models\sis.py:132
 msgid "a. Your work (paid, voluntary or other)"
 msgstr "a. seu trabalho (pago, voluntária ou outro)?"
 
-#: .\evaluation\models\sis.py:132
+#: .\evaluation\models\sis.py:133
 msgid "b. Your social activities?"
 msgstr "b. suas atividades sociais?"
 
-#: .\evaluation\models\sis.py:133
+#: .\evaluation\models\sis.py:134
 msgid "c. Quiet recreation (crafts, reading)?"
 msgstr "c. recreação tranquila (artesanato, leitura)?"
 
-#: .\evaluation\models\sis.py:134
+#: .\evaluation\models\sis.py:135
 msgid "d. Active recreation (sports, outings,travel)?"
 msgstr "d. recreação ativa (esportes, passeios, viagens)?"
 
-#: .\evaluation\models\sis.py:135
+#: .\evaluation\models\sis.py:136
 msgid "e. Your role as a family member and/or friend?"
 msgstr "e. seu papel como um membro da família e/ou amigo?"
 
-#: .\evaluation\models\sis.py:136
+#: .\evaluation\models\sis.py:137
 msgid "f. Your participation in spiritual or religious activities?"
 msgstr "f. sua participação em atividades religiosas ou espirituais?"
 
-#: .\evaluation\models\sis.py:137
+#: .\evaluation\models\sis.py:138
 msgid "g. Your ability to control your life as you wish?"
 msgstr "g. sua capacidade de controlar sua vida como você deseja?"
 
-#: .\evaluation\models\sis.py:138
+#: .\evaluation\models\sis.py:139
 msgid "h. Your ability to help others?"
 msgstr "h. sua capacidade de ajudar os outros?"
 
-#: .\evaluation\models\sis.py:141
+#: .\evaluation\models\sis.py:142
 msgid "Stroke Recovery scale"
 msgstr "Escala de recuperação do AVE"
 
@@ -4147,7 +4443,7 @@ msgstr ""
 
 #: .\evaluation\templates\admin\base.html:82
 msgid "Change password"
-msgstr ""
+msgstr "Alterar senha"
 
 #: .\evaluation\templates\admin\base.html:84
 msgid "Log out"
@@ -4169,7 +4465,7 @@ msgstr ""
 msgid "Django site admin"
 msgstr ""
 
-#: .\evaluation\templates\admin\evaluation\bostonaphasia\change_form.html:38
+#: .\evaluation\templates\admin\evaluation\bostonaphasia\change_form.html:6
 msgid "Boston Aphasia"
 msgstr "Afasia de Boston"
 
@@ -4177,7 +4473,7 @@ msgstr "Afasia de Boston"
 msgid "LINE CROSSING"
 msgstr "CANCELAMENTO DE LINHAS"
 
-#: .\evaluation\templates\admin\evaluation\eeg\change_form.html:20
+#: .\evaluation\templates\admin\evaluation\eeg\change_form.html:6
 msgid "EEG"
 msgstr "ELETROENCEFALOGRAMA"
 
@@ -4221,11 +4517,27 @@ msgstr ""
 msgid "MINI MENTAL STATE EXAMINATION - MMSE"
 msgstr "MINI-EXAME DO ESTADO MENTAL - MEEM"
 
-#: .\evaluation\templates\admin\evaluation\nihss\change_form.html:6
+#: evaluation/templates/admin/evaluation/nihss/change_form.html:6
 msgid "National Institutes of Health Stroke Scale"
-msgstr ""
+msgstr "National Institutes of Health Escala de AVC"
 
-#: .\evaluation\templates\admin\evaluation\sis\change_form.html:6
+#: evaluation/templates/admin/evaluation/nihss/change_form.html:21
+msgid "First image for question 9."
+msgstr "Primeira imagem para item 9."
+
+#: evaluation/templates/admin/evaluation/nihss/change_form.html:23
+msgid "Second image for question 9."
+msgstr "Segunda imagem para item 9."
+
+#: evaluation/templates/admin/evaluation/nihss/change_form.html:26
+msgid "Third image for question 9."
+msgstr "Terceira imagem para item 9."
+
+#: evaluation/templates/admin/evaluation/nihss/change_form.html:29
+msgid "Image for question 10."
+msgstr "Imagem para item 10."
+
+#: evaluation/templates/admin/evaluation/sis/change_form.html:6
 msgid "Stroke Impact Scale"
 msgstr " Escala de Impacto do AVC"
 

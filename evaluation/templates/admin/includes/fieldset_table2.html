@@ -28,17 +28,20 @@
             <tr>
                  {% for field in line %}
                      {% if forloop.first %}
-                         <td>
+                         <td style="width: 40%;">
                             {{ field.label_tag }}
-                         {% comment %}
-                         TODO: colocar os textos das opções.
-                         {% endcomment %}
+                            {% if field.field.field.widget.attrs.description %}
+                                {{ field.field.field.widget.attrs.description }}
+                            {% endif %}
                          </td>
-                         <td>
+                         <td style="width: 40%;">
                         {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=field.field.field.widget.attrs.text content_activities=field.field.field.choices content_width=8 %}
                          </td>
                      {% endif %}
                          <td {% if forloop.counter == 1 and forloop.last %}colspan="2" {% endif %}>
+                         {% if field.field.field.widget.attrs.label %}
+                             {{ field.field.field.widget.attrs.label }}<br />
+                         {% endif %}
                         {% if field.is_checkbox %}
                         <div class="controls col-md-12">
                             <div class="checkbox">
