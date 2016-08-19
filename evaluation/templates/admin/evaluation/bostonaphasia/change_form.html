@@ -48,25 +48,38 @@
         #fieldset-12 .vTextField {
             width: 3em;
         }
+        /* Repeating phrases */
+        #fieldset-13 .vTextField {
+            width: 3em;
+        }
 
+        /* Word reading */
+        #fieldset-14 .vTextField {
+            width: 3em;
+        }
+
+        /* responsive naming */
+        #fieldset-15 .vTextField {
+            width: 3em;
+        }
 
 
     </style>
 {% endblock %}
-        {% block field_sets %}
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">{% trans "Boston Aphasia" %}</h3>
-              </div>
-              <div class="panel-body">
+{% block field_sets %}
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">{% trans "Boston Aphasia" %}</h3>
+      </div>
+      <div class="panel-body">
 
-        {% for fieldset in adminform %}
-            <div class="panel panel-primary">
-            <div class="panel-body">
-            {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=12 %}
-            </div>
-            </div>
-        {% endfor %}
-            </div>
-            </div>
-        {% endblock %}
+    {% for fieldset in adminform %}
+        <div class="panel panel-primary">
+        <div class="panel-body">
+        {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=12 %}
+        </div>
+        </div>
+    {% endfor %}
+    </div>
+    </div>
+{% endblock %}

@@ -315,20 +315,74 @@ class BostonAphasiaAdmin(BaseAdmin):
                 ('repetition_phrases_low_h_score', 'repetition_phrases_low_h_articulation', 'repetition_phrases_low_h_paraphasia'),
             ),
             'description': {
-                'fieldset': '/bostonaphasia/fieldset_10_repetition',
+                'fieldset': '/bostonaphasia/fieldset_11_repetition',
                 'text': _(u''),
-                'fieldset_total_points': ('8', '16',),
+                'fieldset_total_points': ('8', '8', '16',),
                 'fieldset_total_addend_fields': (
                     ('repetition_phrases_high_a_score', 'repetition_phrases_high_b_score', 'repetition_phrases_high_c_score',
                      'repetition_phrases_high_d_score', 'repetition_phrases_high_e_score', 'repetition_phrases_high_f_score',
                      'repetition_phrases_high_g_score', 'repetition_phrases_high_h_score', ),
                     ('repetition_phrases_low_a_score',  'repetition_phrases_low_b_score', 'repetition_phrases_low_c_score',
                      'repetition_phrases_low_d_score', 'repetition_phrases_low_e_score', 'repetition_phrases_low_f_score',
-                     'repetition_phrases_low_g_score', 'repetition_phrases_low_h_score', )
+                     'repetition_phrases_low_g_score', 'repetition_phrases_low_h_score', ),
+                    ('repetition_phrases_high_total', 'repetition_phrases_high_total', )
                 ),
-                'fieldset_total_field': ('repetition_phrases_high_total', 'repetition_phrases_low_total'),
+                'fieldset_total_field': ('repetition_phrases_high_total', 'repetition_phrases_high_total', 'repetition_phrases_high_low_total'),
             }
         }),
+        (_(u'Word reading'), {
+            'fields': (
+                ('word_reading_chair_score', 'word_reading_chair_articulation', 'word_reading_chair_paraphasia'),
+                ('word_reading_circle_score', 'word_reading_circle_articulation', 'word_reading_circle_paraphasia'),
+                ('word_reading_hammock_score', 'word_reading_hammock_articulation', 'word_reading_hammock_paraphasia'),
+                ('word_reading_triangle_score', 'word_reading_triangle_articulation', 'word_reading_triangle_paraphasia'),
+                ('word_reading_fifteen_score', 'word_reading_fifteen_articulation', 'word_reading_fifteen_paraphasia'),
+                ('word_reading_purple_score', 'word_reading_purple_articulation', 'word_reading_purple_paraphasia'),
+                ('word_reading_seven_score', 'word_reading_seven_articulation', 'word_reading_seven_paraphasia'),
+                ('word_reading_dripping_score', 'word_reading_dripping_articulation', 'word_reading_dripping_paraphasia'),
+                ('word_reading_brown_score', 'word_reading_brown_articulation', 'word_reading_brown_paraphasia'),
+                ('word_reading_smoking_score', 'word_reading_smoking_articulation', 'word_reading_smoking_paraphasia'),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_12_reading',
+                'text': _(u'Have the patient read the words, one at a time, from test Card 5. '
+                          u'Check approximate lag between your pointing to the word and the patient\'s adequate response. '
+                          u'Assist as required, but give no credit for responses obtained with help.'),
+                'fieldset_total_points': '30',
+                'fieldset_total_addend_fields': ('word_reading_chair_score', 'word_reading_circle_score', 'word_reading_hammock_score',
+                                                 'word_reading_triangle_score', 'word_reading_fifteen_score', 'word_reading_purple_score',
+                                                 'word_reading_seven_score', 'word_reading_dripping_score', 'word_reading_brown_score',
+                                                 'word_reading_smoking_score'),
+                'fieldset_total_field': 'word_reading_total',
+            }
+        }),
+        (_(u'Responsive naming'), {
+            'fields': (
+                ('responsive_naming_time_score', 'responsive_naming_time_articulation', 'responsive_naming_time_paraphasia'),
+                ('responsive_naming_razor_score', 'responsive_naming_razor_articulation', 'responsive_naming_razor_paraphasia'),
+                ('responsive_naming_soap_score', 'responsive_naming_soap_articulation', 'responsive_naming_soap_paraphasia'),
+                ('responsive_naming_pencil_score', 'responsive_naming_pencil_articulation', 'responsive_naming_pencil_paraphasia'),
+                ('responsive_naming_paper_score', 'responsive_naming_paper_articulation', 'responsive_naming_paper_paraphasia'),
+                ('responsive_naming_grass_score', 'responsive_naming_grass_articulation', 'responsive_naming_grass_paraphasia'),
+                ('responsive_naming_cigarette_score', 'responsive_naming_cigarette_articulation', 'responsive_naming_cigarette_paraphasia'),
+                ('responsive_naming_dozen_score', 'responsive_naming_dozen_articulation', 'responsive_naming_dozen_paraphasia'),
+                ('responsive_naming_coal_score', 'responsive_naming_coal_articulation', 'responsive_naming_coal_paraphasia'),
+                ('responsive_naming_medicine_score', 'responsive_naming_medicine_articulation', 'responsive_naming_medicine_paraphasia'),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_13_responsive',
+                'text': _(u'Have patient supply the one-word responses required by the stimulus questions. Check approximate lag.'),
+                'fieldset_total_points': '27',
+                'fieldset_total_addend_fields': ('responsive_naming_time_score', 'responsive_naming_razor_score', 'responsive_naming_soap_score',
+                                                 'responsive_naming_pencil_score', 'responsive_naming_paper_score', 'responsive_naming_grass_score',
+                                                 'responsive_naming_cigarette_score', 'responsive_naming_dozen_score', 'responsive_naming_coal_score',
+                                                 'responsive_naming_medicine_score'),
+                'fieldset_total_field': 'responsive_naming_total',
+            }
+        }),
+
+
+
     )
 
 admin.site.register(BostonAphasia, BostonAphasiaAdmin)

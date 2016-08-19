@@ -464,5 +464,89 @@ class BostonAphasia(BaseEvaluation):
     repetition_phrases_low_h_articulation = models.CharField(max_length=1, blank=True, null=True)
     repetition_phrases_low_h_paraphasia = models.CharField(max_length=1, blank=True, null=True)
 
+    # WORD READING
+    word_reading_chair_score = models.IntegerField(verbose_name=_(u'chair'), blank=True, null=True)
+    word_reading_chair_articulation = models.CharField(max_length=1, blank=True, null=True)
+    word_reading_chair_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    word_reading_circle_score = models.IntegerField(verbose_name=_(u'circle'), blank=True, null=True)
+    word_reading_circle_articulation = models.CharField(max_length=1, blank=True, null=True)
+    word_reading_circle_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    word_reading_hammock_score = models.IntegerField(verbose_name=_(u'hammock'), blank=True, null=True)
+    word_reading_hammock_articulation = models.CharField(max_length=1, blank=True, null=True)
+    word_reading_hammock_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    word_reading_triangle_score = models.IntegerField(verbose_name=_(u'triangle'), blank=True, null=True)
+    word_reading_triangle_articulation = models.CharField(max_length=1, blank=True, null=True)
+    word_reading_triangle_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    word_reading_fifteen_score = models.IntegerField(verbose_name=_(u'fifteen'), blank=True, null=True)
+    word_reading_fifteen_articulation = models.CharField(max_length=1, blank=True, null=True)
+    word_reading_fifteen_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    word_reading_purple_score = models.IntegerField(verbose_name=_(u'purple'), blank=True, null=True)
+    word_reading_purple_articulation = models.CharField(max_length=1, blank=True, null=True)
+    word_reading_purple_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    word_reading_seven_score = models.IntegerField(verbose_name=_(u'seven-twenty-one'), blank=True, null=True)
+    word_reading_seven_articulation = models.CharField(max_length=1, blank=True, null=True)
+    word_reading_seven_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    word_reading_dripping_score = models.IntegerField(verbose_name=_(u'dripping'), blank=True, null=True)
+    word_reading_dripping_articulation = models.CharField(max_length=1, blank=True, null=True)
+    word_reading_dripping_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    word_reading_brown_score = models.IntegerField(verbose_name=_(u'brown'), blank=True, null=True)
+    word_reading_brown_articulation = models.CharField(max_length=1, blank=True, null=True)
+    word_reading_brown_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    word_reading_smoking_score = models.IntegerField(verbose_name=_(u'smoking'), blank=True, null=True)
+    word_reading_smoking_articulation = models.CharField(max_length=1, blank=True, null=True)
+    word_reading_smoking_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    # RESPONSIVE NAMING
+    responsive_naming_time_score = models.IntegerField(verbose_name=_(u'What do we tell time with?'), blank=True, null=True)
+    responsive_naming_time_articulation = models.CharField(max_length=1, blank=True, null=True)
+    responsive_naming_time_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    responsive_naming_razor_score = models.IntegerField(verbose_name=_(u'What do you do with a razor?'), blank=True, null=True)
+    responsive_naming_razor_articulation = models.CharField(max_length=1, blank=True, null=True)
+    responsive_naming_razor_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    responsive_naming_soap_score = models.IntegerField(verbose_name=_(u'What do you do with soap?'), blank=True, null=True)
+    responsive_naming_soap_articulation = models.CharField(max_length=1, blank=True, null=True)
+    responsive_naming_soap_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    responsive_naming_pencil_score = models.IntegerField(verbose_name=_(u'What do you do with a pencil?'), blank=True, null=True)
+    responsive_naming_pencil_articulation = models.CharField(max_length=1, blank=True, null=True)
+    responsive_naming_pencil_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    responsive_naming_paper_score = models.IntegerField(verbose_name=_(u'What do we cut paper with?'), blank=True, null=True)
+    responsive_naming_paper_articulation = models.CharField(max_length=1, blank=True, null=True)
+    responsive_naming_paper_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    responsive_naming_grass_score = models.IntegerField(verbose_name=_(u'What color is grass?'), blank=True, null=True)
+    responsive_naming_grass_articulation = models.CharField(max_length=1, blank=True, null=True)
+    responsive_naming_grass_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    responsive_naming_cigarette_score = models.IntegerField(verbose_name=_(u'What do we light a cigarette with?'), blank=True, null=True)
+    responsive_naming_cigarette_articulation = models.CharField(max_length=1, blank=True, null=True)
+    responsive_naming_cigarette_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    responsive_naming_dozen_score = models.IntegerField(verbose_name=_(u'How many things ina dozen?'), blank=True, null=True)
+    responsive_naming_dozen_articulation = models.CharField(max_length=1, blank=True, null=True)
+    responsive_naming_dozen_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    responsive_naming_coal_score = models.IntegerField(verbose_name=_(u'What color is coal?'), blank=True, null=True)
+    responsive_naming_coal_articulation = models.CharField(max_length=1, blank=True, null=True)
+    responsive_naming_coal_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    responsive_naming_medicine_score = models.IntegerField(verbose_name=_(u'Where do you go to buy medicine?'), blank=True, null=True)
+    responsive_naming_medicine_articulation = models.CharField(max_length=1, blank=True, null=True)
+    responsive_naming_medicine_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+
+
 
 

@@ -19,41 +19,51 @@
             <div class="description"><p>{% trans "Paraphasia (P): Neologistic <strong>D</strong>istortion, <strong>L</strong>iteral, <strong>V</strong>erbal, <strong>O</strong>ther" %}</p></div>
         {% endif %}
         <div class="col-md-12">
-            <table class="table table-condensed table-responsive table-striped" id="grid-table">
-                <thead>
-                    <tr>
-                        <th>{% trans "Word" %}</th>
-                        <th class="fixed-columns">{% trans "Score" %}</th>
-                        <th class="fixed-columns">{% trans "Transcription" %}</th>
-                        <th class="fixed-columns">{% trans "Articulation" %}</th>
-                        <th class="fixed-columns">{% trans "Paraphasia" %}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for line in fieldset %}
+            {% for count in "12" %}
+                <table class="table table-condensed table-responsive table-striped" id="grid-table">
+                    <thead>
                         <tr>
-                        {% for field in line %}
-                            {% if forloop.first %}
-                                <td>
-                                    {{ field.label_tag }}
-                                    <br>
-                                    {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
-                                </td>
-                            {% endif %}
-                            <td class="fixed-columns">
-                                {% if field.is_readonly %}
-                                    <p>{{ field.contents }}</p>
-                                {% else %}
-                                    {% dab_field_rendering field.field %}
-                                {% endif %}
-                                {% if not field.is_readonly and field.errors %}<span class="text-danger">{{ field.errors|striptags }}</span>{% endif %}
-                            </td>
-                        {% endfor %}
+                            <th>{% trans "Word" %}</th>
+                            <th class="fixed-columns">{% trans "Score" %}</th>
+                            <th class="fixed-columns">{% trans "Articulation" %}</th>
+                            <th class="fixed-columns">{% trans "Paraphasia" %}</th>
                         </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {% for line in fieldset %}
+                            {% if forloop.parentloop.first and forloop.counter < 9 or forloop.parentloop.counter == 2 and forloop.counter >= 9 %}
+                                <tr>
+                                {% for field in line %}
+                                    {% if forloop.first %}
+                                        <td>
+                                            {{ field.label_tag }}
+                                            <br>
+                                            {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
+                                        </td>
+                                    {% endif %}
+                                    <td class="fixed-columns">
+                                        {% if field.is_readonly %}
+                                            <p>{{ field.contents }}</p>
+                                        {% else %}
+                                            {% dab_field_rendering field.field %}
+                                        {% endif %}
+                                        {% if not field.is_readonly and field.errors %}<span class="text-danger">{{ field.errors|striptags }}</span>{% endif %}
+                                    </td>
+                                {% endfor %}
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% if forloop.first %}
+                    {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields.0 total_points=fieldset.description.fieldset_total_points.0 total_field=fieldset.description.fieldset_total_field.0 %}
+                    <br>
+                {% elif forloop.counter == 2 %}
+                    {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields.1 total_points=fieldset.description.fieldset_total_points.1 total_field=fieldset.description.fieldset_total_field.1 %}
+                    <br>
+                {% endif %}
+            {% endfor %}
         </div>
-    {% include "admin/includes/fieldset/row_total.html" %}
+
     </div>
 </fieldset>
