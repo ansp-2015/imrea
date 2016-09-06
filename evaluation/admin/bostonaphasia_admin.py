@@ -1,14 +1,143 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
+from django.contrib.admin.options import InlineModelAdmin
 from reversion_compare.helpers import patch_admin
-from ..models.bostonaphasia import BostonAphasia
+from ..models.bostonaphasia import BostonAphasia, BostonAphasiaVisualConfrontation, BostonAphasiaAnimalNaming, BostonAphasiaOralSentenceReading
 from .base_admin import BaseAdmin
-from ..forms.bostonaphasia_form import BostonAphasiaForm
+from ..forms.bostonaphasia_form import BostonAphasiaForm, BostonAphasiaConfrontationForm, BostonAphasiaAnimalNamingForm, BostonAphasiaOralSentenceReadingForm
+
+
+class BostonAphasiaVisualConfrontationInlineAdmin(InlineModelAdmin):
+    #template = 'admin/edit_inline/evaluation.html'
+    form = BostonAphasiaConfrontationForm
+    model = BostonAphasiaVisualConfrontation
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Visual confrontation naming'), {
+            'fields': (
+                ('confrontation_card2_h_answer', 'confrontation_card2_h_score', 'confrontation_card2_h_articulation', 'confrontation_card2_h_paraphasia'),
+                ('confrontation_card2_t_answer', 'confrontation_card2_t_score', 'confrontation_card2_t_articulation', 'confrontation_card2_t_paraphasia'),
+                ('confrontation_card2_r_answer', 'confrontation_card2_r_score', 'confrontation_card2_r_articulation', 'confrontation_card2_r_paraphasia'),
+                ('confrontation_card2_l_answer', 'confrontation_card2_l_score', 'confrontation_card2_l_articulation', 'confrontation_card2_l_paraphasia'),
+                ('confrontation_card2_s_answer', 'confrontation_card2_s_score', 'confrontation_card2_s_articulation', 'confrontation_card2_s_paraphasia'),
+                ('confrontation_card2_g_answer', 'confrontation_card2_g_score', 'confrontation_card2_g_articulation', 'confrontation_card2_g_paraphasia'),
+                ('confrontation_card2_square_answer', 'confrontation_card2_square_score', 'confrontation_card2_square_articulation', 'confrontation_card2_square_paraphasia'),
+                ('confrontation_card2_chair_answer', 'confrontation_card2_chair_score', 'confrontation_card2_chair_articulation', 'confrontation_card2_chair_paraphasia'),
+                ('confrontation_card2_key_answer', 'confrontation_card2_key_score', 'confrontation_card2_key_articulation', 'confrontation_card2_key_paraphasia'),
+                ('confrontation_card2_glove_answer', 'confrontation_card2_glove_score', 'confrontation_card2_glove_articulation', 'confrontation_card2_glove_paraphasia'),
+                ('confrontation_card2_feather_answer', 'confrontation_card2_feather_score', 'confrontation_card2_feather_articulation', 'confrontation_card2_feather_paraphasia'),
+                ('confrontation_card2_hammock_answer', 'confrontation_card2_hammock_score', 'confrontation_card2_hammock_articulation', 'confrontation_card2_hammock_paraphasia'),
+                ('confrontation_card2_cactus_answer', 'confrontation_card2_cactus_score', 'confrontation_card2_cactus_articulation', 'confrontation_card2_cactus_paraphasia'),
+                ('confrontation_card2_triangle_answer', 'confrontation_card2_triangle_score', 'confrontation_card2_triangle_articulation',
+                 'confrontation_card2_triangle_paraphasia'),
+                ('confrontation_card3_red_answer', 'confrontation_card3_red_score', 'confrontation_card3_red_articulation', 'confrontation_card3_red_paraphasia'),
+                ('confrontation_card3_brown_answer', 'confrontation_card3_brown_score', 'confrontation_card3_brown_articulation', 'confrontation_card3_brown_paraphasia'),
+                ('confrontation_card3_pink_answer', 'confrontation_card3_pink_score', 'confrontation_card3_pink_articulation', 'confrontation_card3_pink_paraphasia'),
+                ('confrontation_card3_blue_answer', 'confrontation_card3_blue_score', 'confrontation_card3_blue_articulation', 'confrontation_card3_blue_paraphasia'),
+                ('confrontation_card3_gray_answer', 'confrontation_card3_gray_score', 'confrontation_card3_gray_articulation', 'confrontation_card3_gray_paraphasia'),
+                ('confrontation_card3_purple_answer', 'confrontation_card3_purple_score', 'confrontation_card3_purple_articulation', 'confrontation_card3_purple_paraphasia'),
+                ('confrontation_card3_smoking_answer', 'confrontation_card3_smoking_score', 'confrontation_card3_smoking_articulation', 'confrontation_card3_smoking_paraphasia'),
+                ('confrontation_card3_dripping_answer', 'confrontation_card3_dripping_score', 'confrontation_card3_dripping_articulation',
+                 'confrontation_card3_dripping_paraphasia'),
+                ('confrontation_card3_falling_answer', 'confrontation_card3_falling_score', 'confrontation_card3_falling_articulation', 'confrontation_card3_falling_paraphasia'),
+                ('confrontation_card3_7_answer', 'confrontation_card3_7_score', 'confrontation_card3_7_articulation', 'confrontation_card3_7_paraphasia'),
+                ('confrontation_card3_15_answer', 'confrontation_card3_15_score', 'confrontation_card3_15_articulation', 'confrontation_card3_15_paraphasia'),
+                ('confrontation_card3_700_answer', 'confrontation_card3_700_score', 'confrontation_card3_700_articulation', 'confrontation_card3_700_paraphasia'),
+                ('confrontation_card3_1936_answer', 'confrontation_card3_1936_score', 'confrontation_card3_1936_articulation', 'confrontation_card3_1936_paraphasia'),
+                ('confrontation_card3_42_answer', 'confrontation_card3_42_score', 'confrontation_card3_42_articulation', 'confrontation_card3_42_paraphasia'),
+                ('confrontation_card3_7000_answer', 'confrontation_card3_7000_score', 'confrontation_card3_7000_articulation', 'confrontation_card3_7000_paraphasia'),
+                ('confrontation_card3_sleeping_answer', 'confrontation_card3_sleeping_score', 'confrontation_card3_sleeping_articulation',
+                 'confrontation_card3_sleeping_paraphasia'),
+                ('confrontation_card3_drinking_answer', 'confrontation_card3_drinking_score', 'confrontation_card3_drinking_articulation',
+                 'confrontation_card3_drinking_paraphasia'),
+                ('confrontation_card3_running_answer', 'confrontation_card3_running_score', 'confrontation_card3_running_articulation', 'confrontation_card3_running_paraphasia'),
+                ('confrontation_body_ear_answer', 'confrontation_body_ear_score', 'confrontation_body_ear_articulation', 'confrontation_body_ear_paraphasia'),
+                ('confrontation_body_nose_answer', 'confrontation_body_nose_score', 'confrontation_body_nose_articulation', 'confrontation_body_nose_paraphasia'),
+                ('confrontation_body_elbow_answer', 'confrontation_body_elbow_score', 'confrontation_body_elbow_articulation', 'confrontation_body_elbow_paraphasia'),
+                ('confrontation_body_ankle_answer', 'confrontation_body_ankle_score', 'confrontation_body_ankle_articulation', 'confrontation_body_ankle_paraphasia'),
+                ('confrontation_body_wrist_answer', 'confrontation_body_wrist_score', 'confrontation_body_wrist_articulation', 'confrontation_body_wrist_paraphasia'),
+                ('confrontation_body_shoulder_answer', 'confrontation_body_shoulder_score', 'confrontation_body_shoulder_articulation', 'confrontation_body_shoulder_paraphasia'),
+
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_14_visual_confrontation',
+                'text': _(u'Are you left or right-handed? Which hand you prefer for that activity? Do you ever use the other hand for the activity?'),
+                'fieldset_total_points': '114',
+                'fieldset_total_addend_field_prefix': 'bostonaphasiavisualconfrontation-__prefix__-',
+                'fieldset_total_addend_fields': ('confrontation_card2_h_score', 'confrontation_card2_t_score', 'confrontation_card2_r_score',
+                                                 'confrontation_card2_l_score', 'confrontation_card2_g_score', 'confrontation_card2_square_score',
+                                                 'confrontation_card2_chair_score', 'confrontation_card2_key_score', 'confrontation_card2_glove_score',
+                                                 'confrontation_card2_feather_score', 'confrontation_card2_hammock_score', 'confrontation_card2_cactus_score',
+                                                 'confrontation_card2_triangle_score', 'confrontation_card3_red_score', 'confrontation_card3_brown_score',
+                                                 'confrontation_card3_pink_score', 'confrontation_card3_blue_score', 'confrontation_card3_gray_score',
+                                                 'confrontation_card3_purple_score', 'confrontation_card3_7_score', 'confrontation_card3_15_score',
+                                                 'confrontation_card3_700_score', 'confrontation_card3_1936_score', 'confrontation_card3_42_score',
+                                                 'confrontation_card3_7000_score', 'confrontation_card3_smoking_score', 'confrontation_card3_dripping_score',
+                                                 'confrontation_card3_falling_score', 'confrontation_card3_sleeping_score', 'confrontation_card3_drinking_score',
+                                                 'confrontation_card3_running_score', 'confrontation_body_ear_score', 'confrontation_body_nose_score',
+                                                 'confrontation_body_elbow_score', 'confrontation_body_ankle_score', 'confrontation_body_wrist_score',
+                                                 'confrontation_body_shoulder_score'),
+                'fieldset_total_field': 'confrontation_total',
+            }
+        }),
+
+
+class BostonAphasiaAnimalNamingInlineAdmin(InlineModelAdmin):
+    form = BostonAphasiaAnimalNamingForm
+    model = BostonAphasiaAnimalNaming
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Animal naming'), {
+            'fields': (
+                ('animal_naming_answer', 'animal_naming_score',),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_15_animal_naming',
+                'text': _(u'Instruct the patient \"I want to see how many different animals you can call to mind and name for about a minute, while I count them. Any animals will do; they can be from the farm, the jungle, the ocean or house pets. For instance you can start with dog.\" Start timing from this point and continue for a minute and a half. Score is based on the most productive consecutive 60 seconds. Record verbatim below.'),
+            }
+        }),
+
+
+class BostonAphasiaOralSentenceReadingInlineAdmin(InlineModelAdmin):
+    form = BostonAphasiaOralSentenceReadingForm
+    model = BostonAphasiaOralSentenceReading
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Oral sentence-reading'), {
+            'fields': (
+                ('sentence_reading_a_score', 'sentence_reading_a_answer', ),
+                ('sentence_reading_b_score', 'sentence_reading_b_answer', ),
+                ('sentence_reading_c_score', 'sentence_reading_c_answer', ),
+                ('sentence_reading_d_score', 'sentence_reading_d_answer', ),
+                ('sentence_reading_e_score', 'sentence_reading_e_answer',),
+                ('sentence_reading_f_score', 'sentence_reading_f_answer',),
+                ('sentence_reading_g_score', 'sentence_reading_g_answer',),
+                ('sentence_reading_h_score', 'sentence_reading_h_answer',),
+                ('sentence_reading_i_score', 'sentence_reading_i_answer',),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_16_oral_sentence',
+                'text': _(u'Have the patient read the following sentences aloud. Indicate by marking on this record any assistance given, omissions, substitutions,etc. One point credit is allowed for each completely correct sentence.'),
+                'fieldset_total_points': '10',
+                'fieldset_total_addend_field_prefix': 'bostonaphasiaoralsentencereading-__prefix__-',
+                'fieldset_total_addend_fields': ('sentence_reading_a_score', 'sentence_reading_b_score', 'sentence_reading_c_score',
+                                                 'sentence_reading_d_score', 'sentence_reading_e_score', 'sentence_reading_f_score',
+                                                 'sentence_reading_g_score', 'sentence_reading_h_score', 'sentence_reading_i_score',
+                                                 ),
+                'fieldset_total_field': 'oral_sentence_total',
+            }
+        }),
 
 
 class BostonAphasiaAdmin(BaseAdmin):
 
     form = BostonAphasiaForm
+    inlines = [BostonAphasiaVisualConfrontationInlineAdmin, BostonAphasiaAnimalNamingInlineAdmin,
+               BostonAphasiaOralSentenceReadingInlineAdmin
+               ]
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient', 'period'),
@@ -388,3 +517,6 @@ class BostonAphasiaAdmin(BaseAdmin):
 admin.site.register(BostonAphasia, BostonAphasiaAdmin)
 # Registrando no reversion-compare
 patch_admin(BostonAphasia)
+
+
+

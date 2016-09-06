@@ -63,15 +63,36 @@
             width: 3em;
         }
 
+        #bostonaphasiavisualconfrontation-fieldset-1 .centerInput {
+            width: 3em;
+        }
+        #bostonaphasiavisualconfrontation-fieldset-1 tr>td:nth-child(4)>.vTextField,
+        #bostonaphasiavisualconfrontation-fieldset-1 tr>td:nth-child(5)>.vTextField{
+            width: 3em;
+        }
+        #bostonaphasiavisualconfrontation-fieldset-1 tr>td:nth-child(2)>.vTextField {
+            width: 8em;
+        }
+        #bostonaphasiaanimalnaming-fieldset-1 .vLargeTextField {
+            width: 100%;
+            height: 4em;
+        }
+        #bostonaphasiaanimalnaming-fieldset-1 .div-spinner {
+            width: 10em;
+        }
 
     </style>
 {% endblock %}
+
+{% block content-header %}
+    <div class="panel panel-primary" style="margin:1.5em;">
+        <div class="panel-heading">
+            <h3 class="panel-title">{% trans "Boston Aphasia" %}</h3>
+        </div>
+        <div class="panel-body">
+{% endblock %}
+
 {% block field_sets %}
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title">{% trans "Boston Aphasia" %}</h3>
-      </div>
-      <div class="panel-body">
 
     {% for fieldset in adminform %}
         <div class="panel panel-primary">
@@ -80,6 +101,46 @@
         </div>
         </div>
     {% endfor %}
-    </div>
+{% endblock %}
+
+{% comment %}
+    {% block inline_field_sets %}
+        {% for inline_admin_formset in inline_admin_formsets %}
+            {% for inline_admin_form in inline_admin_formset %}
+                {% for fieldset in inline_admin_form %}
+                    {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=12 %}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    {% endblock %}
+    {% block inline_field_sets %}
+        {% for inline_admin_formset in inline_admin_formsets %}
+            {% include inline_admin_formset.opts.template %}
+        {% endfor %}
+    {% endblock %}
+{% endcomment %}
+
+
+{% block inline_field_sets %}
+    {% for inline_admin_formset in inline_admin_formsets %}
+        {% for inline_admin_form in inline_admin_formset %}
+            {% for fieldset in inline_admin_form %}
+        <div class="panel panel-primary">
+        <div class="panel-body">
+
+                {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=12 %}
+        </div>
+        </div>
+
+            {% endfor %}
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
+
+
+
+{% block content-footer %}
+    {% comment %}closing DIV content-header{% endcomment %}
+        </div>
     </div>
 {% endblock %}

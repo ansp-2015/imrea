@@ -1,0 +1,93 @@
+{% load i18n bootstrapped_goodies_tags admin_urls admin_static admin_modify  %}
+{{ inline_admin_formset.formset.management_form }}
+<fieldset class="_module _aligned" id="{{ inline_admin_formset.formset.prefix }}-fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
+    {% if fieldset.name %}
+        <legend>
+            {% if 'collapse' in fieldset.classes %}
+                <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
+                    {{ fieldset.name }}
+                    &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></span></span>
+                </a>
+            {% else %}
+              {{ fieldset.name }}
+            {% endif %}
+        </legend>
+    {% endif %}
+    <div>
+    <tbody class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
+        {% if fieldset.description.text %}
+            <div class="description"><p>{{ fieldset.description.text|safe }}</p></div>
+            <div class="description"><p>{% trans "Articulation (A): <strong>N</strong>ormal, <strong>S</strong>tiff, <strong>D</strong>istorted, <strong>F</strong>ail" %}</p></div>
+            <div class="description"><p>{% trans "Paraphasia (P): Neologistic <strong>D</strong>istortion, <strong>L</strong>iteral, <strong>V</strong>erbal, <strong>O</strong>ther" %}</p></div>
+        {% endif %}
+        {% for inline_admin_form in inline_admin_formset %}
+            {% for fieldset in inline_admin_form %}
+                    {% for line in fieldset %}
+                        {% for field in line %}
+                            {% if forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.first and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 8 and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 15 and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 24 and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 33 and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 36 and forloop.first %}
+                                {% if forloop.parentloop.counter > 1 %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                {% endif %}
+                                {% if forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.first and forloop.first %}
+                                    <div class="col-md-12 bg-primary"><h5>{% trans "Card 2" %}</h5></div>
+                                {% elif forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 15 and forloop.first %}
+                                    <div class="col-md-12 bg-primary"><h5>{% trans "Card 3" %}</h5></div>
+                                {% elif forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 33 and forloop.first %}
+                                    <div class="col-md-12 bg-primary"><h5>{% trans "Body part" %}</h5></div>
+                                {% endif %}
+                                <div class="col-md-6">
+                                    <table class="table table-condensed table-responsive table-striped" id="grid-table">
+                                        <thead>
+                                            <tr>
+                                                <th>{% trans "Items" %}</th>
+                                                <th class="fixed-columns">{% trans "Answer" %}</th>
+                                                <th class="fixed-columns">{% trans "Score" %}</th>
+                                                <th class="fixed-columns">{% trans "Articulation" %}</th>
+                                                <th class="fixed-columns">{% trans "Paraphasia" %}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                {% if inline_admin_form.form.non_field_errors %}
+                                    <tr><td colspan="{{ inline_admin_form|cell_count }}">{{ inline_admin_form.form.non_field_errors }}</td></tr>
+                                {% endif %}
+                            {% endif %}
+                            {% if forloop.first %}
+                                <tr class="form-row {% cycle "row1" "row2" %} {% if inline_admin_form.original or inline_admin_form.show_url %}has_original{% endif %}{% if forloop.last %} empty-form{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
+                            {% endif %}
+
+
+                            {% if forloop.first %}
+                                <td>
+                                    {{ field.label_tag }}
+                                    <br>
+                                    {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
+                                </td>
+                            {% endif %}
+                            {% if not field.field.is_hidden %}
+                                <td  class="fixed-columns {% if field.field.name %} field-{{ field.field.name }}{% endif %}">
+                                {% if field.is_readonly %}
+                                    <p>{{ field.contents }}</p>
+                                {% else %}
+                                    {{ field.field.errors.as_ul }}
+                                    {{ field.field }}
+                                {% endif %}
+                                </td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                  {% endfor %}
+                {% endfor %}
+        </tbody>
+        </table>
+        </div>
+        {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields total_points=fieldset.description.fieldset_total_points total_field=fieldset.description.fieldset_total_field total_addend_field_prefix=fieldset.description.fieldset_total_addend_field_prefix %}
+        {% endfor %}
+    </div>
+
+
+
+
+</fieldset>
+

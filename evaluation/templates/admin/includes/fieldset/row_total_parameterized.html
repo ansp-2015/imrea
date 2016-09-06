@@ -4,6 +4,7 @@ To be include in a fieldset.
 
 You must configure three parameters:
 total_addend_fields  =>  fields with the total addends pointsç
+total_addend_field_prefix (optional) => prefix to
 total_points_label (optional) => Label before the max points
 total_points  =>  Integer with the max points
 total_field  =>   field name to render the total points
@@ -14,7 +15,12 @@ total_field  =>   field name to render the total points
         $(function() {
             var addends = [];
             {% for f in total_addend_fields %}
-                addends.push('{{f}}');
+                {% if total_addend_field_prefix %}
+                    console.log('{{total_addend_field_prefix}}{{f}}');
+                    addends.push('{{total_addend_field_prefix}}{{f}}');
+                {% else %}
+                    addends.push('{{f}}');
+                {% endif %}
             {% endfor %}
             setup_calc_total_field(addends, '{{total_field}}');
         });

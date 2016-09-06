@@ -1,8 +1,112 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from django.forms import NumberInput
-from ..models.bostonaphasia import BostonAphasia
+from ..models.bostonaphasia import BostonAphasia, BostonAphasiaVisualConfrontation, BostonAphasiaAnimalNaming, BostonAphasiaOralSentenceReading
 from ..widgets import StepNumberInput
+
+
+class BostonAphasiaConfrontationForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaVisualConfrontation
+        fields = '__all__'
+        widgets = {
+            'confrontation_card2_h_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_t_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_r_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_l_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_s_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_g_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_square_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_chair_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_key_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_glove_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_feather_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_hammock_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_cactus_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card2_triangle_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_red_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_brown_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_pink_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_blue_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_gray_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_purple_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_7_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_15_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_700_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_1936_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_42_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_7000_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_smoking_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_dripping_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_falling_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_sleeping_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_drinking_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_card3_running_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_body_ear_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_body_nose_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_body_elbow_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_body_ankle_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_body_wrist_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+            'confrontation_body_shoulder_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
+        }
+
+
+class BostonAphasiaAnimalNamingForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaAnimalNaming
+        fields = '__all__'
+        widgets = {
+            'animal_naming_score': StepNumberInput(attrs={'min': 0, 'max': 90}),
+        }
+
+
+class BostonAphasiaOralSentenceReadingForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaOralSentenceReading
+        fields = '__all__'
+        widgets = {
+            'sentence_reading_a_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'sentence_reading_b_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'sentence_reading_c_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'sentence_reading_d_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'sentence_reading_e_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'sentence_reading_f_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'sentence_reading_g_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'sentence_reading_h_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'sentence_reading_i_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 class BostonAphasiaForm(forms.ModelForm):
@@ -30,7 +134,7 @@ class BostonAphasiaForm(forms.ModelForm):
 
     class Meta:
         model = BostonAphasia
-        fields = ('complex_ideational_1a', 'complex_ideational_1b')
+        fields = '__all__'
         widgets = {
             # EDINBURG HANDEDNESS
             'edinburg_handedness_writing_left_hand': StepNumberInput(attrs={'min': 0, 'max': 2}),
@@ -150,7 +254,6 @@ class BostonAphasiaForm(forms.ModelForm):
             'responsive_naming_dozen_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
             'responsive_naming_coal_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
             'responsive_naming_medicine_score': StepNumberInput(attrs={'min': 0, 'max': 3}),
-
         }
 
 

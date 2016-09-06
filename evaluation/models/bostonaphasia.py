@@ -547,6 +547,283 @@ class BostonAphasia(BaseEvaluation):
     responsive_naming_medicine_paraphasia = models.CharField(max_length=1, blank=True, null=True)
 
 
+class BostonAphasiaVisualConfrontation(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
 
+    # VISUAL CONFRONTATION NAMING
+    confrontation_card2_h_answer = models.CharField(verbose_name=_(u'H'), max_length=25, blank=True, null=True)
+    confrontation_card2_h_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_h_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_h_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_t_answer = models.CharField(verbose_name=_(u'T'), max_length=25, blank=True, null=True)
+    confrontation_card2_t_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_t_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_t_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_r_answer = models.CharField(verbose_name=_(u'R'), max_length=25, blank=True, null=True)
+    confrontation_card2_r_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_r_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_r_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_l_answer = models.CharField(verbose_name=_(u'L'), max_length=25, blank=True, null=True)
+    confrontation_card2_l_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_l_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_l_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_s_answer = models.CharField(verbose_name=_(u'S'), max_length=25, blank=True, null=True)
+    confrontation_card2_s_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_s_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_s_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_g_answer = models.CharField(verbose_name=_(u'G'), max_length=25, blank=True, null=True)
+    confrontation_card2_g_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_g_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_g_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_square_answer = models.CharField(verbose_name=_(u'square'), max_length=25, blank=True, null=True)
+    confrontation_card2_square_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_square_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_square_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_chair_answer = models.CharField(verbose_name=_(u'chair'), max_length=25, blank=True, null=True)
+    confrontation_card2_chair_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_chair_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_chair_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_key_answer = models.CharField(verbose_name=_(u'key'), max_length=25, blank=True, null=True)
+    confrontation_card2_key_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_key_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_key_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_glove_answer = models.CharField(verbose_name=_(u'glove'), max_length=25, blank=True, null=True)
+    confrontation_card2_glove_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_glove_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_glove_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_feather_answer = models.CharField(verbose_name=_(u'feather'), max_length=25, blank=True, null=True)
+    confrontation_card2_feather_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_feather_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_feather_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_hammock_answer = models.CharField(verbose_name=_(u'hammock'), max_length=25, blank=True, null=True)
+    confrontation_card2_hammock_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_hammock_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_hammock_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_cactus_answer = models.CharField(verbose_name=_(u'cactus'), max_length=25, blank=True, null=True)
+    confrontation_card2_cactus_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_cactus_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_cactus_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card2_triangle_answer = models.CharField(verbose_name=_(u'triangle'), max_length=25, blank=True, null=True)
+    confrontation_card2_triangle_score = models.IntegerField(blank=True, null=True)
+    confrontation_card2_triangle_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card2_triangle_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_red_answer = models.CharField(verbose_name=_(u'red'), max_length=25, blank=True, null=True)
+    confrontation_card3_red_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_red_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_red_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_brown_answer = models.CharField(verbose_name=_(u'brown'), max_length=25, blank=True, null=True)
+    confrontation_card3_brown_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_brown_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_brown_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_pink_answer = models.CharField(verbose_name=_(u'pink'), max_length=25, blank=True, null=True)
+    confrontation_card3_pink_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_pink_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_pink_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_blue_answer = models.CharField(verbose_name=_(u'blue'), max_length=25, blank=True, null=True)
+    confrontation_card3_blue_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_blue_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_blue_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_gray_answer = models.CharField(verbose_name=_(u'gray'), max_length=25, blank=True, null=True)
+    confrontation_card3_gray_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_gray_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_gray_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_purple_answer = models.CharField(verbose_name=_(u'purple'), max_length=25, blank=True, null=True)
+    confrontation_card3_purple_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_purple_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_purple_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_7_answer = models.CharField(verbose_name=_(u'7'), max_length=25, blank=True, null=True)
+    confrontation_card3_7_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_7_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_7_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_15_answer = models.CharField(verbose_name=_(u'15'), max_length=25, blank=True, null=True)
+    confrontation_card3_15_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_15_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_15_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_700_answer = models.CharField(verbose_name=_(u'700'), max_length=25, blank=True, null=True)
+    confrontation_card3_700_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_700_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_700_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_1936_answer = models.CharField(verbose_name=_(u'1936'), max_length=25, blank=True, null=True)
+    confrontation_card3_1936_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_1936_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_1936_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_42_answer = models.CharField(verbose_name=_(u'42'), max_length=25, blank=True, null=True)
+    confrontation_card3_42_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_42_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_42_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_7000_answer = models.CharField(verbose_name=_(u'7000'), max_length=25, blank=True, null=True)
+    confrontation_card3_7000_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_7000_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_7000_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_smoking_answer = models.CharField(verbose_name=_(u'smoking'), max_length=25, blank=True, null=True)
+    confrontation_card3_smoking_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_smoking_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_smoking_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_dripping_answer = models.CharField(verbose_name=_(u'dripping'), max_length=25, blank=True, null=True)
+    confrontation_card3_dripping_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_dripping_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_dripping_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_falling_answer = models.CharField(verbose_name=_(u'falling'), max_length=25, blank=True, null=True)
+    confrontation_card3_falling_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_falling_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_falling_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_sleeping_answer = models.CharField(verbose_name=_(u'sleeping'), max_length=25, blank=True, null=True)
+    confrontation_card3_sleeping_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_sleeping_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_sleeping_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_drinking_answer = models.CharField(verbose_name=_(u'drinking'), max_length=25, blank=True, null=True)
+    confrontation_card3_drinking_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_drinking_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_drinking_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_card3_running_answer = models.CharField(verbose_name=_(u'running'), max_length=25, blank=True, null=True)
+    confrontation_card3_running_score = models.IntegerField(blank=True, null=True)
+    confrontation_card3_running_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_card3_running_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_body_ear_answer = models.CharField(verbose_name=_(u'ear'), max_length=25, blank=True, null=True)
+    confrontation_body_ear_score = models.IntegerField(blank=True, null=True)
+    confrontation_body_ear_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_body_ear_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_body_nose_answer = models.CharField(verbose_name=_(u'nose'), max_length=25, blank=True, null=True)
+    confrontation_body_nose_score = models.IntegerField(blank=True, null=True)
+    confrontation_body_nose_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_body_nose_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_body_elbow_answer = models.CharField(verbose_name=_(u'elbow'), max_length=25, blank=True, null=True)
+    confrontation_body_elbow_score = models.IntegerField(blank=True, null=True)
+    confrontation_body_elbow_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_body_elbow_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_body_ankle_answer = models.CharField(verbose_name=_(u'ankle'), max_length=25, blank=True, null=True)
+    confrontation_body_ankle_score = models.IntegerField(blank=True, null=True)
+    confrontation_body_ankle_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_body_ankle_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_body_wrist_answer = models.CharField(verbose_name=_(u'wrist'), max_length=25, blank=True, null=True)
+    confrontation_body_wrist_score = models.IntegerField(blank=True, null=True)
+    confrontation_body_wrist_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_body_wrist_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+    confrontation_body_shoulder_answer = models.CharField(verbose_name=_(u'shoulder'), max_length=25, blank=True, null=True)
+    confrontation_body_shoulder_score = models.IntegerField(blank=True, null=True)
+    confrontation_body_shoulder_articulation = models.CharField(max_length=1, blank=True, null=True)
+    confrontation_body_shoulder_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+
+
+class BostonAphasiaAnimalNaming(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    animal_naming_answer = models.TextField(verbose_name=_(u'Answer'), max_length=500, blank=True, null=True)
+    animal_naming_score = models.IntegerField(verbose_name=_(u'Score'), blank=True, null=True)
+
+
+class BostonAphasiaOralSentenceReading(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    sentence_reading_a_score = models.IntegerField(verbose_name=_(u'You know how.'), blank=True, null=True)
+    sentence_reading_a_answer = models.CharField(max_length=100, blank=True, null=True)
+
+    sentence_reading_b_score = models.IntegerField(verbose_name=_(u'Down to earth.'), blank=True, null=True)
+    sentence_reading_b_answer = models.CharField(max_length=100, blank=True, null=True)
+
+    sentence_reading_c_score = models.IntegerField(verbose_name=_(u'I got home from work.'), blank=True, null=True)
+    sentence_reading_c_answer = models.CharField(max_length=100, blank=True, null=True)
+
+    sentence_reading_d_score = models.IntegerField(verbose_name=_(u'Near the table in the dining room.'), blank=True, null=True)
+    sentence_reading_d_answer = models.CharField(max_length=100, blank=True, null=True)
+
+    sentence_reading_e_score = models.IntegerField(verbose_name=_(u'They heard him speak on the radio last night.'), blank=True, null=True)
+    sentence_reading_e_answer = models.CharField(max_length=100, blank=True, null=True)
+
+    sentence_reading_f_score = models.IntegerField(verbose_name=_(u'Limes are sour.'), blank=True, null=True)
+    sentence_reading_f_answer = models.CharField(max_length=100, blank=True, null=True)
+
+    sentence_reading_j_score = models.IntegerField(verbose_name=_(u'The spy fled to Greece.'), blank=True, null=True)
+    sentence_reading_j_answer = models.CharField(max_length=100, blank=True, null=True)
+
+    sentence_reading_g_score = models.IntegerField(verbose_name=_(u'The barm swallow captured a plump worm.'), blank=True, null=True)
+    sentence_reading_g_answer = models.CharField(max_length=100, blank=True, null=True)
+
+    sentence_reading_h_score = models.IntegerField(verbose_name=_(u'The lawyer\'s closing argument convinced him.'), blank=True, null=True)
+    sentence_reading_h_answer = models.CharField(max_length=100, blank=True, null=True)
+
+    sentence_reading_i_score = models.IntegerField(verbose_name=_(u'The phantom soared across the foggy heath.'), blank=True, null=True)
+    sentence_reading_i_answer = models.CharField(max_length=100, blank=True, null=True)
+
+"""
+Understanding written language
+
+Symbol and word disc.
+Word recognition
+Oral spelling
+Word-picture matching
+Reading sentences and paras
+"""
+"""
+class BostonAphasiaSymbolWordDisc(models.Model):
+    symbol_word_card8_a_score = models.IntegerField(verbose_name='No', blank=True, null=True)
+    symbol_word_card8_b_score = models.IntegerField(verbose_name='J', blank=True, null=True)
+    symbol_word_card8_c_score = models.IntegerField(verbose_name='H', blank=True, null=True)
+    symbol_word_card8_d_score = models.IntegerField(verbose_name='Aro', blank=True, null=True)
+    symbol_word_card8_e_score = models.IntegerField(verbose_name='R', blank=True, null=True)
+
+    symbol_word_card9_a_score = models.IntegerField(verbose_name='bar', blank=True, null=True)
+    symbol_word_card9_b_score = models.IntegerField(verbose_name='bar', blank=True, null=True)
+    symbol_word_card9_c_score = models.IntegerField(verbose_name='mas', blank=True, null=True)
+    symbol_word_card9_d_score = models.IntegerField(verbose_name='F', blank=True, null=True)
+    symbol_word_card9_e_score = models.IntegerField(verbose_name='par', blank=True, null=True)
+
+class BostonAphasiaWordRecognition(models.Model):
+    word_recognition_a_score = models.IntegerField(verbose_name=_(u'boat'), blank=True, null=True)
+    word_recognition_b_score = models.IntegerField(verbose_name=_(u'frog'), blank=True, null=True)
+    word_recognition_c_score = models.IntegerField(verbose_name=_(u'hammock'), blank=True, null=True)
+    word_recognition_e_score = models.IntegerField(verbose_name=_(u'yours'), blank=True, null=True)
+    word_recognition_f_score = models.IntegerField(verbose_name=_(u'mass'), blank=True, null=True)
+    word_recognition_g_score = models.IntegerField(verbose_name=_(u'key'), blank=True, null=True)
+    word_recognition_h_score = models.IntegerField(verbose_name=_(u'sum'), blank=True, null=True)
+    word_recognition_i_score = models.IntegerField(verbose_name=_(u'want'), blank=True, null=True)
+
+class BostonAphasiaOralSpelling(models.Model):
+    word_recognition_a_score = models.IntegerField(verbose_name=_(u'Y-E-S'), blank=True, null=True)
+    word_recognition_b_score = models.IntegerField(verbose_name=_(u'B-R-O-W-N'), blank=True, null=True)
+    word_recognition_c_score = models.IntegerField(verbose_name=_(u'M-A-N'), blank=True, null=True)
+    word_recognition_e_score = models.IntegerField(verbose_name=_(u'E-L-B-O-W'), blank=True, null=True)
+    word_recognition_f_score = models.IntegerField(verbose_name=_(u'W-O-M-A-N'), blank=True, null=True)
+    word_recognition_g_score = models.IntegerField(verbose_name=_(u'F-I-F-T-E-E-N'), blank=True, null=True)
+    word_recognition_h_score = models.IntegerField(verbose_name=_(u'W-I-P'), blank=True, null=True)
+    word_recognition_i_score = models.IntegerField(verbose_name=_(u'E-X-A-C-T'), blank=True, null=True)
+"""
 
 
