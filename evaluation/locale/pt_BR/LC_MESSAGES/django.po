@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-09 16:50-0300\n"
+"POT-Creation-Date: 2016-08-19 15:13-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,8 +28,8 @@ msgstr "Data de nascimento"
 #: evaluation/admin/had_admin.py:18 evaluation/admin/hamilton_admin.py:18
 #: evaluation/admin/kviq_admin.py:13 evaluation/admin/mmse_admin.py:18
 #: evaluation/admin/nihss_admin.py:18 evaluation/admin/patient_admin.py:9
-#: evaluation/admin/sis_admin.py:15 evaluation/models/base_evaluation.py:17
-#: evaluation/models/patient.py:39
+#: evaluation/admin/sis_admin.py:15 evaluation/admin/vas_admin.py:20
+#: evaluation/models/base_evaluation.py:17 evaluation/models/patient.py:39
 #: evaluation/templates/admin/evaluation/patient/change_form.html:6
 #: evaluation/templates/admin/index.html:56
 msgid "Patient"
@@ -2317,11 +2317,11 @@ msgstr "Levemente intensa"
 msgid "No sensation"
 msgstr "Sem sensação"
 
-#: evaluation/models/kviq.py:27
+#: evaluation/models/kviq.py:27 evaluation/models/vas.py:14
 msgid "Left"
 msgstr "Esquerda"
 
-#: evaluation/models/kviq.py:28
+#: evaluation/models/kviq.py:28 evaluation/models/vas.py:15
 msgid "Right"
 msgstr "Direita"
 
@@ -2601,7 +2601,8 @@ msgstr ""
 "O examinador deve escolher uma resposta, mesmo que a avaliação completa seja "
 "prejudicada por obstáculos como curativo ou tubo orotraqueal, barreiras de "
 "linguagem ou traumatismo. Um 3 é dado apenas se o paciente não fizer nenhum "
-"movimento em resposta à estimulação dolorosa, para além de respostas reflexas."
+"movimento em resposta à estimulação dolorosa, para além de respostas "
+"reflexas."
 
 #: evaluation/models/nihss.py:18
 msgid ""
@@ -2614,13 +2615,13 @@ msgid ""
 "graded and that the examiner not \"help\" the patient with verbal or non-"
 "verbal cues."
 msgstr ""
-"O paciente é questionado sobre o mês e a idade. A resposta deve ser correta - "
-"não se valorizam respostas aproximadas. Pacientes com afasia ou estupor que não "
-"compreendam as perguntas têm 2. Pacientes incapazes de falar por tubo ou "
-"traumatismo orotraqueal, disartria grave de qualquer causa, barreiras de "
-"linguagem ou qualquer outro problema não secundário a afasia receberão 1. É "
-"importante considerar apenas a resposta inicial e que o examinador não \"ajude\" "
-"o paciente com dicas verbais ou não verbais."
+"O paciente é questionado sobre o mês e a idade. A resposta deve ser correta "
+"- não se valorizam respostas aproximadas. Pacientes com afasia ou estupor "
+"que não compreendam as perguntas têm 2. Pacientes incapazes de falar por "
+"tubo ou traumatismo orotraqueal, disartria grave de qualquer causa, "
+"barreiras de linguagem ou qualquer outro problema não secundário a afasia "
+"receberão 1. É importante considerar apenas a resposta inicial e que o "
+"examinador não \"ajude\" o paciente com dicas verbais ou não verbais."
 
 #: evaluation/models/nihss.py:26
 msgid ""
@@ -2633,13 +2634,13 @@ msgid ""
 "or other physical impediments should be given suitable one-step commands. "
 "Only the first attempt is scored."
 msgstr ""
-"O paciente é solicitado a abrir e fechar os olhos e depois abrir e fechar a mão "
-"não parética. Substitua por outro comando de um único passo se as mãos não "
-"puderem ser utilizadas. Devemos valorizar uma tentativa inequívoca, ainda que "
-"não completada devido à fraqueza muscular. Se o paciente não responde à ordem, "
-"a tarefa deve ser demonstrada usando gestos e o resultado registrado. Aos "
-"pacientes com trauma, amputação ou outro impedimento físico devem ser dadas "
-"ordens simples adequadas. Pontue só a primeira tentativa."
+"O paciente é solicitado a abrir e fechar os olhos e depois abrir e fechar a "
+"mão não parética. Substitua por outro comando de um único passo se as mãos "
+"não puderem ser utilizadas. Devemos valorizar uma tentativa inequívoca, "
+"ainda que não completada devido à fraqueza muscular. Se o paciente não "
+"responde à ordem, a tarefa deve ser demonstrada usando gestos e o resultado "
+"registrado. Aos pacientes com trauma, amputação ou outro impedimento físico "
+"devem ser dadas ordens simples adequadas. Pontue só a primeira tentativa."
 
 #: evaluation/models/nihss.py:35
 msgid ""
@@ -2657,14 +2658,15 @@ msgid ""
 msgstr ""
 "Teste apenas os movimentos oculares horizontais. Os movimentos oculares "
 "voluntários ou reflexos (oculocefálico) são pontuados, mas a prova calórica "
-"não é valida. Se o paciente tem um desvio conjugado do olhar, que é revertido "
-"pela atividade voluntária ou reflexa, a pontuação será 1. Se o paciente tem uma "
-"parésia de nervo periférico isolada (NC III, IV ou VI), pontue 1. O olhar é "
-"testado em todos os pacientes afásicos. Os pacientes com trauma ou curativo "
-"ocular, cegueira pré-existente ou outro distúrbio de acuidade ou campo visual "
-"devem ser testados com movimentos reflexos e a escolha feita pelo examinador. "
-"Estabelecer contato visual e mover-se perto do paciente de um lado para outro "
-"pode esclarecer a presença de paralisia do olhar conjugado."
+"não é valida. Se o paciente tem um desvio conjugado do olhar, que é "
+"revertido pela atividade voluntária ou reflexa, a pontuação será 1. Se o "
+"paciente tem uma parésia de nervo periférico isolada (NC III, IV ou VI), "
+"pontue 1. O olhar é testado em todos os pacientes afásicos. Os pacientes com "
+"trauma ou curativo ocular, cegueira pré-existente ou outro distúrbio de "
+"acuidade ou campo visual devem ser testados com movimentos reflexos e a "
+"escolha feita pelo examinador. Estabelecer contato visual e mover-se perto "
+"do paciente de um lado para outro pode esclarecer a presença de paralisia do "
+"olhar conjugado."
 
 #: evaluation/models/nihss.py:46
 msgid ""
@@ -2677,15 +2679,16 @@ msgid ""
 "If patient is blind from any cause, score 3. Double simultaneous stimulation "
 "is performed at this point. If there is extinction, patient receives a 1, "
 "and the results are used to respond to item 11."
-msgstr "Os campos visuais (quadrantes superiores e inferiores) são testados por "
-"confrontação, utilizando contagem de dedos ou ameaça visual, conforme apropriado. "
-"O paciente pode ser encorajado, mas basta identificar olhando para o lado em que "
-"mexem os dedos para ser considerado como normal. Se houver cegueira unilateral ou "
-"enucleação, os campos visuais no olho restante são avaliados. Pontue 1 apenas se "
-"houver assimetria clara, incluindo quadrantanópsia. Se o paciente é cego por "
-"qualquer causa, pontue 3. A estimulação dupla simultânea é realizada neste momento. "
-"Se houver extinção, o paciente recebe 1 e os resultados são usados para responder "
-"questão 11."
+msgstr ""
+"Os campos visuais (quadrantes superiores e inferiores) são testados por "
+"confrontação, utilizando contagem de dedos ou ameaça visual, conforme "
+"apropriado. O paciente pode ser encorajado, mas basta identificar olhando "
+"para o lado em que mexem os dedos para ser considerado como normal. Se "
+"houver cegueira unilateral ou enucleação, os campos visuais no olho restante "
+"são avaliados. Pontue 1 apenas se houver assimetria clara, incluindo "
+"quadrantanópsia. Se o paciente é cego por qualquer causa, pontue 3. A "
+"estimulação dupla simultânea é realizada neste momento. Se houver extinção, "
+"o paciente recebe 1 e os resultados são usados para responder questão 11."
 
 #: evaluation/models/nihss.py:55
 msgid ""
@@ -2697,10 +2700,10 @@ msgid ""
 msgstr ""
 "Pergunte ou use gestos para encorajar o paciente a mostrar os dentes ou "
 "levantar as sobrancelhas e fechar com força os olhos. Pontue a simetria da "
-"contração facial em resposta ao estímulo doloroso nos pacientes pouco responsivos "
-"ou que não compreendam. Na presença de traumatismo, tubo orotraqueal, adesivos ou "
-"outra barreira física que possam esconder a face, estes devem ser removidos, tanto "
-"quanto possível."
+"contração facial em resposta ao estímulo doloroso nos pacientes pouco "
+"responsivos ou que não compreendam. Na presença de traumatismo, tubo "
+"orotraqueal, adesivos ou outra barreira física que possam esconder a face, "
+"estes devem ser removidos, tanto quanto possível."
 
 #: evaluation/models/nihss.py:60
 msgid ""
@@ -2712,13 +2715,14 @@ msgid ""
 "or joint fusion at the shoulder, the examiner should record the score as "
 "untestable (UN), and clearly write the explanation for this choice."
 msgstr ""
-"O braço é colocado na posição apropriada: extensão dos braços, palmas para baixo, "
-"a 90° se sentado ou a 45° se posição supina. Pontue-se a queda do braço quando "
-"esta ocorre antes de 10 segundos. O paciente afásico é encorajado através de "
-"firmeza na voz ou gestos, mas não estimulação dolorosa. Cada membro é testado "
-"isoladamente, começando no braço não-parético. Apenas no caso de amputação ou "
-"anquilose do ombro o item poderá ser considerado como não testável (NT), e uma "
-"explicação deve ser escrita fundamentando esta escolha."
+"O braço é colocado na posição apropriada: extensão dos braços, palmas para "
+"baixo, a 90° se sentado ou a 45° se posição supina. Pontue-se a queda do "
+"braço quando esta ocorre antes de 10 segundos. O paciente afásico é "
+"encorajado através de firmeza na voz ou gestos, mas não estimulação "
+"dolorosa. Cada membro é testado isoladamente, começando no braço não-"
+"parético. Apenas no caso de amputação ou anquilose do ombro o item poderá "
+"ser considerado como não testável (NT), e uma explicação deve ser escrita "
+"fundamentando esta escolha."
 
 #: evaluation/models/nihss.py:68
 msgid ""
@@ -2732,11 +2736,11 @@ msgid ""
 msgstr ""
 "A perna é colocada na posição apropriada: extensão a 30°. Teste sempre na "
 "posição supina. Pontue se a queda da perna quando esta ocorre antes de 5 "
-"segundos. O paciente afásico é encorajado através de firmeza na voz ou gestos, "
-"mas não com estimulação dolorosa. Cada membro é testado isoladamente, começando "
-"na perna não-parética. Apenas no caso de amputação ou anquilose da anca o item "
-"poderá ser considerável não-testável (NT), e uma explicação deve ser escrita "
-"fundamentando esta escolha."
+"segundos. O paciente afásico é encorajado através de firmeza na voz ou "
+"gestos, mas não com estimulação dolorosa. Cada membro é testado "
+"isoladamente, começando na perna não-parética. Apenas no caso de amputação "
+"ou anquilose da anca o item poderá ser considerável não-testável (NT), e uma "
+"explicação deve ser escrita fundamentando esta escolha."
 
 #: evaluation/models/nihss.py:75
 msgid ""
@@ -2750,15 +2754,16 @@ msgid ""
 "the explanation for this choice. In case of blindness, test by having the "
 "patient touch nose from extended arm position. "
 msgstr ""
-"Este item procura evidência de lesão cerebelosa unilateral. Teste com os olhos "
-"abertos. No caso de défice de campo visual, assegure-se que o teste é feito no "
-"campo visual intacto. Os testes dedo-nariz e calcanhar-joelho são realizados "
-"em ambos os lados e a ataxia é valorizada, apenas, se for desproporcional em "
-"relação à fraqueza muscular. A ataxia é considerada ausente no doente com "
-"pertubação da compreensão ou plégico. Apenas no caso de amputação ou anquilose "
-"o item pode ser considerado como não-testável (NT), e uma explicação deve ser "
-"escrita fundamentando esta escolha. No caso de cegueira, peça para tocar com o "
-"dedo no nariz a partir da posição de braço estendido."
+"Este item procura evidência de lesão cerebelosa unilateral. Teste com os "
+"olhos abertos. No caso de défice de campo visual, assegure-se que o teste é "
+"feito no campo visual intacto. Os testes dedo-nariz e calcanhar-joelho são "
+"realizados em ambos os lados e a ataxia é valorizada, apenas, se for "
+"desproporcional em relação à fraqueza muscular. A ataxia é considerada "
+"ausente no doente com pertubação da compreensão ou plégico. Apenas no caso "
+"de amputação ou anquilose o item pode ser considerado como não-testável "
+"(NT), e uma explicação deve ser escrita fundamentando esta escolha. No caso "
+"de cegueira, peça para tocar com o dedo no nariz a partir da posição de "
+"braço estendido."
 
 #: evaluation/models/nihss.py:84
 msgid ""
@@ -2774,17 +2779,17 @@ msgid ""
 "score 2. Patients in a coma (item 1a=3) are automatically given a 2 on this "
 "item."
 msgstr ""
-"Avalie a sensibilidade ou mímica facial à picada de alfinete ou a resposta de "
-"retirada ao estimulo doloroso em paciente obnubilado ou afásico. Só a perda de "
-"sensibilidade atribuída ao AVC é pontuada. Teste tantas as partes do corpo - "
-"membros superiores (exceto mãos), inferiores (exceto os pés), tronco e face - "
-"quantas as necessárias para avaliar com precisão uma perda hemissensitiva. "
-"Pontue com 2 só se uma perda grave ou total da sensibilidade puder ser claramente "
-"demonstrada. Deste modo, doentes estuporoses ou afásicos irão ser pontuaos "
-"possivelmente com 1 ou 0. O doente com AVC do tronco cerebral com perda de "
-"sensibilidade bilateral é pontuado com 2. Se o paciente não responde e está "
-"quadriplégico, pontue 2. Pacientes em coma (item 1a = 3) são pontuados "
-"arbitrariamente com 2 neste item."
+"Avalie a sensibilidade ou mímica facial à picada de alfinete ou a resposta "
+"de retirada ao estimulo doloroso em paciente obnubilado ou afásico. Só a "
+"perda de sensibilidade atribuída ao AVC é pontuada. Teste tantas as partes "
+"do corpo - membros superiores (exceto mãos), inferiores (exceto os pés), "
+"tronco e face - quantas as necessárias para avaliar com precisão uma perda "
+"hemissensitiva. Pontue com 2 só se uma perda grave ou total da sensibilidade "
+"puder ser claramente demonstrada. Deste modo, doentes estuporoses ou "
+"afásicos irão ser pontuaos possivelmente com 1 ou 0. O doente com AVC do "
+"tronco cerebral com perda de sensibilidade bilateral é pontuado com 2. Se o "
+"paciente não responde e está quadriplégico, pontue 2. Pacientes em coma "
+"(item 1a = 3) são pontuados arbitrariamente com 2 neste item."
 
 #: evaluation/models/nihss.py:95
 msgid ""
@@ -2804,14 +2809,15 @@ msgstr ""
 "Durante a pontuação dos itens precedentes obterá muita informação acerca da "
 "capacidade de compreensão. Pede-se ao doente para descrever o que está "
 "acontecendo na imagem em anexo, para nomear objetos num cartão de nomeação "
-"anexo e para ler uma lista de frases em anexo. A compreensão é julgada a partir "
-"destas respostas, assim como as referentes às ordens dadas no exame neurológico "
-"geral precedente. Se a perda visual interferir com os testes, peça ao doente "
-"para identificar objetos colocados na mão, repetir frases e produzir discurso. "
-"O paciente entubado deve escrever as respostas. O doente em coma (1a = 3) será "
-"pontuado arbitrariamente com 3. O examinador deve escolher a pontuação no "
-"doente com estupor ou pouco colaborante, mas a pontuação de 3 está reservada "
-"a doentes em mutismo e que não cumpram nenhuma ordem simples."
+"anexo e para ler uma lista de frases em anexo. A compreensão é julgada a "
+"partir destas respostas, assim como as referentes às ordens dadas no exame "
+"neurológico geral precedente. Se a perda visual interferir com os testes, "
+"peça ao doente para identificar objetos colocados na mão, repetir frases e "
+"produzir discurso. O paciente entubado deve escrever as respostas. O doente "
+"em coma (1a = 3) será pontuado arbitrariamente com 3. O examinador deve "
+"escolher a pontuação no doente com estupor ou pouco colaborante, mas a "
+"pontuação de 3 está reservada a doentes em mutismo e que não cumpram nenhuma "
+"ordem simples."
 
 #: evaluation/models/nihss.py:108
 msgid ""
@@ -2822,12 +2828,13 @@ msgid ""
 "other physical barriers to producing speech, the examiner should record the "
 "score as untestable (UN), and clearly write an explanation for this choice. "
 "Do not tell the patient why he or she is being tested."
-msgstr "Se acredita que o doente consegue, pede-se para ler ou repetir as "
-"palavras da lista anexa. Se o paciente tem afasia grave, a clareza da "
-"articulação da fala espontânea pode ser pontuada. Este item é considerado "
-"não testável (NT) apenas se o doente estiver entubado ou tiver outras "
-"barreiras físicas que impeçam o discurso. Não diga ao paciente a razão pela "
-"qual está sendo testado."
+msgstr ""
+"Se acredita que o doente consegue, pede-se para ler ou repetir as palavras "
+"da lista anexa. Se o paciente tem afasia grave, a clareza da articulação da "
+"fala espontânea pode ser pontuada. Este item é considerado não testável (NT) "
+"apenas se o doente estiver entubado ou tiver outras barreiras físicas que "
+"impeçam o discurso. Não diga ao paciente a razão pela qual está sendo "
+"testado."
 
 #: evaluation/models/nihss.py:116
 msgid ""
@@ -2841,12 +2848,12 @@ msgid ""
 msgstr ""
 "A informação suficiente para a identificação da negligência pode ter sido "
 "obtida durante testes anteriores. Se o doente tem perda visual grave, que "
-"impede o teste da estimulação visual dupla simultânea, e os estímulos cutâneos "
-"são normais, a pontuação é normal. Se o doente tem afasia, mas parece "
-"identificar ambos os lados, é pontuado como normal. A presença de negligência "
-"visuoespacial ou anosagnosia contribuem também para a evidência de anormalidade. "
-"Como a anormalidade só é pontuada se presente, o item nunca é considerado não "
-"testável."
+"impede o teste da estimulação visual dupla simultânea, e os estímulos "
+"cutâneos são normais, a pontuação é normal. Se o doente tem afasia, mas "
+"parece identificar ambos os lados, é pontuado como normal. A presença de "
+"negligência visuoespacial ou anosagnosia contribuem também para a evidência "
+"de anormalidade. Como a anormalidade só é pontuada se presente, o item nunca "
+"é considerado não testável."
 
 #: evaluation/models/nihss.py:125
 msgid "Alert; keenly responsive."
@@ -2863,8 +2870,8 @@ msgid ""
 "Not alert; requires repeated stimulation to attend, or is obtunded and "
 "requires strong or painful stimulation to make movements (not stereotyped)."
 msgstr ""
-"Estuporoso, acorda com estímulo forte, requer estimulação repetida ou dolorosa "
-"para realizar movimentos (não estereotipados)"
+"Estuporoso, acorda com estímulo forte, requer estimulação repetida ou "
+"dolorosa para realizar movimentos (não estereotipados)"
 
 #: evaluation/models/nihss.py:129
 msgid ""
@@ -2910,7 +2917,7 @@ msgstr "Não realiza nenhuma das tarefas corretamente."
 msgid "1c. LOC Commands"
 msgstr "1c. NDC Ordens"
 
-#: evaluation/models/nihss.py:148 evaluation/models/nihss.py:225
+#: evaluation/models/nihss.py:148 evaluation/models/nihss.py:230
 msgid "Normal."
 msgstr "Normal."
 
@@ -2919,9 +2926,9 @@ msgid ""
 "Partial gaze palsy; gaze is abnormal in one or both eyes, but forced "
 "deviation or total gaze paresis is not present."
 msgstr ""
-"Paralisia parcial do olhar conjugado. Esta popntuação é dada quando o "
-"olhar é anormal em um ou ambos os olhos, mas não há desvio forçado ou "
-"paresia total do olhar conjugado."
+"Paralisia parcial do olhar conjugado. Esta popntuação é dada quando o olhar "
+"é anormal em um ou ambos os olhos, mas não há desvio forçado ou paresia "
+"total do olhar conjugado."
 
 #: evaluation/models/nihss.py:151
 msgid ""
@@ -2970,8 +2977,8 @@ msgstr ""
 #: evaluation/models/nihss.py:166
 msgid "Partial paralysis (total or near-total paralysis of lower face)."
 msgstr ""
-"Paralisia facial central evidente (paralisia facial inferior total ou "
-"quase total)"
+"Paralisia facial central evidente (paralisia facial inferior total ou quase "
+"total)"
 
 #: evaluation/models/nihss.py:167
 msgid ""
@@ -2994,8 +3001,8 @@ msgid ""
 "Drift; limb holds 90 (or 45) degrees, but drifts down before full 10 "
 "seconds; does not hit bed or other support."
 msgstr ""
-"Queda parcial antes de completar o período de 10 segundos; não chega a "
-"tocar na cama ou em outro suporte."
+"Queda parcial antes de completar o período de 10 segundos; não chega a tocar "
+"na cama ou em outro suporte."
 
 #: evaluation/models/nihss.py:176
 msgid ""
@@ -3007,8 +3014,9 @@ msgstr ""
 
 #: evaluation/models/nihss.py:178
 msgid "No effort against gravity; limb falls."
-msgstr "Nenhum esforço contra a gravidade; o braço cai logo; pousado, o membro "
-"faz algum movimento."
+msgstr ""
+"Nenhum esforço contra a gravidade; o braço cai logo; pousado, o membro faz "
+"algum movimento."
 
 #: evaluation/models/nihss.py:179
 msgid "No movement"
@@ -3018,68 +3026,69 @@ msgstr "Nenhum movimento"
 msgid "5. Motor arm"
 msgstr "5. Membros superiores"
 
-#: evaluation/models/nihss.py:185
+#: evaluation/models/nihss.py:187
 msgid "No drift; leg holds 30-degree position for full 5 seconds."
 msgstr "Sem queda, mantem a perna a 30° por um período de 5 segundos."
 
-#: evaluation/models/nihss.py:186
+#: evaluation/models/nihss.py:188
 msgid ""
 "Drift; leg falls by the end of the 5-second period but does not hit bed."
 msgstr ""
-"Queda  parcial antes de completar o período de 5 segundos; não chega a "
-"tocar na cama ou em outro suporte."
+"Queda  parcial antes de completar o período de 5 segundos; não chega a tocar "
+"na cama ou em outro suporte."
 
-#: evaluation/models/nihss.py:187
+#: evaluation/models/nihss.py:189
 msgid ""
 "Some effort against gravity; leg falls to bed by 5 seconds, but has some "
 "effort against gravity."
 msgstr ""
-"Algum esforço contra a gravidade; a perna acaba por cair na cama ou em "
-"outro suporte antes dos 5 segundos, mas não de forma imediata"
+"Algum esforço contra a gravidade; a perna acaba por cair na cama ou em outro "
+"suporte antes dos 5 segundos, mas não de forma imediata"
 
-#: evaluation/models/nihss.py:188
+#: evaluation/models/nihss.py:190
 msgid "No effort against gravity; leg falls to bed immediately."
-msgstr "Nenhum esforço contra a gravidade; a perna cai logo; pousado o "
-"membro faz algum movimento"
+msgstr ""
+"Nenhum esforço contra a gravidade; a perna cai logo; pousado o membro faz "
+"algum movimento"
 
-#: evaluation/models/nihss.py:189
+#: evaluation/models/nihss.py:191
 msgid "No movement."
 msgstr "Nenhum movimento."
 
-#: evaluation/models/nihss.py:191
+#: evaluation/models/nihss.py:193
 msgid "6. Motor leg"
 msgstr "6. Membros inferiores"
 
-#: evaluation/models/nihss.py:195
+#: evaluation/models/nihss.py:199
 msgid "Absent."
 msgstr "Ausente."
 
-#: evaluation/models/nihss.py:196
+#: evaluation/models/nihss.py:200
 msgid "Present in one limb."
 msgstr "Presente em 1 membro."
 
-#: evaluation/models/nihss.py:197
+#: evaluation/models/nihss.py:201
 msgid "Present in two limbs."
 msgstr "Presente em dois membros."
 
-#: evaluation/models/nihss.py:199
+#: evaluation/models/nihss.py:203
 msgid "7. Limb Ataxia"
 msgstr "7. Ataxia de membros"
 
-#: evaluation/models/nihss.py:202
+#: evaluation/models/nihss.py:207
 msgid "Normal; no sensory loss."
 msgstr "Normal; sem perda de sensibilidade."
 
-#: evaluation/models/nihss.py:203
+#: evaluation/models/nihss.py:208
 msgid ""
 "Mild-to-moderate sensory loss; patient feels pinprick is less sharp or is "
 "dull on the affected side; or there is a loss of superficial pain with "
 "pinprick, but patient is aware of being touched."
 msgstr ""
-"Perda de sensibilidade leve a moderada; o doente sente menos a picada, ou "
-"há uma perda da sensibilidade dolorosa à picada, mas o paciente sente tocar"
+"Perda de sensibilidade leve a moderada; o doente sente menos a picada, ou há "
+"uma perda da sensibilidade dolorosa à picada, mas o paciente sente tocar"
 
-#: evaluation/models/nihss.py:205
+#: evaluation/models/nihss.py:210
 msgid ""
 "Severe to total sensory loss; patient is not aware of being touched in the "
 "face, arm, and leg."
@@ -3087,15 +3096,15 @@ msgstr ""
 "Perda da sensibilidade grave ou total; o paciente não sente que está sendo "
 "tocado"
 
-#: evaluation/models/nihss.py:207
+#: evaluation/models/nihss.py:212
 msgid "8. Sensory"
 msgstr "8. Sensibilidade"
 
-#: evaluation/models/nihss.py:210
+#: evaluation/models/nihss.py:215
 msgid "No aphasia; normal."
 msgstr "Sem afasia; normal."
 
-#: evaluation/models/nihss.py:211
+#: evaluation/models/nihss.py:216
 msgid ""
 "Mild-to-moderate aphasia; some obvious loss of fluency or facility of "
 "comprehension, without significant limitation on ideas expressed or form of "
@@ -3111,7 +3120,7 @@ msgstr ""
 "conversa sobre o material fornecido, o examinador consegue identificar "
 "figuras ou itens da lista de nomeação a partir da resposta do paciente."
 
-#: evaluation/models/nihss.py:216
+#: evaluation/models/nihss.py:221
 msgid ""
 "Severe aphasia; all communication is through fragmentary expression; great "
 "need for inference, questioning, and guessing by the listener. Range of "
@@ -3125,16 +3134,16 @@ msgstr ""
 "examinador assume a maior parte da comunicação; o examinador não consegue "
 "identificar itens do material fornecido a partir da resposta do paciente."
 
-#: evaluation/models/nihss.py:220
+#: evaluation/models/nihss.py:225
 msgid "Mute, global aphasia; no usable speech or auditory comprehension."
 msgstr ""
 "Mutismo, afasia global; sem discurso ou compreensão verbal minimamente úteis."
 
-#: evaluation/models/nihss.py:222
+#: evaluation/models/nihss.py:227
 msgid "9. Best Language"
 msgstr "9. Melhor linguagem"
 
-#: evaluation/models/nihss.py:226
+#: evaluation/models/nihss.py:231
 msgid ""
 "Mild-to-moderate dysarthria; patient slurs at least some words and, at "
 "worst, can be understood with some difficulty."
@@ -3142,23 +3151,24 @@ msgstr ""
 "Disartria leve a moderada; doente com voz arrastada pelo menos em algumas "
 "palavras, e na pior das hipóteses pode ser entendido com alguma dificuldade."
 
-#: evaluation/models/nihss.py:228
+#: evaluation/models/nihss.py:233
 msgid ""
 "Severe dysarthria; patient's speech is so slurred as to be unintelligible in "
 "the absence of or out of proportion to any dysphasia, or is mute/anarthric."
 msgstr ""
-"Disartria grave; a voz do doente é tão arrastada que chega a ser inteligível, "
-"na ausência ou desproporcionalmente a disfasia, ou tem mutismo ou anatria."
+"Disartria grave; a voz do doente é tão arrastada que chega a ser "
+"inteligível, na ausência ou desproporcionalmente a disfasia, ou tem mutismo "
+"ou anatria."
 
-#: evaluation/models/nihss.py:231
+#: evaluation/models/nihss.py:236
 msgid "10. Dysarthria"
 msgstr "10. Disartria"
 
-#: evaluation/models/nihss.py:234
+#: evaluation/models/nihss.py:240
 msgid "No abnormality."
 msgstr "Nenhuma anormalidade."
 
-#: evaluation/models/nihss.py:235
+#: evaluation/models/nihss.py:241
 msgid ""
 "Visual, tactile, auditory, spatial, or personal inattention or extinction to "
 "bilateral simultaneous stimulation in one of the sensory modalities."
@@ -3166,7 +3176,7 @@ msgstr ""
 "Desatenção visual, tátil, auditiva, espacial ou pessoal, ou extinção à "
 "estimulação simultânea em uma das modalidades sensoriais."
 
-#: evaluation/models/nihss.py:237
+#: evaluation/models/nihss.py:243
 msgid ""
 "Profound hemi-inattention or extinction to more than one modality; does not "
 "recognize own hand or orients to only one side of space. "
@@ -3174,15 +3184,15 @@ msgstr ""
 "Profunda hemidesatenção ou hemidesatenção para mais de uma modalidade; não "
 "reconhece a própria mão e se orienta apenas para um lado do espaço."
 
-#: evaluation/models/nihss.py:240
+#: evaluation/models/nihss.py:246
 msgid "11. Extinction and Inattention (formerly Neglect)"
 msgstr "11. Extinção e Desatenção, antiga negligência"
 
-#: evaluation/models/nihss.py:243
+#: evaluation/models/nihss.py:249
 msgid "NIH Stroke Scale"
 msgstr "NIH Escala de AVC"
 
-#: evaluation/models/nihss.py:244
+#: evaluation/models/nihss.py:250
 msgid "NIH Stroke Scales"
 msgstr "NIH Escalas de AVC"
 
@@ -3731,6 +3741,26 @@ msgstr "h. sua capacidade de ajudar os outros?"
 msgid "Stroke Recovery scale"
 msgstr "Escala de recuperação do AVE"
 
+#: evaluation/models/vas.py:18
+msgid "More painful side"
+msgstr "Lado do corpo no qual a dor predomina"
+
+#: evaluation/models/vas.py:19
+msgid "Pain"
+msgstr "Dor"
+
+#: evaluation/models/vas.py:20
+msgid "Anxiety"
+msgstr "Ansiedade"
+
+#: evaluation/models/vas.py:23
+msgid "VAS - Visual Analog Scale"
+msgstr "EVA - Escala Visual Analógica"
+
+#: evaluation/models/vas.py:24
+msgid "VAS - Visual Analog Scales"
+msgstr "EVA - Escalas Visuais Analógicas"
+
 #: evaluation/templates/admin/app_index.html:9
 #: evaluation/templates/admin/index.html:16
 #: evaluation/templates/reversion-compare/compare.html:19
@@ -3791,6 +3821,7 @@ msgid "EEG"
 msgstr "ELETROENCEFALOGRAMA"
 
 #: evaluation/templates/admin/evaluation/epworth/change_form.html:6
+#: evaluation/templates/admin/evaluation/vas/change_form.html:6
 msgid "EPWORTH SLEEPINESS"
 msgstr "SONOLÊNCIA DE EPWORTH"
 
