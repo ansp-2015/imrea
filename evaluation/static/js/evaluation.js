@@ -144,7 +144,7 @@ var setup_calc_total_field = function(addend_fields, total_field) {
             } else {
                 console.log('registring ');
                 console.log('#id_' + addend_fields[x]);
-                $('#id_' + addend_fields[x]).change(function(){
+                $('#id_' + addend_fields[x]).bind('change', function(){
                     calc_total_field(addend_fields, total_field);
                 });
             }
@@ -178,3 +178,12 @@ var calc_total_field = function(addend_field_ids, total_field_id) {
         total_field.trigger("change");
     }
 }
+
+var change_state = function(el, state) {
+    var v = 0;
+    if (state == true) {
+        v = 1;
+    }
+    $(el).val(v);
+    $(el).change();
+};
