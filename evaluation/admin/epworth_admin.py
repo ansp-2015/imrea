@@ -35,7 +35,7 @@ class EpworthAdmin(admin.ModelAdmin):
         ('', {
             'fields': ('sitting_reading', 'watching_tv', 'sitting_inactive_public', 'car_passenger', 'lying_down',
                        'sitting_talking', 'sitting_quietly_lunch', 'car_traffic'),
-            'description' : {
+            'description': {
                 'fieldset': '_1col_panel',
                 'fieldset_total_points': 24,
                 'fieldset_total_addend_fields': ('sitting_reading', 'watching_tv', 'sitting_inactive_public',

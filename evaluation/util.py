@@ -15,13 +15,13 @@ def url_new_object(model_name):
     return url
 
 
-def choice_numbers(n):
+def choice_numbers(n, start=0):
     """
     Generate choice integer values for Model fields.
     :param n:
-    :return: A tuple of tuples of form (i, 'i'), i ranging from 1 to n
+    :return: A tuple of tuples of form (i, 'i'), i ranging from start to n
     """
-    return tuple([(i, '%s' % i) for i in range(n+1)])
+    return tuple([(i, '%s' % i) for i in range(start,n+1)])
 
 
 def all_evaluations():
