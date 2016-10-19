@@ -2,9 +2,15 @@ from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.admin.options import InlineModelAdmin
 from reversion_compare.helpers import patch_admin
-from ..models.bostonaphasia import BostonAphasia, BostonAphasiaVisualConfrontation, BostonAphasiaAnimalNaming, BostonAphasiaOralSentenceReading
+from ..models.bostonaphasia import BostonAphasia, BostonAphasiaVisualConfrontation, \
+    BostonAphasiaAnimalNaming, BostonAphasiaOralSentenceReading, BostonAphasiaSymbolWordDisc, \
+    BostonAphasiaWordRecognition, BostonAphasiaOralSpelling, BostonAphasiaWordPictureMatching, \
+    BostonAphasiaReadingSentences, BostonAphasiaMechanicsWriting
 from .base_admin import BaseAdmin
-from ..forms.bostonaphasia_form import BostonAphasiaForm, BostonAphasiaConfrontationForm, BostonAphasiaAnimalNamingForm, BostonAphasiaOralSentenceReadingForm
+from ..forms.bostonaphasia_form import BostonAphasiaForm, BostonAphasiaConfrontationForm, \
+    BostonAphasiaAnimalNamingForm, BostonAphasiaOralSentenceReadingForm, BostonAphasiaSymbolWordDiscForm, \
+    BostonAphasiaWordRecognitionForm, BostonAphasiaOralSpellingForm, BostonAphasiaWordPictureMatchingForm, \
+    BostonAphasiaReadingSentencesForm, BostonAphasiaMechanicsWritingForm
 
 
 class BostonAphasiaVisualConfrontationInlineAdmin(InlineModelAdmin):
@@ -132,11 +138,183 @@ class BostonAphasiaOralSentenceReadingInlineAdmin(InlineModelAdmin):
         }),
 
 
+class BostonAphasiaSymbolWordDiscInlineAdmin(InlineModelAdmin):
+    form = BostonAphasiaSymbolWordDiscForm
+    model = BostonAphasiaSymbolWordDisc
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Oral sentence-reading'), {
+            'fields': (
+                ('symbol_word_card8_a_score', 'symbol_word_card8_b_score',
+                'symbol_word_card8_c_score', 'symbol_word_card8_d_score',
+                'symbol_word_card8_e_score',
+                'symbol_word_card9_a_score', 'symbol_word_card9_b_score',
+                'symbol_word_card9_c_score', 'symbol_word_card9_d_score',
+                'symbol_word_card9_e_score',),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_17_symbol_word',
+                'text': _(u'Point to the letter or word template from the cards 8 and 9. The patient should find the matching the word or letter from the selection below.'),
+                'fieldset_total_points': '10',
+                'fieldset_total_addend_field_prefix': 'bostonaphasiasymbolworddisc-__prefix__-',
+                'fieldset_total_addend_fields': ('symbol_word_card8_a_score', 'symbol_word_card8_b_score',
+                                                 'symbol_word_card8_c_score', 'symbol_word_card8_d_score',
+                                                 'symbol_word_card8_e_score',
+                                                 'symbol_word_card9_a_score', 'symbol_word_card9_b_score',
+                                                 'symbol_word_card9_c_score', 'symbol_word_card9_d_score',
+                                                 'symbol_word_card9_e_score',
+                                                 ),
+                'fieldset_total_field': 'symbol_word_total',
+            }
+        }),
+
+
+class BostonAphasiaWordRecognitionInlineAdmin(InlineModelAdmin):
+    form = BostonAphasiaWordRecognitionForm
+    model = BostonAphasiaWordRecognition
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Word recognition'), {
+            'fields': (
+                ('word_recognition_a_score', 'word_recognition_b_score',
+                 'word_recognition_c_score', 'word_recognition_d_score',
+                 'word_recognition_e_score', 'word_recognition_f_score',
+                 'word_recognition_g_score', 'word_recognition_h_score',),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_18_word_recognition',
+                'text': _(u'The patient should point the cards 10 and 11 the written words corresponding to those presented orally. The patient should be directed to the correct line on the card.'),
+                'fieldset_total_points': '8',
+                'fieldset_total_addend_field_prefix': 'bostonaphasiawordrecognition-__prefix__-',
+                'fieldset_total_addend_fields': ('word_recognition_a_score', 'word_recognition_b_score',
+                                                 'word_recognition_c_score', 'word_recognition_d_score',
+                                                 'word_recognition_e_score', 'word_recognition_f_score',
+                                                 'word_recognition_g_score', 'word_recognition_h_score',
+                                                 ),
+                'fieldset_total_field': 'word_recognition_total',
+            }
+        }),
+
+
+class BostonAphasiaOralSpellingInlineAdmin(InlineModelAdmin):
+    form = BostonAphasiaOralSpellingForm
+    model = BostonAphasiaOralSpelling
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Oral spelling'), {
+            'fields': (
+                ('oral_spelling_a_score', 'oral_spelling_b_score',
+                 'oral_spelling_c_score', 'oral_spelling_d_score',
+                 'oral_spelling_e_score', 'oral_spelling_f_score',
+                 'oral_spelling_g_score', 'oral_spelling_h_score',),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_19_oral_spelling',
+                'text': _(u'Spell the words for the patient and he/she must identify the word spelled.'),
+                'fieldset_total_points': '8',
+                'fieldset_total_addend_field_prefix': 'bostonaphasiaoralspelling-__prefix__-',
+                'fieldset_total_addend_fields': ('oral_spelling_a_score', 'oral_spelling_b_score',
+                                                 'oral_spelling_c_score', 'oral_spelling_d_score',
+                                                 'oral_spelling_e_score', 'oral_spelling_f_score',
+                                                 'oral_spelling_g_score', 'oral_spelling_h_score',
+                                                 ),
+                'fieldset_total_field': 'word_recognition_total',
+            }
+        }),
+
+
+class BostonAphasiaWordPictureMatchingInlineAdmin(InlineModelAdmin):
+    form = BostonAphasiaWordPictureMatchingForm
+    model = BostonAphasiaWordPictureMatching
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Word-picture matching'), {
+            'fields': (
+                ('word_picture_chair_score', 'word_picture_circle_score', 'word_picture_hammock_score',
+                 'word_picture_triangle_score', 'word_picture_fifteen_score', 'word_picture_purple_score',
+                 'word_picture_seven_t_o_score', 'word_picture_dripping_score', 'word_picture_brown_score',
+                 'word_picture_smoking_score'),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_20_word_picture_matching',
+                'text': _(u'Asserted objects, color, etc. Using Cards 2 and 3, and Card 5, have patient pick out appropriate picture for each word shown him. ("Which of these pictures is this word:") Discourage patients from reading aloud.'),
+                'fieldset_total_points': '8',
+                'fieldset_total_addend_field_prefix': 'bostonaphasiawordpicture-__prefix__-',
+                'fieldset_total_addend_fields': ('word_picture_chair_score', 'word_picture_circle_score',
+                                                 'word_picture_hammock_score', 'word_picture_triangle_score',
+                                                 'word_picture_fifteen_score', 'word_picture_purple_score',
+                                                 'word_picture_seven_t_o_score', 'word_picture_dripping_score',
+                                                 'word_picture_brown_score', 'word_picture_smoking_score'),
+                'fieldset_total_field': 'word_picture_total',
+            }
+        }),
+
+
+class BostonAphasiaReadingSentencesInlineAdmin(InlineModelAdmin):
+    form = BostonAphasiaReadingSentencesForm
+    model = BostonAphasiaReadingSentences
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Reading sentences and paragraphs'), {
+            'fields': (
+                ('reading_sentences_dog_score', 'reading_sentences_mother_score',
+                 'reading_sentences_haircut_score', 'reading_sentences_bird_score',
+                 'reading_sentences_school_score', 'reading_sentences_artist_score',
+                 'reading_sentences_aluminum_score', 'reading_sentences_sanitation_score',
+                 'reading_sentences_civil_service_score', 'reading_sentences_government_score'),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_21_reading_sentences',
+                'text': _(u'Patient is presented with Cards 12, 13, 14, 15 and 16 successively. Patient indicates his selection on the card and the examiner underlines the choice in the test booklet. Assistance may be given in the two examples, but not in the test proper.'),
+                'fieldset_total_points': '10',
+                'fieldset_total_addend_field_prefix': 'bostonaphasiareadingsentences-__prefix__-',
+                'fieldset_total_addend_fields': (
+                    'reading_sentences_dog_score', 'reading_sentences_mother_score',
+                    'reading_sentences_haircut_score', 'reading_sentences_bird_score',
+                    'reading_sentences_school_score', 'reading_sentences_artist_score',
+                    'reading_sentences_aluminum_score', 'reading_sentences_sanitation_score',
+                    'reading_sentences_civil_service_score', 'reading_sentences_government_score'),
+                'fieldset_total_field': 'reading_sentences_total',
+                'reading_sentences_items': [form.reading_sentences_dog_items, form.reading_sentences_mother_items,
+                    form.reading_sentences_haircut_items, form.reading_sentences_bird_items,
+                    form.reading_sentences_school_items, form.reading_sentences_artist_items,
+                    form.reading_sentences_aluminum_items, form.reading_sentences_sanitation_items,
+                    form.reading_sentences_civil_service_items, form.reading_sentences_government_items,]
+            }
+        }),
+
+
+class BostonAphasiaMechanicsWritingInlineAdmin(InlineModelAdmin):
+    form = BostonAphasiaMechanicsWritingForm
+    model = BostonAphasiaMechanicsWriting
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Mechanics of Writing'), {
+            'fields': (
+                ('mechanics_writing_score',),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_22_mechanics_writing',
+            }
+        }),
+
+
+
+
 class BostonAphasiaAdmin(BaseAdmin):
 
     form = BostonAphasiaForm
     inlines = [BostonAphasiaVisualConfrontationInlineAdmin, BostonAphasiaAnimalNamingInlineAdmin,
-               BostonAphasiaOralSentenceReadingInlineAdmin
+               BostonAphasiaOralSentenceReadingInlineAdmin, BostonAphasiaSymbolWordDiscInlineAdmin,
+               BostonAphasiaWordRecognitionInlineAdmin, BostonAphasiaOralSpellingInlineAdmin,
+               BostonAphasiaWordPictureMatchingInlineAdmin, BostonAphasiaReadingSentencesInlineAdmin,
+               BostonAphasiaMechanicsWritingInlineAdmin
                ]
     fieldsets = (
         (_(u'Patient'), {
