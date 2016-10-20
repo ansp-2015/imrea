@@ -4,21 +4,18 @@ from django.utils.translation import ugettext_lazy as _
 from . import BaseEvaluation
 
 
-class VAS(BaseEvaluation):
+class JTHFT(BaseEvaluation):
     """
 
     """
 
-
-    VAS_SIDE = (
-        (0, _(u'Left')),
-        (1, _(u'Right')),
-    )
-
-    side = models.IntegerField(_('More painful side'), choices=VAS_SIDE)
-    pain = models.FloatField(_('Pain'))
-    anxiety = models.FloatField(_('Anxiety'))
+    paretic_hand_first = models.DurationField(_('First'))
+    healthy_hand_first = models.DurationField()
+    paretic_hand_second = models.DurationField(_('Second'))
+    healthy_hand_second = models.DurationField()
+    paretic_hand_third = models.DurationField(_('Third'))
+    healthy_hand_third = models.DurationField()
 
     class Meta:
-        verbose_name = _('VAS - Visual Analog Scale')
-        verbose_name_plural = _('VAS - Visual Analog Scales')
+        verbose_name = _('JTHFT - Jebsen Taylor Hand Function Test')
+        verbose_name_plural = _('JTHFT - Jebsen Taylor Hand Function Tests')

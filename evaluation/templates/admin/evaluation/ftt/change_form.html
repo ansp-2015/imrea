@@ -3,7 +3,7 @@
         {% block field_sets %}
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title">{% trans "FUNCTIONAL INDEPENDENCE MEASURE - FIM" %}</h3>
+                <h3 class="panel-title">{% trans "FINGER TAPPING TEST - FTT" %}</h3>
               </div>
               <div class="panel-body">
         {% for fieldset in adminform %}
@@ -13,14 +13,12 @@
             </div>
             </div>
             {% if forloop.first %}
+                {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=fieldset.description.help|safe %}
             <div class="row">
 	            <div class="col-md-6 col-sm-6 col-xs-12">
 	                <table class="category-table table table-striped">
-	                    <thead class="thead-default">
-	                        <tr><th colspan="2">{% trans "Level" %}</th></tr>
-	                    </thead>
 	                    <tbody>
-			                {% for c in FIM_CHOICES_CATEGORY %}
+			                {% for c in fieldset.description.choices %}
 			                    <tr>
 			                    {% for c1 in c %}
 			                            <td>{{c1}}</td>

@@ -5,30 +5,26 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.utils.translation import ugettext_lazy as _
 from reversion_compare.helpers import patch_admin
-from ..models.eeg import Eeg, EegFile
-from ..forms.eeg_form import EegForm, EegFileInlineForm
+from ..models.ftt import FTT
+from ..forms.ftt_form import FTTForm
 from .base_admin import BaseAdmin
 
 
-class EegFileAdminInline(admin.TabularInline):
-    model = EegFile
-    extra = 2
-    form = EegFileInlineForm
+class FTTAdmin(BaseAdmin):
 
-
-class EegAdmin(BaseAdmin):
-
-    form = EegForm
-    inlines = [EegFileAdminInline]
+    form = FTTForm
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient', 'period'),
             'description': {'fieldset': '_patient'}
         }),
-        (_(u'File'), {
-            'fields': ('eegtitle',),
+        (_(u''), {
+            'fields': (('paretic_hand_first', 'healthy_hand_first'),
+                       ('paretic_hand_second','healthy_hand_second'),
+                       ('paretic_hand_third', 'healthy_hand_third')),
             'description': {
-                'fieldset': '_1col',
+                'fieldset': '_table',
+                'columns': ((0, ''), (1, u'Paretic hand'), (2, u'Healthy hand')),
             }
         }),
         (_(u''), {
@@ -40,7 +36,7 @@ class EegAdmin(BaseAdmin):
     )
 
 
-admin.site.register(Eeg, EegAdmin)
+admin.site.register(FTT, FTTAdmin)
 # Registrando no reversion-compare
-patch_admin(Eeg)
+patch_admin(FTT)
 

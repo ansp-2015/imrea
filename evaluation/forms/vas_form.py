@@ -1,6 +1,6 @@
 from django import forms
 from ..widgets import ButtonRadioHorizontalLabelSelect, StepNumberInput
-from ..models import VAS
+from evaluation.models.vas import VAS
 
 
 class VASForm(forms.ModelForm):

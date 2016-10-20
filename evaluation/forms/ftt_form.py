@@ -1,9 +1,9 @@
 from django import forms
 from ..widgets import ButtonRadioHorizontalLabelSelect, StepNumberInput
-from evaluation.models.jthft import JTHFT
+from evaluation.models.ftt import FTT
 
 
-class JTHFTForm(forms.ModelForm):
+class FTTForm(forms.ModelForm):
 
     class Media:
         css = {
@@ -12,7 +12,7 @@ class JTHFTForm(forms.ModelForm):
         js = ('js/jquery.bootstrap-touchspin.js',)
 
     class Meta:
-        model = JTHFT
+        model = FTT
         fields = ['paretic_hand_first', 'healthy_hand_first', 'paretic_hand_second', 'healthy_hand_second',
                   'paretic_hand_third', 'healthy_hand_third']
 

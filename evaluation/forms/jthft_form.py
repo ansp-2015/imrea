@@ -1,12 +1,9 @@
 from django import forms
 from ..widgets import ButtonRadioHorizontalLabelSelect, StepNumberInput
-from ..models import VAS
+from evaluation.models.jthft import JTHFT
 
 
-class VASForm(forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super(VASForm, self).__init__(*args, **kwargs)
-        self.fields['side'].choices = VAS.VAS_SIDE
+class JTHFTForm(forms.ModelForm):
 
     class Media:
         css = {
@@ -15,11 +12,7 @@ class VASForm(forms.ModelForm):
         js = ('js/jquery.bootstrap-touchspin.js',)
 
     class Meta:
-        model = VAS
-        fields = ['side', 'pain', 'anxiety']
+        model = JTHFT
+        fields = ['paretic_hand_first', 'healthy_hand_first', 'paretic_hand_second', 'healthy_hand_second',
+                  'paretic_hand_third', 'healthy_hand_third']
 
-        widgets = {
-            'side': ButtonRadioHorizontalLabelSelect(),
-            'pain': StepNumberInput(attrs={'min': 0, 'max': 10, 'step': 0.1}),
-            'anxiety': StepNumberInput(attrs={'min': 0, 'max': 10, 'step': 0.1}),
-        }

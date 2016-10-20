@@ -1,6 +1,6 @@
 from django import forms
 from ..widgets import IntegerCheckboxInput
-from ..models import MoCA
+from evaluation.models.moca import MoCA
 from ..util import choice_numbers
 
 

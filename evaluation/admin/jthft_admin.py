@@ -6,16 +6,16 @@ from django.contrib.admin.utils import (unquote,)
 from reversion_compare.helpers import patch_admin
 import logging
 from .base_admin import BaseAdmin
-from evaluation.models.vas import VAS
-from ..forms import VASForm
+from evaluation.models.jthft import JTHFT
+from evaluation.forms.jthft_form import JTHFTForm
 
 
-class VASAdmin(admin.ModelAdmin):
+class JTHFTAdmin(admin.ModelAdmin):
     """
     Visual Analog Scale
     """
 
-    form = VASForm
+    form = JTHFTForm
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient', 'period'),
@@ -24,13 +24,17 @@ class VASAdmin(admin.ModelAdmin):
             }
         }),
         ('', {
-            'fields': ('side', ('pain', 'anxiety')),
+            'fields': (('paretic_hand_first', 'healthy_hand_first'),
+                       ('paretic_hand_second', 'healthy_hand_second'),
+                       ('paretic_hand_third', 'healthy_hand_third')
+                       ),
             'description' : {
-                'fieldset': '_1col_panel',
+                'fieldset': '_table',
+                'columns': ((0, _('Sequence')), (1, _('Paretic hand')), (2, _('Healthy hand'))),
             }
         }),
     )
     list_display = ('patient', 'period', 'last_update')
     ordering = ('patient', 'period', 'last_update')
 
-admin.site.register(VAS, VASAdmin)
+admin.site.register(JTHFT, JTHFTAdmin)
