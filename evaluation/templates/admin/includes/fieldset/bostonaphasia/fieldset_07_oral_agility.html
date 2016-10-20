@@ -1,0 +1,147 @@
+{% load i18n bootstrapped_goodies_tags %}
+<fieldset class="_module _aligned" id="fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
+    {% if fieldset.name %}
+        <legend>
+            {% if 'collapse' in fieldset.classes %}
+                <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
+                    {{ fieldset.name }}
+                    &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></span></span>
+                </a>
+            {% else %}
+              {{ fieldset.name }}
+            {% endif %}
+        </legend>
+    {% endif %}
+    <div class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
+        {% if fieldset.description.text %}
+            <div class="description"><p>{{ fieldset.description.text|safe }}</p></div>
+        {% endif %}
+        {% for line in fieldset %}
+            <div class="row">
+                <div class="col-md-8">
+                    {% if forloop.first %}
+                        <p>
+                        {% blocktrans %}
+                            <strong>Verbal agility</strong>: Have the patient repeat the following words as rapidly as he can,
+                            while you time the number of repetitions for 5 seconds
+                            Any assistance which helps patient to produce the desired word initially is permitted.
+                        {% endblocktrans %}
+                        </p>
+                    {% endif %}
+                    <table class="table table-condensed table-responsive table-striped" id="grid-table">
+                        <thead>
+                            <tr>
+                                <th>{% trans "Action required" %}</th>
+                                <th>{% trans "N. of times in 5s<br>2 points" %}</th>
+                                <th>{% trans "N. of times in 5s<br>1 point" %}</th>
+                                <th>{% trans "Score" %}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for field in line %}
+                                <tr>
+                                    <td>
+                                        {{ field.label_tag }}
+                                    </td>
+                                    <td class="fixed-columns">
+                                        {% if forloop.parentloop.counter == 1 %}
+                                            {% if forloop.counter == 1 %} 9
+                                            {% elif forloop.counter == 2 %} 6
+                                            {% elif forloop.counter == 3 %} 5
+                                            {% elif forloop.counter == 4 %} 9
+                                            {% elif forloop.counter == 5 %} 7
+                                            {% elif forloop.counter == 6 %} 5
+                                            {% elif forloop.counter == 7 %} 7
+                                            {% endif %}
+                                        {% endif %}
+                                    </td>
+                                    <td class="fixed-columns">
+                                        {% if forloop.parentloop.counter == 1 %}
+                                            {% if forloop.counter == 1 %} 3-8
+                                            {% elif forloop.counter == 2 %} 2-5
+                                            {% elif forloop.counter == 3 %} 2-4
+                                            {% elif forloop.counter == 4 %} 3-8
+                                            {% elif forloop.counter == 5 %} 3-6
+                                            {% elif forloop.counter == 6 %} 2-4
+                                            {% elif forloop.counter == 7 %} 3-6
+                                            {% endif %}
+                                        {% endif %}
+                                    </td>
+                                    <td class="fixed-columns">
+                                    {% if field.is_checkbox %}
+                                        <div class="controls col-md-12">
+                                            <div class="checkbox">
+                                                {% dab_field_rendering field.field %} {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        {% if field.is_readonly %}
+                                            <p>{{ field.contents }}</p>
+                                        {% else %}
+                                            {% dab_field_rendering field.field %}
+                                        {% endif %}
+                                        {% if not field.is_readonly and field.errors %}<span class="text-danger">{{ field.errors|striptags }}</span>{% endif %}
+                                    {% endif %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {% endfor %}
+    {% include "admin/includes/fieldset/row_total.html" %}
+    </div>
+    <div class="panel panel-default" style="margin-top:2em;">
+        <div class="panel-heading">
+            <h5><strong>{% blocktrans %}Articulation quality and paraphrasis Score.{% endblocktrans %}</strong></h5>
+        </div>
+        <div class="panel-body">
+            <div>
+                {% blocktrans %}<p>The subtests B and D to H favor the registration paraphasics responses and determining the qualification of the articulation to Normal, Stiff, Distorted and Fail for each response that is a recognized trial for the word target and not paraphasic. Definitions for these joint qualifications will be found on page 36 of the Assessment of Aphasia and Related Disorders, 1983 (on page 30 and 31, 1972 Ed.). The articulation qualifications are registered for the guidance of the examiner in reviewing the testing protocol, and the qualifications to Normal, Stiff or Distorted indicate that the response is scored as correct. A response is scored as a failure if it is classified as a failed articulation, or if there is a paraphasia or lack of response.</p><p>The paraphasias should be included in their respective columns and counted in paraphasias marking even if there is self-correcting. It is given credit for the item, even if the paraphasia is told.</p>{% endblocktrans %}
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default" style="margin-top:2em;">
+        <div class="panel-heading">
+                {% blocktrans %}<strong>Coding of paraphasia columns</strong>{% endblocktrans %}
+        </div>
+        <div class="panel-body">
+            <div>
+                <h4>{% blocktrans %}Paraphasic errors in single words.{% endblocktrans %}</h4>
+            </div>
+            <div>
+                <div><strong>{% blocktrans %}Neologistic distortion{% endblocktrans %}</strong></div>
+                <div>{% blocktrans %}more than half of the sounds produced are extraneous to the desired word. This term applies only to responses which are spoken as a unit with some fluency of articulation. It does not apply to sounds produced by subjects groping for the correct articulatory position. Latter responses would simply be scored as failures or as severely distorted in articulation if the word is recognizable.{% endblocktrans %}</div>
+
+                <div><strong>{% blocktrans %}Literal paraphasia{% endblocktrans %}</strong></div>
+                <div>{% blocktrans %}response contains sounds or syllables which have slipped out of sequence, have been deleted or are entirely extraneous to the desired response, but more than half of the response corresponds to more than half of the required word.{% endblocktrans %}</div>
+
+                <div><strong>{% blocktrans %}Verbal paraphasia{% endblocktrans %}</strong></div>
+                <div>{% blocktrans %}substitution of an inappropriate word during the effort to sayt something specific.{% endblocktrans %}</div>
+            </div>
+            <div>
+                <div><h4>{% blocktrans %}Paraphasic errors in connected speech.{% endblocktrans %}</h4></div>
+                <div>{% blocktrans %}<strong>Other</strong> - this category applies to a number of types of paraphasia involving more than a single word and to some nonparaphasic responses.{% endblocktrans %}</div>
+                <div>{% blocktrans %}Examiner should write in an abbreviation of a category rather than use a checkmark only.{% endblocktrans %}</div>
+
+                <div>{% blocktrans %}<strong>enj</strong> - extended neologistic jargon{% endblocktrans %}</div>
+                <div>{% blocktrans %}Nonsense word, but sounds like wordTypically will use same neologism for same word; with preservation of sentence pattern and intonation/phrase grouping.{% endblocktrans %}</div>
+
+                <div>{% blocktrans %}<strong>ecj</strong> - extended English jargon{% endblocktrans %}</div>
+                <div>{% blocktrans %}Free flowing speech which maintains a typical prosodic line, yet content is lacking; Real English words are included in the jargon{% endblocktrans %}</div>
+
+                <div>{% blocktrans %}<strong>cl</strong> - circumlocution{% endblocktrans %}</div>
+                <div>{% blocktrans %}Some patients, unable to evoke an elusive word, substitute another word, phrase, gesture or use circumlocutions{% endblocktrans %}</div>
+
+                <div>{% blocktrans %}<strong>irrel</strong> - irrelevant speech{% endblocktrans %}</div>
+                <div>{% blocktrans %}normal syntaxe{% endblocktrans %}</div>
+            </div>
+            <div>
+                <br>
+                <p>{% blocktrans %}NOTE: repeated syllables or actual words of a stereotypical short repertoire are not scored as paraphasias. Similarly, continuous murmurs or syllables that are not segmented into "words" are not scored as paraphasias{% endblocktrans %}</p>
+            </div>
+        </div>
+    </div>
+</fieldset>

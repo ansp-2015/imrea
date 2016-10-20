@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from ..widgets import ButtonRadioHorizontalValueSelect
-from ..models import Hamilton
+from ..models.hamilton import Hamilton
 from django.utils.translation import ugettext_lazy as _
 
 class HamiltonForm(forms.ModelForm):

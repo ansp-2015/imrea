@@ -53,11 +53,12 @@ $(document).ready(function() {
 var evaluation_home_patients_select_change = function() {
   $.get( "ajax_home_patient_periods", { p:this.value } )
       .done(function( data ) {
-
           var html_content = '';
           for (i = 0; i < data.evaluated_periods.length; i++) {
               period = data.evaluated_periods[i];
-              html_content += "<a href='#' data-period-id='"+period.id+"' class='home_period_link list-group-item'>"+period.period+"</a>";
+              html_content += "<a href='#' data-period-id='"+period.id+"' class='home_period_link list-group-item'><span>"+period.period+"</span>";
+              html_content += "<span class='badge'>" + period.qty_evaluated + " / " + period.qty_total_evaluation + "</span>";
+              html_content += "</a>";
           }
           $("#home-panel-period-evaluated").html("<div class='list-group'>" + html_content + "</div>");
 
@@ -130,7 +131,7 @@ $(document).ready(function() {
      addend_field_ids: campos que são as parcelas da soma
      totoal_field._id: campo que receberá o total
 */
-var setup_calc_total_field = function(addend_fields, total_field) {
+var setup_calc_total_field = function(addend_fields, total_field, extra_calc) {
     if (addend_fields && addend_fields.length > 0 && total_field) {
         // preparing the event triggers
         for (var x = 0; x < addend_fields.length; x++) {
@@ -142,10 +143,11 @@ var setup_calc_total_field = function(addend_fields, total_field) {
                     });
                 }
             } else {
-                console.log('registring ');
-                console.log('#id_' + addend_fields[x]);
-                $('#id_' + addend_fields[x]).bind('change', function(){
+                $('#id_' + addend_fields[x]).change(function(){
                     calc_total_field(addend_fields, total_field);
+                    if (extra_calc) {
+                        extra_calc();
+                    }
                 });
             }
         }
@@ -173,7 +175,7 @@ var calc_total_field = function(addend_field_ids, total_field_id) {
                 total_field.val(parseInt($('input[type=radio][name=' + addend_field_ids[x] + ']:checked').val()) + parseInt(total_field.val()));
             }
         } else {
-            total_field.val(parseInt($('#id_' + addend_field_ids[x]).val()) + parseInt(total_field.val()));
+            total_field.val((parseInt($('#id_' + addend_field_ids[x]).val()) || 0) + (parseInt(total_field.val()) || 0));
         }
         total_field.trigger("change");
     }

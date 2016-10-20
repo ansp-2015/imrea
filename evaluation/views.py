@@ -37,12 +37,15 @@ def ajax_home_patient_periods(request):
     patient = Patient.objects.get(pk=patient_id)
 
     # Evaluated periods
-    evaluated_periods = patient.find_evaluated_period()
+    evaluated_periods = BaseEvaluation.find_evaluated_period(patient)
     evaluated_periods_array = []
     for e in evaluated_periods:
-        evaluated_periods_array.append({"id": e.pk, "period": e.period})
+        qty_evaluated = len(BaseEvaluation.find_evaluated_objects(patient, e))
+        qty_total_evaluation = len(BaseEvaluation.__subclasses__())
 
-    not_evaluated_periods = patient.find_not_evaluated_period()
+        evaluated_periods_array.append({"id": e.pk, "period": e.period, "qty_evaluated": qty_evaluated, "qty_total_evaluation": qty_total_evaluation})
+
+    not_evaluated_periods = BaseEvaluation.find_not_evaluated_period(patient)
     not_evaluated_periods_array = []
     for e in not_evaluated_periods:
         not_evaluated_periods_array.append({"id": e.pk, "period": e.period})

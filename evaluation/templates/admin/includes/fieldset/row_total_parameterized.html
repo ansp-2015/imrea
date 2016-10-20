@@ -1,0 +1,45 @@
+{% load i18n bootstrapped_goodies_tags imrea_evaluation_tags %}
+{% comment %}
+To be include in a fieldset.
+
+You must configure three parameters:
+total_addend_fields  =>  fields with the total addends pointsç
+total_addend_field_prefix (optional) => prefix to
+total_points_label (optional) => Label before the max points
+total_points  =>  Integer with the max points
+total_field  =>   field name to render the total points
+
+{% endcomment %}
+{% if total_addend_fields and total_field %}
+    <script type="text/javascript">
+        $(function() {
+            var addends = [];
+            {% for f in total_addend_fields %}
+                {% if total_addend_field_prefix %}
+                    console.log('{{total_addend_field_prefix}}{{f}}');
+                    addends.push('{{total_addend_field_prefix}}{{f}}');
+                {% else %}
+                    addends.push('{{f}}');
+                {% endif %}
+            {% endfor %}
+            setup_calc_total_field(addends, '{{total_field}}');
+        });
+    </script>
+    <div class="row">
+        <div class="col-md-3">
+            {% if total_points %}
+            <strong>
+                {% if total_points_label %}
+                    {{total_points_label}}
+                {% else %}
+                    {% trans "Subtotal max" %}
+                {% endif %}
+            </strong> ({{total_points}})
+            {% endif %}
+        </div>
+        <div class="col-md-9">
+            <strong>{% trans "Total" %}:</strong>
+            <input class="total_field_readonly" type="text" id="id_{{total_field}}" >
+        </div>
+    </div>
+{% endif %}

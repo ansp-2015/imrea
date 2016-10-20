@@ -1,6 +1,6 @@
 from django import forms
 from ..widgets import ButtonRadioHorizontalValueSelect
-from ..models import Epworth
+from ..models.epworth import Epworth
 
 
 class EpworthForm(forms.ModelForm):

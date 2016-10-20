@@ -38,11 +38,3 @@ class Patient(models.Model):
         ordering = ['name']
         verbose_name = _('Patient')
         verbose_name_plural = _('Patients')
-
-    def find_evaluated_period(self):
-        periods = Period._find_evaluated_period(self)
-        return periods
-
-    def find_not_evaluated_period(self):
-        periods = Period._find_not_evaluated_period(self)
-        return periods

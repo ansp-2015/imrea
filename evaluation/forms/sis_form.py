@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from ..models import SIS
+from ..models.sis import SIS
 from ..widgets import ButtonRadioGridSelect
 
 class SISForm(forms.ModelForm):

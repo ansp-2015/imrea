@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-19 15:13-0300\n"
+"POT-Creation-Date: 2016-10-20 15:02-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,44 +22,258 @@ msgstr ""
 msgid "Birthdate"
 msgstr "Data de nascimento"
 
-#: evaluation/admin/bostonaphasia_admin.py:11 evaluation/admin/clin_admin.py:13
-#: evaluation/admin/eeg_admin.py:13 evaluation/admin/epworth_admin.py:27
-#: evaluation/admin/fim_admin.py:19 evaluation/admin/fuglmeyer_admin.py:21
+#: evaluation/admin/bostonaphasia_admin.py:17
+msgid "Visual confrontation naming"
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:65
+#: evaluation/admin/bostonaphasia_admin.py:162
+msgid ""
+"Are you left or right-handed? Which hand you prefer for that activity? Do "
+"you ever use the other hand for the activity?"
+msgstr ""
+"Instruções: você é destro ou canhoto? Você tem tendência a realizar "
+"atividades com sua outra mão? Com que mão você... (enumerar diversas "
+"atividaes). Algumas vezes você usa a outra mão?"
+
+#: evaluation/admin/bostonaphasia_admin.py:92
+msgid "Animal naming"
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:98
+msgid ""
+"Instruct the patient \"I want to see how many different animals you can call "
+"to mind and name for about a minute, while I count them. Any animals will "
+"do; they can be from the farm, the jungle, the ocean or house pets. For "
+"instance you can start with dog.\" Start timing from this point and continue "
+"for a minute and a half. Score is based on the most productive consecutive "
+"60 seconds. Record verbatim below."
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:109
+msgid "Oral sentence-reading"
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:123
+msgid ""
+"Have the patient read the following sentences aloud. Indicate by marking on "
+"this record any assistance given, omissions, substitutions,etc. One point "
+"credit is allowed for each completely correct sentence."
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:142
+#: evaluation/admin/clin_admin.py:13 evaluation/admin/eeg_admin.py:24
+#: evaluation/admin/epworth_admin.py:27 evaluation/admin/fim_admin.py:19
+#: evaluation/admin/ftt_admin.py:17 evaluation/admin/fuglmeyer_admin.py:21
 #: evaluation/admin/had_admin.py:18 evaluation/admin/hamilton_admin.py:18
-#: evaluation/admin/kviq_admin.py:13 evaluation/admin/mmse_admin.py:18
+#: evaluation/admin/jthft_admin.py:20 evaluation/admin/kviq_admin.py:13
+#: evaluation/admin/mmse_admin.py:18 evaluation/admin/moca_admin.py:20
 #: evaluation/admin/nihss_admin.py:18 evaluation/admin/patient_admin.py:9
 #: evaluation/admin/sis_admin.py:15 evaluation/admin/vas_admin.py:20
-#: evaluation/models/base_evaluation.py:17 evaluation/models/patient.py:39
+#: evaluation/models/base_evaluation.py:18 evaluation/models/patient.py:39
 #: evaluation/templates/admin/evaluation/patient/change_form.html:6
 #: evaluation/templates/admin/index.html:56
 msgid "Patient"
 msgstr "Paciente"
 
-#: evaluation/admin/bostonaphasia_admin.py:15
+#: evaluation/admin/bostonaphasia_admin.py:146
 msgid "Manual dominance."
 msgstr ""
 
-#: evaluation/admin/bostonaphasia_admin.py:18
+#: evaluation/admin/bostonaphasia_admin.py:160
+#: evaluation/admin/bostonaphasia_admin.py:218
 msgid "Activity"
 msgstr ""
 
-#: evaluation/admin/bostonaphasia_admin.py:18
+#: evaluation/admin/bostonaphasia_admin.py:160
+#: evaluation/admin/bostonaphasia_admin.py:218
 msgid "Left hand"
 msgstr ""
 
-#: evaluation/admin/bostonaphasia_admin.py:18
+#: evaluation/admin/bostonaphasia_admin.py:160
+#: evaluation/admin/bostonaphasia_admin.py:218
 msgid "Right hand"
 msgstr ""
 
-#: evaluation/admin/bostonaphasia_admin.py:20
-msgid "Instructions:..."
+#: evaluation/admin/bostonaphasia_admin.py:165
+msgid "Conversational and expository speech"
+msgstr "Conversação e narração"
+
+#: evaluation/admin/bostonaphasia_admin.py:175
+msgid ""
+"Conduct an informal exchange, incorporating suggested questions, to elicit "
+"as many ofthe desired responses as possible. Write responses verbatim. Tape "
+"record if possible"
+msgstr ""
+"Conduzir a interação informalmente incoporando as perguntas para eliciar "
+"tanto quanto possível as respostas desejadas. Transcrever integralmente. "
+"Gravar se possível."
+
+#: evaluation/admin/bostonaphasia_admin.py:178
+msgid "Auditory Comprehension"
+msgstr "Compreensão auditiva"
+
+#: evaluation/admin/bostonaphasia_admin.py:220
+msgid ""
+"Show the cards 2 and 3 separately.The patient must look all the pictures "
+"from the card before the start.Instruct the patient to point to the picture "
+"or symbol, saying \"Show me the...\"Change randomly from one category to "
+"anotherIt is allowed one repetition, if asked.Show the correct category if "
+"the patient can't find it and repeat the item name to be identified.Score 2 "
+"points if the response is correct within 5 seconds, otherwise, 1 "
+"pointCorrect category but inaccurate item score 1/2 point."
+msgstr ""
+"Apresentar os cartões 2 e 3 separadamente . O paciente deve olhar todas as "
+"figuras no cartão apresentado antes de iniciar. Então, pedir a ele para "
+"apontar cada figura ou símbolo, dizendo \"Montre-me o\". Alternar "
+"aleatoriamente de uma categoria para outra. É permitida uma repetição, se "
+"solicitada. Mostrar a categoria correta se o paciente não encontrá-la e "
+"repetir o nome do item a ser identificado. A discriminação correta tem "
+"escorre de 2 pontos se ocorrer em 5 segundos e, caso contrário, 1 ponto. "
+"Atenção para a categoria correta, sem discriminação correta tem escore de "
+"1/2 ponto."
+
+#: evaluation/admin/bostonaphasia_admin.py:237
+msgid "Body parts identification"
+msgstr "Identificação de Partes do Corpo"
+
+#: evaluation/admin/bostonaphasia_admin.py:268
+msgid ""
+"The patient is asked to point on his/her body to the part named. Enter "
+"erroneous responses.Score: The items in the first two columns A and B have "
+"the scores 1 point if recognized immediately (within 5 seconds), and 1/2 "
+"point is correctly identified (after 5 seconds). The third column C is right-"
+"left discrimination and receives a total of 2 points if all 8 items are "
+"correct (the body part may be incorrect since there is no failure in the "
+"right-left discrimination), 1 point is 6 or 7 items are correct, otherwise "
+"zero."
+msgstr ""
+"Pedir ao paciente para apontar em sequência as partes do corpo. Registrar as "
+"respostas incorretas. Pontuação: Os itens nas primeiras duas colunas A e B "
+"tem como escore 1 ponto se reconhecidos imediatamente (dentro de 5 segundos) "
+"e 1/2 ponto se identificados corretamente (após 5 segundos). A terceira "
+"coluna C é para a discriminação direita-esquerda e recebe um total de 2 "
+"pontos se todos os 8 itens forem corretos (a parte do corpo pode estar "
+"incorreta desde que não haja falha na discriminação direta-esquerda), 1 "
+"ponto se os itens 6 ou 7 estiverem corretos, caso contrário zero."
+
+#: evaluation/admin/bostonaphasia_admin.py:292
+msgid "Commands"
+msgstr "Ordens"
+
+#: evaluation/admin/bostonaphasia_admin.py:299
+msgid ""
+"Have the patient carry out the following commands, giving one point of "
+"credit for each underlined element that he or she carries out. One "
+"repetition is permitted on request, but the whole command must be repeated."
+msgstr ""
+"O paciente deverá realizar as seguintes ordens, pontuando-se cada elemento "
+"sublinhado que ele realiza. É permitida uma repetição se solicitada, mas a "
+"ordem deve ser sempre repetida totalmente, não segmentada."
+
+#: evaluation/admin/bostonaphasia_admin.py:308
+msgid "Complex ideational material"
+msgstr "Material Ideacional Complexo"
+
+#: evaluation/admin/bostonaphasia_admin.py:325
+msgid ""
+"Both the A and B questions must be correct to gain 1 point of credit for "
+"each numbered pair. One repetition is permitted. First read all the question "
+"from column A and then questions from column B."
+msgstr ""
+"A única resposta requisitada é concordar ou discordar. Ambas as questões \"A"
+"\" e \"B\" devem ser respondidas corretamente para receber crédito de 1 "
+"ponto. É permitida uma repetição para cada questão. Leia primeiro todas as "
+"perguntas da coluna A e depois as perguntas da coluna B."
+
+#: evaluation/admin/bostonaphasia_admin.py:337
+#: evaluation/admin/bostonaphasia_admin.py:353
+msgid "Oral agility"
+msgstr "Agilidade Oral"
+
+#: evaluation/admin/bostonaphasia_admin.py:344
+msgid ""
+"If patient cannot get started on one or two items at the most, either "
+"because of perseveration or paraphasic substitution, eliminate items and "
+"prorate score. If more than two items are unscoreable, do not enter total "
+"score."
+msgstr ""
+"Se o paciente não conseguir por causa de perseveração ou substituição "
+"parafásica, realizar um ou dois itens no máximo. Eliminar os itens restantes "
+"e diminuir o escore total."
+
+#: evaluation/admin/bostonaphasia_admin.py:366
+msgid "Automatized sequences"
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:375
+msgid ""
+"Have patient recite each of the following four series, giving him assistance "
+"with the first word, if necessary.<br>Provide further assistance as needed, "
+"but discontinue a series when patient fails with four successive words."
+"<br>Record assistance given by circling the word; cross out words omitted by "
+"patient.<br>Allow 0, 1 or 2 points, as indicated."
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:384
+msgid "Recitation, Singing"
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:391
+msgid ""
+"Instruct patient to complete the line for the following rhymes. Words in "
+"parentheses may be given as additional cues, if necessary.Use a natural or "
+"slightly exaggerated inflection to encourage completion of the rhyme.If "
+"patient fails, or is not familiar with the material, attempt other memorized "
+"or automatized matter, such as the Lord's Prayer, the Pledge of Allegiance, "
+"etc.Circle qualitative ratings below."
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:401
+msgid "Repetition of words"
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:416
+msgid ""
+"Have patient repeat each of the following words. One repetition by examiner "
+"is permitted when it appears that this may help, or when it is requested. "
+"For credit, all syllables must be in their proper order, although distortion "
+"of individual sound elements is permitted, provided it is in keeping with "
+"patient's general articulation difficulty and that the word is recognizable."
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:427
+msgid "Repeating phrases"
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:462
+msgid "Word reading"
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:477
+msgid ""
+"Have the patient read the words, one at a time, from test Card 5. Check "
+"approximate lag between your pointing to the word and the patient's adequate "
+"response. Assist as required, but give no credit for responses obtained with "
+"help."
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:488
+msgid "Responsive naming"
+msgstr ""
+
+#: evaluation/admin/bostonaphasia_admin.py:503
+msgid ""
+"Have patient supply the one-word responses required by the stimulus "
+"questions. Check approximate lag."
 msgstr ""
 
 #: evaluation/admin/clin_admin.py:17
 msgid "Line Crossing"
 msgstr "Cancelamento de linhas"
 
-#: evaluation/admin/eeg_admin.py:17 evaluation/models/eeg.py:12
+#: evaluation/admin/eeg_admin.py:28 evaluation/forms/eeg_form.py:21
+#: evaluation/models/eeg.py:24
 msgid "File"
 msgstr "Arquivo"
 
@@ -157,12 +371,14 @@ msgstr "Movimentos voluntários combinando sinergias, sem compensação"
 msgid "Volitional movement with little or no synergy"
 msgstr "Movimento voluntário sem sinergia"
 
-#: evaluation/admin/fuglmeyer_admin.py:72 evaluation/models/fuglmeyer.py:241
+#: evaluation/admin/fuglmeyer_admin.py:72 evaluation/models/fuglmeyer.py:108
 msgid "Normal reflex activity"
 msgstr "Atividade Reflexa Normal"
 
 #: evaluation/admin/fuglmeyer_admin.py:81
 #: evaluation/admin/fuglmeyer_admin.py:194
+#: evaluation/models/bostonaphasia.py:202
+#: evaluation/models/bostonaphasia.py:203
 msgid "Wrist"
 msgstr "Controle de Punho"
 
@@ -265,6 +481,7 @@ msgstr "Membro superior"
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_09_upper_total.html:44
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_10_lower_total.html:44
 #: evaluation/templates/admin/includes/fieldset/row_total.html:28
+#: evaluation/templates/admin/includes/fieldset/row_total_parameterized.html:41
 msgid "Total"
 msgstr "Total"
 
@@ -275,6 +492,18 @@ msgstr "Interpretação membro inferior"
 #: evaluation/admin/fuglmeyer_admin.py:238
 msgid "Movement combining synergies"
 msgstr "Movimento com e sem sinergias"
+
+#: evaluation/admin/jthft_admin.py:33
+msgid "Sequence"
+msgstr ""
+
+#: evaluation/admin/jthft_admin.py:33
+msgid "Paretic hand"
+msgstr ""
+
+#: evaluation/admin/jthft_admin.py:33
+msgid "Healthy hand"
+msgstr ""
 
 #: evaluation/admin/kviq_admin.py:17 evaluation/models/kviq.py:32
 msgid "Dominant limb"
@@ -292,11 +521,13 @@ msgstr "Encolher (erguer) os ombros"
 msgid "Shoulder flexion"
 msgstr "Flexão do ombro para a frente"
 
-#: evaluation/admin/kviq_admin.py:42
+#: evaluation/admin/kviq_admin.py:42 evaluation/models/bostonaphasia.py:214
+#: evaluation/models/bostonaphasia.py:215
 msgid "Elbow"
 msgstr "Flexão do cotovelo"
 
-#: evaluation/admin/kviq_admin.py:49
+#: evaluation/admin/kviq_admin.py:49 evaluation/models/bostonaphasia.py:205
+#: evaluation/models/bostonaphasia.py:206
 msgid "Thumb"
 msgstr "Polegar para as pontas dos dedo"
 
@@ -304,7 +535,8 @@ msgstr "Polegar para as pontas dos dedo"
 msgid "Trunk"
 msgstr "Flexão do tronco para frente"
 
-#: evaluation/admin/kviq_admin.py:62
+#: evaluation/admin/kviq_admin.py:62 evaluation/models/bostonaphasia.py:184
+#: evaluation/models/bostonaphasia.py:185
 msgid "Knee"
 msgstr "Extensão do joelho"
 
@@ -344,6 +576,78 @@ msgstr "Evocação"
 msgctxt "MMSEAdmin"
 msgid "Language"
 msgstr "Linguagem"
+
+#: evaluation/admin/moca_admin.py:26
+msgid "Visuospatial/Executive"
+msgstr ""
+
+#: evaluation/admin/moca_admin.py:36
+msgid "Naming"
+msgstr ""
+
+#: evaluation/admin/moca_admin.py:42
+#, fuzzy
+#| msgid "Tremor"
+msgid "Memory"
+msgstr "Tremor"
+
+#: evaluation/admin/moca_admin.py:49
+msgid "Attention"
+msgstr ""
+
+#: evaluation/admin/moca_admin.py:56
+#, fuzzy
+#| msgctxt "MMSEAdmin"
+#| msgid "Language"
+msgid "Language"
+msgstr "Linguagem"
+
+#: evaluation/admin/moca_admin.py:62
+#, fuzzy
+#| msgctxt "MMSEAdmin"
+#| msgid "Registration"
+msgid "Abstraction"
+msgstr "Memória imediata"
+
+#: evaluation/admin/moca_admin.py:68
+msgid "Delayed recall"
+msgstr ""
+
+#: evaluation/admin/moca_admin.py:79
+msgid "Face"
+msgstr ""
+
+#: evaluation/admin/moca_admin.py:79 evaluation/models/moca.py:28
+#: evaluation/models/moca.py:33 evaluation/models/moca.py:59
+#: evaluation/models/moca.py:65 evaluation/models/moca.py:75
+msgid "Velvet"
+msgstr ""
+
+#: evaluation/admin/moca_admin.py:79 evaluation/models/moca.py:29
+#: evaluation/models/moca.py:34 evaluation/models/moca.py:60
+#: evaluation/models/moca.py:67 evaluation/models/moca.py:77
+msgid "Church"
+msgstr ""
+
+#: evaluation/admin/moca_admin.py:79 evaluation/models/moca.py:30
+#: evaluation/models/moca.py:35 evaluation/models/moca.py:61
+#: evaluation/models/moca.py:69 evaluation/models/moca.py:79
+msgid "Daisy"
+msgstr ""
+
+#: evaluation/admin/moca_admin.py:79 evaluation/models/bostonaphasia.py:141
+#: evaluation/models/moca.py:31 evaluation/models/moca.py:36
+#: evaluation/models/moca.py:62 evaluation/models/moca.py:71
+#: evaluation/models/moca.py:81
+msgid "Red"
+msgstr "Vermelho"
+
+#: evaluation/admin/moca_admin.py:82
+#, fuzzy
+#| msgctxt "MMSEAdmin"
+#| msgid "Orientation"
+msgid "Orientation"
+msgstr "Orientação"
 
 #: evaluation/admin/patient_admin.py:13
 msgid "Social characteristics"
@@ -515,35 +819,1005 @@ msgstr "Perna esquerda"
 msgid "Right leg"
 msgstr "Perna direita"
 
-#: evaluation/models/base_evaluation.py:13 evaluation/models/kviq.py:8
+#: evaluation/models/base_evaluation.py:14 evaluation/models/kviq.py:8
 msgid "NT"
 msgstr ""
 
-#: evaluation/models/base_evaluation.py:15
+#: evaluation/models/base_evaluation.py:16
 msgid "MD"
 msgstr ""
 
-#: evaluation/models/base_evaluation.py:18
+#: evaluation/models/base_evaluation.py:19
 msgid "Period"
 msgstr "Período"
 
-#: evaluation/models/base_evaluation.py:19
+#: evaluation/models/base_evaluation.py:20
 msgid "Last update"
 msgstr "Última atualização"
 
-#: evaluation/models/base_evaluation.py:20
+#: evaluation/models/base_evaluation.py:21 evaluation/models/moca.py:85
 msgid "Date"
 msgstr ""
 
-#: evaluation/models/bostonaphasia.py:8 evaluation/models/bostonaphasia.py:9
+#: evaluation/models/bostonaphasia.py:10 evaluation/models/bostonaphasia.py:11
 msgid "Write or distribute a card deck"
 msgstr ""
 
-#: evaluation/models/clin.py:7
+#: evaluation/models/bostonaphasia.py:13 evaluation/models/bostonaphasia.py:14
+msgid "Draw or fill a glass of water"
+msgstr "Desenhar ou encher de água um copo"
+
+#: evaluation/models/bostonaphasia.py:16 evaluation/models/bostonaphasia.py:17
+msgid "Throw a ball"
+msgstr "Jogar uma bola"
+
+#: evaluation/models/bostonaphasia.py:19 evaluation/models/bostonaphasia.py:20
+msgid "Use an ashtray"
+msgstr "Utilizar um cinzeiro"
+
+#: evaluation/models/bostonaphasia.py:22 evaluation/models/bostonaphasia.py:23
+msgid "Use a toothbrush"
+msgstr "Utilizar uma escova de dente"
+
+#: evaluation/models/bostonaphasia.py:25 evaluation/models/bostonaphasia.py:26
+msgid "Eat with a fork"
+msgstr "Comer com um garfo"
+
+#: evaluation/models/bostonaphasia.py:28 evaluation/models/bostonaphasia.py:29
+msgid "Use a broom (upper hand)"
+msgstr "Segurar uma vassoura (mão no alto)"
+
+#: evaluation/models/bostonaphasia.py:31 evaluation/models/bostonaphasia.py:32
+msgid "Strike a match"
+msgstr "Acender um fósforo"
+
+#: evaluation/models/bostonaphasia.py:34 evaluation/models/bostonaphasia.py:35
+msgid "Use a spoon"
+msgstr "Segurar uma colher de sopa"
+
+#: evaluation/models/bostonaphasia.py:37 evaluation/models/bostonaphasia.py:38
+msgid "Open a box (holding the lid)"
+msgstr "Abrir um pote (mão que segura a tampa)"
+
+#: evaluation/models/bostonaphasia.py:40
+msgid ""
+"History of handedness (including data from other family members, eg: mother, "
+"father , brother, offspring)"
+msgstr ""
+"História da Dominância Manual (incluindo dados de outros familiares, ex: "
+"pai, mãe, irmão, descendente):"
+
+#: evaluation/models/bostonaphasia.py:42
+msgid "1: included / 2: absent"
+msgstr "1: presente / 2: ausente"
+
+#: evaluation/models/bostonaphasia.py:44
+msgid ""
+"a. \"HOW ARE YOU TODAY?\" (\"Okay,\" \"Fine,\" or other appropriate response)"
+msgstr "a. Resposta a cumprimentos (P - Como você está hoje? Ou equivalente.)"
+
+#: evaluation/models/bostonaphasia.py:45
+msgid ""
+"b. \"HAVE YOU EVER BEEN HERE BEFORE? or \"HAVE I EVER TESTED YOU BEFORE?"
+"\" (\"Yes\", \"No\" or other relevant response)"
+msgstr ""
+"b. Resposta com sim ou não (P - Você já esteve neste hospital antes? Ou eu "
+"já avaliei você antes?)"
+
+#: evaluation/models/bostonaphasia.py:47
+msgid ""
+"c. \"DO YOU THINK WE CAN HELP (HAVE HELPED YOU)?\"( \"I think so\", \"Maybe"
+"\" or equivalent.)"
+msgstr ""
+"c. Resposta com \"eu acho que\" ou equivalente (P - Você acha que nós "
+"podemos ajudar você? ou Eu ajudei você?)"
+
+#: evaluation/models/bostonaphasia.py:48
+msgid ""
+"d. \"WHEN ARE YOU GOING TO BE LEAVING HERE?(\"I don't know\", \"Pretty soon"
+"\", etc.)"
+msgstr ""
+"d. Resposta com \"eu não sei\" ou equivalente (P - Quando o seu tratamento "
+"vai terminar?)"
+
+#: evaluation/models/bostonaphasia.py:49
+msgid "e. \"WE HOPE TO BE PRETTY SOON. WHAT DO YOU THINK?(\"I hope so\", etc.)"
+msgstr ""
+"e. Resposta com \"espero que sim\" ou equivalente (P - Vamos esperar que "
+"seja breve. O que você diz?)"
+
+#: evaluation/models/bostonaphasia.py:51
+msgid "f. \"WHAT IS YOUR FULL NAME?\""
+msgstr "f. Qual é o seu nome completo?"
+
+#: evaluation/models/bostonaphasia.py:52
+msgid ""
+"g. \"WHAT lS YOUR FULL ADDRESS?\" (Number street, and city required. Probe "
+"for omitted elements)."
+msgstr ""
+"g. Qual é o seu endereço completo? (Aceitar qualquer resposta que inclua o "
+"nome da rua e número ou rua e cidade)"
+
+#: evaluation/models/bostonaphasia.py:54
+msgid "h. Free conversation"
+msgstr ""
+"h. Perguntas abertas e fechadas a fim de eliciar conversação tão livre "
+"quanto possível;"
+
+#: evaluation/models/bostonaphasia.py:55
+msgid ""
+"In order to elicit as much conversation as possible, it is suggested that "
+"the examiner start with a familiar topic, such as \"WHAT KIND OF WORK WERE "
+"YOU DOING BEFORE YOU BECAME ILL?\" or \"TELL ME WHAT HAPPENED TO BRING YOU "
+"HERE.\" Encourage at least three minutes of conversation, if possible. Avoid "
+"questions that would elicit \"Yes\" or \"No\" responses.lf tape recording is "
+"not used,w rite verbatim as much as possible"
+msgstr ""
+"Sugere-se que o examinador comece com tópicos familiares como \"que tipo de "
+"trabalho você fazia antes de ficar doente?\" e \"diga-me o que aconteceu "
+"para você vir ao hospital?\". Encorajar o paciente a falar por 10 minutos "
+"pelo menos. (Minimizar o uso de questões tipo \"sim\"/\"não\" e a exploração "
+"de fatos específicos). Se não for usado gravador, anotar as respostas tanto "
+"quanto posível."
+
+#: evaluation/models/bostonaphasia.py:57
+msgid "i. Picture description"
+msgstr "i. Apresentação da figura"
+
+#: evaluation/models/bostonaphasia.py:58
+msgid ""
+"Present the \"Cookie Theft\" picture on card l. say, \"Tell me everything "
+"you see going on in this picture.\" Point to neglected features of the "
+"picture and ask for elaboration if the patient´s response is skimpier than "
+"his/her apparent potential."
+msgstr ""
+"Mostre a figura e diga ao paciente: \"Diga-me tudo o que esta acontecendo "
+"nesta figura\". Apontar características negligenciadas da figura e solicitar "
+"a elaboração se a resposta do paciente estiver mais reduzida do que seu "
+"potencial aparente. Um minuto é frequentemente tempo suficiente."
+
+#: evaluation/models/bostonaphasia.py:66 evaluation/models/bostonaphasia.py:357
+msgid "Chair"
+msgstr "Cadeira"
+
+#: evaluation/models/bostonaphasia.py:69
+msgid "Key"
+msgstr "Chave"
+
+#: evaluation/models/bostonaphasia.py:72
+msgid "Glove"
+msgstr "Luva"
+
+#: evaluation/models/bostonaphasia.py:75
+msgid "Feather"
+msgstr "Pena"
+
+#: evaluation/models/bostonaphasia.py:78
+msgid "Net"
+msgstr "Rede"
+
+#: evaluation/models/bostonaphasia.py:81
+msgid "Cactus"
+msgstr "Cactos"
+
+#: evaluation/models/bostonaphasia.py:102
+msgid "Circle"
+msgstr "Círculo"
+
+#: evaluation/models/bostonaphasia.py:105
+msgid "Spiral"
+msgstr "Espiral"
+
+#: evaluation/models/bostonaphasia.py:108
+msgid "Square"
+msgstr "Quadrado"
+
+#: evaluation/models/bostonaphasia.py:111
+msgid "Triangle"
+msgstr "Triângulo"
+
+#: evaluation/models/bostonaphasia.py:114
+msgid "Cone"
+msgstr "Cone"
+
+#: evaluation/models/bostonaphasia.py:117
+msgid "Star"
+msgstr "Estrela"
+
+#: evaluation/models/bostonaphasia.py:120
+msgid "Drinking"
+msgstr "Bebendo"
+
+#: evaluation/models/bostonaphasia.py:123
+msgid "Smoking"
+msgstr "Fumando"
+
+#: evaluation/models/bostonaphasia.py:126
+msgid "Running"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:129
+msgid "Falling"
+msgstr "Caindo"
+
+#: evaluation/models/bostonaphasia.py:132
+msgid "Sleeping"
+msgstr "Dormindo"
+
+#: evaluation/models/bostonaphasia.py:135
+msgid "Dropping"
+msgstr "Pingando"
+
+#: evaluation/models/bostonaphasia.py:138
+msgid "Blue"
+msgstr "Azul"
+
+#: evaluation/models/bostonaphasia.py:144
+msgid "Gray"
+msgstr "Cinza"
+
+#: evaluation/models/bostonaphasia.py:147
+#: evaluation/models/bostonaphasia.py:372
+msgid "Brown"
+msgstr "Marrom"
+
+#: evaluation/models/bostonaphasia.py:150
+msgid "Pink"
+msgstr "Rosa"
+
+#: evaluation/models/bostonaphasia.py:153
+#: evaluation/models/bostonaphasia.py:367
+msgid "Purple"
+msgstr "Roxo"
+
+#: evaluation/models/bostonaphasia.py:175
+#: evaluation/models/bostonaphasia.py:176
+msgid "Ear"
+msgstr "Orelha"
+
+#: evaluation/models/bostonaphasia.py:178
+#: evaluation/models/bostonaphasia.py:179
+msgid "Nose"
+msgstr "Nariz"
+
+#: evaluation/models/bostonaphasia.py:181
+#: evaluation/models/bostonaphasia.py:182
+msgid "Shoulder"
+msgstr "Ombro"
+
+#: evaluation/models/bostonaphasia.py:187
+#: evaluation/models/bostonaphasia.py:188
+msgid "Eyelid"
+msgstr "Pálpebra"
+
+#: evaluation/models/bostonaphasia.py:190
+#: evaluation/models/bostonaphasia.py:191
+msgid "Ankle"
+msgstr "Tornozelo"
+
+#: evaluation/models/bostonaphasia.py:193
+#: evaluation/models/bostonaphasia.py:194
+msgid "Chest"
+msgstr "Tórax"
+
+#: evaluation/models/bostonaphasia.py:196
+#: evaluation/models/bostonaphasia.py:197
+msgid "Neck"
+msgstr "Percoço"
+
+#: evaluation/models/bostonaphasia.py:199
+#: evaluation/models/bostonaphasia.py:200
+msgid "Middle finger"
+msgstr "Dedo médio"
+
+#: evaluation/models/bostonaphasia.py:208
+#: evaluation/models/bostonaphasia.py:209
+msgid "Thigh"
+msgstr "Coxa"
+
+#: evaluation/models/bostonaphasia.py:211
+#: evaluation/models/bostonaphasia.py:212
+msgid "Chin"
+msgstr "Queixo"
+
+#: evaluation/models/bostonaphasia.py:217
+#: evaluation/models/bostonaphasia.py:218
+msgid "Lips"
+msgstr "Lábios"
+
+#: evaluation/models/bostonaphasia.py:220
+#: evaluation/models/bostonaphasia.py:221
+msgid "Eyebrow"
+msgstr "Cotovelo"
+
+#: evaluation/models/bostonaphasia.py:223
+#: evaluation/models/bostonaphasia.py:224
+msgid "Cheek"
+msgstr "Bochecha"
+
+#: evaluation/models/bostonaphasia.py:226
+#: evaluation/models/bostonaphasia.py:227
+msgid "Forefinger"
+msgstr "Dedo indicador"
+
+#: evaluation/models/bostonaphasia.py:229
+#: evaluation/models/bostonaphasia.py:230
+msgid "Right ear"
+msgstr "Orelha direita"
+
+#: evaluation/models/bostonaphasia.py:232
+#: evaluation/models/bostonaphasia.py:233
+msgid "Left shoulder"
+msgstr "Ombro esquerdo"
+
+#: evaluation/models/bostonaphasia.py:235
+#: evaluation/models/bostonaphasia.py:236
+msgid "Left knee"
+msgstr "Joelho esquerdo"
+
+#: evaluation/models/bostonaphasia.py:238
+#: evaluation/models/bostonaphasia.py:239
+msgid "Right ankle"
+msgstr "Tornozelo direito"
+
+#: evaluation/models/bostonaphasia.py:241
+#: evaluation/models/bostonaphasia.py:242
+msgid "Right wrist"
+msgstr "Pulso direito"
+
+#: evaluation/models/bostonaphasia.py:244
+#: evaluation/models/bostonaphasia.py:245
+msgid "Left thumb"
+msgstr "Polegar esquerdo"
+
+#: evaluation/models/bostonaphasia.py:247
+#: evaluation/models/bostonaphasia.py:248
+msgid "Right elbow"
+msgstr "Cotovelo direito"
+
+#: evaluation/models/bostonaphasia.py:250
+#: evaluation/models/bostonaphasia.py:251
+msgid "Left cheek"
+msgstr "Bochecha esquerda"
+
+#: evaluation/models/bostonaphasia.py:254
+msgid "1. Make a \"fist\""
+msgstr "1. Feche a \"mão\""
+
+#: evaluation/models/bostonaphasia.py:255
+msgid "2. Point to \"the ceiling\", then to \"the floor\""
+msgstr "2. Aponte para \"o teto\" e depois \"o chão\""
+
+#: evaluation/models/bostonaphasia.py:256
+msgid ""
+"3. Put \"the pencil\" on \"top of the card\", then \"put it back in place\""
+msgstr ""
+"3. Ponha \"o lápis\" \"acima do cartão\", então \"ponha-o de volta no lugar\""
+
+#: evaluation/models/bostonaphasia.py:257
+msgid ""
+"4. Put \"the watch\" on \"the other side\" of \"the pencil\" and \"turn over "
+"the card\""
+msgstr ""
+"4. Ponha \"o relógio\" no \"outro lado\" do \"lápis\" e \"vire o papel\""
+
+#: evaluation/models/bostonaphasia.py:258
+msgid ""
+"5. Tap \"each shoulder\" \"twice\" with \"two fingers\", keeping your \"eyes "
+"shut\""
+msgstr ""
+"5. Toque \"cada ombro\" \"duas vezes\" com \"dois dedos\" mantendo \"os "
+"olhos fechados\""
+
+#: evaluation/models/bostonaphasia.py:261
+msgid "1a. Will a cork sink in water?"
+msgstr "1a. Uma rolha de cortiça afunda na água?"
+
+#: evaluation/models/bostonaphasia.py:262
+msgid "2a. Can you use a hammer to pound nails?"
+msgstr "2a. Você pode usar martelo para bater pregos?"
+
+#: evaluation/models/bostonaphasia.py:263
+msgid "1b. Will a stone sink in water?"
+msgstr "1b. Uma pedra afunda na água?"
+
+#: evaluation/models/bostonaphasia.py:264
+msgid "2b. Is a hammer good for cutting wood?"
+msgstr "2b. Um martelo é bom para cortar madeira?"
+
+#: evaluation/models/bostonaphasia.py:266
+msgid "3a. Do two pounds of flour weigh more than one?"
+msgstr "3a Dois quilos de farinha pesam mais do que um?"
+
+#: evaluation/models/bostonaphasia.py:267
+msgid "4a. Will water go through a good pair of rubber boots?"
+msgstr "4a. A água atravessa um bom par de galochas?"
+
+#: evaluation/models/bostonaphasia.py:268
+msgid "3b. Is one pound of flour heavier than two?"
+msgstr "3b. Um quilo de farinha é mais pesado do que dois?"
+
+#: evaluation/models/bostonaphasia.py:269
+msgid "4b. Will a good pair of rubber boots keep water out?"
+msgstr "4b. Um bom par de galochas impede a entrada de água?"
+
+#: evaluation/models/bostonaphasia.py:275
+msgid "5a. Did Mr. Jones miss his train?"
+msgstr "5a. O Sr. João perdeu o avião?"
+
+#: evaluation/models/bostonaphasia.py:276
+msgid "6a. Was Mr. Jones going to New York?"
+msgstr "6a. O Sr. João estava indo para o Paraná?"
+
+#: evaluation/models/bostonaphasia.py:277
+msgid "5b. Did he get to the station on time?"
+msgstr "5b. Ele chegou ao aeroporto a tempo?"
+
+#: evaluation/models/bostonaphasia.py:278
+msgid "6b. Was he on his way home from New York?"
+msgstr "6b. Ele estava vindo do Paraná?"
+
+#: evaluation/models/bostonaphasia.py:284
+msgid "7a. Was the soldier's check cashed at once?"
+msgstr "7a. A mãe foi até a mercearia?"
+
+#: evaluation/models/bostonaphasia.py:285
+msgid "8a. Did the soldier have a friend with him?"
+msgstr "8a. A menina levou o dinheiro para comprar os alimentos?"
+
+#: evaluation/models/bostonaphasia.py:286
+msgid "7b. Did the teller object to cashing the check?"
+msgstr "7b. A mãe pediu para a menina ir até a mercearia?"
+
+#: evaluation/models/bostonaphasia.py:287
+msgid "8b. Did the soldier have trouble finding friends?"
+msgstr "8b. A menina esqueceu o dinheiro?"
+
+#: evaluation/models/bostonaphasia.py:293
+msgid "9a. Was the customer carrying a suitcase in each hand?"
+msgstr "9a. Carlos queria dinheiro?"
+
+#: evaluation/models/bostonaphasia.py:294
+msgid "10a. Was the clerk suspicious of the guest?"
+msgstr "10a. Foi o dono da casa que atendeu a porta?"
+
+#: evaluation/models/bostonaphasia.py:295
+msgid "9b. Was the customer carrying something unusual in one hand?"
+msgstr "9b. Carlos só queria conversar um pouco?"
+
+#: evaluation/models/bostonaphasia.py:296
+msgid "10b. Did the clerk trust this guest?"
+msgstr "10b. O dono da casa não quis atender à porta?"
+
+#: evaluation/models/bostonaphasia.py:302
+msgid "11a. Does this paragraph tell how lions learn to hunt?"
+msgstr "11a. Este parágrafo conta como os leões aprendem a caçar?"
+
+#: evaluation/models/bostonaphasia.py:303
+msgid ""
+"12a. Does this paragraph say that lions are skillful killers from the time "
+"they are born?"
+msgstr ""
+"12a. Este parágrafo diz que os leões são matadores ágeis no momento em que "
+"eles nascem?"
+
+#: evaluation/models/bostonaphasia.py:304
+msgid "11b. Does the paragraph tell how to hunt lions?"
+msgstr "11b. Diz como caçar leões?"
+
+#: evaluation/models/bostonaphasia.py:305
+msgid "12b. Does it say lions need practice before they can kill their prey?"
+msgstr ""
+"12b. Diz que os leões precisam de prática antes de matarem suas presas?"
+
+#: evaluation/models/bostonaphasia.py:312
+msgid "Purse lips, release"
+msgstr "a - protuir os lábios e relaxar"
+
+#: evaluation/models/bostonaphasia.py:313
+msgid "Open and close mouth"
+msgstr "b - abrir e fechar a boca"
+
+#: evaluation/models/bostonaphasia.py:314
+msgid "Retract lips, release"
+msgstr "c - retrair os lábios"
+
+#: evaluation/models/bostonaphasia.py:315
+msgid "Tongue to alternate corners of mouth"
+msgstr "d - língua tocando os cantos da boca"
+
+#: evaluation/models/bostonaphasia.py:316
+msgid "Protrude and retract tongue"
+msgstr "e - protuir e retrair a língua"
+
+#: evaluation/models/bostonaphasia.py:317
+msgid "Tongue to upper and lower teeth"
+msgstr "f - elevar e abaixar a língua tocando os dentes"
+
+#: evaluation/models/bostonaphasia.py:322
+msgid "Mama, mama"
+msgstr "g - vovó-vovó"
+
+#: evaluation/models/bostonaphasia.py:323
+msgid "Tip-top, tip-top"
+msgstr "h - tic-tac"
+
+#: evaluation/models/bostonaphasia.py:324
+msgid "Fifty-fifty, fifty-fifty"
+msgstr "i - pula-pula"
+
+#: evaluation/models/bostonaphasia.py:325
+msgid "Thanks, thanks"
+msgstr "j - saúde-saúde"
+
+#: evaluation/models/bostonaphasia.py:326
+msgid "Huckleberry"
+msgstr "k - Filomena"
+
+#: evaluation/models/bostonaphasia.py:327
+msgid "Baseball player, baseball player"
+msgstr "l - ponta-direita"
+
+#: evaluation/models/bostonaphasia.py:328
+msgid "Caterpillar"
+msgstr "m - lagartixa"
+
+#: evaluation/models/bostonaphasia.py:335
+#, fuzzy
+#| msgctxt "MMSE"
+#| msgid "Day of the week"
+msgid "1. Days of the week:"
+msgstr "Dia da semana (1 ponto)"
+
+#: evaluation/models/bostonaphasia.py:337
+#, fuzzy
+#| msgid "Most of the time"
+msgid "2. Months of the year:"
+msgstr "A maior parte do tempo"
+
+#: evaluation/models/bostonaphasia.py:339
+msgid "3. Counting to 21:"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:341
+msgid "4. Alphabet:"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:345
+#: evaluation/models/bostonaphasia.py:346
+msgid "Reciting"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:345
+#: evaluation/models/bostonaphasia.py:346
+msgid "Jack and Jill (went)..."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:348
+#: evaluation/models/bostonaphasia.py:349
+msgid "Singing"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:348
+#: evaluation/models/bostonaphasia.py:349
+msgid ""
+"After recitation have patient sing this or any othet song with which he is "
+"familiar"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:352
+msgid "What"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:362
+msgid "Hammock"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:377
+msgid "W"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:382
+msgid "Fifteen"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:387
+msgid "1776"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:392
+msgid "Emphasize"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:397
+msgid "Methodist Episcopal"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:403
+msgid "a. You know how"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:407
+msgid "b. Down to earth."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:411
+msgid "c. I got home from work."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:415
+msgid "d. You should not tell her."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:419
+msgid "e. Go ahead and do it if possible"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:423
+msgid "f. Near the table in the dining room."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:427
+msgid "g. They heard him speak on the radio last night."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:431
+msgid "h. I stopped at his front door and rang the bell."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:435
+msgid "a. The vat leaks."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:439
+msgid "b. limes are sour."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:443
+msgid "c. The spy fled to Greece."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:447
+msgid "d. Pry the tin lid off."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:451
+msgid "e. The Chinese fan had a rare emerald."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:455
+msgid "f. The barn swallow captured a plump worm."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:459
+msgid "g. The lawyer's closing argument convinced him."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:463
+msgid "h. The phantom soared across the foggy heath."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:468
+#: evaluation/models/bostonaphasia.py:589
+#, fuzzy
+#| msgid "Chair"
+msgid "chair"
+msgstr "Cadeira"
+
+#: evaluation/models/bostonaphasia.py:472
+#, fuzzy
+#| msgid "Circle"
+msgid "circle"
+msgstr "Círculo"
+
+#: evaluation/models/bostonaphasia.py:476
+#: evaluation/models/bostonaphasia.py:609
+msgid "hammock"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:480
+#: evaluation/models/bostonaphasia.py:619
+#, fuzzy
+#| msgid "Triangle"
+msgid "triangle"
+msgstr "Triângulo"
+
+#: evaluation/models/bostonaphasia.py:484
+msgid "fifteen"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:488
+#: evaluation/models/bostonaphasia.py:649
+#, fuzzy
+#| msgid "Purple"
+msgid "purple"
+msgstr "Roxo"
+
+#: evaluation/models/bostonaphasia.py:492
+msgid "seven-twenty-one"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:496
+#: evaluation/models/bostonaphasia.py:689
+#, fuzzy
+#| msgid "Dropping"
+msgid "dripping"
+msgstr "Pingando"
+
+#: evaluation/models/bostonaphasia.py:500
+#: evaluation/models/bostonaphasia.py:629
+#, fuzzy
+#| msgid "Brown"
+msgid "brown"
+msgstr "Marrom"
+
+#: evaluation/models/bostonaphasia.py:504
+#: evaluation/models/bostonaphasia.py:684
+#, fuzzy
+#| msgid "Smoking"
+msgid "smoking"
+msgstr "Fumando"
+
+#: evaluation/models/bostonaphasia.py:509
+msgid "What do we tell time with?"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:513
+msgid "What do you do with a razor?"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:517
+msgid "What do you do with soap?"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:521
+msgid "What do you do with a pencil?"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:525
+msgid "What do we cut paper with?"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:529
+msgid "What color is grass?"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:533
+msgid "What do we light a cigarette with?"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:537
+msgid "How many things ina dozen?"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:541
+msgid "What color is coal?"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:545
+msgid "Where do you go to buy medicine?"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:554
+msgid "H"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:559
+msgid "T"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:564
+msgid "R"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:569
+msgid "L"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:574
+msgid "S"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:579
+msgid "G"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:584
+#, fuzzy
+#| msgid "Square"
+msgid "square"
+msgstr "Quadrado"
+
+#: evaluation/models/bostonaphasia.py:594
+#, fuzzy
+#| msgid "Key"
+msgid "key"
+msgstr "Chave"
+
+#: evaluation/models/bostonaphasia.py:599
+#, fuzzy
+#| msgid "Glove"
+msgid "glove"
+msgstr "Luva"
+
+#: evaluation/models/bostonaphasia.py:604
+#, fuzzy
+#| msgid "Feather"
+msgid "feather"
+msgstr "Pena"
+
+#: evaluation/models/bostonaphasia.py:614
+#, fuzzy
+#| msgid "Cactus"
+msgid "cactus"
+msgstr "Cactos"
+
+#: evaluation/models/bostonaphasia.py:624
+#, fuzzy
+#| msgid "Red"
+msgid "red"
+msgstr "Vermelho"
+
+#: evaluation/models/bostonaphasia.py:634
+msgid "pink"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:639
+msgid "blue"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:644
+msgid "gray"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:654
+msgid "7"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:659
+msgid "15"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:664
+msgid "700"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:669
+msgid "1936"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:674
+msgid "42"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:679
+msgid "7000"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:694
+#, fuzzy
+#| msgid "Falling"
+msgid "falling"
+msgstr "Caindo"
+
+#: evaluation/models/bostonaphasia.py:699
+#, fuzzy
+#| msgid "Sleeping"
+msgid "sleeping"
+msgstr "Dormindo"
+
+#: evaluation/models/bostonaphasia.py:704
+#, fuzzy
+#| msgid "Drinking"
+msgid "drinking"
+msgstr "Bebendo"
+
+#: evaluation/models/bostonaphasia.py:709
+msgid "running"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:714
+#, fuzzy
+#| msgctxt "MMSE"
+#| msgid "Year"
+msgid "ear"
+msgstr "Ano (1 ponto)"
+
+#: evaluation/models/bostonaphasia.py:719
+msgid "nose"
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:724
+#, fuzzy
+#| msgid "Elbow"
+msgid "elbow"
+msgstr "Flexão do cotovelo"
+
+#: evaluation/models/bostonaphasia.py:729
+#, fuzzy
+#| msgid "Ankle"
+msgid "ankle"
+msgstr "Tornozelo"
+
+#: evaluation/models/bostonaphasia.py:734
+#, fuzzy
+#| msgid "Wrist"
+msgid "wrist"
+msgstr "Controle de Punho"
+
+#: evaluation/models/bostonaphasia.py:739
+#, fuzzy
+#| msgid "Shoulder"
+msgid "shoulder"
+msgstr "Ombro"
+
+#: evaluation/models/bostonaphasia.py:748
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_14_visual_confrontation.html:45
+#, fuzzy
+#| msgid "Answered"
+msgid "Answer"
+msgstr "Respondidas"
+
+#: evaluation/models/bostonaphasia.py:749
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_01_manual_dominance.html:34
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_06_oral_agility.html:37
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:37
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_08_automatized.html:28
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_09_recitation.html:31
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_10_repetition.html:26
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_11_repetition.html:27
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_12_reading.html:34
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_13_responsive.html:26
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_14_visual_confrontation.html:46
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_16_oral_sentence.html:34
+msgid "Score"
+msgstr "Pontuação"
+
+#: evaluation/models/bostonaphasia.py:755
+msgid "You know how."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:758
+msgid "Down to earth."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:761
+msgid "I got home from work."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:764
+msgid "Near the table in the dining room."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:767
+msgid "They heard him speak on the radio last night."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:770
+msgid "Limes are sour."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:773
+msgid "The spy fled to Greece."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:776
+msgid "The barm swallow captured a plump worm."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:779
+msgid "The lawyer's closing argument convinced him."
+msgstr ""
+
+#: evaluation/models/bostonaphasia.py:782
+msgid "The phantom soared across the foggy heath."
+msgstr ""
+
+#: evaluation/models/clin.py:7 evaluation/widgets.py:191
 msgid "Yes"
 msgstr "Sim"
 
-#: evaluation/models/clin.py:8
+#: evaluation/models/clin.py:8 evaluation/widgets.py:191
 msgid "No"
 msgstr "Não"
 
@@ -611,9 +1885,29 @@ msgstr "Negligência 4c"
 msgid "Neglect 4d"
 msgstr "Negligência 4d"
 
-#: evaluation/models/eeg.py:11
+#: evaluation/models/eeg.py:14
 msgid "Title"
 msgstr "Titulo"
+
+#: evaluation/models/eeg.py:18
+msgctxt "models.Eeg"
+msgid "EEG"
+msgstr "EEG"
+
+#: evaluation/models/eeg.py:19
+msgctxt "models.Eeg"
+msgid "EEGs"
+msgstr "EEGs"
+
+#: evaluation/models/eeg.py:27
+msgctxt "models.EegFile"
+msgid "EEG File"
+msgstr "Arquivo EEG"
+
+#: evaluation/models/eeg.py:28
+msgctxt "models.EegFile"
+msgid "EEG Files"
+msgstr "Arquivos EEG"
 
 #: evaluation/models/epworth.py:14
 msgid "would never doze"
@@ -761,629 +2055,297 @@ msgstr "MIF"
 msgid "FIMs"
 msgstr "MIFs"
 
-#: evaluation/models/fuglmeyer.py:11
+#: evaluation/models/ftt.py:12 evaluation/models/jthft.py:12
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_15_animal_naming.html:21
+msgid "First"
+msgstr ""
+
+#: evaluation/models/ftt.py:14 evaluation/models/jthft.py:14
+msgid "Second"
+msgstr ""
+
+#: evaluation/models/ftt.py:16 evaluation/models/jthft.py:16
+msgid "Third"
+msgstr ""
+
+#: evaluation/models/ftt.py:20
+msgid "FTT - Finger Tapping Test"
+msgstr ""
+
+#: evaluation/models/ftt.py:21
+msgid "FTT - Finger Tapping Tests"
+msgstr ""
+
+#: evaluation/models/fuglmeyer.py:13
 msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
 msgid "No reflex activity can be elicited"
 msgstr "Sem atividade reflexa"
 
-#: evaluation/models/fuglmeyer.py:12
+#: evaluation/models/fuglmeyer.py:14
 msgctxt "FUGLM_UE_REFLEX_ACTIVITY"
 msgid "Reflex activity can be elicited"
 msgstr "Atividade reflexa presente"
 
 #: evaluation/models/fuglmeyer.py:16
+msgid "Flexors: biceps and finger flexors"
+msgstr "Flexores: bíceps e flexor dos dedos"
+
+#: evaluation/models/fuglmeyer.py:18
+msgid "Extensors: triceps"
+msgstr "Extensores: tríceps"
+
+#: evaluation/models/fuglmeyer.py:22
 msgctxt "FUGLM_UE_VOL_MOV_SYN_ACTIVITY"
 msgid "Cannot be performed at all"
 msgstr "Tarefa não pode ser realizada completamente "
 
-#: evaluation/models/fuglmeyer.py:17
+#: evaluation/models/fuglmeyer.py:23
 msgctxt "FUGLM_UE_VOL_MOV_SYN_ACTIVITY"
 msgid "Performed partly"
 msgstr "Tarefa pode ser realizada parcialmente"
 
-#: evaluation/models/fuglmeyer.py:18
+#: evaluation/models/fuglmeyer.py:24
 msgctxt "FUGLM_UE_VOL_MOV_SYN_ACTIVITY"
 msgid "Performed faultlessly"
 msgstr "Tarefa é realizada perfeitamente"
 
-#: evaluation/models/fuglmeyer.py:22
+#: evaluation/models/fuglmeyer.py:26
+msgctxt "FuglMeyer"
+msgid "Shoulder retraction"
+msgstr "Ombro - Retração de ombro"
+
+#: evaluation/models/fuglmeyer.py:28
+msgctxt "FuglMeyer"
+msgid "Shoulder elevation"
+msgstr "Ombro - elevação"
+
+#: evaluation/models/fuglmeyer.py:30
+msgctxt "FuglMeyer"
+msgid "Shoulder abduction (90)"
+msgstr "Ombro - Abdução 90°"
+
+#: evaluation/models/fuglmeyer.py:32
+msgctxt "FuglMeyer"
+msgid "Shoulder external rotation"
+msgstr "Ombro - Rotação externa"
+
+#: evaluation/models/fuglmeyer.py:34
+msgctxt "FuglMeyer"
+msgid "Elbow flexion"
+msgstr "Cotovelo - Flexão de cotovelo"
+
+#: evaluation/models/fuglmeyer.py:36
+msgctxt "FuglMeyer"
+msgid "Forearm supination"
+msgstr "Antebraço - supinação"
+
+#: evaluation/models/fuglmeyer.py:37 evaluation/models/fuglmeyer.py:45
+#: evaluation/models/fuglmeyer.py:110 evaluation/models/fuglmeyer.py:264
+#: evaluation/models/fuglmeyer.py:273 evaluation/models/fuglmeyer.py:285
+#: evaluation/models/fuglmeyer.py:291 evaluation/models/fuglmeyer.py:300
+#: evaluation/models/fuglmeyer.py:308 evaluation/models/fuglmeyer.py:317
+#: evaluation/models/fuglmeyer.py:325 evaluation/models/fuglmeyer.py:348
+#: evaluation/models/fuglmeyer.py:350 evaluation/models/fuglmeyer.py:351
+msgctxt "FuglMeyer"
+msgid "Notes"
+msgstr "Observação"
+
+#: evaluation/models/fuglmeyer.py:40
+msgctxt "FuglMeyer"
+msgid "shoulder adduction / internal rotation"
+msgstr "Ombro - adução e rotação interna"
+
+#: evaluation/models/fuglmeyer.py:42
+msgctxt "FuglMeyer"
+msgid "elbow extension"
+msgstr "Cotovelo - extensão"
+
+#: evaluation/models/fuglmeyer.py:44
+msgctxt "FuglMeyer"
+msgid "forearm pronation"
+msgstr "Antebraço - pronação"
+
+#: evaluation/models/fuglmeyer.py:49
 msgctxt "FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY"
 msgid ""
 "No specific action is performed (or patient moves but does not reach ASIS)"
 msgstr "Nenhuma ação específica realizada"
 
-#: evaluation/models/fuglmeyer.py:23
+#: evaluation/models/fuglmeyer.py:50
 msgctxt "FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY"
 msgid " Hand must pass anterior superior iliac spine (performed partly)"
 msgstr "A mão ultrapassa a espinha ilíaca ântero-superior"
 
-#: evaluation/models/fuglmeyer.py:24
+#: evaluation/models/fuglmeyer.py:51
 msgctxt "FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY"
 msgid ""
 " Performed faultlessly (patient clears ASIS and can extend arm behind back "
 "towards sacrum"
 msgstr "Ação realizada completamente (mão chega a coluna lombar)"
 
-#: evaluation/models/fuglmeyer.py:27
+#: evaluation/models/fuglmeyer.py:54
+msgctxt "FuglMeyer"
+msgid "Hand to lumbar spine"
+msgstr "Mão à coluna lombar"
+
+#: evaluation/models/fuglmeyer.py:60
 msgctxt "FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY"
 msgid "Immediate abduction or elbow flexion"
 msgstr "Imediata abdução ombro e/ ou flexão de cotovelo"
 
-#: evaluation/models/fuglmeyer.py:28
+#: evaluation/models/fuglmeyer.py:61
 msgctxt "FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY"
 msgid "Abduction or elbow flexion during movement"
 msgstr "Abdução e/ou  flexão de cotovelo durante o movimento"
 
-#: evaluation/models/fuglmeyer.py:29
+#: evaluation/models/fuglmeyer.py:62
 msgctxt "FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY"
 msgid "Complete flexion 90°, maintains 0° in elbow"
 msgstr "Flexão completa 90° e  mantém extensão cotovelo"
 
-#: evaluation/models/fuglmeyer.py:32
+#: evaluation/models/fuglmeyer.py:64
+msgctxt "FuglMeyer"
+msgid "Shoulder flexion 0-90 elbow at 0 pronation-supination 0"
+msgstr ""
+"Flexão de ombro 0 - 90, cotovelo 0 e antebraço pronação/ supinação (P/S)  0"
+
+#: evaluation/models/fuglmeyer.py:68
 msgctxt "FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY"
 msgid "No pronation/supination, starting position impossible"
 msgstr ""
 "Posição correta do ombro e cotovelo não pode ser atingida, e/ou pronação ou "
 "supinação não pode ser realizada totalmente"
 
-#: evaluation/models/fuglmeyer.py:33
+#: evaluation/models/fuglmeyer.py:69
 msgctxt "FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY"
 msgid "Limited pronation/supination, maintains position"
 msgstr "Mantém posição com ADM limitada de P/S"
 
-#: evaluation/models/fuglmeyer.py:34
+#: evaluation/models/fuglmeyer.py:70
 msgctxt "FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY"
 msgid "Full pronation/supination, maintains elbow extension"
 msgstr "Mantém posição com P/S completa"
 
-#: evaluation/models/fuglmeyer.py:38
+#: evaluation/models/fuglmeyer.py:72
+msgctxt "FuglMeyer"
+msgid "Pronation-supination elbow at 90 shoulder at 0"
+msgstr "Pronação/Supinação antebraço cotovelo em 90 e ombro em 0"
+
+#: evaluation/models/fuglmeyer.py:78
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY"
 msgid "Immediate supination or elbow flexion"
 msgstr "Imediata supinação e/ ou flexão de cotovelo"
 
-#: evaluation/models/fuglmeyer.py:39
+#: evaluation/models/fuglmeyer.py:79
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY"
 msgid "Supination or elbow flexion during movement"
 msgstr "Supinação e/ou flexão de cotovelo durante o movimento"
 
-#: evaluation/models/fuglmeyer.py:40
+#: evaluation/models/fuglmeyer.py:80
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY"
 msgid "Abduction 90°, maintains extension and pronation"
 msgstr "Abdução completa 90 e mantém extensão cotovelo e pronação"
 
-#: evaluation/models/fuglmeyer.py:43
+#: evaluation/models/fuglmeyer.py:82
+msgctxt "FuglMeyer"
+msgid "Shoulder abduction 0 - 90 elbow at 0 forearm pronated"
+msgstr "Abdução do ombro a 90 com o cotovelo 0 e antebraço em pronação"
+
+#: evaluation/models/fuglmeyer.py:86
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_FLEX_ACTIVITY"
 msgid "Immediate abduction or elbow flexion"
 msgstr "Imediata abdução ombro e/ ou flexão de cotovelo"
 
-#: evaluation/models/fuglmeyer.py:44
+#: evaluation/models/fuglmeyer.py:87
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_FLEX_ACTIVITY"
 msgid "Abduction or elbow flexion during movement"
 msgstr "Abdução e/ou flexão de cotovelo durante o movimento"
 
-#: evaluation/models/fuglmeyer.py:45
+#: evaluation/models/fuglmeyer.py:88
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_FLEX_ACTIVITY"
 msgid "Complete flexion, maintains 0° in elbow"
 msgstr "Flexão completa 90 e mantém extensão cotovelo"
 
-#: evaluation/models/fuglmeyer.py:48
+#: evaluation/models/fuglmeyer.py:90
+msgctxt "FuglMeyer"
+msgid "Shoulder flexion 90- 180 elbow at 0pronation-supination 0"
+msgstr "Flexão do ombro de 90 - 180, cotovelo em 0, e antebraço P/S em 0"
+
+#: evaluation/models/fuglmeyer.py:95
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_PRON_SUP_ACTIVITY"
 msgid "No pronation/supination, starting position impossible"
 msgstr "Posição inicial não pode ser alcançada e/ou não realiza P/S"
 
-#: evaluation/models/fuglmeyer.py:49
+#: evaluation/models/fuglmeyer.py:96
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_PRON_SUP_ACTIVITY"
 msgid "Limited pronation/supination, maintains extension"
 msgstr "Mantém posição com ADM limitada de P/S"
 
-#: evaluation/models/fuglmeyer.py:50
+#: evaluation/models/fuglmeyer.py:97
 msgctxt "FUGLM_UE_VOL_MOV_NO_SYN_PRON_SUP_ACTIVITY"
 msgid "Full pronation/supination, maintains elbow extension"
 msgstr "Mantém posição com P/S completa"
 
-#: evaluation/models/fuglmeyer.py:54
+#: evaluation/models/fuglmeyer.py:99
+msgctxt "FuglMeyer"
+msgid "Pronation/supinationelbow at 0 shoulder at 30-90 flexion"
+msgstr "Pronação/Supinação antebraço cotovelo em 90 e ombro em 0"
+
+#: evaluation/models/fuglmeyer.py:104
 msgctxt "FUGLM_UE_NORMAL_REFLEX_ACTIVITY"
 msgid "2 of 3 reflexes markedly hyperactive"
 msgstr "No mínimo dois dos três reflexos fásicos são marcadamente hiperativos"
 
-#: evaluation/models/fuglmeyer.py:55
+#: evaluation/models/fuglmeyer.py:105
 msgctxt "FUGLM_UE_NORMAL_REFLEX_ACTIVITY"
 msgid "1 reflex markedly hyperactive or at least 2 reflexes lively"
 msgstr ""
 "Um reflexo está marcadamente hiperativo, ou no mínimo dois reflexos estão "
 "vivos"
 
-#: evaluation/models/fuglmeyer.py:56
+#: evaluation/models/fuglmeyer.py:106
 msgctxt "FUGLM_UE_NORMAL_REFLEX_ACTIVITY"
 msgid "Maximum of 1 reflex lively, none hyperactive"
 msgstr "Não mais que um reflexo está vivo, e nenhum está hiperativo"
 
-#: evaluation/models/fuglmeyer.py:60
+#: evaluation/models/fuglmeyer.py:115
 msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_90_ACTIVITY"
 msgid "Less than 15° active dorsiflexion"
 msgstr "Sujeito não pode dorsifletir o punho ate 15°"
 
-#: evaluation/models/fuglmeyer.py:61
+#: evaluation/models/fuglmeyer.py:116
 msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_90_ACTIVITY"
 msgid "Dorsiflexion 15°, no resistance is taken"
 msgstr "Alcança 15° dorsiflexão sem resistência"
-
-#: evaluation/models/fuglmeyer.py:62
-msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_90_ACTIVITY"
-msgid "Maintains position against resistance"
-msgstr "Posição pode ser mantida contra resistência (leve)"
-
-#: evaluation/models/fuglmeyer.py:65
-msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY"
-msgid "Cannot be performed"
-msgstr "Sujeito não pode dorsifletir o punho ate 15°"
-
-#: evaluation/models/fuglmeyer.py:66
-msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY"
-msgid "Can hold position but weak"
-msgstr "Alcança 15° dorsiflexão sem resistência"
-
-#: evaluation/models/fuglmeyer.py:67
-msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY"
-msgid "Maintains position against resistance"
-msgstr "Posição pode ser mantida contra resistência (leve)"
-
-#: evaluation/models/fuglmeyer.py:70
-msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY"
-msgid "Less than 15° active dorsiflexion"
-msgstr "Sujeito não pode dorsifletir o punho até 15°"
-
-#: evaluation/models/fuglmeyer.py:71
-msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY"
-msgid "Dorsiflexion 15°, no resistance is taken"
-msgstr "Alcança 15° dorsiflexão sem resistência"
-
-#: evaluation/models/fuglmeyer.py:72
-msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY"
-msgid "Maintains position against resistance"
-msgstr "Mantém 15° dorsiflexão contra resistência"
-
-#: evaluation/models/fuglmeyer.py:75
-msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY"
-msgid "Cannot perform volitionally"
-msgstr "Não ocorre movimento voluntário"
-
-#: evaluation/models/fuglmeyer.py:76
-msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY"
-msgid "Limited active range of motion"
-msgstr "Movimento ativo com ADM incompleta"
-
-#: evaluation/models/fuglmeyer.py:77
-msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY"
-msgid "Full active range of motion, smoothly"
-msgstr "Movimento ativo com ADM completa"
-
-#: evaluation/models/fuglmeyer.py:80
-msgctxt "FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY"
-msgid "Cannot perform volitionally"
-msgstr "Não realiza movimento ativo"
-
-#: evaluation/models/fuglmeyer.py:81
-msgctxt "FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY"
-msgid "Jerky movement or incomplete"
-msgstr "Movimento incompleto e/ou movimentos oscilantes"
-
-#: evaluation/models/fuglmeyer.py:82
-msgctxt "FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY"
-msgid "Complete and smooth circumduction"
-msgstr "Movimento completo, com exatidão"
-
-#: evaluation/models/fuglmeyer.py:87
-msgctxt "FUGLM_UE_HAND_MASS_FLEX_ACTIVITY"
-msgid "No flexion occurs"
-msgstr "Nenhuma flexão ocorre"
-
-#: evaluation/models/fuglmeyer.py:88
-msgctxt "FUGLM_UE_HAND_MASS_FLEX_ACTIVITY"
-msgid "Some flexion, but not full motion"
-msgstr "Alguma flexão com ADM incompleta"
-
-#: evaluation/models/fuglmeyer.py:89
-msgctxt "FUGLM_UE_HAND_MASS_FLEX_ACTIVITY"
-msgid "Completed active flexion "
-msgstr "Flexão ativa completa"
-
-#: evaluation/models/fuglmeyer.py:92
-msgctxt "FUGLM_UE_HAND_MASS_EXT_ACTIVITY"
-msgid "No extension occurs"
-msgstr "Não ocorre extensão"
-
-#: evaluation/models/fuglmeyer.py:93
-msgctxt "FUGLM_UE_HAND_MASS_EXT_ACTIVITY"
-msgid "Patient can release an active mass flexion grasp"
-msgstr "O sujeito libera ativamente a flexão em massa"
-
-#: evaluation/models/fuglmeyer.py:94
-msgctxt "FUGLM_UE_HAND_MASS_EXT_ACTIVITY"
-msgid "Full active extension"
-msgstr "Extensão ativa completa"
-
-#: evaluation/models/fuglmeyer.py:97
-msgctxt "FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY"
-msgid "Required position cannot be attained"
-msgstr "A posição requerida não pode ser adquirida"
-
-#: evaluation/models/fuglmeyer.py:98
-msgctxt "FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY"
-msgid "Grasp is weak"
-msgstr "Mantém posição sem resistência"
-
-#: evaluation/models/fuglmeyer.py:99
-msgctxt "FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY"
-msgid "Grasp can be maintained against relatively great resistance"
-msgstr "A preensão pode ser mantida contra a resistência"
-
-#: evaluation/models/fuglmeyer.py:102
-msgctxt "FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY"
-msgid "Function cannot be performed"
-msgstr "Função não pode ser realizada"
-
-#: evaluation/models/fuglmeyer.py:103
-msgctxt "FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY"
-msgid ""
-"Scrap of paper interposed between the thumb and index finger can be kept in "
-"place, but not against a slight tug"
-msgstr "Mantém posição sem resistência"
-
-#: evaluation/models/fuglmeyer.py:104
-msgctxt "FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY"
-msgid "Paper is held firmly against a tug"
-msgstr "Mantém posição contra resitência"
-
-#: evaluation/models/fuglmeyer.py:107
-msgctxt "FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY"
-msgid "Function cannot be performed"
-msgstr "Função não pode ser realizada"
-
-#: evaluation/models/fuglmeyer.py:108
-msgctxt "FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY"
-msgid ""
-"A pencil interposed between the thumb pad and the pad of the index finger "
-"can be kept in place, but not against a slight tug"
-msgstr "Mantém posição sem resistência"
-
-#: evaluation/models/fuglmeyer.py:109
-msgctxt "FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY"
-msgid "Pencil is held firmly against a tug"
-msgstr "Mantém posição contra resitência"
-
-#: evaluation/models/fuglmeyer.py:112
-msgctxt "FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY"
-msgid "Function cannot be performed"
-msgstr "Função não pode ser realizada"
-
-#: evaluation/models/fuglmeyer.py:113
-msgctxt "FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY"
-msgid ""
-"A can interposed between the thumb and index finger can be kept in place, "
-"but not against a slight tug"
-msgstr "Mantém posição sem resistência"
-
-#: evaluation/models/fuglmeyer.py:114
-msgctxt "FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY"
-msgid "Can is held firmly against a tug"
-msgstr "Mantém posição contra resitência"
 
 #: evaluation/models/fuglmeyer.py:117
-msgctxt "FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY"
-msgid "Function cannot be performed"
-msgstr "Função não pode ser realizada"
-
-#: evaluation/models/fuglmeyer.py:118
-msgctxt "FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY"
-msgid ""
-"A tennis ball can be kept in place with a spherical grasp, but not against a "
-"slight tug"
-msgstr "Mantém posição sem resistência"
+msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_90_ACTIVITY"
+msgid "Maintains position against resistance"
+msgstr "Posição pode ser mantida contra resistência (leve)"
 
 #: evaluation/models/fuglmeyer.py:119
-msgctxt "FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY"
-msgid "Tennis ball is held firmly against a tug"
-msgstr "Mantém posição contra resitência"
-
-#: evaluation/models/fuglmeyer.py:124
-msgctxt "FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY"
-msgid "Marked tremor"
-msgstr "Pronunciada ou assistemática"
-
-#: evaluation/models/fuglmeyer.py:125
-msgctxt "FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY"
-msgid "Slight tremor"
-msgstr "Leve e sistemática"
-
-#: evaluation/models/fuglmeyer.py:126
-msgctxt "FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY"
-msgid "No tremor"
-msgstr "Nenhuma"
-
-#: evaluation/models/fuglmeyer.py:129
-msgctxt "FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY"
-msgid "Pronounced or unsystematic dysmetria"
-msgstr "Pronunciada ou assistemática"
-
-#: evaluation/models/fuglmeyer.py:130
-msgctxt "FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY"
-msgid "Slight or systematic dysmetria"
-msgstr "Leve e sistemática"
-
-#: evaluation/models/fuglmeyer.py:131
-msgctxt "FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY"
-msgid "No dysmetria"
-msgstr "Nenhuma"
-
-#: evaluation/models/fuglmeyer.py:134
-msgctxt "FUGLM_UE_COORD_SPEED_TIME_ACTIVITY"
-msgid "Activity is more than 5 seconds longer than unaffected hand"
-msgstr "Mais do que 5 segundos mais lento do que o lado não acometido"
-
-#: evaluation/models/fuglmeyer.py:135
-msgctxt "FUGLM_UE_COORD_SPEED_TIME_ACTIVITY"
-msgid "(2-5) seconds longer than unaffected side"
-msgstr "2-5 segundos mais lento"
-
-#: evaluation/models/fuglmeyer.py:136
-msgctxt "FUGLM_UE_COORD_SPEED_TIME_ACTIVITY"
-msgid "Less than 2 seconds difference"
-msgstr "Diferença máxima de 01 segundo entre os lados"
-
-#: evaluation/models/fuglmeyer.py:141
-msgctxt "FUGLM_LE_REFLEX_ACTIVITY"
-msgid "No reflex activity can be elicited"
-msgstr "Sem atividade reflexa"
-
-#: evaluation/models/fuglmeyer.py:142
-msgctxt "FUGLM_LE_REFLEX_ACTIVITY"
-msgid "Reflex activity can be elicited"
-msgstr "Atividade reflexa pode ser avaliada"
-
-#: evaluation/models/fuglmeyer.py:145
-msgctxt "FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY"
-msgid "At least 2 of the 3 phasic reflexes are markedly hyperactive"
-msgstr "2 ou 3 reflexos estão marcadamente hiperativos"
-
-#: evaluation/models/fuglmeyer.py:146
-msgctxt "FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY"
-msgid "One reflex is markedly hyperactive or at least 2 reflexes are lively"
-msgstr "1 reflexo esta hiperativo ou 2 estão vivos"
-
-#: evaluation/models/fuglmeyer.py:147
-msgctxt "FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY"
-msgid "No more than one reflex is lively and none are hyperactive"
-msgstr "Não mais que um reflexo esta vivo"
-
-#: evaluation/models/fuglmeyer.py:152
-msgctxt "FUGLM_LE_VOL_MOV_SYN"
-msgid "Cannot be performed at all"
-msgstr "Não realiza"
-
-#: evaluation/models/fuglmeyer.py:153
-msgctxt "FUGLM_LE_VOL_MOV_SYN"
-msgid "Partial motion"
-msgstr "Realiza parcialmente"
-
-#: evaluation/models/fuglmeyer.py:154
-msgctxt "FUGLM_LE_VOL_MOV_SYN"
-msgid "Full motion"
-msgstr "Completamente"
-
-#: evaluation/models/fuglmeyer.py:158
-msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_KNEE"
-msgid "No active motion"
-msgstr "Sem movimento ativo"
-
-#: evaluation/models/fuglmeyer.py:159
-msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_KNEE"
-msgid "From slightly extended position, knee can be flexed but not beyond 90°"
-msgstr ""
-"O joelho pode ativamente ser fletido até 90° (palpar os tendões dos flexores "
-"do joelho)"
-
-#: evaluation/models/fuglmeyer.py:160
-msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_KNEE"
-msgid "Knee flexion beyond 90°"
-msgstr "O joelho pode ser fletido além de 90°"
-
-#: evaluation/models/fuglmeyer.py:163
-msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE"
-msgid "No active motion"
-msgstr "Sem movimento ativo"
-
-#: evaluation/models/fuglmeyer.py:164
-msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE"
-msgid "Incomplete active flexion"
-msgstr "Com dosriflexão limitada"
-
-#: evaluation/models/fuglmeyer.py:165
-msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE"
-msgid "Normal dorsiflexion"
-msgstr "Completa dorsiflexão ativa"
-
-#: evaluation/models/fuglmeyer.py:168
-msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_KNEE"
-msgid "Knee cannot flex without hip flexion"
-msgstr ""
-"O joelho não pode ser fletido se o quadril não é fletido simultaneamente"
-
-#: evaluation/models/fuglmeyer.py:169
-msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_KNEE"
-msgid ""
-"Knee flexion begins without hip flexion but does not reach to 90° or hip "
-"begins to flex in later phase of motion"
-msgstr "Menos do que 90° do joelho ou se realiza com flexão de quadril"
-
-#: evaluation/models/fuglmeyer.py:170
-msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_KNEE"
-msgid "Knee flexion beyond 90 degrees with hip maintained in extension"
-msgstr "Até 90° de flexão sem flexão simultanea do quadril"
-
-#: evaluation/models/fuglmeyer.py:173
-msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_ANKLE"
-msgid "No active motion"
-msgstr "Sem movimentação ativa"
-
-#: evaluation/models/fuglmeyer.py:174
-msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_ANKLE"
-msgid "Partial motion"
-msgstr "Limitação de dorsiflexão"
-
-#: evaluation/models/fuglmeyer.py:175
-msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_ANKLE"
-msgid "Full motion"
-msgstr "Dorsiflexão completa"
-
-#: evaluation/models/fuglmeyer.py:179
-msgctxt "FUGLM_LE_COORD_SPEED_TREMOR"
-msgid "Marked tremor"
-msgstr "Tremor marcante"
-
-#: evaluation/models/fuglmeyer.py:180
-msgctxt "FUGLM_LE_COORD_SPEED_TREMOR"
-msgid "Slight tremor"
-msgstr "Tremor leve"
-
-#: evaluation/models/fuglmeyer.py:181
-msgctxt "FUGLM_LE_COORD_SPEED_TREMOR"
-msgid "No tremor"
-msgstr "Sem tremor"
-
-#: evaluation/models/fuglmeyer.py:184
-msgctxt "FUGLM_LE_COORD_SPEED_DYSMETRIA"
-msgid "Pronounced or unsystematic dysmetria"
-msgstr "Dismetria evidente ou assistemático"
-
-#: evaluation/models/fuglmeyer.py:185
-msgctxt "FUGLM_LE_COORD_SPEED_DYSMETRIA"
-msgid "Slight or systematic dysmetria"
-msgstr "Dismetria leve ou sistemática"
-
-#: evaluation/models/fuglmeyer.py:186
-msgctxt "FUGLM_LE_COORD_SPEED_DYSMETRIA"
-msgid "No dysmetria"
-msgstr "Sem dismetria"
-
-#: evaluation/models/fuglmeyer.py:189
-msgctxt "FUGLM_LE_COORD_SPEED_TIME"
-msgid "Activity is more than 6 seconds longer than unaffected leg"
-msgstr "6 segundos mais lento que o lado não afetado"
-
-#: evaluation/models/fuglmeyer.py:190
-msgctxt "FUGLM_LE_COORD_SPEED_TIME"
-msgid " 2-5.9 seconds longer than unaffected leg"
-msgstr "2 a 5 segundos mais lento que o lado afetado"
-
-#: evaluation/models/fuglmeyer.py:191
-msgctxt "FUGLM_LE_COORD_SPEED_TIME"
-msgid "less than 2 seconds difference"
-msgstr "Menos de 2 segundos de diferença"
-
-#: evaluation/models/fuglmeyer.py:197
-msgid "Flexors: biceps and finger flexors"
-msgstr "Flexores: bíceps e flexor dos dedos"
-
-#: evaluation/models/fuglmeyer.py:199
-msgid "Extensors: triceps"
-msgstr "Extensores: tríceps"
-
-#: evaluation/models/fuglmeyer.py:203
-msgctxt "FuglMeyer"
-msgid "Shoulder retraction"
-msgstr "Ombro - Retração de ombro"
-
-#: evaluation/models/fuglmeyer.py:205
-msgctxt "FuglMeyer"
-msgid "Shoulder elevation"
-msgstr "Ombro - elevação"
-
-#: evaluation/models/fuglmeyer.py:207
-msgctxt "FuglMeyer"
-msgid "Shoulder abduction (90)"
-msgstr "Ombro - Abdução 90°"
-
-#: evaluation/models/fuglmeyer.py:209
-msgctxt "FuglMeyer"
-msgid "Shoulder external rotation"
-msgstr "Ombro - Rotação externa"
-
-#: evaluation/models/fuglmeyer.py:211
-msgctxt "FuglMeyer"
-msgid "Elbow flexion"
-msgstr "Cotovelo - Flexão de cotovelo"
-
-#: evaluation/models/fuglmeyer.py:213
-msgctxt "FuglMeyer"
-msgid "Forearm supination"
-msgstr "Antebraço - supinação"
-
-#: evaluation/models/fuglmeyer.py:214 evaluation/models/fuglmeyer.py:222
-#: evaluation/models/fuglmeyer.py:242 evaluation/models/fuglmeyer.py:284
-#: evaluation/models/fuglmeyer.py:287 evaluation/models/fuglmeyer.py:294
-#: evaluation/models/fuglmeyer.py:300 evaluation/models/fuglmeyer.py:304
-#: evaluation/models/fuglmeyer.py:306 evaluation/models/fuglmeyer.py:310
-#: evaluation/models/fuglmeyer.py:312 evaluation/models/fuglmeyer.py:318
-#: evaluation/models/fuglmeyer.py:320 evaluation/models/fuglmeyer.py:321
-msgctxt "FuglMeyer"
-msgid "Notes"
-msgstr "Observação"
-
-#: evaluation/models/fuglmeyer.py:217
-msgctxt "FuglMeyer"
-msgid "shoulder adduction / internal rotation"
-msgstr "Ombro - adução e rotação interna"
-
-#: evaluation/models/fuglmeyer.py:219
-msgctxt "FuglMeyer"
-msgid "elbow extension"
-msgstr "Cotovelo - extensão"
-
-#: evaluation/models/fuglmeyer.py:221
-msgctxt "FuglMeyer"
-msgid "forearm pronation"
-msgstr "Antebraço - pronação"
-
-#: evaluation/models/fuglmeyer.py:226
-msgctxt "FuglMeyer"
-msgid "Hand to lumbar spine"
-msgstr "Mão à coluna lombar"
-
-#: evaluation/models/fuglmeyer.py:228
-msgctxt "FuglMeyer"
-msgid "Shoulder flexion 0-90 elbow at 0 pronation-supination 0"
-msgstr ""
-"Flexão de ombro 0 - 90, cotovelo 0 e antebraço pronação/ supinação (P/S)  0"
-
-#: evaluation/models/fuglmeyer.py:230
-msgctxt "FuglMeyer"
-msgid "Pronation-supination elbow at 90 shoulder at 0"
-msgstr "Pronação/Supinação antebraço cotovelo em 90 e ombro em 0"
-
-#: evaluation/models/fuglmeyer.py:234
-msgctxt "FuglMeyer"
-msgid "Shoulder abduction 0 - 90 elbow at 0 forearm pronated"
-msgstr "Abdução do ombro a 90 com o cotovelo 0 e antebraço em pronação"
-
-#: evaluation/models/fuglmeyer.py:236
-msgctxt "FuglMeyer"
-msgid "Shoulder flexion 90- 180 elbow at 0pronation-supination 0"
-msgstr "Flexão do ombro de 90 - 180, cotovelo em 0, e antebraço P/S em 0"
-
-#: evaluation/models/fuglmeyer.py:238
-msgctxt "FuglMeyer"
-msgid "Pronation/supinationelbow at 0 shoulder at 30-90 flexion"
-msgstr "Pronação/Supinação antebraço cotovelo em 90 e ombro em 0"
-
-#: evaluation/models/fuglmeyer.py:245
 msgid ""
 "Stability at 15 dorsiflexion elbow at 90, forearm pronated shoulder at 0"
 msgstr ""
 "Estabilidade 15° extensão (dorsiflexão), cotovelo 90°, antebraço em pronação "
 "e ombro 0°"
 
-#: evaluation/models/fuglmeyer.py:246
+#: evaluation/models/fuglmeyer.py:123
+msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY"
+msgid "Cannot be performed"
+msgstr "Sujeito não pode dorsifletir o punho ate 15°"
+
+#: evaluation/models/fuglmeyer.py:124
+msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY"
+msgid "Can hold position but weak"
+msgstr "Alcança 15° dorsiflexão sem resistência"
+
+#: evaluation/models/fuglmeyer.py:125
+msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY"
+msgid "Maintains position against resistance"
+msgstr "Posição pode ser mantida contra resistência (leve)"
+
+#: evaluation/models/fuglmeyer.py:127
 msgid ""
 "Repeated dorsifexion / volar flexion elbow at 90, forearm pronated shoulder "
 "at 0, slight finger flexion"
@@ -1391,7 +2353,22 @@ msgstr ""
 "Flexão e extensão, cotovelo 90°, antebraço em pronação,  ombro 0° e dedos "
 "levemente fletidos"
 
-#: evaluation/models/fuglmeyer.py:247
+#: evaluation/models/fuglmeyer.py:131
+msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY"
+msgid "Less than 15° active dorsiflexion"
+msgstr "Sujeito não pode dorsifletir o punho até 15°"
+
+#: evaluation/models/fuglmeyer.py:132
+msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY"
+msgid "Dorsiflexion 15°, no resistance is taken"
+msgstr "Alcança 15° dorsiflexão sem resistência"
+
+#: evaluation/models/fuglmeyer.py:133
+msgctxt "FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY"
+msgid "Maintains position against resistance"
+msgstr "Mantém 15° dorsiflexão contra resistência"
+
+#: evaluation/models/fuglmeyer.py:135
 msgid ""
 "Stability at 15 dorsiflexion elbow at 0, forearm pronated slight shoulder "
 "flexion/abduction"
@@ -1399,7 +2376,22 @@ msgstr ""
 "Estabilidade 15° extensão (dorsiflexão), cotovelo 0°, antebraço em pronação "
 "e ombro levemente fletido/ abduzido"
 
-#: evaluation/models/fuglmeyer.py:248
+#: evaluation/models/fuglmeyer.py:139
+msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY"
+msgid "Cannot perform volitionally"
+msgstr "Não ocorre movimento voluntário"
+
+#: evaluation/models/fuglmeyer.py:140
+msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY"
+msgid "Limited active range of motion"
+msgstr "Movimento ativo com ADM incompleta"
+
+#: evaluation/models/fuglmeyer.py:141
+msgctxt "FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY"
+msgid "Full active range of motion, smoothly"
+msgstr "Movimento ativo com ADM completa"
+
+#: evaluation/models/fuglmeyer.py:143
 msgid ""
 "Repeated dorsifexion / volar flexion elbow at 0, forearm pronated slight "
 "shoulder flexion/abduction"
@@ -1407,16 +2399,46 @@ msgstr ""
 "Flexão e extensão, cotovelo 0°, antebraço em pronação e ombro levemente "
 "fletido/ abduzido"
 
-#: evaluation/models/fuglmeyer.py:249
+#: evaluation/models/fuglmeyer.py:147
+msgctxt "FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY"
+msgid "Cannot perform volitionally"
+msgstr "Não realiza movimento ativo"
+
+#: evaluation/models/fuglmeyer.py:148
+msgctxt "FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY"
+msgid "Jerky movement or incomplete"
+msgstr "Movimento incompleto e/ou movimentos oscilantes"
+
+#: evaluation/models/fuglmeyer.py:149
+msgctxt "FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY"
+msgid "Complete and smooth circumduction"
+msgstr "Movimento completo, com exatidão"
+
+#: evaluation/models/fuglmeyer.py:151
 msgid "Circumduction"
 msgstr "Circundação"
 
-#: evaluation/models/fuglmeyer.py:253
+#: evaluation/models/fuglmeyer.py:156
+msgctxt "FUGLM_UE_HAND_MASS_FLEX_ACTIVITY"
+msgid "No flexion occurs"
+msgstr "Nenhuma flexão ocorre"
+
+#: evaluation/models/fuglmeyer.py:157
+msgctxt "FUGLM_UE_HAND_MASS_FLEX_ACTIVITY"
+msgid "Some flexion, but not full motion"
+msgstr "Alguma flexão com ADM incompleta"
+
+#: evaluation/models/fuglmeyer.py:158
+msgctxt "FUGLM_UE_HAND_MASS_FLEX_ACTIVITY"
+msgid "Completed active flexion "
+msgstr "Flexão ativa completa"
+
+#: evaluation/models/fuglmeyer.py:160
 msgid "Mass flexion from full active or passive extension"
 msgstr ""
 "Flexão em massa dos dedos, partindo da extensão ativa ou passiva completa "
 
-#: evaluation/models/fuglmeyer.py:253
+#: evaluation/models/fuglmeyer.py:162
 msgid ""
 "Close your hand. The therapist can help get the starting position with your "
 "fingers in extension"
@@ -1424,12 +2446,27 @@ msgstr ""
 "<strong>'Feche sua mão'</strong> O terapeuta pode auxiliar a adquirir a "
 "posição inicial com os dedos em extensão"
 
-#: evaluation/models/fuglmeyer.py:255
+#: evaluation/models/fuglmeyer.py:165
+msgctxt "FUGLM_UE_HAND_MASS_EXT_ACTIVITY"
+msgid "No extension occurs"
+msgstr "Não ocorre extensão"
+
+#: evaluation/models/fuglmeyer.py:166
+msgctxt "FUGLM_UE_HAND_MASS_EXT_ACTIVITY"
+msgid "Patient can release an active mass flexion grasp"
+msgstr "O sujeito libera ativamente a flexão em massa"
+
+#: evaluation/models/fuglmeyer.py:167
+msgctxt "FUGLM_UE_HAND_MASS_EXT_ACTIVITY"
+msgid "Full active extension"
+msgstr "Extensão ativa completa"
+
+#: evaluation/models/fuglmeyer.py:169
 msgid "Mass flexion from full active or passive flexion"
 msgstr ""
 "Extensão em massa dos dedos, partindo da flexão ativa ou passiva completa "
 
-#: evaluation/models/fuglmeyer.py:255
+#: evaluation/models/fuglmeyer.py:171
 msgid ""
 "Open your hand. The therapist can help get the starting position with your "
 "fingers in flexion"
@@ -1437,20 +2474,52 @@ msgstr ""
 "<strong>'Abra sua mão'</strong> O terapeuta pode auxiliar a adquirir a "
 "posição inicial com os dedos em flexão"
 
-#: evaluation/models/fuglmeyer.py:257
+#: evaluation/models/fuglmeyer.py:175
+msgctxt "FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY"
+msgid "Required position cannot be attained"
+msgstr "A posição requerida não pode ser adquirida"
+
+#: evaluation/models/fuglmeyer.py:176
+msgctxt "FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY"
+msgid "Grasp is weak"
+msgstr "Mantém posição sem resistência"
+
+#: evaluation/models/fuglmeyer.py:177
+msgctxt "FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY"
+msgid "Grasp can be maintained against relatively great resistance"
+msgstr "A preensão pode ser mantida contra a resistência"
+
+#: evaluation/models/fuglmeyer.py:179
 msgid "Flexion in PIP and DIP (digits II-V)extension in MCP II-V"
 msgstr ""
 "Preensão distal: flexão IFPs e IFDs e extensão em MCFs (2° ao 5° dedos)"
 
-#: evaluation/models/fuglmeyer.py:257
+#: evaluation/models/fuglmeyer.py:181
 msgid "Hold my finger and keep it stuck between your fingers"
 msgstr "<strong>'Segure meu dedo e mantenha-o preso entre seus dedos'</strong>"
 
-#: evaluation/models/fuglmeyer.py:260
+#: evaluation/models/fuglmeyer.py:185
+msgctxt "FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY"
+msgid "Function cannot be performed"
+msgstr "Função não pode ser realizada"
+
+#: evaluation/models/fuglmeyer.py:186
+msgctxt "FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY"
+msgid ""
+"Scrap of paper interposed between the thumb and index finger can be kept in "
+"place, but not against a slight tug"
+msgstr "Mantém posição sem resistência"
+
+#: evaluation/models/fuglmeyer.py:187
+msgctxt "FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY"
+msgid "Paper is held firmly against a tug"
+msgstr "Mantém posição contra resitência"
+
+#: evaluation/models/fuglmeyer.py:189
 msgid "Thumb adduction"
 msgstr "Adução de polegar: segurar folha de papel entre polegar e 2° MCF"
 
-#: evaluation/models/fuglmeyer.py:262
+#: evaluation/models/fuglmeyer.py:191
 msgid ""
 "Ask the patient to perform pure thumb adduction with the scrap of paper "
 "interposed between the thumb and first digit. Test this grip against "
@@ -1463,14 +2532,31 @@ msgstr ""
 "testar a resistência <strong>Segure o papel entre o polegar e o indicador</"
 "strong>"
 
-#: evaluation/models/fuglmeyer.py:264
+#: evaluation/models/fuglmeyer.py:196
+msgctxt "FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY"
+msgid "Function cannot be performed"
+msgstr "Função não pode ser realizada"
+
+#: evaluation/models/fuglmeyer.py:198
+msgctxt "FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY"
+msgid ""
+"A pencil interposed between the thumb pad and the pad of the index finger "
+"can be kept in place, but not against a slight tug"
+msgstr "Mantém posição sem resistência"
+
+#: evaluation/models/fuglmeyer.py:199
+msgctxt "FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY"
+msgid "Pencil is held firmly against a tug"
+msgstr "Mantém posição contra resitência"
+
+#: evaluation/models/fuglmeyer.py:201
 msgid ""
 "Opposition pulpa of the thumb against the pulpa of 2-nd finger,pencil, tug "
 "upward"
 msgstr ""
 "Polpa polegar - polpa 2° dedo: segurar lápis entrepolpa de  polegar e 2° dedo"
 
-#: evaluation/models/fuglmeyer.py:265
+#: evaluation/models/fuglmeyer.py:203
 msgid ""
 "Subject is sitting with arm on bedside table. Instruct the patient to grasp "
 "a pen by opposing the thumb and index finger pads around the pen. The pen "
@@ -1483,12 +2569,29 @@ msgstr ""
 "está sobre a mesa. O examinador puxa a caneta para testar a resistência. O "
 "terapeuta não pode segurar a caneta para estabilizá-la."
 
-#: evaluation/models/fuglmeyer.py:267
+#: evaluation/models/fuglmeyer.py:209
+msgctxt "FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY"
+msgid "Function cannot be performed"
+msgstr "Função não pode ser realizada"
+
+#: evaluation/models/fuglmeyer.py:210
+msgctxt "FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY"
+msgid ""
+"A can interposed between the thumb and index finger can be kept in place, "
+"but not against a slight tug"
+msgstr "Mantém posição sem resistência"
+
+#: evaluation/models/fuglmeyer.py:211
+msgctxt "FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY"
+msgid "Can is held firmly against a tug"
+msgstr "Mantém posição contra resitência"
+
+#: evaluation/models/fuglmeyer.py:213
 msgid ""
 "Cylinder shaped object (small can)tug upward, opposition in digits I and II"
 msgstr "Preensão cilíndrica: segurar objeto cilíndrico (lata pequena)"
 
-#: evaluation/models/fuglmeyer.py:269
+#: evaluation/models/fuglmeyer.py:215
 msgid ""
 "Subject is sitting with arm on bedside table. Instruct the patient to grasp "
 "a small can (placed upright on a table without stabilization) by opening the "
@@ -1504,14 +2607,39 @@ msgstr ""
 "encaixá-la sobre o objeto. O examinador puxa o objeto para testar a "
 "resistência"
 
-#: evaluation/models/fuglmeyer.py:271
+#: evaluation/models/fuglmeyer.py:222
+msgctxt "FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY"
+msgid "Function cannot be performed"
+msgstr "Função não pode ser realizada"
+
+#: evaluation/models/fuglmeyer.py:223
+msgctxt "FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY"
+msgid ""
+"A tennis ball can be kept in place with a spherical grasp, but not against a "
+"slight tug"
+msgstr "Mantém posição sem resistência"
+
+#: evaluation/models/fuglmeyer.py:224
+msgctxt "FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY"
+msgid "Tennis ball is held firmly against a tug"
+msgstr "Mantém posição contra resitência"
+
+#: evaluation/models/fuglmeyer.py:226
 msgid "Fingers in abduction/flexion, thumb opposed, tennis ball"
 msgstr "Preensão esférica: segurar bolinha de tênis"
 
-#: evaluation/models/fuglmeyer.py:273
+#: evaluation/models/fuglmeyer.py:228
+#, fuzzy
+#| msgid ""
+#| "Subject is sitting with arm on bedside table. Instruct the patient to "
+#| "perform a spherical grasp by grasping a tennis ball The tester may "
+#| "support the patient’s arm but may not assist with the hand function "
+#| "required for the retrieval task. Test this grip against resistance by "
+#| "asking the patient to hold as you attempt to pull the ball out with a "
+#| "slight tug. <strong>Hold the ball and keep it steady</strong>"
 msgid ""
 "Subject is sitting with arm on bedside table. Instruct the patient to "
-"perform a spherical grasp by grasping a tennis ball The tester may support "
+"perform a spherical grasp by grasping a tennis ball. The tester may support "
 "the patient’s arm but may not assist with the hand function required for the "
 "retrieval task. Test this grip against resistance by asking the patient to "
 "hold as you attempt to pull the ball out with a slight tug. <strong>Hold the "
@@ -1521,87 +2649,282 @@ msgstr ""
 "utilizado um apoio sob a bola para que não escorregue). O examinador puxa a "
 "bola para testar a resistência"
 
-#: evaluation/models/fuglmeyer.py:276
+#: evaluation/models/fuglmeyer.py:236
+msgctxt "FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY"
+msgid "Marked tremor"
+msgstr "Pronunciada ou assistemática"
+
+#: evaluation/models/fuglmeyer.py:237
+msgctxt "FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY"
+msgid "Slight tremor"
+msgstr "Leve e sistemática"
+
+#: evaluation/models/fuglmeyer.py:238
+msgctxt "FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY"
+msgid "No tremor"
+msgstr "Nenhuma"
+
+#: evaluation/models/fuglmeyer.py:240
 msgid "Tremor"
 msgstr "Tremor"
 
-#: evaluation/models/fuglmeyer.py:277
+#: evaluation/models/fuglmeyer.py:243
+msgctxt "FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY"
+msgid "Pronounced or unsystematic dysmetria"
+msgstr "Pronunciada ou assistemática"
+
+#: evaluation/models/fuglmeyer.py:244
+msgctxt "FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY"
+msgid "Slight or systematic dysmetria"
+msgstr "Leve e sistemática"
+
+#: evaluation/models/fuglmeyer.py:245
+msgctxt "FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY"
+msgid "No dysmetria"
+msgstr "Nenhuma"
+
+#: evaluation/models/fuglmeyer.py:247
 msgid "Dysmetria"
 msgstr "Dismetria"
 
-#: evaluation/models/fuglmeyer.py:278
+#: evaluation/models/fuglmeyer.py:250
+msgctxt "FUGLM_UE_COORD_SPEED_TIME_ACTIVITY"
+msgid "Activity is more than 5 seconds longer than unaffected hand"
+msgstr "Mais do que 5 segundos mais lento do que o lado não acometido"
+
+#: evaluation/models/fuglmeyer.py:251
+msgctxt "FUGLM_UE_COORD_SPEED_TIME_ACTIVITY"
+msgid "(2-5) seconds longer than unaffected side"
+msgstr "2-5 segundos mais lento"
+
+#: evaluation/models/fuglmeyer.py:252
+msgctxt "FUGLM_UE_COORD_SPEED_TIME_ACTIVITY"
+msgid "Less than 2 seconds difference"
+msgstr "Diferença máxima de 01 segundo entre os lados"
+
+#: evaluation/models/fuglmeyer.py:254
 msgid "Speed"
 msgstr "Velocidade"
 
-#: evaluation/models/fuglmeyer.py:282
+#: evaluation/models/fuglmeyer.py:259
+msgctxt "FUGLM_LE_REFLEX_ACTIVITY"
+msgid "No reflex activity can be elicited"
+msgstr "Sem atividade reflexa"
+
+#: evaluation/models/fuglmeyer.py:260
+msgctxt "FUGLM_LE_REFLEX_ACTIVITY"
+msgid "Reflex activity can be elicited"
+msgstr "Atividade reflexa pode ser avaliada"
+
+#: evaluation/models/fuglmeyer.py:262
 msgid "Achilles"
 msgstr "Aquiles"
 
-#: evaluation/models/fuglmeyer.py:283
+#: evaluation/models/fuglmeyer.py:263
 msgid "Patellar"
 msgstr "Patelar"
 
-#: evaluation/models/fuglmeyer.py:286
+#: evaluation/models/fuglmeyer.py:268
+msgctxt "FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY"
+msgid "At least 2 of the 3 phasic reflexes are markedly hyperactive"
+msgstr "2 ou 3 reflexos estão marcadamente hiperativos"
+
+#: evaluation/models/fuglmeyer.py:269
+msgctxt "FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY"
+msgid "One reflex is markedly hyperactive or at least 2 reflexes are lively"
+msgstr "1 reflexo esta hiperativo ou 2 estão vivos"
+
+#: evaluation/models/fuglmeyer.py:270
+msgctxt "FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY"
+msgid "No more than one reflex is lively and none are hyperactive"
+msgstr "Não mais que um reflexo esta vivo"
+
+#: evaluation/models/fuglmeyer.py:272
 msgid "Achilles and patellar reflexes"
 msgstr "Patelar e aquileu/adutor"
 
-#: evaluation/models/fuglmeyer.py:291
+#: evaluation/models/fuglmeyer.py:278
+msgctxt "FUGLM_LE_VOL_MOV_SYN"
+msgid "Cannot be performed at all"
+msgstr "Não realiza"
+
+#: evaluation/models/fuglmeyer.py:279
+msgctxt "FUGLM_LE_VOL_MOV_SYN"
+msgid "Partial motion"
+msgstr "Realiza parcialmente"
+
+#: evaluation/models/fuglmeyer.py:280
+msgctxt "FUGLM_LE_VOL_MOV_SYN"
+msgid "Full motion"
+msgstr "Completamente"
+
+#: evaluation/models/fuglmeyer.py:282
 msgid "Hip flexion"
 msgstr "Flexão de quadril"
 
-#: evaluation/models/fuglmeyer.py:292
+#: evaluation/models/fuglmeyer.py:283
 msgid "Knee flexion"
 msgstr "Flexão de joelho"
 
-#: evaluation/models/fuglmeyer.py:293
+#: evaluation/models/fuglmeyer.py:284
 msgid "Ankle dorsiflexion"
 msgstr "Dorsiflexão (decúbito dorsal)"
 
-#: evaluation/models/fuglmeyer.py:296
+#: evaluation/models/fuglmeyer.py:287
 msgid "Hip extension"
 msgstr "Quadril - extensão"
 
-#: evaluation/models/fuglmeyer.py:297
+#: evaluation/models/fuglmeyer.py:288
 msgid "Hip adduction"
 msgstr "Quadril - adução"
 
-#: evaluation/models/fuglmeyer.py:298
+#: evaluation/models/fuglmeyer.py:289
 msgid "Knee extension"
 msgstr "Extensão de joelho"
 
-#: evaluation/models/fuglmeyer.py:299
+#: evaluation/models/fuglmeyer.py:290
 msgid "Ankle plantarflexion"
 msgstr "Flexão plantar"
 
-#: evaluation/models/fuglmeyer.py:303
+#: evaluation/models/fuglmeyer.py:295
+msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_KNEE"
+msgid "No active motion"
+msgstr "Sem movimento ativo"
+
+#: evaluation/models/fuglmeyer.py:296
+msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_KNEE"
+msgid "From slightly extended position, knee can be flexed but not beyond 90°"
+msgstr ""
+"O joelho pode ativamente ser fletido até 90° (palpar os tendões dos flexores "
+"do joelho)"
+
+#: evaluation/models/fuglmeyer.py:297
+msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_KNEE"
+msgid "Knee flexion beyond 90°"
+msgstr "O joelho pode ser fletido além de 90°"
+
+#: evaluation/models/fuglmeyer.py:299
 msgid "Knee Flexion sitting"
 msgstr ""
 "A partir de leve extensão do joelho, realizar uma flexão de joelho além de "
 "90° (sentado)"
 
+#: evaluation/models/fuglmeyer.py:303
+msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE"
+msgid "No active motion"
+msgstr "Sem movimento ativo"
+
+#: evaluation/models/fuglmeyer.py:304
+msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE"
+msgid "Incomplete active flexion"
+msgstr "Com dosriflexão limitada"
+
 #: evaluation/models/fuglmeyer.py:305
+msgctxt "FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE"
+msgid "Normal dorsiflexion"
+msgstr "Completa dorsiflexão ativa"
+
+#: evaluation/models/fuglmeyer.py:307
 msgid "Ankle Dorsiflexion sitting"
 msgstr ""
 "Dorsiflexão de tornozelo sentado (comparar com o lado não afetado e "
 "solicitar a dorsiflexão ativa)"
 
-#: evaluation/models/fuglmeyer.py:309
+#: evaluation/models/fuglmeyer.py:312
+msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_KNEE"
+msgid "Knee cannot flex without hip flexion"
+msgstr ""
+"O joelho não pode ser fletido se o quadril não é fletido simultaneamente"
+
+#: evaluation/models/fuglmeyer.py:313
+msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_KNEE"
+msgid ""
+"Knee flexion begins without hip flexion but does not reach to 90° or hip "
+"begins to flex in later phase of motion"
+msgstr "Menos do que 90° do joelho ou se realiza com flexão de quadril"
+
+#: evaluation/models/fuglmeyer.py:314
+msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_KNEE"
+msgid "Knee flexion beyond 90 degrees with hip maintained in extension"
+msgstr "Até 90° de flexão sem flexão simultanea do quadril"
+
+#: evaluation/models/fuglmeyer.py:316
 msgid "Knee Flexion standing"
 msgstr "Quadril a 0°, realizar a flexão de joelho até 90° (em pé)"
 
-#: evaluation/models/fuglmeyer.py:311
+#: evaluation/models/fuglmeyer.py:320
+msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_ANKLE"
+msgid "No active motion"
+msgstr "Sem movimentação ativa"
+
+#: evaluation/models/fuglmeyer.py:321
+msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_ANKLE"
+msgid "Partial motion"
+msgstr "Limitação de dorsiflexão"
+
+#: evaluation/models/fuglmeyer.py:322
+msgctxt "FUGLM_LE_VOL_MOV_NO_SYN_ANKLE"
+msgid "Full motion"
+msgstr "Dorsiflexão completa"
+
+#: evaluation/models/fuglmeyer.py:324
 msgid "Ankle Dorsiflexion standing"
 msgstr "Dorsiflexão de tornozelo em pé (comparar com o lado contralateral)"
 
-#: evaluation/models/fuglmeyer.py:315
+#: evaluation/models/fuglmeyer.py:329
+msgctxt "FUGLM_LE_COORD_SPEED_TREMOR"
+msgid "Marked tremor"
+msgstr "Tremor marcante"
+
+#: evaluation/models/fuglmeyer.py:330
+msgctxt "FUGLM_LE_COORD_SPEED_TREMOR"
+msgid "Slight tremor"
+msgstr "Tremor leve"
+
+#: evaluation/models/fuglmeyer.py:331
+msgctxt "FUGLM_LE_COORD_SPEED_TREMOR"
+msgid "No tremor"
+msgstr "Sem tremor"
+
+#: evaluation/models/fuglmeyer.py:333
 msgid "Scoring Tremor"
 msgstr "Tremor"
 
-#: evaluation/models/fuglmeyer.py:316
+#: evaluation/models/fuglmeyer.py:336
+msgctxt "FUGLM_LE_COORD_SPEED_DYSMETRIA"
+msgid "Pronounced or unsystematic dysmetria"
+msgstr "Dismetria evidente ou assistemático"
+
+#: evaluation/models/fuglmeyer.py:337
+msgctxt "FUGLM_LE_COORD_SPEED_DYSMETRIA"
+msgid "Slight or systematic dysmetria"
+msgstr "Dismetria leve ou sistemática"
+
+#: evaluation/models/fuglmeyer.py:338
+msgctxt "FUGLM_LE_COORD_SPEED_DYSMETRIA"
+msgid "No dysmetria"
+msgstr "Sem dismetria"
+
+#: evaluation/models/fuglmeyer.py:340
 msgid "Scoring Dysmetria"
 msgstr "Dismetria"
 
-#: evaluation/models/fuglmeyer.py:317
+#: evaluation/models/fuglmeyer.py:343
+msgctxt "FUGLM_LE_COORD_SPEED_TIME"
+msgid "Activity is more than 6 seconds longer than unaffected leg"
+msgstr "6 segundos mais lento que o lado não afetado"
+
+#: evaluation/models/fuglmeyer.py:344
+msgctxt "FUGLM_LE_COORD_SPEED_TIME"
+msgid " 2-5.9 seconds longer than unaffected leg"
+msgstr "2 a 5 segundos mais lento que o lado afetado"
+
+#: evaluation/models/fuglmeyer.py:345
+msgctxt "FUGLM_LE_COORD_SPEED_TIME"
+msgid "less than 2 seconds difference"
+msgstr "Menos de 2 segundos de diferença"
+
+#: evaluation/models/fuglmeyer.py:347
 msgid "Scoring Speed"
 msgstr "Velocidade"
 
@@ -2277,6 +3600,14 @@ msgstr "Hamilton"
 msgid "Hamiltons"
 msgstr "Hamiltons"
 
+#: evaluation/models/jthft.py:20
+msgid "JTHFT - Jebsen Taylor Hand Function Test"
+msgstr ""
+
+#: evaluation/models/jthft.py:21
+msgid "JTHFT - Jebsen Taylor Hand Function Tests"
+msgstr ""
+
 #: evaluation/models/kviq.py:11
 msgid "Image as clear as seeing"
 msgstr "Imagem tão clara como ver"
@@ -2590,6 +3921,126 @@ msgstr "Copiar um desenho (1 ponto)"
 #: evaluation/models/mmse.py:50 evaluation/models/mmse.py:51
 msgid "MMSE"
 msgstr "MEEM"
+
+#: evaluation/models/moca.py:15
+msgid "Alternating trail making"
+msgstr ""
+
+#: evaluation/models/moca.py:16
+msgid "Cube"
+msgstr ""
+
+#: evaluation/models/moca.py:17
+msgid "Contour"
+msgstr ""
+
+#: evaluation/models/moca.py:18
+msgid "Numbers"
+msgstr ""
+
+#: evaluation/models/moca.py:19
+#, fuzzy
+#| msgid "Hand"
+msgctxt "clock hands"
+msgid "Hands"
+msgstr "Controle Manual"
+
+#: evaluation/models/moca.py:22
+msgid "Lion"
+msgstr ""
+
+#: evaluation/models/moca.py:23
+msgid "Rhino"
+msgstr ""
+
+#: evaluation/models/moca.py:24
+msgid "Camel"
+msgstr ""
+
+#: evaluation/models/moca.py:27
+msgid "1st trial"
+msgstr ""
+
+#: evaluation/models/moca.py:32
+msgid "2nd trial"
+msgstr ""
+
+#: evaluation/models/moca.py:39
+msgid "Forward digit span"
+msgstr ""
+
+#: evaluation/models/moca.py:40
+msgid "Backward digit span"
+msgstr ""
+
+#: evaluation/models/moca.py:41
+msgid "Vigilance"
+msgstr ""
+
+#: evaluation/models/moca.py:42
+msgid "93"
+msgstr ""
+
+#: evaluation/models/moca.py:43
+msgid "86"
+msgstr ""
+
+#: evaluation/models/moca.py:44
+msgid "79"
+msgstr ""
+
+#: evaluation/models/moca.py:45
+msgid "72"
+msgstr ""
+
+#: evaluation/models/moca.py:46
+msgid "65"
+msgstr ""
+
+#: evaluation/models/moca.py:58
+msgid "With no cue"
+msgstr ""
+
+#: evaluation/models/moca.py:63
+msgid "Categorie cue"
+msgstr ""
+
+#: evaluation/models/moca.py:73
+msgid "Multiple choice cue"
+msgstr ""
+
+#: evaluation/models/moca.py:86
+#, fuzzy
+#| msgctxt "MMSE"
+#| msgid "Month"
+msgid "Month"
+msgstr "Mês (1 ponto)"
+
+#: evaluation/models/moca.py:87
+#, fuzzy
+#| msgctxt "MMSE"
+#| msgid "Year"
+msgid "Year"
+msgstr "Ano (1 ponto)"
+
+#: evaluation/models/moca.py:88
+msgid "Day"
+msgstr ""
+
+#: evaluation/models/moca.py:89
+msgid "Place"
+msgstr ""
+
+#: evaluation/models/moca.py:90
+#, fuzzy
+#| msgctxt "MMSE"
+#| msgid "City"
+msgid "City"
+msgstr "Cidade (1 ponto)"
+
+#: evaluation/models/moca.py:93 evaluation/models/moca.py:94
+msgid "MoCA"
+msgstr ""
 
 #: evaluation/models/nihss.py:13
 msgid ""
@@ -3283,7 +4734,7 @@ msgstr "Fonte encaminhadora"
 msgid "Patients"
 msgstr "Pacientes"
 
-#: evaluation/models/period.py:11
+#: evaluation/models/period.py:12
 msgid "Parent"
 msgstr ""
 
@@ -3762,6 +5213,7 @@ msgid "VAS - Visual Analog Scales"
 msgstr "EVA - Escalas Visuais Analógicas"
 
 #: evaluation/templates/admin/app_index.html:9
+#: evaluation/templates/admin/change_form.html:19
 #: evaluation/templates/admin/index.html:16
 #: evaluation/templates/reversion-compare/compare.html:19
 msgid "Home"
@@ -3808,7 +5260,32 @@ msgstr ""
 msgid "Django site admin"
 msgstr ""
 
-#: evaluation/templates/admin/evaluation/bostonaphasia/change_form.html:6
+#: evaluation/templates/admin/change_form.html:22
+msgid "Add"
+msgstr ""
+
+#: evaluation/templates/admin/change_form.html:34
+#: evaluation/templates/reversion-compare/compare.html:22
+msgid "History"
+msgstr "Histórico"
+
+#: evaluation/templates/admin/change_form.html:36
+msgid "View on site"
+msgstr ""
+
+#: evaluation/templates/admin/change_form.html:51
+msgid "Fields in <strong>bold</strong> are required."
+msgstr ""
+
+#: evaluation/templates/admin/change_form.html:54
+msgid "Please correct the error below."
+msgstr ""
+
+#: evaluation/templates/admin/change_form.html:54
+msgid "Please correct the errors below."
+msgstr ""
+
+#: evaluation/templates/admin/evaluation/bostonaphasia/change_form.html:90
 msgid "Boston Aphasia"
 msgstr ""
 
@@ -3816,12 +5293,11 @@ msgstr ""
 msgid "LINE CROSSING"
 msgstr "CANCELAMENTO DE LINHAS"
 
-#: evaluation/templates/admin/evaluation/eeg/change_form.html:6
+#: evaluation/templates/admin/evaluation/eeg/change_form.html:20
 msgid "EEG"
 msgstr "ELETROENCEFALOGRAMA"
 
 #: evaluation/templates/admin/evaluation/epworth/change_form.html:6
-#: evaluation/templates/admin/evaluation/vas/change_form.html:6
 msgid "EPWORTH SLEEPINESS"
 msgstr "SONOLÊNCIA DE EPWORTH"
 
@@ -3836,6 +5312,10 @@ msgstr "MEDIDA DE INDEPENDÊNCIA FUNCIONAL – MIF"
 #: evaluation/templates/admin/evaluation/fim/change_form.html:20
 msgid "Level"
 msgstr "Nível"
+
+#: evaluation/templates/admin/evaluation/ftt/change_form.html:6
+msgid "FINGER TAPPING TEST - FTT"
+msgstr ""
 
 #: evaluation/templates/admin/evaluation/fuglmeyer/change_form.html:31
 msgid "Fugl Meyer"
@@ -3852,6 +5332,12 @@ msgstr "Função motora do membro inferior"
 #: evaluation/templates/admin/evaluation/had/change_form.html:6
 msgid "HOSPITAL ANXIETY AND DEPRESSION - HAD"
 msgstr "HAD - AVALIAÇÃO DO NÍVEL DE ANSIEDADE E DEPRESSÃO"
+
+#: evaluation/templates/admin/evaluation/jthft/change_form.html:6
+#: evaluation/templates/admin/evaluation/moca/change_form.html:6
+#: evaluation/templates/admin/evaluation/vas/change_form.html:6
+msgid "VISUAL ANALOG SCALE"
+msgstr ""
 
 #: evaluation/templates/admin/evaluation/kviq/change_form.html:6
 msgid "Kinesthetic and visual Imagery Questionnaire"
@@ -3885,6 +5371,527 @@ msgstr "Imagem para item 10."
 msgid "Stroke Impact Scale"
 msgstr " Escala de Impacto do AVC"
 
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_01_manual_dominance.html:35
+msgid "hand preference"
+msgstr "mão preferencial"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_01_manual_dominance.html:38
+msgid "exclusive single hand"
+msgstr "mão exclusiva"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_01_manual_dominance.html:39
+msgid "both hands (1 em cada coluna)"
+msgstr "duas mãos indiferentemente (1 em cada coluna)"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_01_manual_dominance.html:44
+msgid "Laterality quotient"
+msgstr "Quociente de lateralidade"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_01_manual_dominance.html:44
+msgid "(total D - total E) (total D - total E) x 100"
+msgstr "(total D - total E)    (total D - total E) x 100"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_01_manual_dominance.html:48
+msgid "exclusive left hanbed"
+msgstr "canhoto absoluto"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_01_manual_dominance.html:51
+msgid "ambidextrous"
+msgstr " ambidestro  "
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_01_manual_dominance.html:54
+msgid "exclusive right handed"
+msgstr "destro absoluto"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_02_comprehension.html:19
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:20
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:62
+msgid "Score:"
+msgstr "Pontuação:"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_02_comprehension.html:20
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_02_comprehension.html:21
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:21
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:22
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:72
+msgid "Correct"
+msgstr "Correto"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_02_comprehension.html:20
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:65
+msgid "points"
+msgstr "pontos"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_02_comprehension.html:21
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_02_comprehension.html:22
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_02_comprehension.html:23
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:21
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:22
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:63
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:64
+msgid "point"
+msgstr "ponto"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_02_comprehension.html:22
+msgid "Correct category"
+msgstr "Categoria correta"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_02_comprehension.html:23
+msgid "Correct with hint"
+msgstr "Correto com pista"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_02_comprehension.html:24
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:32
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:52
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_16_oral_sentence.html:35
+msgid "Fail"
+msgstr "Falha"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_02_comprehension.html:29
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_14_visual_confrontation.html:34
+msgid "Card 2"
+msgstr "Cartão 2"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_02_comprehension.html:49
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_14_visual_confrontation.html:36
+msgid "Card 3"
+msgstr "Cartão 3"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:19
+msgid "Body part identification (A-B)"
+msgstr "Identificação de partes do corpo (A-B)"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:31
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:51
+msgid "Points"
+msgstr "Pontos"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:61
+msgid "Right-left discrimination (C)"
+msgstr "Discriminação direita-esquerda (C)"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:63
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:64
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:65
+msgid "corrects"
+msgstr "corretos"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:120
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:154
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_03_body_parts.html:176
+msgid "Total score"
+msgstr "Escore total"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_04_commands.html:24
+msgid "One point for each corrected underlined element"
+msgstr "Um ponto para cada item correto"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_04_commands.html:28
+msgid ""
+"After lining up a pencil, watch, and card, in that order, on the table in "
+"front of the patient:"
+msgstr "Após dispor sobre a mesa um lápis, relógio e um cartão, nesta ordem:"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_05_complex_ideational.html:35
+msgid ""
+"\n"
+"                                            Mr. Jones had to go to New "
+"York.\n"
+"                                            He decided to take a train.\n"
+"                                            His wife drove him to the "
+"station, but on the way they had a flat tire.\n"
+"                                            However, they arrived at the "
+"station just in time for him to catch the train\n"
+"                                            "
+msgstr ""
+"\n"
+"Sr. João tinha que ir para o Paraná visitar seu irmão. Como estava com "
+"pressa, ele decidiu pegar um avião. Sua esposa levou-o ao aeroporto, mas no "
+"caminho o pneu furou. Graças à ajuda de um motorista de taxi que passava, "
+"eles chegaram ao aeroporto a tempo de pegar o avião."
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_05_complex_ideational.html:46
+msgid ""
+"\n"
+"                                            A soldier tried to cash a check "
+"in a bank near his camp.\n"
+"                                            The teller, firm but "
+"sympathetic, said,\n"
+"                                            \"You will have to have "
+"identification from some of your friends from the camp.\"\n"
+"                                            The discoraged soldier answered, "
+"\"But I don't have any friends in camp - I'm the bugler.\"\n"
+"                                            "
+msgstr ""
+"\n"
+"A mãe pediu certa vez à sua filhinha que desse um pulo à mercearia para "
+"comprar uma lata de óleo, uma dúzia de ovos e meio quilo de açúcar. Não vá "
+"se esquecer nem fazer confusão. A menina foi a mercearia e pelo caminho ia "
+"repetindo em voz alta as coisas que tinha de comprar. Quando chegou à "
+"mercearia ela pediu ao vendedor: - Dê-me uma lata de óleo, meio quilo de "
+"ovos e uma dúzia de açúcar. - Não é possível! Quanto você trouxe? - Ah! "
+"Esqueci o dinheiro. Logo agora que eu tinha me lembrado de tudo o que "
+"precisava comprar."
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_05_complex_ideational.html:57
+msgid ""
+"\n"
+"                                            A customer walked into a hotel "
+"carrying a coil of rope in one hand and a suitcase in the other.\n"
+"                                            The hotel clerk asked, \"Pardon "
+"me, sir, but will you tell me what the rope is for?\"\n"
+"                                            \"Yes,\" replied the man, "
+"\"That's my fire escape.\" \"I'm sorry, sir,\" said the clerk,\n"
+"                                            \"but all guests carrying their "
+"own fire escapes must pay in advance.\"\n"
+"                                            "
+msgstr ""
+"\n"
+"Carlos bateu a porta de uma casa grande para pedir dinheiro para dar aos "
+"pobres. Um moço atendeu e Carlos pediu-lhe para dizer ao dono da casa que "
+"estava precisando de dinheiro para dar aos necessitados. O moço entrou em "
+"casa e voltou logo depois dizendo que o dono da casa havia saído. Então, "
+"diga-lhe um conselho: \"Quando sair não deve deixar a cara na janela porque "
+"alguém pode roubá-la.\""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_05_complex_ideational.html:68
+msgid ""
+"\n"
+"                                            The lion cub is born with a deep-"
+"seated hunting instinct.\n"
+"                                            One cub will stalk and pounce on "
+"another with the same eagerness and thrill exhibited by a kitten.\n"
+"                                            During the year and a half of "
+"cubhood, this play develops into a hunting and killing technique.\n"
+"                                            Skill comes through long "
+"practice, imitation of the old lions, and obedience to warning growls of the "
+"mother.\n"
+"                                            "
+msgstr ""
+"\n"
+"O filhote de leão nasce com um profundo instinto de caça. Um filhote anda na "
+"ponta dos pés e avança com a mesma violência e entusiasmo exibido por um "
+"gatinho. Durante o ano e meio de seu aprendizado, esta brincadeira "
+"transforma-se numa técnica de caçada e homicídio. A agilidade vem de longa "
+"prática, imitação de leões mais velhos e obediência aos rugidos de "
+"advertência de sua mãe."
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_06_oral_agility.html:24
+msgid ""
+"\n"
+"                            <strong>Nonverbal agility</strong>: Have the "
+"patient carry out the following rapidly repeated mouth movements as well as "
+"he can,\n"
+"                            after you demonstrate and describe the movement\n"
+"                            Count the number of full alternations carried "
+"out in 5 seconds.\n"
+"                        "
+msgstr ""
+"\n"
+"1 - <strong>Agilidade não-verbal</strong>: O paciente deve executar "
+"movimentos orais repetidos tão rápido quanto possível após terem sido "
+"demonstrados e descritos. Contar o número de sequências alternadas "
+"realizadas em 5 segundos"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_06_oral_agility.html:34
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:34
+msgid "Action required"
+msgstr "Ação solicitada"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_06_oral_agility.html:35
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:35
+msgid "N. of times in 5s<br>2 points"
+msgstr "Repetições em 5s<br>2 pontos"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_06_oral_agility.html:36
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:36
+msgid "N. of times in 5s<br>1 point"
+msgstr "Repetições em 5s<br>1 ponto"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:24
+msgid ""
+"\n"
+"                            <strong>Verbal agility</strong>: Have the "
+"patient repeat the following words as rapidly as he can,\n"
+"                            while you time the number of repetitions for 5 "
+"seconds\n"
+"                            Any assistance which helps patient to produce "
+"the desired word initially is permitted.\n"
+"                        "
+msgstr ""
+"\n"
+"2 - <strong>Agilidade verbal</strong>: o paciente deve repetir as palavras "
+"tão rápido quanto possível, enquanto você conta o número de repetições "
+"realizadas em 5 segundos."
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:97
+msgid "Articulation quality and paraphrasis Score."
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:101
+msgid ""
+"<p>The subtests B and D to H favor the registration paraphasics responses "
+"and determining the qualification of the articulation to Normal, Stiff, "
+"Distorted and Fail for each response that is a recognized trial for the word "
+"target and not paraphasic. Definitions for these joint qualifications will "
+"be found on page 36 of the Assessment of Aphasia and Related Disorders, 1983 "
+"(on page 30 and 31, 1972 Ed.). The articulation qualifications are "
+"registered for the guidance of the examiner in reviewing the testing "
+"protocol, and the qualifications to Normal, Stiff or Distorted indicate that "
+"the response is scored as correct. A response is scored as a failure if it "
+"is classified as a failed articulation, or if there is a paraphasia or lack "
+"of response.</p><p>The paraphasias should be included in their respective "
+"columns and counted in paraphasias marking even if there is self-correcting. "
+"It is given credit for the item, even if the paraphasia is told.</p>"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:108
+msgid "<strong>Coding of paraphasia columns</strong>"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:112
+msgid "Paraphasic errors in single words."
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:115
+msgid "Neologistic distortion"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:116
+msgid ""
+"more than half of the sounds produced are extraneous to the desired word. "
+"This term applies only to responses which are spoken as a unit with some "
+"fluency of articulation. It does not apply to sounds produced by subjects "
+"groping for the correct articulatory position. Latter responses would simply "
+"be scored as failures or as severely distorted in articulation if the word "
+"is recognizable."
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:118
+msgid "Literal paraphasia"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:119
+msgid ""
+"response contains sounds or syllables which have slipped out of sequence, "
+"have been deleted or are entirely extraneous to the desired response, but "
+"more than half of the response corresponds to more than half of the required "
+"word."
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:121
+msgid "Verbal paraphasia"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:122
+msgid ""
+"substitution of an inappropriate word during the effort to sayt something "
+"specific."
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:125
+msgid "Paraphasic errors in connected speech."
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:126
+msgid ""
+"<strong>Other</strong> - this category applies to a number of types of "
+"paraphasia involving more than a single word and to some nonparaphasic "
+"responses."
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:127
+msgid ""
+"Examiner should write in an abbreviation of a category rather than use a "
+"checkmark only."
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:129
+msgid "<strong>enj</strong> - extended neologistic jargon"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:130
+msgid ""
+"Nonsense word, but sounds like wordTypically will use same neologism for "
+"same word; with preservation of sentence pattern and intonation/phrase "
+"grouping."
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:132
+msgid "<strong>ecj</strong> - extended English jargon"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:133
+msgid ""
+"Free flowing speech which maintains a typical prosodic line, yet content is "
+"lacking; Real English words are included in the jargon"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:135
+msgid "<strong>cl</strong> - circumlocution"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:136
+msgid ""
+"Some patients, unable to evoke an elusive word, substitute another word, "
+"phrase, gesture or use circumlocutions"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:138
+msgid "<strong>irrel</strong> - irrelevant speech"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:139
+msgid "normal syntaxe"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_07_oral_agility.html:143
+msgid ""
+"NOTE: repeated syllables or actual words of a stereotypical short repertoire "
+"are not scored as paraphasias. Similarly, continuous murmurs or syllables "
+"that are not segmented into \"words\" are not scored as paraphasias"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_08_automatized.html:19
+msgid "Articulation (A): Normal, Stiff, Distorted, Fail"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_08_automatized.html:20
+msgid "Paraphasia (P): Neologistic Distortion, Literal, Verbal, Other"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_08_automatized.html:26
+#, fuzzy
+#| msgid "point"
+msgid "1 point"
+msgstr "ponto"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_08_automatized.html:27
+#, fuzzy
+#| msgid "point"
+msgid "2 point"
+msgstr "ponto"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_08_automatized.html:29
+msgid "Paraphasias"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_08_automatized.html:49
+msgid "All"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_09_recitation.html:19
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_12_reading.html:21
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_16_oral_sentence.html:22
+#, fuzzy
+#| msgid "Eating"
+msgid "Ratings:"
+msgstr "Alimentação"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_09_recitation.html:20
+msgid "Good = 2 pontos"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_09_recitation.html:21
+msgid "Impaired = 1 ponto"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_09_recitation.html:22
+msgid "Failed = 0 ponto"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_10_repetition.html:18
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_11_repetition.html:18
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_12_reading.html:18
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_13_responsive.html:18
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_14_visual_confrontation.html:20
+msgid ""
+"Articulation (A): <strong>N</strong>ormal, <strong>S</strong>tiff, "
+"<strong>D</strong>istorted, <strong>F</strong>ail"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_10_repetition.html:19
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_11_repetition.html:19
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_12_reading.html:19
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_13_responsive.html:19
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_14_visual_confrontation.html:21
+msgid ""
+"Paraphasia (P): Neologistic <strong>D</strong>istortion, <strong>L</"
+"strong>iteral, <strong>V</strong>erbal, <strong>O</strong>ther"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_10_repetition.html:25
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_11_repetition.html:26
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_12_reading.html:33
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_13_responsive.html:25
+msgid "Word"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_10_repetition.html:27
+msgid "Transcription"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_10_repetition.html:28
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_11_repetition.html:28
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_12_reading.html:35
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_13_responsive.html:27
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_14_visual_confrontation.html:47
+#, fuzzy
+#| msgctxt "FUGLM_LE_VOL_MOV_SYN"
+#| msgid "Partial motion"
+msgid "Articulation"
+msgstr "Realiza parcialmente"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_10_repetition.html:29
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_11_repetition.html:29
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_12_reading.html:36
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_13_responsive.html:28
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_14_visual_confrontation.html:48
+msgid "Paraphasia"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_12_reading.html:22
+#, fuzzy
+#| msgctxt "MMSE"
+#| msgid "Approximate time"
+msgid "Approximate response lag:"
+msgstr "Hora aproximada (1 ponto)"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_12_reading.html:23
+msgid "0 - 3s = 3 points"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_12_reading.html:24
+msgid "3s - 10s = 2 points"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_12_reading.html:25
+msgid "10s - 30s = 1 point"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_12_reading.html:26
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_16_oral_sentence.html:24
+msgid "Fail = 0 point"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_14_visual_confrontation.html:38
+msgid "Body part"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_14_visual_confrontation.html:44
+msgid "Items"
+msgstr ""
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_16_oral_sentence.html:23
+#, fuzzy
+#| msgid "Correct with hint"
+msgid "Correct = 1 point"
+msgstr "Correto com pista"
+
+#: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_16_oral_sentence.html:33
+msgid "Sentence to be read (cards 6 and 7)"
+msgstr ""
+
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_09_upper_total.html:34
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_10_lower_total.html:34
 #, python-format
@@ -3906,6 +5913,7 @@ msgstr "Entre 84 - 99%% (56 a 65 pontos) - Incapacidade Motora Leve"
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_09_upper_total.html:43
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_10_lower_total.html:43
 #: evaluation/templates/admin/includes/fieldset/row_total.html:24
+#: evaluation/templates/admin/includes/fieldset/row_total_parameterized.html:35
 msgid "Subtotal max"
 msgstr "Pontuação máxima"
 
@@ -3959,10 +5967,6 @@ msgstr "Questionários"
 msgid "Select the patient"
 msgstr "Selecionar o paciente"
 
-#: evaluation/templates/reversion-compare/compare.html:22
-msgid "History"
-msgstr "Histórico"
-
 #: evaluation/templates/reversion-compare/compare.html:23
 #, python-format
 msgid "Compare %(name)s"
@@ -3989,6 +5993,18 @@ msgstr ""
 #: evaluation/templates/reversion-compare/compare.html:40
 msgid "Go back to history list"
 msgstr "Voltar para a lista de históricos"
+
+#~ msgid ""
+#~ "Subject is sitting with arm on bedside table. Instruct the patient to "
+#~ "perform a spherical grasp by grasping a tennis ball The tester may "
+#~ "support the patient’s arm but may not assist with the hand function "
+#~ "required for the retrieval task. Test this grip against resistance by "
+#~ "asking the patient to hold as you attempt to pull the ball out with a "
+#~ "slight tug. <strong>Hold the ball and keep it steady</strong>"
+#~ msgstr ""
+#~ "Sujeito segura uma bola de tênis que está colocada sobre a mesa (pode ser "
+#~ "utilizado um apoio sob a bola para que não escorregue). O examinador puxa "
+#~ "a bola para testar a resistência"
 
 #~ msgid "Arquivo"
 #~ msgstr "File"

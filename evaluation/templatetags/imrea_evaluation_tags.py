@@ -46,3 +46,13 @@ def translate_static(value, language):
         return 'locale/%s/%s' % (base, value)
     else:
         return value
+
+
+@register.filter
+def tuplefy(value):
+    if value and isinstance(value, basestring):
+        return (value, )
+    return tuple(value,)
+
+
+
