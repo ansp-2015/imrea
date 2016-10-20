@@ -55,4 +55,14 @@ def tuplefy(value):
     return tuple(value,)
 
 
+@register.filter
+def index(List, i):
+    """
+    Filter to access a list by index
+    :param List:
+    :param i:
+    :return:
+    """
+    return List[int(i)]
+
 

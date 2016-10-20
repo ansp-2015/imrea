@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
+from django.utils.translation import ugettext_lazy as _
 from django import forms
 from django.forms import NumberInput
-from ..models.bostonaphasia import BostonAphasia, BostonAphasiaVisualConfrontation, BostonAphasiaAnimalNaming, BostonAphasiaOralSentenceReading
+from ..models.bostonaphasia import BostonAphasia, BostonAphasiaVisualConfrontation, BostonAphasiaAnimalNaming, \
+    BostonAphasiaOralSentenceReading, BostonAphasiaSymbolWordDisc, BostonAphasiaWordRecognition, \
+    BostonAphasiaOralSpelling, BostonAphasiaWordPictureMatching, BostonAphasiaReadingSentences
 from ..widgets import StepNumberInput
 
 
@@ -95,23 +98,151 @@ class BostonAphasiaOralSentenceReadingForm(forms.ModelForm):
         }
 
 
+class BostonAphasiaSymbolWordDiscForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaSymbolWordDisc
+        fields = '__all__'
+        widgets = {
+            'symbol_word_card8_a_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'symbol_word_card8_b_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'symbol_word_card8_c_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'symbol_word_card8_d_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'symbol_word_card8_e_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'symbol_word_card9_a_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'symbol_word_card9_b_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'symbol_word_card9_c_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'symbol_word_card9_d_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'symbol_word_card9_e_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+        }
 
 
+class BostonAphasiaWordRecognitionForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaWordRecognition
+        fields = '__all__'
+        widgets = {
+            'word_recognition_a_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_recognition_b_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_recognition_c_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_recognition_d_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_recognition_e_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_recognition_f_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_recognition_g_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_recognition_h_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+        }
 
 
+class BostonAphasiaOralSpellingForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaOralSpelling
+        fields = '__all__'
+        widgets = {
+            'oral_spelling_a_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'oral_spelling_b_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'oral_spelling_c_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'oral_spelling_d_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'oral_spelling_e_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'oral_spelling_f_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'oral_spelling_g_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'oral_spelling_h_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+        }
 
 
+class BostonAphasiaWordPictureMatchingForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaWordPictureMatching
+        fields = '__all__'
+        widgets = {
+            'word_picture_chair_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_picture_circle_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_picture_hammock_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_picture_triangle_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_picture_fifteen_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_picture_purple_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_picture_seven_t_o_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_picture_dripping_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_picture_brown_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'word_picture_smoking_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+        }
 
 
+class BostonAphasiaReadingSentencesForm(forms.ModelForm):
+    reading_sentences_dog_items = (_('Talk'), _('Bark'), _('Sing'), _('Cat'), )
+    reading_sentences_mother_items = (_('Tree'), _('Cook'), _('Child'), _('Truck'),)
+    reading_sentences_haircut_items = (_('Shaving'), _('Boy'), _('Butcher'), _('Barber'),)
+    reading_sentences_bird_items = (_('Nests'), _('Eggs'), _('Sparrow'), _('Cat'),)
+    reading_sentences_school_items = (_('Houses'), _('Country'), _('Taxes'), _('Police'),)
+    reading_sentences_artist_items = (_('Picture'), _('Musician'), _('Library'), _('Soldier'),)
+    reading_sentences_aluminum_items = (_('Very strong'), _('A miner'), _('Electronic'), _('Much cheaper'),)
+    reading_sentences_sanitation_items = (_('Sanitation'), _('Good food'), _('Pasteur\' discovery'), _('Germs'),)
+    reading_sentences_civil_service_items = (_('Achieve higher salaries'), _('Establish favoritism'), _('Effect a reduction in taxes'), _('Match the salary to the duties'),)
+    reading_sentences_government_items = (_('Local affairs above all'), _('The price of lumber'), _('The actions of the government'), _('The authority of town officials'),)
+
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaReadingSentences
+        fields = '__all__'
+        widgets = {
+            'reading_sentences_dog_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'reading_sentences_mother_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'reading_sentences_haircut_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'reading_sentences_bird_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'reading_sentences_school_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'reading_sentences_artist_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'reading_sentences_aluminum_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'reading_sentences_sanitation_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'reading_sentences_civil_service_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'reading_sentences_government_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+        }
 
 
+class BostonAphasiaMechanicsWritingForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
 
-
+    class Meta:
+        model = BostonAphasiaReadingSentences
+        fields = '__all__'
+        widgets = {
+            'mechanics_writing_score': StepNumberInput(attrs={'min': 0, 'max': 5}),
+        }
 
 
 class BostonAphasiaForm(forms.ModelForm):
 
-    form_complex_ideational_1a_1b =  forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
+    form_complex_ideational_1a_1b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
     form_complex_ideational_2a_2b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
     form_complex_ideational_3a_3b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
     form_complex_ideational_4a_4b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
@@ -124,13 +255,11 @@ class BostonAphasiaForm(forms.ModelForm):
     form_complex_ideational_11a_11b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
     form_complex_ideational_12a_12b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
 
-
     class Media:
         css = {
             'all': ('css/evaluation_forms.css',)
         }
         js = ('js/jquery.bootstrap-touchspin.js',)
-
 
     class Meta:
         model = BostonAphasia

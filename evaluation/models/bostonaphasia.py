@@ -782,48 +782,93 @@ class BostonAphasiaOralSentenceReading(models.Model):
     sentence_reading_i_score = models.IntegerField(verbose_name=_(u'The phantom soared across the foggy heath.'), blank=True, null=True)
     sentence_reading_i_answer = models.CharField(max_length=100, blank=True, null=True)
 
-"""
-Understanding written language
 
-Symbol and word disc.
-Word recognition
-Oral spelling
-Word-picture matching
-Reading sentences and paras
-"""
-"""
 class BostonAphasiaSymbolWordDisc(models.Model):
-    symbol_word_card8_a_score = models.IntegerField(verbose_name='No', blank=True, null=True)
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    symbol_word_card8_a_score = models.IntegerField(verbose_name='In', blank=True, null=True)
     symbol_word_card8_b_score = models.IntegerField(verbose_name='J', blank=True, null=True)
     symbol_word_card8_c_score = models.IntegerField(verbose_name='H', blank=True, null=True)
-    symbol_word_card8_d_score = models.IntegerField(verbose_name='Aro', blank=True, null=True)
+    symbol_word_card8_d_score = models.IntegerField(verbose_name='salt', blank=True, null=True)
     symbol_word_card8_e_score = models.IntegerField(verbose_name='R', blank=True, null=True)
 
-    symbol_word_card9_a_score = models.IntegerField(verbose_name='bar', blank=True, null=True)
-    symbol_word_card9_b_score = models.IntegerField(verbose_name='bar', blank=True, null=True)
-    symbol_word_card9_c_score = models.IntegerField(verbose_name='mas', blank=True, null=True)
+    symbol_word_card9_a_score = models.IntegerField(verbose_name='flower', blank=True, null=True)
+    symbol_word_card9_b_score = models.IntegerField(verbose_name='B', blank=True, null=True)
+    symbol_word_card9_c_score = models.IntegerField(verbose_name='lead', blank=True, null=True)
     symbol_word_card9_d_score = models.IntegerField(verbose_name='F', blank=True, null=True)
-    symbol_word_card9_e_score = models.IntegerField(verbose_name='par', blank=True, null=True)
+    symbol_word_card9_e_score = models.IntegerField(verbose_name='plus', blank=True, null=True)
+
 
 class BostonAphasiaWordRecognition(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
     word_recognition_a_score = models.IntegerField(verbose_name=_(u'boat'), blank=True, null=True)
     word_recognition_b_score = models.IntegerField(verbose_name=_(u'frog'), blank=True, null=True)
     word_recognition_c_score = models.IntegerField(verbose_name=_(u'hammock'), blank=True, null=True)
-    word_recognition_e_score = models.IntegerField(verbose_name=_(u'yours'), blank=True, null=True)
-    word_recognition_f_score = models.IntegerField(verbose_name=_(u'mass'), blank=True, null=True)
-    word_recognition_g_score = models.IntegerField(verbose_name=_(u'key'), blank=True, null=True)
-    word_recognition_h_score = models.IntegerField(verbose_name=_(u'sum'), blank=True, null=True)
-    word_recognition_i_score = models.IntegerField(verbose_name=_(u'want'), blank=True, null=True)
+    word_recognition_d_score = models.IntegerField(verbose_name=_(u'yours'), blank=True, null=True)
+    word_recognition_e_score = models.IntegerField(verbose_name=_(u'mass'), blank=True, null=True)
+    word_recognition_f_score = models.IntegerField(verbose_name=_(u'key'), blank=True, null=True)
+    word_recognition_g_score = models.IntegerField(verbose_name=_(u'sum'), blank=True, null=True)
+    word_recognition_h_score = models.IntegerField(verbose_name=_(u'want'), blank=True, null=True)
+
 
 class BostonAphasiaOralSpelling(models.Model):
-    word_recognition_a_score = models.IntegerField(verbose_name=_(u'Y-E-S'), blank=True, null=True)
-    word_recognition_b_score = models.IntegerField(verbose_name=_(u'B-R-O-W-N'), blank=True, null=True)
-    word_recognition_c_score = models.IntegerField(verbose_name=_(u'M-A-N'), blank=True, null=True)
-    word_recognition_e_score = models.IntegerField(verbose_name=_(u'E-L-B-O-W'), blank=True, null=True)
-    word_recognition_f_score = models.IntegerField(verbose_name=_(u'W-O-M-A-N'), blank=True, null=True)
-    word_recognition_g_score = models.IntegerField(verbose_name=_(u'F-I-F-T-E-E-N'), blank=True, null=True)
-    word_recognition_h_score = models.IntegerField(verbose_name=_(u'W-I-P'), blank=True, null=True)
-    word_recognition_i_score = models.IntegerField(verbose_name=_(u'E-X-A-C-T'), blank=True, null=True)
-"""
+    bostonAphasia = models.OneToOneField(BostonAphasia)
 
+    oral_spelling_a_score = models.IntegerField(verbose_name=_(u'Y-E-S'), blank=True, null=True)
+    oral_spelling_b_score = models.IntegerField(verbose_name=_(u'B-R-O-W-N'), blank=True, null=True)
+    oral_spelling_c_score = models.IntegerField(verbose_name=_(u'M-A-N'), blank=True, null=True)
+    oral_spelling_d_score = models.IntegerField(verbose_name=_(u'E-L-B-O-W'), blank=True, null=True)
+    oral_spelling_e_score = models.IntegerField(verbose_name=_(u'W-O-M-A-N'), blank=True, null=True)
+    oral_spelling_f_score = models.IntegerField(verbose_name=_(u'F-I-F-T-E-E-N'), blank=True, null=True)
+    oral_spelling_g_score = models.IntegerField(verbose_name=_(u'W-I-P'), blank=True, null=True)
+    oral_spelling_h_score = models.IntegerField(verbose_name=_(u'E-X-A-C-T'), blank=True, null=True)
+
+
+class BostonAphasiaWordPictureMatching(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    word_picture_chair_score = models.IntegerField(verbose_name=_(u'chair'), blank=True, null=True)
+    word_picture_circle_score = models.IntegerField(verbose_name=_(u'circle'), blank=True, null=True)
+    word_picture_hammock_score = models.IntegerField(verbose_name=_(u'hammock'), blank=True, null=True)
+    word_picture_triangle_score = models.IntegerField(verbose_name=_(u'triangle'), blank=True, null=True)
+    word_picture_fifteen_score = models.IntegerField(verbose_name=_(u'fifteen'), blank=True, null=True)
+    word_picture_purple_score = models.IntegerField(verbose_name=_(u'purple'), blank=True, null=True)
+    word_picture_seven_t_o_score = models.IntegerField(verbose_name=_(u'seven-twenty-one'), blank=True, null=True)
+    word_picture_dripping_score = models.IntegerField(verbose_name=_(u'dripping'), blank=True, null=True)
+    word_picture_brown_score = models.IntegerField(verbose_name=_(u'brown'), blank=True, null=True)
+    word_picture_smoking_score = models.IntegerField(verbose_name=_(u'smoking'), blank=True, null=True)
+
+
+class BostonAphasiaReadingSentences(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    reading_sentences_dog_score = models.IntegerField(verbose_name=_(u'1. A dog can'), blank=True, null=True)
+    reading_sentences_mother_score = models.IntegerField(verbose_name=_(u'2. A mother has a'), blank=True, null=True)
+    reading_sentences_haircut_score = models.IntegerField(verbose_name=_(u'3. Mr. Jones gives haircuts and shampoos. He is a'), blank=True, null=True)
+    reading_sentences_bird_score = models.IntegerField(verbose_name=_(u'4. Many birds come back in the summer. They build'), blank=True, null=True)
+    reading_sentences_school_score = models.IntegerField(verbose_name=_(u'5. Schools and roads cost money. We all pay for them through'), blank=True, null=True)
+    reading_sentences_artist_score = models.IntegerField(verbose_name=_(u'6. Artists are people who make beautiful paintings or statues. Another kind of artist is a'), blank=True, null=True)
+    reading_sentences_aluminum_score = models.IntegerField(verbose_name=_(u'7. Aluminum was once very costly to refine. Now, electricity has solved the refining problem, and aluminum has become'), blank=True, null=True)
+    reading_sentences_sanitation_score = models.IntegerField(verbose_name=_(u'8. The connection between sanitation and disease became clear when pasteur showed that food would not decay if germs were killed by heat and then sealed out. Sterilization by heat is a result of'), blank=True, null=True)
+    reading_sentences_civil_service_score = models.IntegerField(verbose_name=_(u'9. Favoritism used to be the rule in civil service and many jobs paid more than they were worth. Civil service reform has resulted in classifying positions according to their duties and responsibilities. The aim of civil service classification is to'), blank=True, null=True)
+    reading_sentences_government_score = models.IntegerField(verbose_name=_(u'10. In the early days of this country, the functions of government were few in number. Most of these functions were carried out by local town and contry officials, while centralized authority was distrusted. The growth of industry and of the cities has so changed the situation that the farmer of today is concerned with'), blank=True, null=True)
+
+
+class BostonAphasiaMechanicsWriting(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    mechanics_writing_score = models.IntegerField(blank=True, null=True)
+
+
+
+"""
+Understanding written language
+
+Symbol word discrimination
+Phonetic Word recognition
+comprehension of Oral spelling
+Word-picture matching
+sentence and paragraph comprehension
+"""
 

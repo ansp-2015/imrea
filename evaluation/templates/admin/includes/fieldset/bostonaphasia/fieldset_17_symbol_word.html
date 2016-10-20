@@ -1,0 +1,77 @@
+{% load i18n bootstrapped_goodies_tags admin_urls admin_static admin_modify  %}
+{{ inline_admin_formset.formset.management_form }}
+<fieldset class="_module _aligned" id="{{ inline_admin_formset.formset.prefix }}-fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
+    {% if fieldset.name %}
+        <legend>
+            {% if 'collapse' in fieldset.classes %}
+                <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
+                    {{ fieldset.name }}
+                    &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></span></span>
+                </a>
+            {% else %}
+              {{ fieldset.name }}
+            {% endif %}
+        </legend>
+    {% endif %}
+    <div>
+        {% if fieldset.description.text %}
+            <div class="description">
+                <p>{{ fieldset.description.text|safe }}</p>
+            </div>
+            <div class="col-md-12">&nbsp;</div>
+            <br>
+        {% endif %}
+        {% for inline_admin_form in inline_admin_formset %}
+            {% for fieldset in inline_admin_form %}
+                    {% for line in fieldset %}
+                        {% for field in line %}
+                            {% if forloop.first or forloop.counter == 6 %}
+                                <div class="col-md-6">
+                                {% if forloop.first %}
+                                    <div class="col-md-12 bg-primary"><h5>{% trans "Card 8" %}</h5></div>
+                                {% elif forloop.counter == 6 %}
+                                    <div class="col-md-12 bg-primary"><h5>{% trans "Card 9" %}</h5></div>
+                                {% endif %}
+                                <table class="table table-condensed table-responsive table-striped" id="grid-table">
+                                    <thead>
+                                        <tr>
+                                            <th>{% trans "Word/Symbol" %}</th>
+                                            <th class="fixed-columns">{% trans "Score" %}</th>
+                                        </tr>
+                                    </thead>
+                            {% endif %}
+                            {% if forloop.first %}
+                                {% if inline_admin_form.form.non_field_errors %}
+                                    <tr><td colspan="{{ inline_admin_form|cell_count }}">{{ inline_admin_form.form.non_field_errors }}</td></tr>
+                                {% endif %}
+                            {% endif %}
+                            <tr class="form-row {% cycle "row1" "row2" %} {% if inline_admin_form.original or inline_admin_form.show_url %}has_original{% endif %}{% if forloop.last %} empty-form{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
+                            <td>
+                                {{ field.label_tag }}
+                                <br>
+                                {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
+                            </td>
+                            {% if not field.field.is_hidden %}
+                                <td  class="fixed-columns {% if field.field.name %} field-{{ field.field.name }}{% endif %}">
+                                {% if field.is_readonly %}
+                                    <p>{{ field.contents }}</p>
+                                {% else %}
+                                    {{ field.field.errors.as_ul }}
+                                    {{ field.field }}
+                                {% endif %}
+                                </td>
+                            {% endif %}
+                            </tr>
+                            {% if forloop.last or forloop.counter == 5%}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                  {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+    {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields total_points=fieldset.description.fieldset_total_points total_field=fieldset.description.fieldset_total_field total_addend_field_prefix=fieldset.description.fieldset_total_addend_field_prefix %}
+</fieldset>
+
