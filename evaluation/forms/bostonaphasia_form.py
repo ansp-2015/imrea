@@ -4,7 +4,9 @@ from django import forms
 from django.forms import NumberInput
 from ..models.bostonaphasia import BostonAphasia, BostonAphasiaVisualConfrontation, BostonAphasiaAnimalNaming, \
     BostonAphasiaOralSentenceReading, BostonAphasiaSymbolWordDisc, BostonAphasiaWordRecognition, \
-    BostonAphasiaOralSpelling, BostonAphasiaWordPictureMatching, BostonAphasiaReadingSentences
+    BostonAphasiaOralSpelling, BostonAphasiaWordPictureMatching, BostonAphasiaReadingSentences, \
+    BostonAphasiaRecallWrittenSymbols, BostonAphasiaDictatedWords, BostonAphasiaCopyPangramPhrase, \
+    BostonAphasiaSpellingDictation
 from ..widgets import StepNumberInput
 
 
@@ -237,6 +239,69 @@ class BostonAphasiaMechanicsWritingForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'mechanics_writing_score': StepNumberInput(attrs={'min': 0, 'max': 5}),
+        }
+
+
+class BostonAphasiaRecallWrittenSymbolsForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaRecallWrittenSymbols
+        fields = '__all__'
+        widgets = {
+            'serial_writing_letters_score': StepNumberInput(attrs={'min': 0, 'max': 26}),
+            'serial_writing_numbers_score': StepNumberInput(attrs={'min': 0, 'max': 21}),
+        }
+
+
+class BostonAphasiaDictatedWordsForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaDictatedWords
+        fields = '__all__'
+        widgets = {
+            'dictated_words_letters_score': StepNumberInput(attrs={'min': 0, 'max': 5}),
+            'dictated_words_numbers_score': StepNumberInput(attrs={'min': 0, 'max': 5}),
+            'dictated_words_words_score': StepNumberInput(attrs={'min': 0, 'max': 5}),
+        }
+
+
+class BostonAphasiaCopyPangramPhraseForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaCopyPangramPhrase
+        fields = '__all__'
+        widgets = {
+            'copy_pangram_phrase_score': StepNumberInput(attrs={'min': 0, 'max': 4}),
+        }
+
+
+class BostonAphasiaSpellingDictationForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaSpellingDictation
+        fields = '__all__'
+        widgets = {
+            'copy_pangram_phrase_score': StepNumberInput(attrs={'min': 0, 'max': 4}),
         }
 
 

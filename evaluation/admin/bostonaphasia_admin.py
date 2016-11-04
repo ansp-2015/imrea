@@ -5,12 +5,14 @@ from reversion_compare.helpers import patch_admin
 from ..models.bostonaphasia import BostonAphasia, BostonAphasiaVisualConfrontation, \
     BostonAphasiaAnimalNaming, BostonAphasiaOralSentenceReading, BostonAphasiaSymbolWordDisc, \
     BostonAphasiaWordRecognition, BostonAphasiaOralSpelling, BostonAphasiaWordPictureMatching, \
-    BostonAphasiaReadingSentences, BostonAphasiaMechanicsWriting
+    BostonAphasiaReadingSentences, BostonAphasiaMechanicsWriting, BostonAphasiaRecallWrittenSymbols, \
+    BostonAphasiaDictatedWords, BostonAphasiaCopyPangramPhrase, BostonAphasiaSpellingDictation
 from .base_admin import BaseAdmin
 from ..forms.bostonaphasia_form import BostonAphasiaForm, BostonAphasiaConfrontationForm, \
     BostonAphasiaAnimalNamingForm, BostonAphasiaOralSentenceReadingForm, BostonAphasiaSymbolWordDiscForm, \
     BostonAphasiaWordRecognitionForm, BostonAphasiaOralSpellingForm, BostonAphasiaWordPictureMatchingForm, \
-    BostonAphasiaReadingSentencesForm, BostonAphasiaMechanicsWritingForm
+    BostonAphasiaReadingSentencesForm, BostonAphasiaMechanicsWritingForm, BostonAphasiaRecallWrittenSymbolsForm, \
+    BostonAphasiaDictatedWordsForm, BostonAphasiaCopyPangramPhraseForm, BostonAphasiaSpellingDictationForm
 
 
 class BostonAphasiaVisualConfrontationInlineAdmin(InlineModelAdmin):
@@ -305,6 +307,96 @@ class BostonAphasiaMechanicsWritingInlineAdmin(InlineModelAdmin):
         }),
 
 
+class BostonAphasiaRecallWrittenSymbolsInlineAdmin(InlineModelAdmin):
+    form = BostonAphasiaRecallWrittenSymbolsForm
+    model = BostonAphasiaRecallWrittenSymbols
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Recall written symbols'), {
+            'fields': (
+                ('serial_writing_letters_score', 'serial_writing_numbers_score',),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_23_recall_written_symbols',
+                'text': _(u'Asserted objects, color, etc. Using Cards 2 and 3, and Card 5, have patient pick out appropriate picture for each word shown him. ("Which of these pictures is this word:") Discourage patients from reading aloud.'),
+                'fieldset_total_points': '8',
+                'fieldset_total_addend_field_prefix': 'bostonaphasiarecallwrittensymbols-__prefix__-',
+                'fieldset_total_addend_fields': (
+                    'serial_writing_letters_score', 'serial_writing_numbers_score',),
+                'fieldset_total_field': 'serial_writing_numbers_total',
+
+            }
+        }),
+
+
+class BostonAphasiaDictatedWordsInlineAdmin(InlineModelAdmin):
+    form = BostonAphasiaDictatedWordsForm
+    model = BostonAphasiaDictatedWords
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Dictated words'), {
+            'fields': (
+                ('dictated_words_letters_score', 'dictated_words_numbers_score', 'dictated_words_words_score',),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_24_dictated_words',
+                'text': _(u''),
+                'fieldset_total_points': '8',
+                'fieldset_total_addend_field_prefix': 'bostonaphasiadictatedwords-__prefix__-',
+                'fieldset_total_addend_fields': (
+                    'dictated_words_letters_score', 'dictated_words_numbers_score', 'dictated_words_words_score'),
+                'fieldset_total_field': 'dictated_words_words_total',
+
+            }
+        }),
+
+
+class BostonAphasiaCopyPangramPhraseInlineAdmin(InlineModelAdmin):
+    form = BostonAphasiaCopyPangramPhraseForm
+    model = BostonAphasiaCopyPangramPhrase
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Copy'), {
+            'fields': (
+                ('copy_pangram_phrase_score',),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_25_copy_pangram',
+                'text': _(u''),
+                'fieldset_total_points': '5',
+                'fieldset_total_addend_field_prefix': 'bostonaphasiacopypangramphrase-__prefix__-',
+                'fieldset_total_addend_fields': (
+                    'copy_pangram_phrase_score',),
+                'fieldset_total_field': 'copy_pangram_total',
+
+            }
+        }),
+
+
+class BostonAphasiaSpellingDictationInlineAdmin(InlineModelAdmin):
+    form = BostonAphasiaSpellingDictationForm
+    model = BostonAphasiaSpellingDictation
+    extra = 0
+    max_num = 1
+
+    fieldsets = (_(u'Copy'), {
+            'fields': (
+                ('copy_pangram_phrase_score',),
+            ),
+            'description': {
+                'fieldset': '/bostonaphasia/fieldset_26_spelling_dictation',
+                'text': _(u'Offer the patient the words orally and ask to write them. If a word is failure, the patient should spell the word orally and being registered in the appropriate column. Oral spelling does not enter the score.'),
+                'fieldset_total_points': '5',
+                'fieldset_total_addend_field_prefix': 'bostonaphasiaspellingdictation-__prefix__-',
+                'fieldset_total_addend_fields': (
+                    'copy_pangram_phrase_score',),
+                'fieldset_total_field': 'copy_pangram_total',
+
+            }
+        }),
 
 
 class BostonAphasiaAdmin(BaseAdmin):
@@ -314,7 +406,8 @@ class BostonAphasiaAdmin(BaseAdmin):
                BostonAphasiaOralSentenceReadingInlineAdmin, BostonAphasiaSymbolWordDiscInlineAdmin,
                BostonAphasiaWordRecognitionInlineAdmin, BostonAphasiaOralSpellingInlineAdmin,
                BostonAphasiaWordPictureMatchingInlineAdmin, BostonAphasiaReadingSentencesInlineAdmin,
-               BostonAphasiaMechanicsWritingInlineAdmin
+               BostonAphasiaMechanicsWritingInlineAdmin, BostonAphasiaRecallWrittenSymbolsInlineAdmin,
+               BostonAphasiaDictatedWordsInlineAdmin, BostonAphasiaCopyPangramPhraseInlineAdmin
                ]
     fieldsets = (
         (_(u'Patient'), {

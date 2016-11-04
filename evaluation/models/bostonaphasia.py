@@ -858,7 +858,50 @@ class BostonAphasiaReadingSentences(models.Model):
 class BostonAphasiaMechanicsWriting(models.Model):
     bostonAphasia = models.OneToOneField(BostonAphasia)
 
-    mechanics_writing_score = models.IntegerField(blank=True, null=True)
+    mechanics_writing_score = models.IntegerField(verbose_name=_(u'Qualification level of writing mechanics:'), blank=True, null=True)
+
+
+class BostonAphasiaRecallWrittenSymbols(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    serial_writing_letters_score = models.IntegerField(verbose_name=_(u'Qualification level of writing mechanics:'), blank=True, null=True)
+    serial_writing_numbers_score = models.IntegerField(blank=True, null=True)
+
+
+class BostonAphasiaDictatedWords(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    dictated_words_letters_score = models.IntegerField(verbose_name=_(u'Dictated letters (B - K - L - R - T)'), blank=True, null=True)
+    dictated_words_numbers_score = models.IntegerField(verbose_name=_(u'Dictated numbers (7 - 15 - 42 - 193 - 1865)'), blank=True, null=True)
+    dictated_words_words_score = models.IntegerField(verbose_name=_(u'Dictated words (go - boy - run - come - baby)'), blank=True, null=True)
+
+
+class BostonAphasiaCopyPangramPhrase(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    copy_pangram_phrase_score = models.IntegerField(verbose_name=_(u'Copy score'), blank=True, null=True)
+
+
+class BostonAphasiaSpellingDictation(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    spelling_dictation_a_score = models.IntegerField(verbose_name=_(u''), blank=True, null=True)
+    spelling_dictation_a_answer = models.IntegerField(max_length=100, blank=True, null=True)
+
+    spelling_dictation_b_score = models.IntegerField(verbose_name=_(u''), blank=True, null=True)
+    spelling_dictation_b_answer = models.IntegerField(max_length=100, blank=True, null=True)
+
+    spelling_dictation_c_score = models.IntegerField(verbose_name=_(u''), blank=True, null=True)
+    spelling_dictation_c_answer = models.IntegerField(max_length=100, blank=True, null=True)
+
+    spelling_dictation_d_score = models.IntegerField(verbose_name=_(u''), blank=True, null=True)
+    spelling_dictation_d_answer = models.IntegerField(max_length=100, blank=True, null=True)
+
+    spelling_dictation_e_score = models.IntegerField(verbose_name=_(u''), blank=True, null=True)
+    spelling_dictation_e_answer = models.IntegerField(max_length=100, blank=True, null=True)
+
+
+
 
 
 

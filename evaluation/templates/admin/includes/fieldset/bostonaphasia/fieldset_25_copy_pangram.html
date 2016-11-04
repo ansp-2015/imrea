@@ -1,0 +1,70 @@
+{% load i18n bootstrapped_goodies_tags admin_urls admin_static admin_modify imrea_evaluation_tags %}
+{{ inline_admin_formset.formset.management_form }}
+<fieldset class="_module _aligned" id="{{ inline_admin_formset.formset.prefix }}-fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
+    {% if fieldset.name %}
+        <legend>
+            {% if 'collapse' in fieldset.classes %}
+                <a data-toggle="collapse" data-target="#fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }} .fields">
+                    {{ fieldset.name }}
+                    &nbsp;<span class="btn btn-xs btn-default"><span class="glyphicon glyphglyphicon glyphicon-resize-full"></span></span>
+                </a>
+            {% else %}
+              {{ fieldset.name }}
+            {% endif %}
+        </legend>
+    {% endif %}
+    <div>
+        <div class="description">
+            <p>{{ fieldset.description.text|safe }}</p>
+            <p>
+                {% blocktrans %}
+                    Copy "The quick brown fox jumps over the lazy dog" cursive.
+                {% endblocktrans %}
+            </p>
+            <div class="col-md-12">
+                <div class="row"><div class="col-md-12"><strong>{% trans "Ratings:" %}</strong></div></div>
+                <div class="row"><div class="col-md-1">{% trans "0 point" %}</div><div class="col-md-11">{% trans "less than two correct words" %}</div></div>
+                <div class="row"><div class="col-md-1">{% trans "1 point" %}</div><div class="col-md-11">{% trans "at least two correct words" %}</div></div>
+                <div class="row"><div class="col-md-1">{% trans "2 points" %}</div><div class="col-md-11">{% trans "more than half correct" %}</div></div>
+                <div class="row"><div class="col-md-1">{% trans "3 points" %}</div><div class="col-md-11">{% trans "correct, but made with effort" %}</div></div>
+                <div class="row"><div class="col-md-1">{% trans "4 points" %}</div><div class="col-md-11">{% trans "written normally" %}</div></div>
+            </div>
+        </div>
+        <div class="col-md-12">&nbsp;</div>
+        <br>
+        <table class="table table-condensed table-responsive table-striped" id="grid-table">
+        {% for inline_admin_form in inline_admin_formset %}
+            {% for fieldset in inline_admin_form %}
+                {% for line in fieldset %}
+                    {% for field in line %}
+                        {% if forloop.first %}
+                            {% if inline_admin_form.form.non_field_errors %}
+                                <tr><td colspan="{{ inline_admin_form|cell_count }}">{{ inline_admin_form.form.non_field_errors }}</td></tr>
+                            {% endif %}
+                        {% endif %}
+                        <tr class="form-row {% if inline_admin_form.original or inline_admin_form.show_url %}has_original{% endif %}{% if forloop.last %} empty-form{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
+                            <td>
+                                {{ field.label_tag }}
+                                <br>
+                                {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
+                            </td>
+                            {% if not field.field.is_hidden %}
+                                <td  class="fixed-columns {% if field.field.name %} field-{{ field.field.name }}{% endif %}">
+                                {% if field.is_readonly %}
+                                    <p>{{ field.contents }}</p>
+                                {% else %}
+                                    {{ field.field.errors.as_ul }}
+                                    {{ field.field }}
+                                {% endif %}
+                                </td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+        </table>
+    </div>
+    {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields total_points=fieldset.description.fieldset_total_points total_field=fieldset.description.fieldset_total_field total_addend_field_prefix=fieldset.description.fieldset_total_addend_field_prefix %}
+</fieldset>
+
