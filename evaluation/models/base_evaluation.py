@@ -39,7 +39,7 @@ class BaseEvaluation(models.Model):
             for c in BaseEvaluation.__subclasses__():
                 if c.objects.filter(patient_id=patient.pk, period_id=p.id).exists():
                     periods.append(p)
-                    break;
+                    break
 
         return periods
 
