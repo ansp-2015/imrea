@@ -32,8 +32,12 @@ class Patient(models.Model):
     conducting_source = models.CharField(pgettext('Patient', u'Conducting source'), max_length=100, blank=True, null=True)
 
     def __unicode__(self):
-        return self.name
-    
+        return self.initials
+
+    @property
+    def initials(self):
+        return ''.join(self.name.split()).upper()
+
     class Meta:
         ordering = ['name']
         verbose_name = _('Patient')
