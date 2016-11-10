@@ -384,19 +384,36 @@ class BostonAphasiaSpellingDictationInlineAdmin(InlineModelAdmin):
 
     fieldsets = (_(u'Copy'), {
             'fields': (
-                ('copy_pangram_phrase_score',),
+                ('spelling_dictation_a_score', 'spelling_dictation_a_answer',),
+                ('spelling_dictation_b_score', 'spelling_dictation_b_answer',),
+                ('spelling_dictation_c_score', 'spelling_dictation_c_answer',),
+                ('spelling_dictation_d_score', 'spelling_dictation_d_answer',),
+                ('spelling_dictation_e_score', 'spelling_dictation_e_answer',),
+                ('spelling_dictation_f_score', 'spelling_dictation_f_answer',),
+                ('spelling_dictation_g_score', 'spelling_dictation_g_answer',),
+                ('spelling_dictation_h_score', 'spelling_dictation_h_answer',),
+                ('spelling_dictation_i_score', 'spelling_dictation_i_answer',),
+                ('spelling_dictation_j_score', 'spelling_dictation_j_answer',),
             ),
             'description': {
                 'fieldset': '/bostonaphasia/fieldset_26_spelling_dictation',
-                'text': _(u'Offer the patient the words orally and ask to write them. If a word is failure, the patient should spell the word orally and being registered in the appropriate column. Oral spelling does not enter the score.'),
+                'text': _(u'Offer the patient the words orally and ask to write them. If a word spelling is a failure, '
+                          'the patient should spell the word orally and being registered in the appropriate column. '
+                          'Oral spelling does not enter the score.'),
+                'fields_header': (_(u'Word'), _(u'Answer'), _(u'Oral Patient Spelling'), ),
                 'fieldset_total_points': '5',
                 'fieldset_total_addend_field_prefix': 'bostonaphasiaspellingdictation-__prefix__-',
                 'fieldset_total_addend_fields': (
-                    'copy_pangram_phrase_score',),
-                'fieldset_total_field': 'copy_pangram_total',
+                    'spelling_dictation_a_score', 'spelling_dictation_b_score', 'spelling_dictation_c_score',
+                    'spelling_dictation_d_score', 'spelling_dictation_e_score', 'spelling_dictation_f_score',
+                    'spelling_dictation_g_score', 'spelling_dictation_h_score', 'spelling_dictation_i_score',
+                    'spelling_dictation_j_score'),
+                'fieldset_total_field': 'spelling_dictation_total',
 
             }
         }),
+
+
 
 
 class BostonAphasiaAdmin(BaseAdmin):
@@ -407,7 +424,8 @@ class BostonAphasiaAdmin(BaseAdmin):
                BostonAphasiaWordRecognitionInlineAdmin, BostonAphasiaOralSpellingInlineAdmin,
                BostonAphasiaWordPictureMatchingInlineAdmin, BostonAphasiaReadingSentencesInlineAdmin,
                BostonAphasiaMechanicsWritingInlineAdmin, BostonAphasiaRecallWrittenSymbolsInlineAdmin,
-               BostonAphasiaDictatedWordsInlineAdmin, BostonAphasiaCopyPangramPhraseInlineAdmin
+               BostonAphasiaDictatedWordsInlineAdmin, BostonAphasiaCopyPangramPhraseInlineAdmin,
+               BostonAphasiaSpellingDictationInlineAdmin
                ]
     fieldsets = (
         (_(u'Patient'), {

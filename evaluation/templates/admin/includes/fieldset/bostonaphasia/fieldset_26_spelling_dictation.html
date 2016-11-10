@@ -20,21 +20,23 @@
         <div class="col-md-12">&nbsp;</div>
         <br>
         <table class="table table-condensed table-responsive table-striped" id="grid-table">
-        {% for inline_admin_form in inline_admin_formset %}
-            {% for fieldset in inline_admin_form %}
-                {% for line in fieldset %}
-                    {% for field in line %}
-                        {% if forloop.first %}
-                            {% if inline_admin_form.form.non_field_errors %}
-                                <tr><td colspan="{{ inline_admin_form|cell_count }}">{{ inline_admin_form.form.non_field_errors }}</td></tr>
-                            {% endif %}
-                        {% endif %}
-                        <tr class="form-row {% if inline_admin_form.original or inline_admin_form.show_url %}has_original{% endif %}{% if forloop.last %} empty-form{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
+            <tr>
+                {% for fields_header in fieldset.description.fields_header %}
+                    <th>{{fields_header}}</th>
+                {% endfor %}
+            </tr>
+            {% for inline_admin_form in inline_admin_formset %}
+                {% for fieldset in inline_admin_form %}
+                    {% for line in fieldset %}
+                        <tr>
+                        {% for field in line %}
+                            {% if forloop.first %}
                             <td>
                                 {{ field.label_tag }}
                                 <br>
                                 {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
                             </td>
+                            {% endif %}
                             {% if not field.field.is_hidden %}
                                 <td  class="fixed-columns {% if field.field.name %} field-{{ field.field.name }}{% endif %}">
                                 {% if field.is_readonly %}
@@ -45,11 +47,12 @@
                                 {% endif %}
                                 </td>
                             {% endif %}
+                        {% endfor %}
                         </tr>
                     {% endfor %}
                 {% endfor %}
             {% endfor %}
-        {% endfor %}
+            </tbody>
         </table>
     </div>
     {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields total_points=fieldset.description.fieldset_total_points total_field=fieldset.description.fieldset_total_field total_addend_field_prefix=fieldset.description.fieldset_total_addend_field_prefix %}

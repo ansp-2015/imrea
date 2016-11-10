@@ -885,25 +885,35 @@ class BostonAphasiaCopyPangramPhrase(models.Model):
 class BostonAphasiaSpellingDictation(models.Model):
     bostonAphasia = models.OneToOneField(BostonAphasia)
 
-    spelling_dictation_a_score = models.IntegerField(verbose_name=_(u''), blank=True, null=True)
-    spelling_dictation_a_answer = models.IntegerField(max_length=100, blank=True, null=True)
+    spelling_dictation_a_score = models.IntegerField(verbose_name=_(u'soft'), blank=True, null=True)
+    spelling_dictation_a_answer = models.CharField(max_length=100, blank=True, null=True)
 
-    spelling_dictation_b_score = models.IntegerField(verbose_name=_(u''), blank=True, null=True)
-    spelling_dictation_b_answer = models.IntegerField(max_length=100, blank=True, null=True)
+    spelling_dictation_b_score = models.IntegerField(verbose_name=_(u'own'), blank=True, null=True)
+    spelling_dictation_b_answer = models.CharField(max_length=100, blank=True, null=True)
 
-    spelling_dictation_c_score = models.IntegerField(verbose_name=_(u''), blank=True, null=True)
-    spelling_dictation_c_answer = models.IntegerField(max_length=100, blank=True, null=True)
+    spelling_dictation_c_score = models.IntegerField(verbose_name=_(u'soap'), blank=True, null=True)
+    spelling_dictation_c_answer = models.CharField(max_length=100, blank=True, null=True)
 
-    spelling_dictation_d_score = models.IntegerField(verbose_name=_(u''), blank=True, null=True)
-    spelling_dictation_d_answer = models.IntegerField(max_length=100, blank=True, null=True)
+    spelling_dictation_d_score = models.IntegerField(verbose_name=_(u'fight'), blank=True, null=True)
+    spelling_dictation_d_answer = models.CharField(max_length=100, blank=True, null=True)
 
-    spelling_dictation_e_score = models.IntegerField(verbose_name=_(u''), blank=True, null=True)
-    spelling_dictation_e_answer = models.IntegerField(max_length=100, blank=True, null=True)
+    spelling_dictation_e_score = models.IntegerField(verbose_name=_(u'uncle'), blank=True, null=True)
+    spelling_dictation_e_answer = models.CharField(max_length=100, blank=True, null=True)
 
+    spelling_dictation_f_score = models.IntegerField(verbose_name=_(u'freedom'), blank=True, null=True)
+    spelling_dictation_f_answer = models.CharField(max_length=100, blank=True, null=True)
 
+    spelling_dictation_g_score = models.IntegerField(verbose_name=_(u'theater'), blank=True, null=True)
+    spelling_dictation_g_answer = models.CharField(max_length=100, blank=True, null=True)
 
+    spelling_dictation_h_score = models.IntegerField(verbose_name=_(u'private'), blank=True, null=True)
+    spelling_dictation_h_answer = models.CharField(max_length=100, blank=True, null=True)
 
+    spelling_dictation_i_score = models.IntegerField(verbose_name=_(u'physician'), blank=True, null=True)
+    spelling_dictation_i_answer = models.CharField(max_length=100, blank=True, null=True)
 
+    spelling_dictation_j_score = models.IntegerField(verbose_name=_(u'awareness'), blank=True, null=True)
+    spelling_dictation_j_answer = models.CharField(max_length=100, blank=True, null=True)
 
 """
 Understanding written language

@@ -301,7 +301,16 @@ class BostonAphasiaSpellingDictationForm(forms.ModelForm):
         model = BostonAphasiaSpellingDictation
         fields = '__all__'
         widgets = {
-            'copy_pangram_phrase_score': StepNumberInput(attrs={'min': 0, 'max': 4}),
+            'spelling_dictation_a_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'spelling_dictation_b_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'spelling_dictation_c_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'spelling_dictation_d_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'spelling_dictation_e_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'spelling_dictation_f_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'spelling_dictation_g_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'spelling_dictation_h_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'spelling_dictation_i_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'spelling_dictation_j_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
         }
 
 
