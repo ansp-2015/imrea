@@ -770,17 +770,17 @@ class BostonAphasiaOralSentenceReading(models.Model):
     sentence_reading_f_score = models.IntegerField(verbose_name=_(u'Limes are sour.'), blank=True, null=True)
     sentence_reading_f_answer = models.CharField(max_length=100, blank=True, null=True)
 
-    sentence_reading_j_score = models.IntegerField(verbose_name=_(u'The spy fled to Greece.'), blank=True, null=True)
-    sentence_reading_j_answer = models.CharField(max_length=100, blank=True, null=True)
-
-    sentence_reading_g_score = models.IntegerField(verbose_name=_(u'The barm swallow captured a plump worm.'), blank=True, null=True)
+    sentence_reading_g_score = models.IntegerField(verbose_name=_(u'The spy fled to Greece.'), blank=True, null=True)
     sentence_reading_g_answer = models.CharField(max_length=100, blank=True, null=True)
 
-    sentence_reading_h_score = models.IntegerField(verbose_name=_(u'The lawyer\'s closing argument convinced him.'), blank=True, null=True)
+    sentence_reading_h_score = models.IntegerField(verbose_name=_(u'The barm swallow captured a plump worm.'), blank=True, null=True)
     sentence_reading_h_answer = models.CharField(max_length=100, blank=True, null=True)
 
-    sentence_reading_i_score = models.IntegerField(verbose_name=_(u'The phantom soared across the foggy heath.'), blank=True, null=True)
+    sentence_reading_i_score = models.IntegerField(verbose_name=_(u'The lawyer\'s closing argument convinced him.'), blank=True, null=True)
     sentence_reading_i_answer = models.CharField(max_length=100, blank=True, null=True)
+
+    sentence_reading_j_score = models.IntegerField(verbose_name=_(u'The phantom soared across the foggy heath.'), blank=True, null=True)
+    sentence_reading_j_answer = models.CharField(max_length=100, blank=True, null=True)
 
 
 class BostonAphasiaSymbolWordDisc(models.Model):
@@ -914,6 +914,45 @@ class BostonAphasiaSpellingDictation(models.Model):
 
     spelling_dictation_j_score = models.IntegerField(verbose_name=_(u'awareness'), blank=True, null=True)
     spelling_dictation_j_answer = models.CharField(max_length=100, blank=True, null=True)
+
+
+class BostonAphasiaWrittenPictureNaming(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    written_picture_naming_a_score = models.IntegerField(verbose_name=_(u'key'), blank=True, null=True)
+    written_picture_naming_b_score = models.IntegerField(verbose_name=_(u'chair'), blank=True, null=True)
+    written_picture_naming_c_score = models.IntegerField(verbose_name=_(u'circle'), blank=True, null=True)
+    written_picture_naming_d_score = models.IntegerField(verbose_name=_(u'square'), blank=True, null=True)
+    written_picture_naming_e_score = models.IntegerField(verbose_name=_(u'fifteen'), blank=True, null=True)
+    written_picture_naming_f_score = models.IntegerField(verbose_name=_(u'seven'), blank=True, null=True)
+    written_picture_naming_g_score = models.IntegerField(verbose_name=_(u'brown'), blank=True, null=True)
+    written_picture_naming_h_score = models.IntegerField(verbose_name=_(u'red'), blank=True, null=True)
+    written_picture_naming_i_score = models.IntegerField(verbose_name=_(u'drinking'), blank=True, null=True)
+    written_picture_naming_j_score = models.IntegerField(verbose_name=_(u'smoking'), blank=True, null=True)
+
+
+class BostonAphasiaNarrativeWriting(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    narrative_writing_score = models.IntegerField(verbose_name=_(u'Total'), blank=True, null=True)
+
+
+class BostonAphasiaSentecesWrittenDictation(models.Model):
+    bostonAphasia = models.OneToOneField(BostonAphasia)
+
+    sentences_written_dictation_a_score = models.IntegerField(verbose_name=_(u'She can not see him.'), blank=True, null=True)
+    sentences_written_dictation_a_exchanges = models.IntegerField(blank=True, null=True)
+
+    sentences_written_dictation_b_score = models.IntegerField(verbose_name=_(u'The boy is stealing cookies'), blank=True, null=True)
+    sentences_written_dictation_b_exchanges = models.IntegerField(blank=True, null=True)
+
+    sentences_written_dictation_c_score = models.IntegerField(verbose_name=_(u'If he is not careful the stool will fall'), blank=True, null=True)
+    sentences_written_dictation_c_exchanges = models.IntegerField(blank=True, null=True)
+
+
+
+
+
 
 """
 Understanding written language

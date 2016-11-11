@@ -16,38 +16,27 @@
     <div>
         <div class="description">
             <p>{{ fieldset.description.text|safe }}</p>
-            <p>
-                {% blocktrans %}
-                    Copy "The quick brown fox jumps over the lazy dog" cursive.
-                {% endblocktrans %}
-            </p>
-            <div class="col-md-12">
-                <div class="row"><div class="col-md-12"><strong>{% trans "Ratings:" %}</strong></div></div>
-                <div class="row"><div class="col-md-1">{% trans "0 point" %}</div><div class="col-md-11">{% trans "less than two correct words" %}</div></div>
-                <div class="row"><div class="col-md-1">{% trans "1 point" %}</div><div class="col-md-11">{% trans "at least two correct words" %}</div></div>
-                <div class="row"><div class="col-md-1">{% trans "2 points" %}</div><div class="col-md-11">{% trans "more than half correct" %}</div></div>
-                <div class="row"><div class="col-md-1">{% trans "3 points" %}</div><div class="col-md-11">{% trans "correct, but made with effort" %}</div></div>
-                <div class="row"><div class="col-md-1">{% trans "4 points" %}</div><div class="col-md-11">{% trans "written normally" %}</div></div>
-            </div>
         </div>
         <div class="col-md-12">&nbsp;</div>
         <br>
         <table class="table table-condensed table-responsive table-striped" id="grid-table">
-        {% for inline_admin_form in inline_admin_formset %}
-            {% for fieldset in inline_admin_form %}
-                {% for line in fieldset %}
-                    {% for field in line %}
-                        {% if forloop.first %}
-                            {% if inline_admin_form.form.non_field_errors %}
-                                <tr><td colspan="{{ inline_admin_form|cell_count }}">{{ inline_admin_form.form.non_field_errors }}</td></tr>
-                            {% endif %}
-                        {% endif %}
-                        <tr class="form-row {% if inline_admin_form.original or inline_admin_form.show_url %}has_original{% endif %}{% if forloop.last %} empty-form{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
+            <tr>
+                {% for fields_header in fieldset.description.fields_header %}
+                    <th>{{fields_header}}</th>
+                {% endfor %}
+            </tr>
+            {% for inline_admin_form in inline_admin_formset %}
+                {% for fieldset in inline_admin_form %}
+                    {% for line in fieldset %}
+                        <tr>
+                        {% for field in line %}
+                            {% if forloop.first %}
                             <td>
                                 {{ field.label_tag }}
                                 <br>
                                 {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
                             </td>
+                            {% endif %}
                             {% if not field.field.is_hidden %}
                                 <td  class="fixed-columns {% if field.field.name %} field-{{ field.field.name }}{% endif %}">
                                 {% if field.is_readonly %}
@@ -58,19 +47,20 @@
                                 {% endif %}
                                 </td>
                             {% endif %}
+                        {% endfor %}
                         </tr>
                     {% endfor %}
                 {% endfor %}
             {% endfor %}
-        {% endfor %}
+            </tbody>
         </table>
     </div>
     <script type="text/javascript">
-        var copy_pangram_pos_total_calc = function() {
+        var written_picture_pos_total_calc = function() {
             {% if fieldset.description.fieldset_total_field %}
                 var total_field = $('#id_' + '{{fieldset.description.fieldset_total_field}}');
 
-                var total_temp_val = total_field.val() / 4.0;
+                var total_temp_val = total_field.val() / 10.0;
                 var str = total_temp_val.toFixed(2);
                 var number = Number(str);
 
@@ -78,6 +68,6 @@
             {% endif %}
         }
     </script>
-    {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields total_points=fieldset.description.fieldset_total_points total_field=fieldset.description.fieldset_total_field total_addend_field_prefix=fieldset.description.fieldset_total_addend_field_prefix extra_calc='copy_pangram_pos_total_calc' %}
+    {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields total_points=fieldset.description.fieldset_total_points total_field=fieldset.description.fieldset_total_field total_addend_field_prefix=fieldset.description.fieldset_total_addend_field_prefix extra_calc='written_picture_pos_total_calc' %}
 </fieldset>
 

@@ -16,6 +16,35 @@
     <div>
         <div class="description">
             <p>{{ fieldset.description.text|safe }}</p>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12"><strong>{% trans "Ratings:" %}</strong></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">{% trans "Irrelevant words" %}</div>
+                    <div class="col-md-9">{% trans "- Writing is illegible or have word substitutions. There may be some syllables, but there are no relevant names or verbs that are recognized." %}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">{% trans "Limited number" %}</div>
+                    <div class="col-md-9">{% trans "- One to four words and one or more names or verbs related to the figure (even if there are spelling mistakes). They can appear as isolated words or interspersed with exchanged words. There are no legible sentences." %}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">{% trans "One or more sentences" %}</div>
+                    <div class="col-md-9">{% trans "- At least one occurrence of combination of words forming the nucleus of a sentence, that is, name-verb, subject-object. There is no sequence of ideas. There may be five or more relevant isolated names or verbs." %}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">{% trans "Connected ideas" %}</div>
+                    <div class="col-md-9">{% trans "- At least two actions or descriptive states in connected sequence. No failure due to grammatical or word exchange errors." %}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">{% trans "Organized narration" %}</div>
+                    <div class="col-md-9">{% trans "- Narration consistent with only minor word exchange, grammatical or spelling mistakes. Or sentences too small." %}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">{% trans "Normal" %}</div>
+                    <div class="col-md-9">{% trans "- Judged normal for the pre-morbid level of the patient." %}</div>
+                </div>
+            </div>
         </div>
         <div class="col-md-12">&nbsp;</div>
         <br>
@@ -56,11 +85,11 @@
         </table>
     </div>
     <script type="text/javascript">
-        var spelling_dictation_pos_total_calc = function() {
+        var narrative_writing_pos_total_calc = function() {
             {% if fieldset.description.fieldset_total_field %}
                 var total_field = $('#id_' + '{{fieldset.description.fieldset_total_field}}');
 
-                var total_temp_val = total_field.val() / 10.0;
+                var total_temp_val = total_field.val() / 5.0;
                 var str = total_temp_val.toFixed(2);
                 var number = Number(str);
 
@@ -68,6 +97,6 @@
             {% endif %}
         }
     </script>
-    {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields total_points=fieldset.description.fieldset_total_points total_field=fieldset.description.fieldset_total_field total_addend_field_prefix=fieldset.description.fieldset_total_addend_field_prefix extra_calc='spelling_dictation_pos_total_calc' %}
+    {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields total_points=fieldset.description.fieldset_total_points total_field=fieldset.description.fieldset_total_field total_addend_field_prefix=fieldset.description.fieldset_total_addend_field_prefix extra_calc='narrative_writing_pos_total_calc' %}
 </fieldset>
 

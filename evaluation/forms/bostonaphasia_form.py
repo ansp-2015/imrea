@@ -6,7 +6,8 @@ from ..models.bostonaphasia import BostonAphasia, BostonAphasiaVisualConfrontati
     BostonAphasiaOralSentenceReading, BostonAphasiaSymbolWordDisc, BostonAphasiaWordRecognition, \
     BostonAphasiaOralSpelling, BostonAphasiaWordPictureMatching, BostonAphasiaReadingSentences, \
     BostonAphasiaRecallWrittenSymbols, BostonAphasiaDictatedWords, BostonAphasiaCopyPangramPhrase, \
-    BostonAphasiaSpellingDictation
+    BostonAphasiaSpellingDictation, BostonAphasiaWrittenPictureNaming, BostonAphasiaNarrativeWriting, \
+    BostonAphasiaSentecesWrittenDictation
 from ..widgets import StepNumberInput
 
 
@@ -97,6 +98,7 @@ class BostonAphasiaOralSentenceReadingForm(forms.ModelForm):
             'sentence_reading_g_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
             'sentence_reading_h_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
             'sentence_reading_i_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'sentence_reading_j_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
         }
 
 
@@ -312,6 +314,64 @@ class BostonAphasiaSpellingDictationForm(forms.ModelForm):
             'spelling_dictation_i_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
             'spelling_dictation_j_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
         }
+
+
+class BostonAphasiaWrittenPictureNamingForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaWrittenPictureNaming
+        fields = '__all__'
+        widgets = {
+            'written_picture_naming_a_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'written_picture_naming_b_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'written_picture_naming_c_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'written_picture_naming_d_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'written_picture_naming_e_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'written_picture_naming_f_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'written_picture_naming_g_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'written_picture_naming_h_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'written_picture_naming_i_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+            'written_picture_naming_j_score': StepNumberInput(attrs={'min': 0, 'max': 1}),
+        }
+
+
+class BostonAphasiaNarrativeWritingForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaNarrativeWriting
+        fields = '__all__'
+        widgets = {
+            'narrative_writing_score': StepNumberInput(attrs={'min': 0, 'max': 5}),
+        }
+
+
+class BostonAphasiaSentecesWrittenDictationForm(forms.ModelForm):
+    class Media:
+        css = {
+            'all': ('css/evaluation_forms.css',)
+        }
+        js = ('js/jquery.bootstrap-touchspin.js',)
+
+    class Meta:
+        model = BostonAphasiaSentecesWrittenDictation
+        fields = '__all__'
+        widgets = {
+            'sentences_written_dictation_a_score': StepNumberInput(attrs={'min': 0, 'max': 4}),
+            'sentences_written_dictation_b_score': StepNumberInput(attrs={'min': 0, 'max': 4}),
+            'sentences_written_dictation_c_score': StepNumberInput(attrs={'min': 0, 'max': 4}),
+        }
+
+
 
 
 class BostonAphasiaForm(forms.ModelForm):
