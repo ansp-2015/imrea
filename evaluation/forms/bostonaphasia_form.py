@@ -2,6 +2,7 @@
 from django.utils.translation import ugettext_lazy as _
 from django import forms
 from django.forms import NumberInput
+
 from ..models.bostonaphasia import BostonAphasia, BostonAphasiaVisualConfrontation, BostonAphasiaAnimalNaming, \
     BostonAphasiaOralSentenceReading, BostonAphasiaSymbolWordDisc, BostonAphasiaWordRecognition, \
     BostonAphasiaOralSpelling, BostonAphasiaWordPictureMatching, BostonAphasiaReadingSentences, \
@@ -376,18 +377,18 @@ class BostonAphasiaSentecesWrittenDictationForm(forms.ModelForm):
 
 class BostonAphasiaForm(forms.ModelForm):
 
-    form_complex_ideational_1a_1b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
-    form_complex_ideational_2a_2b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
-    form_complex_ideational_3a_3b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
-    form_complex_ideational_4a_4b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
-    form_complex_ideational_5a_5b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
-    form_complex_ideational_6a_6b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
-    form_complex_ideational_7a_7b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
-    form_complex_ideational_8a_8b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
-    form_complex_ideational_9a_9b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
-    form_complex_ideational_10a_10b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
-    form_complex_ideational_11a_11b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
-    form_complex_ideational_12a_12b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1, 'disabled': True}))
+    form_complex_ideational_1a_1b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1}))
+    form_complex_ideational_2a_2b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1}))
+    form_complex_ideational_3a_3b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1}))
+    form_complex_ideational_4a_4b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1}))
+    form_complex_ideational_5a_5b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1}))
+    form_complex_ideational_6a_6b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1}))
+    form_complex_ideational_7a_7b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1}))
+    form_complex_ideational_8a_8b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1}))
+    form_complex_ideational_9a_9b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1}))
+    form_complex_ideational_10a_10b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1}))
+    form_complex_ideational_11a_11b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1}))
+    form_complex_ideational_12a_12b = forms.IntegerField(widget=NumberInput(attrs={'min': 0, 'max': 1}))
 
     class Media:
         css = {

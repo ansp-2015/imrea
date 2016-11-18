@@ -1,5 +1,6 @@
 {% load i18n bootstrapped_goodies_tags admin_urls admin_static admin_modify imrea_evaluation_tags %}
 {{ inline_admin_formset.formset.management_form }}
+{{ inline_admin_formset.formset.non_form_errors }}
 <fieldset class="_module _aligned" id="{{ inline_admin_formset.formset.prefix }}-fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
     {% if fieldset.name %}
         <legend>
@@ -49,37 +50,46 @@
         <div class="col-md-12">&nbsp;</div>
         <br>
         <table class="table table-condensed table-responsive table-striped" id="grid-table">
-            <tr>
-                {% for fields_header in fieldset.description.fields_header %}
-                    <th>{{fields_header}}</th>
-                {% endfor %}
-            </tr>
-            {% for inline_admin_form in inline_admin_formset %}
-                {% for fieldset in inline_admin_form %}
-                    {% for line in fieldset %}
-                        <tr>
-                        {% for field in line %}
-                            {% if forloop.first %}
-                            <td>
-                                {{ field.label_tag }}
-                                <br>
-                                {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
-                            </td>
-                            {% endif %}
-                            {% if not field.field.is_hidden %}
-                                <td  class="fixed-columns {% if field.field.name %} field-{{ field.field.name }}{% endif %}">
-                                {% if field.is_readonly %}
-                                    <p>{{ field.contents }}</p>
-                                {% else %}
-                                    {{ field.field.errors.as_ul }}
-                                    {{ field.field }}
-                                {% endif %}
-                                </td>
-                            {% endif %}
-                        {% endfor %}
-                        </tr>
+            <thead>
+                <tr>
+                    {% for fields_header in fieldset.description.fields_header %}
+                        <th>{{fields_header}}</th>
                     {% endfor %}
-                {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+            {% for inline_admin_form in inline_admin_formset %}
+                {% if forloop.last %}
+                    {# Passing the last form, the one with __prefix__, to be used to create new forms #}
+                {% else %}
+                    {% for fieldset in inline_admin_form %}
+                        {% for line in fieldset %}
+                            <tr>
+                            {% for field in line %}
+                                {% if forloop.first %}
+                                <td>
+                                    {{ field.label_tag }}
+                                    <br>
+                                    {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
+                                </td>
+                                {% endif %}
+                                {% if not field.field.is_hidden %}
+                                    <td  class="fixed-columns {% if field.field.name %} field-{{ field.field.name }}{% endif %}">
+                                    {% if field.is_readonly %}
+                                        <p>{{ field.contents }}</p>
+                                    {% else %}
+                                        {{ field.field.errors.as_ul }}
+                                        {{ field.field }}
+                                    {% endif %}
+                                    </td>
+                                {% endif %}
+                            {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                    {% if inline_admin_form.needs_explicit_pk_field %}{{ inline_admin_form.pk_field.field }}{% endif %}
+                    {{ inline_admin_form.fk_field.field }}
+                {% endif %}
             {% endfor %}
             </tbody>
         </table>

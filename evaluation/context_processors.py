@@ -18,7 +18,27 @@ IGNORE_MODELS = (
     "reversion.version",
     "report_builder.displayfield",
     "report_builder.filterfield",
-    "evaluation.baseevaluation"
+    "reversion.revision",
+    "reversion.version",
+    "explorer.query",
+    "explorer.querylog",
+    "evaluation.baseevaluation",
+    "evaluation.bostonaphasiavisualconfrontation",
+    "evaluation.bostonaphasiaanimalnaming",
+    "evaluation.bostonaphasiaoralsentencereading",
+    "evaluation.bostonaphasiasymbolworddisc",
+    "evaluation.bostonaphasiawordrecognition",
+    "evaluation.bostonaphasiaoralspelling",
+    "evaluation.bostonaphasiawordpicturematching",
+    "evaluation.bostonaphasiareadingsentences",
+    "evaluation.bostonaphasiamechanicswriting",
+    "evaluation.bostonaphasiarecallwrittensymbols",
+    "evaluation.bostonaphasiadictatedwords",
+    "evaluation.bostonaphasiacopypangramphrase",
+    "evaluation.bostonaphasiaspellingdictation",
+    "evaluation.bostonaphasiawrittenpicturenaming",
+    "evaluation.bostonaphasianarrativewriting",
+    "evaluation.bostonaphasiasenteceswrittendictation",
 )
 
 def app_list(request):

@@ -1,5 +1,6 @@
 {% extends "admin/change_form.html" %}
 {% load bootstrapped_goodies_tags i18n %}
+{% load i18n admin_urls admin_static admin_modify %}
 {% block extrastyle %}
     <style>
         #fieldset-3 .row {
@@ -139,15 +140,15 @@
 {% block inline_field_sets %}
     {% for inline_admin_formset in inline_admin_formsets %}
         {% for inline_admin_form in inline_admin_formset %}
-            {% for fieldset in inline_admin_form %}
-        <div class="panel panel-primary">
-        <div class="panel-body">
-
-                {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=12 %}
-        </div>
-        </div>
-
-            {% endfor %}
+            {% if forloop.first %}
+                {% for fieldset in inline_admin_form %}
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=12 %}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
         {% endfor %}
     {% endfor %}
 {% endblock %}
@@ -159,3 +160,7 @@
         </div>
     </div>
 {% endblock %}
+
+
+{# JavaScript for prepopulated fields #}
+{% prepopulated_fields_js %}

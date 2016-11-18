@@ -1,5 +1,6 @@
 {% load i18n bootstrapped_goodies_tags admin_urls admin_static admin_modify  %}
 {{ inline_admin_formset.formset.management_form }}
+{{ inline_admin_formset.formset.non_form_errors }}
 <fieldset class="_module _aligned" id="{{ inline_admin_formset.formset.prefix }}-fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
     {% if fieldset.name %}
         <legend>
@@ -14,6 +15,7 @@
         </legend>
     {% endif %}
     <div>
+    <table>
     <tbody class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
         {% if fieldset.description.text %}
             <div class="description"><p>{{ fieldset.description.text|safe }}</p></div>
@@ -21,7 +23,10 @@
             <div class="description"><p>{% trans "Paraphasia (P): Neologistic <strong>D</strong>istortion, <strong>L</strong>iteral, <strong>V</strong>erbal, <strong>O</strong>ther" %}</p></div>
         {% endif %}
         {% for inline_admin_form in inline_admin_formset %}
-            {% for fieldset in inline_admin_form %}
+            {% if forloop.last %}
+                {# Passing the last form, the one with __prefix__, to be used to create new forms #}
+            {% else %}
+                {% for fieldset in inline_admin_form %}
                     {% for line in fieldset %}
                         {% for field in line %}
                             {% if forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.first and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 8 and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 15 and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 24 and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 33 and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 36 and forloop.first %}
@@ -76,18 +81,16 @@
                                 </td>
                             {% endif %}
                         {% endfor %}
-                    </tr>
-                  {% endfor %}
+                        </tr>
+                    {% endfor %}
                 {% endfor %}
-        </tbody>
-        </table>
-        </div>
-        {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields total_points=fieldset.description.fieldset_total_points total_field=fieldset.description.fieldset_total_field total_addend_field_prefix=fieldset.description.fieldset_total_addend_field_prefix %}
+                {% if inline_admin_form.needs_explicit_pk_field %}{{ inline_admin_form.pk_field.field }}{% endif %}
+                {{ inline_admin_form.fk_field.field }}
+            {% endif %}
         {% endfor %}
+    </tbody>
+    </table>
+    {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields total_points=fieldset.description.fieldset_total_points total_field=fieldset.description.fieldset_total_field total_addend_field_prefix=fieldset.description.fieldset_total_addend_field_prefix %}
     </div>
-
-
-
-
 </fieldset>
 

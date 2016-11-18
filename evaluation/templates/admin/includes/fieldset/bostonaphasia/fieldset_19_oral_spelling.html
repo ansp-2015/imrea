@@ -1,5 +1,6 @@
 {% load i18n bootstrapped_goodies_tags admin_urls admin_static admin_modify  %}
 {{ inline_admin_formset.formset.management_form }}
+{{ inline_admin_formset.formset.non_form_errors }}
 <fieldset class="_module _aligned" id="{{ inline_admin_formset.formset.prefix }}-fieldset-{% if stacked_prefix %}{{ stacked_prefix }}-{% endif %}{{ forloop.counter }}" style="background:transparent">
     {% if fieldset.name %}
         <legend>
@@ -22,7 +23,10 @@
             <br>
         {% endif %}
         {% for inline_admin_form in inline_admin_formset %}
-            {% for fieldset in inline_admin_form %}
+            {% if forloop.last %}
+                {# Passing the last form, the one with __prefix__, to be used to create new forms #}
+            {% else %}
+                {% for fieldset in inline_admin_form %}
                     {% for line in fieldset %}
                         {% for field in line %}
                             {% if forloop.first or forloop.counter == 5 %}
@@ -68,8 +72,11 @@
                                 </div>
                             {% endif %}
                         {% endfor %}
-                  {% endfor %}
-            {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+                {% if inline_admin_form.needs_explicit_pk_field %}{{ inline_admin_form.pk_field.field }}{% endif %}
+                {{ inline_admin_form.fk_field.field }}
+            {% endif %}
         {% endfor %}
     </div>
     {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields total_points=fieldset.description.fieldset_total_points total_field=fieldset.description.fieldset_total_field total_addend_field_prefix=fieldset.description.fieldset_total_addend_field_prefix %}
