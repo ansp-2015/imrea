@@ -9,6 +9,13 @@
         {% for fieldset in adminform %}
             <div class="panel panel-primary">
             <div class="panel-body">
+            {%  if not forloop.first %}
+                {% blocktrans %}
+                    The fields can be populated the following ways: hh:mm:ss, mm:ss or ss. If seconds or minutes given
+                    are bigger than 59, the value is converted; for example, if the value is 65, it is converted to
+                    00:01:05, if it is 2:345, it is converted to 00:07:45.
+                {% endblocktrans %}
+            {% endif %}
             {% include "admin/includes/fieldset"|add:fieldset.description.fieldset|add:".html" with group_column_width=adminform|form_fieldset_column_width %}
             </div>
             </div>

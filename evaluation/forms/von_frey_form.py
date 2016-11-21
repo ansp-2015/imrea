@@ -20,3 +20,26 @@ class VonFreyForm(forms.ModelForm):
                   'algometer2_forearm_right', 'algometer2_forearm_left', 'algometer2_thenar_right',
                   'algometer2_thenar_left', 'algometer3_forearm_right', 'algometer3_forearm_left',
                   'algometer3_thenar_right','algometer3_thenar_left']
+
+        widgets = {
+            'sensibility1_forearm_right': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
+            'sensibility1_forearm_left': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
+            'sensibility1_thenar_right': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
+            'sensibility1_thenar_left': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
+            'sensibility2_forearm_right': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
+            'sensibility2_forearm_left': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
+            'sensibility2_thenar_right': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
+            'sensibility2_thenar_left': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
+            'algometer1_forearm_right': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
+            'algometer1_forearm_left': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
+            'algometer1_thenar_right': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
+            'algometer1_thenar_left': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
+            'algometer2_forearm_right': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
+            'algometer2_forearm_left': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
+            'algometer2_thenar_right': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
+            'algometer2_thenar_left': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
+            'algometer3_forearm_right': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
+            'algometer3_forearm_left': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
+            'algometer3_thenar_right': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
+            'algometer3_thenar_left': StepNumberInput(attrs={'min': 0, 'step': 0.5})
+        }

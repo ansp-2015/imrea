@@ -9,7 +9,6 @@ class VAS(BaseEvaluation):
 
     """
 
-
     VAS_SIDE = (
         (0, _(u'Left')),
         (1, _(u'Right')),

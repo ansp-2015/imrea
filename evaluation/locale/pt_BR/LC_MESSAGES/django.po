@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-09 12:14-0200\n"
+"POT-Creation-Date: 2016-11-21 11:35-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -124,7 +124,8 @@ msgstr ""
 #: admin/hamilton_admin.py:18 admin/jthft_admin.py:20 admin/kviq_admin.py:13
 #: admin/mmse_admin.py:18 admin/moca_admin.py:20 admin/nihss_admin.py:18
 #: admin/patient_admin.py:9 admin/sis_admin.py:15 admin/vas_admin.py:20
-#: admin/von_frey_admin.py:20 models/base_evaluation.py:18 models/patient.py:43
+#: admin/verbal_fluency_admin.py:20 admin/von_frey_admin.py:20
+#: models/base_evaluation.py:18 models/patient.py:43
 #: templates/admin/evaluation/patient/change_form.html:6
 #: templates/admin/index.html:56
 msgid "Patient"
@@ -814,6 +815,14 @@ msgstr ""
 #: admin/sis_admin.py:113
 msgid "9. Stroke Recovery "
 msgstr "9. Recuperação do AVE:"
+
+#: admin/verbal_fluency_admin.py:26
+msgid "FAS"
+msgstr ""
+
+#: admin/verbal_fluency_admin.py:32
+msgid "Animals"
+msgstr ""
 
 #: forms/bostonaphasia_form.py:194
 msgid "Talk"
@@ -3927,12 +3936,12 @@ msgstr "Levemente intensa"
 msgid "No sensation"
 msgstr "Sem sensação"
 
-#: models/kviq.py:27 models/vas.py:14
+#: models/kviq.py:27 models/vas.py:13
 #: templates/admin/includes/fieldset_table_alg.html:24
 msgid "Left"
 msgstr "Esquerda"
 
-#: models/kviq.py:28 models/vas.py:15
+#: models/kviq.py:28 models/vas.py:14
 #: templates/admin/includes/fieldset_table_alg.html:24
 msgid "Right"
 msgstr "Direita"
@@ -5473,25 +5482,67 @@ msgstr "h. sua capacidade de ajudar os outros?"
 msgid "Stroke Recovery scale"
 msgstr "Escala de recuperação do AVE"
 
-#: models/vas.py:18
+#: models/vas.py:17
 msgid "More painful side"
 msgstr "Lado do corpo no qual a dor predomina"
 
-#: models/vas.py:19
+#: models/vas.py:18
 msgid "Pain"
 msgstr "Dor"
 
-#: models/vas.py:20
+#: models/vas.py:19
 msgid "Anxiety"
 msgstr "Ansiedade"
 
-#: models/vas.py:23
+#: models/vas.py:22
 msgid "VAS - Visual Analog Scale"
 msgstr "EVA - Escala Visual Analógica"
 
-#: models/vas.py:24
+#: models/vas.py:23
 msgid "VAS - Visual Analog Scales"
 msgstr "EVA - Escalas Visuais Analógicas"
+
+#: models/verbal_fluency.py:12 models/verbal_fluency.py:15
+#, fuzzy
+#| msgctxt "FuglMeyer"
+#| msgid "forearm pronation"
+msgid "Word count"
+msgstr "Antebraço - pronação"
+
+#: models/verbal_fluency.py:13 models/verbal_fluency.py:16
+#, fuzzy
+#| msgctxt "MMSEAdmin"
+#| msgid "Registration"
+msgid "Observation"
+msgstr "Memória imediata"
+
+#: models/verbal_fluency.py:19
+msgid "Verbal Fluency Test"
+msgstr ""
+
+#: models/verbal_fluency.py:20
+msgid "Verbal Fluency Tests"
+msgstr ""
+
+#: models/von_frey.py:12
+msgid "Sensibility 1"
+msgstr ""
+
+#: models/von_frey.py:16
+msgid "Sensibility 2"
+msgstr ""
+
+#: models/von_frey.py:20
+msgid "(Pain) Algometer 1"
+msgstr ""
+
+#: models/von_frey.py:24
+msgid "(Pain) Algometer 2"
+msgstr ""
+
+#: models/von_frey.py:28
+msgid "(Pain) Algometer 3"
+msgstr ""
 
 #: models/von_frey.py:37 models/von_frey.py:38
 #: templates/admin/evaluation/vonfrey/change_form.html:6
@@ -5618,6 +5669,17 @@ msgstr "HAD - AVALIAÇÃO DO NÍVEL DE ANSIEDADE E DEPRESSÃO"
 
 #: templates/admin/evaluation/jthft/change_form.html:6
 msgid "JEBSEN TAYLOR HAND FUNCTION TEST - JTHFT"
+msgstr ""
+
+#: templates/admin/evaluation/jthft/change_form.html:13
+msgid ""
+"\n"
+"                    The fields can be populated the following ways: hh:mm:"
+"ss, mm:ss or ss. If seconds or minutes given\n"
+"                    are bigger than 59, the value is converted; for example, "
+"if the value is 65, it is converted to\n"
+"                    00:01:05, if it is 2:345, it is converted to 00:07:45.\n"
+"                "
 msgstr ""
 
 #: templates/admin/evaluation/kviq/change_form.html:6
