@@ -24,7 +24,7 @@ class ClinAdmin(BaseAdmin):
                 'fieldset': '_clin'
             }
         }),
-        (_(u''), {
+        ('', {
             'fields': ('obs',),
             'description': {
                 'fieldset': '_1col'

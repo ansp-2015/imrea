@@ -46,7 +46,7 @@ class FIMAdmin(BaseAdmin):
                 'fieldset': '_1col_panel'
             }
         }),
-        (_(u''), {
+        ('', {
             'fields': ('obs',),
             'description': {
                 'fieldset': '_1col'

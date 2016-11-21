@@ -31,7 +31,7 @@ class EegAdmin(BaseAdmin):
                 'fieldset': '_1col',
             }
         }),
-        (_(u''), {
+        ('', {
             'fields': ('obs',),
             'description': {
                 'fieldset': '_1col'

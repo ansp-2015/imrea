@@ -347,7 +347,7 @@ class BostonAphasiaDictatedWordsInlineAdmin(InlineModelAdmin):
             ),
             'description': {
                 'fieldset': '/bostonaphasia/fieldset_24_dictated_words',
-                'text': _(u''),
+                'text': '',
                 'fieldset_total_points': '8/8',
                 'fieldset_total_addend_field_prefix': 'bostonaphasiadictatedwords-0-',
                 'fieldset_total_addend_fields': (
@@ -370,7 +370,7 @@ class BostonAphasiaCopyPangramPhraseInlineAdmin(InlineModelAdmin):
             ),
             'description': {
                 'fieldset': '/bostonaphasia/fieldset_25_copy_pangram',
-                'text': _(u''),
+                'text': '',
                 'fieldset_total_points': '5/5',
                 'fieldset_total_addend_field_prefix': 'bostonaphasiacopypangramphrase-0-',
                 'fieldset_total_addend_fields': (
@@ -815,7 +815,7 @@ class BostonAphasiaAdmin(BaseAdmin):
             ),
             'description': {
                 'fieldset': '/bostonaphasia/fieldset_11_repetition',
-                'text': _(u''),
+                'text': '',
                 'fieldset_total_points': ('8', '8', '16',),
                 'fieldset_total_addend_fields': (
                     ('repetition_phrases_high_a_score', 'repetition_phrases_high_b_score', 'repetition_phrases_high_c_score',

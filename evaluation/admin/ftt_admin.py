@@ -18,7 +18,7 @@ class FTTAdmin(BaseAdmin):
             'fields': ('patient', 'period'),
             'description': {'fieldset': '_patient'}
         }),
-        (_(u''), {
+        ('', {
             'fields': (('paretic_hand_first', 'healthy_hand_first'),
                        ('paretic_hand_second','healthy_hand_second'),
                        ('paretic_hand_third', 'healthy_hand_third')),
@@ -27,7 +27,7 @@ class FTTAdmin(BaseAdmin):
                 'columns': ((0, ''), (1, u'Paretic hand'), (2, u'Healthy hand')),
             }
         }),
-        (_(u''), {
+        ('', {
             'fields': ('obs',),
             'description': {
                 'fieldset': '_1col'

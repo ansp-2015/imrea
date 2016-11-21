@@ -17,29 +17,27 @@
     <div>
         <div class="description">
             <p>{{ fieldset.description.text|safe }}</p>
-            {% blocktrans %}
                 <p>
-                    Instruct the patient to perform the writing tasks listed below
+                    {% trans "Instruct the patient to perform the writing tasks listed below" %}
                 </p>
                 <ol>
-                    <li>Full name and address</li>
-                    <li>If (1) fails,  then type the name and address of the patient on a paper and he/she should copy it</li>
-                    <li>Transcript: The patient should transcribe the sentence printed</li>
+                    <li>{% trans "Full name and address" %}</li>
+                    <li>{% trans "If (1) fails,  then type the name and address of the patient on a paper and he/she should copy it" %}</li>
+                    <li>{% trans "Transcript: The patient should transcribe the sentence printed" %}</li>
                 </ol>
                 <p>
-                <strong>Note: </strong>The patient should write directly on the page, below the sentence. If the patient can not transcribe in cursive, you must copy it with capital letters.
+                    {% trans "<strong>Note: </strong>The patient should write directly on the page, below the sentence. If the patient can not transcribe in cursive, you must copy it with capital letters." %}
                 </p>
                 <p>
-                The writing mechanics assessment is based on verification of the total output of the patient in the written test. Use the five-level scale listed here:
+                    {% trans "The writing mechanics assessment is based on verification of the total output of the patient in the written test. Use the five-level scale listed here:" %}
                 </p>
                 <ol>
-                <li>not readable letters</li>
-                <li>occasional success in single letters (capital letters)</li>
-                <li>capital letter with some malformed letters</li>
-                <li>legible cursive writing, but impaired and/or upper and lower case in capital letters</li>
-                <li>Judged be the same pre-morbid writing, with tolerance for the use of non-dominant hand</li>
+                    <li>{% trans "not readable letters" %}</li>
+                    <li>{% trans "occasional success in single letters (capital letters)" %}</li>
+                    <li>{% trans "capital letter with some malformed letters" %}</li>
+                    <li>{% trans "legible cursive writing, but impaired and/or upper and lower case in capital letters" %}</li>
+                    <li>{% trans "Judged be the same pre-morbid writing, with tolerance for the use of non-dominant hand" %}</li>
                 </ol>
-            {% endblocktrans %}
         </div>
         <div class="col-md-12">&nbsp;</div>
         <br>
