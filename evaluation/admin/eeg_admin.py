@@ -42,5 +42,5 @@ class EegAdmin(BaseAdmin):
 
 admin.site.register(Eeg, EegAdmin)
 # Registrando no reversion-compare
-patch_admin(Eeg)
+#patch_admin(Eeg)
 

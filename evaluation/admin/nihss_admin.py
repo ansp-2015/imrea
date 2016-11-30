@@ -37,4 +37,4 @@ class NIHSSAdmin(BaseAdmin):
 
 admin.site.register(NIHSS, NIHSSAdmin)
 # Registrando no reversion-compare
-patch_admin(NIHSS)
+#patch_admin(NIHSS)

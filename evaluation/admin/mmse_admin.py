@@ -73,4 +73,4 @@ class MMSEAdmin(BaseAdmin):
 
 admin.site.register(MMSE, MMSEAdmin)
 # Registrando no reversion-compare
-patch_admin(MMSE)
+#patch_admin(MMSE)

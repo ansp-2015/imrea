@@ -114,4 +114,4 @@ class FIMAdmin(BaseAdmin):
 
 admin.site.register(FIM, FIMAdmin)
 # Registrando no reversion-compare
-patch_admin(FIM)
+#patch_admin(FIM)

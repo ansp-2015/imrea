@@ -38,5 +38,5 @@ class FTTAdmin(BaseAdmin):
 
 admin.site.register(FTT, FTTAdmin)
 # Registrando no reversion-compare
-patch_admin(FTT)
+#patch_admin(FTT)
 

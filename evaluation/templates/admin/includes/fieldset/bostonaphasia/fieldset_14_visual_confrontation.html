@@ -14,9 +14,8 @@
             {% endif %}
         </legend>
     {% endif %}
-    <div>
-    <table>
-    <tbody class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
+    <div class="fields {% if not errors %}{{ fieldset.classes }}{% endif %}">
+
         {% if fieldset.description.text %}
             <div class="description"><p>{{ fieldset.description.text|safe }}</p></div>
             <div class="description"><p>{% trans "Articulation (A): <strong>N</strong>ormal, <strong>S</strong>tiff, <strong>D</strong>istorted, <strong>F</strong>ail" %}</p></div>
@@ -28,41 +27,35 @@
             {% else %}
                 {% for fieldset in inline_admin_form %}
                     {% for line in fieldset %}
+                        {% if forloop.parentloop.parentloop.first and forloop.first %}
+                            <div class="col-md-12 bg-primary"><h5>{% trans "Card 2" %}</h5></div>
+                        {% elif forloop.parentloop.parentloop.first and forloop.counter == 15 %}
+                            <div class="col-md-12 bg-primary"><h5>{% trans "Card 3" %}</h5></div>
+                        {% elif forloop.parentloop.parentloop.first and forloop.counter == 33 %}
+                            <div class="col-md-12 bg-primary"><h5>{% trans "Body part" %}</h5></div>
+                        {% endif %}
+
+
+                        {% if forloop.first or forloop.counter == 15 or forloop.counter == 33 %}
+                            <div class="col-md-12">
+                                <table class="table table-condensed table-responsive table-striped" id="grid-table">
+                                    <thead>
+                                        <tr>
+                                            <th>{% trans "Items" %}</th>
+                                            <th class="fixed-columns">{% trans "Answer" %}</th>
+                                            <th class="fixed-columns">{% trans "Score" %}</th>
+                                            <th class="fixed-columns">{% trans "Articulation" %}</th>
+                                            <th class="fixed-columns">{% trans "Paraphasia" %}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                        {% endif %}
+
+                        {% if inline_admin_form.form.non_field_errors %}
+                            <tr><td colspan="{{ inline_admin_form|cell_count }}">{{ inline_admin_form.form.non_field_errors }}</td></tr>
+                        {% endif %}
+                        <tr class="form-row {% cycle 'row1' 'row2' %} {% if inline_admin_form.original or inline_admin_form.show_url %}has_original{% endif %}{% if forloop.last %} empty-form{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
                         {% for field in line %}
-                            {% if forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.first and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 8 and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 15 and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 24 and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 33 and forloop.first or forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 36 and forloop.first %}
-                                {% if forloop.parentloop.counter > 1 %}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                {% endif %}
-                                {% if forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.first and forloop.first %}
-                                    <div class="col-md-12 bg-primary"><h5>{% trans "Card 2" %}</h5></div>
-                                {% elif forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 15 and forloop.first %}
-                                    <div class="col-md-12 bg-primary"><h5>{% trans "Card 3" %}</h5></div>
-                                {% elif forloop.parentloop.parentloop.parentloop.first and forloop.parentloop.counter == 33 and forloop.first %}
-                                    <div class="col-md-12 bg-primary"><h5>{% trans "Body part" %}</h5></div>
-                                {% endif %}
-                                <div class="col-md-6">
-                                    <table class="table table-condensed table-responsive table-striped" id="grid-table">
-                                        <thead>
-                                            <tr>
-                                                <th>{% trans "Items" %}</th>
-                                                <th class="fixed-columns">{% trans "Answer" %}</th>
-                                                <th class="fixed-columns">{% trans "Score" %}</th>
-                                                <th class="fixed-columns">{% trans "Articulation" %}</th>
-                                                <th class="fixed-columns">{% trans "Paraphasia" %}</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                {% if inline_admin_form.form.non_field_errors %}
-                                    <tr><td colspan="{{ inline_admin_form|cell_count }}">{{ inline_admin_form.form.non_field_errors }}</td></tr>
-                                {% endif %}
-                            {% endif %}
-                            {% if forloop.first %}
-                                <tr class="form-row {% cycle "row1" "row2" %} {% if inline_admin_form.original or inline_admin_form.show_url %}has_original{% endif %}{% if forloop.last %} empty-form{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
-                            {% endif %}
-
-
                             {% if forloop.first %}
                                 <td>
                                     {{ field.label_tag }}
@@ -82,14 +75,16 @@
                             {% endif %}
                         {% endfor %}
                         </tr>
+
+                        {% if forloop.counter == 14 or forloop.counter == 32 or forloop.last %}
+                            </tbody></table></div>
+                        {% endif %}
                     {% endfor %}
                 {% endfor %}
                 {% if inline_admin_form.needs_explicit_pk_field %}{{ inline_admin_form.pk_field.field }}{% endif %}
                 {{ inline_admin_form.fk_field.field }}
             {% endif %}
         {% endfor %}
-    </tbody>
-    </table>
     {% include "admin/includes/fieldset/row_total_parameterized.html" with total_addend_fields=fieldset.description.fieldset_total_addend_fields total_points=fieldset.description.fieldset_total_points total_field=fieldset.description.fieldset_total_field total_addend_field_prefix=fieldset.description.fieldset_total_addend_field_prefix %}
     </div>
 </fieldset>

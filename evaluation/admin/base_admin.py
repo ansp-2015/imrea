@@ -2,6 +2,10 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.admin.utils import (unquote,)
+from django.utils.html import mark_safe
+from reversion_compare.compare import CompareObjects
+from reversion_compare.helpers import patch_admin, html_diff, highlight_diff
+from reversion_compare.admin import CompareVersionAdmin
 import logging
 
 logger = logging.getLogger(__name__)
@@ -14,7 +18,7 @@ logger = logging.getLogger(__name__)
             'description': {'fieldset': '_patient'}
         }),
 """
-class BaseAdmin(admin.ModelAdmin):
+class BaseAdmin(CompareVersionAdmin):
     list_display = ('patient', 'get_patient_birthdate', 'period', 'last_update')
     list_filter = ('patient__name', 'period__period')
     ordering = ('patient', 'period', 'last_update')
@@ -64,3 +68,42 @@ class BaseAdmin(admin.ModelAdmin):
             return ['patient', 'period']
         else:
             return []
+
+
+    def compare_inline_obj(self, model_class, obj_compare):
+        """
+        :param model_class: ex:  BostonAphasiaSentecesWrittenDictation model class
+        :param obj_compare: reversion object
+        :return: html string
+        """
+        result = ""
+
+        # print ('****************')
+        # for attr, value in obj_compare.__dict__.iteritems():
+        #     print attr, value
+
+        fields = [field for field in model_class._meta.fields]
+        for field in fields:
+            field_name = field.name
+            field_verbose_name = field._verbose_name or ''
+
+            # print ('****************')
+            # print (obj_compare.M2O_CHANGE_INFO)
+            # for attr, value in obj_compare.__dict__.iteritems():
+            #     print attr, value
+
+            if field_name not in ('id', 'bostonAphasia'):
+                if obj_compare.M2O_CHANGE_INFO and 'changed_items' in obj_compare.M2O_CHANGE_INFO and len(obj_compare.M2O_CHANGE_INFO['changed_items']) > 0:
+
+                    c = CompareObjects(field=obj_compare.field, field_name=field_name,
+                                       obj=obj_compare.obj, version1=obj_compare.M2O_CHANGE_INFO['changed_items'][0][0],
+                                       version2=obj_compare.M2O_CHANGE_INFO['changed_items'][0][1], is_reversed=False)
+
+                    # if the object value changed, print the diff html
+                    if c.changed() and c.value1 != c.value2:
+                        result = u'%s<p>%s - %s<br>%s</p>' % (
+                        result, field_name, field_verbose_name, html_diff(('- %s' % c.value1), ('+ %s' % c.value2)))
+        if result:
+            return mark_safe('<pre class="highlight">%s</pre>' % result)
+        else:
+            return

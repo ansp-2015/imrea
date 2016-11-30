@@ -268,5 +268,5 @@ class FuglMeyerAdmin(BaseAdmin):
 
 admin.site.register(FuglMeyer, FuglMeyerAdmin)
 # Registrando no reversion-compare
-patch_admin(FuglMeyer)
+#patch_admin(FuglMeyer)
 

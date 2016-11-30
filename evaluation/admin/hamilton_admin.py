@@ -61,4 +61,4 @@ class HamiltonAdmin(admin.ModelAdmin):
 
 admin.site.register(Hamilton, HamiltonAdmin)
 # Registrando no reversion-compare
-patch_admin(Hamilton)
+#patch_admin(Hamilton)

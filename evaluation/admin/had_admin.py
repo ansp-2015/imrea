@@ -43,4 +43,4 @@ class HADAdmin(BaseAdmin):
 
 admin.site.register(HAD, HADAdmin)
 # Registrando no reversion-compare
-patch_admin(HAD)
+#patch_admin(HAD)

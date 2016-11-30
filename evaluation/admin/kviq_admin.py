@@ -91,4 +91,4 @@ class KVIQAdmin(BaseAdmin):
 
 admin.site.register(KVIQ, KVIQAdmin)
 # Registrando no reversion-compare
-patch_admin(KVIQ)
+#patch_admin(KVIQ)

@@ -3,3 +3,5 @@
 django-admin-bootstrapped
 django-report-builder
 django-reversion-compare
+    # after every model change, run:
+    # python manage.py createinitialrevisions

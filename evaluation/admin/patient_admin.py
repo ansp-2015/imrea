@@ -42,6 +42,6 @@ class PatientAdmin(admin.ModelAdmin):
 
 admin.site.register(Patient, PatientAdmin)
 # Registrando no reversion-compare
-patch_admin(Patient)
+#patch_admin(Patient)
 
 

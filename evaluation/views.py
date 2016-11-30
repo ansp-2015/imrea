@@ -93,3 +93,17 @@ def ajax_home_patient_evaluations(request):
     })
 
     return HttpResponse(data, content_type="application/json")
+
+
+
+
+# from django.views.generic import DetailView
+# from django.views.generic.edit import FormMixin
+# from evaluation.models.bostonaphasia import BostonAphasia
+# from evaluation.forms.bostonaphasia_form import BostonAphasiaSentecesWrittenDictationForm
+# from reversion_compare.mixins import CompareMixin
+
+#
+# class BostonAphasiaSentecesWrittenDictationView(CompareMixin, DetailView):
+#     model = BostonAphasia
+#     form_class = BostonAphasiaSentecesWrittenDictationForm

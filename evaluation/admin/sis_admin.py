@@ -150,5 +150,5 @@ class SISAdmin(BaseAdmin):
 
 admin.site.register(SIS, SISAdmin)
 # Registrando no reversion-compare
-patch_admin(SIS)
+#patch_admin(SIS)
 

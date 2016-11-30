@@ -34,4 +34,4 @@ class ClinAdmin(BaseAdmin):
 
 admin.site.register(Clin, ClinAdmin)
 # Registrando no reversion-compare
-patch_admin(Clin)
+#patch_admin(Clin)

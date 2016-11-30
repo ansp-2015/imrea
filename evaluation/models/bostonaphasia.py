@@ -3,6 +3,7 @@ from django.db import models
 from django.utils.safestring import mark_safe
 from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
+import reversion
 from . import BaseEvaluation
 
 
@@ -545,11 +546,11 @@ class BostonAphasia(BaseEvaluation):
     responsive_naming_medicine_score = models.IntegerField(verbose_name=_(u'Where do you go to buy medicine?'), blank=True, null=True)
     responsive_naming_medicine_articulation = models.CharField(max_length=1, blank=True, null=True)
     responsive_naming_medicine_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+reversion.register(BostonAphasia)
 
 
 class BostonAphasiaVisualConfrontation(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
-
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='visualconfrontation')
     # VISUAL CONFRONTATION NAMING
     confrontation_card2_h_answer = models.CharField(verbose_name=_(u'H'), max_length=25, blank=True, null=True)
     confrontation_card2_h_score = models.IntegerField(blank=True, null=True)
@@ -740,17 +741,19 @@ class BostonAphasiaVisualConfrontation(models.Model):
     confrontation_body_shoulder_score = models.IntegerField(blank=True, null=True)
     confrontation_body_shoulder_articulation = models.CharField(max_length=1, blank=True, null=True)
     confrontation_body_shoulder_paraphasia = models.CharField(max_length=1, blank=True, null=True)
+reversion.register(BostonAphasiaVisualConfrontation, follow=["bostonAphasia"])
 
 
 class BostonAphasiaAnimalNaming(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='animalnaming')
 
     animal_naming_answer = models.TextField(verbose_name=_(u'Answer'), max_length=500, blank=True, null=True)
     animal_naming_score = models.IntegerField(verbose_name=_(u'Score'), blank=True, null=True)
+reversion.register(BostonAphasiaAnimalNaming, follow=["bostonAphasia"])
 
 
 class BostonAphasiaOralSentenceReading(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='oralsentencereading')
 
     sentence_reading_a_score = models.IntegerField(verbose_name=_(u'You know how.'), blank=True, null=True)
     sentence_reading_a_answer = models.CharField(max_length=100, blank=True, null=True)
@@ -781,10 +784,11 @@ class BostonAphasiaOralSentenceReading(models.Model):
 
     sentence_reading_j_score = models.IntegerField(verbose_name=_(u'The phantom soared across the foggy heath.'), blank=True, null=True)
     sentence_reading_j_answer = models.CharField(max_length=100, blank=True, null=True)
+reversion.register(BostonAphasiaOralSentenceReading, follow=["bostonAphasia"])
 
 
 class BostonAphasiaSymbolWordDisc(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='symbolworddisc')
 
     symbol_word_card8_a_score = models.IntegerField(verbose_name='In', blank=True, null=True)
     symbol_word_card8_b_score = models.IntegerField(verbose_name='J', blank=True, null=True)
@@ -797,10 +801,11 @@ class BostonAphasiaSymbolWordDisc(models.Model):
     symbol_word_card9_c_score = models.IntegerField(verbose_name='lead', blank=True, null=True)
     symbol_word_card9_d_score = models.IntegerField(verbose_name='F', blank=True, null=True)
     symbol_word_card9_e_score = models.IntegerField(verbose_name='plus', blank=True, null=True)
+reversion.register(BostonAphasiaSymbolWordDisc, follow=["bostonAphasia"])
 
 
 class BostonAphasiaWordRecognition(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='wordrecognition')
 
     word_recognition_a_score = models.IntegerField(verbose_name=_(u'boat'), blank=True, null=True)
     word_recognition_b_score = models.IntegerField(verbose_name=_(u'frog'), blank=True, null=True)
@@ -810,10 +815,11 @@ class BostonAphasiaWordRecognition(models.Model):
     word_recognition_f_score = models.IntegerField(verbose_name=_(u'key'), blank=True, null=True)
     word_recognition_g_score = models.IntegerField(verbose_name=_(u'sum'), blank=True, null=True)
     word_recognition_h_score = models.IntegerField(verbose_name=_(u'want'), blank=True, null=True)
+reversion.register(BostonAphasiaWordRecognition, follow=["bostonAphasia"])
 
 
 class BostonAphasiaOralSpelling(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='oralspelling')
 
     oral_spelling_a_score = models.IntegerField(verbose_name=_(u'Y-E-S'), blank=True, null=True)
     oral_spelling_b_score = models.IntegerField(verbose_name=_(u'B-R-O-W-N'), blank=True, null=True)
@@ -823,11 +829,11 @@ class BostonAphasiaOralSpelling(models.Model):
     oral_spelling_f_score = models.IntegerField(verbose_name=_(u'F-I-F-T-E-E-N'), blank=True, null=True)
     oral_spelling_g_score = models.IntegerField(verbose_name=_(u'W-I-P'), blank=True, null=True)
     oral_spelling_h_score = models.IntegerField(verbose_name=_(u'E-X-A-C-T'), blank=True, null=True)
+reversion.register(BostonAphasiaOralSpelling, follow=["bostonAphasia"])
 
 
 class BostonAphasiaWordPictureMatching(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
-
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='wordpicturematching')
     word_picture_chair_score = models.IntegerField(verbose_name=_(u'chair'), blank=True, null=True)
     word_picture_circle_score = models.IntegerField(verbose_name=_(u'circle'), blank=True, null=True)
     word_picture_hammock_score = models.IntegerField(verbose_name=_(u'hammock'), blank=True, null=True)
@@ -838,11 +844,11 @@ class BostonAphasiaWordPictureMatching(models.Model):
     word_picture_dripping_score = models.IntegerField(verbose_name=_(u'dripping'), blank=True, null=True)
     word_picture_brown_score = models.IntegerField(verbose_name=_(u'brown'), blank=True, null=True)
     word_picture_smoking_score = models.IntegerField(verbose_name=_(u'smoking'), blank=True, null=True)
+reversion.register(BostonAphasiaWordPictureMatching, follow=["bostonAphasia"])
 
 
 class BostonAphasiaReadingSentences(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
-
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='readingsentences')
     reading_sentences_dog_score = models.IntegerField(verbose_name=_(u'1. A dog can'), blank=True, null=True)
     reading_sentences_mother_score = models.IntegerField(verbose_name=_(u'2. A mother has a'), blank=True, null=True)
     reading_sentences_haircut_score = models.IntegerField(verbose_name=_(u'3. Mr. Jones gives haircuts and shampoos. He is a'), blank=True, null=True)
@@ -853,38 +859,38 @@ class BostonAphasiaReadingSentences(models.Model):
     reading_sentences_sanitation_score = models.IntegerField(verbose_name=_(u'8. The connection between sanitation and disease became clear when pasteur showed that food would not decay if germs were killed by heat and then sealed out. Sterilization by heat is a result of'), blank=True, null=True)
     reading_sentences_civil_service_score = models.IntegerField(verbose_name=_(u'9. Favoritism used to be the rule in civil service and many jobs paid more than they were worth. Civil service reform has resulted in classifying positions according to their duties and responsibilities. The aim of civil service classification is to'), blank=True, null=True)
     reading_sentences_government_score = models.IntegerField(verbose_name=_(u'10. In the early days of this country, the functions of government were few in number. Most of these functions were carried out by local town and contry officials, while centralized authority was distrusted. The growth of industry and of the cities has so changed the situation that the farmer of today is concerned with'), blank=True, null=True)
+reversion.register(BostonAphasiaReadingSentences, follow=["bostonAphasia"])
 
 
 class BostonAphasiaMechanicsWriting(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
-
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='mechanicswriting')
     mechanics_writing_score = models.IntegerField(verbose_name=_(u'Qualification level of writing mechanics:'), blank=True, null=True)
+reversion.register(BostonAphasiaMechanicsWriting, follow=["bostonAphasia"])
 
 
 class BostonAphasiaRecallWrittenSymbols(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
-
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='recallwrittensymbols')
     serial_writing_letters_score = models.IntegerField(verbose_name=_(u'Qualification level of writing mechanics:'), blank=True, null=True)
     serial_writing_numbers_score = models.IntegerField(blank=True, null=True)
+reversion.register(BostonAphasiaRecallWrittenSymbols, follow=["bostonAphasia"])
 
 
 class BostonAphasiaDictatedWords(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
-
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='dictatedwords')
     dictated_words_letters_score = models.IntegerField(verbose_name=_(u'Dictated letters (B - K - L - R - T)'), blank=True, null=True)
     dictated_words_numbers_score = models.IntegerField(verbose_name=_(u'Dictated numbers (7 - 15 - 42 - 193 - 1865)'), blank=True, null=True)
     dictated_words_words_score = models.IntegerField(verbose_name=_(u'Dictated words (go - boy - run - come - baby)'), blank=True, null=True)
+reversion.register(BostonAphasiaDictatedWords, follow=["bostonAphasia"])
 
 
 class BostonAphasiaCopyPangramPhrase(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
-
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='copypangramphrase')
     copy_pangram_phrase_score = models.IntegerField(verbose_name=_(u'Copy score'), blank=True, null=True)
+reversion.register(BostonAphasiaCopyPangramPhrase, follow=["bostonAphasia"])
 
 
 class BostonAphasiaSpellingDictation(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
-
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='spellingdictation')
     spelling_dictation_a_score = models.IntegerField(verbose_name=_(u'soft'), blank=True, null=True)
     spelling_dictation_a_answer = models.CharField(max_length=100, blank=True, null=True)
 
@@ -914,11 +920,11 @@ class BostonAphasiaSpellingDictation(models.Model):
 
     spelling_dictation_j_score = models.IntegerField(verbose_name=_(u'awareness'), blank=True, null=True)
     spelling_dictation_j_answer = models.CharField(max_length=100, blank=True, null=True)
+reversion.register(BostonAphasiaSpellingDictation, follow=["bostonAphasia"])
 
 
 class BostonAphasiaWrittenPictureNaming(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
-
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='writtenpicturenaming')
     written_picture_naming_a_score = models.IntegerField(verbose_name=_(u'key'), blank=True, null=True)
     written_picture_naming_b_score = models.IntegerField(verbose_name=_(u'chair'), blank=True, null=True)
     written_picture_naming_c_score = models.IntegerField(verbose_name=_(u'circle'), blank=True, null=True)
@@ -929,17 +935,17 @@ class BostonAphasiaWrittenPictureNaming(models.Model):
     written_picture_naming_h_score = models.IntegerField(verbose_name=_(u'red'), blank=True, null=True)
     written_picture_naming_i_score = models.IntegerField(verbose_name=_(u'drinking'), blank=True, null=True)
     written_picture_naming_j_score = models.IntegerField(verbose_name=_(u'smoking'), blank=True, null=True)
+reversion.register(BostonAphasiaWrittenPictureNaming, follow=["bostonAphasia"])
 
 
 class BostonAphasiaNarrativeWriting(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
-
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='narrativewriting')
     narrative_writing_score = models.IntegerField(verbose_name=_(u'Total'), blank=True, null=True)
+reversion.register(BostonAphasiaNarrativeWriting, follow=["bostonAphasia"])
 
 
 class BostonAphasiaSentecesWrittenDictation(models.Model):
-    bostonAphasia = models.OneToOneField(BostonAphasia)
-
+    bostonAphasia = models.OneToOneField(BostonAphasia, related_name='senteceswrittendictation')
     sentences_written_dictation_a_score = models.IntegerField(verbose_name=_(u'She can not see him.'), blank=True, null=True)
     sentences_written_dictation_a_exchanges = models.IntegerField(blank=True, null=True)
 
@@ -948,7 +954,7 @@ class BostonAphasiaSentecesWrittenDictation(models.Model):
 
     sentences_written_dictation_c_score = models.IntegerField(verbose_name=_(u'If he is not careful the stool will fall'), blank=True, null=True)
     sentences_written_dictation_c_exchanges = models.IntegerField(blank=True, null=True)
-
+reversion.register(BostonAphasiaSentecesWrittenDictation, follow=["bostonAphasia"])
 
 
 

@@ -1,8 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.admin.options import InlineModelAdmin
-from django.forms import fields, models, formsets, widgets, inlineformset_factory
-from reversion_compare.helpers import patch_admin
 from ..models.bostonaphasia import BostonAphasia, BostonAphasiaVisualConfrontation, \
     BostonAphasiaAnimalNaming, BostonAphasiaOralSentenceReading, BostonAphasiaSymbolWordDisc, \
     BostonAphasiaWordRecognition, BostonAphasiaOralSpelling, BostonAphasiaWordPictureMatching, \
@@ -76,7 +74,7 @@ class BostonAphasiaVisualConfrontationInlineAdmin(InlineModelAdmin):
                 'fieldset': '/bostonaphasia/fieldset_14_visual_confrontation',
                 'text': _(u'Are you left or right-handed? Which hand you prefer for that activity? Do you ever use the other hand for the activity?'),
                 'fieldset_total_points': '114',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiavisualconfrontation-0-',
+                'fieldset_total_addend_field_prefix': 'visualconfrontation-0-',
                 'fieldset_total_addend_fields': ('confrontation_card2_h_score', 'confrontation_card2_t_score', 'confrontation_card2_r_score',
                                                  'confrontation_card2_l_score', 'confrontation_card2_g_score', 'confrontation_card2_square_score',
                                                  'confrontation_card2_chair_score', 'confrontation_card2_key_score', 'confrontation_card2_glove_score',
@@ -134,7 +132,7 @@ class BostonAphasiaOralSentenceReadingInlineAdmin(InlineModelAdmin):
                 'fieldset': '/bostonaphasia/fieldset_16_oral_sentence',
                 'text': _(u'Have the patient read the following sentences aloud. Indicate by marking on this record any assistance given, omissions, substitutions,etc. One point credit is allowed for each completely correct sentence.'),
                 'fieldset_total_points': '10',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiaoralsentencereading-0-',
+                'fieldset_total_addend_field_prefix': 'oralsentencereading-0-',
                 'fieldset_total_addend_fields': ('sentence_reading_a_score', 'sentence_reading_b_score', 'sentence_reading_c_score',
                                                  'sentence_reading_d_score', 'sentence_reading_e_score', 'sentence_reading_f_score',
                                                  'sentence_reading_g_score', 'sentence_reading_h_score', 'sentence_reading_i_score',
@@ -164,7 +162,7 @@ class BostonAphasiaSymbolWordDiscInlineAdmin(InlineModelAdmin):
                 'fieldset': '/bostonaphasia/fieldset_17_symbol_word',
                 'text': _(u'Point to the letter or word template from the cards 8 and 9. The patient should find the matching the word or letter from the selection below.'),
                 'fieldset_total_points': '10',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiasymbolworddisc-0-',
+                'fieldset_total_addend_field_prefix': 'symbolworddisc-0-',
                 'fieldset_total_addend_fields': ('symbol_word_card8_a_score', 'symbol_word_card8_b_score',
                                                  'symbol_word_card8_c_score', 'symbol_word_card8_d_score',
                                                  'symbol_word_card8_e_score',
@@ -194,7 +192,7 @@ class BostonAphasiaWordRecognitionInlineAdmin(InlineModelAdmin):
                 'fieldset': '/bostonaphasia/fieldset_18_word_recognition',
                 'text': _(u'The patient should point the cards 10 and 11 the written words corresponding to those presented orally. The patient should be directed to the correct line on the card.'),
                 'fieldset_total_points': '8',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiawordrecognition-0-',
+                'fieldset_total_addend_field_prefix': 'wordrecognition-0-',
                 'fieldset_total_addend_fields': ('word_recognition_a_score', 'word_recognition_b_score',
                                                  'word_recognition_c_score', 'word_recognition_d_score',
                                                  'word_recognition_e_score', 'word_recognition_f_score',
@@ -222,7 +220,7 @@ class BostonAphasiaOralSpellingInlineAdmin(InlineModelAdmin):
                 'fieldset': '/bostonaphasia/fieldset_19_oral_spelling',
                 'text': _(u'Spell the words for the patient and he/she must identify the word spelled.'),
                 'fieldset_total_points': '8',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiaoralspelling-0-',
+                'fieldset_total_addend_field_prefix': 'oralspelling-0-',
                 'fieldset_total_addend_fields': ('oral_spelling_a_score', 'oral_spelling_b_score',
                                                  'oral_spelling_c_score', 'oral_spelling_d_score',
                                                  'oral_spelling_e_score', 'oral_spelling_f_score',
@@ -250,7 +248,7 @@ class BostonAphasiaWordPictureMatchingInlineAdmin(InlineModelAdmin):
                 'fieldset': '/bostonaphasia/fieldset_20_word_picture_matching',
                 'text': _(u'Asserted objects, color, etc. Using Cards 2 and 3, and Card 5, have patient pick out appropriate picture for each word shown him. ("Which of these pictures is this word:") Discourage patients from reading aloud.'),
                 'fieldset_total_points': '10',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiawordpicturematching-0-',
+                'fieldset_total_addend_field_prefix': 'wordpicturematching-0-',
                 'fieldset_total_addend_fields': ('word_picture_chair_score', 'word_picture_circle_score',
                                                  'word_picture_hammock_score', 'word_picture_triangle_score',
                                                  'word_picture_fifteen_score', 'word_picture_purple_score',
@@ -279,7 +277,7 @@ class BostonAphasiaReadingSentencesInlineAdmin(InlineModelAdmin):
                 'fieldset': '/bostonaphasia/fieldset_21_reading_sentences',
                 'text': _(u'Patient is presented with Cards 12, 13, 14, 15 and 16 successively. Patient indicates his selection on the card and the examiner underlines the choice in the test booklet. Assistance may be given in the two examples, but not in the test proper.'),
                 'fieldset_total_points': '10',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiareadingsentences-0-',
+                'fieldset_total_addend_field_prefix': 'readingsentences-0-',
                 'fieldset_total_addend_fields': (
                     'reading_sentences_dog_score', 'reading_sentences_mother_score',
                     'reading_sentences_haircut_score', 'reading_sentences_bird_score',
@@ -326,7 +324,7 @@ class BostonAphasiaRecallWrittenSymbolsInlineAdmin(InlineModelAdmin):
                 'fieldset': '/bostonaphasia/fieldset_23_recall_written_symbols',
                 'text': _(u'Asserted objects, color, etc. Using Cards 2 and 3, and Card 5, have patient pick out appropriate picture for each word shown him. ("Which of these pictures is this word:") Discourage patients from reading aloud.'),
                 'fieldset_total_points': '8/8f',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiarecallwrittensymbols-0-',
+                'fieldset_total_addend_field_prefix': 'recallwrittensymbols-0-',
                 'fieldset_total_addend_fields': (
                     'serial_writing_letters_score', 'serial_writing_numbers_score',),
                 'fieldset_total_field': 'serial_writing_numbers_total',
@@ -349,7 +347,7 @@ class BostonAphasiaDictatedWordsInlineAdmin(InlineModelAdmin):
                 'fieldset': '/bostonaphasia/fieldset_24_dictated_words',
                 'text': '',
                 'fieldset_total_points': '8/8',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiadictatedwords-0-',
+                'fieldset_total_addend_field_prefix': 'dictatedwords-0-',
                 'fieldset_total_addend_fields': (
                     'dictated_words_letters_score', 'dictated_words_numbers_score', 'dictated_words_words_score'),
                 'fieldset_total_field': 'dictated_words_words_total',
@@ -372,7 +370,7 @@ class BostonAphasiaCopyPangramPhraseInlineAdmin(InlineModelAdmin):
                 'fieldset': '/bostonaphasia/fieldset_25_copy_pangram',
                 'text': '',
                 'fieldset_total_points': '5/5',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiacopypangramphrase-0-',
+                'fieldset_total_addend_field_prefix': 'copypangramphrase-0-',
                 'fieldset_total_addend_fields': (
                     'copy_pangram_phrase_score',),
                 'fieldset_total_field': 'copy_pangram_total',
@@ -407,7 +405,7 @@ class BostonAphasiaSpellingDictationInlineAdmin(InlineModelAdmin):
                           'Oral spelling does not enter the score.'),
                 'fields_header': (_(u'Word'), _(u'Answer'), _(u'Oral Patient Spelling'), ),
                 'fieldset_total_points': '10/10',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiaspellingdictation-0-',
+                'fieldset_total_addend_field_prefix': 'spellingdictation-0-',
                 'fieldset_total_addend_fields': (
                     'spelling_dictation_a_score', 'spelling_dictation_b_score', 'spelling_dictation_c_score',
                     'spelling_dictation_d_score', 'spelling_dictation_e_score', 'spelling_dictation_f_score',
@@ -437,7 +435,7 @@ class BostonAphasiaWrittenPictureNamingInlineAdmin(InlineModelAdmin):
                 'text': _(u'The examiner points to each picture and asks the patient to write the name of the item.'),
                 'fields_header': (_(u'Picture'), _(u'Answer'),),
                 'fieldset_total_points': '10/10',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiawrittenpicturenaming-0-',
+                'fieldset_total_addend_field_prefix': 'writtenpicturenaming-0-',
                 'fieldset_total_addend_fields': (
                     'written_picture_naming_a_score', 'written_picture_naming_b_score', 'written_picture_naming_c_score',
                     'written_picture_naming_d_score', 'written_picture_naming_e_score', 'written_picture_naming_f_score',
@@ -463,7 +461,7 @@ class BostonAphasiaNarrativeWritingInlineAdmin(InlineModelAdmin):
                 'text': _(u'Present the "Cookie Theft" picture on the card 1. Say: "WRITE AS MUCH AS YOU CAN '
                           'ABOUT WHAT YOU SEE GOING ON IN THIS PICTURE". Allow the patient roughly 5 minutes to write.'),
                 'fieldset_total_points': '5/5',
-                'fieldset_total_addend_field_prefix': 'bostonaphasianarrativewriting-0-',
+                'fieldset_total_addend_field_prefix': 'narrativewriting-0-',
                 'fieldset_total_addend_fields': (
                     'narrative_writing_score',),
                 'fieldset_total_field': 'narrative_writing_score_total',
@@ -488,7 +486,7 @@ class BostonAphasiaSentecesWrittenDictationInlineAdmin(InlineModelAdmin):
                 'text': _(u'The patient must write these sentences after the dictation.'),
                 'fields_header': (_(u'Sentence for dictation'), _(u'A - Score'), _(u'B - Qualification of Parametric Substitutions'),),
                 'fieldset_total_points': '12/12',
-                'fieldset_total_addend_field_prefix': 'bostonaphasiasenteceswrittendictation-0-',
+                'fieldset_total_addend_field_prefix': 'senteceswrittendictation-0-',
                 'fieldset_total_addend_fields': (
                     'sentences_written_dictation_a_score', 'sentences_written_dictation_b_score', 'sentences_written_dictation_c_score',),
                 'fieldset_total_field': 'sentences_written_dictation_total',
@@ -499,15 +497,15 @@ class BostonAphasiaSentecesWrittenDictationInlineAdmin(InlineModelAdmin):
 class BostonAphasiaAdmin(BaseAdmin):
 
     form = BostonAphasiaForm
-    inlines = [BostonAphasiaVisualConfrontationInlineAdmin, BostonAphasiaAnimalNamingInlineAdmin,
-               BostonAphasiaOralSentenceReadingInlineAdmin, BostonAphasiaSymbolWordDiscInlineAdmin,
-               BostonAphasiaWordRecognitionInlineAdmin, BostonAphasiaOralSpellingInlineAdmin,
-               BostonAphasiaWordPictureMatchingInlineAdmin, BostonAphasiaReadingSentencesInlineAdmin,
-               BostonAphasiaMechanicsWritingInlineAdmin, BostonAphasiaRecallWrittenSymbolsInlineAdmin,
-               BostonAphasiaDictatedWordsInlineAdmin, BostonAphasiaCopyPangramPhraseInlineAdmin,
-               BostonAphasiaSpellingDictationInlineAdmin, BostonAphasiaWrittenPictureNamingInlineAdmin,
-               BostonAphasiaNarrativeWritingInlineAdmin, BostonAphasiaSentecesWrittenDictationInlineAdmin
-               ]
+    inlines = BostonAphasiaVisualConfrontationInlineAdmin, BostonAphasiaAnimalNamingInlineAdmin, \
+              BostonAphasiaOralSentenceReadingInlineAdmin, BostonAphasiaSymbolWordDiscInlineAdmin, \
+              BostonAphasiaWordRecognitionInlineAdmin, BostonAphasiaOralSpellingInlineAdmin, \
+              BostonAphasiaWordPictureMatchingInlineAdmin, BostonAphasiaReadingSentencesInlineAdmin, \
+              BostonAphasiaMechanicsWritingInlineAdmin, BostonAphasiaRecallWrittenSymbolsInlineAdmin, \
+              BostonAphasiaDictatedWordsInlineAdmin, BostonAphasiaCopyPangramPhraseInlineAdmin, \
+              BostonAphasiaSpellingDictationInlineAdmin, BostonAphasiaWrittenPictureNamingInlineAdmin, \
+              BostonAphasiaNarrativeWritingInlineAdmin, BostonAphasiaSentecesWrittenDictationInlineAdmin
+
     fieldsets = (
         (_(u'Patient'), {
             'fields': ('patient', 'period'),
@@ -883,12 +881,63 @@ class BostonAphasiaAdmin(BaseAdmin):
     )
 
 
+    # compare inline model
+    def compare_senteceswrittendictation(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaSentecesWrittenDictation, obj_compare)
 
+    def compare_visualconfrontation(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaVisualConfrontation, obj_compare)
 
+    def compare_animalnaming(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaAnimalNaming, obj_compare)
+
+    def compare_oralsentencereading(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaOralSentenceReading, obj_compare)
+
+    def compare_symbolworddisc(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaSymbolWordDisc, obj_compare)
+
+    def compare_wordrecognition(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaWordRecognition, obj_compare)
+
+    def compare_oralspelling(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaOralSpelling, obj_compare)
+
+    def compare_wordpicturematching(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaWordPictureMatching, obj_compare)
+
+    def compare_readingsentences(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaReadingSentences, obj_compare)
+
+    def compare_mechanicswriting(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaMechanicsWriting, obj_compare)
+
+    def compare_recallwrittensymbols(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaRecallWrittenSymbols, obj_compare)
+
+    def compare_dictatedwords(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaDictatedWords, obj_compare)
+
+    def compare_copypangramphrase(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaCopyPangramPhrase, obj_compare)
+
+    def compare_spellingdictation(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaSpellingDictation, obj_compare)
+
+    def compare_writtenpicturenaming(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaWrittenPictureNaming, obj_compare)
+
+    def compare_narrativewriting(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaNarrativeWriting, obj_compare)
+
+    def compare_senteceswrittendictation(self, obj_compare):
+        return self.compare_inline_obj(BostonAphasiaSentecesWrittenDictation, obj_compare)
 
 admin.site.register(BostonAphasia, BostonAphasiaAdmin)
 # Registrando no reversion-compare
-patch_admin(BostonAphasia)
+# patch_admin(BostonAphasia)
 
 
 
+# _autoregister(admin, inline_model, follow=[fk_name])
+# patch_admin()
