@@ -34,6 +34,8 @@ No projeto foram modificados os arquivos do report-builder do diretorio statics 
 
 Seguir as instruções do site do `django-reversion-compare <https://github.com/jedie/django-reversion-compare>`_.
 
+Sempre que você registrar um modelo com django-reversion, execute ./manage.py createinitialrevisions
+
 
 3. django-sql-explorer
 ......................
