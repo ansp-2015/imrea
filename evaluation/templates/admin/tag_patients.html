@@ -20,7 +20,7 @@
                 {% if forloop.first %}
                     <option>-----</option>
                 {% endif %}
-                <option value="{{patient.id}}">{{patient.name}} - {{patient.birthdate|date:"d/m/Y"}}</option>
+                <option value="{{patient.id}}">{{patient.initials}} - {{patient.birthdate|date:"d/m/Y"}}</option>
             {% endfor %}
         </select>
     </div>
