@@ -36,7 +36,7 @@ class Patient(models.Model):
 
     @property
     def initials(self):
-        return ''.join(self.name.split()).upper()
+        return ''.join(n[0] for n in self.name.split()).upper()
 
     class Meta:
         ordering = ['name']
