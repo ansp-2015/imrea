@@ -1,9 +1,15 @@
 {% load i18n %}
+{% load static %}
 {% comment %}
     Tag para seleção do paciente na página iniciar / dashboard.
     Monta um combo de seleção.
     Deve chamar uma view para gravar um cookie e montar a seleção de período de avaliação.
 {% endcomment %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#evaluation_home_patients_select").chosen();
+    });
+</script>
 <div class="row">
     <div class="col-md-3 col-sm-5 col-xs-5">
         {% trans "Select the patient" %}
