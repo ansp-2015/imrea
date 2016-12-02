@@ -9,19 +9,14 @@ from .base_admin import BaseAdmin
 from evaluation.models.epworth import Epworth
 from ..forms import EpworthForm
 
-HELP_TEXT = []
-HELP_TEXT.append(ugettext(u'How likely are you to doze off or fall asleep in the following situations, in contrast to \
-                        feeling just tired?'))
-HELP_TEXT.append(ugettext(u'This refers to your usual way of life in recent times.'))
-HELP_TEXT.append(ugettext(u'Even if you haven’t done some of these things recently try to work out how they would have \
-                        affected you.'))
-
 
 class EpworthAdmin(admin.ModelAdmin):
     """
     Epworth Sleepniess Scale
     """
-
+    HELP_TEXT = _(u'How likely are you to doze off or fall asleep in the following situations, in contrast to '
+                  u'feeling just tired?<br />This refers to your usual way of life in recent times.<br />Even if'
+                  u'you haven’t done some of these things recently try to work out how they would have affected you.')
     form = EpworthForm
     fieldsets = (
         (_(u'Patient'), {
@@ -29,7 +24,7 @@ class EpworthAdmin(admin.ModelAdmin):
             'description': {
                 'fieldset': '_patient',
                 'choices': Epworth.EPWORTH_CHOICES,
-                'help': '<br />'.join(HELP_TEXT)
+                'help': HELP_TEXT
             }
         }),
         ('', {
