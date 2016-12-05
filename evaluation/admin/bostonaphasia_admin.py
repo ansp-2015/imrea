@@ -318,15 +318,15 @@ class BostonAphasiaRecallWrittenSymbolsInlineAdmin(InlineModelAdmin):
 
     fieldsets = (_(u'Recall written symbols'), {
             'fields': (
-                ('serial_writing_letters_score', 'serial_writing_numbers_score',),
+                ('serial_writing_letters_score', ),
             ),
             'description': {
                 'fieldset': '/bostonaphasia/fieldset_23_recall_written_symbols',
                 'text': _(u'Asserted objects, color, etc. Using Cards 2 and 3, and Card 5, have patient pick out appropriate picture for each word shown him. ("Which of these pictures is this word:") Discourage patients from reading aloud.'),
-                'fieldset_total_points': '8/8f',
+                'fieldset_total_points': '8/8',
                 'fieldset_total_addend_field_prefix': 'recallwrittensymbols-0-',
                 'fieldset_total_addend_fields': (
-                    'serial_writing_letters_score', 'serial_writing_numbers_score',),
+                    'serial_writing_letters_score', ),
                 'fieldset_total_field': 'serial_writing_numbers_total',
 
             }

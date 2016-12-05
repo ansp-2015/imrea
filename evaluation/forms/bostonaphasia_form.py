@@ -257,7 +257,7 @@ class BostonAphasiaRecallWrittenSymbolsForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'serial_writing_letters_score': StepNumberInput(attrs={'min': 0, 'max': 26}),
-            'serial_writing_numbers_score': StepNumberInput(attrs={'min': 0, 'max': 21}),
+            #'serial_writing_numbers_score': StepNumberInput(attrs={'min': 0, 'max': 21}),
         }
 
 

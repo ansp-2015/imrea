@@ -246,7 +246,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='bostonaphasia',
             name='responsive_naming_dozen_score',
-            field=models.IntegerField(null=True, verbose_name='How many things ina dozen?', blank=True),
+            field=models.IntegerField(null=True, verbose_name='How many things in a dozen?', blank=True),
         ),
         migrations.AddField(
             model_name='bostonaphasia',

@@ -2,6 +2,7 @@
 from django.db import models
 from django.utils.safestring import mark_safe
 from django.utils.html import format_html
+from django.utils.translation import pgettext
 from django.utils.translation import ugettext_lazy as _
 import reversion
 from . import BaseEvaluation
@@ -535,7 +536,7 @@ class BostonAphasia(BaseEvaluation):
     responsive_naming_cigarette_articulation = models.CharField(max_length=1, blank=True, null=True)
     responsive_naming_cigarette_paraphasia = models.CharField(max_length=1, blank=True, null=True)
 
-    responsive_naming_dozen_score = models.IntegerField(verbose_name=_(u'How many things ina dozen?'), blank=True, null=True)
+    responsive_naming_dozen_score = models.IntegerField(verbose_name=_(u'How many things in a dozen?'), blank=True, null=True)
     responsive_naming_dozen_articulation = models.CharField(max_length=1, blank=True, null=True)
     responsive_naming_dozen_paraphasia = models.CharField(max_length=1, blank=True, null=True)
 
@@ -790,17 +791,17 @@ reversion.register(BostonAphasiaOralSentenceReading, follow=["bostonAphasia"])
 class BostonAphasiaSymbolWordDisc(models.Model):
     bostonAphasia = models.OneToOneField(BostonAphasia, related_name='symbolworddisc')
 
-    symbol_word_card8_a_score = models.IntegerField(verbose_name='In', blank=True, null=True)
-    symbol_word_card8_b_score = models.IntegerField(verbose_name='J', blank=True, null=True)
-    symbol_word_card8_c_score = models.IntegerField(verbose_name='H', blank=True, null=True)
-    symbol_word_card8_d_score = models.IntegerField(verbose_name='salt', blank=True, null=True)
-    symbol_word_card8_e_score = models.IntegerField(verbose_name='R', blank=True, null=True)
+    symbol_word_card8_a_score = models.IntegerField(verbose_name=pgettext("BostonAphasiaSymbolWordDisc", u'In'), blank=True, null=True)
+    symbol_word_card8_b_score = models.IntegerField(verbose_name=pgettext("BostonAphasiaSymbolWordDisc", 'J'), blank=True, null=True)
+    symbol_word_card8_c_score = models.IntegerField(verbose_name=pgettext("BostonAphasiaSymbolWordDisc", 'H'), blank=True, null=True)
+    symbol_word_card8_d_score = models.IntegerField(verbose_name=pgettext("BostonAphasiaSymbolWordDisc", u'salt'), blank=True, null=True)
+    symbol_word_card8_e_score = models.IntegerField(verbose_name=pgettext("BostonAphasiaSymbolWordDisc", 'R'), blank=True, null=True)
 
-    symbol_word_card9_a_score = models.IntegerField(verbose_name='flower', blank=True, null=True)
-    symbol_word_card9_b_score = models.IntegerField(verbose_name='B', blank=True, null=True)
-    symbol_word_card9_c_score = models.IntegerField(verbose_name='lead', blank=True, null=True)
-    symbol_word_card9_d_score = models.IntegerField(verbose_name='F', blank=True, null=True)
-    symbol_word_card9_e_score = models.IntegerField(verbose_name='plus', blank=True, null=True)
+    symbol_word_card9_a_score = models.IntegerField(verbose_name=pgettext("BostonAphasiaSymbolWordDisc", u'flower'), blank=True, null=True)
+    symbol_word_card9_b_score = models.IntegerField(verbose_name=pgettext("BostonAphasiaSymbolWordDisc", 'B'), blank=True, null=True)
+    symbol_word_card9_c_score = models.IntegerField(verbose_name=pgettext("BostonAphasiaSymbolWordDisc", u'lead'), blank=True, null=True)
+    symbol_word_card9_d_score = models.IntegerField(verbose_name=pgettext("BostonAphasiaSymbolWordDisc", 'F'), blank=True, null=True)
+    symbol_word_card9_e_score = models.IntegerField(verbose_name=pgettext("BostonAphasiaSymbolWordDisc", u'plus'), blank=True, null=True)
 reversion.register(BostonAphasiaSymbolWordDisc, follow=["bostonAphasia"])
 
 
@@ -871,7 +872,7 @@ reversion.register(BostonAphasiaMechanicsWriting, follow=["bostonAphasia"])
 class BostonAphasiaRecallWrittenSymbols(models.Model):
     bostonAphasia = models.OneToOneField(BostonAphasia, related_name='recallwrittensymbols')
     serial_writing_letters_score = models.IntegerField(verbose_name=_(u'Qualification level of writing mechanics:'), blank=True, null=True)
-    serial_writing_numbers_score = models.IntegerField(blank=True, null=True)
+    #serial_writing_numbers_score = models.IntegerField(blank=True, null=True)
 reversion.register(BostonAphasiaRecallWrittenSymbols, follow=["bostonAphasia"])
 
 
