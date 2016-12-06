@@ -3486,7 +3486,7 @@ msgstr "Do mesmo jeito que antes"
 
 #: models/had.py:43
 msgid "I can laugh and see the funny side of things"
-msgstr ""
+msgstr "Dou risada e me divirto quando vejo coisas engraçadas"
 
 #: models/had.py:46
 msgid "A great deal of the time"
