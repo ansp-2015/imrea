@@ -22,14 +22,14 @@ class VonFreyForm(forms.ModelForm):
                   'algometer3_thenar_right','algometer3_thenar_left']
 
         widgets = {
-            'sensibility1_forearm_right': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
-            'sensibility1_forearm_left': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
-            'sensibility1_thenar_right': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
-            'sensibility1_thenar_left': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
-            'sensibility2_forearm_right': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
-            'sensibility2_forearm_left': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
-            'sensibility2_thenar_right': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
-            'sensibility2_thenar_left': StepNumberInput(attrs={'min': 0, 'step': 0.05}),
+            'sensibility1_forearm_right': StepNumberInput(attrs={'min': 0, 'step': 0.05, 'decimals': 2}),
+            'sensibility1_forearm_left': StepNumberInput(attrs={'min': 0, 'step': 0.05, 'decimals': 2}),
+            'sensibility1_thenar_right': StepNumberInput(attrs={'min': 0, 'step': 0.05, 'decimals': 2}),
+            'sensibility1_thenar_left': StepNumberInput(attrs={'min': 0, 'step': 0.05, 'decimals': 2}),
+            'sensibility2_forearm_right': StepNumberInput(attrs={'min': 0, 'step': 0.05, 'decimals': 2}),
+            'sensibility2_forearm_left': StepNumberInput(attrs={'min': 0, 'step': 0.05, 'decimals': 2}),
+            'sensibility2_thenar_right': StepNumberInput(attrs={'min': 0, 'step': 0.05, 'decimals': 2}),
+            'sensibility2_thenar_left': StepNumberInput(attrs={'min': 0, 'step': 0.05, 'decimals': 2}),
             'algometer1_forearm_right': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
             'algometer1_forearm_left': StepNumberInput(attrs={'min': 0, 'step': 0.5}),
             'algometer1_thenar_right': StepNumberInput(attrs={'min': 0, 'step': 0.5}),

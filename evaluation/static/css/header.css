@@ -15,3 +15,9 @@
 del {
     margin-right: 1em;
 }
+
+.dropdown-menu {
+    overflow-y: scroll;
+    height: 37em;
+}
+

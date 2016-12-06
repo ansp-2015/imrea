@@ -145,18 +145,21 @@ class ButtonRadioGridSelect(RadioSelect):
 class StepNumberInput(TextInput):
     def render(self, name, value, attrs=None):
         min_value = 0
-        max_value = 10
+        max_value = 99999
         step = 1
+        decimals = 1
+
         if self.attrs is not None:
             min_value = self.attrs.pop('min', min_value)
             max_value = self.attrs.pop('max', max_value)
             step = self.attrs.pop('step', step)
+            decimals = self.attrs.pop('decimals', decimals)
 
         winput = super(StepNumberInput, self).render(name, value, attrs)
 
         extra = ''
         if isinstance(step, float):
-            extra = mark_safe("forcestepdivisibility:'none',decimals:1,")
+            extra = mark_safe("forcestepdivisibility:'none',decimals:%d," % decimals)
         div_buttons = """
         <div class="div-spinner">
             <div class="input-group bootstrap-touchspin">

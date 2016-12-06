@@ -1,6 +1,7 @@
 from django.utils.text import capfirst
 from django.apps import apps
 from django.utils.safestring import mark_safe
+from django.utils.translation import ugettext_lazy as _
 from django.contrib.admin import ModelAdmin
 # from django.contrib.admin.validation import  validate
 from django.contrib.admin.validation import BaseValidator
@@ -20,8 +21,8 @@ IGNORE_MODELS = (
     "report_builder.filterfield",
     "reversion.revision",
     "reversion.version",
-    "explorer.query",
     "explorer.querylog",
+    "evaluation.eegfile",
     "evaluation.baseevaluation",
     "evaluation.bostonaphasiavisualconfrontation",
     "evaluation.bostonaphasiaanimalnaming",
@@ -74,6 +75,17 @@ def app_list(request):
                         'has_module_perms': has_module_perms,
                         'models': [model_dict],
                     }
+
+    # manually adding Explorer SQL report
+    app_dict['explorer'] = {
+        'name': _('Report Explorer'),
+        'app_url': '/explorer',
+        'models': [{
+            'name': _('Reports'),
+            'admin_url': mark_safe('../%s/' % ('explorer')),
+        }],
+    }
+
     app_list = app_dict.values()
     app_list.sort(key=lambda x: x['name'])
     for app in app_list:

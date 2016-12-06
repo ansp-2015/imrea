@@ -6902,7 +6902,6 @@ body {
 /* Campo para indicar total / subtotal */
 .total_field_readonly {
     border: 0;
-
 }
 
 @media print {
