@@ -8,9 +8,10 @@ import logging
 from .base_admin import BaseAdmin
 from evaluation.models.verbal_fluency import VerbalFluency
 from ..forms import VerbalFluencyForm
+from .base_admin import BaseAdmin
 
 
-class VerbalFluencyAdmin(admin.ModelAdmin):
+class VerbalFluencyAdmin(BaseAdmin):
     """
     Visual Analog Scale
     """
