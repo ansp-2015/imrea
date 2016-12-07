@@ -19,19 +19,21 @@
         {% for line in fieldset %}
             <div class="row"><div class="control-group {% if line.fields|length_is:'1' and line.errors %} error{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not line.has_visible_field %} hidden{% endif %}{% endfor %}">
                 {% for field in line %}
-                    <div class="col-md-{{ group_column_width }} form-group {% if not line.fields|length_is:'1' %} field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}{% endif %}">
-                        {% if field.field.help_text %}
-                            <span class="help-block">{{ field.field.help_text|safe }}</span>
+                    <div class="{% if fieldset.description.column_width %} col-md-{{fieldset.description.column_width}} {% else %} col-md-{{ group_column_width }} {% endif %}form-group {% if not line.fields|length_is:'1' %} field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}{% endif %}">
+                        {% if not field.is_checkbox %}
+                            {% if field.field.help_text %}
+                                <span class="help-block">{{ field.field.help_text|safe }}</span>
+                            {% endif %}
                         {% endif %}
                         <h5>
                             {{ field.label_tag }}
                         </h5>
                         {% if field.is_checkbox %}
-                        <div class="controls col-md-12">
-                            <div class="checkbox">
-                                {% dab_field_rendering field.field %} {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
+                            <div class="controls col-md-12">
+                                <div class="checkbox">
+                                    {% dab_field_rendering field.field %} {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
+                                </div>
                             </div>
-                        </div>
                         {% else %}
                         <div class="controls col-md-12">
                             {% if field.is_readonly %}
