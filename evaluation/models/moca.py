@@ -36,9 +36,9 @@ class MoCA(BaseEvaluation):
     memory_red_2 = models.PositiveIntegerField(_('Red'), choices=choice_numbers(1))
 
     # Attention
-    forward_digit_span = models.PositiveIntegerField(_('Forward digit span'), choices=choice_numbers(1))
-    backward_digit_span = models.PositiveIntegerField(_('Backward digit span'), choices=choice_numbers(1))
-    vigilance = models.PositiveIntegerField(_('Vigilance'), choices=choice_numbers(1))
+    forward_digit_span = models.PositiveIntegerField(_('Forward digit span'), choices=choice_numbers(1), help_text=_(u'Subject has to repeat them in the forward order'))
+    backward_digit_span = models.PositiveIntegerField(_('Backward digit span'), choices=choice_numbers(1), help_text=_(u'Subject has to repeat them in the backward order'))
+    vigilance = models.PositiveIntegerField(_('Vigilance'), choices=choice_numbers(1), help_text=_(u'Read list of letters. The subject must tap with his hand at each letter A. No points if >= 2 errors. (F B A C M N A A J K L B A F A K D E A A A J A M O F A A B)'))
     serial_7s_93 = models.PositiveIntegerField(_('93'), choices=choice_numbers(1))
     serial_7s_86 = models.PositiveIntegerField(_('86'), choices=choice_numbers(1))
     serial_7s_79 = models.PositiveIntegerField(_('79'), choices=choice_numbers(1))
@@ -46,13 +46,13 @@ class MoCA(BaseEvaluation):
     serial_7s_65 = models.PositiveIntegerField(_('65'), choices=choice_numbers(1))
 
     # Language
-    repeat_1 = models.PositiveIntegerField(choices=choice_numbers(1))
-    repeat_2 = models.PositiveIntegerField(choices=choice_numbers(1))
-    verbal_fluency = models.PositiveIntegerField(choices=choice_numbers(1))
+    repeat_1 = models.PositiveIntegerField(choices=choice_numbers(1), help_text=_(u'Repeat: I only know that John is the one to help today.'))
+    repeat_2 = models.PositiveIntegerField(choices=choice_numbers(1), help_text=_(u'Repeat: The cat always hid under the couch when dogs were in the room.'))
+    verbal_fluency = models.PositiveIntegerField(choices=choice_numbers(1), help_text=_(u'Fluency / Name maximum number of words in one minute that begin with the letter F. (N >= 11)'))
 
     # Abstraction
-    abstraction_1 = models.PositiveIntegerField(choices=choice_numbers(1))
-    abstraction_2 = models.PositiveIntegerField(choices=choice_numbers(1))
+    abstraction_1 = models.PositiveIntegerField(choices=choice_numbers(1), help_text=_(u'Similarity between train - bicycle'))
+    abstraction_2 = models.PositiveIntegerField(choices=choice_numbers(1), help_text=_(u'Similarity between watch - ruler'))
 
     # Delayed memory (recall)
     late_memory_face_no_cue = models.PositiveIntegerField(_('With no cue'), choices=choice_numbers(1))

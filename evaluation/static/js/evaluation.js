@@ -136,29 +136,33 @@ var setup_calc_total_field = function(addend_fields, total_field, extra_calc) {
         var addend_len = addend_fields.length;
         if (addend_len > 0) {
             // preparing the event triggers
+                    function _calc_total() {
+                        calc_total_field(addend_fields, total_field);
+                        if (extra_calc) {
+                            extra_calc();
+                        }
+                    }
+
             for (var x = 0; x < addend_len; x++) {
                 if ($('[name=' + addend_fields[x] + ']').is(':radio')) {
                     radios = $('input[type=radio][name=' + addend_fields[x] + ']');
                     var radio_len = radios.length;
                     for (var y = 0; y < radio_len; y++) {
-                        $(radios[y]).change(function(){
-                            calc_total_field(addend_fields, total_field);
-                        });
+                        $(radios[y]).change(_calc_total);
+                    }
+                } else if ($('[name=' + addend_fields[x] + ']').is(':checkbox')) {
+                    checkboxes = $('input[type=checkbox][name=' + addend_fields[x] + ']');
+                    var checkbox_len = checkboxes.length;
+                    for (var y = 0; y < checkbox_len; y++) {
+                        $(checkboxes[y]).change(_calc_total);
+                        $(checkboxes[y]).bootstrapSwitch().on('switchChange.bootstrapSwitch', _calc_total);
                     }
                 } else {
-                    $('#id_' + addend_fields[x]).change(function(){
-                        calc_total_field(addend_fields, total_field);
-                        if (extra_calc) {
-                            extra_calc();
-                        }
-                    });
+                    $('#id_' + addend_fields[x]).change(_calc_total);
                 }
             }
             // making the first calculation
-            calc_total_field(addend_fields, total_field);
-            if (extra_calc) {
-                extra_calc();
-            }
+            _calc_total();
         }
     }
 }
@@ -182,6 +186,12 @@ var calc_total_field = function(addend_field_ids, total_field_id) {
             // it is a radio but with no selected value
             if(typeof($('[name=' + addend_field_ids[x] + ']:checked').val())!=='undefined') {
                 total_field.val(parseInt($('input[type=radio][name=' + addend_field_ids[x] + ']:checked').val()) + parseInt(total_field.val()));
+            }
+        } else if ($('[name=' + addend_field_ids[x] + ']').is(':checkbox')){
+            // it is a checkbox but with no selected value
+            if(typeof($('[name=' + addend_field_ids[x] + ']:checked').val())!=='undefined') {
+                console.log('checkbox 2');
+                total_field.val(parseInt($('input[type=checkbox][name=' + addend_field_ids[x] + ']:checked').val()) + parseInt(total_field.val()));
             }
         } else {
             total_field.val((parseInt($('#id_' + addend_field_ids[x]).val()) || 0) + (parseInt(total_field.val()) || 0));
