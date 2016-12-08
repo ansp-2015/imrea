@@ -10,7 +10,7 @@ from evaluation.models.moca import MoCA
 from ..forms import MoCAForm
 
 
-class MoCAAdmin(admin.ModelAdmin):
+class MoCAAdmin(BaseAdmin):
     """
     Visual Analog Scale
     """

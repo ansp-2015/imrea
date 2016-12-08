@@ -1,6 +1,5 @@
 {% extends "admin/change_form.html" %}
 {% load bootstrapped_goodies_tags i18n %}
-
 {% block extrastyle %}
     {{ block.super }}
     <style>
@@ -16,7 +15,7 @@
 {% block field_sets %}
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title">{% trans "Von Frey - Algometer" %}</h3>
+        <h3 class="panel-title">{% trans "Verbal Fluency Test" %}</h3>
       </div>
       <div class="panel-body">
     {% for fieldset in adminform %}

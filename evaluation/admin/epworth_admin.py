@@ -10,7 +10,7 @@ from evaluation.models.epworth import Epworth
 from ..forms import EpworthForm
 
 
-class EpworthAdmin(admin.ModelAdmin):
+class EpworthAdmin(BaseAdmin):
     """
     Epworth Sleepniess Scale
     """

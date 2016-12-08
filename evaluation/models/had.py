@@ -62,7 +62,7 @@ class HAD(BaseEvaluation):
         (3, pgettext_lazy('ease', 'Not at all')),
         (2, _('Not often')),
         (1, _('Usually')),
-        (0, _('Definitely')),
+        (0, pgettext_lazy('ease', 'Definitely')),
     )
     ease = models.IntegerField(_('I can sit at ease and feel relaxed'), choices=HAD_EASE)
 
@@ -117,7 +117,7 @@ class HAD(BaseEvaluation):
     HAD_BOOK = (
         (3, _('Very seldom')),
         (2, _('Not often')),
-        (1, _('Sometimes')),
+        (1, pgettext_lazy('book', 'Sometimes')),
         (0, _('Often')),
     )
     book = models.IntegerField(_('I can enjoy a good book or radio or TV program'), choices=HAD_BOOK)

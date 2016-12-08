@@ -4,6 +4,7 @@ from django.utils.html import mark_safe
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.admin.utils import (unquote,)
 from reversion_compare.helpers import patch_admin
+from .base_admin import BaseAdmin
 import logging
 from evaluation.models.hamilton import Hamilton
 from ..forms import HamiltonForm
@@ -11,7 +12,7 @@ from ..forms import HamiltonForm
 logger = logging.getLogger(__name__)
 
 
-class HamiltonAdmin(admin.ModelAdmin):
+class HamiltonAdmin(BaseAdmin):
 
     form = HamiltonForm
     fieldsets = (

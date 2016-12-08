@@ -10,7 +10,7 @@ from evaluation.models.von_frey import VonFrey
 from evaluation.forms.von_frey_form import VonFreyForm
 
 
-class VonFreyAdmin(admin.ModelAdmin):
+class VonFreyAdmin(BaseAdmin):
     """
     Visual Analog Scale
     """

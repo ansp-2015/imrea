@@ -242,6 +242,16 @@ msgstr "A - Pontuação"
 msgid "B - Qualification of Parametric Substitutions"
 msgstr "B - Qualificação das Substituições Paragráficas"
 
+#: admin/bostonaphasia_admin.py:510 admin/clin_admin.py:13
+#: admin/eeg_admin.py:24 admin/epworth_admin.py:22 admin/fim_admin.py:19
+#: admin/ftt_admin.py:17 admin/fuglmeyer_admin.py:21 admin/had_admin.py:18
+#: admin/hamilton_admin.py:19 admin/jthft_admin.py:20 admin/kviq_admin.py:13
+#: admin/mmse_admin.py:18 admin/moca_admin.py:20 admin/nihss_admin.py:18
+#: admin/patient_admin.py:9 admin/sis_admin.py:15 admin/vas_admin.py:20
+#: admin/verbal_fluency_admin.py:20 admin/von_frey_admin.py:20
+#: models/base_evaluation.py:18 models/patient.py:43
+#: templates/admin/evaluation/patient/change_form.html:6
+#: templates/admin/index.html:61
 #: evaluation/admin/bostonaphasia_admin.py:510
 #: evaluation/admin/clin_admin.py:13 evaluation/admin/eeg_admin.py:24
 #: evaluation/admin/epworth_admin.py:22 evaluation/admin/fim_admin.py:19
@@ -1001,6 +1011,7 @@ msgid "9. Stroke Recovery "
 msgstr "9. Recuperação do AVE:"
 
 #: evaluation/admin/verbal_fluency_admin.py:27
+#: admin/verbal_fluency_admin.py:26
 msgid "FAS"
 msgstr ""
 

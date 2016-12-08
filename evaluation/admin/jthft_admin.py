@@ -10,7 +10,7 @@ from evaluation.models.jthft import JTHFT
 from evaluation.forms.jthft_form import JTHFTForm
 
 
-class JTHFTAdmin(admin.ModelAdmin):
+class JTHFTAdmin(BaseAdmin):
     """
     Visual Analog Scale
     """
