@@ -251,7 +251,7 @@ msgstr "B - Qualificação das Substituições Paragráficas"
 #: evaluation/admin/mmse_admin.py:18 evaluation/admin/moca_admin.py:20
 #: evaluation/admin/nihss_admin.py:18 evaluation/admin/patient_admin.py:9
 #: evaluation/admin/sis_admin.py:15 evaluation/admin/vas_admin.py:20
-#: evaluation/admin/verbal_fluency_admin.py:20
+#: evaluation/admin/verbal_fluency_admin.py:21
 #: evaluation/admin/von_frey_admin.py:20
 #: evaluation/models/base_evaluation.py:18 evaluation/models/patient.py:43
 #: evaluation/templates/admin/evaluation/patient/change_form.html:6
@@ -779,73 +779,93 @@ msgstr "Linguagem"
 
 #: evaluation/admin/moca_admin.py:26
 msgid "Visuospatial/Executive"
-msgstr ""
+msgstr "Visuoespacial/Executiva"
 
 #: evaluation/admin/moca_admin.py:36
 msgid "Naming"
-msgstr ""
+msgstr "Nomeação"
 
-#: evaluation/admin/moca_admin.py:42
-#, fuzzy
-#| msgid "Tremor"
+#: evaluation/admin/moca_admin.py:45
 msgid "Memory"
-msgstr "Tremor"
+msgstr "Memória"
 
 #: evaluation/admin/moca_admin.py:49
-msgid "Attention"
+msgid ""
+"Read list of words, subject must repeat them. Do 2 trials, even if 1st trial "
+"is successful. Do a recall after 5 minutes. FACE - VELVET - CHURCH - DAISY - "
+"RED"
 msgstr ""
+"Leia a lista de palavras. O sujeito deve repeti-las; faça duas tentativas. "
+"Evocar após 5 minutos. (Rosto - Veludo - Igreja - Margarida - Vermelho)"
+
+#: evaluation/admin/moca_admin.py:53
+msgid "Attention"
+msgstr "Atenção"
 
 #: evaluation/admin/moca_admin.py:56
-#, fuzzy
-#| msgctxt "MMSEAdmin"
-#| msgid "Language"
+msgid "Read list of digits ( digit/sec.)."
+msgstr "Leia a sequência de números (1 número por segundo)"
+
+#: evaluation/admin/moca_admin.py:65
+msgid "Attention serial"
+msgstr "Atenção - série de subtração"
+
+#: evaluation/admin/moca_admin.py:68
+msgid ""
+"Serial 7 subtraction starting at 100. 4 or 5 correct subtractions: "
+"<strong>3pts</strong>, 2 or 3 correct: <strong>2 pts</strong>, 1 correct: "
+"<strong>1 pt</strong>, 0 correct: <strong>0 pt</strong>."
+msgstr ""
+"Subtração de 7, começando pelo 100. 4 ou 5 subtrações corretas: <strong>3 "
+"pts</strong>, 2 ou 3 corretas: <strong>2 pts</strong>, 1 correta: <strong>1 "
+"pt</strong>, 0 corretas: <strong>0 pt</strong>."
+
+#: evaluation/admin/moca_admin.py:77
 msgid "Language"
 msgstr "Linguagem"
 
-#: evaluation/admin/moca_admin.py:62
-#, fuzzy
-#| msgctxt "MMSEAdmin"
-#| msgid "Registration"
+#: evaluation/admin/moca_admin.py:87
 msgid "Abstraction"
-msgstr "Memória imediata"
+msgstr "Abstração"
 
-#: evaluation/admin/moca_admin.py:68
+#: evaluation/admin/moca_admin.py:97
 msgid "Delayed recall"
-msgstr ""
+msgstr "Evocação tardia"
 
-#: evaluation/admin/moca_admin.py:79
+#: evaluation/admin/moca_admin.py:107
+msgid "Has to recall words"
+msgstr "Deve recordar as palavras"
+
+#: evaluation/admin/moca_admin.py:109
 msgid "Face"
-msgstr ""
+msgstr "Rosto"
 
-#: evaluation/admin/moca_admin.py:79 evaluation/models/moca.py:28
+#: evaluation/admin/moca_admin.py:109 evaluation/models/moca.py:28
 #: evaluation/models/moca.py:33 evaluation/models/moca.py:59
 #: evaluation/models/moca.py:65 evaluation/models/moca.py:75
 msgid "Velvet"
-msgstr ""
+msgstr "Veludo"
 
-#: evaluation/admin/moca_admin.py:79 evaluation/models/moca.py:29
+#: evaluation/admin/moca_admin.py:109 evaluation/models/moca.py:29
 #: evaluation/models/moca.py:34 evaluation/models/moca.py:60
 #: evaluation/models/moca.py:67 evaluation/models/moca.py:77
 msgid "Church"
-msgstr ""
+msgstr "Igreja"
 
-#: evaluation/admin/moca_admin.py:79 evaluation/models/moca.py:30
+#: evaluation/admin/moca_admin.py:109 evaluation/models/moca.py:30
 #: evaluation/models/moca.py:35 evaluation/models/moca.py:61
 #: evaluation/models/moca.py:69 evaluation/models/moca.py:79
 msgid "Daisy"
-msgstr ""
+msgstr "Margarida"
 
-#: evaluation/admin/moca_admin.py:79 evaluation/models/bostonaphasia.py:143
+#: evaluation/admin/moca_admin.py:109 evaluation/models/bostonaphasia.py:143
 #: evaluation/models/moca.py:31 evaluation/models/moca.py:36
 #: evaluation/models/moca.py:62 evaluation/models/moca.py:71
 #: evaluation/models/moca.py:81
 msgid "Red"
 msgstr "Vermelho"
 
-#: evaluation/admin/moca_admin.py:82
-#, fuzzy
-#| msgctxt "MMSEAdmin"
-#| msgid "Orientation"
+#: evaluation/admin/moca_admin.py:116
 msgid "Orientation"
 msgstr "Orientação"
 
@@ -980,13 +1000,13 @@ msgstr ""
 msgid "9. Stroke Recovery "
 msgstr "9. Recuperação do AVE:"
 
-#: evaluation/admin/verbal_fluency_admin.py:26
+#: evaluation/admin/verbal_fluency_admin.py:27
 msgid "FAS"
 msgstr ""
 
-#: evaluation/admin/verbal_fluency_admin.py:32
+#: evaluation/admin/verbal_fluency_admin.py:33
 msgid "Animals"
-msgstr ""
+msgstr "Animais"
 
 #: evaluation/context_processors.py:81
 msgid "Report Explorer"
@@ -1206,7 +1226,7 @@ msgstr "Última atualização"
 
 #: evaluation/models/base_evaluation.py:21 evaluation/models/moca.py:85
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #: evaluation/models/bostonaphasia.py:12 evaluation/models/bostonaphasia.py:13
 msgid "Write or distribute a card deck"
@@ -2414,11 +2434,11 @@ msgstr "O menino esta roubando biscoitos"
 msgid "If he is not careful the stool will fall"
 msgstr "Se ele não tomar cuidado o banco vai cair"
 
-#: evaluation/models/clin.py:7 evaluation/widgets.py:191
+#: evaluation/models/clin.py:7 evaluation/widgets.py:194
 msgid "Yes"
 msgstr "Sim"
 
-#: evaluation/models/clin.py:8 evaluation/widgets.py:191
+#: evaluation/models/clin.py:8 evaluation/widgets.py:194
 msgid "No"
 msgstr "Não"
 
@@ -4572,12 +4592,27 @@ msgstr ""
 msgid "Forward digit span"
 msgstr ""
 
+#: evaluation/models/moca.py:39
+msgid "Subject has to repeat them in the forward order: 2 - 1 - 8 - 5 - 4"
+msgstr ""
+
 #: evaluation/models/moca.py:40
 msgid "Backward digit span"
 msgstr ""
 
+#: evaluation/models/moca.py:40
+msgid "Subject has to repeat them in the backward order: 7 - 4 - 2"
+msgstr ""
+
 #: evaluation/models/moca.py:41
 msgid "Vigilance"
+msgstr ""
+
+#: evaluation/models/moca.py:41
+msgid ""
+"Read list of letters. The subject must tap with his hand at each letter A. "
+"No points if >= 2 errors. (F B A C M N A A J K L B A F A K D E A A A J A M O "
+"F A A B)"
 msgstr ""
 
 #: evaluation/models/moca.py:42
@@ -4598,6 +4633,28 @@ msgstr ""
 
 #: evaluation/models/moca.py:46
 msgid "65"
+msgstr ""
+
+#: evaluation/models/moca.py:49
+msgid "Repeat: I only know that John is the one to help today."
+msgstr ""
+
+#: evaluation/models/moca.py:50
+msgid "Repeat: The cat always hid under the couch when dogs were in the room."
+msgstr ""
+
+#: evaluation/models/moca.py:51
+msgid ""
+"Fluency / Name maximum number of words in one minute that begin with the "
+"letter F. (N >= 11)"
+msgstr ""
+
+#: evaluation/models/moca.py:54
+msgid "Similarity between train - bicycle"
+msgstr ""
+
+#: evaluation/models/moca.py:55
+msgid "Similarity between watch - ruler"
 msgstr ""
 
 #: evaluation/models/moca.py:58
@@ -5860,6 +5917,7 @@ msgid "(Pain) Algometer 3"
 msgstr ""
 
 #: evaluation/models/von_frey.py:37 evaluation/models/von_frey.py:38
+#: evaluation/templates/admin/evaluation/verbalfluency/change_form.html:19
 #: evaluation/templates/admin/evaluation/vonfrey/change_form.html:6
 msgid "Von Frey - Algometer"
 msgstr "Von Frey - Algômetro"
