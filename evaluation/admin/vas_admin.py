@@ -10,7 +10,7 @@ from evaluation.models.vas import VAS
 from ..forms import VASForm
 
 
-class VASAdmin(admin.ModelAdmin):
+class VASAdmin(BaseAdmin):
     """
     Visual Analog Scale
     """

@@ -10,7 +10,7 @@ from evaluation.models.verbal_fluency import VerbalFluency
 from ..forms import VerbalFluencyForm
 
 
-class VerbalFluencyAdmin(admin.ModelAdmin):
+class VerbalFluencyAdmin(BaseAdmin):
     """
     Visual Analog Scale
     """
