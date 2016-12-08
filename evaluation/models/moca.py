@@ -46,13 +46,13 @@ class MoCA(BaseEvaluation):
     serial_7s_65 = models.PositiveIntegerField(_('65'), choices=choice_numbers(1))
 
     # Language
-    repeat_1 = models.PositiveIntegerField(choices=choice_numbers(1), help_text=_(u'Repeat: I only know that John is the one to help today.'))
-    repeat_2 = models.PositiveIntegerField(choices=choice_numbers(1), help_text=_(u'Repeat: The cat always hid under the couch when dogs were in the room.'))
-    verbal_fluency = models.PositiveIntegerField(choices=choice_numbers(1), help_text=_(u'Fluency / Name maximum number of words in one minute that begin with the letter F. (N >= 11)'))
+    repeat_1 = models.PositiveIntegerField(_('Repeat 1'), choices=choice_numbers(1), help_text=_(u'Repeat: I only know that John is the one to help today.'))
+    repeat_2 = models.PositiveIntegerField(_('Repeat 2'), choices=choice_numbers(1), help_text=_(u'Repeat: The cat always hid under the couch when dogs were in the room.'))
+    verbal_fluency = models.PositiveIntegerField(_('Verbal Fluency'), choices=choice_numbers(1), help_text=_(u'Fluency / Name maximum number of words in one minute that begin with the letter F. (N >= 11)'))
 
     # Abstraction
-    abstraction_1 = models.PositiveIntegerField(choices=choice_numbers(1), help_text=_(u'Similarity between train - bicycle'))
-    abstraction_2 = models.PositiveIntegerField(choices=choice_numbers(1), help_text=_(u'Similarity between watch - ruler'))
+    abstraction_1 = models.PositiveIntegerField(_('Abstraction 1'), choices=choice_numbers(1), help_text=_(u'Similarity between train - bicycle'))
+    abstraction_2 = models.PositiveIntegerField(_('Abstraction 2'), choices=choice_numbers(1), help_text=_(u'Similarity between watch - ruler'))
 
     # Delayed memory (recall)
     late_memory_face_no_cue = models.PositiveIntegerField(_('With no cue'), choices=choice_numbers(1))
@@ -89,6 +89,9 @@ class MoCA(BaseEvaluation):
     orientation_place = models.PositiveIntegerField(_('Place'), choices=choice_numbers(1))
     orientation_city = models.PositiveIntegerField(_('City'), choices=choice_numbers(1))
 
+    total_twelve_year_old = models.PositiveIntegerField(_('Less than 12 yr edu'), choices=choice_numbers(1),
+                                                                  null=True, blank=True, help_text=_(u'Adicionar 1 ponto se ≤ 12 anos de escolaridade'))
+
     class Meta:
         verbose_name = _('MoCA')
         verbose_name_plural = _('MoCA')
@@ -115,5 +118,7 @@ class MoCA(BaseEvaluation):
 
         if self.verbal_fluency > 10:
             tot += 1
+
+        tot += self.total_twelve_year_old
 
         return tot

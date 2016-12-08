@@ -78,7 +78,7 @@ class MoCAAdmin(BaseAdmin):
             'fields': (('repeat_1', 'repeat_2'), ('verbal_fluency',)),
             'description': {
                 'fieldset': '_1col',
-                'column_width': 7,
+                'column_width':12,
                 'fieldset_total_points': 3,
                 'fieldset_total_addend_fields': ('repeat_1', 'repeat_2', 'verbal_fluency'),
                 'fieldset_total_field': 'language_total',
@@ -87,8 +87,9 @@ class MoCAAdmin(BaseAdmin):
         (_('Abstraction'), {
             'fields': (('abstraction_1', 'abstraction_2'),),
             'description': {
+                'text': _(u'Similarity between e.g. banana - orange = fruit'),
                 'fieldset': '_1col',
-                'column_width': 4,
+                'column_width': 5,
                 'fieldset_total_points': 2,
                 'fieldset_total_addend_fields': ('abstraction_1', 'abstraction_2'),
                 'fieldset_total_field': 'abstraction_total',
@@ -122,6 +123,18 @@ class MoCAAdmin(BaseAdmin):
                 'fieldset_total_addend_fields': ('orientation_date', 'orientation_month', 'orientation_year', 'orientation_day',
                         'orientation_place', 'orientation_city'),
                 'fieldset_total_field': 'orientation_total',
+            }
+        }),
+        (_('Total'), {
+            'fields': ('total_twelve_year_old',),
+            'description': {
+                'fieldset': '_1col',
+                'fieldset_total_points': 30,
+                'fieldset_total_addend_fields': ('visuospatial_total', 'naming_total', 'attention_total',
+                                                 'attention_serial_total', 'language_total', 'abstraction_total',
+                                                 'delayed_recall_total', 'orientation_total', 'total_twelve_year_old',),
+                'fieldset_total_field': 'moca_total',
+                'column_width': 5,
             }
         }),
     )
