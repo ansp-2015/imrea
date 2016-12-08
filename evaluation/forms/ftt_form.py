@@ -16,3 +16,11 @@ class FTTForm(forms.ModelForm):
         fields = ['paretic_hand_first', 'healthy_hand_first', 'paretic_hand_second', 'healthy_hand_second',
                   'paretic_hand_third', 'healthy_hand_third']
 
+        widgets = {
+            'paretic_hand_first': StepNumberInput(attrs={'min': 0}),
+            'healthy_hand_first': StepNumberInput(attrs={'min': 0}),
+            'paretic_hand_second': StepNumberInput(attrs={'min': 0}),
+            'healthy_hand_second': StepNumberInput(attrs={'min': 0}),
+            'paretic_hand_third': StepNumberInput(attrs={'min': 0}),
+            'healthy_hand_third': StepNumberInput(attrs={'min': 0}),
+        }
