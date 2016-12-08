@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-05 18:58+0000\n"
+"POT-Creation-Date: 2016-12-08 19:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -242,21 +242,11 @@ msgstr "A - Pontuação"
 msgid "B - Qualification of Parametric Substitutions"
 msgstr "B - Qualificação das Substituições Paragráficas"
 
-#: admin/bostonaphasia_admin.py:510 admin/clin_admin.py:13
-#: admin/eeg_admin.py:24 admin/epworth_admin.py:22 admin/fim_admin.py:19
-#: admin/ftt_admin.py:17 admin/fuglmeyer_admin.py:21 admin/had_admin.py:18
-#: admin/hamilton_admin.py:19 admin/jthft_admin.py:20 admin/kviq_admin.py:13
-#: admin/mmse_admin.py:18 admin/moca_admin.py:20 admin/nihss_admin.py:18
-#: admin/patient_admin.py:9 admin/sis_admin.py:15 admin/vas_admin.py:20
-#: admin/verbal_fluency_admin.py:20 admin/von_frey_admin.py:20
-#: models/base_evaluation.py:18 models/patient.py:43
-#: templates/admin/evaluation/patient/change_form.html:6
-#: templates/admin/index.html:61
 #: evaluation/admin/bostonaphasia_admin.py:510
 #: evaluation/admin/clin_admin.py:13 evaluation/admin/eeg_admin.py:24
 #: evaluation/admin/epworth_admin.py:22 evaluation/admin/fim_admin.py:19
 #: evaluation/admin/ftt_admin.py:17 evaluation/admin/fuglmeyer_admin.py:21
-#: evaluation/admin/had_admin.py:18 evaluation/admin/hamilton_admin.py:18
+#: evaluation/admin/had_admin.py:18 evaluation/admin/hamilton_admin.py:19
 #: evaluation/admin/jthft_admin.py:20 evaluation/admin/kviq_admin.py:13
 #: evaluation/admin/mmse_admin.py:18 evaluation/admin/moca_admin.py:20
 #: evaluation/admin/nihss_admin.py:18 evaluation/admin/patient_admin.py:9
@@ -686,7 +676,7 @@ msgstr "Membro superior"
 
 #: evaluation/admin/fuglmeyer_admin.py:209
 #: evaluation/admin/fuglmeyer_admin.py:248
-#: evaluation/admin/hamilton_admin.py:46 evaluation/admin/mmse_admin.py:59
+#: evaluation/admin/hamilton_admin.py:47 evaluation/admin/mmse_admin.py:59
 #: evaluation/models/bostonaphasia.py:944
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_09_upper_total.html:44
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_10_lower_total.html:44
@@ -1011,7 +1001,6 @@ msgid "9. Stroke Recovery "
 msgstr "9. Recuperação do AVE:"
 
 #: evaluation/admin/verbal_fluency_admin.py:27
-#: admin/verbal_fluency_admin.py:26
 msgid "FAS"
 msgstr ""
 
@@ -3677,7 +3666,6 @@ msgid "Not often"
 msgstr "Poucas vezes"
 
 #: evaluation/models/had.py:56 evaluation/models/had.py:72
-#: evaluation/models/had.py:120
 msgid "Sometimes"
 msgstr ""
 
@@ -3694,9 +3682,12 @@ msgstr "Nunca"
 msgid "Usually"
 msgstr ""
 
-#: evaluation/models/had.py:65 evaluation/models/had.py:86
+#: evaluation/models/had.py:65
+#, fuzzy
+#| msgid "Definitely as much"
+msgctxt "ease"
 msgid "Definitely"
-msgstr ""
+msgstr "Sim, do mesmo jeito que antes"
 
 #: evaluation/models/had.py:67
 msgid "I can sit at ease and feel relaxed"
@@ -3741,6 +3732,10 @@ msgid "I get a sort of frightened feeling like 'butterflies' in the stomach"
 msgstr ""
 "Eu tenho uma sensação ruim de medo, como um frio na barriga ou um aperto no "
 "estômago"
+
+#: evaluation/models/had.py:86
+msgid "Definitely"
+msgstr ""
 
 #: evaluation/models/had.py:87
 msgid "I don't take as much care as I should"
@@ -3825,6 +3820,14 @@ msgstr "De repente, tenho a sensação de entrar em pânico"
 #: evaluation/models/had.py:118
 msgid "Very seldom"
 msgstr ""
+
+#: evaluation/models/had.py:120
+#, fuzzy
+#| msgctxt "CHOICES_MOOD"
+#| msgid "Some of the time"
+msgctxt "book"
+msgid "Sometimes"
+msgstr "algumas vezes"
 
 #: evaluation/models/had.py:121
 msgid "Often"
@@ -5900,6 +5903,7 @@ msgid "Observation"
 msgstr "Memória imediata"
 
 #: evaluation/models/verbal_fluency.py:19
+#: evaluation/templates/admin/evaluation/verbalfluency/change_form.html:18
 msgid "Verbal Fluency Test"
 msgstr ""
 
@@ -5928,7 +5932,6 @@ msgid "(Pain) Algometer 3"
 msgstr ""
 
 #: evaluation/models/von_frey.py:37 evaluation/models/von_frey.py:38
-#: evaluation/templates/admin/evaluation/verbalfluency/change_form.html:19
 #: evaluation/templates/admin/evaluation/vonfrey/change_form.html:6
 msgid "Von Frey - Algometer"
 msgstr "Von Frey - Algômetro"
@@ -6078,8 +6081,7 @@ msgid "MINI MENTAL STATE EXAMINATION - MMSE"
 msgstr "MINI-EXAME DO ESTADO MENTAL - MEEM"
 
 #: evaluation/templates/admin/evaluation/moca/change_form.html:6
-#: evaluation/templates/admin/evaluation/vas/change_form.html:6
-msgid "VISUAL ANALOG SCALE"
+msgid "Montreal Cognitive Assessment"
 msgstr ""
 
 #: evaluation/templates/admin/evaluation/nihss/change_form.html:6
@@ -6105,6 +6107,10 @@ msgstr "Imagem para item 10."
 #: evaluation/templates/admin/evaluation/sis/change_form.html:6
 msgid "Stroke Impact Scale"
 msgstr " Escala de Impacto do AVC"
+
+#: evaluation/templates/admin/evaluation/vas/change_form.html:6
+msgid "VISUAL ANALOG SCALE"
+msgstr ""
 
 #: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_01_manual_dominance.html:35
 msgid "hand preference"
