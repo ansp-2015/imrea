@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-08 21:03+0000\n"
+"POT-Creation-Date: 2016-12-09 20:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -247,7 +247,7 @@ msgstr "B - Qualificação das Substituições Paragráficas"
 #: evaluation/admin/epworth_admin.py:22 evaluation/admin/fim_admin.py:19
 #: evaluation/admin/ftt_admin.py:17 evaluation/admin/fuglmeyer_admin.py:21
 #: evaluation/admin/had_admin.py:18 evaluation/admin/hamilton_admin.py:19
-#: evaluation/admin/jthft_admin.py:20 evaluation/admin/kviq_admin.py:13
+#: evaluation/admin/jthft_admin.py:20 evaluation/admin/kviq_admin.py:14
 #: evaluation/admin/mmse_admin.py:18 evaluation/admin/moca_admin.py:20
 #: evaluation/admin/nihss_admin.py:18 evaluation/admin/patient_admin.py:9
 #: evaluation/admin/sis_admin.py:15 evaluation/admin/vas_admin.py:20
@@ -705,52 +705,168 @@ msgstr "Mão parética"
 msgid "Healthy hand"
 msgstr "Mão saudável"
 
-#: evaluation/admin/kviq_admin.py:17 evaluation/models/kviq.py:32
+#: evaluation/admin/kviq_admin.py:18 evaluation/models/kviq.py:32
 msgid "Dominant limb"
 msgstr "Membro dominante"
 
-#: evaluation/admin/kviq_admin.py:23
+#: evaluation/admin/kviq_admin.py:24
 msgid "Neck flexion/extension"
 msgstr "Flexão/extensão do pescoço"
 
-#: evaluation/admin/kviq_admin.py:29
-msgid "Shoulder elevation"
-msgstr "Encolher (erguer) os ombros"
+#: evaluation/admin/kviq_admin.py:29 evaluation/admin/kviq_admin.py:41
+#: evaluation/admin/kviq_admin.py:54 evaluation/admin/kviq_admin.py:92
+#: evaluation/admin/kviq_admin.py:105 evaluation/admin/kviq_admin.py:118
+#: evaluation/admin/kviq_admin.py:131 evaluation/admin/kviq_admin.py:144
+msgid "Sit upright with the head straight and hands resting on your thighs"
+msgstr "Sente-se ereto com a cabeça e as mãos apoiadas sobre as coxas"
 
-#: evaluation/admin/kviq_admin.py:35
+#: evaluation/admin/kviq_admin.py:30
+msgid "Bend your head as far as possible, first forward and then backward"
+msgstr ""
+"Incline a cabeça, tanto quanto possível, primeiro para a frente e depois "
+"para trás"
+
+#: evaluation/admin/kviq_admin.py:31 evaluation/admin/kviq_admin.py:43
+#: evaluation/admin/kviq_admin.py:56 evaluation/admin/kviq_admin.py:69
+#: evaluation/admin/kviq_admin.py:82 evaluation/admin/kviq_admin.py:94
+#: evaluation/admin/kviq_admin.py:107 evaluation/admin/kviq_admin.py:120
+#: evaluation/admin/kviq_admin.py:133 evaluation/admin/kviq_admin.py:146
+msgid ""
+"Return to the start position. Now imagine the movement, concentrate on the "
+"clarity of the image"
+msgstr "Retorne à posição inicial. Agora imagine o movimento, concentra-se na "
+"clareza da imagem"
+
+#: evaluation/admin/kviq_admin.py:32 evaluation/admin/kviq_admin.py:44
+#: evaluation/admin/kviq_admin.py:57 evaluation/admin/kviq_admin.py:70
+#: evaluation/admin/kviq_admin.py:83 evaluation/admin/kviq_admin.py:95
+#: evaluation/admin/kviq_admin.py:108 evaluation/admin/kviq_admin.py:121
+#: evaluation/admin/kviq_admin.py:134 evaluation/admin/kviq_admin.py:147
+msgid "Indicate on the scale the quality of the imagined movement"
+msgstr "Indicar na escala da qualidade do movimento imaginado"
+
+#: evaluation/admin/kviq_admin.py:36
+msgid "Shoulder shrugging"
+msgstr "Ombro - encolher (erguer) os ombros"
+
+#: evaluation/admin/kviq_admin.py:42
+msgid "Raise both shoulders as high as possible without moving your head"
+msgstr "Levante os ombros o mais alto possível sem mover a cabeça"
+
+#: evaluation/admin/kviq_admin.py:48
 msgid "Shoulder flexion"
 msgstr "Flexão do ombro para a frente"
 
-#: evaluation/admin/kviq_admin.py:42 evaluation/models/bostonaphasia.py:216
-#: evaluation/models/bostonaphasia.py:217
-msgid "Elbow"
-msgstr "Flexão do cotovelo"
+#: evaluation/admin/kviq_admin.py:55
+msgid ""
+"Lift your non-dominant arm straight out in front of you and keep lifting "
+"until it is straight up high"
+msgstr ""
+"Levente o braço não dominante, estendido, para frente de você e mantenha "
+"levantado até que esteja em linha reta até o alto"
 
-#: evaluation/admin/kviq_admin.py:49 evaluation/models/bostonaphasia.py:207
-#: evaluation/models/bostonaphasia.py:208
-msgid "Thumb"
-msgstr "Polegar para as pontas dos dedo"
+#: evaluation/admin/kviq_admin.py:61
+msgid "Elbow flexion"
+msgstr "Flexão de cotovelo"
 
-#: evaluation/admin/kviq_admin.py:56
-msgid "Trunk"
-msgstr "Flexão do tronco para frente"
+#: evaluation/admin/kviq_admin.py:67
+msgid ""
+"Sit upright with the head straight and with your dominant arm straight out "
+"in front of you with your hand open and palm up"
+msgstr ""
+"Sente-se ereto com a cabeça reta e com o seu braço dominante estendido na "
+"frente de você com a mão aberta e palma para cima"
 
-#: evaluation/admin/kviq_admin.py:62 evaluation/models/bostonaphasia.py:186
-#: evaluation/models/bostonaphasia.py:187
-msgid "Knee"
-msgstr "Extensão do joelho"
+#: evaluation/admin/kviq_admin.py:68
+msgid ""
+"Bend the elbow on your dominant side as though you were going to touch your "
+"shoulder on the same side"
+msgstr ""
+"Dobre o cotovelo em seu lado dominante como se estivesse indo para tocar o "
+"ombro do mesmo lado"
 
-#: evaluation/admin/kviq_admin.py:69
-msgid "Hip"
+#: evaluation/admin/kviq_admin.py:74
+msgid "Thumb to finger tips"
+msgstr "Polegar para as pontas dos dedos"
+
+#: evaluation/admin/kviq_admin.py:80
+msgid ""
+"Sit upright with the head straight and hands resting on your thighs with "
+"your palms up"
+msgstr ""
+"Sente-se ereto com a cabeça reta e apoiada em suas coxas com as palmas das "
+"mãos para cima"
+
+#: evaluation/admin/kviq_admin.py:81
+msgid ""
+"With your dominant hand, touch the tip of each finger with your thumb, start "
+"with the index finger and move along the fingers at the rate of about one "
+"finger/second"
+msgstr ""
+"Com a sua mão dominante, toque a ponta de cada dedo com o polegar, comece "
+"com o dedo indicador e seguindo para os outros dedos a um ritmo de cerca de "
+"um dedo por segundo"
+
+#: evaluation/admin/kviq_admin.py:87
+msgid "Forward trunk flexion"
+msgstr ""
+
+#: evaluation/admin/kviq_admin.py:93
+msgid ""
+"Bend at the waist moving your trunk forward as far as possible then "
+"straighten up again"
+msgstr ""
+"Dobrar na cintura movendo o tronco para frente, tanto quanto possível, em "
+"seguida, endireitar-se novamente"
+
+#: evaluation/admin/kviq_admin.py:99 evaluation/models/fuglmeyer.py:289
+msgid "Knee extension"
+msgstr "Extensão de joelho"
+
+#: evaluation/admin/kviq_admin.py:106
+msgid ""
+"Extend your knee to raise the lower leg of your non-dominant side as close "
+"as possible to the horizontal then lower it"
+msgstr ""
+"Estender o joelho para levantar a parte inferior da perna do lado não-"
+"dominante tão perto quanto possível em relação ao plano horizontal, em "
+"seguida, baixá-la."
+
+#: evaluation/admin/kviq_admin.py:112
+msgid "Hip abduction"
 msgstr "Abdução do quadril"
 
-#: evaluation/admin/kviq_admin.py:76
+#: evaluation/admin/kviq_admin.py:119
+msgid ""
+"Move the foot on your dominant side sideways about 30 cm (12 inches) then "
+"bring it back"
+msgstr ""
+"Mova o seu pé, do lado dominante, cerca de 30 cm para o lado, em seguida, "
+"traga-o de volta"
+
+#: evaluation/admin/kviq_admin.py:125
 msgid "Foot tapping"
 msgstr "Bater o pé"
 
-#: evaluation/admin/kviq_admin.py:83
+#: evaluation/admin/kviq_admin.py:132
+msgid ""
+"With your non-dominant leg tap your forefoot on the floor three times; about "
+"once/second while keeping your heel on the floor"
+msgstr ""
+"Com sua perna não-dominante, bater o antepé no chão trêz vezes, cerca de uma "
+"vez por segundo, mantendo o calcanhar no chão"
+
+#: evaluation/admin/kviq_admin.py:138
 msgid "Foot rotation"
 msgstr "Rotação externa do pé"
+
+#: evaluation/admin/kviq_admin.py:145
+msgid ""
+"With your dominant leg, turn your forefoot out to the side as far as "
+"possible without moving your heel"
+msgstr ""
+"Com sua perna dominante, bater o antepé no chão trêz vezes, cerca de uma vez "
+"por segundo, mantendo o calcanhar no chão"
 
 #: evaluation/admin/mmse_admin.py:22
 msgctxt "MMSEAdmin"
@@ -1478,6 +1594,11 @@ msgstr "Nariz"
 msgid "Shoulder"
 msgstr "Ombro"
 
+#: evaluation/models/bostonaphasia.py:186
+#: evaluation/models/bostonaphasia.py:187
+msgid "Knee"
+msgstr "Extensão do joelho"
+
 #: evaluation/models/bostonaphasia.py:189
 #: evaluation/models/bostonaphasia.py:190
 msgid "Eyelid"
@@ -1503,6 +1624,11 @@ msgstr "Percoço"
 msgid "Middle finger"
 msgstr "Dedo médio"
 
+#: evaluation/models/bostonaphasia.py:207
+#: evaluation/models/bostonaphasia.py:208
+msgid "Thumb"
+msgstr "Polegar para as pontas dos dedo"
+
 #: evaluation/models/bostonaphasia.py:210
 #: evaluation/models/bostonaphasia.py:211
 msgid "Thigh"
@@ -1512,6 +1638,11 @@ msgstr "Coxa"
 #: evaluation/models/bostonaphasia.py:214
 msgid "Chin"
 msgstr "Queixo"
+
+#: evaluation/models/bostonaphasia.py:216
+#: evaluation/models/bostonaphasia.py:217
+msgid "Elbow"
+msgstr "Flexão do cotovelo"
 
 #: evaluation/models/bostonaphasia.py:219
 #: evaluation/models/bostonaphasia.py:220
@@ -3254,14 +3385,6 @@ msgid "Fingers in abduction/flexion, thumb opposed, tennis ball"
 msgstr "Preensão esférica: segurar bolinha de tênis"
 
 #: evaluation/models/fuglmeyer.py:228
-#, fuzzy
-#| msgid ""
-#| "Subject is sitting with arm on bedside table. Instruct the patient to "
-#| "perform a spherical grasp by grasping a tennis ball The tester may "
-#| "support the patient’s arm but may not assist with the hand function "
-#| "required for the retrieval task. Test this grip against resistance by "
-#| "asking the patient to hold as you attempt to pull the ball out with a "
-#| "slight tug. <strong>Hold the ball and keep it steady</strong>"
 msgid ""
 "Subject is sitting with arm on bedside table. Instruct the patient to "
 "perform a spherical grasp by grasping a tennis ball. The tester may support "
@@ -3402,10 +3525,6 @@ msgstr "Quadril - extensão"
 #: evaluation/models/fuglmeyer.py:288
 msgid "Hip adduction"
 msgstr "Quadril - adução"
-
-#: evaluation/models/fuglmeyer.py:289
-msgid "Knee extension"
-msgstr "Extensão de joelho"
 
 #: evaluation/models/fuglmeyer.py:290
 msgid "Ankle plantarflexion"
@@ -4307,7 +4426,7 @@ msgstr "Pescoço - imagens cinestésica"
 
 #: evaluation/models/kviq.py:35
 msgid "Shoulder elevation visual images"
-msgstr "Erquer ombro - visual de imagens"
+msgstr "Erguer ombro - visual de imagens"
 
 #: evaluation/models/kviq.py:36
 msgid "Shoulder elevation cine images"
@@ -6109,8 +6228,6 @@ msgid "MINI MENTAL STATE EXAMINATION - MMSE"
 msgstr "MINI-EXAME DO ESTADO MENTAL - MEEM"
 
 #: evaluation/templates/admin/evaluation/moca/change_form.html:6
-#, fuzzy
-#| msgid "MoCA - Montreal Cognitive Assessment"
 msgid "Montreal Cognitive Assessment"
 msgstr "MoCA - Montreal Cognitive Assessment"
 
@@ -6151,8 +6268,6 @@ msgid "exclusive single hand"
 msgstr "mão exclusiva"
 
 #: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_01_manual_dominance.html:39
-#, fuzzy
-#| msgid "both hands (1 em cada coluna)"
 msgid "both hands (1 in each column)"
 msgstr "duas mãos indiferentemente (1 em cada coluna)"
 
@@ -6165,8 +6280,6 @@ msgid "(total D - total E) (total D - total E) x 100"
 msgstr "(total D - total E)    (total D - total E) x 100"
 
 #: evaluation/templates/admin/includes/fieldset/bostonaphasia/fieldset_01_manual_dominance.html:48
-#, fuzzy
-#| msgid "exclusive left hanbed"
 msgid "exclusive left handed"
 msgstr "canhoto absoluto"
 
@@ -6960,23 +7073,17 @@ msgstr "- ausentes"
 
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_09_upper_total.html:34
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_10_lower_total.html:34
-#, fuzzy, python-format
-#| msgid "Less than 50% (33 points) - Serious motor impairment"
-msgid "Less than 50%% (33 points) - Serious motor impairment"
+msgid "Less than 50% (33 points) - Serious motor impairment"
 msgstr "Menos que 50% (33 pontos) - Incapacidade Motora Severa"
 
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_09_upper_total.html:35
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_10_lower_total.html:35
-#, fuzzy, python-format
-#| msgid "Between 51-84% (34 a 55 points) - Moderate motor impairment"
-msgid "Between 51-84%% (34 a 55 points) - Moderate motor impairment"
+msgid "Between 51-84% (34 a 55 points) - Moderate motor impairment"
 msgstr "Entre 51-84% (34 a 55 pontos) - Incapacidade Motora Moderada"
 
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_09_upper_total.html:36
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_10_lower_total.html:36
-#, fuzzy, python-format
-#| msgid "Between 84 - 99% (56 a 65 points) - Mild motor impairment"
-msgid "Between 84 - 99%% (56 a 65 points) - Mild motor impairment"
+msgid "Between 84 - 99% (56 a 65 points) - Mild motor impairment"
 msgstr "Entre 84 - 99% (56 a 65 pontos) - Incapacidade Motora Leve"
 
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_09_upper_total.html:43
@@ -7070,6 +7177,15 @@ msgstr ""
 #: evaluation/templates/reversion-compare/compare.html:40
 msgid "Go back to history list"
 msgstr "Voltar para a lista de históricos"
+
+#~ msgid "Trunk"
+#~ msgstr "Flexão do tronco para frente"
+
+#~ msgid "Hip"
+#~ msgstr "Abdução do quadril"
+
+#~ msgid "Shoulder elevation"
+#~ msgstr "Encolher (erguer) os ombros"
 
 #~ msgid ""
 #~ "Subject is sitting with arm on bedside table. Instruct the patient to "
