@@ -13,7 +13,7 @@ class SIS(BaseEvaluation):
         (3, pgettext("CHOICES_STRENGTH", u'Some strength')),
         (2, pgettext("CHOICES_STRENGTH", u'A little strength')),
         (1, pgettext("CHOICES_STRENGTH", u'No strength at all'))
-    )
+    ) + BaseEvaluation.UN
     strength_arm = models.IntegerField(_('a. Arm that was most affected'), choices=CHOICES_STRENGTH)
     strength_hand = models.IntegerField(_('b. Grip of your hand that was most affected'), choices=CHOICES_STRENGTH)
     strength_leg = models.IntegerField(_('c. Leg that was most affected'), choices=CHOICES_STRENGTH)
@@ -26,7 +26,8 @@ class SIS(BaseEvaluation):
         (3, pgettext("CHOICES_DIFICULTY", u'Somewhat difficult')),
         (2, pgettext("CHOICES_DIFICULTY", u'Very difficult')),
         (1, pgettext("CHOICES_DIFICULTY", u'Extremely difficult'))
-    )
+    ) + BaseEvaluation.UN
+
     dificulty_remember_ppl_told = models.IntegerField(_('a. Remember things that people just told you?'), choices=CHOICES_DIFICULTY)
     dificulty_remember_happ_day_bef = models.IntegerField(_('b. Remember things that happened the day before?'), choices=CHOICES_DIFICULTY)
     dificulty_remember_do_things = models.IntegerField(_('c. Remember to do things (e.g. keep scheduled appointments or take medication)?'), choices=CHOICES_DIFICULTY)
@@ -42,7 +43,8 @@ class SIS(BaseEvaluation):
         (3, pgettext("CHOICES_MOOD", u'Some of the time')),
         (2, pgettext("CHOICES_MOOD", u'Most of the time')),
         (1, pgettext("CHOICES_MOOD", u'All of the time'))
-    )
+    ) + BaseEvaluation.UN
+
     mood_feel_sad = models.IntegerField(_('a. Feel sad?'), choices=CHOICES_MOOD)
     mood_nobody_close = models.IntegerField(_('b. Feel that there is nobody you are close to?'), choices=CHOICES_MOOD)
     mood_burden = models.IntegerField(_('c. Feel that you are a burden to others?'), choices=CHOICES_MOOD)
@@ -60,7 +62,8 @@ class SIS(BaseEvaluation):
         (3, pgettext("CHOICES_COMMUNICATION", u'Somewhat difficult')),
         (2, pgettext("CHOICES_COMMUNICATION", u'Very difficult')),
         (1, pgettext("CHOICES_COMMUNICATION", u'Extremely difficult'))
-    )
+    ) + BaseEvaluation.UN
+
     communication_say_name = models.IntegerField(_('a. Say the name of someone who was in front of you?'), choices=CHOICES_COMMUNICATION)
     communication_understand = models.IntegerField(_('b. Understand what was being said to you in a conversation?'), choices=CHOICES_COMMUNICATION)
     communication_reply = models.IntegerField(_('c. Reply to questions?'), choices=CHOICES_COMMUNICATION)
@@ -76,7 +79,8 @@ class SIS(BaseEvaluation):
         (3, pgettext("CHOICES_ACTIVITIES", u'Somewhat difficult')),
         (2, pgettext("CHOICES_ACTIVITIES", u'Very difficult')),
         (1, pgettext("CHOICES_ACTIVITIES", u'Could not do at all'))
-    )
+    ) + BaseEvaluation.UN
+
     activities_cut_food = models.IntegerField(_('a. Cut your food with a knife and fork?'), choices=CHOICES_ACTIVITIES)
     activities_dress = models.IntegerField(_('b. Dress the top part of your body?'), choices=CHOICES_ACTIVITIES)
     activities_bathe = models.IntegerField(_('c. Bathe yourself?'), choices=CHOICES_ACTIVITIES)
@@ -95,7 +99,8 @@ class SIS(BaseEvaluation):
         (3, pgettext("CHOICES_MOBILE", u'Somewhat difficult')),
         (2, pgettext("CHOICES_MOBILE", u'Very difficult')),
         (1, pgettext("CHOICES_MOBILE", u'Could not do at all'))
-    )
+    ) + BaseEvaluation.UN
+
     mobile_sitting = models.IntegerField(_('a. Stay sitting without losing your balance?'), choices=CHOICES_MOBILE)
     mobile_standing = models.IntegerField(_('b. Stay standing without losing your balance?'), choices=CHOICES_MOBILE)
     mobile_walk_balance = models.IntegerField(_('c. Walk without losing your balance?'), choices=CHOICES_MOBILE)
@@ -113,7 +118,8 @@ class SIS(BaseEvaluation):
         (3, pgettext("CHOICES_HAND", u'Somewhat difficult')),
         (2, pgettext("CHOICES_HAND", u'Very difficult')),
         (1, pgettext("CHOICES_HAND", u'Could not do at all'))
-    )
+    ) + BaseEvaluation.UN
+
     hand_carry_heavy_objs = models.IntegerField(_('a. Carry heavy objects (e.g. bag of groceries)?'), choices=CHOICES_HAND)
     hand_turn_doorknob = models.IntegerField(_('b. Turn a doorknob?'), choices=CHOICES_HAND)
     hand_open_jar = models.IntegerField(_('c. Open a can or jar?'), choices=CHOICES_HAND)
@@ -127,7 +133,8 @@ class SIS(BaseEvaluation):
         (3, pgettext("CHOICES_TIME", u'Some of the time')),
         (2, pgettext("CHOICES_TIME", u'Most of the time')),
         (1, pgettext("CHOICES_TIME", u'All of the time'))
-    )
+    ) + BaseEvaluation.UN
+
     time_work = models.IntegerField(_('a. Your work (paid, voluntary or other)'), choices=CHOICES_TIME)
     time_social = models.IntegerField(_('b. Your social activities?'), choices=CHOICES_TIME)
     time_quiet_recreation = models.IntegerField(_('c. Quiet recreation (crafts, reading)?'), choices=CHOICES_TIME)
