@@ -119,9 +119,14 @@ var evaluation_home_period_click = function() {
 }
 
 $(document).ready(function() {
-    $('#evaluation_home_patients_select').on("change",evaluation_home_patients_select_change);
+    $('#evaluation_home_patients_select').on("change", evaluation_home_patients_select_change);
     $('#home-panel-period').hide();
     $('#home-panel-evaluation').hide();
+
+    // check if home page patient select already has a value
+    if ($('#evaluation_home_patients_select').val()) {
+        $('#evaluation_home_patients_select').change();
+    }
 });
 
 /**
