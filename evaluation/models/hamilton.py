@@ -15,7 +15,7 @@ class Hamilton(BaseEvaluation):
         (3, _('Communicates feelings non-verbally i.e., through facial expression, posture, voice, and tendency to '
               'weep')),
         (4, _('Patient reports VIRTUALLY ONLY these feelings in his spontaneous verbal and non-verbal communication')),
-    )
+    ) + BaseEvaluation.UN
     mood = models.IntegerField(_('depressed mood (sadness, hopeless, helpless, worthless)'), choices=MOOD)
 
     GUILT = (
@@ -24,7 +24,7 @@ class Hamilton(BaseEvaluation):
         (2, _('Ideas of guilt or rumination over past errors or sinful deed')),
         (3, _('Present illness is a punishmnent. Delusions of guilt')),
         (4, _('Hears accusatory or denunciatory voices and/or experiences threatening visual hallucinations')),
-    )
+    ) + BaseEvaluation.UN
     guilt = models.IntegerField(_('feelings of guilt'), choices=GUILT)
 
     SUICIDE = (
@@ -33,28 +33,28 @@ class Hamilton(BaseEvaluation):
         (2, _('Wishes he were dead or any thoughts of possible death to self')),
         (3, _('Suicide ideas or gesture')),
         (4, _('Attempts at suicide (any serious attempt rates)')),
-    )
+    ) + BaseEvaluation.UN
     suicide = models.IntegerField(_('suicide'), choices=SUICIDE)
 
     INSOMINIA_EARLY = (
         (0, _('No difficulty falling asleep')),
         (1, _('Complains of occasional difficulty falling asleep - more than 1/2 hour')),
         (2, _('Complains of nightly difficulty falling asleep')),
-    )
+    ) + BaseEvaluation.UN
     insomnia_early = models.IntegerField(_('insomnia early'), choices=INSOMINIA_EARLY)
 
     INSOMINIA_MIDDLE = (
         (0, _('No difficulty')),
         (1, _('Patient complains of being restless and disturbed during the night')),
         (2, _('Waking during the night - any getting out of bed (except for purposes of voiding)')),
-    )
+    ) + BaseEvaluation.UN
     insomnia_middle = models.IntegerField(_('insomnia middle'), choices=INSOMINIA_MIDDLE)
 
     INSOMINIA_LATE = (
         (0, _('No difficulty')),
         (1, _('Waking in early hours of the morning but goes back to sleep')),
         (2, _('Unable to fall asleep again if he gets out of bed')),
-    )
+    ) + BaseEvaluation.UN
     insomnia_late = models.IntegerField(_('insomnia late'), choices=INSOMINIA_LATE)
 
     WORK = (
@@ -66,7 +66,7 @@ class Hamilton(BaseEvaluation):
               'not spend at least three hours a day in activities (hospital job or hobbies) exclusive of ward chores')),
         (4, _('Stopped working because of present illness. In hospital, if patient engages in no activities except '
               'ward chores, or if patient fails to perform ward chores unassisted')),
-    )
+    ) + BaseEvaluation.UN
     work = models.IntegerField(_('work and activities'), choices=WORK)
 
     RETARDATION = (
@@ -75,7 +75,7 @@ class Hamilton(BaseEvaluation):
         (2, _('Obvious retardation at interview')),
         (3, _('Interview difficult')),
         (4, _('Complete stupor')),
-    )
+    ) + BaseEvaluation.UN
     retardation = models.IntegerField(_('retardation: psychomotor (slowness of thought and speech; impaired ability to concentrate; decreased motor activity)'), choices=RETARDATION)
 
     AGITATION = (
@@ -84,7 +84,7 @@ class Hamilton(BaseEvaluation):
         (2, _('Playing with hands, hair,etc')),
         (3, _('Moving about, can\'t sit still')),
         (4, _('Hand wringing, nail biting, hair-pulling, biting of lips')),
-    )
+    ) + BaseEvaluation.UN
     agitation = models.IntegerField(_('agitation'), choices=AGITATION)
 
     ANXIETY_PSYCHIC = (
@@ -93,7 +93,7 @@ class Hamilton(BaseEvaluation):
         (2, _('Worrying about minor matters')),
         (3, _('Apprehensive attitude apparent in face or speech')),
         (4, _('Fears expressed without questioning')),
-    )
+    ) + BaseEvaluation.UN
     anxiety_psychic = models.IntegerField(_('Anxiety: psychic'), choices=ANXIETY_PSYCHIC)
 
     ANXIETY_SOMATIC = (
@@ -102,28 +102,28 @@ class Hamilton(BaseEvaluation):
         (2, _('Moderate')),
         (3, _('Severe')),
         (4, _('Incapacitating')),
-    )
+    ) + BaseEvaluation.UN
     anxiety_somatic = models.IntegerField(_('Anxiety: somatic'), choices=ANXIETY_SOMATIC)
 
     GASTRO = (
         (0, _('None')),
         (1, _('Loss of appetite but eating without staff encouragement. Heavy feelings in abdomen')),
         (2, _('Difficulty eating without staff urging. Requests or requires laxatives or medication for bowels or medication for gastro-intestinal symptoms')),
-    )
+    ) + BaseEvaluation.UN
     gastro = models.IntegerField(_('somatic symptoms: gastrointestinal'), choices=GASTRO)
 
     GENERAL = (
         (0, _('None')),
         (1, _('Heaviness in limbs, back or head. Backaches, headache, muscle aches. Loss of energy and fatigability')),
         (2, _('Any clear-cut symptom')),
-    )
+    ) + BaseEvaluation.UN
     general = models.IntegerField(_('somatic symptoms: general'), choices=GENERAL)
 
     GENITAL = (
         (0, _('Absent')),
         (1, _('Mild')),
         (2, _('Severe')),
-    )
+    ) + BaseEvaluation.UN
     genital = models.IntegerField(_('genital symptoms (loss of libido, menstrual disturbances)'), choices=GENITAL)
 
     HYPOCHONDRIASIS = (
@@ -132,7 +132,7 @@ class Hamilton(BaseEvaluation):
         (2, _('Preoccupation with health')),
         (3, _('Frequent complaints, requests for help, etc. ...')),
         (4, _('Hypochondriacal delusions')),
-    )
+    ) + BaseEvaluation.UN
     hypochondriasis = models.IntegerField(_('hypochondriasis'), choices=HYPOCHONDRIASIS)
 
     WEIGHT_HISTORY = (
@@ -140,7 +140,7 @@ class Hamilton(BaseEvaluation):
         (1, _('Probable weight loss associated with present illness')),
         (2, _('Definite (according to patient) weight loss')),
         (3, _('Not assessed')),
-    )
+    ) + BaseEvaluation.UN
     weight_history = models.IntegerField(_('loss of weight'), choices=WEIGHT_HISTORY)
 
     WEIGHT_WEEKLY = (
@@ -148,14 +148,14 @@ class Hamilton(BaseEvaluation):
         (1, _('Probable weight loss associated with present illness (>500g/week)')),
         (2, _('Definite weight loss(>1kg/week)')),
         (3, _('Not assessed')),
-    )
+    ) + BaseEvaluation.UN
     weight_weekly = models.IntegerField(_('loss of weight'), choices=WEIGHT_WEEKLY)
 
     INSIGHT = (
         (0, _('Not depressed (based on above items) OR Acknowledges being depressed and ill')),
         (1, _('Acknowledges illness but attributes cause to bad food, climate, overwork, virus, need for rest, etc.')),
         (2, _('Denies being ill at all')),
-    )
+    ) + BaseEvaluation.UN
     insight = models.IntegerField(_('insight'), choices=INSIGHT)
 
     class Meta:
