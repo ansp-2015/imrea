@@ -10,10 +10,10 @@ class VerbalFluency(BaseEvaluation):
     """
     fas_words = models.TextField('')
     fas_count = models.IntegerField(_('Word count'))
-    fas_obs = models.TextField(_('Observation'))
+    fas_obs = models.TextField(_('Notes'))
     animals_words = models.TextField('')
     animals_count = models.IntegerField(_('Word count'))
-    animals_obs = models.TextField(_('Observation'))
+    animals_obs = models.TextField(_('Notes'))
 
     class Meta:
         verbose_name = _('Verbal Fluency Test')
