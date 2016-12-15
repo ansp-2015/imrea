@@ -23,7 +23,15 @@
 			                {% for c in FIM_CHOICES_CATEGORY %}
 			                    <tr>
 			                    {% for c1 in c %}
-			                            <td>{{c1}}</td>
+                                    {% if forloop.first %}
+                                        {% if c1 >= 0 %}
+                                            <td>{{c1}}</td>
+                                        {% else %}
+                                            <td>-</td>
+                                        {% endif %}
+                                    {% else %}
+                                        <td>{{c1}}</td>
+                                    {% endif %}
 			                    {% endfor %}
 			                    </tr>
 			                {% endfor %}

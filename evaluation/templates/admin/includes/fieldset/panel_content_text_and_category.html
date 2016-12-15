@@ -18,7 +18,15 @@ content_activities will be rendered inside a table striped bordered
                 {% for c in content_activities  %}
                     <tr>
                     {% for c1 in c %}
+                        {% if forloop.first %}
+                            {% if c1 >= 0 %}
+                                <td>{{c1}}</td>
+                            {% else %}
+                                <td></td>
+                            {% endif %}
+                        {% else %}
                             <td>{{c1}}</td>
+                        {% endif %}
                     {% endfor %}
                     </tr>
                 {% endfor %}
