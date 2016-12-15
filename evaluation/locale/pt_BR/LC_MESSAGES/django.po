@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-09 20:53+0000\n"
+"POT-Creation-Date: 2016-12-14 20:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -693,6 +693,14 @@ msgstr "Interpretação membro inferior"
 msgid "Movement combining synergies"
 msgstr "Movimento com e sem sinergias"
 
+#: evaluation/admin/had_admin.py:38
+msgid ""
+"<strong>Instructions:</strong> tick the box beside the reply that is closest "
+"to how you have been feeling in the past week."
+msgstr ""
+"<strong>Orientações para Realização do teste:</strong> Assinale com o valor "
+"da alternativa que melhor descreve sua resposta a cada questão"
+
 #: evaluation/admin/jthft_admin.py:33 evaluation/admin/von_frey_admin.py:40
 msgid "Sequence"
 msgstr "Sequência"
@@ -705,7 +713,7 @@ msgstr "Mão parética"
 msgid "Healthy hand"
 msgstr "Mão saudável"
 
-#: evaluation/admin/kviq_admin.py:18 evaluation/models/kviq.py:32
+#: evaluation/admin/kviq_admin.py:18 evaluation/models/kviq.py:29
 msgid "Dominant limb"
 msgstr "Membro dominante"
 
@@ -734,7 +742,8 @@ msgstr ""
 msgid ""
 "Return to the start position. Now imagine the movement, concentrate on the "
 "clarity of the image"
-msgstr "Retorne à posição inicial. Agora imagine o movimento, concentra-se na "
+msgstr ""
+"Retorne à posição inicial. Agora imagine o movimento, concentra-se na "
 "clareza da imagem"
 
 #: evaluation/admin/kviq_admin.py:32 evaluation/admin/kviq_admin.py:44
@@ -809,7 +818,7 @@ msgstr ""
 
 #: evaluation/admin/kviq_admin.py:87
 msgid "Forward trunk flexion"
-msgstr ""
+msgstr "Flexão do tronco para frente"
 
 #: evaluation/admin/kviq_admin.py:93
 msgid ""
@@ -1122,11 +1131,11 @@ msgstr "9. Recuperação do AVE:"
 
 #: evaluation/admin/verbal_fluency_admin.py:27
 msgid "FAS"
-msgstr ""
+msgstr "Normalidade do Teste de Fluência Verbal - Fonêmica (FAS)"
 
 #: evaluation/admin/verbal_fluency_admin.py:33
 msgid "Animals"
-msgstr "Animais"
+msgstr "Normalidade do Teste de Fluência Verbal - Semântica (animais)"
 
 #: evaluation/context_processors.py:81
 msgid "Report Explorer"
@@ -1328,7 +1337,7 @@ msgstr "Perna esquerda"
 msgid "Right leg"
 msgstr "Perna direita"
 
-#: evaluation/models/base_evaluation.py:14 evaluation/models/kviq.py:8
+#: evaluation/models/base_evaluation.py:14
 msgid "NT"
 msgstr ""
 
@@ -2569,11 +2578,11 @@ msgstr "O menino esta roubando biscoitos"
 msgid "If he is not careful the stool will fall"
 msgstr "Se ele não tomar cuidado o banco vai cair"
 
-#: evaluation/models/clin.py:7 evaluation/widgets.py:194
+#: evaluation/models/clin.py:7 evaluation/widgets.py:211
 msgid "Yes"
 msgstr "Sim"
 
-#: evaluation/models/clin.py:8 evaluation/widgets.py:194
+#: evaluation/models/clin.py:8 evaluation/widgets.py:211
 msgid "No"
 msgstr "Não"
 
@@ -2751,63 +2760,63 @@ msgstr "Independência modificada (recursos auxiliares) / Dependência parcial"
 msgid "Complete independence"
 msgstr "Independência completa (seguro e em tempo satisfatório)"
 
-#: evaluation/models/fim.py:24
+#: evaluation/models/fim.py:25
 msgid "Eating"
 msgstr "Alimentação"
 
-#: evaluation/models/fim.py:25
+#: evaluation/models/fim.py:26
 msgid "Grooming"
 msgstr "Auto cuidado"
 
-#: evaluation/models/fim.py:26
+#: evaluation/models/fim.py:27
 msgid "Bathing/showering"
 msgstr "Banhar-se"
 
-#: evaluation/models/fim.py:27
+#: evaluation/models/fim.py:28
 msgid "Dressing upper body"
 msgstr "Vestir tronco superior"
 
-#: evaluation/models/fim.py:28
+#: evaluation/models/fim.py:29
 msgid "Dressing lower body"
 msgstr "Vestir tronco inferior"
 
-#: evaluation/models/fim.py:29
+#: evaluation/models/fim.py:30
 msgid "Toileting"
 msgstr "Higiene íntima"
 
-#: evaluation/models/fim.py:31
+#: evaluation/models/fim.py:32
 msgid "Bladder management"
 msgstr "Controle vesical"
 
-#: evaluation/models/fim.py:32
+#: evaluation/models/fim.py:33
 msgid "Bowel management"
 msgstr "Controle intestinal"
 
-#: evaluation/models/fim.py:34
+#: evaluation/models/fim.py:35
 msgid "Transfers bed/chair/wheelchair"
 msgstr "Cama/cadeira/cadeira de rodas"
 
-#: evaluation/models/fim.py:35
+#: evaluation/models/fim.py:36
 msgid "Transfers toilet"
 msgstr "Banheiro"
 
-#: evaluation/models/fim.py:36
+#: evaluation/models/fim.py:37
 msgid "Transfers bathtub/shower"
 msgstr "Banho chuveiro/banheira"
 
-#: evaluation/models/fim.py:38
+#: evaluation/models/fim.py:39
 msgid "Locomotion walking/wheelchair"
 msgstr "Andar/cadeira de rodas"
 
-#: evaluation/models/fim.py:39
+#: evaluation/models/fim.py:40
 msgid "Locomotion stairs"
 msgstr "Escadas"
 
-#: evaluation/models/fim.py:42
+#: evaluation/models/fim.py:43
 msgid "FIM"
 msgstr "MIF"
 
-#: evaluation/models/fim.py:43
+#: evaluation/models/fim.py:44
 msgid "FIMs"
 msgstr "MIFs"
 
@@ -3756,7 +3765,7 @@ msgstr "Do mesmo jeito que antes"
 
 #: evaluation/models/had.py:43
 msgid "I can laugh and see the funny side of things"
-msgstr ""
+msgstr "Dou risada e me divirto quando vejo coisas engraçadas"
 
 #: evaluation/models/had.py:46
 msgid "A great deal of the time"
@@ -3790,7 +3799,7 @@ msgstr "Poucas vezes"
 
 #: evaluation/models/had.py:56 evaluation/models/had.py:72
 msgid "Sometimes"
-msgstr ""
+msgstr "Muitas vezes"
 
 #: evaluation/models/had.py:59
 msgid "I feel cheerful"
@@ -3803,14 +3812,12 @@ msgstr "Nunca"
 
 #: evaluation/models/had.py:64
 msgid "Usually"
-msgstr ""
+msgstr "Muitas vezes"
 
 #: evaluation/models/had.py:65
-#, fuzzy
-#| msgid "Definitely as much"
 msgctxt "ease"
 msgid "Definitely"
-msgstr "Sim, do mesmo jeito que antes"
+msgstr "Sim, quase sempre"
 
 #: evaluation/models/had.py:67
 msgid "I can sit at ease and feel relaxed"
@@ -3835,15 +3842,15 @@ msgstr "Eu estou lento(a) para pensar e fazer coisas"
 
 #: evaluation/models/had.py:78
 msgid "Very Often"
-msgstr ""
+msgstr "Quase sempre"
 
 #: evaluation/models/had.py:79
 msgid "Quite Often"
-msgstr ""
+msgstr "Muitas vezes"
 
 #: evaluation/models/had.py:80
 msgid "Occasionally"
-msgstr ""
+msgstr "De vez em quando"
 
 #: evaluation/models/had.py:81
 msgctxt "butterflies"
@@ -3858,19 +3865,19 @@ msgstr ""
 
 #: evaluation/models/had.py:86
 msgid "Definitely"
-msgstr ""
+msgstr "Completamente"
 
 #: evaluation/models/had.py:87
 msgid "I don't take as much care as I should"
-msgstr ""
+msgstr "Não estou mais me cuidadndo como eu deveria"
 
 #: evaluation/models/had.py:88
 msgid "I may not take quite as much care"
-msgstr ""
+msgstr "Talvez não tanto quanto antes"
 
 #: evaluation/models/had.py:89
 msgid "I take just as much care as ever"
-msgstr ""
+msgstr "Eu me cuido do mesmo jeito que antes"
 
 #: evaluation/models/had.py:91
 msgid "I have lost interest in my appearance"
@@ -3878,20 +3885,20 @@ msgstr "Eu perdi o interesse em cuidar da minha aparência"
 
 #: evaluation/models/had.py:94
 msgid "Very much indeed"
-msgstr ""
+msgstr "Sim, demais"
 
 #: evaluation/models/had.py:95
 msgid "Quite a lot"
-msgstr ""
+msgstr "Bastante"
 
 #: evaluation/models/had.py:96
 msgid "Not very much"
-msgstr ""
+msgstr "Um pouco"
 
 #: evaluation/models/had.py:97
 msgctxt "restless"
 msgid "Not at all"
-msgstr "Nunca"
+msgstr "Não me sinto assim"
 
 #: evaluation/models/had.py:99
 msgid "I feel restless as I have to be on the move"
@@ -3901,19 +3908,19 @@ msgstr ""
 
 #: evaluation/models/had.py:102
 msgid "Hardly at all"
-msgstr ""
+msgstr "Quase nunca"
 
 #: evaluation/models/had.py:103
 msgid "Definitely less than I used to"
-msgstr ""
+msgstr "Bem menos do que antes"
 
 #: evaluation/models/had.py:104
 msgid "Rather less than I used to"
-msgstr ""
+msgstr "Um pouco menos do que antes"
 
 #: evaluation/models/had.py:105
 msgid "As much as I ever did"
-msgstr ""
+msgstr "Do mesmo jeito que antes"
 
 #: evaluation/models/had.py:107
 msgid "I look forward with enjoyment to things"
@@ -3921,20 +3928,20 @@ msgstr "Fico animado(a) esperando as coisas boas que estão por vir"
 
 #: evaluation/models/had.py:110
 msgid "Very often indeed"
-msgstr ""
+msgstr "A quase todo momento"
 
 #: evaluation/models/had.py:111
 msgid "Quite often"
-msgstr ""
+msgstr "Várias vezes"
 
 #: evaluation/models/had.py:112
 msgid "Not very often"
-msgstr ""
+msgstr "De vez em quando"
 
 #: evaluation/models/had.py:113
 msgctxt "panic"
 msgid "Not at all"
-msgstr "Nunca"
+msgstr "Não sinto isso"
 
 #: evaluation/models/had.py:115
 msgid "I get sudden feelings of panic"
@@ -3942,19 +3949,16 @@ msgstr "De repente, tenho a sensação de entrar em pânico"
 
 #: evaluation/models/had.py:118
 msgid "Very seldom"
-msgstr ""
+msgstr "Quase nunca"
 
 #: evaluation/models/had.py:120
-#, fuzzy
-#| msgctxt "CHOICES_MOOD"
-#| msgid "Some of the time"
 msgctxt "book"
 msgid "Sometimes"
-msgstr "algumas vezes"
+msgstr "Várias vezes"
 
 #: evaluation/models/had.py:121
 msgid "Often"
-msgstr ""
+msgstr "Quase sempre"
 
 #: evaluation/models/had.py:123
 msgid "I can enjoy a good book or radio or TV program"
@@ -4366,189 +4370,189 @@ msgstr ""
 msgid "JTHFT - Jebsen Taylor Hand Function Tests"
 msgstr ""
 
-#: evaluation/models/kviq.py:11
+#: evaluation/models/kviq.py:8
 msgid "Image as clear as seeing"
 msgstr "Imagem tão clara como ver"
 
-#: evaluation/models/kviq.py:12
+#: evaluation/models/kviq.py:9
 msgid "Clear image"
 msgstr "Imagem clara"
 
-#: evaluation/models/kviq.py:13
+#: evaluation/models/kviq.py:10
 msgid "Moderately clear image"
 msgstr "Imagem moderadamente clara"
 
-#: evaluation/models/kviq.py:14
+#: evaluation/models/kviq.py:11
 msgid "Blurred image"
 msgstr "Imagem turva"
 
-#: evaluation/models/kviq.py:15
+#: evaluation/models/kviq.py:12
 msgid "No image"
 msgstr "Sem imagem"
 
-#: evaluation/models/kviq.py:19
+#: evaluation/models/kviq.py:16
 msgid "As intense as performing the action"
 msgstr "Tão intensa como executar a ação"
 
-#: evaluation/models/kviq.py:20
+#: evaluation/models/kviq.py:17
 msgid "Intense"
 msgstr "Intensa"
 
-#: evaluation/models/kviq.py:21
+#: evaluation/models/kviq.py:18
 msgid "Moderately intense"
 msgstr "Moderadamente intensa"
 
-#: evaluation/models/kviq.py:22
+#: evaluation/models/kviq.py:19
 msgid "Slightly intense"
 msgstr "Levemente intensa"
 
-#: evaluation/models/kviq.py:23
+#: evaluation/models/kviq.py:20
 msgid "No sensation"
 msgstr "Sem sensação"
 
-#: evaluation/models/kviq.py:27 evaluation/models/vas.py:13
+#: evaluation/models/kviq.py:24 evaluation/models/vas.py:13
 #: evaluation/templates/admin/includes/fieldset_table_alg.html:24
 msgid "Left"
 msgstr "Esquerda"
 
-#: evaluation/models/kviq.py:28 evaluation/models/vas.py:14
+#: evaluation/models/kviq.py:25 evaluation/models/vas.py:14
 #: evaluation/templates/admin/includes/fieldset_table_alg.html:24
 msgid "Right"
 msgstr "Direita"
 
-#: evaluation/models/kviq.py:33
+#: evaluation/models/kviq.py:30
 msgid "Neck visual images"
 msgstr "Pescoço - visual de imagens"
 
-#: evaluation/models/kviq.py:34
+#: evaluation/models/kviq.py:31
 msgid "Neck cine images"
 msgstr "Pescoço - imagens cinestésica"
 
-#: evaluation/models/kviq.py:35
+#: evaluation/models/kviq.py:32
 msgid "Shoulder elevation visual images"
 msgstr "Erguer ombro - visual de imagens"
 
-#: evaluation/models/kviq.py:36
+#: evaluation/models/kviq.py:33
 msgid "Shoulder elevation cine images"
 msgstr "Erguer ombro - imagens cinestésica"
 
-#: evaluation/models/kviq.py:37
+#: evaluation/models/kviq.py:34
 msgid "Shoulder flexion dominant visual images"
 msgstr "Flexão do ombro dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:38
+#: evaluation/models/kviq.py:35
 msgid "Shoulder flexion dominant cine images"
 msgstr "Flexão do ombro dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:39
+#: evaluation/models/kviq.py:36
 msgid "Shoulder flexion not dominant visual images"
 msgstr "Flexão do ombro não dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:40
+#: evaluation/models/kviq.py:37
 msgid "Shoulder flexion not dominant cine images"
 msgstr "Flexão do ombro não dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:41
+#: evaluation/models/kviq.py:38
 msgid "Elbow dominant visual images"
 msgstr "Flexão do cotovelo dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:42
+#: evaluation/models/kviq.py:39
 msgid "Elbow dominant cine images"
 msgstr "Flexão do cotovelo dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:43
+#: evaluation/models/kviq.py:40
 msgid "Elbow not dominant visual images"
 msgstr "Flexão do cotovelo não dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:44
+#: evaluation/models/kviq.py:41
 msgid "Elbow not dominant cine images"
 msgstr "Flexão do cotovelo não dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:45
+#: evaluation/models/kviq.py:42
 msgid "Thumb dominant visual images"
 msgstr "Polegar dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:46
+#: evaluation/models/kviq.py:43
 msgid "Thumb dominant cine images"
 msgstr "Polegar dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:47
+#: evaluation/models/kviq.py:44
 msgid "Thumb not dominant visual images"
 msgstr "Polegar não dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:48
+#: evaluation/models/kviq.py:45
 msgid "Thumb not dominant cine images"
 msgstr "Polegar não dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:49
+#: evaluation/models/kviq.py:46
 msgid "Trunk visual images"
 msgstr "Flexão do tronco - visual de imagens"
 
-#: evaluation/models/kviq.py:50
+#: evaluation/models/kviq.py:47
 msgid "Trunk cine images"
 msgstr "Flexão do tronco - imagens cinestésica"
 
-#: evaluation/models/kviq.py:51
+#: evaluation/models/kviq.py:48
 msgid "Knee dominant visual images"
 msgstr "Extensão do joelho dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:52
+#: evaluation/models/kviq.py:49
 msgid "Knee dominant cine images"
 msgstr "Extensão do joelho dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:53
+#: evaluation/models/kviq.py:50
 msgid "Knee not dominant visual images"
 msgstr "Extensão do joelho não dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:54
+#: evaluation/models/kviq.py:51
 msgid "Knee not dominant cine images"
 msgstr "Extensão do joelho não dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:55
+#: evaluation/models/kviq.py:52
 msgid "Hip dominant visual images"
 msgstr "Abdução do quadril dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:56
+#: evaluation/models/kviq.py:53
 msgid "Hip dominant cine images"
 msgstr "Abdução do quadril dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:57
+#: evaluation/models/kviq.py:54
 msgid "Hip not dominant visual images"
 msgstr "Abdução do quadril não dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:58
+#: evaluation/models/kviq.py:55
 msgid "Hip not dominant cine images"
 msgstr "Abdução do quadril não dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:59
+#: evaluation/models/kviq.py:56
 msgid "Foot tapping dominant visual images"
 msgstr "Bater o pé dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:60
+#: evaluation/models/kviq.py:57
 msgid "Foot tapping dominant cine images"
 msgstr "Bater o pé dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:61
+#: evaluation/models/kviq.py:58
 msgid "Foot tapping not dominant visual images"
 msgstr "Bater o pé não dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:62
+#: evaluation/models/kviq.py:59
 msgid "Foot tapping not dominant cine images"
 msgstr "Bater o pé não dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:63
+#: evaluation/models/kviq.py:60
 msgid "Foot rotation dominant visual images"
 msgstr "Rotação do pé dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:64
+#: evaluation/models/kviq.py:61
 msgid "Foot rotation dominant cine images"
 msgstr "Rotação do pé dominante - imagens cinestésica"
 
-#: evaluation/models/kviq.py:65
+#: evaluation/models/kviq.py:62
 msgid "Foot rotation not dominant visual images"
 msgstr "Rotação do pé não dominante - visual de imagens"
 
-#: evaluation/models/kviq.py:66
+#: evaluation/models/kviq.py:63
 msgid "Foot rotation not dominant cine images"
 msgstr "Rotação do pé não dominante - imagens cinestésica"
 
@@ -5625,15 +5629,15 @@ msgctxt "CHOICES_DIFICULTY"
 msgid "Extremely difficult"
 msgstr "extremamente difícil"
 
-#: evaluation/models/sis.py:30
+#: evaluation/models/sis.py:31
 msgid "a. Remember things that people just told you?"
 msgstr "a. lembrar de coisas que as pessoas te disseram?"
 
-#: evaluation/models/sis.py:31
+#: evaluation/models/sis.py:32
 msgid "b. Remember things that happened the day before?"
 msgstr "b. lembrar de coisas que aconteceram no dia anterior?"
 
-#: evaluation/models/sis.py:32
+#: evaluation/models/sis.py:33
 msgid ""
 "c. Remember to do things (e.g. keep scheduled appointments or take "
 "medication)?"
@@ -5641,133 +5645,133 @@ msgstr ""
 "c. lembrar de fazer as coisas (por exemplo, manter compromissos agendados ou "
 "medicamentos?"
 
-#: evaluation/models/sis.py:33
+#: evaluation/models/sis.py:34
 msgid "d. Remember the day of the week?"
 msgstr "d. lembrar o dia da semana?"
 
-#: evaluation/models/sis.py:34
+#: evaluation/models/sis.py:35
 msgid "e. Concentrate?"
 msgstr "e. concentrar-se?"
 
-#: evaluation/models/sis.py:35
+#: evaluation/models/sis.py:36
 msgid "f. Think quickly?"
 msgstr "f. pensar rapidamente?"
 
-#: evaluation/models/sis.py:36
+#: evaluation/models/sis.py:37
 msgid "g. Solve everyday problems?"
 msgstr "g. resolver problemas do dia-a-dia?"
 
-#: evaluation/models/sis.py:40
+#: evaluation/models/sis.py:41
 msgctxt "CHOICES_MOOD"
 msgid "None of the time"
 msgstr "nenhuma vez"
 
-#: evaluation/models/sis.py:41
+#: evaluation/models/sis.py:42
 msgctxt "CHOICES_MOOD"
 msgid "A little of the time"
 msgstr "poucas vezes"
 
-#: evaluation/models/sis.py:42
+#: evaluation/models/sis.py:43
 msgctxt "CHOICES_MOOD"
 msgid "Some of the time"
 msgstr "algumas vezes"
 
-#: evaluation/models/sis.py:43
+#: evaluation/models/sis.py:44
 msgctxt "CHOICES_MOOD"
 msgid "Most of the time"
 msgstr "a maioria das vezes"
 
-#: evaluation/models/sis.py:44
+#: evaluation/models/sis.py:45
 msgctxt "CHOICES_MOOD"
 msgid "All of the time"
 msgstr "todo o tempo"
 
-#: evaluation/models/sis.py:46
+#: evaluation/models/sis.py:48
 msgid "a. Feel sad?"
 msgstr "a. sentiu-se triste?"
 
-#: evaluation/models/sis.py:47
+#: evaluation/models/sis.py:49
 msgid "b. Feel that there is nobody you are close to?"
 msgstr "b. sentiu que não há ninguém próximo de você?"
 
-#: evaluation/models/sis.py:48
+#: evaluation/models/sis.py:50
 msgid "c. Feel that you are a burden to others?"
 msgstr "c. sentiu que você é um fardo para os outros?"
 
-#: evaluation/models/sis.py:49
+#: evaluation/models/sis.py:51
 msgid "d. Feel that you have nothing to look forward to?"
 msgstr "d. sentiu que você não tem nada para olhar para frente (futuro)?"
 
-#: evaluation/models/sis.py:50
+#: evaluation/models/sis.py:52
 msgid "e. Blame yourself for mistakes that you made?"
 msgstr "e. responsabilizou-se pelos erros que você fez?"
 
-#: evaluation/models/sis.py:51
+#: evaluation/models/sis.py:53
 msgid "f. Enjoy things as much as ever?"
 msgstr "f. aprecia as coisas mais do que nunca?"
 
-#: evaluation/models/sis.py:52
+#: evaluation/models/sis.py:54
 msgid "g. Feel quite nervous?"
 msgstr "g. sentiu-se muito nervoso?"
 
-#: evaluation/models/sis.py:53
+#: evaluation/models/sis.py:55
 msgid "h. Feel that life is worth living?"
 msgstr "h. sentiu que a vida vale a pena viver?"
 
-#: evaluation/models/sis.py:54
+#: evaluation/models/sis.py:56
 msgid "i. Smile and laugh at least once a day?"
 msgstr "i. sorriu e riu pelo menos uma vez por dia?"
 
-#: evaluation/models/sis.py:58
+#: evaluation/models/sis.py:60
 msgctxt "CHOICES_COMMUNICATION"
 msgid "Not difficult at all"
 msgstr "nada difícil"
 
-#: evaluation/models/sis.py:59
+#: evaluation/models/sis.py:61
 msgctxt "CHOICES_COMMUNICATION"
 msgid "A little difficult"
 msgstr "um pouco difícil"
 
-#: evaluation/models/sis.py:60
+#: evaluation/models/sis.py:62
 msgctxt "CHOICES_COMMUNICATION"
 msgid "Somewhat difficult"
 msgstr "mais ou menos difícil"
 
-#: evaluation/models/sis.py:61
+#: evaluation/models/sis.py:63
 msgctxt "CHOICES_COMMUNICATION"
 msgid "Very difficult"
 msgstr "muito difícil"
 
-#: evaluation/models/sis.py:62
+#: evaluation/models/sis.py:64
 msgctxt "CHOICES_COMMUNICATION"
 msgid "Extremely difficult"
 msgstr "extremamente difícil"
 
-#: evaluation/models/sis.py:64
+#: evaluation/models/sis.py:67
 msgid "a. Say the name of someone who was in front of you?"
 msgstr "a. dizer o nome de alguém que estava na sua frente?"
 
-#: evaluation/models/sis.py:65
+#: evaluation/models/sis.py:68
 msgid "b. Understand what was being said to you in a conversation?"
 msgstr "b. entender o que estava sendo dito a você em uma conversa?"
 
-#: evaluation/models/sis.py:66
+#: evaluation/models/sis.py:69
 msgid "c. Reply to questions?"
 msgstr "c. responder às perguntas?"
 
-#: evaluation/models/sis.py:67
+#: evaluation/models/sis.py:70
 msgid "d. Correctly name objects?"
 msgstr "d. nomear corretamente os objetos?"
 
-#: evaluation/models/sis.py:68
+#: evaluation/models/sis.py:71
 msgid "e. Participate in a conversation with a group of people?"
 msgstr "e. participar de uma conversa com um grupo de pessoas?"
 
-#: evaluation/models/sis.py:69
+#: evaluation/models/sis.py:72
 msgid "f. Have a conversation on the telephone? "
 msgstr "f. ter uma conversa ao telefone?"
 
-#: evaluation/models/sis.py:70
+#: evaluation/models/sis.py:73
 msgid ""
 "g. Call another person on the telephone, including selecting the correct "
 "phone number and dialing?"
@@ -5775,60 +5779,60 @@ msgstr ""
 "g. conversar com outra pessoa no telefone, incluindo a seleção do número "
 "correto e a discagem?"
 
-#: evaluation/models/sis.py:74
+#: evaluation/models/sis.py:77
 msgctxt "CHOICES_ACTIVITIES"
 msgid "Not difficult at all"
 msgstr "nada difícil"
 
-#: evaluation/models/sis.py:75
+#: evaluation/models/sis.py:78
 msgctxt "CHOICES_ACTIVITIES"
 msgid "A little difficult"
 msgstr "um pouco difícil"
 
-#: evaluation/models/sis.py:76
+#: evaluation/models/sis.py:79
 msgctxt "CHOICES_ACTIVITIES"
 msgid "Somewhat difficult"
 msgstr "mais ou menos difícil"
 
-#: evaluation/models/sis.py:77
+#: evaluation/models/sis.py:80
 msgctxt "CHOICES_ACTIVITIES"
 msgid "Very difficult"
 msgstr "muito difícil"
 
-#: evaluation/models/sis.py:78
+#: evaluation/models/sis.py:81
 msgctxt "CHOICES_ACTIVITIES"
 msgid "Could not do at all"
 msgstr "não consigo realizar"
 
-#: evaluation/models/sis.py:80
+#: evaluation/models/sis.py:84
 msgid "a. Cut your food with a knife and fork?"
 msgstr "a. cortar a sua comida com o garfo e faca?"
 
-#: evaluation/models/sis.py:81
+#: evaluation/models/sis.py:85
 msgid "b. Dress the top part of your body?"
 msgstr "b. vestir a parte superior do seu corpo?"
 
-#: evaluation/models/sis.py:82
+#: evaluation/models/sis.py:86
 msgid "c. Bathe yourself?"
 msgstr "c. banhar-se?"
 
-#: evaluation/models/sis.py:83
+#: evaluation/models/sis.py:87
 msgid "d. Clip your toenails?"
 msgstr "d. cortar suas unhas?"
 
-#: evaluation/models/sis.py:84
+#: evaluation/models/sis.py:88
 msgid "e. Get to the toilet on time?"
 msgstr "e. ir ao banheiro a tempo?"
 
-#: evaluation/models/sis.py:85
+#: evaluation/models/sis.py:89
 msgid "f. Control your bladder (not have an accident)?"
 msgstr "f. controlar sua bexiga (não ter um acidente)?"
 
-#: evaluation/models/sis.py:86
+#: evaluation/models/sis.py:90
 msgid "g. Control your bowels (not have an accident)?"
 msgstr "g. controlar seu intestino (não ter um acidente)?"
 
-#: evaluation/models/sis.py:87
+#: evaluation/models/sis.py:91
 msgid ""
 "h. Do light household tasks/chores(e.g. dust, make a bed, take out garbage, "
 "do the dishes)?"
@@ -5836,180 +5840,180 @@ msgstr ""
 "h. fazer tarefas domésticas leves (ex. poeira, arrumar a cama, tirar o lixo, "
 "lavar pratos)?"
 
-#: evaluation/models/sis.py:88
+#: evaluation/models/sis.py:92
 msgid "i. Go shopping?"
 msgstr "i. ir as compras?"
 
-#: evaluation/models/sis.py:89
+#: evaluation/models/sis.py:93
 msgid "j. Do heavy household chores (e.g.vacuum, laundry or yard work)?"
 msgstr ""
 "j. fazer tarefas domésticas pesadas (ex. lavar roupa, varrer quintal, passar "
 "aspirador de pó)?"
 
-#: evaluation/models/sis.py:93
+#: evaluation/models/sis.py:97
 msgctxt "CHOICES_MOBILE"
 msgid "Not difficult at all"
 msgstr "nada difícil"
 
-#: evaluation/models/sis.py:94
+#: evaluation/models/sis.py:98
 msgctxt "CHOICES_MOBILE"
 msgid "A little difficult"
 msgstr "um pouco difícil"
 
-#: evaluation/models/sis.py:95
+#: evaluation/models/sis.py:99
 msgctxt "CHOICES_MOBILE"
 msgid "Somewhat difficult"
 msgstr "mais ou menos difícil"
 
-#: evaluation/models/sis.py:96
+#: evaluation/models/sis.py:100
 msgctxt "CHOICES_MOBILE"
 msgid "Very difficult"
 msgstr "muito difícil"
 
-#: evaluation/models/sis.py:97
+#: evaluation/models/sis.py:101
 msgctxt "CHOICES_MOBILE"
 msgid "Could not do at all"
 msgstr "não consigo realizar"
 
-#: evaluation/models/sis.py:99
+#: evaluation/models/sis.py:104
 msgid "a. Stay sitting without losing your balance?"
 msgstr "a. ficar sentado sem perder o equilíbrio?"
 
-#: evaluation/models/sis.py:100
+#: evaluation/models/sis.py:105
 msgid "b. Stay standing without losing your balance?"
 msgstr "b. ficar de pé sem perder o equilíbrio?"
 
-#: evaluation/models/sis.py:101
+#: evaluation/models/sis.py:106
 msgid "c. Walk without losing your balance?"
 msgstr "c. andar sem perder o equilíbrio?"
 
-#: evaluation/models/sis.py:102
+#: evaluation/models/sis.py:107
 msgid "d. Move from a bed to a chair?"
 msgstr "d. passar de uma cama para uma cadeira?"
 
-#: evaluation/models/sis.py:103
+#: evaluation/models/sis.py:108
 msgid "e. Walk one block?"
 msgstr "e. andar um quarteirão?"
 
-#: evaluation/models/sis.py:104
+#: evaluation/models/sis.py:109
 msgid "f. Walk fast?"
 msgstr "f. andar rápido?"
 
-#: evaluation/models/sis.py:105
+#: evaluation/models/sis.py:110
 msgid "g. Climb one flight of stairs?"
 msgstr "g. subir um lance de escadas?"
 
-#: evaluation/models/sis.py:106
+#: evaluation/models/sis.py:111
 msgid "h. Climb several flights of stairs?"
 msgstr "h. subir vários lances de escada?"
 
-#: evaluation/models/sis.py:107
+#: evaluation/models/sis.py:112
 msgid "i. Get in and out of a car?"
 msgstr "i. entrar e sair de um carro?"
 
-#: evaluation/models/sis.py:111
+#: evaluation/models/sis.py:116
 msgctxt "CHOICES_HAND"
 msgid "Not difficult at all"
 msgstr "nada difícil"
 
-#: evaluation/models/sis.py:112
+#: evaluation/models/sis.py:117
 msgctxt "CHOICES_HAND"
 msgid "A little difficult"
 msgstr "um pouco difícil"
 
-#: evaluation/models/sis.py:113
+#: evaluation/models/sis.py:118
 msgctxt "CHOICES_HAND"
 msgid "Somewhat difficult"
 msgstr "mais ou menos difícil"
 
-#: evaluation/models/sis.py:114
+#: evaluation/models/sis.py:119
 msgctxt "CHOICES_HAND"
 msgid "Very difficult"
 msgstr "muito difícil"
 
-#: evaluation/models/sis.py:115
+#: evaluation/models/sis.py:120
 msgctxt "CHOICES_HAND"
 msgid "Could not do at all"
 msgstr "não consigo realizar"
 
-#: evaluation/models/sis.py:117
+#: evaluation/models/sis.py:123
 msgid "a. Carry heavy objects (e.g. bag of groceries)?"
 msgstr "a. carregar objetos pesados (ex. sacola de compras)?"
 
-#: evaluation/models/sis.py:118
+#: evaluation/models/sis.py:124
 msgid "b. Turn a doorknob?"
 msgstr "b. virar uma maçaneta?"
 
-#: evaluation/models/sis.py:119
+#: evaluation/models/sis.py:125
 msgid "c. Open a can or jar?"
 msgstr "c. abrir uma lata ou pote?"
 
-#: evaluation/models/sis.py:120
+#: evaluation/models/sis.py:126
 msgid "d. Tie a shoe lace?"
 msgstr "d. amarrar um cordão de sapatos?"
 
-#: evaluation/models/sis.py:121
+#: evaluation/models/sis.py:127
 msgid "e. Pick up a dime?"
 msgstr "e. pegar uma moeda de 10 centavos?"
 
-#: evaluation/models/sis.py:125
+#: evaluation/models/sis.py:131
 msgctxt "CHOICES_TIME"
 msgid "None of the time"
 msgstr "nenhuma vez"
 
-#: evaluation/models/sis.py:126
+#: evaluation/models/sis.py:132
 msgctxt "CHOICES_TIME"
 msgid "A little of the time"
 msgstr "poucas vezes"
 
-#: evaluation/models/sis.py:127
+#: evaluation/models/sis.py:133
 msgctxt "CHOICES_TIME"
 msgid "Some of the time"
 msgstr "algumas vezes"
 
-#: evaluation/models/sis.py:128
+#: evaluation/models/sis.py:134
 msgctxt "CHOICES_TIME"
 msgid "Most of the time"
 msgstr "a maioria das vezes"
 
-#: evaluation/models/sis.py:129
+#: evaluation/models/sis.py:135
 msgctxt "CHOICES_TIME"
 msgid "All of the time"
 msgstr "todo o tempo"
 
-#: evaluation/models/sis.py:131
+#: evaluation/models/sis.py:138
 msgid "a. Your work (paid, voluntary or other)"
 msgstr "a. seu trabalho (pago, voluntária ou outro)?"
 
-#: evaluation/models/sis.py:132
+#: evaluation/models/sis.py:139
 msgid "b. Your social activities?"
 msgstr "b. suas atividades sociais?"
 
-#: evaluation/models/sis.py:133
+#: evaluation/models/sis.py:140
 msgid "c. Quiet recreation (crafts, reading)?"
 msgstr "c. recreação tranquila (artesanato, leitura)?"
 
-#: evaluation/models/sis.py:134
+#: evaluation/models/sis.py:141
 msgid "d. Active recreation (sports, outings,travel)?"
 msgstr "d. recreação ativa (esportes, passeios, viagens)?"
 
-#: evaluation/models/sis.py:135
+#: evaluation/models/sis.py:142
 msgid "e. Your role as a family member and/or friend?"
 msgstr "e. seu papel como um membro da família e/ou amigo?"
 
-#: evaluation/models/sis.py:136
+#: evaluation/models/sis.py:143
 msgid "f. Your participation in spiritual or religious activities?"
 msgstr "f. sua participação em atividades religiosas ou espirituais?"
 
-#: evaluation/models/sis.py:137
+#: evaluation/models/sis.py:144
 msgid "g. Your ability to control your life as you wish?"
 msgstr "g. sua capacidade de controlar sua vida como você deseja?"
 
-#: evaluation/models/sis.py:138
+#: evaluation/models/sis.py:145
 msgid "h. Your ability to help others?"
 msgstr "h. sua capacidade de ajudar os outros?"
 
-#: evaluation/models/sis.py:141
+#: evaluation/models/sis.py:148
 msgid "Stroke Recovery scale"
 msgstr "Escala de recuperação do AVE"
 
@@ -6035,50 +6039,44 @@ msgstr "EVA - Escalas Visuais Analógicas"
 
 #: evaluation/models/verbal_fluency.py:12
 #: evaluation/models/verbal_fluency.py:15
-#, fuzzy
-#| msgctxt "FuglMeyer"
-#| msgid "forearm pronation"
 msgid "Word count"
-msgstr "Antebraço - pronação"
+msgstr "Total de palavras"
 
 #: evaluation/models/verbal_fluency.py:13
 #: evaluation/models/verbal_fluency.py:16
-#, fuzzy
-#| msgctxt "MMSEAdmin"
-#| msgid "Registration"
-msgid "Observation"
-msgstr "Memória imediata"
+msgid "Notes"
+msgstr "Observação"
 
 #: evaluation/models/verbal_fluency.py:19
 #: evaluation/templates/admin/evaluation/verbalfluency/change_form.html:18
 msgid "Verbal Fluency Test"
-msgstr ""
+msgstr "Fluência Verbal e Semântica"
 
 #: evaluation/models/verbal_fluency.py:20
 msgid "Verbal Fluency Tests"
-msgstr ""
+msgstr "Fluência Verbal e Semântica"
 
 #: evaluation/models/von_frey.py:12
 msgid "Sensibility 1"
-msgstr ""
+msgstr "Sensibilidade 1"
 
 #: evaluation/models/von_frey.py:16
 msgid "Sensibility 2"
-msgstr ""
+msgstr "Sensibilidade 2"
 
 #: evaluation/models/von_frey.py:20
 msgid "(Pain) Algometer 1"
-msgstr ""
+msgstr "(Dor) Algômetro 1"
 
 #: evaluation/models/von_frey.py:24
 msgid "(Pain) Algometer 2"
-msgstr ""
+msgstr " (Dor) Algômetro 2"
 
 #: evaluation/models/von_frey.py:28
 msgid "(Pain) Algometer 3"
-msgstr ""
+msgstr " (Dor) Algômetro 3"
 
-#: evaluation/models/von_frey.py:37 evaluation/models/von_frey.py:38
+#: evaluation/models/von_frey.py:38 evaluation/models/von_frey.py:39
 #: evaluation/templates/admin/evaluation/vonfrey/change_form.html:6
 msgid "Von Frey - Algometer"
 msgstr "Von Frey - Algômetro"
@@ -6218,6 +6216,11 @@ msgid ""
 "                    00:01:05, if it is 2:345, it is converted to 00:07:45.\n"
 "                "
 msgstr ""
+"\n"
+"Os campos podem ser preenchidos das seguintes formas: hh: mm: ss, mm: ss ou "
+"ss. Se os segundos ou minutos dadossão maiores do que 59, o valor é "
+"convertido; Por exemplo, se o valor for 65, ele é convertido para00:01:05, "
+"se for 2:345, ele é convertido em 00:07:45."
 
 #: evaluation/templates/admin/evaluation/kviq/change_form.html:6
 msgid "Kinesthetic and visual Imagery Questionnaire"
@@ -6231,23 +6234,23 @@ msgstr "MINI-EXAME DO ESTADO MENTAL - MEEM"
 msgid "Montreal Cognitive Assessment"
 msgstr "MoCA - Montreal Cognitive Assessment"
 
-#: evaluation/templates/admin/evaluation/nihss/change_form.html:6
+#: evaluation/templates/admin/evaluation/nihss/change_form.html:15
 msgid "National Institutes of Health Stroke Scale"
 msgstr "National Institutes of Health Escala de AVC"
 
-#: evaluation/templates/admin/evaluation/nihss/change_form.html:21
+#: evaluation/templates/admin/evaluation/nihss/change_form.html:30
 msgid "First image for question 9."
 msgstr "Primeira imagem para item 9."
 
-#: evaluation/templates/admin/evaluation/nihss/change_form.html:23
+#: evaluation/templates/admin/evaluation/nihss/change_form.html:32
 msgid "Second image for question 9."
 msgstr "Segunda imagem para item 9."
 
-#: evaluation/templates/admin/evaluation/nihss/change_form.html:26
+#: evaluation/templates/admin/evaluation/nihss/change_form.html:35
 msgid "Third image for question 9."
 msgstr "Terceira imagem para item 9."
 
-#: evaluation/templates/admin/evaluation/nihss/change_form.html:29
+#: evaluation/templates/admin/evaluation/nihss/change_form.html:38
 msgid "Image for question 10."
 msgstr "Imagem para item 10."
 
@@ -7073,17 +7076,17 @@ msgstr "- ausentes"
 
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_09_upper_total.html:34
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_10_lower_total.html:34
-msgid "Less than 50% (33 points) - Serious motor impairment"
+msgid "Less than 50&#37; (33 points) - Serious motor impairment"
 msgstr "Menos que 50% (33 pontos) - Incapacidade Motora Severa"
 
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_09_upper_total.html:35
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_10_lower_total.html:35
-msgid "Between 51-84% (34 a 55 points) - Moderate motor impairment"
+msgid "Between 51-84&#37; (34 a 55 points) - Moderate motor impairment"
 msgstr "Entre 51-84% (34 a 55 pontos) - Incapacidade Motora Moderada"
 
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_09_upper_total.html:36
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_10_lower_total.html:36
-msgid "Between 84 - 99% (56 a 65 points) - Mild motor impairment"
+msgid "Between 84 - 99&#37; (56 a 65 points) - Mild motor impairment"
 msgstr "Entre 84 - 99% (56 a 65 pontos) - Incapacidade Motora Leve"
 
 #: evaluation/templates/admin/includes/fieldset/fuglmeyer/fieldset_09_upper_total.html:43
@@ -7177,6 +7180,27 @@ msgstr ""
 #: evaluation/templates/reversion-compare/compare.html:40
 msgid "Go back to history list"
 msgstr "Voltar para a lista de históricos"
+
+#, fuzzy
+#~| msgid "Less than 50% (33 points) - Serious motor impairment"
+#~ msgid "Less than 50%% (33 points) - Serious motor impairment"
+#~ msgstr "Menos que 50% (33 pontos) - Incapacidade Motora Severa"
+
+#, fuzzy
+#~| msgid "Between 51-84% (34 a 55 points) - Moderate motor impairment"
+#~ msgid "Between 51-84%% (34 a 55 points) - Moderate motor impairment"
+#~ msgstr "Entre 51-84% (34 a 55 pontos) - Incapacidade Motora Moderada"
+
+#, fuzzy
+#~| msgid "Between 84 - 99% (56 a 65 points) - Mild motor impairment"
+#~ msgid "Between 84 - 99%% (56 a 65 points) - Mild motor impairment"
+#~ msgstr "Entre 84 - 99% (56 a 65 pontos) - Incapacidade Motora Leve"
+
+#, fuzzy
+#~| msgctxt "MMSEAdmin"
+#~| msgid "Registration"
+#~ msgid "Observation"
+#~ msgstr "Memória imediata"
 
 #~ msgid "Trunk"
 #~ msgstr "Flexão do tronco para frente"
