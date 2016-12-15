@@ -34,26 +34,28 @@ def ajax_home_patient_periods(request):
     """
 
     patient_id = request.GET.get('p')
-    patient = Patient.objects.get(pk=patient_id)
+    data = "{}"
+    if patient_id and patient_id[1:].isdigit():
+        patient = Patient.objects.get(pk=patient_id)
 
-    # Evaluated periods
-    evaluated_periods = BaseEvaluation.find_evaluated_period(patient)
-    evaluated_periods_array = []
-    for e in evaluated_periods:
-        qty_evaluated = len(BaseEvaluation.find_evaluated_objects(patient, e))
-        qty_total_evaluation = len(BaseEvaluation.__subclasses__())
+        # Evaluated periods
+        evaluated_periods = BaseEvaluation.find_evaluated_period(patient)
+        evaluated_periods_array = []
+        for e in evaluated_periods:
+            qty_evaluated = len(BaseEvaluation.find_evaluated_objects(patient, e))
+            qty_total_evaluation = len(BaseEvaluation.__subclasses__())
 
-        evaluated_periods_array.append({"id": e.pk, "period": e.period, "qty_evaluated": qty_evaluated, "qty_total_evaluation": qty_total_evaluation})
+            evaluated_periods_array.append({"id": e.pk, "period": e.period, "qty_evaluated": qty_evaluated, "qty_total_evaluation": qty_total_evaluation})
 
-    not_evaluated_periods = BaseEvaluation.find_not_evaluated_period(patient)
-    not_evaluated_periods_array = []
-    for e in not_evaluated_periods:
-        not_evaluated_periods_array.append({"id": e.pk, "period": e.period})
+        not_evaluated_periods = BaseEvaluation.find_not_evaluated_period(patient)
+        not_evaluated_periods_array = []
+        for e in not_evaluated_periods:
+            not_evaluated_periods_array.append({"id": e.pk, "period": e.period})
 
-    data = json.dumps({
-        'evaluated_periods': evaluated_periods_array,
-        'not_evaluated_periods': not_evaluated_periods_array
-    })
+        data = json.dumps({
+            'evaluated_periods': evaluated_periods_array,
+            'not_evaluated_periods': not_evaluated_periods_array
+        })
 
     return HttpResponse(data, content_type="application/json")
 
