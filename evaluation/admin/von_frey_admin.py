@@ -33,11 +33,17 @@ class VonFreyAdmin(BaseAdmin):
                        ('algometer2_forearm_right', 'algometer2_forearm_left',
                         'algometer2_thenar_right', 'algometer2_thenar_left'),
                        ('algometer3_forearm_right', 'algometer3_forearm_left',
-                        'algometer3_thenar_right', 'algometer3_thenar_left')
+                        'algometer3_thenar_right', 'algometer3_thenar_left',),
                        ),
             'description': {
                 'fieldset': '_table_alg',
                 'columns': ((0, _('Sequence')), (1, _('Paretic hand')), (2, _('Healthy hand'))),
+            }
+        }),
+        ('', {
+            'fields': ('obs',),
+            'description': {
+                'fieldset': '_1col'
             }
         }),
     )
