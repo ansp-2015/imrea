@@ -54,22 +54,24 @@ var evaluation_home_patients_select_change = function() {
   $.get( "ajax_home_patient_periods", { p:this.value } )
       .done(function( data ) {
           var html_content = '';
-          for (i = 0; i < data.evaluated_periods.length; i++) {
-              period = data.evaluated_periods[i];
-              html_content += "<a href='#' data-period-id='"+period.id+"' class='home_period_link list-group-item'><span>"+period.period+"</span>";
-              html_content += "<span class='badge'>" + period.qty_evaluated + " / " + period.qty_total_evaluation + "</span>";
-              html_content += "</a>";
-          }
-          $("#home-panel-period-evaluated").html("<div class='list-group'>" + html_content + "</div>");
+          if (data && data.evaluated_periods) {
+              for (i = 0; i < data.evaluated_periods.length; i++) {
+                  period = data.evaluated_periods[i];
+                  html_content += "<a href='#' data-period-id='"+period.id+"' class='home_period_link list-group-item'><span>"+period.period+"</span>";
+                  html_content += "<span class='badge'>" + period.qty_evaluated + " / " + period.qty_total_evaluation + "</span>";
+                  html_content += "</a>";
+              }
+              $("#home-panel-period-evaluated").html("<div class='list-group'>" + html_content + "</div>");
 
-          html_content = '';
-          for (i = 0; i < data.not_evaluated_periods.length; i++) {
-              period = data.not_evaluated_periods[i];
-              html_content += "<a href='#' data-period-id='"+period.id+"' class='home_period_link list-group-item'>"+period.period+"</a>";
-          }
-          $("#home-panel-period-not-evaluated").html("<div class='list-group'>" + html_content + "</div>");
+              html_content = '';
+              for (i = 0; i < data.not_evaluated_periods.length; i++) {
+                  period = data.not_evaluated_periods[i];
+                  html_content += "<a href='#' data-period-id='"+period.id+"' class='home_period_link list-group-item'>"+period.period+"</a>";
+              }
+              $("#home-panel-period-not-evaluated").html("<div class='list-group'>" + html_content + "</div>");
 
-          $('.home_period_link').on("click", evaluation_home_period_click);
+              $('.home_period_link').on("click", evaluation_home_period_click);
+          }
   });
   if (this.value > 0) {
     $('#home-panel-period').show();

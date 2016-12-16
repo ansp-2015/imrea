@@ -1,4 +1,5 @@
 {% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
 
@@ -13,6 +14,7 @@
 
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
     <link rel="stylesheet" href="{% static 'explorer/explorer.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/header.css" %}" />
     <style>
         .container {
             width: auto;
@@ -36,10 +38,19 @@
             <div class="navbar navbar-default navbar-static-top" role="navigation">
               <div class="container">
                 <div class="navbar-header">
-                  <a class="navbar-brand" href="{% url "explorer_index" %}">SQL Explorer</a>
+                    {% include "admin/includes/navbar_header.html" %}
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    {% block branding %}{% endblock %}
                 </div>
                 <div class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/explorer"><strong>Explorer</strong></a>
+                    </li>
                     {% block sql_explorer_navlinks %}{% endblock %}
                   </ul>
                 </div>

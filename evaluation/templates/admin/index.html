@@ -1,21 +1,25 @@
 {% extends "admin/base_site.html" %}
 {% load i18n admin_static bootstrapped_goodies_tags imrea_evaluation_tags %}
 
-{% block extrastyle %}
+{% block extrahead %}
     {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static 'admin/css/dashboard.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
     <script>
-    $(document).ready(function() {
-        $('#evaluation_home_patients_select').on("change", evaluation_home_patients_select_change);
-        $('#home-panel-period').hide();
-        $('#home-panel-evaluation').hide();
+    //<![CDATA[
+        (function($) {
+            $(document).ready(function() {
+            $('#evaluation_home_patients_select').on("change", evaluation_home_patients_select_change);
+            $('#home-panel-period').hide();
+            $('#home-panel-evaluation').hide();
 
-        // check if home page patient select already has a value
-        if ($('#evaluation_home_patients_select').val()) {
-            $('#evaluation_home_patients_select').change();
-        }
-    });
+            // check if home page patient select already has a value
+            if ($('#evaluation_home_patients_select').val()) {
+                $('#evaluation_home_patients_select').change();
+            }
+        });
+        }(jQuery));
+    //]]>
     </script>
 {% endblock %}
 

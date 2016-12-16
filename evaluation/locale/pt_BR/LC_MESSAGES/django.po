@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-14 20:50+0000\n"
+"POT-Creation-Date: 2016-12-16 14:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -255,7 +255,7 @@ msgstr "B - Qualificação das Substituições Paragráficas"
 #: evaluation/admin/von_frey_admin.py:20
 #: evaluation/models/base_evaluation.py:18 evaluation/models/patient.py:43
 #: evaluation/templates/admin/evaluation/patient/change_form.html:6
-#: evaluation/templates/admin/index.html:61
+#: evaluation/templates/admin/index.html:77
 msgid "Patient"
 msgstr "Paciente"
 
@@ -6076,14 +6076,14 @@ msgstr " (Dor) Algômetro 2"
 msgid "(Pain) Algometer 3"
 msgstr " (Dor) Algômetro 3"
 
-#: evaluation/models/von_frey.py:38 evaluation/models/von_frey.py:39
+#: evaluation/models/von_frey.py:37 evaluation/models/von_frey.py:38
 #: evaluation/templates/admin/evaluation/vonfrey/change_form.html:6
 msgid "Von Frey - Algometer"
 msgstr "Von Frey - Algômetro"
 
 #: evaluation/templates/admin/app_index.html:9
 #: evaluation/templates/admin/change_form.html:19
-#: evaluation/templates/admin/index.html:16
+#: evaluation/templates/admin/index.html:32
 #: evaluation/templates/reversion-compare/compare.html:19
 msgid "Home"
 msgstr "Pág. principal"
@@ -6092,36 +6092,36 @@ msgstr "Pág. principal"
 msgid "administration"
 msgstr "administração"
 
-#: evaluation/templates/admin/base.html:71
+#: evaluation/templates/admin/base.html:72
 msgid "Welcome,"
 msgstr "Bem vindo,"
 
-#: evaluation/templates/admin/base.html:75
+#: evaluation/templates/admin/base.html:76
 msgid "View site"
 msgstr ""
 
-#: evaluation/templates/admin/base.html:80
-#: evaluation/templates/admin/base.html:122
+#: evaluation/templates/admin/base.html:81
+#: evaluation/templates/admin/base.html:123
 msgid "Documentation"
 msgstr ""
 
-#: evaluation/templates/admin/base.html:84
+#: evaluation/templates/admin/base.html:85
 msgid "Change password"
 msgstr "Alterar senha"
 
-#: evaluation/templates/admin/base.html:86
+#: evaluation/templates/admin/base.html:87
 msgid "Log out"
 msgstr ""
 
-#: evaluation/templates/admin/base.html:96
+#: evaluation/templates/admin/base.html:97
 msgid "Recent Actions"
 msgstr ""
 
-#: evaluation/templates/admin/base.html:108
+#: evaluation/templates/admin/base.html:109
 msgid "Unknown content"
 msgstr ""
 
-#: evaluation/templates/admin/base.html:113
+#: evaluation/templates/admin/base.html:114
 msgid "None available"
 msgstr ""
 
@@ -6154,7 +6154,7 @@ msgstr ""
 msgid "Please correct the errors below."
 msgstr ""
 
-#: evaluation/templates/admin/evaluation/bostonaphasia/change_form.html:105
+#: evaluation/templates/admin/evaluation/bostonaphasia/change_form.html:108
 msgid "Boston Aphasia"
 msgstr ""
 
@@ -7132,21 +7132,25 @@ msgstr "Antebraço"
 msgid "Thenar"
 msgstr "Tenar"
 
-#: evaluation/templates/admin/index.html:67
+#: evaluation/templates/admin/includes/navbar_header.html:7
+msgid "Home page"
+msgstr "Pág. principal"
+
+#: evaluation/templates/admin/index.html:83
 msgid "Evaluations"
 msgstr "Avaliações"
 
-#: evaluation/templates/admin/index.html:70
-#: evaluation/templates/admin/index.html:84
+#: evaluation/templates/admin/index.html:86
+#: evaluation/templates/admin/index.html:100
 msgid "Answered"
 msgstr "Respondidas"
 
-#: evaluation/templates/admin/index.html:74
-#: evaluation/templates/admin/index.html:88
+#: evaluation/templates/admin/index.html:90
+#: evaluation/templates/admin/index.html:104
 msgid "Unanswered"
 msgstr "Não respondidas"
 
-#: evaluation/templates/admin/index.html:80
+#: evaluation/templates/admin/index.html:96
 msgid "Questionnaires"
 msgstr "Questionários"
 
