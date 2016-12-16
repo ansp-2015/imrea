@@ -6,7 +6,7 @@ from . import BaseEvaluation
 CLIN_NEGLECT_CHOICES = (
     (1, _(u'Yes')),
     (2, _(u'No')),
-)
+) + BaseEvaluation.UN
 
 
 class Clin(BaseEvaluation):

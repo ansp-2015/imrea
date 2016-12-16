@@ -35,6 +35,7 @@ class HADAdmin(BaseAdmin):
                        ('panic',),
                        ('book',)),
             'description': {
+                'text': _(u'<strong>Instructions:</strong> tick the box beside the reply that is closest to how you have been feeling in the past week.'),
                 'fieldset': '_1col_with_choices'
             }
         }),

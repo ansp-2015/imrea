@@ -14,7 +14,7 @@ class HAD(BaseEvaluation):
         (2, _('A lot of time')),
         (1, _('From time to time, occasionally')),
         (0, pgettext_lazy('tension', 'Not at all'))
-    )
+    ) + BaseEvaluation.UN
     tension = models.IntegerField(_('I feel tense or "wound up"'), choices=HAD_TENSION)
 
     HAD_ENJOY = (
@@ -22,7 +22,7 @@ class HAD(BaseEvaluation):
         (2, _('Only a little')),
         (1, _('Not quite so much')),
         (0, _('Definitely as much'))
-    )
+    ) + BaseEvaluation.UN
     enjoy = models.IntegerField(_('I still enjoy the things I used to enjoy'), choices=HAD_ENJOY)
 
     HAD_FRIGHTENED = (
@@ -30,7 +30,7 @@ class HAD(BaseEvaluation):
         (2, _('Yes, but not too badly')),
         (1, _('A little, but it doesn\'t worry me')),
         (0, pgettext_lazy('frightened', 'Not at all'))
-    )
+    ) + BaseEvaluation.UN
     frightened = models.IntegerField(_('I get a sort of frightened feeling as if something awful is about to happen'),
                                      choices=HAD_FRIGHTENED)
 
@@ -39,7 +39,7 @@ class HAD(BaseEvaluation):
         (2, _('Definitely not so much now')),
         (1, _('Not quite so much now')),
         (0, _('As much as I always could')),
-    )
+    ) + BaseEvaluation.UN
     laugh = models.IntegerField(_('I can laugh and see the funny side of things'), choices=HAD_LAUGH)
 
     HAD_WORRY = (
@@ -47,7 +47,7 @@ class HAD(BaseEvaluation):
         (2, _('A lot of the time')),
         (1, _('From time to time, but not too often')),
         (0, _('Only occasionally')),
-    )
+    ) + BaseEvaluation.UN
     worry = models.IntegerField(_('Worrying thoughts go through my mind'), choices=HAD_WORRY)
 
     HAD_CHEERFUL = (
@@ -55,7 +55,7 @@ class HAD(BaseEvaluation):
         (2, _('Not often')),
         (1, _('Sometimes')),
         (0, _('Most of the time')),
-    )
+    ) + BaseEvaluation.UN
     cheerful = models.IntegerField(_('I feel cheerful'), choices=HAD_CHEERFUL)
 
     HAD_EASE = (
@@ -63,7 +63,7 @@ class HAD(BaseEvaluation):
         (2, _('Not often')),
         (1, _('Usually')),
         (0, pgettext_lazy('ease', 'Definitely')),
-    )
+    ) + BaseEvaluation.UN
     ease = models.IntegerField(_('I can sit at ease and feel relaxed'), choices=HAD_EASE)
 
     HAD_SLOWED = (
@@ -71,7 +71,7 @@ class HAD(BaseEvaluation):
         (2, _('Very often')),
         (1, _('Sometimes')),
         (0, pgettext_lazy('slowed', 'Not at all')),
-    )
+    ) + BaseEvaluation.UN
     slowed = models.IntegerField(_('I feel as if I am slowed down'), choices=HAD_SLOWED)
 
     HAD_BUTTERFLIES = (
@@ -79,7 +79,7 @@ class HAD(BaseEvaluation):
         (2, _('Quite Often')),
         (1, _('Occasionally')),
         (0, pgettext_lazy('butterflies', 'Not at all')),
-    )
+    ) + BaseEvaluation.UN
     butterflies = models.IntegerField(_('I get a sort of frightened feeling like \'butterflies\' in the stomach'), choices=HAD_BUTTERFLIES)
 
     HAD_APPEARANCE = (
@@ -87,7 +87,7 @@ class HAD(BaseEvaluation):
         (2, _('I don\'t take as much care as I should')),
         (1, _('I may not take quite as much care')),
         (0, _('I take just as much care as ever')),
-    )
+    ) + BaseEvaluation.UN
     appearance = models.IntegerField(_('I have lost interest in my appearance'), choices=HAD_APPEARANCE)
 
     HAD_RESTLESS = (
@@ -95,7 +95,7 @@ class HAD(BaseEvaluation):
         (2, _('Quite a lot')),
         (1, _('Not very much')),
         (0, pgettext_lazy('restless', 'Not at all')),
-    )
+    ) + BaseEvaluation.UN
     restless = models.IntegerField(_('I feel restless as I have to be on the move'), choices=HAD_RESTLESS)
 
     HAD_FORWARD = (
@@ -103,7 +103,7 @@ class HAD(BaseEvaluation):
         (2, _('Definitely less than I used to')),
         (1, _('Rather less than I used to')),
         (0, _('As much as I ever did')),
-    )
+    ) + BaseEvaluation.UN
     forward = models.IntegerField(_('I look forward with enjoyment to things'), choices=HAD_FORWARD)
 
     HAD_PANIC = (
@@ -111,7 +111,7 @@ class HAD(BaseEvaluation):
         (2, _('Quite often')),
         (1, _('Not very often')),
         (0, pgettext_lazy('panic', 'Not at all')),
-    )
+    ) + BaseEvaluation.UN
     panic = models.IntegerField(_('I get sudden feelings of panic'), choices=HAD_PANIC)
 
     HAD_BOOK = (
@@ -119,7 +119,7 @@ class HAD(BaseEvaluation):
         (2, _('Not often')),
         (1, pgettext_lazy('book', 'Sometimes')),
         (0, _('Often')),
-    )
+    ) + BaseEvaluation.UN
     book = models.IntegerField(_('I can enjoy a good book or radio or TV program'), choices=HAD_BOOK)
 
     class Meta:

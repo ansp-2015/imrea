@@ -17,7 +17,6 @@ class ControlNTFormMixin(object):
         super(ControlNTFormMixin, self).__init__(*args, **kwargs)
 
         if hasattr(self, 'imrea_nt'):
-            print self.imrea_nt
             if 'fields' in self.imrea_nt:
                 for f in self.imrea_nt['fields']:
                     self.fields[f].widget.attrs.update({

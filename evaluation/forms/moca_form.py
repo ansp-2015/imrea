@@ -75,4 +75,5 @@ class MoCAForm(forms.ModelForm):
             'orientation_day': IntegerCheckboxInput(),
             'orientation_place': IntegerCheckboxInput(),
             'orientation_city': IntegerCheckboxInput(),
+            'total_twelve_year_old': IntegerCheckboxInput(),
         }

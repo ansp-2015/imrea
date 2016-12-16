@@ -54,8 +54,10 @@ class ButtonRadioSelect(RadioSelect):
 ###
 class ButtonRadioChoiceValueInput(RadioChoiceInput):
     def render(self, name=None, value=None, attrs=None):
+
         if self.id_for_label:
             label_for = format_html(' for="{}"', self.id_for_label)
+
         else:
             label_for = ''
         attrs = dict(self.attrs, **attrs) if attrs else self.attrs
@@ -67,7 +69,12 @@ class ButtonRadioChoiceValueInput(RadioChoiceInput):
         # Empty choice.
         value = '---'
         if self.choice_value:
-            value = self.choice_value
+            # override value if it is a custom value like NOT DEFINED or MISSING DATA
+            if self.choice_value.startswith('-') and self.choice_value[1:].isdigit():
+                value = self.choice_label
+            else:
+                value = self.choice_value
+
         return format_html(
             '<label{} class="btn-choice btn btn-primary{}">{} {}</label>',
             label_for, active, self.tag(attrs), value
@@ -123,9 +130,19 @@ class ButtonRadioGridChoiceInput(RadioChoiceInput):
             active = ' active'
         else:
             active = ''
+
+        # Empty choice.
+        value = '---'
+        if self.choice_value:
+            # override value if it is a custom value like NOT DEFINED or MISSING DATA
+            if self.choice_value.startswith('-') and self.choice_value[1:].isdigit():
+                value = self.choice_label
+            else:
+                value = self.choice_value
+
         return format_html(
             '<td class="btn-group" style="position:relative;text-align:center;"><label{} class="btn-choice btn btn-primary{}">{} {}</label></td>',
-            label_for, active, self.tag(attrs), self.choice_value
+            label_for, active, self.tag(attrs), value
         )
 
 

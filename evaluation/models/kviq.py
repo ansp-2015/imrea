@@ -3,9 +3,6 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from evaluation.models.patient import Patient
 from . import BaseEvaluation
- 
-
-NT = ((-10000, _(u'NT')),)
 
 CHOICES_VISUAL_IMAGES = (
     (5, _(u'Image as clear as seeing')),
@@ -13,7 +10,7 @@ CHOICES_VISUAL_IMAGES = (
     (3, _(u'Moderately clear image')),
     (2, _(u'Blurred image')),
     (1, _(u'No image'))
-) + NT
+) + BaseEvaluation.UN
 
 CHOICES_CINE_IMAGES = (
     (5, _(u'As intense as performing the action')),
@@ -21,7 +18,7 @@ CHOICES_CINE_IMAGES = (
     (3, _(u'Moderately intense')),
     (2, _(u'Slightly intense')),
     (1, _(u'No sensation'))
-) + NT
+) + BaseEvaluation.UN
 
 CHOICES_DOMINANT_LIMB = (
     (0, _(u'Left')),

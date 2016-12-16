@@ -5,6 +5,18 @@
     {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static 'admin/css/dashboard.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+    <script>
+    $(document).ready(function() {
+        $('#evaluation_home_patients_select').on("change", evaluation_home_patients_select_change);
+        $('#home-panel-period').hide();
+        $('#home-panel-evaluation').hide();
+
+        // check if home page patient select already has a value
+        if ($('#evaluation_home_patients_select').val()) {
+            $('#evaluation_home_patients_select').change();
+        }
+    });
+    </script>
 {% endblock %}
 
 {% block coltype %}colMS{% endblock %}

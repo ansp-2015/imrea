@@ -35,7 +35,7 @@
                             {% endif %}
                          </td>
                          <td style="width: 40%;">
-                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=field.field.field.widget.attrs.text content_activities=field.field.field.choices content_width=8 %}
+                        {% include 'admin/includes/fieldset/panel_content_text_and_category.html' with content_text=field.field.field.widget.attrs.text content_activities=field.field.field.choices content_width=12 %}
                          </td>
                      {% endif %}
                          <td {% if forloop.counter == 1 and forloop.last %}colspan="2" {% endif %}>

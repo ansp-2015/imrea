@@ -29,6 +29,12 @@ class VASAdmin(BaseAdmin):
                 'fieldset': '_1col_panel',
             }
         }),
+        ('', {
+            'fields': ('obs',),
+            'description': {
+                'fieldset': '_1col'
+            }
+        }),
     )
     list_display = ('patient', 'period', 'last_update')
     ordering = ('patient', 'period', 'last_update')

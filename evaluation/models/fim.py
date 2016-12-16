@@ -19,7 +19,8 @@ class FIM(BaseEvaluation):
         (5, _(u'Supervision')),
         (6, _(u'Modified independence')),
         (7, _(u'Complete independence'))
-    )
+    ) + BaseEvaluation.UN
+
     # Cuidados pessoais
     self_care_eating = models.IntegerField(_('Eating'), choices=FIM_CHOICES_CATEGORY)
     self_care_grooming = models.IntegerField(_('Grooming'), choices=FIM_CHOICES_CATEGORY)

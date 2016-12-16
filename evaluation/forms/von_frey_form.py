@@ -19,7 +19,7 @@ class VonFreyForm(forms.ModelForm):
                   'algometer1_forearm_left', 'algometer1_thenar_right', 'algometer1_thenar_left',
                   'algometer2_forearm_right', 'algometer2_forearm_left', 'algometer2_thenar_right',
                   'algometer2_thenar_left', 'algometer3_forearm_right', 'algometer3_forearm_left',
-                  'algometer3_thenar_right','algometer3_thenar_left']
+                  'algometer3_thenar_right','algometer3_thenar_left', 'obs']
 
         widgets = {
             'sensibility1_forearm_right': StepNumberInput(attrs={'min': 0, 'step': 0.05, 'decimals': 2}),

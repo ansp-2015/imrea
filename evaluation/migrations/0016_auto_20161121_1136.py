@@ -20,10 +20,10 @@ class Migration(migrations.Migration):
                 ('obs', models.TextField(max_length=500, null=True, blank=True)),
                 ('fas_words', models.TextField(verbose_name=b'')),
                 ('fas_count', models.IntegerField(verbose_name='Word count')),
-                ('fas_obs', models.TextField(verbose_name='Observation')),
+                ('fas_obs', models.TextField(verbose_name='Notes')),
                 ('animals_words', models.TextField(verbose_name=b'')),
                 ('animals_count', models.IntegerField(verbose_name='Word count')),
-                ('animals_obs', models.TextField(verbose_name='Observation')),
+                ('animals_obs', models.TextField(verbose_name='Notes')),
             ],
             options={
                 'verbose_name': 'Verbal Fluency Test',
