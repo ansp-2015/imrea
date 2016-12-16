@@ -48,6 +48,9 @@
                 {% endfor %}
             </div></div>
         {% endfor %}
+        {% if fieldset.description.text_after %}
+            <div class="description">{{ fieldset.description.text_after|safe }}</div>
+        {% endif %}
         {% include "admin/includes/fieldset/row_total.html" %}
     </div>
 </fieldset>

@@ -12,6 +12,6 @@ from .nihss_form import NIHSSForm
 from .epworth_form import EpworthForm
 from .moca_form import MoCAForm
 from .verbal_fluency_form import VerbalFluencyForm
-
-from mmse_form import MMSEForm
+from .mrc_form import MRCForm
+from .mmse_form import MMSEForm
 
