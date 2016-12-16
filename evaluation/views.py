@@ -35,7 +35,7 @@ def ajax_home_patient_periods(request):
 
     patient_id = request.GET.get('p')
     data = "{}"
-    if patient_id and patient_id[1:].isdigit():
+    if patient_id and patient_id.isdigit():
         patient = Patient.objects.get(pk=patient_id)
 
         # Evaluated periods

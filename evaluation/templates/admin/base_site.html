@@ -4,6 +4,7 @@
 {% block title %}{% render_with_template_if_exist "admin/admin_title.html" title %} | {{ site_title|default:_('Django site admin') }}{% endblock %}
 
 {% block extrahead %}
+{{ block.super }}
 <script src="{% static 'js/evaluation.js' %}"></script>
 <link rel="stylesheet" type="text/css" href="{% static "css/header.css" %}" />
 {% endblock extrahead %}
