@@ -6924,3 +6924,11 @@ body {
       page-break-inside: avoid;
     }
 }
+
+.alternative-test {
+  background-color:#ffe699;
+}
+
+.main-test {
+  background-color:#ffc000;
+}

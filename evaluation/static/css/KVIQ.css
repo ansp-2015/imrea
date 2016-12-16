@@ -6899,3 +6899,11 @@ body {
 .related-widget-wrapper > #add_id_period{
     display:none;
 }
+
+.alternative-test {
+  background-color:#ffe699;
+}
+
+.main-test {
+  background-color:#ffc000;
+}
