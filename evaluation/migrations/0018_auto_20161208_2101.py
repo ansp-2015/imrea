@@ -11,10 +11,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='bostonaphasiarecallwrittensymbols',
-            name='serial_writing_numbers_score',
-        ),
         migrations.AddField(
             model_name='moca',
             name='total_twelve_year_old',

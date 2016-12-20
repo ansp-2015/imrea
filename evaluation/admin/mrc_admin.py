@@ -709,6 +709,393 @@ The patient should be asked to repeat the test so that the examiner can perceive
         s during contraction.<br />
     """)
 
+    TEXT_WRIST_EXTENSION = _(u"""
+<Div class = "main-test">
+<Strong> To Normal </strong>: Complete the full extension of the wrist (when testing all three muscles) against a 
+maximum resistance. Full extension is not required for radial and ulnar deviation tests. <br />
+<Strong> Good </strong>: Complete the full extension of the wrist against a strong to moderate restiveness when being
+tested every muscle. When testing the individual muscles, not achieved the full extension of the wrist. <br />
+<Strong> Regular </strong>: Complete the full range of motion without any restatement in the test for all three
+muscles. In the separate tests for radial and ulnar extensors, the required deviation prevents a large range of motion.
+</Div>
+
+<Strong> Patient position </strong>: <br />
+Seated. Elbow and forearm are resting on the table and the forearm is in full pronation. <br />
+<Strong> Therapist position </strong>: <br />
+Sitting or standing diagonally in front of the patient. Hold the patient's forearm under the wrist. The hand used to
+apply resistance is placed on the dorsal surface of the metacarpals. <br />
+To test all three muscles, the patient extends the fist without deviation. The yield for Grades 4 (Good) and 5 (Normal)
+is applied in a forward and downward direction on the second and fifth metacarpals. <br />
+To test the long and short radial extensors of the carpus (for extension with radial deviation) the resitance is
+applied on the dorsal surface of the second and third metacarpals (radial side of the hand) in the direction of flexion
+and deviation ulnar. <br />
+To test the ulnar extensor carpi (for ulnar extension and deviation) the resitance is applied on the dorsal surface of
+the fifth metacarpal (ulnar side of the hand) in the direction of radial bending and deflection. <br />
+
+<Strong> Test </strong>: <br />
+For combined testing of the three wrist extensor muscles, the patient extends the wrist straight up through the
+amplitude available. Do not allow finger extension. <br />
+To test the two radial extensors, the patient extends the wrist oriented toward the side of the thumb of the hand. The
+fist can be pre-positioned to some extent and radial deviation to direct patient movement. <br />
+To test the ulnar extensor of the carpus, the patient extends the wrist facing the ulnar side of the hand. The
+therapist can previously position the fist in this attitude to direct the movement in the ulnar direction. <br />
+
+<Strong> Instructions to the patient </strong>: <br />
+For Grade 4 (Good) and 5 (Normal): "Raise your fist, hold that position, do not let me push you down." <br />
+For Grade 3 (Regular): "Raise your fist." <br />
+<br />
+        
+<Div class = "main-test">
+<Strong> For Precarious </strong>: Complete full range with gravity removed. If the patient completes a partial
+amplitude, you may receive a grade -2 (one of the few cases where a lower grade is acceptable).
+</Div>
+
+<Strong> Patient position </strong>: <br />
+Forearm resting on table in neutral position. <br />
+<Strong> Therapist position </strong>: <br />
+Hold the patient's wrist. This raises and removes the hand from the table and eliminates friction. <br />
+<Strong> Test </strong>: <br />
+The patient holds out his fist. <br />
+<Strong> Instructions to the patient </strong>: <br />
+"Bend your fist back." <br />
+<br />
+        
+<Div class = "main-test">
+<Strong> For Trace </strong>: For any specific muscle, there is visible or palpable contractile activity, however there
+is no movement of the fist. <br />
+<Strong> Zero </strong>: No contractile activity.
+</Div>
+        
+<Strong>Patient position</strong>: <br />
+Hand and forearm resting on the table in full pronation. <br />
+<Strong> Therapist position </strong>: <br />
+Hold the patient's wrist in extension. The other hand is used to perform palpation. Use a single finger to feel a
+single muscle in a given test. <br />
+Radial Long Carpal Extensor: Palpate this tendon on the back of the wrist in line with the second metacarpal. <br />
+Radial Short Carpal Extensor: Palpate this tendon on the dorsal surface of the wrist in line with the third metacarpal.
+ <br />
+Ulnar Carpal Extensor: Palpate this tendon on the dorsal surface of the wrist proximal to the fifth metacarpal and
+immediately distal to the ulnar styloid process.<br />
+<Strong> Test </strong>: <br />
+The patient tries to extend his fist. <br />
+<Strong> Instructions to the patient </strong>: <br />
+ "Try to bring the fist back." <br />
+    """)
+
+    TEXT_WRIST_EXTENSION_AFTER = _(u"""
+<Strong> REPLACEMENT </strong> <br />
+The most common replacement occurs when the finger extensors are allowed to participate. This can be avoided in largely
+by making sure that the fingers are relaxed and not allowing their extension. <br />
+<br />
+<Strong> USEFUL HINTS </strong>
+<Ol>
+<Li> Radial fist extensors are considerably stronger than the carpal ulnar extensor. </Li>
+<Li> A patient with complete quadriplegia in C5-C6 will only have the radial extensors of the wrist. The radial
+deviation during extension is therefore the extender movement that prevails at the level of the wrist. </Li>
+</Ol>
+
+<Div class = "panel-body">
+<Strong> NEED TIROCINIUM AND EXPERIENCE TO TEST THE HAND </strong> <br />
+<P> When assessing the muscles of the hand, care should be taken to use a graded resistance that takes due account of
+relatively small mass of muscles. Generally, the examiner should not use full pulse in hand closed, wrist or arm, but
+on the contrary only one or two fingers to counter the movements of the hand. </P>
+<P> The degree of resistance offered to the muscles of the hand is a problem, particularly when postoperative. In
+addition, the amount of movement allowed or encouraged should be monitored in order to avoid sudden or excessive
+excursions that could "break" a surgical reconstitution. </P>
+<P> The application of resistance in a safe manner requires experience in the evaluation of injuries or repairs of the
+hand as well as a high degree of clinical examination to avoid the displacement of a tendonous or any other surgical
+reconstitution. The neophyte examiner would be wiser to always err in the direction of caution. </P>
+<P> Considerable practice for testing normal hands and comparing injured hands with their normal contralateral sides
+should provide some of the necessary training with which it will be possible to approach the fragile hand. </P>
+<P> This test remains true to the principles of testing the amplitudes of 5, 4 and 3 with respect to gravity. However,
+it is assumed that the influence of gravity on the fingers is insignificant, which is why the positions with gravity
+and antigravity should be adopted with extreme care. </P>
+</Div>
+    """)
+
+    TEXT_FINGERS_METACARPOPHALANGEAL_FLEXION = _(u"""
+<Div class = "main-test">
+<Strong> To Normal </strong>: The patient completes the simultaneous MF flexion and the extension of the fingers and
+maintains this position against a maximum resistance. The resistance is applied to the fingers individually, because of
+the variable force of the different lumber. These also have different innervations. <br />
+<Strong> Good </strong>: The patient completes the range of motion against moderate to strong resistance. <br />
+<Strong> Regular </strong>: The patient completes correctly and simultaneously both movements without restiveness.
+<br />
+</Div>
+        
+<Strong> Patient position </strong>: <br />
+Sitting or in supine position with forearm in supination. The handle is held in the neutral position. The joints
+metacarpophalangeal (MF) should be fully extended; All interphalangeal joints (IF) are flexed. <br />
+
+<Strong> Therapist position </strong>: <br />
+Stabilizes the proximal metacarpals to the MF joint. The resitance is applied on the palmar surface of the phalanges in
+the direction of the MF extension. <br />
+
+<Strong> Test </strong>: <br />
+The patient simultaneously flexes the MF joints and extends the IF joints. Fingers can be tested separately. Do not
+allow fingers to twist; These should remain extended. <br />
+
+<Strong> Instructions to the patient </strong>: <br />
+"Remove the threads of the fingers while flexing the metacarpophalangeal joints. Do not allow me to rectify your
+metacarpophalangeal joints. "The final position is a right angle at the level of the MF joints. Demonstrate movement
+to the patient and insist on practice to be able to perform the movements correctly and simultaneously. <br />
+
+<Div class = "main-test">
+<Strong> For Precarious </strong>: Complete the full range of motion in position with gravity removed. <br />
+<Strong> Trace </strong>: Except in the hand that is deeply atrophied, the lumbrals can not be felt.
+A grade 1 (dash) can be assigned for a minimal movement. <br />
+<Strong> Zero </strong>: Must be assigned in the absence of any movement. <br />
+</Div>
+
+<Strong> Patient position </strong>: <br />
+Forearm and wrist in the middle position to eliminate the influence of gravity. MF joints are extended fully. All IF
+joints are flexed. <br />
+
+<Strong> Therapist position </strong>: <br />
+It stabilizes the metacarpals. <br />
+<Strong> Test </strong>: <br />
+The patient attempts to flex the MF joints by the full amplitude available while IF joints. <br />
+<Strong> Instructions to the patient </strong>: <br />
+"Try to eliminate the thread if your fingers are bent while the metacarpoalalangeal joints." Demonstrate the patient
+movement and allow practice. <br />
+    """)
+
+    TEXT_FINGERS_METACARPOPHALANGEAL_FLEXION_AFTER = _(u"""
+<Strong> REPLACEMENT </strong> <br />
+The long flexors of the fingers can replace the Lumbricais. To avoid this pattern, make sure that the IF joints are in
+full extension. <br />
+    """)
+
+    TEXT_FINGERS_METACARPOPHALANGEAL_EXTENSION = _(u"""
+<Div class = "main-test">
+<Strong> To Normal </strong>: Completes the active range of motion with an appropriate level of resistance. <br />
+<Strong> Good </strong>: Completes all active range with some resistance. <br />
+<Strong> Regular </strong>: Complete the active range without any resistance.
+</Div>
+
+<Strong> Patient position (All tests) </strong>: <br />
+Forearm in pronation. Handle in neutral position. The MF joints and the IF joints are in a relaxed posture.
+<br />
+<Strong> Therapist position </strong>: <br />
+Stabilizes the handle in the neutral position. Put the index finger of the hand that applies the resistance through the
+back of all the proximal phalanges immediately distal to the MF joints. Apply resistance in the direction of bending.
+<br />
+
+<Strong> Test </strong>: <br />
+<Div style = "margin-right: 20px;">
+<Strong> Finger Extension </strong>: <br />
+The patient extends the MF joints (all fingers simultaneously), allowing the IF joints to slight bending. <br />
+<Strong> Indicator Extender </strong>: <br />
+The patient extends the index finger MF joint. <br />
+<Strong> Minimum finger extender </strong>: <br />
+The patient extends the MF joint of the fifth finger. <br />
+</Div>
+<Strong> Instructions to the patient </strong>: <br />
+"Tilt back as far as you can the metacarpophalangeal joints." Demonstrate movement to the patient and instruct you to
+reproduce. <br />
+<br />
+
+<Div class = "main-test">
+<Strong> For Precarious </strong>: Complete the range. <br />
+<Strong> Dash </strong>: Activity of the tendons nisible but without any joint movement. <br />
+<Strong> Zero </strong>: No contractile activity. <br />
+</Div>
+        
+<Strong> Procedures </strong>: The test is the same as for Grades 5 (normal), 4 (good) and 3 (regular), except that the
+forearm is placed in the middle position. <br />
+The tendons of the extensor of the fingers (n = 4), the extensor of the indicator (n = 1) and the extensor of the
+minimal finger (n = 1) are readily visible on the back of the hand in its path toward each finger. <br />
+    """)
+
+    TEXT_FINGERS_METACARPOPHALANGEAL_EXTENSION_AFTER = _(u"""
+<Strong> REPLACEMENT </strong>
+The flexion of the wrist will produce IF extension through a tenodesis action. <br />
+<br />
+
+<Strong> USEFUL HINTS </strong>
+<Ol>
+<Li> The MF extension of the fingers is not a vigorous movement, only a slight resistance is needed to "break" the
+    terminal position. </Li>
+<Li> It is common for the active range of motion to be considerably less than the available passive amplitude.
+    Therefore, in this test, the "full available amplitude" is not used, and the active amplitude is accepted. </Li>
+</Li> <li> Another way to check for an extensor force on the fingers is to "knock" the phalanx down proximal of each
+    finger; If there is a reaction on the part of the finger, it means that it is usable. </Li>
+</Ol>
+    """)
+
+    TEXT_HIP_FLEXION = _(u"""
+<Div class = "main-test">
+<Strong> For Grade 5: <br />
+Grade 4: <br />
+Grade 3: </strong>
+</Div>
+
+<Strong> Patient position </strong>: <br />
+The patient is seated on the examination table, with his legs hanging and holding the edge of the table with his hands.
+<Strong> Stabilization / Palpation </strong>: <br />
+The examiner stabilizes the pelvis on the ipsilateral iliac crest. The iliac and psoas major occupy a deep position and
+        are very difficult to palpate. <br />
+
+<Strong> Examiner action </strong>: <br />
+Tell the patient, "When I ask you, I want you to lift your knee that way toward the chest." While you verbalize this
+        order, flex the patient's hip through the full range of motion (ROM) available, keeping the knee flexed. Once
+        the patient passively through the movement, you can determine your available WMD and make it know what the
+        exact movement is. <br />
+
+<Strong> Instructions to the patient </strong>: <br />
+"Now lift the knee toward the chest and hold it in this position. Keep the leg in this position and do not allow that
+        I move it. "<br />
+<Strong> Resistance </strong>: <br />
+The resistance is applied over the anterior part of the distal thigh in the direction of hip extension.
+<br />
+
+<Div class = "main-test">
+<Strong> For Grade 2: <br />
+Grade 1: <br />
+Zero: <br />
+</Strong>
+</Div>
+
+<Strong> Patient position </strong>: <br />
+The patient lies in lateral decubitus position on the side of the lower extremity that will be tested, with the hip
+        extended and the knee flexed. Powdered talc may be placed on a cloth on the limb and the support surface to
+        reduce the friction. <br />
+
+<Strong> Stabilization / Palpation </strong>: <br />
+The examiner stands directly behind the patient's pelvis and supports the more proximal part of the lower extremity
+        while stabilizing the pelvis. <br />
+
+<Strong> Examiner action </strong>: <br />
+See the test with gravity as resistance.
+<Strong> Instructions to the patient </strong>: <br />
+"Move your leg as I showed you."
+<Strong> Patient action </strong>: <br />
+The patient flexes the hip through the full ROM available while keeping the knee flexed. Stabilization is maintained
+        during the patient's active movement. <br />
+    """)
+
+    TEXT_HIP_FLEXION_AFTER = _(u"""
+<Strong> COMMON SUBSTITUTIONS </strong>: <br />
+<Ol>
+<Li> Sartory; The patient can perform the replacement with the sartorius by abducting the hip and rotating it laterally
+    during its flexion in position with gravity as resistance. </Li>
+<Li> Femoral challenge; Patients attempting to perform replacement with the rectus femoris will demonstrate knee
+    extension during hip flexion. </Li>
+</Ol>
+    """)
+
+    TEXT_HIP_ABDUCTION = _(u"""
+<Div class = "main-test">
+<Strong> For Grade 5: <br />
+Grade 4: <br />
+Grade 3: </strong>
+</Div>
+
+<Strong> Patient position </strong>: <br />
+The patient lies in the ventral position with the lower extremities extended. <br />
+
+<Strong> Stabilization / Palpation </strong>: <br />
+The examiner performs stabilization on the postero-superior part of the pelvis with one hand while palpating the
+        maximal gluteus and proximal ovum of the hamstrings with the other.<br />
+
+<Strong> Examiner action </strong>: <br />
+Tell the patient, "When I ask you, I want you to lift your leg like this, pushing it away from the table." As you
+        verbalize this order, extend the patient's hip through the full ROM available while holding the knee extended.
+        Once the movement has been demonstrated, reposition the limb in the initial position. By cuddling the patient
+        passively through the movement, you can determine your available ADM and let him know what the exact movement
+        is.<br />
+
+<Strong> Instructions to the patient </strong>: <br />
+"Now move your leg as I showed you and hold it in this position. Keep your leg in this position and do not let me move
+        it.<br />
+
+<Strong> Resistance </strong>: <br />
+The resistance is applied over the back of the distal thigh in the direction of hip flexion. When applying the
+        resistance, the hand performing the palpation is transferred to the thigh in order to apply resistance, while
+        the stabilizing hand remains in place.<br />
+
+<Div class = "main-test">
+<Strong> For Grade 2: <br />
+Grade 1: <br />
+Zero: </strong>
+</Div>
+
+<Strong> Patient position </strong>: <br />
+The patient lies in lateral decubitus position on the side of the lower extremity to be tested with the hip of the
+        lower limb in slight flexion. Powder powder and a cloth may be placed between the lower end and the bearing
+        surface to reduce friction. The patient should be positioned so that his or her pelvis is close to the
+        examiner's trunk for further stabilization.<br />
+
+<Strong> Stabilization / Palpation </strong>: <br />
+The examiner stands directly in front of the patient's pelvis, supporting the lower lower extremity and stabilizing the
+        pelvis with one hand. The gluteus maximus is palpated with the other hand. <br />
+
+<Strong> Examiner action </strong>: <br />
+See the test with gravity as resistance. <br />
+
+<Strong> Instructions to the patient </strong>: <br />
+"Move your leg as I showed you."
+<br />
+
+<Div class = "alternative-test">
+<Strong> ALTERNATIVE TESTS - MAXIMUM GLUTE - OPTION 1 </strong> <br />
+Examine the functions of both extension and lateral rotation of the gluteus maximus.
+</Div>
+
+<Div class = "main-test">
+<Strong> For Grade 5: <br />
+Grade 4: </strong>
+</Div>
+
+<Strong> Patient position </strong>: <br />
+The patient is in a prone position with the limb of the limb to be tested in full lateral rotation and the knee
+        extended.<br />
+
+<Strong> Stabilization / Palpation </strong>: <br />
+The examiner stabilizes the postero-superior part of the pelvis with one hand while palpating the gluteus maximus with
+        the other.<br />
+
+<Strong> Examiner action </strong>: <br />
+Say to the patient, "When I ask you, I want you to lift your leg like this, pushing it away from the table." As you
+        verbalize this order, perform the patient's hip extension through the full ROM available while keeping the hip
+        in lateral rotation and the knee in extension. Once the movement has been demonstrated, reposition the limb in
+        the initial position. By conducting the patient passively through movement, you are able to determine your
+        available ADM and let him know what the exact movement is desired. <br />
+
+<Strong> Instructions to the patient </strong>: <br />
+"Move your leg now as I showed you and hold it in this position. Keep your leg in this position and do not let me move
+        it."<br />
+
+<Strong> Resistance </strong>: <br />
+The resistance is applied to the posterolateral portion of the distal thigh in the direction of hip flexion. When
+        applying the resistance, the hand that performs the palpation is transferred to the thigh in order to apply the
+        resistance while the stabilizing hand remains in place.<br />
+
+<Strong> There is no separate test of this muscle for grades below 3. The graduation is thus altered to accommodate the
+    absence of a position with gravity removed. </Strong> <br />
+
+Grade 3: The patient moves the joint through full ADM without resistance. <br />
+Grade 2: The patient moves the joint through partial WMD. <br />
+Grade 1: There is no movement, but there is a palpable contraction. <br />
+Grade 0: There is no movement or contraction. <br />
+<br />
+
+<Div class = "alternative-test">
+<Strong> ALTERNATIVE TESTS - MAXIMUM GLUTE - OPTION 2 </strong> <br />
+To reduce the participation of the hamstring muscles in the action of hip extension
+</Div>
+
+<Div class = "main-test">
+<Strong> For Grade 5: <br />
+Grade 4: <br />
+Grade 3: </strong>
+</Div>
+
+<Strong> Patient position </strong>: <br />
+The patient is placed in the ventral position with the extension hips and the knee of the limb to be tested at 90°<br />
+    """)
+
+
     form = MRCForm
     fieldsets = (
         (_(u'Patient'), {
@@ -776,24 +1163,30 @@ The patient should be asked to repeat the test so that the examiner can perceive
         (_('Wrist flexion'), {
             'fields': (('wrist_flexion_left', 'wrist_flexion_right'), 'wrist_flexion_obs'),
             'description': {
+                'text': TEXT_WRIST_FLEXION,
                 'fieldset': '_1col',
             }
         }),
         (_('Wrist extension'), {
             'fields': (('wrist_extension_left', 'wrist_extension_right'), 'wrist_extension_obs'),
             'description': {
+                'text': TEXT_WRIST_EXTENSION,
+                'text_after': TEXT_WRIST_EXTENSION_AFTER,
                 'fieldset': '_1col',
             }
         }),
         (_('Fingers\' metacarpophalangeal flexion'), {
             'fields': (('fingers_mp_flexion_left', 'fingers_mp_flexion_right'), 'fingers_mp_flexion_obs'),
             'description': {
+                'text': TEXT_FINGERS_METACARPOPHALANGEAL_FLEXION,
+                'text_after': TEXT_FINGERS_METACARPOPHALANGEAL_FLEXION_AFTER,
                 'fieldset': '_1col',
             }
         }),
         (_('Fingers\' metacarpophalangeal extension'), {
             'fields': (('fingers_mp_extensor_left', 'fingers_mp_extensor_right'), 'fingers_mp_extensor_obs'),
             'description': {
+                'text': TEXT_FINGERS_METACARPOPHALANGEAL_EXTENSION,
                 'fieldset': '_1col',
             }
         }),
@@ -882,103 +1275,3 @@ The patient should be asked to repeat the test so that the examiner can perceive
     ordering = ('patient', 'period', 'last_update')
 
 admin.site.register(MRC, MRCAdmin)
-
-x = _(u"""
-<div class="main-test">
-<strong>Para Normal</strong>: Completa a amplitude disponível de flexão do punho e mantém essa posição contra uma
-    resistência máxima.<br />
-<strong>Bom</strong>: completa a amplitude disponível e mantém essa posição contra uma ressitência de forte a moderada.
-    <br />
-</div>
-
-<strong>Posição do paciente (Todos os testes)</strong>:<br />
-Sentado, o antebraço é apoiado em sua superfície dorsal sobre a mesa. Para iniciar, o antebraço é supinado. O punho
-        fica na posição neutra ou ligeiramente estendido.<br />
-
-<strong>Posição do terapeuta</strong>:<br />
-Uma das mãos apoia o antebraço do paciente debaixo do punho.<br />
-<strong>Para testar ambos os flexores do punho</strong>:<br />
-O examinador segura a palma da mão a ser testada com o polegar circundando a superfície dorsal. A ressitência é
-    aplicada uniformemente através da mão numa direção diretamente para baixo no sentido do punho em extensão.<br />
-
-<strong>Para testar o flexor radial do carpo</strong>:<br />
-A resistência é centralizada sobre o segundo metacarpo (lado radial da mão) na direção da extensão e do desvio ulnar.
-<br />
-<strong>Para testar o flexor ulnar do carpo</strong>:<br />
-A resistência é centralizada sobre o quinto metacarpo (lado ulnar da mão) na direção da extensão e do desvio radial.
-<br />
-<strong>Teste</strong>:<br />
-O paciente flexiona o punho, mantendo os dedos e polegar relaxados.<br />
-<strong>Instruções ao paciente (Todos os testes)</strong>:<br />
-"Dobre o punho. Mantenha essa posição. Não me permita empurrá-lo para baixo. Mantenha seus dedos relaxados."<br />
-
-<div class="main-test">
-<strong>Para Regular</strong>: Completa a amplitude disponível sem resistência.
-</div>
-
-<strong>Posição do paciente (Todos os testes)</strong>:<br />
-Posição inicial com o antebraço supinado e punho na posição neutra como nos testes para os Graus 5 (Normal) e 4 (Bom).
-        Sentado, o antebraço é apoiado em sua superfície dorsal sobre a mesa. Para iniciar, o antebraço é supinado.
-        O punho fica na posição neutra ou ligeiramente estendido.<br />
-
-<strong>Posição do terapeuta</strong>:<br />
-Apoia o antebraço do paciente debaixo do punho.<br />
-<strong>Teste</strong>:<br />
-<div style="margin-right: 20px">
-<strong>ambos os flexores do punho</strong>:<br />
-O paciente flexiona o punho diretamente para cima sem resistência e sem desvio radial ou ulnar.<br />
-<strong>Para o flexor radial do carpo</strong>:<br />
-O paciente flexiona o punho em desvio radial.<br />
-<strong>Para o flexor ulnar do carpo</strong>:<br />
-O paciente flexionada o punho em desvio ulnar.<br />
-</div>
-<strong>Instruções ao paciente</strong>:<br />
-<div style="margin-right: 20px">
-<strong>ambos os flexores do punho</strong>:<br />
-"Dobre o punho, mantenha-o retificado com os dedos relaxados."<br />
-<strong>Para o flexor radial do carpo</strong>:<br />
-"Dobre o punho com o polegar orientado para o lado."<br />
-<strong>Para o flexor ulnar do carpo</strong>:<br />
-"Dobre o punho na direção do dedo mínimo."<br />
-</div>
-<br />
-<div class="main-test">
-<strong>Para Precário</strong>: Completa a amplitude disponível de flexão do punho sem assistência da gravidade.
-</div>
-
-<strong>Posição do paciente</strong>:<br />
-Sentado com o cotovelo apoiado sobre a mesa. Antebraço na posição média com a mão apoiada sobre o lado ulnar.<br />
-<strong>Posição do terapeuta</strong>:<br />
-Apoia o antebraço do paciente acima do punho.<br />
-<strong>Teste</strong>:<br />
-O paciente flexiona o punho com a superfície ulnar deslizando através da ou sem tocar na mesa. Para testar
-        separadamente os dois flexores do punho, segurar o antebraço de forma que o punho não fique sobre a mesa e
-        pedir ao paciente que realize o movimento de flexão enquanto o punho está em desvio ulna e, a seguir, radial.
-<br />
-
-<strong>Instruções ao paciente</strong>:<br />
-"Dobre o punho, mantendo seus dedos relaxados."<br />
-<br />
-
-<div class="main-test">
-<strong>Para Traço</strong>:  Um ou ambos os tendões podem exibir uma atividade contrátil visível ou palpável, porém a
-    parte não se movimenta.<br />
-<strong>Zero</strong>: Nenhuma atividade contrátil.
-</div>
-
-<strong>Posição do paciente</strong>:<br />
-Antebraço supinado apoiado sobre a mesa.<br />
-<strong>Posição do terapeuta</strong>:<br />
-Apoiar o punho em flexão; o dedo indicador da outra mão é usado para palpar os tendões apropriados.<br />
-Palpar os tendões do flexor radial do carpo e do flexor ulnar do carpo em testes separados.<br />
-O flexor radial do carpo está localizado na face palmar lateral do punho lateralmente ao musculo palmar longo, se o
-        paciente possuir este músculo.<br />
-O tendão do flexor ulnar do carpo está localizado na face palmar medial do punho.<br />
-
-<strong>Teste</strong>:<br />
-O paciente tenta flexionar o punho.<br />
-<strong>Instruções ao paciente</strong>:<br />
-"Tente dobrar o punho. Relaxar. Dobrá-lo novamente."<br />
-Deve-se pedir ao paciente que repita o teste, para que o examinador possa perceber os tendões tanta durante o
-        relaxamento quanto durante a contração.<br />
-""")
