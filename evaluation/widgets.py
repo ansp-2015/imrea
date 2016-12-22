@@ -3,6 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils.html import format_html
 from django.forms.widgets import RadioFieldRenderer, RadioSelect, RadioChoiceInput, TextInput, CheckboxInput
 import logging
+from evaluation.models.base_evaluation import BaseEvaluation
 
 # Get an instance of a logger
 from django.utils.safestring import mark_safe
@@ -174,23 +175,50 @@ class StepNumberInput(TextInput):
 
         winput = super(StepNumberInput, self).render(name, value, attrs)
 
+
         extra = ''
         if isinstance(step, float):
             extra = mark_safe("forcestepdivisibility:'none',decimals:%d," % decimals)
-        div_buttons = """
-        <div class="div-spinner">
-            <div class="input-group bootstrap-touchspin">
-                {}
-            </div>
+
+        NT_button = mark_safe("postfix: 'NT', postfix_extraclass: 'btn btn-default'")
+
+        spinner_script_template = """
             <script>
                 $("input[name='{}']").addClass("centerInput");
-                $("input[name='{}']").TouchSpin({{min:{},max:{},{}step:{}
+                $("input[name='{}']").TouchSpin({{min:{},max:{},{}step:{}, {}
                                       }});
+                // spinner script NT
+                {}
+                // spinner script NT value
+                {}
+
             </script>
-        </div>
         """
 
-        return format_html(div_buttons, winput, name, name, min_value, max_value, extra, step)
+        # spinner button script
+        spinner_script_button_nt = format_html("""
+            $("input[name='{}']").siblings("span.bootstrap-touchspin-postfix").click(function() {{ $("input[name='{}']").val('NT') }});
+            """, name, name)
+
+        # script to set NT value to the spinner value
+        spinner_script_nt_value = ""
+        if value == BaseEvaluation.UN[0][0]:
+            spinner_script_nt_value = format_html("""
+                $("input[name='{}']").val('NT');
+                """, name)
+
+        spinner_script = format_html(spinner_script_template, name, name, min_value, max_value, extra, step, NT_button, spinner_script_button_nt, spinner_script_nt_value )
+
+        div_buttons = """
+            <div class="div-spinner">
+                <div class="input-group bootstrap-touchspin">
+                    {}
+                </div>
+                {}
+            </div>
+            """
+
+        return format_html(div_buttons, winput, spinner_script)
 
 
 ###

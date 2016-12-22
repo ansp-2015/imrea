@@ -183,16 +183,26 @@ var calc_total_field = function(addend_field_ids, total_field_id) {
         if ($('[name=' + addend_field_ids[x] + ']').is(':radio')){
             // it is a radio but with no selected value
             if(typeof($('[name=' + addend_field_ids[x] + ']:checked').val())!=='undefined') {
-                total_field.val(parseInt($('input[type=radio][name=' + addend_field_ids[x] + ']:checked').val()) + parseInt(total_field.val()));
+                var addend_value = parseInt($('input[type=radio][name=' + addend_field_ids[x] + ']:checked').val());
+                // removing NT values from the sum
+                if (addend_value > -1000) {
+                    total_field.val(addend_value + parseInt(total_field.val()));
+                }
             }
         } else if ($('[name=' + addend_field_ids[x] + ']').is(':checkbox')){
             // it is a checkbox but with no selected value
             if(typeof($('[name=' + addend_field_ids[x] + ']:checked').val())!=='undefined') {
-                console.log('checkbox 2');
-                total_field.val(parseInt($('input[type=checkbox][name=' + addend_field_ids[x] + ']:checked').val()) + parseInt(total_field.val()));
+                var addend_value = parseInt($('input[type=checkbox][name=' + addend_field_ids[x] + ']:checked').val())
+                // removing NT values from the sum
+                if (addend_value > -1000) {
+                    total_field.val(addend_value + parseInt(total_field.val()));
+                }
             }
         } else {
-            total_field.val((parseInt($('#id_' + addend_field_ids[x]).val()) || 0) + (parseInt(total_field.val()) || 0));
+            var addend_value = (parseInt($('#id_' + addend_field_ids[x]).val()) || 0);
+            if (addend_value > -1000) {
+                total_field.val(addend_value + (parseInt(total_field.val()) || 0));
+            }
         }
         total_field.trigger("change");
     }

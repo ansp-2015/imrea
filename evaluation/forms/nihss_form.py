@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-from django import forms
-from ..widgets import ButtonRadioHorizontalLabelSelect, StepNumberInput
+from ..widgets import StepNumberInput
+from .base_form import BaseForm
 from ..models.nihss import NIHSS
 from django.utils.translation import ugettext_lazy as _
 
 
-class NIHSSForm(forms.ModelForm):
+class NIHSSForm(BaseForm):
 
     def __init__(self, *args, **kwargs):
         super(NIHSSForm, self).__init__(*args, **kwargs)
@@ -13,6 +13,11 @@ class NIHSSForm(forms.ModelForm):
             if f not in ['patient', 'period']:
                 choices = self.fields[f].choices
                 self.fields[f].choices = choices[1:]
+
+    def get_nt_fields(self):
+        return ('loc', 'loc_questions', 'loc_commands', 'best_gaze', 'visual', 'facial_palsy', 'motor_arm_left',
+                  'motor_arm_right', 'motor_leg_left', 'motor_leg_right', 'limb_ataxia', 'sensory', 'best_language',
+                  'dysarthria', 'extinction')
 
     class Media:
         css = {

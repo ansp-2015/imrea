@@ -1,9 +1,19 @@
-from django import forms
-from ..widgets import ButtonRadioHorizontalLabelSelect, StepNumberInput
-from evaluation.models.von_frey import VonFrey
+# -*- coding: utf-8 -*-
+from ..widgets import StepNumberInput
+from ..models.von_frey import VonFrey
+from .base_form import BaseForm
 
 
-class VonFreyForm(forms.ModelForm):
+class VonFreyForm(BaseForm):
+    def get_nt_fields(self):
+        return ('sensibility1_forearm_right', 'sensibility1_forearm_left', 'sensibility1_thenar_right',
+                  'sensibility1_thenar_left', 'sensibility2_forearm_right', 'sensibility2_forearm_left',
+                  'sensibility2_thenar_right', 'sensibility2_thenar_left', 'algometer1_forearm_right',
+                  'algometer1_forearm_left', 'algometer1_thenar_right', 'algometer1_thenar_left',
+                  'algometer2_forearm_right', 'algometer2_forearm_left', 'algometer2_thenar_right',
+                  'algometer2_thenar_left', 'algometer3_forearm_right', 'algometer3_forearm_left',
+                  'algometer3_thenar_right','algometer3_thenar_left')
+
 
     class Media:
         css = {

@@ -1,9 +1,10 @@
-from django import forms
+# -*- coding: utf-8 -*-
 from ..widgets import ButtonRadioHorizontalValueSelect
+from .base_form import BaseForm
 from ..models.epworth import Epworth
 
 
-class EpworthForm(forms.ModelForm):
+class EpworthForm(BaseForm):
     def __init__(self, *args, **kwargs):
         super(EpworthForm, self).__init__(*args, **kwargs)
         self.fields['sitting_reading'].choices = Epworth.EPWORTH_CHOICES
@@ -14,6 +15,10 @@ class EpworthForm(forms.ModelForm):
         self.fields['sitting_talking'].choices = Epworth.EPWORTH_CHOICES
         self.fields['sitting_quietly_lunch'].choices = Epworth.EPWORTH_CHOICES
         self.fields['car_traffic'].choices = Epworth.EPWORTH_CHOICES
+
+    def get_nt_fields(self):
+        return ('sitting_reading', 'watching_tv', 'sitting_inactive_public', 'car_passenger', 'lying_down',
+                'sitting_talking', 'sitting_quietly_lunch', 'car_traffic')
 
     class Media:
         css = {

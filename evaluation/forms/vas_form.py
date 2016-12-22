@@ -1,12 +1,17 @@
-from django import forms
+# -*- coding: utf-8 -*-
 from ..widgets import ButtonRadioHorizontalLabelSelect, StepNumberInput
-from evaluation.models.vas import VAS
+from .base_form import BaseForm
+from ..models.vas import VAS
 
 
-class VASForm(forms.ModelForm):
+class VASForm(BaseForm):
     def __init__(self, *args, **kwargs):
         super(VASForm, self).__init__(*args, **kwargs)
         self.fields['side'].choices = VAS.VAS_SIDE
+
+    def get_nt_fields(self):
+        return ('pain', 'anxiety',)
+
 
     class Media:
         css = {
@@ -21,5 +26,5 @@ class VASForm(forms.ModelForm):
         widgets = {
             'side': ButtonRadioHorizontalLabelSelect(),
             'pain': StepNumberInput(attrs={'min': 0, 'max': 10, 'step': 0.1}),
-            'anxiety': StepNumberInput(attrs={'min': 0, 'max': 10, 'step': 0.1}),
+            'anxiety': StepNumberInput(attrs={'min': 0, 'max': 10, 'step': 0.1, 'NT': True}),
         }

@@ -3,6 +3,12 @@
 {% load i18n admin_urls admin_static admin_modify %}
 {% block extrastyle %}
     <style>
+        #content-main .errorlist {
+            color: #a94442;
+        }
+        #content-main input.centerInput {
+            width: 4em;
+        }
         #fieldset-3 .row {
             margin-left: 0;
         }
@@ -23,13 +29,6 @@
             width: 3em;
         }
         #fieldset-7 .vIntegerField {
-            width: 3em;
-        }
-        #fieldset-7 .centerInput {
-            width: 4em;
-        }
-        #fieldset-8 .centerInput,
-        #fieldset-9 .centerInput {
             width: 3em;
         }
         /* Automatized */
@@ -67,8 +66,6 @@
             width: 3em;
         }
 
-        #visualconfrontation-fieldset-1 .centerInput {
-        }
         #visualconfrontation-fieldset-1 tr>td:nth-child(4)>.vTextField,
         #visualconfrontation-fieldset-1 tr>td:nth-child(5)>.vTextField{
             width: 3em;
@@ -82,18 +79,6 @@
         }
         #animalnaming-fieldset-1 .div-spinner {
             width: 10em;
-        }
-        #symbolworddisc-fieldset-1 .centerInput {
-            width: 3em;
-        }
-        #wordrecognition-fieldset-1 .centerInput {
-            width: 3em;
-        }
-        #oralspelling-fieldset-1 .centerInput {
-            width: 3em;
-        }
-        #wordpicturematching-fieldset-1 .centerInput {
-            width: 3em;
         }
 
 

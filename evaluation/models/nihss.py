@@ -127,21 +127,21 @@ class NIHSS(BaseEvaluation):
         (2, _('Not alert; requires repeated stimulation to attend, or is obtunded and requires strong or painful '
                 'stimulation to make movements (not stereotyped).')),
         (3, _('Responds only with reflex motor or autonomic effects or totally unresponsive, flaccid, and areflexic.')),
-    )
+    ) + BaseEvaluation.UN
     loc = models.IntegerField(_('1a. Level of Consciousness'), choices=NIH_LOC)
 
     NIH_LOC_QUESTIONS = (
         (0, _('Answers both questions correctly.')),
         (1, _('Answers one question correctly.')),
         (2, _('Answers neither question correctly.')),
-    )
+    ) + BaseEvaluation.UN
     loc_questions = models.IntegerField(_('1b. LOC Questions'), choices=NIH_LOC_QUESTIONS)
 
     NIH_LOC_COMMANDS = (
         (0, _('Performs both tasks correctly.')),
         (1, _('Performs one task correctly.')),
         (2, _('Performs neither task correctly.')),
-    )
+    ) + BaseEvaluation.UN
     loc_commands = models.IntegerField(_('1c. LOC Commands'), choices=NIH_LOC_COMMANDS)
 
     NIH_BEST_GAZE = (
@@ -149,7 +149,7 @@ class NIHSS(BaseEvaluation):
         (1, _('Partial gaze palsy; gaze is abnormal in one or both eyes, but forced deviation or total gaze paresis '
               'is not present.')),
         (2, _('Forced deviation, or total gaze paresis not overcome by the oculocephalic maneuver.')),
-    )
+    ) + BaseEvaluation.UN
     best_gaze = models.IntegerField(_('2. Best Gaze'), choices=NIH_BEST_GAZE)
 
     NIH_VISUAL = (
@@ -157,7 +157,7 @@ class NIHSS(BaseEvaluation):
         (1, _('Partial hemianopia.')),
         (2, _('Complete hemianopia.')),
         (3, _('Bilateral hemianopia (blind including cortical blindness). ')),
-    )
+    ) + BaseEvaluation.UN
     visual = models.IntegerField(_('3. Visual'), choices=NIH_VISUAL)
 
     NIH_FACIAL_PALSY = (
@@ -165,7 +165,7 @@ class NIHSS(BaseEvaluation):
         (1, _('Minor paralysis (flattened nasolabial fold, asymmetry on smiling).')),
         (2, _('Partial paralysis (total or near-total paralysis of lower face).')),
         (3, _('Complete paralysis of one or both sides (absence of facial movement in the upper and lower face). ')),
-    )
+    ) + BaseEvaluation.UN
     facial_palsy = models.IntegerField(_('4. Facial Palsy'), choices=NIH_FACIAL_PALSY)
 
     # TODO: Field for explain if unstestable
@@ -177,7 +177,7 @@ class NIHSS(BaseEvaluation):
               'to bed, but has some effort against gravity.')),
         (3, _('No effort against gravity; limb falls.')),
         (4, _('No movement')),
-    )
+    ) + BaseEvaluation.UN
     motor_arm_left = models.IntegerField(_('5. Motor arm'), choices=NIH_MOTOR_ARM)
     motor_arm_right = models.IntegerField(choices=NIH_MOTOR_ARM)
     motor_arm_left_un_explanation = models.TextField(null=True, blank=True)
@@ -189,7 +189,7 @@ class NIHSS(BaseEvaluation):
         (2, _('Some effort against gravity; leg falls to bed by 5 seconds, but has some effort against gravity.')),
         (3, _('No effort against gravity; leg falls to bed immediately.')),
         (4, _('No movement.')),
-    )
+    ) + BaseEvaluation.UN
     motor_leg_left = models.IntegerField(_('6. Motor leg'), choices=NIH_MOTOR_LEG)
     motor_leg_right = models.IntegerField(choices=NIH_MOTOR_LEG)
     motor_leg_left_un_explanation = models.TextField(null=True, blank=True)
@@ -199,7 +199,7 @@ class NIHSS(BaseEvaluation):
         (0, _('Absent.')),
         (1, _('Present in one limb.')),
         (2, _('Present in two limbs.')),
-    )
+    ) + BaseEvaluation.UN
     limb_ataxia = models.IntegerField(_('7. Limb Ataxia'), choices=NIH_LIMB_ATAXIA)
     limb_ataxia_un_explanation = models.TextField(null=True, blank=True)
 
@@ -208,7 +208,7 @@ class NIHSS(BaseEvaluation):
         (1, _('Mild-to-moderate sensory loss; patient feels pinprick is less sharp or is dull on the affected side; or '
               'there is a loss of superficial pain with pinprick, but patient is aware of being touched.')),
         (2, _('Severe to total sensory loss; patient is not aware of being touched in the face, arm, and leg.')),
-    )
+    ) + BaseEvaluation.UN
     sensory = models.IntegerField(_('8. Sensory'), choices=NIH_SENSORY)
 
     NIH_BEST_LANGUAGE = (
@@ -223,7 +223,7 @@ class NIHSS(BaseEvaluation):
               'listener carries burden of communication. Examiner cannot identify materials provided from patient '
               'response.')),
         (3, _('Mute, global aphasia; no usable speech or auditory comprehension.')),
-    )
+    ) + BaseEvaluation.UN
     best_language = models.IntegerField(_('9. Best Language'), choices=NIH_BEST_LANGUAGE)
 
     NIH_DYSARTHRIA = (
@@ -232,7 +232,7 @@ class NIHSS(BaseEvaluation):
               'some difficulty.')),
         (2, _('Severe dysarthria; patient\'s speech is so slurred as to be unintelligible in the absence of or out of '
               'proportion to any dysphasia, or is mute/anarthric.')),
-    )
+    ) + BaseEvaluation.UN
     dysarthria = models.IntegerField(_('10. Dysarthria'), choices=NIH_DYSARTHRIA)
     dysarthria_un_explanation = models.TextField(null=True, blank=True)
 
@@ -242,7 +242,7 @@ class NIHSS(BaseEvaluation):
               'stimulation in one of the sensory modalities.')),
         (2, _('Profound hemi-inattention or extinction to more than one modality; does not recognize own hand or '
               'orients to only one side of space. ')),
-    )
+    ) + BaseEvaluation.UN
     extinction = models.IntegerField(_('11. Extinction and Inattention (formerly Neglect)'), choices=NIH_EXTINCTION)
 
     class Meta:

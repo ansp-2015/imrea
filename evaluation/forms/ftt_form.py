@@ -1,9 +1,15 @@
-from django import forms
-from ..widgets import ButtonRadioHorizontalLabelSelect, StepNumberInput
-from evaluation.models.ftt import FTT
+# -*- coding: utf-8 -*-
+from ..widgets import StepNumberInput
+from ..models.ftt import FTT
+from .base_form import BaseForm
 
 
-class FTTForm(forms.ModelForm):
+class FTTForm(BaseForm):
+
+    def get_nt_fields(self):
+        return ('paretic_hand_first', 'healthy_hand_first', 'paretic_hand_second', 'healthy_hand_second',
+                'paretic_hand_third', 'healthy_hand_third')
+
 
     class Media:
         css = {

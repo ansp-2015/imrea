@@ -15,7 +15,7 @@ class Epworth(BaseEvaluation):
         (1, _(u'slight chance of dozing')),
         (2, _(u'moderate chance of dozing')),
         (3, _(u'high chance of dozing')),
-    )
+    ) + BaseEvaluation.UN
 
     sitting_reading = models.IntegerField(_('Sitting and reading'), choices=EPWORTH_CHOICES)
     watching_tv = models.IntegerField(_('Watching TV'), choices=EPWORTH_CHOICES)

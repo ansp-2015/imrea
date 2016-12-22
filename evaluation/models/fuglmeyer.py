@@ -12,7 +12,7 @@ class FuglMeyer(BaseEvaluation):
     FUGLM_UE_REFLEX_ACTIVITY = (
         (0, pgettext("FUGLM_UE_REFLEX_ACTIVITY", u'No reflex activity can be elicited')),
         (2, pgettext("FUGLM_UE_REFLEX_ACTIVITY", u'Reflex activity can be elicited')),
-    )
+    ) + BaseEvaluation.UN
     ue_reflex_activity_flex = models.IntegerField(_('Flexors: biceps and finger flexors'), choices=FUGLM_UE_REFLEX_ACTIVITY)
     # Reflex activity - Extensors: triceps
     ue_reflex_activity_ext = models.IntegerField(_('Extensors: triceps'), choices=FUGLM_UE_REFLEX_ACTIVITY)
@@ -22,7 +22,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_VOL_MOV_SYN_ACTIVITY", u'Cannot be performed at all')),
         (1, pgettext("FUGLM_UE_VOL_MOV_SYN_ACTIVITY", u'Performed partly')),
         (2, pgettext("FUGLM_UE_VOL_MOV_SYN_ACTIVITY", u'Performed faultlessly')),
-    )
+    ) + BaseEvaluation.UN
     ue_vol_mov_syn_flex_shoulder_retrac = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Shoulder retraction'), choices=FUGLM_UE_VOL_MOV_SYN_ACTIVITY)
     # Flexor synergy - Shoulder elevation
     ue_vol_mov_syn_flex_shoulder_elev = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Shoulder elevation'), choices=FUGLM_UE_VOL_MOV_SYN_ACTIVITY)
@@ -49,7 +49,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY", u'No specific action is performed (or patient moves but does not reach ASIS)')),
         (1, pgettext("FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY", u' Hand must pass anterior superior iliac spine (performed partly)')),
         (2, pgettext("FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY", u' Performed faultlessly (patient clears ASIS and can extend arm behind back towards sacrum')),
-    )
+    ) + BaseEvaluation.UN
     # Hand to lumbar spine
     ue_vol_mov_mix_hand_spine = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Hand to lumbar spine'),
                                                     choices=FUGLM_UE_VOL_MOV_MIX_HAND_SPINE_ACTIVITY)
@@ -60,7 +60,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY", u'Immediate abduction or elbow flexion')),
         (1, pgettext("FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY", u'Abduction or elbow flexion during movement')),
         (2, pgettext("FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY", u'Complete flexion 90°, maintains 0° in elbow')),
-    )
+    ) + BaseEvaluation.UN
     ue_vol_mov_mix_shoulder_flex = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Shoulder flexion 0-90 elbow at 0 pronation-supination 0'),
                                                        choices=FUGLM_UE_VOL_MOV_MIX_SHOULDER_FLEX_ACTIVITY)
     # Pronation-supination
@@ -68,7 +68,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY", u'No pronation/supination, starting position impossible')),
         (1, pgettext("FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY", u'Limited pronation/supination, maintains position')),
         (2, pgettext("FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY", u'Full pronation/supination, maintains elbow extension')),
-    )
+    ) + BaseEvaluation.UN
     ue_vol_mov_mix_pron_sup = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Pronation-supination elbow at 90 shoulder at 0'),
                                                   choices=FUGLM_UE_VOL_MOV_MIX_PRON_SUP_ACTIVITY)
 
@@ -78,7 +78,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY", u'Immediate supination or elbow flexion')),
         (1, pgettext("FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY", u'Supination or elbow flexion during movement')),
         (2, pgettext("FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY", u'Abduction 90°, maintains extension and pronation')),
-    )
+    ) + BaseEvaluation.UN
     ue_vol_mov_no_syn_shoulder_abd = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Shoulder abduction 0 - 90 elbow at 0 forearm pronated'),
                                                          choices=FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_ABD_ACTIVITY)
     # Shoulder flexion 90- 180
@@ -86,7 +86,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_FLEX_ACTIVITY", u'Immediate abduction or elbow flexion')),
         (1, pgettext("FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_FLEX_ACTIVITY", u'Abduction or elbow flexion during movement')),
         (2, pgettext("FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_FLEX_ACTIVITY", u'Complete flexion, maintains 0° in elbow')),
-    )
+    ) + BaseEvaluation.UN
     ue_vol_mov_no_syn_shoulder_flex = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Shoulder flexion 90- 180 elbow at 0pronation-supination 0'),
                                                           choices=FUGLM_UE_VOL_MOV_NO_SYN_SHOULDER_FLEX_ACTIVITY)
 
@@ -95,7 +95,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_VOL_MOV_NO_SYN_PRON_SUP_ACTIVITY", u'No pronation/supination, starting position impossible')),
         (1, pgettext("FUGLM_UE_VOL_MOV_NO_SYN_PRON_SUP_ACTIVITY", u'Limited pronation/supination, maintains extension')),
         (2, pgettext("FUGLM_UE_VOL_MOV_NO_SYN_PRON_SUP_ACTIVITY", u'Full pronation/supination, maintains elbow extension')),
-    )
+    ) + BaseEvaluation.UN
     ue_vol_mov_no_syn_pron_sup = models.IntegerField(verbose_name=pgettext('FuglMeyer', 'Pronation/supinationelbow at 0 shoulder at 30-90 flexion'),
                                                      choices=FUGLM_UE_VOL_MOV_NO_SYN_PRON_SUP_ACTIVITY)
 
@@ -104,7 +104,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_NORMAL_REFLEX_ACTIVITY", u'2 of 3 reflexes markedly hyperactive')),
         (1, pgettext("FUGLM_UE_NORMAL_REFLEX_ACTIVITY", u'1 reflex markedly hyperactive or at least 2 reflexes lively')),
         (2, pgettext("FUGLM_UE_NORMAL_REFLEX_ACTIVITY", u'Maximum of 1 reflex lively, none hyperactive')),
-    )
+    ) + BaseEvaluation.UN
     ue_normal_reflex_activity = models.IntegerField(verbose_name=_('Normal reflex activity'),
                                                     choices=FUGLM_UE_NORMAL_REFLEX_ACTIVITY)
     ue_normal_reflex_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
@@ -115,7 +115,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_WRIST_STAB_ELBOW_90_ACTIVITY", u'Less than 15° active dorsiflexion')),
         (1, pgettext("FUGLM_UE_WRIST_STAB_ELBOW_90_ACTIVITY", u'Dorsiflexion 15°, no resistance is taken')),
         (2, pgettext("FUGLM_UE_WRIST_STAB_ELBOW_90_ACTIVITY", u'Maintains position against resistance')),
-    )
+    ) + BaseEvaluation.UN
     ue_wrist_stab_elbow_90 = models.IntegerField(_('Stability at 15 dorsiflexion elbow at 90, forearm pronated shoulder at 0'),
                                                  choices=FUGLM_UE_WRIST_STAB_ELBOW_90_ACTIVITY)
 
@@ -123,7 +123,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY", u'Cannot be performed')),
         (1, pgettext("FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY", u'Can hold position but weak')),
         (2, pgettext("FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY", u'Maintains position against resistance')),
-    )
+    ) + BaseEvaluation.UN
     ue_wrist_flex_elbow_90 = models.IntegerField(_('Repeated dorsifexion / volar flexion elbow at 90, forearm pronated shoulder at 0, slight finger flexion'),
                                                  choices=FUGLM_UE_WRIST_FLEX_ELBOW_90_ACTIVITY)
 
@@ -131,7 +131,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY", u'Less than 15° active dorsiflexion')),
         (1, pgettext("FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY", u'Dorsiflexion 15°, no resistance is taken')),
         (2, pgettext("FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY", u'Maintains position against resistance')),
-    )
+    ) + BaseEvaluation.UN
     ue_wrist_stab_elbow_0 = models.IntegerField(_('Stability at 15 dorsiflexion elbow at 0, forearm pronated slight shoulder flexion/abduction'),
                                                 choices=FUGLM_UE_WRIST_STAB_ELBOW_0_ACTIVITY)
 
@@ -139,7 +139,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY", u'Cannot perform volitionally')),
         (1, pgettext("FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY", u'Limited active range of motion')),
         (2, pgettext("FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY", u'Full active range of motion, smoothly')),
-    )
+    ) + BaseEvaluation.UN
     ue_wrist_flex_elbow_0 = models.IntegerField(_('Repeated dorsifexion / volar flexion elbow at 0, forearm pronated slight shoulder flexion/abduction'),
                                                 choices=FUGLM_UE_WRIST_FLEX_ELBOW_0_ACTIVITY)
 
@@ -147,7 +147,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY", u'Cannot perform volitionally')),
         (1, pgettext("FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY", u'Jerky movement or incomplete')),
         (2, pgettext("FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY", u'Complete and smooth circumduction')),
-    )
+    ) + BaseEvaluation.UN
     ue_wrist_circumduction = models.IntegerField(_('Circumduction'), choices=FUGLM_UE_WRIST_CIRCUMDUCTION_ACTIVITY)
 
     # C. HAND
@@ -156,7 +156,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_HAND_MASS_FLEX_ACTIVITY", u'No flexion occurs')),
         (1, pgettext("FUGLM_UE_HAND_MASS_FLEX_ACTIVITY", u'Some flexion, but not full motion')),
         (2, pgettext("FUGLM_UE_HAND_MASS_FLEX_ACTIVITY", u'Completed active flexion ')),
-    )
+    ) + BaseEvaluation.UN
     ue_hand_mass_flex = models.IntegerField(_(u'Mass flexion from full active or passive extension'),
                                             choices=FUGLM_UE_HAND_MASS_FLEX_ACTIVITY,
                                             help_text=_(u'Close your hand. The therapist can help get the starting position with your fingers in extension'))
@@ -165,7 +165,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_HAND_MASS_EXT_ACTIVITY", u'No extension occurs')),
         (1, pgettext("FUGLM_UE_HAND_MASS_EXT_ACTIVITY", u'Patient can release an active mass flexion grasp')),
         (2, pgettext("FUGLM_UE_HAND_MASS_EXT_ACTIVITY", u'Full active extension')),
-    )
+    ) + BaseEvaluation.UN
     ue_hand_mass_ext = models.IntegerField(_(u'Mass flexion from full active or passive flexion'),
                                            choices=FUGLM_UE_HAND_MASS_EXT_ACTIVITY,
                                            help_text=_(u'Open your hand. The therapist can help get the starting position with your fingers in flexion'))
@@ -175,7 +175,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY", u'Required position cannot be attained')),
         (1, pgettext("FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY", u'Grasp is weak')),
         (2, pgettext("FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY", u'Grasp can be maintained against relatively great resistance')),
-    )
+    ) + BaseEvaluation.UN
     ue_hand_flex_pip_dip = models.IntegerField(_(u'Flexion in PIP and DIP (digits II-V)extension in MCP II-V'),
                                                choices=FUGLM_UE_HAND_FLEX_PIP_DIP_ACTIVITY,
                                                help_text=_(u'Hold my finger and keep it stuck between your fingers'))
@@ -185,7 +185,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY", u'Function cannot be performed')),
         (1, pgettext("FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY", u'Scrap of paper interposed between the thumb and index finger can be kept in place, but not against a slight tug')),
         (2, pgettext("FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY", u'Paper is held firmly against a tug')),
-    )
+    ) + BaseEvaluation.UN
     ue_hand_thumb_adduction = models.IntegerField(_(u'Thumb adduction'),
                                                   choices=FUGLM_UE_HAND_THUMB_ADDUCTION_ACTIVITY,
                                                   help_text=_(u'Ask the patient to perform pure thumb adduction with the scrap of paper interposed between the thumb and '
@@ -197,7 +197,7 @@ class FuglMeyer(BaseEvaluation):
         (1, pgettext("FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY",
                      u'A pencil interposed between the thumb pad and the pad of the index finger can be kept in place, but not against a slight tug')),
         (2, pgettext("FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY", u'Pencil is held firmly against a tug')),
-    )
+    ) + BaseEvaluation.UN
     ue_hand_thumb_opposition = models.IntegerField(_(u'Opposition pulpa of the thumb against the pulpa of 2-nd finger,pencil, tug upward'),
                                                    choices=FUGLM_UE_HAND_THUMB_OPPOSITION_ACTIVITY,
                                                    help_text=_(u'Subject is sitting with arm on bedside table. Instruct the patient to grasp a pen by opposing the thumb and index '
@@ -209,7 +209,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY", u'Function cannot be performed')),
         (1, pgettext("FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY", u'A can interposed between the thumb and index finger can be kept in place, but not against a slight tug')),
         (2, pgettext("FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY", u'Can is held firmly against a tug')),
-    )
+    ) + BaseEvaluation.UN
     ue_hand_cylinder_grip = models.IntegerField(_(u'Cylinder shaped object (small can)tug upward, opposition in digits I and II'),
                                                 choices=FUGLM_UE_HAND_CYLINDER_GRIP_ACTIVITY,
                                                 help_text=_(u'Subject is sitting with arm on bedside table. '
@@ -222,7 +222,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY", u'Function cannot be performed')),
         (1, pgettext("FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY", u'A tennis ball can be kept in place with a spherical grasp, but not against a slight tug')),
         (2, pgettext("FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY", u'Tennis ball is held firmly against a tug')),
-    )
+    ) + BaseEvaluation.UN
     ue_hand_spherical_grip = models.IntegerField(_(u'Fingers in abduction/flexion, thumb opposed, tennis ball'),
                                                  choices=FUGLM_UE_HAND_SPHERICAL_GRIP_ACTIVITY,
                                                  help_text=_(u'Subject is sitting with arm on bedside table. '
@@ -236,21 +236,21 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY", u'Marked tremor')),
         (1, pgettext("FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY", u'Slight tremor')),
         (2, pgettext("FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY", u'No tremor')),
-    )
+    ) + BaseEvaluation.UN
     ue_coord_speed_tremor = models.IntegerField(_(u'Tremor'), choices=FUGLM_UE_COORD_SPEED_TREMOR_ACTIVITY)
 
     FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY = (
         (0, pgettext("FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY", u'Pronounced or unsystematic dysmetria')),
         (1, pgettext("FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY", u'Slight or systematic dysmetria')),
         (2, pgettext("FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY", u'No dysmetria')),
-    )
+    ) + BaseEvaluation.UN
     ue_coord_speed_dysmetria = models.IntegerField(_(u'Dysmetria'), choices=FUGLM_UE_COORD_SPEED_DYSMETRIA_ACTIVITY)
 
     FUGLM_UE_COORD_SPEED_TIME_ACTIVITY = (
         (0, pgettext("FUGLM_UE_COORD_SPEED_TIME_ACTIVITY", u'Activity is more than 5 seconds longer than unaffected hand')),
         (1, pgettext("FUGLM_UE_COORD_SPEED_TIME_ACTIVITY", u'(2-5) seconds longer than unaffected side')),
         (2, pgettext("FUGLM_UE_COORD_SPEED_TIME_ACTIVITY", u'Less than 2 seconds difference')),
-    )
+    ) + BaseEvaluation.UN
     ue_coord_speed_time = models.IntegerField(_(u'Speed'), choices=FUGLM_UE_COORD_SPEED_TIME_ACTIVITY)
 
     # E. LOWER EXTREMITY
@@ -258,7 +258,7 @@ class FuglMeyer(BaseEvaluation):
     FUGLM_LE_REFLEX_ACTIVITY = (
         (0, pgettext("FUGLM_LE_REFLEX_ACTIVITY", u'No reflex activity can be elicited')),
         (2, pgettext("FUGLM_LE_REFLEX_ACTIVITY", u'Reflex activity can be elicited')),
-    )
+    ) + BaseEvaluation.UN
     le_reflex_activity_achilles = models.IntegerField(_(u'Achilles'), choices=FUGLM_LE_REFLEX_ACTIVITY)
     le_reflex_activity_pattelar = models.IntegerField(_(u'Patellar'), choices=FUGLM_LE_REFLEX_ACTIVITY)
     le_reflex_activity_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
@@ -268,7 +268,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY", u'At least 2 of the 3 phasic reflexes are markedly hyperactive')),
         (1, pgettext("FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY", u'One reflex is markedly hyperactive or at least 2 reflexes are lively')),
         (2, pgettext("FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY", u'No more than one reflex is lively and none are hyperactive')),
-    )
+    ) + BaseEvaluation.UN
     le_reflex_activity_achilles_pattelar = models.IntegerField(_(u'Achilles and patellar reflexes'), choices=FUGLM_LE_REFLEX_ACTIVITY_ACHILLES_PATTELAR_ACTIVITY)
     le_reflex_activity_achilles_pattelar_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
 
@@ -278,7 +278,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_LE_VOL_MOV_SYN", u'Cannot be performed at all')),
         (1, pgettext("FUGLM_LE_VOL_MOV_SYN", u'Partial motion')),
         (2, pgettext("FUGLM_LE_VOL_MOV_SYN", u'Full motion')),
-    )
+    ) + BaseEvaluation.UN
     le_vol_mov_syn_hip_flexion = models.IntegerField(_(u'Hip flexion'), choices=FUGLM_LE_VOL_MOV_SYN)
     le_vol_mov_syn_knee_flexion = models.IntegerField(_(u'Knee flexion'), choices=FUGLM_LE_VOL_MOV_SYN)
     le_vol_mov_syn_ankle_dorsiflexion = models.IntegerField(_(u'Ankle dorsiflexion'), choices=FUGLM_LE_VOL_MOV_SYN)
@@ -295,7 +295,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN_KNEE", u'No active motion')),
         (1, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN_KNEE", u'From slightly extended position, knee can be flexed but not beyond 90°')),
         (2, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN_KNEE", u'Knee flexion beyond 90°')),
-    )
+    ) + BaseEvaluation.UN
     le_vol_mov_mix_syn_knee = models.IntegerField(_(u'Knee Flexion sitting'), choices=FUGLM_LE_VOL_MOV_MIX_SYN_KNEE)
     le_vol_mov_mix_syn_knee_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
 
@@ -303,7 +303,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE", u'No active motion')),
         (1, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE", u'Incomplete active flexion')),
         (2, pgettext("FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE", u'Normal dorsiflexion')),
-    )
+    ) + BaseEvaluation.UN
     le_vol_mov_mix_syn_ankle = models.IntegerField(_(u'Ankle Dorsiflexion sitting'), choices=FUGLM_LE_VOL_MOV_MIX_SYN_ANKLE)
     le_vol_mov_mix_syn_ankle_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
 
@@ -312,7 +312,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_LE_VOL_MOV_NO_SYN_KNEE", u'Knee cannot flex without hip flexion')),
         (1, pgettext("FUGLM_LE_VOL_MOV_NO_SYN_KNEE", u'Knee flexion begins without hip flexion but does not reach to 90° or hip begins to flex in later phase of motion')),
         (2, pgettext("FUGLM_LE_VOL_MOV_NO_SYN_KNEE", u'Knee flexion beyond 90 degrees with hip maintained in extension')),
-    )
+    ) + BaseEvaluation.UN
     le_vol_mov_no_syn_knee = models.IntegerField(_(u'Knee Flexion standing'), choices=FUGLM_LE_VOL_MOV_NO_SYN_KNEE)
     le_vol_mov_no_syn_knee_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
 
@@ -320,7 +320,7 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_LE_VOL_MOV_NO_SYN_ANKLE", u'No active motion')),
         (1, pgettext("FUGLM_LE_VOL_MOV_NO_SYN_ANKLE", u'Partial motion')),
         (2, pgettext("FUGLM_LE_VOL_MOV_NO_SYN_ANKLE", u'Full motion')),
-    )
+    ) + BaseEvaluation.UN
     le_vol_mov_no_syn_ankle = models.IntegerField(_(u'Ankle Dorsiflexion standing'), choices=FUGLM_LE_VOL_MOV_NO_SYN_ANKLE)
     le_vol_mov_no_syn_ankle_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
 
@@ -329,21 +329,21 @@ class FuglMeyer(BaseEvaluation):
         (0, pgettext("FUGLM_LE_COORD_SPEED_TREMOR", u'Marked tremor')),
         (1, pgettext("FUGLM_LE_COORD_SPEED_TREMOR", u'Slight tremor')),
         (2, pgettext("FUGLM_LE_COORD_SPEED_TREMOR", u'No tremor')),
-    )
+    ) + BaseEvaluation.UN
     le_coord_speed_tremor = models.IntegerField(_(u'Scoring Tremor'), choices=FUGLM_LE_COORD_SPEED_TREMOR)
 
     FUGLM_LE_COORD_SPEED_DYSMETRIA = (
         (0, pgettext("FUGLM_LE_COORD_SPEED_DYSMETRIA", u'Pronounced or unsystematic dysmetria')),
         (1, pgettext("FUGLM_LE_COORD_SPEED_DYSMETRIA", u'Slight or systematic dysmetria')),
         (2, pgettext("FUGLM_LE_COORD_SPEED_DYSMETRIA", u'No dysmetria')),
-    )
+    ) + BaseEvaluation.UN
     le_coord_speed_dysmetria = models.IntegerField(_(u'Scoring Dysmetria'), choices=FUGLM_LE_COORD_SPEED_DYSMETRIA)
 
     FUGLM_LE_COORD_SPEED_TIME = (
         (0, pgettext("FUGLM_LE_COORD_SPEED_TIME", u'Activity is more than 6 seconds longer than unaffected leg')),
         (1, pgettext("FUGLM_LE_COORD_SPEED_TIME", u' 2-5.9 seconds longer than unaffected leg')),
         (2, pgettext("FUGLM_LE_COORD_SPEED_TIME", u'less than 2 seconds difference')),
-    )
+    ) + BaseEvaluation.UN
     le_coord_speed_time = models.IntegerField(_(u'Scoring Speed'), choices=FUGLM_LE_COORD_SPEED_TIME)
     le_coord_speed_obs = models.TextField(verbose_name=pgettext('FuglMeyer', 'Notes'), max_length=500, blank=True, null=True)
 

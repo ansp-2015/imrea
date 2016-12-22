@@ -12,14 +12,14 @@ class MMSE(BaseEvaluation):
     MINI-EXAME DO ESTADO MENTAL - MEEM
     """
 
-    MMSE_ORIENTATION_CHOICES = choice_numbers(1)
-    MMSE_REGISTRATION_CHOICES = choice_numbers(3)
-    MMSE_ATTENTION_CHOICES = choice_numbers(5)
-    MMSE_RECALL_CHOICES = choice_numbers(3)
-    MMSE_LANGUAGE_PEN_CHOICES = choice_numbers(2)
-    MMSE_LANGUAGE_REPEAT_CHOICES = choice_numbers(1)
-    MMSE_LANGUAGE_COMMAND_CHOICES = choice_numbers(3)
-    MMSE_LANGUAGE_READ_WRITE_COPY_CHOICES = choice_numbers(1)
+    MMSE_ORIENTATION_CHOICES = choice_numbers(1) + BaseEvaluation.UN
+    MMSE_REGISTRATION_CHOICES = choice_numbers(3) + BaseEvaluation.UN
+    MMSE_ATTENTION_CHOICES = choice_numbers(5) + BaseEvaluation.UN
+    MMSE_RECALL_CHOICES = choice_numbers(3) + BaseEvaluation.UN
+    MMSE_LANGUAGE_PEN_CHOICES = choice_numbers(2) + BaseEvaluation.UN
+    MMSE_LANGUAGE_REPEAT_CHOICES = choice_numbers(1) + BaseEvaluation.UN
+    MMSE_LANGUAGE_COMMAND_CHOICES = choice_numbers(3) + BaseEvaluation.UN
+    MMSE_LANGUAGE_READ_WRITE_COPY_CHOICES = choice_numbers(1) + BaseEvaluation.UN
 
     # ORIENTAÇÃO
     orientation_day_week = models.IntegerField(pgettext('MMSE', u'Day of the week'), choices=choice_numbers(1))
